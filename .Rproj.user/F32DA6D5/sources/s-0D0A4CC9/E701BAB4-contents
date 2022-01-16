@@ -6,7 +6,7 @@ bookdown::gitbook:
         <li><a href="./">LaTeX Dersleri</a></li>
       after: |
         <li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
-    edit: https://github.com/acarzfr/latex-dersleri/edit/master/%s
+    edit: https://github.com/acarzfr/latex-dersleri/edit/%s
     sharing:
       github: yes
       facebook: no
