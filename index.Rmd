@@ -1,0 +1,27 @@
+--- 
+title: "LaTeX Dersleri"
+author: "Zafer Acar"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: scrbook
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: acarzfr/latex-dersleri
+description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
+---
+
+# Önsöz {-}
+
+
+
+```{latex eval=FALSE}
+\documentclass{article}
+
+\begin{document}
+$x^2+\sin x $
+
+\end{document}
+```
+
