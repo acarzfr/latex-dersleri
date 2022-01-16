@@ -177,10 +177,285 @@
 \end{Highlighting}
 \end{Shaded}
 
+\citep{talbot2012}
+
 \mainmatter
 
 \hypertarget{genel}{%
 \chapter{Genel}\label{genel}}
+
+\hypertarget{latex-nedir}{%
+\section{LaTeX nedir?}\label{latex-nedir}}
+
+LaTeX, TeX'in kullanımını kolaylaştırmak için 1984 yılında Leslie
+Lamport tarafından tasarlanmış bir makro pakettir. TeX ise, 1978'den
+itibaren \href{https://www-cs-faculty.stanford.edu/~knuth/}{Donald
+Knuth} tarafından belgelerin bilgisayarda dizilmesi
+için geliştirdiği bir dizgi sistemidir.
+
+Günümüzde Microsoft Word gibi programlar kullanıcının çok güzel belgeler
+üretmesini sağlasa da, LaTeX kullanımı, okunaklı bir belge için
+vazgeçilmez olan çok sayıda profesyonel olasılık sunmaktadır. Aşağıda
+birkaç önemli örnek veriyoruz.
+
+\begin{quote}
+Aşağıdaki örnek ve açıklamalar
+\href{http://www.rtznet.nl/zink/latex.php?lang=nl}{http://www.rtznet.nl/zink/index.php?lang=nl},
+\url{https://nitens.org/w/latex/} ve
+\url{https://ctan.org/tex} adreslerinden derlenmiştir.
+\end{quote}
+
+\hypertarget{matematiksel-ifadeler}{%
+\section{Matematiksel ifadeler}\label{matematiksel-ifadeler}}
+
+LaTeX'le yazılmış bir matematiksel metinle hiç karşılaşmadıysanız,
+aşağıdaki örnek (Rogers, \emph{Recursive Functions}), LaTeX'in bu konuda
+rakipsiz olduğunu göstermeye yetecektir.
+
+\hypertarget{programlanabilirlik}{%
+\section{Programlanabilirlik}\label{programlanabilirlik}}
+
+Bir kelime işlemciyle çalışmak, `gördüğünüzü alırsınız' (WYSIWYG)
+ilkesine göre çalışır. Bu avantajlar sunar, ancak kitaplar gibi büyük
+metinler üzerinde çalışırken gereksiz şekilde karmaşık ve zaman alıcı
+hale gelir. Öte yandan LaTeX, LaTeX'in tamamen formatlanmış bir PDF
+belgesine çevirdiği yapı ve düzeni belirtmek için özel kodlarla
+oluşturulmuş düz metin kullanır. LaTeX'i kullanmak için çok sayıda komut
+ve kod bilmeniz gerekmesine rağmen, bu yaklaşım aynı zamanda kapsamlı
+otomasyon imkanı da sunar.
+
+\hypertarget{hizalama-ve-tireleme}{%
+\section{Hizalama ve tireleme}\label{hizalama-ve-tireleme}}
+
+Bir metnin genel görünümü ve okunabilirliği, metnin nasıl
+hizalandığından ve kesildiğinden büyük ölçüde etkilenir. LaTeX, tüm
+paragraf için hizalamayı ve kesmeleri optimize eden son derece gelişmiş
+TeX algoritmalarını kullanır. Kelime işlemciler ve diğer programlar,
+satır başına çalıştıkları için oldukça yetersiz kalırlar. Bu, diğer
+şeylerin yanı sıra düzensiz aralıklara ve birçok kısa çizgiye sebep
+olur. Sonuçları görmeniz için Microsoft Word 2008 (Mac), Adobe InDesign
+CS4 ve LaTeX'le dizilmiş bir metni ekliyoruz:
+
+Sonuç, LaTeX'in diğer programların her ikisinden de üstün olduğunu
+açıkça gösterir: iki kat daha az tireleme kullanır ve yine de sözcük
+aralığındaki varyasyon, Word veya InDesign'dan belirgin şekilde daha
+azdır. LaTeX'te çok büyük sözcük aralığı içeren satırlar oluşmaz.
+
+\hypertarget{bitiux15fik-harfler}{%
+\section{Bitişik harfler}\label{bitiux15fik-harfler}}
+
+Birkaç harf yan yana geldiklerinde çarpışır. İyi bilinen örnekler, f'nin
+i'nin ucuna veya l'nin tepesine çarptığı `fl' ve `fi'
+kombinasyonlarıdır. Bu nedenle birçok yazı tipi bu birleşimler için özel
+karakterler içerir. LaTeX'in kendisi, bir yazı tipinin hangi bitişik
+harfleri desteklediğini arar ve bunları uygun şekilde kullanır. Kelime
+işlemciler ve diğer programlar bunu yapmaz, bu nedenle kullanıcının bu
+kombinasyonları değiştirmek için kendisinin araması gerekir.
+
+\hypertarget{geruxe7ek-kuxfcuxe7uxfck-buxfcyuxfck-harfler-ve-baux15flux131klar}{%
+\section{Gerçek küçük büyük harfler ve başlıklar}\label{geruxe7ek-kuxfcuxe7uxfck-buxfcyuxfck-harfler-ve-baux15flux131klar}}
+
+Çoğu kelime işlemcisi, büyük harflerin boyutunu ayarlayarak sahte küçük
+büyük harfler oluşturur. Profesyonel yazı tipleri, herhangi bir ciddi
+dizgi sisteminin uygun bağlamda kullanabilmesi gereken küçük büyük
+harfler ve tam boyutlu büyük harfler için farklı glif kümeleri içerir.
+Özellikle, gerçek küçük büyük harfler, büyük harflerin yeniden
+boyutlandırılmış versiyonlarından daha fazlasıdır: nispeten daha ağır
+bir kontura sahiptirler ve aynı yazı tipinin küçük harfli
+karakterleriyle görsel olarak uyumlu olacak şekilde tasarlanmıştır. Bazı
+OpenType yazı tiplerinin özel ``başlık'' alternatifleri vardır, bunlar
+büyük boyutlarda ve daha açık kontura sahip tümüyle büyük harfli tipler
+için tasarlanmıştır.
+
+\hypertarget{uxe7ux131kux131ntux131-karakter-aralux131ux11fux131}{%
+\section{Çıkıntı (karakter aralığı)}\label{uxe7ux131kux131ntux131-karakter-aralux131ux11fux131}}
+
+Çıkıntı, şekiller buna neden olduğunda harflerin birbirine daha yakın
+veya daha fazla aralıklı olmasıdır. Bu, okunabilirliği artıran çok daha
+dengeli bir aralık üretir. T, V, W ve A gibi harfler bundan yararlanır.
+Profesyonel yazı tipi setleri, tüm harf kombinasyonlarının doğru
+çıkıntısını gösteren kapsamlı bir çıkıntı tablosu içerir. Word, diğer
+çoğu kelime işlemci programı gibi, bu tabloları yok sayarken, LaTeX
+bunları varsayılan olarak kullanır.
+
+\hypertarget{nadir-tarihi-ve-bitiux15fik-harfler}{%
+\section{Nadir, tarihi ve bitişik harfler}\label{nadir-tarihi-ve-bitiux15fik-harfler}}
+
+LaTeX ile profesyonel yazı tiplerinin ekstra olanaklarını da otomatik
+olarak kullanabilirsiniz. Uzun s gibi tarihsel harf formlarının yanı
+sıra ekstra bitişik harfler (örneğin `st' kombinasyonu) LaTeX'te
+otomatik olarak kullanılabilir. Bazen manuel olarak eklemek mümkün olsa
+da, Word bu seçeneklere erişim sağlamaz.
+
+LaTeX, genelde WYSIWYG editörleriyle karşılaştırılır. WYSIWYG, Microsoft
+Word, Libreoffice Writer gibi kelime işlemcilere ya da Adobe Indesign
+gibi programlara verilen genel bir isimdir. Hepsinin ortak özelliği,
+girdi ile çıktının aynı anda ve birlikte görünmesidir.
+
+LaTeX'de ise işler farklı yürür. Girdi ve çıktı ekranı farklıdır ve
+çıktıyı görmek için girdinin derleme işleminden geçmesi gerekir. Ayrıca
+birçok şey için WYSIWYG editörlerinde olmayan yapılar vardır. Şimdi, bu
+yapıların ne oldukları ve ne işe yaradıklarını açıklayalım.
+
+\hypertarget{komutlar}{%
+\section{Komutlar}\label{komutlar}}
+
+LaTeX komutları bir geribölü (\texttt{\textbackslash{}}) işaretiyle başlar ve ya sadece
+harflerden ya da bir tane harf olmayan karakterden oluşurlar. Komut
+yazıldıktan sonra ya boşluk, ya bir sayı ya da harf olmayan bir karakter
+gelebilir.
+
+Çoğu komut, zorunlu değişken alır. Bu zorunlu değişken komut adından
+sonra çengelli parantezler içine yazılır. Zorunlu değişken alan
+komutlar, zorunlu olmayan (isteğe bağlı) değişkenler de alabilir, bunlar
+da komut adından sonra gelen köşeli parantezler içine yazılırlar. Eğer
+değişkenler birden fazlaysa aralarına virgül koyularak ayrılır.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}:}
+\NormalTok{\textbackslash{}LaTeX}
+\NormalTok{\textbackslash{}item[...]}
+\NormalTok{\textbackslash{}emph\{...\}}
+\NormalTok{\textbackslash{}documentclass[...]\{...\}}
+\NormalTok{\textbackslash{}subfloat[...][...]\{...\}}
+\NormalTok{\textbackslash{}raisebox\{...\}[...][...]\{...\}}
+\NormalTok{\textbackslash{}multicolumn\{...\}\{...\}\{...\}}
+\NormalTok{\{\textbackslash{}bfseries ...\}}
+\end{Highlighting}
+\end{Shaded}
+
+Fikir vermesi açısından yukarıda dokuz adet komut örneği verilmiştir.
+Birinci komut bir tane harf olmayan karakterden oluşan bir komuttur.
+İkincisi, değişkeni olmayan bir komuttur. Bazı harflerin büyük
+bazılarınınsa küçük olması komutların büyük-küçük harfe duyarlı olduğunu
+gösterir. Dokuzuncu komut ise bildirim şeklinde verilmiştir.
+
+\hypertarget{paketler}{%
+\section{Paketler}\label{paketler}}
+
+LaTeX'de bazı özelliklerin (renkli yazmak, şekil eklemek vb.)
+kullanılabilmesi için kaynak dosyaya bazı paketlerin eklenmesi gerekir.
+Bu, \texttt{\textbackslash{}usepackage} komutuyla yapılır. Bu komutun zorunlu değişkenine
+paket adı, zorunlu olmayan kısmına ise paket seçenekleri yazılır:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}usepackage[\textless{}seçenekler\textgreater{}]\{\textless{}paket adı\textgreater{}\}}
+\end{Highlighting}
+\end{Shaded}
+
+Bu komutla paketin kaynak dosyaya eklenmesi TeX dağıtımıyla sisteminize
+kurulmuş olan paketin belgeye çağrılarak işe koşulması demektir.
+
+\hypertarget{ortamlar}{%
+\section{Ortamlar}\label{ortamlar}}
+
+LaTeX'de ortamlar önemli bir yer tutar. Örneğin \texttt{document} bir ortamdır.
+Ortamları birden fazla ögeye uygulanan komutlar olarak düşünebiliriz.
+
+Bir ortam \texttt{\textbackslash{}begin} komutuyla başlayıp \texttt{\textbackslash{}end} komutuyla biter. Her iki
+komutun zorunlu değişkeni ortamın adıdır:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}begin\{\textless{}ortam adı\textgreater{}\}}
+\NormalTok{ ...}
+\NormalTok{\textbackslash{}end\{\textless{}ortam adı\textgreater{}\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{gruplar}{%
+\section{Gruplar}\label{gruplar}}
+
+Gruplar, ortam benzeri yapılardır. Grup \texttt{\textbackslash{}begingroup} komutuyla başlar
+ve \texttt{\textbackslash{}endgroup} komutuyla biter. Grubun içinde kullanılan bir bildirim
+sadece gruba uygulanır.
+
+\hypertarget{boux15fluklar}{%
+\section{Boşluklar}\label{boux15fluklar}}
+
+LaTeX'de belgenizin metnini oluştururken ister klavyedeki Space, ister
+Tab tuşu ile boşluk bırakın, bu boşluklar LaTeX tarafından bir karakter
+boşluk olarak algılanır. Arka arkaya çok sayıda boşluk bırakılsa da
+LaTeX bunu tek bir boşluk olarak algılar.
+
+Bütün bir satırın boş bırakılması LaTeX tarafından paragraf başı olarak
+algılanır. Arka arkaya boş bırakılan çok sayıda boş satır LaTeX
+tarafından tek bir boş satır yani paragraf başı olarak algılanır.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ İster bir boşluk, isterseniz de çok         sayıda boşluk bırakın. }
+\NormalTok{İkisi de bir boşluk gibi işlem görür. }
+
+\NormalTok{Boş bir satır yeni paragraf demektir, burada olduğu gibi.}
+\end{Highlighting}
+\end{Shaded}
+
+\href{https://www.texdizgi.com/wp-content/uploads/2020/04/LaTeX_Sunu.pdf}{LaTeX\_Sunu\\
+}
+
+Komutlardan sonra gelen boşlukları LaTeX dikkate almaz. Komuttan sonra
+gerçekten bir boşluk bırakmak için, ya \texttt{\{\}} ve ardından boşluk girilir
+ya da komut adından sonra özel bir boşluk komutu kullanılır.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}LaTeX  boşluk yok.\textbackslash{}\textbackslash{}}
+\NormalTok{\textbackslash{}LaTeX\{\} boşluk var.\textbackslash{}\textbackslash{}}
+\NormalTok{\textbackslash{}LaTeX\textbackslash{} boşluk komutuyla  boşluk.}
+\end{Highlighting}
+\end{Shaded}
+
+\href{https://www.texdizgi.com/wp-content/uploads/2020/04/LaTeX_Sunu-1.pdf}{LaTeX\_Sunu-1\\
+}
+
+\hypertarget{uxf6zel-amauxe7lux131-karakterler}{%
+\section{Özel amaçlı karakterler}\label{uxf6zel-amauxe7lux131-karakterler}}
+
+Aşağıdaki karakterlerin herbiri LaTeX'de özel bir amaç için kullanılır.
+Dolayısıyla bu karakterleri doğrudan kullanmak istenmeyen sonuçlara yol
+açabilir.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\#  $  \%   \&   \{   \}   \textasciitilde{}  \^{}  \_ \textbackslash{}}
+\end{Highlighting}
+\end{Shaded}
+
+Bu karakterleri çıktıda elde etmek isterseniz, sondaki hariç, başına bir
+geribölü koymanız gerekir. Sondaki için, yani bir geribölü sembolü elde
+etmek içinse \texttt{\textbackslash{}textbackslash} komutunu kullanabilirsiniz. Eğer \texttt{\textbackslash{}\textbackslash{}}
+komutunu verirseniz yeni bir satır başlatmış olursunuz.
+
+Bu karakterlerden örneğin yüzde (\texttt{\%}) karakteri kaynak dosyanızda yorum
+ya da açıklama yazmaya yarar. Bu sembolden sonra yazılanları LaTeX
+dikkate almaz ve çıktıda görünmez.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}\%50 zam geldi. }
+\NormalTok{\% Buraya yorum yazabilirsiniz.}
+\end{Highlighting}
+\end{Shaded}
+
+\href{https://www.texdizgi.com/wp-content/uploads/2020/04/LaTeX_Sunu-2.pdf}{LaTeX\_Sunu-2\\
+}
+
+:::
+
+Diğer karakterlerden örneğin (\texttt{\$}) nin matematik kipini açma ve
+kapatmaya yaradığından
+\href{https://www.texdizgi.com/latexde-matematiksel-ifadeleri-dizmek-1-giris/}{bahsetmiştik}. (\texttt{\&}) karekteri tablo ve benzeri yapılarda dikey
+hizalama yapmak için veya sütun ayracı olarak kullanılır. Çengelli
+parantezlerden zaten yeterince bahsettik. (\texttt{\#}) karakteri yeni komutlar
+tanımlamakta kullanılır. Tilda (\texttt{\textasciitilde{}}) ise genişlemeyen bir boşluk
+yaratmak için kullanılır. (\texttt{\^{}}) ve (\texttt{\_}) karakterleri de matematikte üst
+ve alt indis yazmak için kullanılır. Her birinin kullanımlarından yeri
+geldiğinde tekrar bahsedeceğiz.
+
+\backmatter
 
   \bibliography{book.bib,packages.bib}
 

@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="index.html"/>
-
+<link rel="next" href="kaynaklar.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -120,6 +120,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -138,7 +160,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Önsöz</a></li>
-<li class="chapter" data-level="1" data-path="genel.html"><a href="genel.html"><i class="fa fa-check"></i><b>1</b> Genel</a></li>
+<li class="chapter" data-level="1" data-path="genel.html"><a href="genel.html"><i class="fa fa-check"></i><b>1</b> Genel</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="genel.html"><a href="genel.html#latex-nedir"><i class="fa fa-check"></i><b>1.1</b> LaTeX nedir?</a>
+<ul>
+<li class="chapter" data-level="1.1.1" data-path="genel.html"><a href="genel.html#matematiksel-ifadeler"><i class="fa fa-check"></i><b>1.1.1</b> Matematiksel ifadeler</a></li>
+<li class="chapter" data-level="1.1.2" data-path="genel.html"><a href="genel.html#programlanabilirlik"><i class="fa fa-check"></i><b>1.1.2</b> Programlanabilirlik</a></li>
+<li class="chapter" data-level="1.1.3" data-path="genel.html"><a href="genel.html#hizalama-ve-tireleme"><i class="fa fa-check"></i><b>1.1.3</b> Hizalama ve tireleme</a></li>
+<li class="chapter" data-level="1.1.4" data-path="genel.html"><a href="genel.html#bitişik-harfler"><i class="fa fa-check"></i><b>1.1.4</b> Bitişik harfler</a></li>
+<li class="chapter" data-level="1.1.5" data-path="genel.html"><a href="genel.html#gerçek-küçük-büyük-harfler-ve-başlıklar"><i class="fa fa-check"></i><b>1.1.5</b> Gerçek küçük büyük harfler ve başlıklar</a></li>
+<li class="chapter" data-level="1.1.6" data-path="genel.html"><a href="genel.html#çıkıntı-karakter-aralığı"><i class="fa fa-check"></i><b>1.1.6</b> Çıkıntı (karakter aralığı)</a></li>
+<li class="chapter" data-level="1.1.7" data-path="genel.html"><a href="genel.html#nadir-tarihi-ve-bitişik-harfler"><i class="fa fa-check"></i><b>1.1.7</b> Nadir, tarihi ve bitişik harfler</a></li>
+<li class="chapter" data-level="1.1.8" data-path="genel.html"><a href="genel.html#komutlar"><i class="fa fa-check"></i><b>1.1.8</b> Komutlar</a></li>
+<li class="chapter" data-level="1.1.9" data-path="genel.html"><a href="genel.html#paketler"><i class="fa fa-check"></i><b>1.1.9</b> Paketler</a></li>
+<li class="chapter" data-level="1.1.10" data-path="genel.html"><a href="genel.html#ortamlar"><i class="fa fa-check"></i><b>1.1.10</b> Ortamlar</a></li>
+<li class="chapter" data-level="1.1.11" data-path="genel.html"><a href="genel.html#gruplar"><i class="fa fa-check"></i><b>1.1.11</b> Gruplar</a></li>
+<li class="chapter" data-level="1.1.12" data-path="genel.html"><a href="genel.html#boşluklar"><i class="fa fa-check"></i><b>1.1.12</b> Boşluklar</a></li>
+<li class="chapter" data-level="1.1.13" data-path="genel.html"><a href="genel.html#özel-amaçlı-karakterler"><i class="fa fa-check"></i><b>1.1.13</b> Özel amaçlı karakterler</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="kaynaklar.html"><a href="kaynaklar.html"><i class="fa fa-check"></i>Kaynaklar</a></li>
 </ul>
 
       </nav>
@@ -158,15 +199,243 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="genel" class="section level1" number="1">
 <h1><span class="header-section-number">Bölüm 1</span> Genel</h1>
+<div id="latex-nedir" class="section level2" number="1.1">
+<h2><span class="header-section-number">1.1</span> LaTeX nedir?</h2>
+<p>LaTeX, TeX’in kullanımını kolaylaştırmak için 1984 yılında Leslie
+Lamport tarafından tasarlanmış bir makro pakettir. TeX ise, 1978’den
+itibaren <a href="https://www-cs-faculty.stanford.edu/~knuth/" target="_blank" rel="noreferrer noopener">Donald
+Knuth</a> tarafından belgelerin bilgisayarda dizilmesi
+için geliştirdiği bir dizgi sistemidir.</p>
+<p>Günümüzde Microsoft Word gibi programlar kullanıcının çok güzel belgeler
+üretmesini sağlasa da, LaTeX kullanımı, okunaklı bir belge için
+vazgeçilmez olan çok sayıda profesyonel olasılık sunmaktadır. Aşağıda
+birkaç önemli örnek veriyoruz.</p>
+<blockquote>
+<p>Aşağıdaki örnek ve açıklamalar
+<a href="http://www.rtznet.nl/zink/latex.php?lang=nl" rel="noreferrer noopener" target="_blank">http://www.rtznet.nl/zink/index.php?lang=nl</a>,
+<a href="https://nitens.org/w/latex/" rel="noreferrer noopener" target="_blank">https://nitens.org/w/latex/</a> ve
+<a href="https://ctan.org/tex" rel="noreferrer noopener" target="_blank">https://ctan.org/tex</a> adreslerinden derlenmiştir.</p>
+</blockquote>
+<div id="matematiksel-ifadeler" class="section level3" number="1.1.1">
+<h3><span class="header-section-number">1.1.1</span> Matematiksel ifadeler</h3>
+<p>LaTeX’le yazılmış bir matematiksel metinle hiç karşılaşmadıysanız,
+aşağıdaki örnek (Rogers, <em>Recursive Functions</em>), LaTeX’in bu konuda
+rakipsiz olduğunu göstermeye yetecektir.</p>
+</div>
+<div id="programlanabilirlik" class="section level3" number="1.1.2">
+<h3><span class="header-section-number">1.1.2</span> Programlanabilirlik</h3>
+<p>Bir kelime işlemciyle çalışmak, ‘gördüğünüzü alırsınız’ (WYSIWYG)
+ilkesine göre çalışır. Bu avantajlar sunar, ancak kitaplar gibi büyük
+metinler üzerinde çalışırken gereksiz şekilde karmaşık ve zaman alıcı
+hale gelir. Öte yandan LaTeX, LaTeX’in tamamen formatlanmış bir PDF
+belgesine çevirdiği yapı ve düzeni belirtmek için özel kodlarla
+oluşturulmuş düz metin kullanır. LaTeX’i kullanmak için çok sayıda komut
+ve kod bilmeniz gerekmesine rağmen, bu yaklaşım aynı zamanda kapsamlı
+otomasyon imkanı da sunar.</p>
+</div>
+<div id="hizalama-ve-tireleme" class="section level3" number="1.1.3">
+<h3><span class="header-section-number">1.1.3</span> Hizalama ve tireleme</h3>
+<p>Bir metnin genel görünümü ve okunabilirliği, metnin nasıl
+hizalandığından ve kesildiğinden büyük ölçüde etkilenir. LaTeX, tüm
+paragraf için hizalamayı ve kesmeleri optimize eden son derece gelişmiş
+TeX algoritmalarını kullanır. Kelime işlemciler ve diğer programlar,
+satır başına çalıştıkları için oldukça yetersiz kalırlar. Bu, diğer
+şeylerin yanı sıra düzensiz aralıklara ve birçok kısa çizgiye sebep
+olur. Sonuçları görmeniz için Microsoft Word 2008 (Mac), Adobe InDesign
+CS4 ve LaTeX’le dizilmiş bir metni ekliyoruz:</p>
+<p>Sonuç, LaTeX’in diğer programların her ikisinden de üstün olduğunu
+açıkça gösterir: iki kat daha az tireleme kullanır ve yine de sözcük
+aralığındaki varyasyon, Word veya InDesign’dan belirgin şekilde daha
+azdır. LaTeX’te çok büyük sözcük aralığı içeren satırlar oluşmaz.</p>
+</div>
+<div id="bitişik-harfler" class="section level3" number="1.1.4">
+<h3><span class="header-section-number">1.1.4</span> Bitişik harfler</h3>
+<p>Birkaç harf yan yana geldiklerinde çarpışır. İyi bilinen örnekler, f’nin
+i’nin ucuna veya l’nin tepesine çarptığı ‘fl’ ve ‘fi’
+kombinasyonlarıdır. Bu nedenle birçok yazı tipi bu birleşimler için özel
+karakterler içerir. LaTeX’in kendisi, bir yazı tipinin hangi bitişik
+harfleri desteklediğini arar ve bunları uygun şekilde kullanır. Kelime
+işlemciler ve diğer programlar bunu yapmaz, bu nedenle kullanıcının bu
+kombinasyonları değiştirmek için kendisinin araması gerekir.</p>
+</div>
+<div id="gerçek-küçük-büyük-harfler-ve-başlıklar" class="section level3" number="1.1.5">
+<h3><span class="header-section-number">1.1.5</span> Gerçek küçük büyük harfler ve başlıklar</h3>
+<p>Çoğu kelime işlemcisi, büyük harflerin boyutunu ayarlayarak sahte küçük
+büyük harfler oluşturur. Profesyonel yazı tipleri, herhangi bir ciddi
+dizgi sisteminin uygun bağlamda kullanabilmesi gereken küçük büyük
+harfler ve tam boyutlu büyük harfler için farklı glif kümeleri içerir.
+Özellikle, gerçek küçük büyük harfler, büyük harflerin yeniden
+boyutlandırılmış versiyonlarından daha fazlasıdır: nispeten daha ağır
+bir kontura sahiptirler ve aynı yazı tipinin küçük harfli
+karakterleriyle görsel olarak uyumlu olacak şekilde tasarlanmıştır. Bazı
+OpenType yazı tiplerinin özel “başlık” alternatifleri vardır, bunlar
+büyük boyutlarda ve daha açık kontura sahip tümüyle büyük harfli tipler
+için tasarlanmıştır.</p>
+</div>
+<div id="çıkıntı-karakter-aralığı" class="section level3" number="1.1.6">
+<h3><span class="header-section-number">1.1.6</span> Çıkıntı (karakter aralığı)</h3>
+<p>Çıkıntı, şekiller buna neden olduğunda harflerin birbirine daha yakın
+veya daha fazla aralıklı olmasıdır. Bu, okunabilirliği artıran çok daha
+dengeli bir aralık üretir. T, V, W ve A gibi harfler bundan yararlanır.
+Profesyonel yazı tipi setleri, tüm harf kombinasyonlarının doğru
+çıkıntısını gösteren kapsamlı bir çıkıntı tablosu içerir. Word, diğer
+çoğu kelime işlemci programı gibi, bu tabloları yok sayarken, LaTeX
+bunları varsayılan olarak kullanır.</p>
+</div>
+<div id="nadir-tarihi-ve-bitişik-harfler" class="section level3" number="1.1.7">
+<h3><span class="header-section-number">1.1.7</span> Nadir, tarihi ve bitişik harfler</h3>
+<p>LaTeX ile profesyonel yazı tiplerinin ekstra olanaklarını da otomatik
+olarak kullanabilirsiniz. Uzun s gibi tarihsel harf formlarının yanı
+sıra ekstra bitişik harfler (örneğin ‘st’ kombinasyonu) LaTeX’te
+otomatik olarak kullanılabilir. Bazen manuel olarak eklemek mümkün olsa
+da, Word bu seçeneklere erişim sağlamaz.</p>
+<p>LaTeX, genelde WYSIWYG editörleriyle karşılaştırılır. WYSIWYG, Microsoft
+Word, Libreoffice Writer gibi kelime işlemcilere ya da Adobe Indesign
+gibi programlara verilen genel bir isimdir. Hepsinin ortak özelliği,
+girdi ile çıktının aynı anda ve birlikte görünmesidir.</p>
+<p>LaTeX’de ise işler farklı yürür. Girdi ve çıktı ekranı farklıdır ve
+çıktıyı görmek için girdinin derleme işleminden geçmesi gerekir. Ayrıca
+birçok şey için WYSIWYG editörlerinde olmayan yapılar vardır. Şimdi, bu
+yapıların ne oldukları ve ne işe yaradıklarını açıklayalım.</p>
+</div>
+<div id="komutlar" class="section level3" number="1.1.8">
+<h3><span class="header-section-number">1.1.8</span> Komutlar</h3>
+<p>LaTeX komutları bir geribölü (<code>\</code>) işaretiyle başlar ve ya sadece
+harflerden ya da bir tane harf olmayan karakterden oluşurlar. Komut
+yazıldıktan sonra ya boşluk, ya bir sayı ya da harf olmayan bir karakter
+gelebilir.</p>
+<p>Çoğu komut, zorunlu değişken alır. Bu zorunlu değişken komut adından
+sonra çengelli parantezler içine yazılır. Zorunlu değişken alan
+komutlar, zorunlu olmayan (isteğe bağlı) değişkenler de alabilir, bunlar
+da komut adından sonra gelen köşeli parantezler içine yazılırlar. Eğer
+değişkenler birden fazlaysa aralarına virgül koyularak ayrılır.</p>
+<div class="wp-block-codemirror-blocks-code-block code-block">
+<pre class="CodeMirror" setting="{&quot;mode&quot;:&quot;stex&quot;,&quot;mime&quot;:&quot;text/x-latex&quot;,&quot;theme&quot;:&quot;monokai&quot;,&quot;lineNumbers&quot;:true,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:false,&quot;language&quot;:&quot;LaTeX&quot;,&quot;modeName&quot;:&quot;stex&quot;}"><code>\:
+\LaTeX
+\item[...]
+\emph{...}
+\documentclass[...]{...}
+\subfloat[...][...]{...}
+\raisebox{...}[...][...]{...}
+\multicolumn{...}{...}{...}
+{\bfseries ...}</code></pre>
+</div>
+<p>Fikir vermesi açısından yukarıda dokuz adet komut örneği verilmiştir.
+Birinci komut bir tane harf olmayan karakterden oluşan bir komuttur.
+İkincisi, değişkeni olmayan bir komuttur. Bazı harflerin büyük
+bazılarınınsa küçük olması komutların büyük-küçük harfe duyarlı olduğunu
+gösterir. Dokuzuncu komut ise bildirim şeklinde verilmiştir.</p>
+</div>
+<div id="paketler" class="section level3" number="1.1.9">
+<h3><span class="header-section-number">1.1.9</span> Paketler</h3>
+<p>LaTeX’de bazı özelliklerin (renkli yazmak, şekil eklemek vb.)
+kullanılabilmesi için kaynak dosyaya bazı paketlerin eklenmesi gerekir.
+Bu, <code>\usepackage</code> komutuyla yapılır. Bu komutun zorunlu değişkenine
+paket adı, zorunlu olmayan kısmına ise paket seçenekleri yazılır:</p>
+<div class="wp-block-codemirror-blocks-code-block code-block">
+<pre class="CodeMirror" setting="{&quot;mode&quot;:&quot;stex&quot;,&quot;mime&quot;:&quot;text/x-latex&quot;,&quot;theme&quot;:&quot;monokai&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:false,&quot;language&quot;:&quot;LaTeX&quot;,&quot;modeName&quot;:&quot;stex&quot;}"><code>\usepackage[&lt;seçenekler&gt;]{&lt;paket adı&gt;}</code></pre>
+</div>
+<p>Bu komutla paketin kaynak dosyaya eklenmesi TeX dağıtımıyla sisteminize
+kurulmuş olan paketin belgeye çağrılarak işe koşulması demektir.</p>
+</div>
+<div id="ortamlar" class="section level3" number="1.1.10">
+<h3><span class="header-section-number">1.1.10</span> Ortamlar</h3>
+<p>LaTeX’de ortamlar önemli bir yer tutar. Örneğin <code>document</code> bir ortamdır.
+Ortamları birden fazla ögeye uygulanan komutlar olarak düşünebiliriz.</p>
+<p>Bir ortam <code>\begin</code> komutuyla başlayıp <code>\end</code> komutuyla biter. Her iki
+komutun zorunlu değişkeni ortamın adıdır:</p>
+<div class="wp-block-codemirror-blocks-code-block code-block">
+<pre class="CodeMirror" setting="{&quot;mode&quot;:&quot;stex&quot;,&quot;mime&quot;:&quot;text/x-latex&quot;,&quot;theme&quot;:&quot;monokai&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:false,&quot;language&quot;:&quot;LaTeX&quot;,&quot;modeName&quot;:&quot;stex&quot;}"><code>\begin{&lt;ortam adı&gt;}
+ ...
+\end{&lt;ortam adı&gt;}</code></pre>
+</div>
+</div>
+<div id="gruplar" class="section level3" number="1.1.11">
+<h3><span class="header-section-number">1.1.11</span> Gruplar</h3>
+<p>Gruplar, ortam benzeri yapılardır. Grup <code>\begingroup</code> komutuyla başlar
+ve <code>\endgroup</code> komutuyla biter. Grubun içinde kullanılan bir bildirim
+sadece gruba uygulanır.</p>
+</div>
+<div id="boşluklar" class="section level3" number="1.1.12">
+<h3><span class="header-section-number">1.1.12</span> Boşluklar</h3>
+<p>LaTeX’de belgenizin metnini oluştururken ister klavyedeki Space, ister
+Tab tuşu ile boşluk bırakın, bu boşluklar LaTeX tarafından bir karakter
+boşluk olarak algılanır. Arka arkaya çok sayıda boşluk bırakılsa da
+LaTeX bunu tek bir boşluk olarak algılar.</p>
+<p>Bütün bir satırın boş bırakılması LaTeX tarafından paragraf başı olarak
+algılanır. Arka arkaya boş bırakılan çok sayıda boş satır LaTeX
+tarafından tek bir boş satır yani paragraf başı olarak algılanır.</p>
+<div class="wp-block-columns">
+<div class="wp-block-column is-vertically-aligned-center">
+<div class="wp-block-codemirror-blocks-code-block code-block">
+<pre class="CodeMirror" setting="{&quot;mode&quot;:&quot;stex&quot;,&quot;mime&quot;:&quot;text/x-latex&quot;,&quot;theme&quot;:&quot;monokai&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:false,&quot;language&quot;:&quot;LaTeX&quot;,&quot;modeName&quot;:&quot;stex&quot;}"><code> İster bir boşluk, isterseniz de çok         sayıda boşluk bırakın. 
+İkisi de bir boşluk gibi işlem görür. 
 
+Boş bir satır yeni paragraf demektir, burada olduğu gibi.</code></pre>
+</div>
+</div>
+<div class="wp-block-column is-vertically-aligned-center">
+<p><a href="https://www.texdizgi.com/wp-content/uploads/2020/04/LaTeX_Sunu.pdf" class="pdfemb-viewer" style="" data-width="max" data-height="max" toolbar="bottom" toolbar-fixed="off">LaTeX_Sunu<br />
+</a></p>
+</div>
+</div>
+<p>Komutlardan sonra gelen boşlukları LaTeX dikkate almaz. Komuttan sonra
+gerçekten bir boşluk bırakmak için, ya <code>{}</code> ve ardından boşluk girilir
+ya da komut adından sonra özel bir boşluk komutu kullanılır.</p>
+<div class="wp-block-columns">
+<div class="wp-block-column is-vertically-aligned-center">
+<div class="wp-block-codemirror-blocks-code-block code-block">
+<pre class="CodeMirror" setting="{&quot;mode&quot;:&quot;stex&quot;,&quot;mime&quot;:&quot;text/x-latex&quot;,&quot;theme&quot;:&quot;monokai&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:false,&quot;language&quot;:&quot;LaTeX&quot;,&quot;modeName&quot;:&quot;stex&quot;}"><code>\LaTeX  boşluk yok.\\
+\LaTeX{} boşluk var.\\
+\LaTeX\ boşluk komutuyla  boşluk.</code></pre>
+</div>
+</div>
+<div class="wp-block-column is-vertically-aligned-center">
+<p><a href="https://www.texdizgi.com/wp-content/uploads/2020/04/LaTeX_Sunu-1.pdf" class="pdfemb-viewer" style="" data-width="max" data-height="max" toolbar="bottom" toolbar-fixed="off">LaTeX_Sunu-1<br />
+</a></p>
+</div>
+</div>
+</div>
+<div id="özel-amaçlı-karakterler" class="section level3" number="1.1.13">
+<h3><span class="header-section-number">1.1.13</span> Özel amaçlı karakterler</h3>
+<p>Aşağıdaki karakterlerin herbiri LaTeX’de özel bir amaç için kullanılır.
+Dolayısıyla bu karakterleri doğrudan kullanmak istenmeyen sonuçlara yol
+açabilir.</p>
+<pre class="wp-block-code"><code>#  $  %   &amp;   {   }   ~  ^  _ \</code></pre>
+<p>Bu karakterleri çıktıda elde etmek isterseniz, sondaki hariç, başına bir
+geribölü koymanız gerekir. Sondaki için, yani bir geribölü sembolü elde
+etmek içinse <code>\textbackslash</code> komutunu kullanabilirsiniz. Eğer <code>\\</code>
+komutunu verirseniz yeni bir satır başlatmış olursunuz.</p>
+<p>Bu karakterlerden örneğin yüzde (<code>%</code>) karakteri kaynak dosyanızda yorum
+ya da açıklama yazmaya yarar. Bu sembolden sonra yazılanları LaTeX
+dikkate almaz ve çıktıda görünmez.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb8-1"><a href="genel.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\%</span>50 zam geldi. </span>
+<span id="cb8-2"><a href="genel.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co">% Buraya yorum yazabilirsiniz.</span></span></code></pre></div>
+<div class="wp-block-column is-vertically-aligned-center">
+<p><a href="https://www.texdizgi.com/wp-content/uploads/2020/04/LaTeX_Sunu-2.pdf" class="pdfemb-viewer" style="" data-width="max" data-height="max" toolbar="bottom" toolbar-fixed="off">LaTeX_Sunu-2<br />
+</a></p>
+</div>
+<p>:::</p>
+<p>Diğer karakterlerden örneğin (<code>$</code>) nin matematik kipini açma ve
+kapatmaya yaradığından
+<a href="https://www.texdizgi.com/latexde-matematiksel-ifadeleri-dizmek-1-giris/" rel="noreferrer noopener" target="_blank">bahsetmiştik</a>. (<code>&amp;</code>) karekteri tablo ve benzeri yapılarda dikey
+hizalama yapmak için veya sütun ayracı olarak kullanılır. Çengelli
+parantezlerden zaten yeterince bahsettik. (<code>#</code>) karakteri yeni komutlar
+tanımlamakta kullanılır. Tilda (<code>~</code>) ise genişlemeyen bir boşluk
+yaratmak için kullanılır. (<code>^</code>) ve (<code>_</code>) karakterleri de matematikte üst
+ve alt indis yazmak için kullanılır. Her birinin kullanımlarından yeri
+geldiğinde tekrar bahsedeceğiz.</p>
+
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="kaynaklar.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
