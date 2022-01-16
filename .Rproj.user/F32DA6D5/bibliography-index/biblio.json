@@ -1,0 +1,653 @@
+{
+    "sources": [
+        {
+            "URL": "http://yihui.name/knitr/",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "edition": "2nd",
+            "id": "xie2015",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "note": "ISBN 978-1498716963",
+            "publisher": "Chapman; Hall/CRC",
+            "publisher-place": "Boca Raton, Florida",
+            "title": "Dynamic documents with R and knitr",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Poore",
+                    "given": "Geoffrey M"
+                },
+                {
+                    "family": "Rudolph",
+                    "given": "Konrad"
+                }
+            ],
+            "id": "Poore",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "note": "http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/minted/minted.pdf",
+            "title": "The minted package: Highlighted source code in LaTeX",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Tantau",
+                    "given": "Till"
+                }
+            ],
+            "id": "Tantau2019",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "note": "https://sourceforge.net/projects/pgf",
+            "title": "The TikZ and PGF Packages Manual for version 3.1",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Hoffmann",
+                    "given": "Jobst"
+                }
+            ],
+            "id": "Hoffmann2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "note": "http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/listings/listings.pdf",
+            "title": "The Listings Package",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Reckdahl",
+                    "given": "Keith"
+                }
+            ],
+            "id": "Reckdahl2006",
+            "issued": {
+                "date-parts": [
+                    [
+                        2006
+                    ]
+                ]
+            },
+            "note": "http://ftp.cc.uoc.gr/mirrors/CTAN/info/epslatex/english/epslatex.pdf",
+            "title": "Using Imported Graphics in LaTeX and pdfLaTeX",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Pakin",
+                    "given": "Scott"
+                }
+            ],
+            "id": "Pakin2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "note": "http://ftp.cc.uoc.gr/mirrors/CTAN/info/symbols/comprehensive/symbols-a4.pdf",
+            "title": "The Comprehensive LaTeX Symbol List; The Comprehensive LaTeX Symbol List",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Oetiker",
+                    "given": "Tobias"
+                },
+                {
+                    "family": "Partl",
+                    "given": "Hubert"
+                },
+                {
+                    "family": "Hyna",
+                    "given": "Irene"
+                },
+                {
+                    "family": "Schlegl",
+                    "given": "Elisabeth"
+                }
+            ],
+            "id": "Oetiker",
+            "issued": {
+                "date-parts": [
+                    [
+                        2006
+                    ]
+                ]
+            },
+            "note": "http://ftp.ntua.gr/mirror/ctan/info/lshort/turkish/lshort-tr.pdf. Türkçesi: Bekir Karaoğlu",
+            "title": "İnce bir LaTeX2e Elkitabı veya, 116 dakikada LaTeX2e",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Rakhimov",
+                    "given": "Abdugafur"
+                },
+                {
+                    "family": "Kesemen",
+                    "given": "Orhan"
+                }
+            ],
+            "id": "adim",
+            "note": "Cilt 1. http://ftp.ntua.gr/mirror/ctan/info/turkishintro/LATEX_Turkish_Volume_1.pdf",
+            "title": "Adım Adım LaTeX",
+            "type": "book",
+            "volume": "1"
+        },
+        {
+            "id": "over",
+            "note": "https://www.overleaf.com/",
+            "title": "Overleaf-online LaTeX editor",
+            "type": ""
+        },
+        {
+            "id": "latex2e",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "note": "http://puszcza.gnu.org.ua/software/latexrefman/",
+            "title": "LaTeX2e: An unofficial reference manual",
+            "title-short": "LaTeX2e",
+            "type": "book"
+        },
+        {
+            "id": "wiki",
+            "note": "https://en.wikibooks.org/wiki/LaTeX",
+            "title": "LaTeX-wikibooks, open books for an open world",
+            "type": ""
+        },
+        {
+            "id": "ctan",
+            "note": "http://mirror.ctan.org/",
+            "title": "The comprehensive TeX archive network",
+            "type": ""
+        },
+        {
+            "id": "tug",
+            "note": "http://tug.org/",
+            "title": "The TeX user group",
+            "type": ""
+        },
+        {
+            "author": [
+                {
+                    "family": "Pantieri",
+                    "given": "Lorenzo"
+                }
+            ],
+            "id": "Pantieri2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "note": "http://www.lorenzopantieri.net/LaTeX_files/LaTeXpedia.pdf",
+            "title": "LaTeXpedia",
+            "type": "book"
+        },
+        {
+            "ISBN": "978-1-909440-00-5",
+            "author": [
+                {
+                    "family": "Talbot",
+                    "given": "Nicola L. C."
+                }
+            ],
+            "collection-title": "Dickimaw LaTeX series",
+            "id": "talbot2012",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "publisher": "Dickimaw Books",
+            "publisher-place": "Norfolk, UK",
+            "title": "LaTeX for complete novices",
+            "type": "book",
+            "volume": "1"
+        },
+        {
+            "ISBN": "978-1-909440-02-9",
+            "author": [
+                {
+                    "family": "Talbot",
+                    "given": "Nicola L. C."
+                }
+            ],
+            "collection-title": "Dickimaw LaTeX series",
+            "id": "talbot2013",
+            "issued": {
+                "date-parts": [
+                    [
+                        2013
+                    ]
+                ]
+            },
+            "publisher": "Dickimaw Books",
+            "publisher-place": "Norfolk, UK",
+            "title": "Using LaTeX to write a PhD thesis",
+            "type": "book",
+            "volume": "2"
+        },
+        {
+            "author": [
+                {
+                    "family": "Lamport",
+                    "given": "Leslie"
+                }
+            ],
+            "id": "lamport1994latex",
+            "issued": {
+                "date-parts": [
+                    [
+                        1994
+                    ]
+                ]
+            },
+            "publisher": "Addison-wesley",
+            "title": "LaTeX: A document preparation system: User’s guide and reference manual",
+            "title-short": "LaTeX",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Mittelbach",
+                    "given": "Frank"
+                },
+                {
+                    "family": "Goossens",
+                    "given": "Michel"
+                },
+                {
+                    "family": "Braams",
+                    "given": "Johannes"
+                },
+                {
+                    "family": "Carlisle",
+                    "given": "David"
+                },
+                {
+                    "family": "Rowley",
+                    "given": "Chris"
+                }
+            ],
+            "id": "mittelbach2004latex",
+            "issued": {
+                "date-parts": [
+                    [
+                        2004
+                    ]
+                ]
+            },
+            "publisher": "Addison-Wesley Professional",
+            "title": "The LaTeX companion",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Goossens",
+                    "given": "Michel"
+                },
+                {
+                    "family": "Rahtz",
+                    "given": "Sebastian PQ"
+                },
+                {
+                    "family": "Rahtz",
+                    "given": "Sebastian"
+                },
+                {
+                    "family": "Mittelbach",
+                    "given": "Frank"
+                }
+            ],
+            "id": "goossens1997latex",
+            "issued": {
+                "date-parts": [
+                    [
+                        1997
+                    ]
+                ]
+            },
+            "publisher": "Addison-Wesley Professional",
+            "title": "The LaTeX graphics companion: Illustrating documents with TeX and PostScript",
+            "title-short": "The LaTeX graphics companion",
+            "type": "book",
+            "volume": "1"
+        },
+        {
+            "abstract": "This packages adds support of handling eps images to package graphics or graphicx with option pdftex. If an eps image is detected, epstopdf is automatically called to convert it to pdf format.",
+            "author": [
+                {
+                    "family": "Oberdiek",
+                    "given": "Heiko"
+                }
+            ],
+            "id": "Oberdiek2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "note": "http://ftp.ntua.gr/mirror/ctan/macros/latex/contrib/oberdiek/epstopdf.pdf",
+            "title": "The epstopdf package",
+            "type": "book"
+        },
+        {
+            "URL": "https://www.R-project.org/",
+            "author": [
+                {
+                    "literal": "R Core Team"
+                }
+            ],
+            "id": "R-base",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "publisher": "R Foundation for Statistical Computing",
+            "publisher-place": "Vienna, Austria",
+            "title": "R: A language and environment for statistical computing",
+            "title-short": "R",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=bookdown",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "id": "R-bookdown",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "note": "R package version 0.24",
+            "title": "Bookdown: Authoring books and technical documents with r markdown",
+            "title-short": "Bookdown",
+            "type": "book"
+        },
+        {
+            "URL": "https://yihui.org/knitr/",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "id": "R-knitr",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "note": "R package version 1.37",
+            "title": "Knitr: A general-purpose package for dynamic report generation in r",
+            "title-short": "Knitr",
+            "type": "book"
+        },
+        {
+            "URL": "https://CRAN.R-project.org/package=rmarkdown",
+            "author": [
+                {
+                    "family": "Allaire",
+                    "given": "JJ"
+                },
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                },
+                {
+                    "family": "McPherson",
+                    "given": "Jonathan"
+                },
+                {
+                    "family": "Luraschi",
+                    "given": "Javier"
+                },
+                {
+                    "family": "Ushey",
+                    "given": "Kevin"
+                },
+                {
+                    "family": "Atkins",
+                    "given": "Aron"
+                },
+                {
+                    "family": "Wickham",
+                    "given": "Hadley"
+                },
+                {
+                    "family": "Cheng",
+                    "given": "Joe"
+                },
+                {
+                    "family": "Chang",
+                    "given": "Winston"
+                },
+                {
+                    "family": "Iannone",
+                    "given": "Richard"
+                }
+            ],
+            "id": "R-rmarkdown",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "note": "R package version 2.11",
+            "title": "Rmarkdown: Dynamic documents for r",
+            "title-short": "Rmarkdown",
+            "type": "book"
+        },
+        {
+            "URL": "https://bookdown.org/yihui/bookdown",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "id": "bookdown2016",
+            "issued": {
+                "date-parts": [
+                    [
+                        2016
+                    ]
+                ]
+            },
+            "note": "ISBN 978-1138700109",
+            "publisher": "Chapman; Hall/CRC",
+            "publisher-place": "Boca Raton, Florida",
+            "title": "Bookdown: Authoring books and technical documents with R markdown",
+            "title-short": "Bookdown",
+            "type": "book"
+        },
+        {
+            "URL": "https://yihui.org/knitr/",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "edition": "2nd",
+            "id": "knitr2015",
+            "issued": {
+                "date-parts": [
+                    [
+                        2015
+                    ]
+                ]
+            },
+            "note": "ISBN 978-1498716963",
+            "publisher": "Chapman; Hall/CRC",
+            "publisher-place": "Boca Raton, Florida",
+            "title": "Dynamic documents with R and knitr",
+            "type": "book"
+        },
+        {
+            "URL": "http://www.crcpress.com/product/isbn/9781466561595",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                }
+            ],
+            "container-title": "Implementing reproducible computational research",
+            "editor": [
+                {
+                    "family": "Stodden",
+                    "given": "Victoria"
+                },
+                {
+                    "family": "Leisch",
+                    "given": "Friedrich"
+                },
+                {
+                    "family": "Peng",
+                    "given": "Roger D."
+                }
+            ],
+            "id": "knitr2014",
+            "issued": {
+                "date-parts": [
+                    [
+                        2014
+                    ]
+                ]
+            },
+            "note": "ISBN 978-1466561595",
+            "publisher": "Chapman; Hall/CRC",
+            "title": "Knitr: A comprehensive tool for reproducible research in R",
+            "title-short": "Knitr",
+            "type": "chapter"
+        },
+        {
+            "URL": "https://bookdown.org/yihui/rmarkdown",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                },
+                {
+                    "family": "Allaire",
+                    "given": "J. J."
+                },
+                {
+                    "family": "Grolemund",
+                    "given": "Garrett"
+                }
+            ],
+            "id": "rmarkdown2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "note": "ISBN 9781138359338",
+            "publisher": "Chapman; Hall/CRC",
+            "publisher-place": "Boca Raton, Florida",
+            "title": "R markdown: The definitive guide",
+            "title-short": "R markdown",
+            "type": "book"
+        },
+        {
+            "URL": "https://bookdown.org/yihui/rmarkdown-cookbook",
+            "author": [
+                {
+                    "family": "Xie",
+                    "given": "Yihui"
+                },
+                {
+                    "family": "Dervieux",
+                    "given": "Christophe"
+                },
+                {
+                    "family": "Riederer",
+                    "given": "Emily"
+                }
+            ],
+            "id": "rmarkdown2020",
+            "issued": {
+                "date-parts": [
+                    [
+                        2020
+                    ]
+                ]
+            },
+            "note": "ISBN 9780367563837",
+            "publisher": "Chapman; Hall/CRC",
+            "publisher-place": "Boca Raton, Florida",
+            "title": "R markdown cookbook",
+            "type": "book"
+        }
+    ],
+    "project_biblios": [
+        "book.bib",
+        "packages.bib"
+    ]
+}
