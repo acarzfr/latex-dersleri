@@ -24,7 +24,7 @@
 <meta name="author" content="Zafer Acar" />
 
 
-<meta name="date" content="2022-01-20" />
+<meta name="date" content="2022-01-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -140,11 +140,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Önsöz</a></li>
 <li class="chapter" data-level="1" data-path="genel.html"><a href="genel.html"><i class="fa fa-check"></i><b>1</b> Genel</a>
 <ul>
-<li class="chapter" data-level="1.1" data-path="genel.html"><a href="genel.html#latex-nedir"><i class="fa fa-check"></i><b>1.1</b> LaTeX nedir?</a>
-<ul>
-<li class="chapter" data-level="1.1.1" data-path="genel.html"><a href="genel.html#hizalama-ve-tireleme"><i class="fa fa-check"></i><b>1.1.1</b> Hizalama ve tireleme</a></li>
-</ul></li>
-<li class="chapter" data-level="1.2" data-path="genel.html"><a href="genel.html#farklılıklar"><i class="fa fa-check"></i><b>1.2</b> Farklılıklar</a>
+<li class="chapter" data-level="1.1" data-path="genel.html"><a href="genel.html#latex-nedir"><i class="fa fa-check"></i><b>1.1</b> LaTeX Nedir?</a></li>
+<li class="chapter" data-level="1.2" data-path="genel.html"><a href="genel.html#latexdeki-önemli-yapılar"><i class="fa fa-check"></i><b>1.2</b> LaTeX’deki Önemli Yapılar</a>
 <ul>
 <li class="chapter" data-level="1.2.1" data-path="genel.html"><a href="genel.html#komutlar"><i class="fa fa-check"></i><b>1.2.1</b> Komutlar</a></li>
 <li class="chapter" data-level="1.2.2" data-path="genel.html"><a href="genel.html#paketler"><i class="fa fa-check"></i><b>1.2.2</b> Paketler</a></li>
@@ -175,32 +172,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="genel" class="section level1" number="1">
 <h1><span class="header-section-number">Bölüm 1</span> Genel</h1>
 <div id="latex-nedir" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> LaTeX nedir?</h2>
+<h2><span class="header-section-number">1.1</span> LaTeX Nedir?</h2>
 <p>Önce TeX’le başlayalım. TeX, 1978’den
 itibaren <a href="https://www-cs-faculty.stanford.edu/~knuth/">Donald Knuth</a> tarafından belgelerin bilgisayarda dizilmesi
 için geliştirdiği bir dizgi sistemidir.
 LaTeX ise TeX’in kullanımını kolaylaştırmak için 1984 yılında <a href="http://www.lamport.org/">Leslie
 Lamport</a> tarafından tasarlanmış bir makro pakettir.</p>
-<p>LaTeX, genelde WYSIWYG editörleriyle karşılaştırılır. WYSIWYG, Microsoft
+<p>LaTeX, genelde WYSIWYG<a href="kaynaklar.html#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> editörleriyle karşılaştırılır. WYSIWYG, Microsoft
 Word, Libreoffice Writer gibi kelime işlemcilere ya da Adobe Indesign
 gibi programlara verilen genel bir isimdir. Hepsinin ortak özelliği,
 girdi ile çıktının aynı anda ve birlikte görünmesidir.</p>
-<p>LaTeX’de ise işler farklı yürür. Girdi ve çıktı ekranı farklıdır ve
-çıktıyı görmek için girdinin derleme işleminden geçmesi gerekir. Ayrıca
-birçok şey için WYSIWYG editörlerinde olmayan yapılar vardır. Şimdi, bu
-yapıların ne oldukları ve ne işe yaradıklarını açıklayalım.</p>
-<p>Günümüzde Microsoft Word gibi programlar kullanıcının çok güzel belgeler
-üretmesini sağlasa da, LaTeX kullanımı, okunaklı bir belge için
-vazgeçilmez olan çok sayıda profesyonel olasılık sunmaktadır. Aşağıda
-birkaç önemli örnek veriyoruz.</p>
-<blockquote>
-<p>Aşağıdaki örnek ve açıklamalar
-<a href="http://www.rtznet.nl/zink/latex.php?lang=nl" rel="noreferrer noopener" target="_blank">http://www.rtznet.nl/zink/index.php?lang=nl</a>,
-<a href="https://nitens.org/w/latex/" rel="noreferrer noopener" target="_blank">https://nitens.org/w/latex/</a> ve
-<a href="https://ctan.org/tex" rel="noreferrer noopener" target="_blank">https://ctan.org/tex</a> adreslerinden derlenmiştir.</p>
-</blockquote>
-<div id="hizalama-ve-tireleme" class="section level3" number="1.1.1">
-<h3><span class="header-section-number">1.1.1</span> Hizalama ve tireleme</h3>
 <p>Bir metnin genel görünümü ve okunabilirliği, metnin nasıl
 hizalandığından ve kesildiğinden büyük ölçüde etkilenir. LaTeX, tüm
 paragraf için hizalamayı ve kesmeleri optimize eden son derece gelişmiş
@@ -208,15 +189,18 @@ TeX algoritmalarını kullanır. Kelime işlemciler ve diğer programlar,
 satır başına çalıştıkları için oldukça yetersiz kalırlar. Bu, diğer
 şeylerin yanı sıra düzensiz aralıklara ve birçok kısa çizgiye sebep
 olur. Sonuçları görmeniz için Microsoft Word 2008 (Mac), Adobe InDesign
-CS4 ve LaTeX’le dizilmiş bir metni ekliyoruz:</p>
+CS4 ve LaTeX’le dizilmiş bir metni <a href="http://www.rtznet.nl/zink/comparison.pdf">şuradan</a> inceleyebilirsiniz.</p>
 <p>Sonuç, LaTeX’in diğer programların her ikisinden de üstün olduğunu
 açıkça gösterir: iki kat daha az tireleme kullanır ve yine de sözcük
 aralığındaki varyasyon, Word veya InDesign’dan belirgin şekilde daha
 azdır. LaTeX’te çok büyük sözcük aralığı içeren satırlar oluşmaz.</p>
+<p>LaTeX’de girdi ve çıktı ekranı farklıdır ve
+çıktıyı görmek için girdinin derleme işleminden geçmesi gerekir. Ayrıca
+birçok şey için WYSIWYG editörlerinde olmayan yapılar vardır. Şimdi, bu
+yapıların ne oldukları ve ne işe yaradıklarını açıklayalım.</p>
 </div>
-</div>
-<div id="farklılıklar" class="section level2" number="1.2">
-<h2><span class="header-section-number">1.2</span> Farklılıklar</h2>
+<div id="latexdeki-önemli-yapılar" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> LaTeX’deki Önemli Yapılar</h2>
 <div id="komutlar" class="section level3" number="1.2.1">
 <h3><span class="header-section-number">1.2.1</span> Komutlar</h3>
 <p>LaTeX komutları bir geribölü (<code>\</code>) işaretiyle başlar ve ya sadece
@@ -228,15 +212,15 @@ sonra çengelli parantezler içine yazılır. Zorunlu değişken alan
 komutlar, zorunlu olmayan (isteğe bağlı) değişkenler de alabilir, bunlar
 da komut adından sonra gelen köşeli parantezler içine yazılırlar. Eğer
 değişkenler birden fazlaysa aralarına virgül koyularak ayrılır.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb1-1"><a href="genel.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\:</span></span>
-<span id="cb1-2"><a href="genel.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\LaTeX</span></span>
-<span id="cb1-3"><a href="genel.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\item</span>[...]</span>
-<span id="cb1-4"><a href="genel.html#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\emph</span>{...}</span>
-<span id="cb1-5"><a href="genel.html#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[...]{<span class="ex">...</span>}</span>
-<span id="cb1-6"><a href="genel.html#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">\subfloat</span>[...][...]{...}</span>
-<span id="cb1-7"><a href="genel.html#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">\raisebox</span>{...}[...][...]{...}</span>
-<span id="cb1-8"><a href="genel.html#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">\multicolumn</span>{...}{...}{...}</span>
-<span id="cb1-9"><a href="genel.html#cb1-9" aria-hidden="true" tabindex="-1"></a>{<span class="fu">\bfseries</span> ...}</span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r numberLines"><code class="sourceCode r"><span id="cb1-1"><a href="genel.html#cb1-1"></a>\<span class="sc">:</span></span>
+<span id="cb1-2"><a href="genel.html#cb1-2"></a>\LaTeX</span>
+<span id="cb1-3"><a href="genel.html#cb1-3"></a>\item[...]</span>
+<span id="cb1-4"><a href="genel.html#cb1-4"></a>\emph{...}</span>
+<span id="cb1-5"><a href="genel.html#cb1-5"></a>\documentclass[...]{...}</span>
+<span id="cb1-6"><a href="genel.html#cb1-6"></a>\subfloat[...][...]{...}</span>
+<span id="cb1-7"><a href="genel.html#cb1-7"></a>\raisebox{...}[...][...]{...}</span>
+<span id="cb1-8"><a href="genel.html#cb1-8"></a>\multicolumn{...}{...}{...}</span>
+<span id="cb1-9"><a href="genel.html#cb1-9"></a>{\bfseries ...}</span></code></pre></div>
 <p>Fikir vermesi açısından yukarıda dokuz adet komut örneği verilmiştir.
 Birinci komut bir tane harf olmayan karakterden oluşan bir komuttur.
 İkincisi, değişkeni olmayan bir komuttur. Bazı harflerin büyük
@@ -249,7 +233,7 @@ gösterir. Dokuzuncu komut ise bildirim şeklinde verilmiştir.</p>
 kullanılabilmesi için kaynak dosyaya bazı paketlerin eklenmesi gerekir.
 Bu, <code>\usepackage</code> komutuyla yapılır. Bu komutun zorunlu değişkenine
 paket adı, zorunlu olmayan kısmına ise paket seçenekleri yazılır:</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb2-1"><a href="genel.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[&lt;seçenekler&gt;]{<span class="ex">&lt;paket adı&gt;</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="genel.html#cb2-1" aria-hidden="true" tabindex="-1"></a>\usepackage[<span class="sc">&lt;</span>seçenekler<span class="sc">&gt;</span>]{<span class="sc">&lt;</span>paket adı<span class="sc">&gt;</span>}</span></code></pre></div>
 <p>Bu komutla paketin kaynak dosyaya eklenmesi TeX dağıtımıyla sisteminize
 kurulmuş olan paketin belgeye çağrılarak işe koşulması demektir.</p>
 </div>
@@ -259,9 +243,9 @@ kurulmuş olan paketin belgeye çağrılarak işe koşulması demektir.</p>
 Ortamları birden fazla ögeye uygulanan komutlar olarak düşünebiliriz.</p>
 <p>Bir ortam <code>\begin</code> komutuyla başlayıp <code>\end</code> komutuyla biter. Her iki
 komutun zorunlu değişkeni ortamın adıdır:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb3-1"><a href="genel.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="er">&lt;</span>ortam adı&gt;}</span>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="genel.html#cb3-1" aria-hidden="true" tabindex="-1"></a>\begin{<span class="sc">&lt;</span>ortam adı<span class="sc">&gt;</span>}</span>
 <span id="cb3-2"><a href="genel.html#cb3-2" aria-hidden="true" tabindex="-1"></a> ...</span>
-<span id="cb3-3"><a href="genel.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="er">&lt;</span>ortam adı&gt;}</span></code></pre></div>
+<span id="cb3-3"><a href="genel.html#cb3-3" aria-hidden="true" tabindex="-1"></a>\end{<span class="sc">&lt;</span>ortam adı<span class="sc">&gt;</span>}</span></code></pre></div>
 </div>
 <div id="gruplar" class="section level3" number="1.2.4">
 <h3><span class="header-section-number">1.2.4</span> Gruplar</h3>
@@ -278,20 +262,11 @@ LaTeX bunu tek bir boşluk olarak algılar.</p>
 <p>Bütün bir satırın boş bırakılması LaTeX tarafından paragraf başı olarak
 algılanır. Arka arkaya boş bırakılan çok sayıda boş satır LaTeX
 tarafından tek bir boş satır yani paragraf başı olarak algılanır.</p>
-<div class="wp-block-columns">
-<div class="wp-block-column is-vertically-aligned-center">
-<div class="wp-block-codemirror-blocks-code-block code-block">
-<pre class="CodeMirror" setting="{&quot;mode&quot;:&quot;stex&quot;,&quot;mime&quot;:&quot;text/x-latex&quot;,&quot;theme&quot;:&quot;monokai&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:false,&quot;language&quot;:&quot;LaTeX&quot;,&quot;modeName&quot;:&quot;stex&quot;}"><code> İster bir boşluk, isterseniz de çok         sayıda boşluk bırakın. 
-İkisi de bir boşluk gibi işlem görür. 
-
-Boş bir satır yeni paragraf demektir, burada olduğu gibi.</code></pre>
-</div>
-</div>
-<div class="wp-block-column is-vertically-aligned-center">
-<p><a href="https://www.texdizgi.com/wp-content/uploads/2020/04/LaTeX_Sunu.pdf" class="pdfemb-viewer" style="" data-width="max" data-height="max" toolbar="bottom" toolbar-fixed="off">LaTeX_Sunu<br />
-</a></p>
-</div>
-</div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="genel.html#cb4-1" aria-hidden="true" tabindex="-1"></a> İster bir boşluk, isterseniz de çok         sayıda boşluk bırakın. </span>
+<span id="cb4-2"><a href="genel.html#cb4-2" aria-hidden="true" tabindex="-1"></a>İkisi de bir boşluk gibi işlem görür. </span>
+<span id="cb4-3"><a href="genel.html#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="genel.html#cb4-4" aria-hidden="true" tabindex="-1"></a>Boş bir satır yeni paragraf demektir, burada olduğu gibi.</span></code></pre></div>
+<p><a href="github.com/acarzfr/latex-dersleri/examples/ex1.pdf">Çıktı</a></p>
 <p>Komutlardan sonra gelen boşlukları LaTeX dikkate almaz. Komuttan sonra
 gerçekten bir boşluk bırakmak için, ya <code>{}</code> ve ardından boşluk girilir
 ya da komut adından sonra özel bir boşluk komutu kullanılır.</p>

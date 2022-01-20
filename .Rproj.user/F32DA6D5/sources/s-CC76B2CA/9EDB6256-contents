@@ -3,49 +3,19 @@
 # Genel {#genel}
 
 
-## LaTeX nedir?
+## LaTeX Nedir?
 
 Önce TeX'le başlayalım. TeX, 1978'den
-itibaren [Donald
-Knuth](https://www-cs-faculty.stanford.edu/~knuth/){target="_blank"
-rel="noreferrer noopener"} tarafından belgelerin bilgisayarda dizilmesi
+itibaren [Donald Knuth](https://www-cs-faculty.stanford.edu/~knuth/) tarafından belgelerin bilgisayarda dizilmesi
 için geliştirdiği bir dizgi sistemidir.
 LaTeX ise TeX'in kullanımını kolaylaştırmak için 1984 yılında [Leslie
 Lamport](http://www.lamport.org/) tarafından tasarlanmış bir makro pakettir.
 
-LaTeX, genelde WYSIWYG editörleriyle karşılaştırılır. WYSIWYG, Microsoft
+LaTeX, genelde WYSIWYG^[WYSIWYG, İngilizce'de "What You See Is What You Get" teriminin baş harflerinden oluşan bir bilgisayar terimidir. Türkçesi *Ne Görüyorsan Onu Alırsın* demek olup ekranda görülene çok benzer bir çıktı alınacağı ortamları tanımlar.] editörleriyle karşılaştırılır. WYSIWYG, Microsoft
 Word, Libreoffice Writer gibi kelime işlemcilere ya da Adobe Indesign
 gibi programlara verilen genel bir isimdir. Hepsinin ortak özelliği,
 girdi ile çıktının aynı anda ve birlikte görünmesidir.
 
-LaTeX'de ise işler farklı yürür. Girdi ve çıktı ekranı farklıdır ve
-çıktıyı görmek için girdinin derleme işleminden geçmesi gerekir. Ayrıca
-birçok şey için WYSIWYG editörlerinde olmayan yapılar vardır. Şimdi, bu
-yapıların ne oldukları ve ne işe yaradıklarını açıklayalım.
-
-
-
-Günümüzde Microsoft Word gibi programlar kullanıcının çok güzel belgeler
-üretmesini sağlasa da, LaTeX kullanımı, okunaklı bir belge için
-vazgeçilmez olan çok sayıda profesyonel olasılık sunmaktadır. Aşağıda
-birkaç önemli örnek veriyoruz.
-
-> Aşağıdaki örnek ve açıklamalar
-> [http://www.rtznet.nl/zink/index.php?lang=nl](http://www.rtznet.nl/zink/latex.php?lang=nl){rel="noreferrer noopener"
-> target="_blank"},
-> [https://nitens.org/w/latex/](https://nitens.org/w/latex/){rel="noreferrer noopener"
-> target="_blank"} ve
-> [https://ctan.org/tex](https://ctan.org/tex){rel="noreferrer noopener"
-> target="_blank"} adreslerinden derlenmiştir.
-
-
-
-
-
-
-
-
-### Hizalama ve tireleme
 
 Bir metnin genel görünümü ve okunabilirliği, metnin nasıl
 hizalandığından ve kesildiğinden büyük ölçüde etkilenir. LaTeX, tüm
@@ -54,7 +24,7 @@ TeX algoritmalarını kullanır. Kelime işlemciler ve diğer programlar,
 satır başına çalıştıkları için oldukça yetersiz kalırlar. Bu, diğer
 şeylerin yanı sıra düzensiz aralıklara ve birçok kısa çizgiye sebep
 olur. Sonuçları görmeniz için Microsoft Word 2008 (Mac), Adobe InDesign
-CS4 ve LaTeX'le dizilmiş bir metni ekliyoruz:
+CS4 ve LaTeX'le dizilmiş bir metni [şuradan](http://www.rtznet.nl/zink/comparison.pdf) inceleyebilirsiniz.
 
 
 
@@ -64,9 +34,12 @@ aralığındaki varyasyon, Word veya InDesign'dan belirgin şekilde daha
 azdır. LaTeX'te çok büyük sözcük aralığı içeren satırlar oluşmaz.
 
 
+LaTeX'de girdi ve çıktı ekranı farklıdır ve
+çıktıyı görmek için girdinin derleme işleminden geçmesi gerekir. Ayrıca
+birçok şey için WYSIWYG editörlerinde olmayan yapılar vardır. Şimdi, bu
+yapıların ne oldukları ve ne işe yaradıklarını açıklayalım.
 
-
-
+## LaTeX'deki Önemli Yapılar
 
 ### Komutlar
 
@@ -81,8 +54,8 @@ komutlar, zorunlu olmayan (isteğe bağlı) değişkenler de alabilir, bunlar
 da komut adından sonra gelen köşeli parantezler içine yazılırlar. Eğer
 değişkenler birden fazlaysa aralarına virgül koyularak ayrılır.
 
-::: {.wp-block-codemirror-blocks-code-block .code-block}
-``` {.CodeMirror setting="{\"mode\":\"stex\",\"mime\":\"text/x-latex\",\"theme\":\"monokai\",\"lineNumbers\":true,\"styleActiveLine\":false,\"lineWrapping\":false,\"readOnly\":false,\"language\":\"LaTeX\",\"modeName\":\"stex\"}"}
+
+``` {r, attr.source='.numberLines', eval=FALSE}
 \:
 \LaTeX
 \item[...]
@@ -93,7 +66,7 @@ değişkenler birden fazlaysa aralarına virgül koyularak ayrılır.
 \multicolumn{...}{...}{...}
 {\bfseries ...}
 ```
-:::
+
 
 Fikir vermesi açısından yukarıda dokuz adet komut örneği verilmiştir.
 Birinci komut bir tane harf olmayan karakterden oluşan bir komuttur.
@@ -108,11 +81,10 @@ kullanılabilmesi için kaynak dosyaya bazı paketlerin eklenmesi gerekir.
 Bu, `\usepackage` komutuyla yapılır. Bu komutun zorunlu değişkenine
 paket adı, zorunlu olmayan kısmına ise paket seçenekleri yazılır:
 
-::: {.wp-block-codemirror-blocks-code-block .code-block}
-``` {.CodeMirror setting="{\"mode\":\"stex\",\"mime\":\"text/x-latex\",\"theme\":\"monokai\",\"lineNumbers\":false,\"styleActiveLine\":false,\"lineWrapping\":false,\"readOnly\":false,\"language\":\"LaTeX\",\"modeName\":\"stex\"}"}
+
+``` {r eval=FALSE}
 \usepackage[<seçenekler>]{<paket adı>}
 ```
-:::
 
 Bu komutla paketin kaynak dosyaya eklenmesi TeX dağıtımıyla sisteminize
 kurulmuş olan paketin belgeye çağrılarak işe koşulması demektir.
@@ -125,13 +97,12 @@ Ortamları birden fazla ögeye uygulanan komutlar olarak düşünebiliriz.
 Bir ortam `\begin` komutuyla başlayıp `\end` komutuyla biter. Her iki
 komutun zorunlu değişkeni ortamın adıdır:
 
-::: {.wp-block-codemirror-blocks-code-block .code-block}
-``` {.CodeMirror setting="{\"mode\":\"stex\",\"mime\":\"text/x-latex\",\"theme\":\"monokai\",\"lineNumbers\":false,\"styleActiveLine\":false,\"lineWrapping\":false,\"readOnly\":false,\"language\":\"LaTeX\",\"modeName\":\"stex\"}"}
+
+``` {r eval=FALSE}
 \begin{<ortam adı>}
  ...
 \end{<ortam adı>}
 ```
-:::
 
 ### Gruplar
 
@@ -150,25 +121,15 @@ Bütün bir satırın boş bırakılması LaTeX tarafından paragraf başı olar
 algılanır. Arka arkaya boş bırakılan çok sayıda boş satır LaTeX
 tarafından tek bir boş satır yani paragraf başı olarak algılanır.
 
-::: wp-block-columns
-::: {.wp-block-column .is-vertically-aligned-center}
-::: {.wp-block-codemirror-blocks-code-block .code-block}
-``` {.CodeMirror setting="{\"mode\":\"stex\",\"mime\":\"text/x-latex\",\"theme\":\"monokai\",\"lineNumbers\":false,\"styleActiveLine\":false,\"lineWrapping\":false,\"readOnly\":false,\"language\":\"LaTeX\",\"modeName\":\"stex\"}"}
+
+``` {r eval=FALSE}
  İster bir boşluk, isterseniz de çok         sayıda boşluk bırakın. 
 İkisi de bir boşluk gibi işlem görür. 
 
 Boş bir satır yeni paragraf demektir, burada olduğu gibi.
 ```
-:::
-:::
+[Çıktı](github.com/acarzfr/latex-dersleri/examples/ex1.pdf)
 
-::: {.wp-block-column .is-vertically-aligned-center}
-[LaTeX_Sunu\
-](https://www.texdizgi.com/wp-content/uploads/2020/04/LaTeX_Sunu.pdf){.pdfemb-viewer
-style="" data-width="max" data-height="max" toolbar="bottom"
-toolbar-fixed="off"}
-:::
-:::
 
 Komutlardan sonra gelen boşlukları LaTeX dikkate almaz. Komuttan sonra
 gerçekten bir boşluk bırakmak için, ya `{}` ve ardından boşluk girilir

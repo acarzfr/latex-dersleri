@@ -149,7 +149,7 @@
 
 \title{LaTeX Dersleri}
 \author{Zafer Acar}
-\date{2022-01-19}
+\date{2022-01-21}
 
 \begin{document}
 \maketitle
@@ -166,69 +166,24 @@
 \chapter*{Önsöz}\label{uxf6nsuxf6z}}
 
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\BuiltInTok{\textbackslash{}documentclass}\NormalTok{\{}\ExtensionTok{article}\NormalTok{\}}
-
-\KeywordTok{\textbackslash{}begin}\NormalTok{\{}\ExtensionTok{document}\NormalTok{\}}
-\SpecialStringTok{$x\^{}2+}\SpecialCharTok{\textbackslash{}sin}\SpecialStringTok{ x $}
-
-\KeywordTok{\textbackslash{}end}\NormalTok{\{}\ExtensionTok{document}\NormalTok{\}}
-\end{Highlighting}
-\end{Shaded}
-
-\citep{talbot2012}
-
 \mainmatter
 
 \hypertarget{genel}{%
 \chapter{Genel}\label{genel}}
 
 \hypertarget{latex-nedir}{%
-\section{LaTeX nedir?}\label{latex-nedir}}
+\section{LaTeX Nedir?}\label{latex-nedir}}
 
-LaTeX, genelde WYSIWYG editörleriyle karşılaştırılır. WYSIWYG, Microsoft
+Önce TeX'le başlayalım. TeX, 1978'den
+itibaren \href{https://www-cs-faculty.stanford.edu/~knuth/}{Donald Knuth} tarafından belgelerin bilgisayarda dizilmesi
+için geliştirdiği bir dizgi sistemidir.
+LaTeX ise TeX'in kullanımını kolaylaştırmak için 1984 yılında \href{http://www.lamport.org/}{Leslie
+Lamport} tarafından tasarlanmış bir makro pakettir.
+
+LaTeX, genelde WYSIWYG\footnote{WYSIWYG, İngilizce'de ``What You See Is What You Get'' teriminin baş harflerinden oluşan bir bilgisayar terimidir. Türkçesi \emph{Ne Görüyorsan Onu Alırsın} demek olup ekranda görülene çok benzer bir çıktı alınacağı ortamları tanımlar.} editörleriyle karşılaştırılır. WYSIWYG, Microsoft
 Word, Libreoffice Writer gibi kelime işlemcilere ya da Adobe Indesign
 gibi programlara verilen genel bir isimdir. Hepsinin ortak özelliği,
 girdi ile çıktının aynı anda ve birlikte görünmesidir.
-
-LaTeX'de ise işler farklı yürür. Girdi ve çıktı ekranı farklıdır ve
-çıktıyı görmek için girdinin derleme işleminden geçmesi gerekir. Ayrıca
-birçok şey için WYSIWYG editörlerinde olmayan yapılar vardır. Şimdi, bu
-yapıların ne oldukları ve ne işe yaradıklarını açıklayalım.
-
-LaTeX, TeX'in kullanımını kolaylaştırmak için 1984 yılında Leslie
-Lamport tarafından tasarlanmış bir makro pakettir. TeX ise, 1978'den
-itibaren \href{https://www-cs-faculty.stanford.edu/~knuth/}{Donald
-Knuth} tarafından belgelerin bilgisayarda dizilmesi
-için geliştirdiği bir dizgi sistemidir.
-
-Günümüzde Microsoft Word gibi programlar kullanıcının çok güzel belgeler
-üretmesini sağlasa da, LaTeX kullanımı, okunaklı bir belge için
-vazgeçilmez olan çok sayıda profesyonel olasılık sunmaktadır. Aşağıda
-birkaç önemli örnek veriyoruz.
-
-\begin{quote}
-Aşağıdaki örnek ve açıklamalar
-\href{http://www.rtznet.nl/zink/latex.php?lang=nl}{http://www.rtznet.nl/zink/index.php?lang=nl},
-\url{https://nitens.org/w/latex/} ve
-\url{https://ctan.org/tex} adreslerinden derlenmiştir.
-\end{quote}
-
-\hypertarget{programlanabilirlik}{%
-\subsection{Programlanabilirlik}\label{programlanabilirlik}}
-
-Bir kelime işlemciyle çalışmak, `gördüğünüzü alırsınız' (WYSIWYG)
-ilkesine göre çalışır. Bu avantajlar sunar, ancak kitaplar gibi büyük
-metinler üzerinde çalışırken gereksiz şekilde karmaşık ve zaman alıcı
-hale gelir. Öte yandan LaTeX, LaTeX'in tamamen formatlanmış bir PDF
-belgesine çevirdiği yapı ve düzeni belirtmek için özel kodlarla
-oluşturulmuş düz metin kullanır. LaTeX'i kullanmak için çok sayıda komut
-ve kod bilmeniz gerekmesine rağmen, bu yaklaşım aynı zamanda kapsamlı
-otomasyon imkanı da sunar.
-
-\hypertarget{hizalama-ve-tireleme}{%
-\subsection{Hizalama ve tireleme}\label{hizalama-ve-tireleme}}
 
 Bir metnin genel görünümü ve okunabilirliği, metnin nasıl
 hizalandığından ve kesildiğinden büyük ölçüde etkilenir. LaTeX, tüm
@@ -237,12 +192,20 @@ TeX algoritmalarını kullanır. Kelime işlemciler ve diğer programlar,
 satır başına çalıştıkları için oldukça yetersiz kalırlar. Bu, diğer
 şeylerin yanı sıra düzensiz aralıklara ve birçok kısa çizgiye sebep
 olur. Sonuçları görmeniz için Microsoft Word 2008 (Mac), Adobe InDesign
-CS4 ve LaTeX'le dizilmiş bir metni ekliyoruz:
+CS4 ve LaTeX'le dizilmiş bir metni \href{http://www.rtznet.nl/zink/comparison.pdf}{şuradan} inceleyebilirsiniz.
 
 Sonuç, LaTeX'in diğer programların her ikisinden de üstün olduğunu
 açıkça gösterir: iki kat daha az tireleme kullanır ve yine de sözcük
 aralığındaki varyasyon, Word veya InDesign'dan belirgin şekilde daha
 azdır. LaTeX'te çok büyük sözcük aralığı içeren satırlar oluşmaz.
+
+LaTeX'de girdi ve çıktı ekranı farklıdır ve
+çıktıyı görmek için girdinin derleme işleminden geçmesi gerekir. Ayrıca
+birçok şey için WYSIWYG editörlerinde olmayan yapılar vardır. Şimdi, bu
+yapıların ne oldukları ve ne işe yaradıklarını açıklayalım.
+
+\hypertarget{latexdeki-uxf6nemli-yapux131lar}{%
+\section{LaTeX'deki Önemli Yapılar}\label{latexdeki-uxf6nemli-yapux131lar}}
 
 \hypertarget{komutlar}{%
 \subsection{Komutlar}\label{komutlar}}
@@ -259,8 +222,8 @@ da komut adından sonra gelen köşeli parantezler içine yazılırlar. Eğer
 değişkenler birden fazlaysa aralarına virgül koyularak ayrılır.
 
 \begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{\textbackslash{}:}
+\begin{Highlighting}[numbers=left,,]
+\NormalTok{\textbackslash{}}\SpecialCharTok{:}
 \NormalTok{\textbackslash{}LaTeX}
 \NormalTok{\textbackslash{}item[...]}
 \NormalTok{\textbackslash{}emph\{...\}}
@@ -288,7 +251,7 @@ paket adı, zorunlu olmayan kısmına ise paket seçenekleri yazılır:
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{\textbackslash{}usepackage[\textless{}seçenekler\textgreater{}]\{\textless{}paket adı\textgreater{}\}}
+\NormalTok{\textbackslash{}usepackage[}\SpecialCharTok{\textless{}}\NormalTok{seçenekler}\SpecialCharTok{\textgreater{}}\NormalTok{]\{}\SpecialCharTok{\textless{}}\NormalTok{paket adı}\SpecialCharTok{\textgreater{}}\NormalTok{\}}
 \end{Highlighting}
 \end{Shaded}
 
@@ -306,9 +269,9 @@ komutun zorunlu değişkeni ortamın adıdır:
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{\textbackslash{}begin\{\textless{}ortam adı\textgreater{}\}}
+\NormalTok{\textbackslash{}begin\{}\SpecialCharTok{\textless{}}\NormalTok{ortam adı}\SpecialCharTok{\textgreater{}}\NormalTok{\}}
 \NormalTok{ ...}
-\NormalTok{\textbackslash{}end\{\textless{}ortam adı\textgreater{}\}}
+\NormalTok{\textbackslash{}end\{}\SpecialCharTok{\textless{}}\NormalTok{ortam adı}\SpecialCharTok{\textgreater{}}\NormalTok{\}}
 \end{Highlighting}
 \end{Shaded}
 
@@ -340,8 +303,7 @@ tarafından tek bir boş satır yani paragraf başı olarak algılanır.
 \end{Highlighting}
 \end{Shaded}
 
-\href{https://www.texdizgi.com/wp-content/uploads/2020/04/LaTeX_Sunu.pdf}{LaTeX\_Sunu\\
-}
+\href{github.com/acarzfr/latex-dersleri/examples/ex1.pdf}{Çıktı}
 
 Komutlardan sonra gelen boşlukları LaTeX dikkate almaz. Komuttan sonra
 gerçekten bir boşluk bırakmak için, ya \texttt{\{\}} ve ardından boşluk girilir

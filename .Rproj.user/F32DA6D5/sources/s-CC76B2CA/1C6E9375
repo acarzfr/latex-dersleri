@@ -3,7 +3,7 @@
     "path": "~/GitHub/latex-dersleri/index.Rmd",
     "project_path": "index.Rmd",
     "type": "r_markdown",
-    "hash": "2577917740",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1642365040370.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "27,0",
-        "scrollLine": "14"
+        "cursorPosition": "5,23",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1642679453,
+    "lastKnownWriteTime": 1642681647,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1642679453534,
+    "last_content_update": 1642681647349,
     "read_only": false,
     "read_only_alternatives": []
 }

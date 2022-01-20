@@ -25,13 +25,4 @@ github-repo: acarzfr/latex-dersleri
 
 
 
-```{latex eval=FALSE}
-\documentclass{article}
-
-\begin{document}
-$x^2+\sin x $
-
-\end{document}
-```
-
 
