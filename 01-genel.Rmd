@@ -5,12 +5,25 @@
 
 ## LaTeX nedir?
 
-LaTeX, TeX'in kullanımını kolaylaştırmak için 1984 yılında Leslie
-Lamport tarafından tasarlanmış bir makro pakettir. TeX ise, 1978'den
+Önce TeX'le başlayalım. TeX, 1978'den
 itibaren [Donald
 Knuth](https://www-cs-faculty.stanford.edu/~knuth/){target="_blank"
 rel="noreferrer noopener"} tarafından belgelerin bilgisayarda dizilmesi
 için geliştirdiği bir dizgi sistemidir.
+LaTeX ise TeX'in kullanımını kolaylaştırmak için 1984 yılında [Leslie
+Lamport](http://www.lamport.org/) tarafından tasarlanmış bir makro pakettir.
+
+LaTeX, genelde WYSIWYG editörleriyle karşılaştırılır. WYSIWYG, Microsoft
+Word, Libreoffice Writer gibi kelime işlemcilere ya da Adobe Indesign
+gibi programlara verilen genel bir isimdir. Hepsinin ortak özelliği,
+girdi ile çıktının aynı anda ve birlikte görünmesidir.
+
+LaTeX'de ise işler farklı yürür. Girdi ve çıktı ekranı farklıdır ve
+çıktıyı görmek için girdinin derleme işleminden geçmesi gerekir. Ayrıca
+birçok şey için WYSIWYG editörlerinde olmayan yapılar vardır. Şimdi, bu
+yapıların ne oldukları ve ne işe yaradıklarını açıklayalım.
+
+
 
 Günümüzde Microsoft Word gibi programlar kullanıcının çok güzel belgeler
 üretmesini sağlasa da, LaTeX kullanımı, okunaklı bir belge için
@@ -25,24 +38,12 @@ birkaç önemli örnek veriyoruz.
 > [https://ctan.org/tex](https://ctan.org/tex){rel="noreferrer noopener"
 > target="_blank"} adreslerinden derlenmiştir.
 
-### Matematiksel ifadeler
-
-LaTeX'le yazılmış bir matematiksel metinle hiç karşılaşmadıysanız,
-aşağıdaki örnek (Rogers, *Recursive Functions*), LaTeX'in bu konuda
-rakipsiz olduğunu göstermeye yetecektir.
 
 
 
-### Programlanabilirlik
 
-Bir kelime işlemciyle çalışmak, 'gördüğünüzü alırsınız' (WYSIWYG)
-ilkesine göre çalışır. Bu avantajlar sunar, ancak kitaplar gibi büyük
-metinler üzerinde çalışırken gereksiz şekilde karmaşık ve zaman alıcı
-hale gelir. Öte yandan LaTeX, LaTeX'in tamamen formatlanmış bir PDF
-belgesine çevirdiği yapı ve düzeni belirtmek için özel kodlarla
-oluşturulmuş düz metin kullanır. LaTeX'i kullanmak için çok sayıda komut
-ve kod bilmeniz gerekmesine rağmen, bu yaklaşım aynı zamanda kapsamlı
-otomasyon imkanı da sunar.
+
+
 
 ### Hizalama ve tireleme
 
@@ -62,65 +63,10 @@ açıkça gösterir: iki kat daha az tireleme kullanır ve yine de sözcük
 aralığındaki varyasyon, Word veya InDesign'dan belirgin şekilde daha
 azdır. LaTeX'te çok büyük sözcük aralığı içeren satırlar oluşmaz.
 
-### Bitişik harfler
-
-Birkaç harf yan yana geldiklerinde çarpışır. İyi bilinen örnekler, f'nin
-i'nin ucuna veya l'nin tepesine çarptığı 'fl' ve 'fi'
-kombinasyonlarıdır. Bu nedenle birçok yazı tipi bu birleşimler için özel
-karakterler içerir. LaTeX'in kendisi, bir yazı tipinin hangi bitişik
-harfleri desteklediğini arar ve bunları uygun şekilde kullanır. Kelime
-işlemciler ve diğer programlar bunu yapmaz, bu nedenle kullanıcının bu
-kombinasyonları değiştirmek için kendisinin araması gerekir.
 
 
 
-### Gerçek küçük büyük harfler ve başlıklar
 
-Çoğu kelime işlemcisi, büyük harflerin boyutunu ayarlayarak sahte küçük
-büyük harfler oluşturur. Profesyonel yazı tipleri, herhangi bir ciddi
-dizgi sisteminin uygun bağlamda kullanabilmesi gereken küçük büyük
-harfler ve tam boyutlu büyük harfler için farklı glif kümeleri içerir.
-Özellikle, gerçek küçük büyük harfler, büyük harflerin yeniden
-boyutlandırılmış versiyonlarından daha fazlasıdır: nispeten daha ağır
-bir kontura sahiptirler ve aynı yazı tipinin küçük harfli
-karakterleriyle görsel olarak uyumlu olacak şekilde tasarlanmıştır. Bazı
-OpenType yazı tiplerinin özel "başlık" alternatifleri vardır, bunlar
-büyük boyutlarda ve daha açık kontura sahip tümüyle büyük harfli tipler
-için tasarlanmıştır.
-
-
-
-### Çıkıntı (karakter aralığı)
-
-Çıkıntı, şekiller buna neden olduğunda harflerin birbirine daha yakın
-veya daha fazla aralıklı olmasıdır. Bu, okunabilirliği artıran çok daha
-dengeli bir aralık üretir. T, V, W ve A gibi harfler bundan yararlanır.
-Profesyonel yazı tipi setleri, tüm harf kombinasyonlarının doğru
-çıkıntısını gösteren kapsamlı bir çıkıntı tablosu içerir. Word, diğer
-çoğu kelime işlemci programı gibi, bu tabloları yok sayarken, LaTeX
-bunları varsayılan olarak kullanır.
-
-
-
-### Nadir, tarihi ve bitişik harfler
-
-LaTeX ile profesyonel yazı tiplerinin ekstra olanaklarını da otomatik
-olarak kullanabilirsiniz. Uzun s gibi tarihsel harf formlarının yanı
-sıra ekstra bitişik harfler (örneğin 'st' kombinasyonu) LaTeX'te
-otomatik olarak kullanılabilir. Bazen manuel olarak eklemek mümkün olsa
-da, Word bu seçeneklere erişim sağlamaz.
-
-
-
-LaTeX, genelde WYSIWYG editörleriyle karşılaştırılır. WYSIWYG, Microsoft
-Word, Libreoffice Writer gibi kelime işlemcilere ya da Adobe Indesign
-gibi programlara verilen genel bir isimdir. Hepsinin ortak özelliği,
-girdi ile çıktının aynı anda ve birlikte görünmesidir.
-
-LaTeX'de ise işler farklı yürür. Girdi ve çıktı ekranı farklıdır ve
-çıktıyı görmek için girdinin derleme işleminden geçmesi gerekir. Ayrıca
-birçok şey için WYSIWYG editörlerinde olmayan yapılar vardır. Şimdi, bu
-yapıların ne oldukları ve ne işe yaradıklarını açıklayalım.
 
 ### Komutlar
 
