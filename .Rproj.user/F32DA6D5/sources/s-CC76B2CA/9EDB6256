@@ -3,24 +3,24 @@
     "path": "~/GitHub/latex-dersleri/01-genel.Rmd",
     "project_path": "01-genel.Rmd",
     "type": "r_markdown",
-    "hash": "1879447457",
+    "hash": "0",
     "contents": "",
-    "dirty": false,
+    "dirty": true,
     "created": 1642365815544.0,
     "source_on_save": false,
     "relative_order": 8,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "130,58",
-        "scrollLine": "119"
+        "cursorPosition": "143,77",
+        "scrollLine": "130"
     },
     "folds": "",
-    "lastKnownWriteTime": 1642715315,
+    "lastKnownWriteTime": 1642715416,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1642715315540,
+    "last_content_update": 1642715798899,
     "read_only": false,
     "read_only_alternatives": []
 }

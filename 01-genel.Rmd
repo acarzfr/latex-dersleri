@@ -128,7 +128,7 @@ tarafından tek bir boş satır yani paragraf başı olarak algılanır.
 
 Boş bir satır yeni paragraf demektir, burada olduğu gibi.
 ```
-[Çıktı](github.com/acarzfr/latex-dersleri/examples/ex1.pdf)
+[Çıktı](https://github.com/acarzfr/latex-dersleri/blob/main/examples/ex1.pdf)
 
 
 Komutlardan sonra gelen boşlukları LaTeX dikkate almaz. Komuttan sonra

@@ -128,31 +128,20 @@ tarafından tek bir boş satır yani paragraf başı olarak algılanır.
 
 Boş bir satır yeni paragraf demektir, burada olduğu gibi.
 ```
-[Çıktı](github.com/acarzfr/latex-dersleri/examples/ex1.pdf)
+[Çıktı](https://github.com/acarzfr/latex-dersleri/blob/main/examples/ex1.pdf)
 
 
 Komutlardan sonra gelen boşlukları LaTeX dikkate almaz. Komuttan sonra
 gerçekten bir boşluk bırakmak için, ya `{}` ve ardından boşluk girilir
 ya da komut adından sonra özel bir boşluk komutu kullanılır.
 
-::: wp-block-columns
-::: {.wp-block-column .is-vertically-aligned-center}
-::: {.wp-block-codemirror-blocks-code-block .code-block}
-``` {.CodeMirror setting="{\"mode\":\"stex\",\"mime\":\"text/x-latex\",\"theme\":\"monokai\",\"lineNumbers\":false,\"styleActiveLine\":false,\"lineWrapping\":false,\"readOnly\":false,\"language\":\"LaTeX\",\"modeName\":\"stex\"}"}
+
+``` {r eval=FALSE}
 \LaTeX  boşluk yok.\\
 \LaTeX{} boşluk var.\\
 \LaTeX\ boşluk komutuyla  boşluk.
 ```
-:::
-:::
-
-::: {.wp-block-column .is-vertically-aligned-center}
-[LaTeX_Sunu-1\
-](https://www.texdizgi.com/wp-content/uploads/2020/04/LaTeX_Sunu-1.pdf){.pdfemb-viewer
-style="" data-width="max" data-height="max" toolbar="bottom"
-toolbar-fixed="off"}
-:::
-:::
+[Çıktı](https://github.com/acarzfr/latex-dersleri/blob/main/examples/ex2.pdf)
 
 ### Özel amaçlı karakterler
 
