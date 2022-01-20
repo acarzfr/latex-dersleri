@@ -24,7 +24,7 @@
 <meta name="author" content="Zafer Acar" />
 
 
-<meta name="date" content="2022-01-19" />
+<meta name="date" content="2022-01-20" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -120,28 +120,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -165,12 +143,15 @@ div.csl-indent {
 <li class="chapter" data-level="1.1" data-path="genel.html"><a href="genel.html#latex-nedir"><i class="fa fa-check"></i><b>1.1</b> LaTeX nedir?</a>
 <ul>
 <li class="chapter" data-level="1.1.1" data-path="genel.html"><a href="genel.html#hizalama-ve-tireleme"><i class="fa fa-check"></i><b>1.1.1</b> Hizalama ve tireleme</a></li>
-<li class="chapter" data-level="1.1.2" data-path="genel.html"><a href="genel.html#komutlar"><i class="fa fa-check"></i><b>1.1.2</b> Komutlar</a></li>
-<li class="chapter" data-level="1.1.3" data-path="genel.html"><a href="genel.html#paketler"><i class="fa fa-check"></i><b>1.1.3</b> Paketler</a></li>
-<li class="chapter" data-level="1.1.4" data-path="genel.html"><a href="genel.html#ortamlar"><i class="fa fa-check"></i><b>1.1.4</b> Ortamlar</a></li>
-<li class="chapter" data-level="1.1.5" data-path="genel.html"><a href="genel.html#gruplar"><i class="fa fa-check"></i><b>1.1.5</b> Gruplar</a></li>
-<li class="chapter" data-level="1.1.6" data-path="genel.html"><a href="genel.html#boşluklar"><i class="fa fa-check"></i><b>1.1.6</b> Boşluklar</a></li>
-<li class="chapter" data-level="1.1.7" data-path="genel.html"><a href="genel.html#özel-amaçlı-karakterler"><i class="fa fa-check"></i><b>1.1.7</b> Özel amaçlı karakterler</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="genel.html"><a href="genel.html#farklılıklar"><i class="fa fa-check"></i><b>1.2</b> Farklılıklar</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="genel.html"><a href="genel.html#komutlar"><i class="fa fa-check"></i><b>1.2.1</b> Komutlar</a></li>
+<li class="chapter" data-level="1.2.2" data-path="genel.html"><a href="genel.html#paketler"><i class="fa fa-check"></i><b>1.2.2</b> Paketler</a></li>
+<li class="chapter" data-level="1.2.3" data-path="genel.html"><a href="genel.html#ortamlar"><i class="fa fa-check"></i><b>1.2.3</b> Ortamlar</a></li>
+<li class="chapter" data-level="1.2.4" data-path="genel.html"><a href="genel.html#gruplar"><i class="fa fa-check"></i><b>1.2.4</b> Gruplar</a></li>
+<li class="chapter" data-level="1.2.5" data-path="genel.html"><a href="genel.html#boşluklar"><i class="fa fa-check"></i><b>1.2.5</b> Boşluklar</a></li>
+<li class="chapter" data-level="1.2.6" data-path="genel.html"><a href="genel.html#özel-amaçlı-karakterler"><i class="fa fa-check"></i><b>1.2.6</b> Özel amaçlı karakterler</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="kaynaklar.html"><a href="kaynaklar.html"><i class="fa fa-check"></i>Kaynaklar</a></li>
@@ -196,8 +177,7 @@ div.csl-indent {
 <div id="latex-nedir" class="section level2" number="1.1">
 <h2><span class="header-section-number">1.1</span> LaTeX nedir?</h2>
 <p>Önce TeX’le başlayalım. TeX, 1978’den
-itibaren <a href="https://www-cs-faculty.stanford.edu/~knuth/" target="_blank" rel="noreferrer noopener">Donald
-Knuth</a> tarafından belgelerin bilgisayarda dizilmesi
+itibaren <a href="https://www-cs-faculty.stanford.edu/~knuth/">Donald Knuth</a> tarafından belgelerin bilgisayarda dizilmesi
 için geliştirdiği bir dizgi sistemidir.
 LaTeX ise TeX’in kullanımını kolaylaştırmak için 1984 yılında <a href="http://www.lamport.org/">Leslie
 Lamport</a> tarafından tasarlanmış bir makro pakettir.</p>
@@ -234,8 +214,11 @@ açıkça gösterir: iki kat daha az tireleme kullanır ve yine de sözcük
 aralığındaki varyasyon, Word veya InDesign’dan belirgin şekilde daha
 azdır. LaTeX’te çok büyük sözcük aralığı içeren satırlar oluşmaz.</p>
 </div>
-<div id="komutlar" class="section level3" number="1.1.2">
-<h3><span class="header-section-number">1.1.2</span> Komutlar</h3>
+</div>
+<div id="farklılıklar" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> Farklılıklar</h2>
+<div id="komutlar" class="section level3" number="1.2.1">
+<h3><span class="header-section-number">1.2.1</span> Komutlar</h3>
 <p>LaTeX komutları bir geribölü (<code>\</code>) işaretiyle başlar ve ya sadece
 harflerden ya da bir tane harf olmayan karakterden oluşurlar. Komut
 yazıldıktan sonra ya boşluk, ya bir sayı ya da harf olmayan bir karakter
@@ -245,55 +228,49 @@ sonra çengelli parantezler içine yazılır. Zorunlu değişken alan
 komutlar, zorunlu olmayan (isteğe bağlı) değişkenler de alabilir, bunlar
 da komut adından sonra gelen köşeli parantezler içine yazılırlar. Eğer
 değişkenler birden fazlaysa aralarına virgül koyularak ayrılır.</p>
-<div class="wp-block-codemirror-blocks-code-block code-block">
-<pre class="CodeMirror" setting="{&quot;mode&quot;:&quot;stex&quot;,&quot;mime&quot;:&quot;text/x-latex&quot;,&quot;theme&quot;:&quot;monokai&quot;,&quot;lineNumbers&quot;:true,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:false,&quot;language&quot;:&quot;LaTeX&quot;,&quot;modeName&quot;:&quot;stex&quot;}"><code>\:
-\LaTeX
-\item[...]
-\emph{...}
-\documentclass[...]{...}
-\subfloat[...][...]{...}
-\raisebox{...}[...][...]{...}
-\multicolumn{...}{...}{...}
-{\bfseries ...}</code></pre>
-</div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb1-1"><a href="genel.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\:</span></span>
+<span id="cb1-2"><a href="genel.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\LaTeX</span></span>
+<span id="cb1-3"><a href="genel.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\item</span>[...]</span>
+<span id="cb1-4"><a href="genel.html#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\emph</span>{...}</span>
+<span id="cb1-5"><a href="genel.html#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[...]{<span class="ex">...</span>}</span>
+<span id="cb1-6"><a href="genel.html#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">\subfloat</span>[...][...]{...}</span>
+<span id="cb1-7"><a href="genel.html#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">\raisebox</span>{...}[...][...]{...}</span>
+<span id="cb1-8"><a href="genel.html#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">\multicolumn</span>{...}{...}{...}</span>
+<span id="cb1-9"><a href="genel.html#cb1-9" aria-hidden="true" tabindex="-1"></a>{<span class="fu">\bfseries</span> ...}</span></code></pre></div>
 <p>Fikir vermesi açısından yukarıda dokuz adet komut örneği verilmiştir.
 Birinci komut bir tane harf olmayan karakterden oluşan bir komuttur.
 İkincisi, değişkeni olmayan bir komuttur. Bazı harflerin büyük
 bazılarınınsa küçük olması komutların büyük-küçük harfe duyarlı olduğunu
 gösterir. Dokuzuncu komut ise bildirim şeklinde verilmiştir.</p>
 </div>
-<div id="paketler" class="section level3" number="1.1.3">
-<h3><span class="header-section-number">1.1.3</span> Paketler</h3>
+<div id="paketler" class="section level3" number="1.2.2">
+<h3><span class="header-section-number">1.2.2</span> Paketler</h3>
 <p>LaTeX’de bazı özelliklerin (renkli yazmak, şekil eklemek vb.)
 kullanılabilmesi için kaynak dosyaya bazı paketlerin eklenmesi gerekir.
 Bu, <code>\usepackage</code> komutuyla yapılır. Bu komutun zorunlu değişkenine
 paket adı, zorunlu olmayan kısmına ise paket seçenekleri yazılır:</p>
-<div class="wp-block-codemirror-blocks-code-block code-block">
-<pre class="CodeMirror" setting="{&quot;mode&quot;:&quot;stex&quot;,&quot;mime&quot;:&quot;text/x-latex&quot;,&quot;theme&quot;:&quot;monokai&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:false,&quot;language&quot;:&quot;LaTeX&quot;,&quot;modeName&quot;:&quot;stex&quot;}"><code>\usepackage[&lt;seçenekler&gt;]{&lt;paket adı&gt;}</code></pre>
-</div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb2-1"><a href="genel.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[&lt;seçenekler&gt;]{<span class="ex">&lt;paket adı&gt;</span>}</span></code></pre></div>
 <p>Bu komutla paketin kaynak dosyaya eklenmesi TeX dağıtımıyla sisteminize
 kurulmuş olan paketin belgeye çağrılarak işe koşulması demektir.</p>
 </div>
-<div id="ortamlar" class="section level3" number="1.1.4">
-<h3><span class="header-section-number">1.1.4</span> Ortamlar</h3>
+<div id="ortamlar" class="section level3" number="1.2.3">
+<h3><span class="header-section-number">1.2.3</span> Ortamlar</h3>
 <p>LaTeX’de ortamlar önemli bir yer tutar. Örneğin <code>document</code> bir ortamdır.
 Ortamları birden fazla ögeye uygulanan komutlar olarak düşünebiliriz.</p>
 <p>Bir ortam <code>\begin</code> komutuyla başlayıp <code>\end</code> komutuyla biter. Her iki
 komutun zorunlu değişkeni ortamın adıdır:</p>
-<div class="wp-block-codemirror-blocks-code-block code-block">
-<pre class="CodeMirror" setting="{&quot;mode&quot;:&quot;stex&quot;,&quot;mime&quot;:&quot;text/x-latex&quot;,&quot;theme&quot;:&quot;monokai&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:false,&quot;language&quot;:&quot;LaTeX&quot;,&quot;modeName&quot;:&quot;stex&quot;}"><code>\begin{&lt;ortam adı&gt;}
- ...
-\end{&lt;ortam adı&gt;}</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb3-1"><a href="genel.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="er">&lt;</span>ortam adı&gt;}</span>
+<span id="cb3-2"><a href="genel.html#cb3-2" aria-hidden="true" tabindex="-1"></a> ...</span>
+<span id="cb3-3"><a href="genel.html#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="er">&lt;</span>ortam adı&gt;}</span></code></pre></div>
 </div>
-</div>
-<div id="gruplar" class="section level3" number="1.1.5">
-<h3><span class="header-section-number">1.1.5</span> Gruplar</h3>
+<div id="gruplar" class="section level3" number="1.2.4">
+<h3><span class="header-section-number">1.2.4</span> Gruplar</h3>
 <p>Gruplar, ortam benzeri yapılardır. Grup <code>\begingroup</code> komutuyla başlar
 ve <code>\endgroup</code> komutuyla biter. Grubun içinde kullanılan bir bildirim
 sadece gruba uygulanır.</p>
 </div>
-<div id="boşluklar" class="section level3" number="1.1.6">
-<h3><span class="header-section-number">1.1.6</span> Boşluklar</h3>
+<div id="boşluklar" class="section level3" number="1.2.5">
+<h3><span class="header-section-number">1.2.5</span> Boşluklar</h3>
 <p>LaTeX’de belgenizin metnini oluştururken ister klavyedeki Space, ister
 Tab tuşu ile boşluk bırakın, bu boşluklar LaTeX tarafından bir karakter
 boşluk olarak algılanır. Arka arkaya çok sayıda boşluk bırakılsa da
@@ -332,8 +309,8 @@ ya da komut adından sonra özel bir boşluk komutu kullanılır.</p>
 </div>
 </div>
 </div>
-<div id="özel-amaçlı-karakterler" class="section level3" number="1.1.7">
-<h3><span class="header-section-number">1.1.7</span> Özel amaçlı karakterler</h3>
+<div id="özel-amaçlı-karakterler" class="section level3" number="1.2.6">
+<h3><span class="header-section-number">1.2.6</span> Özel amaçlı karakterler</h3>
 <p>Aşağıdaki karakterlerin herbiri LaTeX’de özel bir amaç için kullanılır.
 Dolayısıyla bu karakterleri doğrudan kullanmak istenmeyen sonuçlara yol
 açabilir.</p>
@@ -345,8 +322,8 @@ komutunu verirseniz yeni bir satır başlatmış olursunuz.</p>
 <p>Bu karakterlerden örneğin yüzde (<code>%</code>) karakteri kaynak dosyanızda yorum
 ya da açıklama yazmaya yarar. Bu sembolden sonra yazılanları LaTeX
 dikkate almaz ve çıktıda görünmez.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb8-1"><a href="genel.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\%</span>50 zam geldi. </span>
-<span id="cb8-2"><a href="genel.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co">% Buraya yorum yazabilirsiniz.</span></span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb7-1"><a href="genel.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\%</span>50 zam geldi. </span>
+<span id="cb7-2"><a href="genel.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="co">% Buraya yorum yazabilirsiniz.</span></span></code></pre></div>
 <div class="wp-block-column is-vertically-aligned-center">
 <p><a href="https://www.texdizgi.com/wp-content/uploads/2020/04/LaTeX_Sunu-2.pdf" class="pdfemb-viewer" style="" data-width="max" data-height="max" toolbar="bottom" toolbar-fixed="off">LaTeX_Sunu-2<br />
 </a></p>

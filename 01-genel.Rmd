@@ -6,9 +6,7 @@
 ## LaTeX nedir?
 
 Önce TeX'le başlayalım. TeX, 1978'den
-itibaren [Donald
-Knuth](https://www-cs-faculty.stanford.edu/~knuth/){target="_blank"
-rel="noreferrer noopener"} tarafından belgelerin bilgisayarda dizilmesi
+itibaren [Donald Knuth](https://www-cs-faculty.stanford.edu/~knuth/) tarafından belgelerin bilgisayarda dizilmesi
 için geliştirdiği bir dizgi sistemidir.
 LaTeX ise TeX'in kullanımını kolaylaştırmak için 1984 yılında [Leslie
 Lamport](http://www.lamport.org/) tarafından tasarlanmış bir makro pakettir.
@@ -66,7 +64,7 @@ azdır. LaTeX'te çok büyük sözcük aralığı içeren satırlar oluşmaz.
 
 
 
-
+## Farklılıklar
 
 ### Komutlar
 
@@ -81,8 +79,8 @@ komutlar, zorunlu olmayan (isteğe bağlı) değişkenler de alabilir, bunlar
 da komut adından sonra gelen köşeli parantezler içine yazılırlar. Eğer
 değişkenler birden fazlaysa aralarına virgül koyularak ayrılır.
 
-::: {.wp-block-codemirror-blocks-code-block .code-block}
-``` {.CodeMirror setting="{\"mode\":\"stex\",\"mime\":\"text/x-latex\",\"theme\":\"monokai\",\"lineNumbers\":true,\"styleActiveLine\":false,\"lineWrapping\":false,\"readOnly\":false,\"language\":\"LaTeX\",\"modeName\":\"stex\"}"}
+
+``` {latex eval=FALSE}
 \:
 \LaTeX
 \item[...]
@@ -93,7 +91,7 @@ değişkenler birden fazlaysa aralarına virgül koyularak ayrılır.
 \multicolumn{...}{...}{...}
 {\bfseries ...}
 ```
-:::
+
 
 Fikir vermesi açısından yukarıda dokuz adet komut örneği verilmiştir.
 Birinci komut bir tane harf olmayan karakterden oluşan bir komuttur.
@@ -108,11 +106,10 @@ kullanılabilmesi için kaynak dosyaya bazı paketlerin eklenmesi gerekir.
 Bu, `\usepackage` komutuyla yapılır. Bu komutun zorunlu değişkenine
 paket adı, zorunlu olmayan kısmına ise paket seçenekleri yazılır:
 
-::: {.wp-block-codemirror-blocks-code-block .code-block}
-``` {.CodeMirror setting="{\"mode\":\"stex\",\"mime\":\"text/x-latex\",\"theme\":\"monokai\",\"lineNumbers\":false,\"styleActiveLine\":false,\"lineWrapping\":false,\"readOnly\":false,\"language\":\"LaTeX\",\"modeName\":\"stex\"}"}
+
+``` {latex eval=FALSE}
 \usepackage[<seçenekler>]{<paket adı>}
 ```
-:::
 
 Bu komutla paketin kaynak dosyaya eklenmesi TeX dağıtımıyla sisteminize
 kurulmuş olan paketin belgeye çağrılarak işe koşulması demektir.
@@ -125,13 +122,12 @@ Ortamları birden fazla ögeye uygulanan komutlar olarak düşünebiliriz.
 Bir ortam `\begin` komutuyla başlayıp `\end` komutuyla biter. Her iki
 komutun zorunlu değişkeni ortamın adıdır:
 
-::: {.wp-block-codemirror-blocks-code-block .code-block}
-``` {.CodeMirror setting="{\"mode\":\"stex\",\"mime\":\"text/x-latex\",\"theme\":\"monokai\",\"lineNumbers\":false,\"styleActiveLine\":false,\"lineWrapping\":false,\"readOnly\":false,\"language\":\"LaTeX\",\"modeName\":\"stex\"}"}
+
+``` {latex eval=FALSE}
 \begin{<ortam adı>}
  ...
 \end{<ortam adı>}
 ```
-:::
 
 ### Gruplar
 

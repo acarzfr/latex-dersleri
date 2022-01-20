@@ -7,3 +7,4 @@ ortamlar
 gruplar
 boşluklar
 özel-amaçlı-karakterler
+farklılıklar
