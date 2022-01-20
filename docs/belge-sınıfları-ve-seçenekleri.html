@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>LaTeX Dersleri</title>
+  <title>1.5 Belge Sınıfları ve Seçenekleri | LaTeX Dersleri</title>
   <meta name="description" content="TeX/LaTeX’e dair bir iki kelam." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="LaTeX Dersleri" />
+  <meta property="og:title" content="1.5 Belge Sınıfları ve Seçenekleri | LaTeX Dersleri" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://acarzfr.github.io/latex-dersleri/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="acarzfr/latex-dersleri" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="LaTeX Dersleri" />
+  <meta name="twitter:title" content="1.5 Belge Sınıfları ve Seçenekleri | LaTeX Dersleri" />
   
   <meta name="twitter:description" content="TeX/LaTeX’e dair bir iki kelam." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-
+<link rel="prev" href="tipik.html"/>
+<link rel="next" href="türkçe-dil-ayarları-ve-çoklu-dil-kullanımı.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -203,17 +203,162 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-
-
-
-<p>Tüh! Bir şeyler ters gitti…</p>
+<div id="belge-sınıfları-ve-seçenekleri" class="section level2" number="1.5">
+<h2><span class="header-section-number">1.5</span> Belge Sınıfları ve Seçenekleri</h2>
+<p>Bölüm <a href="tipik.html#tipik">1.4</a>’de <code>\documentclass</code> komutunun zorunlu değişkeninin belge
+sınıfı olduğunu ve köşeli paratezler içine de seçeneklerin
+yazılacağından bahsetmiştik. Bu yazıda bunların neler olabileceklerinden
+bahsedelim.</p>
+<p>Başka sınıflar olmakla birlikte LaTeX’de varsayılan olarak kullanılan
+beş belge sınıfı vardır.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><code>article</code></td>
+<td align="left">Makale</td>
+</tr>
+<tr class="even">
+<td align="left"><code>report</code></td>
+<td align="left">Makaleden daha hacimli belgeler için kullanılır. Rapor, tez gibi</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>book</code></td>
+<td align="left">Kitap</td>
+</tr>
+<tr class="even">
+<td align="left"><code>letter</code></td>
+<td align="left">Mektup</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>beamer</code></td>
+<td align="left">Sunu</td>
+</tr>
+</tbody>
+</table>
+<p>Bu beş sınıftan <code>article</code>, <code>report</code> ve <code>book</code> için kullanılabilecek
+seçenekler aşağıdadır.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>10pt, 11pt, 12pt</strong></td>
+<td align="left">Belge ana yazı büyüklüğü.</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>a4paper, a5paper, letterpaper,…</strong></td>
+<td align="left">Kağıt boyutu.</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>fleqn</strong></td>
+<td align="left">Formülleri ortada yazmak yerine, sola bitişik yazar.</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>leqno</strong></td>
+<td align="left">Formül numaralarını sağ yerine sol tarafa koyar.</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>titlepage, notitlepage</strong></td>
+<td align="left">Belge başlığını attıktan sonra yeni bir sayfa açıp açmayacağını belirler.</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>onecolumn, twocolumn</strong></td>
+<td align="left">Belgenin tek sütun veya çift sütun dizileceğini belirtir.</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>twoside, oneside</strong></td>
+<td align="left">Belgenin kağıdın hep tek tarafına mı yoksa iki tarafına mı basılacağını belirtir.</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>landscape</strong></td>
+<td align="left">Belgeyi enine tutulmuş kağıda basılmak üzere hazırlar.</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>openright, openany</strong></td>
+<td align="left">Belgede bölümleri hep sağ sayfalardan veya ilk gelen boş sayfadan başlatır.</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>draft, final</strong></td>
+<td align="left">Belgeyi sırasıyla <em>taslak</em> ve <em>son</em> şeklinde hazırlar. <strong>draft</strong> seçilirse, sağ taraftan fırlamış olan satırlar kalın siyah bir çizgiyle işaretlenir.</td>
+</tr>
+</tbody>
+</table>
+<p>Bu seçeneklerin her birinin kullanılabilirliği belge sınıfına göre
+farklılık gösterir. Aşağıdaki tabloda hangi seçeneğin hangi sınıf için
+varsayılan olduğu ve kullanılabilir olup olmadığı gösterilmiştir.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>Seçenek</strong></td>
+<td align="left"><code>book</code></td>
+<td align="left"><code>report</code></td>
+<td align="left"><code>article</code></td>
+</tr>
+<tr class="even">
+<td align="left"><strong>10pt</strong></td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>letterpaper</strong></td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>oneside</strong></td>
+<td align="left">1/2</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>twoside</strong></td>
+<td align="left">1</td>
+<td align="left">1/2</td>
+<td align="left">1/2</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>openany</strong></td>
+<td align="left">1/2</td>
+<td align="left">1</td>
+<td align="left">0</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>openright</strong></td>
+<td align="left">1</td>
+<td align="left">1/2</td>
+<td align="left">0</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>titlepage</strong></td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1/2</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>final</strong></td>
+<td align="left">1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+</tbody>
+</table>
+<p>1: varsayılan 1/2: kullanılabilir 0:kullanılamaz</p>
+<p>Örneğin belgeye</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="belge-sınıfları-ve-seçenekleri.html#cb12-1" aria-hidden="true" tabindex="-1"></a>\documentclass[a4paper,12pt]{article}</span></code></pre></div>
+<p>komutuyla başlarsak LaTeX’e kağıt boyutu A4, ana yazı büyüklüğü 12 punto
+olan bir makale yazacağımızı bildirmiş oluruz.</p>
+<p>Başka bir örnek</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="belge-sınıfları-ve-seçenekleri.html#cb13-1" aria-hidden="true" tabindex="-1"></a>\documentclass[a5paper,11pt,twocolumn]{book}</span></code></pre></div>
+<p>olsun. Bu örnekte kağıt boyutu A5, ana yazı büyüklüğü 11 punto olan bir
+kitap yazacağımızı ve kitabın iki sütun olarak dizilmesini söyledik.</p>
+</div>
             </section>
 
           </div>
         </div>
       </div>
-
-
+<a href="tipik.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="türkçe-dil-ayarları-ve-çoklu-dil-kullanımı.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

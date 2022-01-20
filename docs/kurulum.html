@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>LaTeX Dersleri</title>
+  <title>1.3 Kurulum | LaTeX Dersleri</title>
   <meta name="description" content="TeX/LaTeX’e dair bir iki kelam." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="LaTeX Dersleri" />
+  <meta property="og:title" content="1.3 Kurulum | LaTeX Dersleri" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://acarzfr.github.io/latex-dersleri/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="acarzfr/latex-dersleri" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="LaTeX Dersleri" />
+  <meta name="twitter:title" content="1.3 Kurulum | LaTeX Dersleri" />
   
   <meta name="twitter:description" content="TeX/LaTeX’e dair bir iki kelam." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-
+<link rel="prev" href="önemli-yapılar.html"/>
+<link rel="next" href="tipik.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -203,17 +203,83 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-
-
-
-<p>Tüh! Bir şeyler ters gitti…</p>
+<div id="kurulum" class="section level2" number="1.3">
+<h2><span class="header-section-number">1.3</span> Kurulum</h2>
+<p>LaTeX’i kurmak için ilk olarak bir TeX dağıtımı edinmeniz gerekir.
+Dağıtımlar, dizgi sistemini ve LaTeX’de belge oluşturabilmek için
+gereken paketleri içerir.</p>
+<p>İkinci ihtiyaç duyacağınız şey bir LaTeX editörüdür. Edindiğiniz TeX
+dağıtımları genelde bir LaTeX editörüyle birlikte gelir. Tabi editör
+kişisel bir tercihtir ve bir LaTeX editörü yerine basit bir metin
+editörü kullanabilirsiniz. Ancak farklı işletim sistemleri için birçok
+iyi LaTeX editörü vardır ve bunların kod vurgulama, otomatik tamamlama,
+otomatik belge oluşturma gibi LaTeX’e özgü işlevleri vardır. Dolayısıyla
+LaTeX’de yeniyseniz bir editör kullanmanızı tavsiye ederiz.</p>
+<div id="gnulinux" class="section level3" number="1.3.1">
+<h3><span class="header-section-number">1.3.1</span> GNU/Linux</h3>
+<p>Linux sistemlere <a href="https://miktex.org/download">MiKTeX</a> ya da <a href="http://www.tug.org/texlive/">TeX
+Live</a> kurulabilir. MiKTeX’in indirme sayfasında Ubuntu, Mint,
+Debian, Fedora, CentOS ve openSUSE gibi Linux dağıtımlarında nasıl
+kurulacağı anlatılmıştır. TeX Live ise tüm popüler Linux dağıtımlarının
+depolarında mevcut olup, paket yöneticisi ya da komut satırı yardımıyla
+kurulabilir. Örneğin Ubuntu, Debian, Mint, Pardus gibi <code>.deb</code> uzantılı
+paketlerin kullanıldığı dağıtımlarda</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="kurulum.html#cb7-1" aria-hidden="true" tabindex="-1"></a>sudo apt<span class="sc">-</span>get install texlive<span class="sc">-</span>base</span></code></pre></div>
+<p>komutuyla temel kurulum,</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="kurulum.html#cb8-1" aria-hidden="true" tabindex="-1"></a>sudo apt<span class="sc">-</span>get install texlive<span class="sc">-</span>full</span></code></pre></div>
+<p>komutuyla da tam kurulum yapılır.</p>
+</div>
+<div id="mac-os" class="section level3" number="1.3.2">
+<h3><span class="header-section-number">1.3.2</span> Mac OS</h3>
+<p>Mac OS kullanıcıları için iki seçenek mevcuttur:
+<a href="https://miktex.org/download">MiKTeX</a> ya da
+<a href="http://www.tug.org/mactex/">MacTeX</a>. MiKTeX kurulumu için <code>.dmg</code> uzantılı, MacTeX içinse
+<code>.pkg</code> uzantılı dosya indirilir ve standart kurulum yapılır.</p>
+</div>
+<div id="windows" class="section level3" number="1.3.3">
+<h3><span class="header-section-number">1.3.3</span> Windows</h3>
+<p>Windows için aşağıdaki dağıtımlardan birini kurabilirsiniz.</p>
+<ul>
+<li><a href="https://miktex.org/download">MiKTeX</a></li>
+<li><a href="http://www.tug.org/texlive/">TeX Live</a></li>
+<li><a href="https://tug.org/protext/">proTeXt</a></li>
+</ul>
+<p>MiKTeX veya TeX Live dağıtımını kurarsanız sisteminize
+<a href="https://www.tug.org/texworks/">TeXworks</a> editörü de kurulur. proTeXt dağıtımı MiKTeX tabanlı bir
+dağıtım olup, tüm paketleri içerir ve beraberinde
+<a href="https://texstudio.org/">TeXstudio</a> editörüyle gelir.</p>
+</div>
+<div id="latex-editörleri" class="section level3" number="1.3.4">
+<h3><span class="header-section-number">1.3.4</span> LaTeX Editörleri</h3>
+<p>Hangi editörü kullanacağınıza birkaç deneme yaptıktan sonra karar
+verebilirsiniz. <a href="https://beebom.com/best-latex-editors/">Burada</a> en çok
+beğenilen editörler listelenmiş.</p>
+<p>Her LaTeX editöründe olan özelliklerin (otomatik kod tamamlama vb.) yanı
+sıra kullanıcı dostu arayüzü, yüzde yüze yakın Türkçe desteği, ücretsiz
+oluşu ve her üç sistemde de çalışabilmesinden dolayı
+<a href="https://texstudio.org/">TeXstudio</a>’yu tavsiye ediyoruz. Karar sizin.</p>
+</div>
+<div id="çevrimiçi-editörler" class="section level3" number="1.3.5">
+<h3><span class="header-section-number">1.3.5</span> Çevrimiçi Editörler</h3>
+<p>LaTeX’i hiçbir kurulum yapmadan çevrimiçi de kullanabilirsiniz. Aşağıda
+üç tanesi listelenmiştir.</p>
+<ul>
+<li><a href="https://www.overleaf.com/" target="_blank" rel="noreferrer noopener">Overleaf</a></li>
+<li><a href="https://papeeria.com/" target="_blank" rel="noreferrer noopener">Papeeria</a></li>
+<li><a href="https://latexbase.com/" target="_blank" rel="noreferrer noopener">LaTeX Base</a></li>
+</ul>
+<p>En popüler olanı Overleaf olup, sayfasında beğenebileceğiniz binlerce
+<a href="https://www.overleaf.com/latex/templates" target="_blank" rel="noreferrer noopener">şablon</a> ve LaTeX kullanımına yönelik
+<a href="https://www.overleaf.com/learn" target="_blank" rel="noreferrer noopener">anlatımlar</a> bulunur.</p>
+</div>
+</div>
             </section>
 
           </div>
         </div>
       </div>
-
-
+<a href="önemli-yapılar.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="tipik.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

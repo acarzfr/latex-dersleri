@@ -1,0 +1,204 @@
+# Mantık
+
+```{block type="epigraph"}
+Herhangi bir konuda, herhangi bir rakibe karşı bir tartışma kazanabilirim.
+İnsanlar bunu biliyor ve partilerde benden uzak duruyorlar.  Çoğu zaman,
+büyük saygılarının bir göstergesi olarak beni davet bile etmezler.\
+--- Dave Barry
+```
+
+
+Mantık, neyin neyden çıktığının incelenmesidir.  Tweety'nin kuş olduğu ve tüm kuşların hayvan olduğu bilgisinden Tweety'nin bir hayvan olduğu sonucu çıkar.  Ama işler her zaman bu kadar kesin değildir.  Tweety uçabilir mi?  Çoğu kuş uçabilir, bu yüzden muhtemelen o da uçabilir.  Ama Tweety bir penguen de olabilir.
+
+
+*Tümdengelimli* mantık, aşağıdakileri kesin olarak inceleyen mantığın dalıdır.  *Tümevarımsal* mantık, belirsizlikle, yalnızca yüksek olasılıkla takip eden şeylerle ilgilenir.
+
+
+Bu kitap tümevarımsal mantık ve olasılık hakkındadır.  Ancak başlamak için tümdengelim mantığından birkaç kavrama ihtiyacımız var.
+
+
+## Geçerlilik ve Sağlamlık
+
+
+
+Tümdengelim mantığında “geçerli” argümanları inceleriz.  Öncüller doğruysa, sonucun doğru olması gerektiğinde bir argüman ***geçerlidir***.  Bu örneği tekrar alın:
+
+```{block, type="argument", echo=TRUE}
+Tweety bir kuştur.\
+Bütün kuşlar hayvandır.\
+Dolayısıyla Tweety bir hayvandır.
+```
+
+
+İlk iki satır, argümanın *öncülleri* olarak adlandırılır. Son satıra *sonuç* denir. Bu örnekte, eğer öncüller doğruysa sonuç doğru olmalıdır. Yani argüman geçerlidir.
+
+Geçerli bir argümanın başka bir örneği:
+
+```{block, type="argument", echo=TRUE}
+Tweety, Kwazi'den daha uzun.\
+Kwazi Peso'dan daha uzun.\
+Bu nedenle Tweety, Peso'dan daha uzundur.
+```
+
+
+Argüman geçerlidir çünkü öncüllerin doğru olması ve sonucun yanlış olması mümkün değildir.
+
+
+İşte bir *geçersiz* argüman örneği:
+
+
+```{block, type="argument", echo=TRUE}
+Tweety bir kuş.\
+Çoğu kuş uçabilir.\
+Bu nedenle, Tweety uçabilir.
+```
+
+Geçerli değil çünkü geçerlilik, sonucun *mutlaka* takip edilmesini gerektirir. Öncüllerin doğru olmasına rağmen sonucun yanlış olmasının bir yolu varsa, argüman geçerli sayılmaz. Ve dediğimiz gibi Tweety bir penguen olabilir.
+
+Geçerli argümanlar ilginçtir çünkü mantıkları hava geçirmezdir. Argümanın varsayımları doğruysa, sonucu kabul etmek yanlış olmaz. Peki ya varsayımlar *doğru* değilse? Geçerlilik her şey değildir, ayrıca argümanlarımızın gerçek temeller üzerine inşa edilmesini isteriz.
+
+
+Geçerli olduğunda *ve* tüm öncüller doğru olduğunda bir argümana ***sağlam*** diyoruz:
+
+```{block, type="centerT"}
+sağlam $=$ geçerli $+$ öncüller doğru
+```
+
+Örneğin, işte sağlam bir argüman:
+
+
+```{block, type="argument", echo=TRUE}
+Bu kitabın yazarı bir insandır.\
+Tüm insanlar hayvandır.\
+Bu nedenle, bu kitabın yazarı bir hayvandır.
+```
+
+Sağlam argümanlar önemlidir çünkü sonuçları her zaman doğrudur. Sağlam bir argümanın öncülleri tanım gereği doğrudur. Ve tanım gereği de geçerli olduğundan, bu, sonucun da doğru olmasını garanti eder.
+
+
+Yine de tümdengelim mantığı, sağlamlığı değil geçerliliği inceler. Neden peki?
+
+
+Çünkü mantıkçılar, bir argümanın öncüllerinin ne zaman doğru olduğunu belirlemekle ilgilenmezler. Bir mantıkçı olarak Tweety'nin kim olduğu ve dolayısıyla Tweety'nin kuş olup olmadığı hakkında hiçbir fikrim olmayabilir. Bütün kuşların mı uçtuğunu, yoksa bazılarının mı uçtuğunu, hatta hiçbirinin uçmadığını bile bilmiyor olabilirim. Bu bir kuşbilimci için bir iştir.
+
+Bir mantıkçının işi, bir argümanın *mantığını*, varsayımları ile sonucu arasındaki bağlantıları değerlendirmektir. Bu yüzden bir mantıkçı, bir argümanın öncüllerini kesin doğru kabul eder ve sonucu ne kadar iyi desteklediklerini sorar. Bu, mantık çalışmak için kuş bilimiyle ilgili herhangi bir şey bilmeniz gerekmediği anlamına gelir. Benzer şey belirli bir argümanın ilgili olduğu tıp, fizik ya da kimya için de geçerlidir.
+
+Geçerlilik, yanıltıcı, sezgilere aykırı bir kavramdır. Bu oldukça varsayımsal bir kavramdır: Öncüller doğruysa sonucun doğru olması gerekip gerekmediğiyle ilgilidir. Dolayısıyla bir argümanın geçerliliğini değerlendirdiğimizde, öncüllerinin doğruluğu hakkında bildiklerimizi görmezden geliyoruz. Olmasalar bile gerçekmiş gibi davranıyoruz. Sonuç hakkında bildiklerimizi bile görmezden gelmeliyiz.
+
+Bunun yerine, konu hakkında bildiklerimizi askıya alıyoruz ve sadece öncüllerin doğru olduğunu hayal ediyoruz. Sonra soruyoruz: Bu varsayımsal senaryoda, sonucun yanlış olmasının bir yolu var mı? Varsa, argüman geçersizdir. Aksi halde geçerlidir.
+
+
+
+## Önermeler
+
+Argümanlar ifadelerden, bir şeyin doğru olduğu iddialarından yapılır. Mantıkta bu ifadelere ***önermeler*** diyoruz. Ve onları temsil etmek için İngiliz alfabesinin büyük harflerini kullanıyoruz. Örneğin, bu argüman:
+
+```{block, type="argument", echo=TRUE}
+Aegon bir tiransa, Brandon bir büyücüdür.\
+Aegon bir tirandır.\
+Bu nedenle, Brandon bir sihirbazdır.
+```
+
+şöyle özetlenebilir:
+
+```{block, type="argument", echo=TRUE}
+Eğer $A$ ise, o zaman $B$.\
+$A$.\
+Bu nedenle, $B$.
+```
+
+
+
+Tüm cümleler önerme değildir. Bazıları soru, bazıları emir, bazıları endişe ifadesi. Örneğin:
+
+- Saat kaç?
+- Horoz sosunu uzat!
+- Ah ah.
+
+Önermeleri diğer tümce türlerinden ayırmanın bir yolu şudur: önermeler doğru ya da yanlış olabilir. Saatin kaç olduğunu soran birine, "Az önce söylediğin şey yanlış!" diyerek cevap vermek mantıklı olmaz. Ve birisinin sosu iletme isteğine "bu doğru!" diye cevap vermezsiniz. Belki şaka olması dışında.
+
+## Önermeleri Görselleştirme
+
+[Bölüm](#lessons) \@ref(lessons)'de birbirini dışlayan önermeleri öğrendik. Birinin doğru olması diğerinin yanlış olması gerektiği anlamına geldiğinde, iki önerme birbirini dışlar. Örneğin:
+
+- $A$: Konfüçyüs MS 6. Yüzyılda doğdu.
+- $B$: Konfüçyüs MÖ 6. yüzyılda doğdu.
+
+Bu önermelerin ikisinin de doğru olması mümkün değildir ve bu ilişkiyi bir diyagramda görselleştirebiliriz (Şekil \@ref(fig:meprops)).
+
+```{r meprops, echo=FALSE, out.width="50%", fig.align='center',fig.cap="Birbirini dışlayan önermeler"}
+euler_diagram <- function(propositions) {
+    ggplot(data = propositions) + theme_void() + coord_fixed() +
+        xlim(-3,3) + ylim(-2,2) +
+        theme(panel.border = element_rect(colour="black", fill=NA, size=1)) +
+        geom_circle(aes(x0 = cirx, y0 = ciry, r = r)) +
+        geom_text(aes(x = labx, y = laby, label = labl), parse = TRUE, size = 7)
+}
+
+propositions <- data.frame(
+    cirx = c(-1.25  , 1.25),
+    ciry = c(0      , 0),
+    r    = c(1      , 1),
+    labx = c(-2     , 2),
+    laby = c(1      , 1),
+    labl = c("italic(A)", "italic(B)")
+)
+
+euler_diagram(propositions)
+```
+
+
+Her daire bir önermeyi temsil eder. Bunu, önermenin doğru olacağı olası durumları çevreleyen olarak düşünebilirsiniz. Daireler örtüşmez çünkü bu örnekteki her iki önermenin de doğru olduğu olası bir durum yoktur.
+
+
+Buna karşılık, bu iki önerme birbirini dışlamaz:
+
+- Konfüçyüs Asya'da doğdu.
+- Konfüçyüs MÖ 6. yüzyılda doğdu.
+
+Önermeler birbirini dışlamadığında, ***uyumlu*** olduklarını söyleriz. Uyumlu önermeler örtüşüyor (Şekil \@ref(fig:compropositions)). Dairelerin çakıştığı bölge, her iki önermenin de doğru olduğu olası senaryoları temsil eder ("$A \wedge B$ bölgesi").
+
+
+```{r compropositions, out.width="50%",fig.align='center',echo=FALSE, fig.cap="Uyumlu önermeler"}
+propositions <- data.frame(
+    cirx = c(-.5   , .5),
+    ciry = c(0     , 0),
+    r    = c(1     , 1),
+    labx = c(-1.25 ,  1.25),
+    laby = c(1     , 1),
+    labl = c("italic(A)", "italic(B)")
+)
+
+euler_diagram(propositions)
+```
+
+
+Bunlara matematikçi Leonhard Euler'den (*oiler* olarak telaffuz edilir) atfen ***Euler diyagramları*** denir.^[Leonhard Euler 1707'dan 1783'a kadar yaşadı. Logaritma ile çalıştıysanız veya hesap aldıysanız, bazı çalışmalarıyla daha önce karşılaşmış olabilirsiniz.] Çok benzer olan Venn diyagramlarını daha önce görmüş olabilirsiniz. Ancak bir Euler diyagramında dairelerin örtüşmesi gerekmez.
+
+
+Bazen bir daire tamamen başka bir daireyi bile içerir. Bu örneği alın:
+
+- Konfüçyüs Asya'da doğdu.
+- Konfüçyüs bir yerde doğdu.
+
+Bu önermeler sadece uyumlu değildir. Birincisi doğruysa, ikincisi *doğru olmalıdır*. İlk önermenin öncül ve ikinci önermenin sonuç olduğu bir argüman hayal edin. Argüman geçerli olacaktır:
+
+```{block, type="argument", echo=TRUE}
+Konfüçyüs Asya'da doğdu.\
+Bu nedenle Konfüçyüs bir yerde doğdu.
+```
+
+```{r entailment, echo=FALSE, fig.align='center',out.width="50%",  fig.cap="Mantıksal gereklilik"}
+propositions <- data.frame(
+    cirx = c(0     , 0),
+    ciry = c(0     , 0),
+    r    = c(1.25  , .5),
+    labx = c(-.5   , -.95),
+    laby = c(.5    , 1.15),
+    labl = c("italic(A)", "italic(B)")
+)
+euler_diagram(propositions)
+```
+
+
+Bu durumda, birinci önermenin ***mantıksal olarak ikinciyi içerdiğini*** söylüyoruz. Bir Euler diyagramı açısından, birinci daire tamamen ikinci dairenin içindedir (Şekil \@ref(fig:entailment)). Çünkü birinci önermenin doğru, ikincisinin yanlış olduğu olası bir durum yoktur.

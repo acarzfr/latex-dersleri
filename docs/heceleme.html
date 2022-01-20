@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>LaTeX Dersleri</title>
+  <title>1.7 Heceleme | LaTeX Dersleri</title>
   <meta name="description" content="TeX/LaTeX’e dair bir iki kelam." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="LaTeX Dersleri" />
+  <meta property="og:title" content="1.7 Heceleme | LaTeX Dersleri" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://acarzfr.github.io/latex-dersleri/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="acarzfr/latex-dersleri" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="LaTeX Dersleri" />
+  <meta name="twitter:title" content="1.7 Heceleme | LaTeX Dersleri" />
   
   <meta name="twitter:description" content="TeX/LaTeX’e dair bir iki kelam." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-
+<link rel="prev" href="türkçe-dil-ayarları-ve-çoklu-dil-kullanımı.html"/>
+<link rel="next" href="kaynaklar.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -203,17 +203,32 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
+<div id="heceleme" class="section level2" number="1.7">
+<h2><span class="header-section-number">1.7</span> Heceleme</h2>
+<p>Bazen tüm bu ayarlamalara rağmen LaTeX bazı kelimeleri doğru
+heceleyemeyebilir. Böyle durumlarda hecelemeyi elle yapmak gerekir.
+Yanlış hecelenen kelimenin bölünebileceği yerler <code>\-</code> komutuyla
+gösterilir:</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="heceleme.html#cb19-1" aria-hidden="true" tabindex="-1"></a>He\<span class="sc">-</span>ce\<span class="sc">-</span>le\<span class="sc">-</span>me</span></code></pre></div>
+<p>Bu sadece ilgili kelimenin tireyle ayrıldığı yerde doğru hecelenmesini
+sağlar. Aynı kelime belgenin başka bir yerinde yine yalnış
+hecelenebilir. Bunun yerine <code>\begin{document}</code> komutundan sonra
+<code>\hyphenation</code> komutuyla hece yerleri tire (<code>-</code>) işaretiyle gösterilmiş
+olan kelime listesi oluşturulursa belgenin tamamına bu kural uygulanmış
+olur. Örneğin</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="heceleme.html#cb20-1" aria-hidden="true" tabindex="-1"></a>\hyphenation{He<span class="sc">-</span>ce<span class="sc">-</span>le<span class="sc">-</span>me FORTRAN}</span></code></pre></div>
+<p>komutuyla “Heceleme” kelimesinin nereden bölüneceği, “FORTRAN”, “Fortran” ya da
+“fortran” kelimelerinin bölünmeyeceği LaTeX’e söylenmiş olur.</p>
 
-
-
-<p>Tüh! Bir şeyler ters gitti…</p>
+</div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-
-
+<a href="türkçe-dil-ayarları-ve-çoklu-dil-kullanımı.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="kaynaklar.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

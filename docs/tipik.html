@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>LaTeX Dersleri</title>
+  <title>1.4 Tipik Bir Belge Yazımı | LaTeX Dersleri</title>
   <meta name="description" content="TeX/LaTeX’e dair bir iki kelam." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="LaTeX Dersleri" />
+  <meta property="og:title" content="1.4 Tipik Bir Belge Yazımı | LaTeX Dersleri" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://acarzfr.github.io/latex-dersleri/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="acarzfr/latex-dersleri" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="LaTeX Dersleri" />
+  <meta name="twitter:title" content="1.4 Tipik Bir Belge Yazımı | LaTeX Dersleri" />
   
   <meta name="twitter:description" content="TeX/LaTeX’e dair bir iki kelam." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-
+<link rel="prev" href="kurulum.html"/>
+<link rel="next" href="belge-sınıfları-ve-seçenekleri.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -203,17 +203,60 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-
-
-
-<p>Tüh! Bir şeyler ters gitti…</p>
+<div id="tipik" class="section level2" number="1.4">
+<h2><span class="header-section-number">1.4</span> Tipik Bir Belge Yazımı</h2>
+<p>LaTeX’in varsayılan dosya uzantısı <code>.tex</code>’tir. Bu basit bir metin
+dosyası olup, LaTeX editörleriyle oluşturulup düzenlenebileceği gibi
+basit bir metin editörüyle de düzenlenebilir.</p>
+<p>Bir belge hazırlamaya başlamak için verilecek ilk komut</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="tipik.html#cb9-1" aria-hidden="true" tabindex="-1"></a>\documentclass[...]{...}</span></code></pre></div>
+<p>olup, çengelli parantezler arasına oluşturmak istediğiniz belgenin
+sınıfı yazılır. Köşeli parantezlerin içine de isteğe bağlı bazı
+değişkenler yazılabilir. Eğer bu kısım boş bırakılırsa LaTeX varsayılan
+değerleri alacaktır. Bu komutun ardından sırasıyla <code>\begin{document}</code> ve
+<code>\end{document}</code> komutları verilerek belge ortamı oluşturulur.
+<code>\end{document}</code> komutuyla LaTeX’e belgenin bittiği söylenmiş olur ve
+LaTeX bu komuttan sonra girilenleri dikkate almaz.</p>
+<p><code>\documentclass</code> komutuyla <code>\begin{document}</code> komutu arasına <em>sahanlık</em>
+denir. Sahanlık, belgenin ayarlarının yapıldığı kısımdır ve bu kısım
+çıktıda görünmez. <code>\begin{document}</code> ile <code>\end{document}</code> arasına da
+<em>gövde</em> denir. İçerik burada oluşturulur.</p>
+<p>Aşağıda asgari bir LaTeX kaynak dosyası gösterilmiştir. <code>\documentclass</code>
+komutunun değişkeni olan <code>article</code>, belgenin makale olacağını belirtir.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="tipik.html#cb10-1" aria-hidden="true" tabindex="-1"></a>\documentclass{article}</span>
+<span id="cb10-2"><a href="tipik.html#cb10-2" aria-hidden="true" tabindex="-1"></a>\begin{document}</span>
+<span id="cb10-3"><a href="tipik.html#cb10-3" aria-hidden="true" tabindex="-1"></a>İşte ilk belgem.</span>
+<span id="cb10-4"><a href="tipik.html#cb10-4" aria-hidden="true" tabindex="-1"></a>\end{document}</span></code></pre></div>
+<p>Bu noktadan sonra örnek kaynak dosyayı LaTeX editörünüzünde oluşturup
+önceden oluşturduğunuz bir dizine kaydedin. Kaydederken dosya adında
+boşluk ve Türkçe karakter kullanmayın. Örneğin kaynak dosyanız
+<code>belge1.tex</code> olsun.</p>
+<p>İkinci aşama kaynak dosyanın derlenmesidir. Derleme işlemi için LaTeX
+editörlerinde genelde araç çubuğunda oklar bulunur. Oka tıklandığında
+dosya derlenir ve sonuç, çıktı ekranında görünür.</p>
+<p>Eğer metin editörü kullanıyorsanız derlemeyi uçbirimde (terminal,
+konsol,…) yapmanız gerekir. Derleme için uçbirim kaynak dosyanın
+olduğu dizinde açılıp</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="tipik.html#cb11-1" aria-hidden="true" tabindex="-1"></a>pdflatex belge1</span></code></pre></div>
+<p>komutu verilmelidir.</p>
+<p>Derleme işleminden sonra kaynak dosyanızın olduğu dizinde <code>belge1.tex</code>
+ve <code>belge1.pdf</code> dosyalarının yanında yine <code>belge1</code> ile başlayan farklı
+uzantılara sahip dosyalar olacaktır. Bu dosyaların ne olduklarına
+ilerleyen yazılarda değinilecektir ancak dileyen okur <span class="citation">(<a href="#ref-Oetiker" role="doc-biblioref">Oetiker et al. 2006</a>, s. 13-14)</span>’e bakabilir.</p>
+</div>
+<h3>Kaynaklar</h3>
+<div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Oetiker" class="csl-entry">
+Oetiker, Tobias, Hubert Partl, Irene Hyna, and Elisabeth Schlegl. 2006. <em><span class="nocase">İnce bir LaTeX2e Elkitabı veya, 116 dakikada LaTeX2e</span></em>.
+</div>
+</div>
             </section>
 
           </div>
         </div>
       </div>
-
-
+<a href="kurulum.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="belge-sınıfları-ve-seçenekleri.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

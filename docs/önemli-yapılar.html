@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>LaTeX Dersleri</title>
+  <title>1.2 Önemli Yapılar | LaTeX Dersleri</title>
   <meta name="description" content="TeX/LaTeX’e dair bir iki kelam." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="LaTeX Dersleri" />
+  <meta property="og:title" content="1.2 Önemli Yapılar | LaTeX Dersleri" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://acarzfr.github.io/latex-dersleri/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="acarzfr/latex-dersleri" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="LaTeX Dersleri" />
+  <meta name="twitter:title" content="1.2 Önemli Yapılar | LaTeX Dersleri" />
   
   <meta name="twitter:description" content="TeX/LaTeX’e dair bir iki kelam." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-
+<link rel="prev" href="latex-nedir.html"/>
+<link rel="next" href="kurulum.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -203,17 +203,112 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-
-
-
-<p>Tüh! Bir şeyler ters gitti…</p>
+<div id="önemli-yapılar" class="section level2" number="1.2">
+<h2><span class="header-section-number">1.2</span> Önemli Yapılar</h2>
+<div id="komutlar" class="section level3" number="1.2.1">
+<h3><span class="header-section-number">1.2.1</span> Komutlar</h3>
+<p>LaTeX komutları bir geribölü (<code>\</code>) işaretiyle başlar ve ya sadece
+harflerden ya da bir tane harf olmayan karakterden oluşurlar. Komut
+yazıldıktan sonra ya boşluk, ya bir sayı ya da harf olmayan bir karakter
+gelebilir.</p>
+<p>Çoğu komut, zorunlu değişken alır. Bu zorunlu değişken komut adından
+sonra çengelli parantezler içine yazılır. Zorunlu değişken alan
+komutlar, zorunlu olmayan (isteğe bağlı) değişkenler de alabilir, bunlar
+da komut adından sonra gelen köşeli parantezler içine yazılırlar. Eğer
+değişkenler birden fazlaysa aralarına virgül koyularak ayrılır.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r numberLines"><code class="sourceCode r"><span id="cb1-1"><a href="önemli-yapılar.html#cb1-1"></a>\<span class="sc">:</span></span>
+<span id="cb1-2"><a href="önemli-yapılar.html#cb1-2"></a>\LaTeX</span>
+<span id="cb1-3"><a href="önemli-yapılar.html#cb1-3"></a>\item[...]</span>
+<span id="cb1-4"><a href="önemli-yapılar.html#cb1-4"></a>\emph{...}</span>
+<span id="cb1-5"><a href="önemli-yapılar.html#cb1-5"></a>\documentclass[...]{...}</span>
+<span id="cb1-6"><a href="önemli-yapılar.html#cb1-6"></a>\subfloat[...][...]{...}</span>
+<span id="cb1-7"><a href="önemli-yapılar.html#cb1-7"></a>\raisebox{...}[...][...]{...}</span>
+<span id="cb1-8"><a href="önemli-yapılar.html#cb1-8"></a>\multicolumn{...}{...}{...}</span>
+<span id="cb1-9"><a href="önemli-yapılar.html#cb1-9"></a>{\bfseries ...}</span></code></pre></div>
+<p>Fikir vermesi açısından yukarıda dokuz adet komut örneği verilmiştir.
+Birinci komut bir tane harf olmayan karakterden oluşan bir komuttur.
+İkincisi, değişkeni olmayan bir komuttur. Bazı harflerin büyük
+bazılarınınsa küçük olması komutların büyük-küçük harfe duyarlı olduğunu
+gösterir. Dokuzuncu komut ise bildirim şeklinde verilmiştir.</p>
+</div>
+<div id="paketler" class="section level3" number="1.2.2">
+<h3><span class="header-section-number">1.2.2</span> Paketler</h3>
+<p>LaTeX’de bazı özelliklerin (renkli yazmak, şekil eklemek vb.)
+kullanılabilmesi için kaynak dosyaya bazı paketlerin eklenmesi gerekir.
+Bu, <code>\usepackage</code> komutuyla yapılır. Bu komutun zorunlu değişkenine
+paket adı, zorunlu olmayan kısmına ise paket seçenekleri yazılır:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="önemli-yapılar.html#cb2-1" aria-hidden="true" tabindex="-1"></a>\usepackage[<span class="sc">&lt;</span>seçenekler<span class="sc">&gt;</span>]{<span class="sc">&lt;</span>paket adı<span class="sc">&gt;</span>}</span></code></pre></div>
+<p>Bu komutla paketin kaynak dosyaya eklenmesi TeX dağıtımıyla sisteminize
+kurulmuş olan paketin belgeye çağrılarak işe koşulması demektir.</p>
+</div>
+<div id="ortamlar" class="section level3" number="1.2.3">
+<h3><span class="header-section-number">1.2.3</span> Ortamlar</h3>
+<p>LaTeX’de ortamlar önemli bir yer tutar. Örneğin <code>document</code> bir ortamdır.
+Ortamları birden fazla ögeye uygulanan komutlar olarak düşünebiliriz.</p>
+<p>Bir ortam <code>\begin</code> komutuyla başlayıp <code>\end</code> komutuyla biter. Her iki
+komutun zorunlu değişkeni ortamın adıdır:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="önemli-yapılar.html#cb3-1" aria-hidden="true" tabindex="-1"></a>\begin{<span class="sc">&lt;</span>ortam adı<span class="sc">&gt;</span>}</span>
+<span id="cb3-2"><a href="önemli-yapılar.html#cb3-2" aria-hidden="true" tabindex="-1"></a> ...</span>
+<span id="cb3-3"><a href="önemli-yapılar.html#cb3-3" aria-hidden="true" tabindex="-1"></a>\end{<span class="sc">&lt;</span>ortam adı<span class="sc">&gt;</span>}</span></code></pre></div>
+</div>
+<div id="gruplar" class="section level3" number="1.2.4">
+<h3><span class="header-section-number">1.2.4</span> Gruplar</h3>
+<p>Gruplar, ortam benzeri yapılardır. Grup <code>\begingroup</code> komutuyla başlar
+ve <code>\endgroup</code> komutuyla biter. Grubun içinde kullanılan bir bildirim
+sadece gruba uygulanır.</p>
+</div>
+<div id="boşluklar" class="section level3" number="1.2.5">
+<h3><span class="header-section-number">1.2.5</span> Boşluklar</h3>
+<p>LaTeX’de belgenizin metnini oluştururken ister klavyedeki Space, ister
+Tab tuşu ile boşluk bırakın, bu boşluklar LaTeX tarafından bir karakter
+boşluk olarak algılanır. Arka arkaya çok sayıda boşluk bırakılsa da
+LaTeX bunu tek bir boşluk olarak algılar.</p>
+<p>Bütün bir satırın boş bırakılması LaTeX tarafından paragraf başı olarak
+algılanır. Arka arkaya boş bırakılan çok sayıda boş satır LaTeX
+tarafından tek bir boş satır yani paragraf başı olarak algılanır.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="önemli-yapılar.html#cb4-1" aria-hidden="true" tabindex="-1"></a> İster bir boşluk, isterseniz de çok         sayıda boşluk bırakın. </span>
+<span id="cb4-2"><a href="önemli-yapılar.html#cb4-2" aria-hidden="true" tabindex="-1"></a>İkisi de bir boşluk gibi işlem görür. </span>
+<span id="cb4-3"><a href="önemli-yapılar.html#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="önemli-yapılar.html#cb4-4" aria-hidden="true" tabindex="-1"></a>Boş bir satır yeni paragraf demektir, burada olduğu gibi.</span></code></pre></div>
+<p><a href="https://github.com/acarzfr/latex-dersleri/blob/main/examples/ex1.pdf">Çıktı</a></p>
+<p>Komutlardan sonra gelen boşlukları LaTeX dikkate almaz. Komuttan sonra
+gerçekten bir boşluk bırakmak için, ya <code>{}</code> ve ardından boşluk girilir
+ya da komut adından sonra özel bir boşluk komutu kullanılır.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="önemli-yapılar.html#cb5-1" aria-hidden="true" tabindex="-1"></a>\LaTeX  boşluk yok.\\</span>
+<span id="cb5-2"><a href="önemli-yapılar.html#cb5-2" aria-hidden="true" tabindex="-1"></a>\LaTeX{} boşluk var.\\</span>
+<span id="cb5-3"><a href="önemli-yapılar.html#cb5-3" aria-hidden="true" tabindex="-1"></a>\LaTeX\ boşluk komutuyla  boşluk.</span></code></pre></div>
+<p><a href="https://github.com/acarzfr/latex-dersleri/blob/main/examples/ex2.pdf">Çıktı</a></p>
+</div>
+<div id="özel-amaçlı-karakterler" class="section level3" number="1.2.6">
+<h3><span class="header-section-number">1.2.6</span> Özel amaçlı karakterler</h3>
+<p>Aşağıdaki karakterlerin herbiri LaTeX’de özel bir amaç için kullanılır.
+Dolayısıyla bu karakterleri doğrudan kullanmak istenmeyen sonuçlara yol
+açabilir.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="önemli-yapılar.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#  $  %   &amp;   {   }   ~  ^  _ \</span></span></code></pre></div>
+<p>Bu karakterleri çıktıda elde etmek isterseniz, sondaki hariç, başına bir
+geribölü koymanız gerekir. Sondaki için, yani bir geribölü sembolü elde
+etmek içinse <code>\textbackslash</code> komutunu kullanabilirsiniz. Eğer <code>\\</code>
+komutunu verirseniz yeni bir satır başlatmış olursunuz.</p>
+<p>Bu karakterlerden örneğin yüzde (<code>%</code>) karakteri kaynak dosyanızda yorum
+ya da açıklama yazmaya yarar. Bu sembolden sonra yazılanları LaTeX
+dikkate almaz ve çıktıda görünmez.</p>
+<p>Diğer karakterlerden örneğin (<code>$</code>) nin matematik kipini açma ve
+kapatmaya yarar. (<code>&amp;</code>) karekteri tablo ve benzeri yapılarda dikey
+hizalama yapmak için veya sütun ayracı olarak kullanılır. Çengelli
+parantezlerden zaten yeterince bahsettik. (<code>#</code>) karakteri yeni komutlar
+tanımlamakta kullanılır. Tilda (<code>~</code>) ise genişlemeyen bir boşluk
+yaratmak için kullanılır. (<code>^</code>) ve (<code>_</code>) karakterleri de matematikte üst
+ve alt indis yazmak için kullanılır. Her birinin kullanımlarından yeri
+geldiğinde tekrar bahsedeceğiz.</p>
+</div>
+</div>
             </section>
 
           </div>
         </div>
       </div>
-
-
+<a href="latex-nedir.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="kurulum.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

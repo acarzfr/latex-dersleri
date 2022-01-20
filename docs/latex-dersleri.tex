@@ -171,6 +171,8 @@
 \hypertarget{genel}{%
 \chapter{Genel}\label{genel}}
 
+Bu bölümde LaTeX kullanımıyla ilgili genel bilgilerden bahsedeceğiz.
+
 \hypertarget{latex-nedir}{%
 \section{LaTeX Nedir?}\label{latex-nedir}}
 
@@ -204,8 +206,8 @@ LaTeX'de girdi ve çıktı ekranı farklıdır ve
 birçok şey için WYSIWYG editörlerinde olmayan yapılar vardır. Şimdi, bu
 yapıların ne oldukları ve ne işe yaradıklarını açıklayalım.
 
-\hypertarget{latexdeki-uxf6nemli-yapux131lar}{%
-\section{LaTeX'deki Önemli Yapılar}\label{latexdeki-uxf6nemli-yapux131lar}}
+\hypertarget{uxf6nemli-yapux131lar}{%
+\section{Önemli Yapılar}\label{uxf6nemli-yapux131lar}}
 
 \hypertarget{komutlar}{%
 \subsection{Komutlar}\label{komutlar}}
@@ -317,8 +319,7 @@ ya da komut adından sonra özel bir boşluk komutu kullanılır.
 \end{Highlighting}
 \end{Shaded}
 
-\href{https://www.texdizgi.com/wp-content/uploads/2020/04/LaTeX_Sunu-1.pdf}{LaTeX\_Sunu-1\\
-}
+\href{https://github.com/acarzfr/latex-dersleri/blob/main/examples/ex2.pdf}{Çıktı}
 
 \hypertarget{uxf6zel-amauxe7lux131-karakterler}{%
 \subsection{Özel amaçlı karakterler}\label{uxf6zel-amauxe7lux131-karakterler}}
@@ -329,7 +330,7 @@ açabilir.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{\#  $  \%   \&   \{   \}   \textasciitilde{}  \^{}  \_ \textbackslash{}}
+\CommentTok{\#  $  \%   \&   \{   \}   \textasciitilde{}  \^{}  \_ \textbackslash{}}
 \end{Highlighting}
 \end{Shaded}
 
@@ -342,27 +343,375 @@ Bu karakterlerden örneğin yüzde (\texttt{\%}) karakteri kaynak dosyanızda yo
 ya da açıklama yazmaya yarar. Bu sembolden sonra yazılanları LaTeX
 dikkate almaz ve çıktıda görünmez.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\FunctionTok{\textbackslash{}\%}\NormalTok{50 zam geldi. }
-\CommentTok{\% Buraya yorum yazabilirsiniz.}
-\end{Highlighting}
-\end{Shaded}
-
-\href{https://www.texdizgi.com/wp-content/uploads/2020/04/LaTeX_Sunu-2.pdf}{LaTeX\_Sunu-2\\
-}
-
-:::
-
 Diğer karakterlerden örneğin (\texttt{\$}) nin matematik kipini açma ve
-kapatmaya yaradığından
-\href{https://www.texdizgi.com/latexde-matematiksel-ifadeleri-dizmek-1-giris/}{bahsetmiştik}. (\texttt{\&}) karekteri tablo ve benzeri yapılarda dikey
+kapatmaya yarar. (\texttt{\&}) karekteri tablo ve benzeri yapılarda dikey
 hizalama yapmak için veya sütun ayracı olarak kullanılır. Çengelli
 parantezlerden zaten yeterince bahsettik. (\texttt{\#}) karakteri yeni komutlar
 tanımlamakta kullanılır. Tilda (\texttt{\textasciitilde{}}) ise genişlemeyen bir boşluk
 yaratmak için kullanılır. (\texttt{\^{}}) ve (\texttt{\_}) karakterleri de matematikte üst
 ve alt indis yazmak için kullanılır. Her birinin kullanımlarından yeri
 geldiğinde tekrar bahsedeceğiz.
+
+\hypertarget{kurulum}{%
+\section{Kurulum}\label{kurulum}}
+
+LaTeX'i kurmak için ilk olarak bir TeX dağıtımı edinmeniz gerekir.
+Dağıtımlar, dizgi sistemini ve LaTeX'de belge oluşturabilmek için
+gereken paketleri içerir.
+
+İkinci ihtiyaç duyacağınız şey bir LaTeX editörüdür. Edindiğiniz TeX
+dağıtımları genelde bir LaTeX editörüyle birlikte gelir. Tabi editör
+kişisel bir tercihtir ve bir LaTeX editörü yerine basit bir metin
+editörü kullanabilirsiniz. Ancak farklı işletim sistemleri için birçok
+iyi LaTeX editörü vardır ve bunların kod vurgulama, otomatik tamamlama,
+otomatik belge oluşturma gibi LaTeX'e özgü işlevleri vardır. Dolayısıyla
+LaTeX'de yeniyseniz bir editör kullanmanızı tavsiye ederiz.
+
+\hypertarget{gnulinux}{%
+\subsection{GNU/Linux}\label{gnulinux}}
+
+Linux sistemlere \href{https://miktex.org/download}{MiKTeX} ya da \href{http://www.tug.org/texlive/}{TeX
+Live} kurulabilir. MiKTeX'in indirme sayfasında Ubuntu, Mint,
+Debian, Fedora, CentOS ve openSUSE gibi Linux dağıtımlarında nasıl
+kurulacağı anlatılmıştır. TeX Live ise tüm popüler Linux dağıtımlarının
+depolarında mevcut olup, paket yöneticisi ya da komut satırı yardımıyla
+kurulabilir. Örneğin Ubuntu, Debian, Mint, Pardus gibi \texttt{.deb} uzantılı
+paketlerin kullanıldığı dağıtımlarda
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{sudo apt}\SpecialCharTok{{-}}\NormalTok{get install texlive}\SpecialCharTok{{-}}\NormalTok{base}
+\end{Highlighting}
+\end{Shaded}
+
+komutuyla temel kurulum,
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{sudo apt}\SpecialCharTok{{-}}\NormalTok{get install texlive}\SpecialCharTok{{-}}\NormalTok{full}
+\end{Highlighting}
+\end{Shaded}
+
+komutuyla da tam kurulum yapılır.
+
+\hypertarget{mac-os}{%
+\subsection{Mac OS}\label{mac-os}}
+
+Mac OS kullanıcıları için iki seçenek mevcuttur:
+\href{https://miktex.org/download}{MiKTeX} ya da
+\href{http://www.tug.org/mactex/}{MacTeX}. MiKTeX kurulumu için \texttt{.dmg} uzantılı, MacTeX içinse
+\texttt{.pkg} uzantılı dosya indirilir ve standart kurulum yapılır.
+
+\hypertarget{windows}{%
+\subsection{Windows}\label{windows}}
+
+Windows için aşağıdaki dağıtımlardan birini kurabilirsiniz.
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://miktex.org/download}{MiKTeX}
+\item
+  \href{http://www.tug.org/texlive/}{TeX Live}
+\item
+  \href{https://tug.org/protext/}{proTeXt}
+\end{itemize}
+
+MiKTeX veya TeX Live dağıtımını kurarsanız sisteminize
+\href{https://www.tug.org/texworks/}{TeXworks} editörü de kurulur. proTeXt dağıtımı MiKTeX tabanlı bir
+dağıtım olup, tüm paketleri içerir ve beraberinde
+\href{https://texstudio.org/}{TeXstudio} editörüyle gelir.
+
+\hypertarget{latex-edituxf6rleri}{%
+\subsection{LaTeX Editörleri}\label{latex-edituxf6rleri}}
+
+Hangi editörü kullanacağınıza birkaç deneme yaptıktan sonra karar
+verebilirsiniz. \href{https://beebom.com/best-latex-editors/}{Burada} en çok
+beğenilen editörler listelenmiş.
+
+Her LaTeX editöründe olan özelliklerin (otomatik kod tamamlama vb.) yanı
+sıra kullanıcı dostu arayüzü, yüzde yüze yakın Türkçe desteği, ücretsiz
+oluşu ve her üç sistemde de çalışabilmesinden dolayı
+\href{https://texstudio.org/}{TeXstudio}'yu tavsiye ediyoruz. Karar sizin.
+
+\hypertarget{uxe7evrimiuxe7i-edituxf6rler}{%
+\subsection{Çevrimiçi Editörler}\label{uxe7evrimiuxe7i-edituxf6rler}}
+
+LaTeX'i hiçbir kurulum yapmadan çevrimiçi de kullanabilirsiniz. Aşağıda
+üç tanesi listelenmiştir.
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://www.overleaf.com/}{Overleaf}
+\item
+  \href{https://papeeria.com/}{Papeeria}
+\item
+  \href{https://latexbase.com/}{LaTeX Base}
+\end{itemize}
+
+En popüler olanı Overleaf olup, sayfasında beğenebileceğiniz binlerce
+\href{https://www.overleaf.com/latex/templates}{şablon} ve LaTeX kullanımına yönelik
+\href{https://www.overleaf.com/learn}{anlatımlar} bulunur.
+
+\hypertarget{tipik}{%
+\section{Tipik Bir Belge Yazımı}\label{tipik}}
+
+LaTeX'in varsayılan dosya uzantısı \texttt{.tex}'tir. Bu basit bir metin
+dosyası olup, LaTeX editörleriyle oluşturulup düzenlenebileceği gibi
+basit bir metin editörüyle de düzenlenebilir.
+
+Bir belge hazırlamaya başlamak için verilecek ilk komut
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}documentclass[...]\{...\}}
+\end{Highlighting}
+\end{Shaded}
+
+olup, çengelli parantezler arasına oluşturmak istediğiniz belgenin
+sınıfı yazılır. Köşeli parantezlerin içine de isteğe bağlı bazı
+değişkenler yazılabilir. Eğer bu kısım boş bırakılırsa LaTeX varsayılan
+değerleri alacaktır. Bu komutun ardından sırasıyla \texttt{\textbackslash{}begin\{document\}} ve
+\texttt{\textbackslash{}end\{document\}} komutları verilerek belge ortamı oluşturulur.
+\texttt{\textbackslash{}end\{document\}} komutuyla LaTeX'e belgenin bittiği söylenmiş olur ve
+LaTeX bu komuttan sonra girilenleri dikkate almaz.
+
+\texttt{\textbackslash{}documentclass} komutuyla \texttt{\textbackslash{}begin\{document\}} komutu arasına \emph{sahanlık}
+denir. Sahanlık, belgenin ayarlarının yapıldığı kısımdır ve bu kısım
+çıktıda görünmez. \texttt{\textbackslash{}begin\{document\}} ile \texttt{\textbackslash{}end\{document\}} arasına da
+\emph{gövde} denir. İçerik burada oluşturulur.
+
+Aşağıda asgari bir LaTeX kaynak dosyası gösterilmiştir. \texttt{\textbackslash{}documentclass}
+komutunun değişkeni olan \texttt{article}, belgenin makale olacağını belirtir.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}documentclass\{article\}}
+\NormalTok{\textbackslash{}begin\{document\}}
+\NormalTok{İşte ilk belgem.}
+\NormalTok{\textbackslash{}end\{document\}}
+\end{Highlighting}
+\end{Shaded}
+
+Bu noktadan sonra örnek kaynak dosyayı LaTeX editörünüzünde oluşturup
+önceden oluşturduğunuz bir dizine kaydedin. Kaydederken dosya adında
+boşluk ve Türkçe karakter kullanmayın. Örneğin kaynak dosyanız
+\texttt{belge1.tex} olsun.
+
+İkinci aşama kaynak dosyanın derlenmesidir. Derleme işlemi için LaTeX
+editörlerinde genelde araç çubuğunda oklar bulunur. Oka tıklandığında
+dosya derlenir ve sonuç, çıktı ekranında görünür.
+
+Eğer metin editörü kullanıyorsanız derlemeyi uçbirimde (terminal,
+konsol,\ldots) yapmanız gerekir. Derleme için uçbirim kaynak dosyanın
+olduğu dizinde açılıp
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{pdflatex belge1}
+\end{Highlighting}
+\end{Shaded}
+
+komutu verilmelidir.
+
+Derleme işleminden sonra kaynak dosyanızın olduğu dizinde \texttt{belge1.tex}
+ve \texttt{belge1.pdf} dosyalarının yanında yine \texttt{belge1} ile başlayan farklı
+uzantılara sahip dosyalar olacaktır. Bu dosyaların ne olduklarına
+ilerleyen yazılarda değinilecektir ancak dileyen okur \citep[s. 13-14]{Oetiker}'e bakabilir.
+
+\hypertarget{belge-sux131nux131flarux131-ve-seuxe7enekleri}{%
+\section{Belge Sınıfları ve Seçenekleri}\label{belge-sux131nux131flarux131-ve-seuxe7enekleri}}
+
+Bölüm \ref{tipik}'de \texttt{\textbackslash{}documentclass} komutunun zorunlu değişkeninin belge
+sınıfı olduğunu ve köşeli paratezler içine de seçeneklerin
+yazılacağından bahsetmiştik. Bu yazıda bunların neler olabileceklerinden
+bahsedelim.
+
+Başka sınıflar olmakla birlikte LaTeX'de varsayılan olarak kullanılan
+beş belge sınıfı vardır.
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+\endhead
+\texttt{article} & Makale \\
+\texttt{report} & Makaleden daha hacimli belgeler için kullanılır. Rapor, tez gibi \\
+\texttt{book} & Kitap \\
+\texttt{letter} & Mektup \\
+\texttt{beamer} & Sunu \\
+\bottomrule
+\end{longtable}
+
+Bu beş sınıftan \texttt{article}, \texttt{report} ve \texttt{book} için kullanılabilecek
+seçenekler aşağıdadır.
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+\endhead
+\textbf{10pt, 11pt, 12pt} & Belge ana yazı büyüklüğü. \\
+\textbf{a4paper, a5paper, letterpaper,\ldots{}} & Kağıt boyutu. \\
+\textbf{fleqn} & Formülleri ortada yazmak yerine, sola bitişik yazar. \\
+\textbf{leqno} & Formül numaralarını sağ yerine sol tarafa koyar. \\
+\textbf{titlepage, notitlepage} & Belge başlığını attıktan sonra yeni bir sayfa açıp açmayacağını belirler. \\
+\textbf{onecolumn, twocolumn} & Belgenin tek sütun veya çift sütun dizileceğini belirtir. \\
+\textbf{twoside, oneside} & Belgenin kağıdın hep tek tarafına mı yoksa iki tarafına mı basılacağını belirtir. \\
+\textbf{landscape} & Belgeyi enine tutulmuş kağıda basılmak üzere hazırlar. \\
+\textbf{openright, openany} & Belgede bölümleri hep sağ sayfalardan veya ilk gelen boş sayfadan başlatır. \\
+\textbf{draft, final} & Belgeyi sırasıyla \emph{taslak} ve \emph{son} şeklinde hazırlar. \textbf{draft} seçilirse, sağ taraftan fırlamış olan satırlar kalın siyah bir çizgiyle işaretlenir. \\
+\bottomrule
+\end{longtable}
+
+Bu seçeneklerin her birinin kullanılabilirliği belge sınıfına göre
+farklılık gösterir. Aşağıdaki tabloda hangi seçeneğin hangi sınıf için
+varsayılan olduğu ve kullanılabilir olup olmadığı gösterilmiştir.
+
+\begin{longtable}[]{@{}llll@{}}
+\toprule
+\endhead
+\textbf{Seçenek} & \texttt{book} & \texttt{report} & \texttt{article} \\
+\textbf{10pt} & 1 & 1 & 1 \\
+\textbf{letterpaper} & 1 & 1 & 1 \\
+\textbf{oneside} & 1/2 & 1 & 1 \\
+\textbf{twoside} & 1 & 1/2 & 1/2 \\
+\textbf{openany} & 1/2 & 1 & 0 \\
+\textbf{openright} & 1 & 1/2 & 0 \\
+\textbf{titlepage} & 1 & 1 & 1/2 \\
+\textbf{final} & 1 & 1 & 1 \\
+\bottomrule
+\end{longtable}
+
+1: varsayılan 1/2: kullanılabilir 0:kullanılamaz
+
+Örneğin belgeye
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}documentclass[a4paper,12pt]\{article\}}
+\end{Highlighting}
+\end{Shaded}
+
+komutuyla başlarsak LaTeX'e kağıt boyutu A4, ana yazı büyüklüğü 12 punto
+olan bir makale yazacağımızı bildirmiş oluruz.
+
+Başka bir örnek
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}documentclass[a5paper,11pt,twocolumn]\{book\}}
+\end{Highlighting}
+\end{Shaded}
+
+olsun. Bu örnekte kağıt boyutu A5, ana yazı büyüklüğü 11 punto olan bir
+kitap yazacağımızı ve kitabın iki sütun olarak dizilmesini söyledik.
+
+\hypertarget{tuxfcrkuxe7e-dil-ayarlarux131-ve-uxe7oklu-dil-kullanux131mux131}{%
+\section{Türkçe Dil Ayarları ve Çoklu dil Kullanımı}\label{tuxfcrkuxe7e-dil-ayarlarux131-ve-uxe7oklu-dil-kullanux131mux131}}
+
+LaTeX'de Türkçe belgeler oluşturmak için öncelikle sahanlığa
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}usepackage[T1]\{fontenc\}}
+\NormalTok{\textbackslash{}usepackage[turkish]\{babel\}}
+\end{Highlighting}
+\end{Shaded}
+
+komutlarının verilmesi gerekir.
+
+\texttt{T1} seçenekli \texttt{fontenc} paketi yazıtipi kodlamasıyla ilgili bir paket
+olup, hecelemenin doğru şekilde yapılmasını sağlar. Bir çok Avrupa
+dilinde de \texttt{T1} seçeneğiyle kullanılır. \texttt{turkish} seçenekli \texttt{babel}
+paketi de Chapter, Table, Contents,\ldots{} gibi isimlerin Türkçeleşmesi
+(Bölüm, Tablo, İçindekiler,\ldots) içindir.
+
+\begin{quote}
+Yakın zamana kadar ö, ş, ç,\ldots{} gibi Türkçe karakterlerin
+kullanılabilmesi için sahanlığa \texttt{\textbackslash{}usepackage{[}utf8{]}\{inputenc\}} ya da
+\texttt{\textbackslash{}usepackage{[}latin5{]}\{inputenc\}} komutlarından birinin verilmesi
+gerekiyordu. Bu paket (\texttt{inputenc}) girdi kodlamasını yöneten bir
+pakettir. Son güncellemelerle birlikte bu paketin kullanılma
+zorunluluğu ortadan kalkmıştır.
+\end{quote}
+
+Aşağıda Türkçe asgari bir LaTeX kaynak dosyası örneği verilmiştir.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}documentclass\{article\}}
+\NormalTok{\textbackslash{}usepackage[T1]\{fontenc\}}
+\NormalTok{\textbackslash{}usepackage[turkish]\{babel\}}
+\NormalTok{\textbackslash{}begin\{document\}}
+\NormalTok{İşte  Türkçe ilk belgem.}
+\NormalTok{\textbackslash{}end\{document\}}
+\end{Highlighting}
+\end{Shaded}
+
+Türkçe dışında ikinci bir dil kullanmak isterseniz, örneğin İngilizce,
+\texttt{babel} paketinin seçeneğini
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}usepackage[english,turkish]\{babel\}}
+\end{Highlighting}
+\end{Shaded}
+
+şeklinde değiştirmeniz gerekir. Burada etkin olan dil Türkçedir.
+İngilizceyi etkin hale getirmek için \texttt{\textbackslash{}selectlanguage\{english\}} komutu
+kullanılır. Tekrar Türkçeye geçmek için de benzer şekilde
+\texttt{\textbackslash{}selectlanguage\{turkish\}} komutu kullanılır.
+
+Bir kelime ya da cümle gibi kısa metinler kullanılacaksa
+\texttt{\textbackslash{}foreignlanguage} komutu kullanılabilir:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}foreignlanguage\{}\SpecialCharTok{\textless{}}\NormalTok{dil}\SpecialCharTok{\textgreater{}}\NormalTok{\}\{}\SpecialCharTok{\textless{}}\NormalTok{metin}\SpecialCharTok{\textgreater{}}\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+Uzun metinler içinse diğer bir seçenek \texttt{otherlanguage} ortamıdır.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}begin\{otherlanguage\}\{}\SpecialCharTok{\textless{}}\NormalTok{dil}\SpecialCharTok{\textgreater{}}\NormalTok{\}}
+\NormalTok{...}
+\NormalTok{\textbackslash{}end\{otherlanguage\}}
+\end{Highlighting}
+\end{Shaded}
+
+Bu ortamın isimleri değiştirmeyen, örneğin, dil seçeneği İngilizce
+olmasına rağmen belgeye bir tablo eklediğinizde ``Table'' yerine yine
+``Tablo'' adını yazan yıldızlı sürümü de (\texttt{otherlanguage*}) vardır.
+
+\hypertarget{heceleme}{%
+\section{Heceleme}\label{heceleme}}
+
+Bazen tüm bu ayarlamalara rağmen LaTeX bazı kelimeleri doğru
+heceleyemeyebilir. Böyle durumlarda hecelemeyi elle yapmak gerekir.
+Yanlış hecelenen kelimenin bölünebileceği yerler \texttt{\textbackslash{}-} komutuyla
+gösterilir:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{He\textbackslash{}}\SpecialCharTok{{-}}\NormalTok{ce\textbackslash{}}\SpecialCharTok{{-}}\NormalTok{le\textbackslash{}}\SpecialCharTok{{-}}\NormalTok{me}
+\end{Highlighting}
+\end{Shaded}
+
+Bu sadece ilgili kelimenin tireyle ayrıldığı yerde doğru hecelenmesini
+sağlar. Aynı kelime belgenin başka bir yerinde yine yalnış
+hecelenebilir. Bunun yerine \texttt{\textbackslash{}begin\{document\}} komutundan sonra
+\texttt{\textbackslash{}hyphenation} komutuyla hece yerleri tire (\texttt{-}) işaretiyle gösterilmiş
+olan kelime listesi oluşturulursa belgenin tamamına bu kural uygulanmış
+olur. Örneğin
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}hyphenation\{He}\SpecialCharTok{{-}}\NormalTok{ce}\SpecialCharTok{{-}}\NormalTok{le}\SpecialCharTok{{-}}\NormalTok{me FORTRAN\}}
+\end{Highlighting}
+\end{Shaded}
+
+komutuyla ``Heceleme'' kelimesinin nereden bölüneceği, ``FORTRAN'', ``Fortran'' ya da
+``fortran'' kelimelerinin bölünmeyeceği LaTeX'e söylenmiş olur.
 
 \backmatter
 
