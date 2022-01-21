@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1.1 LaTeX Nedir? | LaTeX Dersleri</title>
+  <title>1.13 Paragraflar ve Cümle Sonları | LaTeX Dersleri</title>
   <meta name="description" content="TeX/LaTeX’e dair bir iki kelam." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1.1 LaTeX Nedir? | LaTeX Dersleri" />
+  <meta property="og:title" content="1.13 Paragraflar ve Cümle Sonları | LaTeX Dersleri" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://acarzfr.github.io/latex-dersleri/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="acarzfr/latex-dersleri" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1.1 LaTeX Nedir? | LaTeX Dersleri" />
+  <meta name="twitter:title" content="1.13 Paragraflar ve Cümle Sonları | LaTeX Dersleri" />
   
   <meta name="twitter:description" content="TeX/LaTeX’e dair bir iki kelam." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="genel.html"/>
-<link rel="next" href="önemli-yapılar.html"/>
+<link rel="prev" href="satır-ve-sayfa-kesme.html"/>
+<link rel="next" href="aralıklar.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -231,41 +231,42 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="latex-nedir" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> LaTeX Nedir?</h2>
-<p>Önce TeX’le başlayalım. TeX, 1978’den
-itibaren <a href="https://www-cs-faculty.stanford.edu/~knuth/">Donald Knuth</a> tarafından belgelerin bilgisayarda dizilmesi
-için geliştirdiği bir dizgi sistemidir.
-LaTeX ise TeX’in kullanımını kolaylaştırmak için 1984 yılında <a href="http://www.lamport.org/">Leslie
-Lamport</a> tarafından tasarlanmış bir makro pakettir.</p>
-<p>LaTeX, genelde WYSIWYG<a href="kaynaklar.html#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> editörleriyle karşılaştırılır. WYSIWYG, Microsoft
-Word, Libreoffice Writer gibi kelime işlemcilere ya da Adobe Indesign
-gibi programlara verilen genel bir isimdir. Hepsinin ortak özelliği,
-girdi ile çıktının aynı anda ve birlikte görünmesidir.</p>
-<p>Bir metnin genel görünümü ve okunabilirliği, metnin nasıl
-hizalandığından ve kesildiğinden büyük ölçüde etkilenir. LaTeX, tüm
-paragraf için hizalamayı ve kesmeleri optimize eden son derece gelişmiş
-TeX algoritmalarını kullanır. Kelime işlemciler ve diğer programlar,
-satır başına çalıştıkları için oldukça yetersiz kalırlar. Bu, diğer
-şeylerin yanı sıra düzensiz aralıklara ve birçok kısa çizgiye sebep
-olur. Sonuçları görmeniz için Microsoft Word 2008 (Mac), Adobe InDesign
-CS4 ve LaTeX’le dizilmiş bir metni <a href="http://www.rtznet.nl/zink/comparison.pdf">şuradan</a> inceleyebilirsiniz.</p>
-<p>Sonuç, LaTeX’in diğer programların her ikisinden de üstün olduğunu
-açıkça gösterir: iki kat daha az tireleme kullanır ve yine de sözcük
-aralığındaki varyasyon, Word veya InDesign’dan belirgin şekilde daha
-azdır. LaTeX’te çok büyük sözcük aralığı içeren satırlar oluşmaz.</p>
-<p>LaTeX’de girdi ve çıktı ekranı farklıdır ve
-çıktıyı görmek için girdinin derleme işleminden geçmesi gerekir. Ayrıca
-birçok şey için WYSIWYG editörlerinde olmayan yapılar vardır. Şimdi, bu
-yapıların ne oldukları ve ne işe yaradıklarını açıklayalım.</p>
+<div id="paragraflar-ve-cümle-sonları" class="section level2" number="1.13">
+<h2><span class="header-section-number">1.13</span> Paragraflar ve Cümle Sonları</h2>
+<p>Boş bir satırın yeni bir paragraf açtığını Bölüm <a href="önemli-yapılar.html#bosluk">1.2.5</a>’de belirtmiştik. Aynı şey, <code>\par</code> komutuyla da yapılabilir.
+Ancak bu komut yeni bir paragraf açmaktan ziyade farklı amaçlar için
+kullanılır (yeri geldiğinde değinilecektir). Nitekim kaynak dosyanızın
+okunabilirliği açısından paragrafları ayırmak için boş bir satır
+bırakmak daha kullanışlıdır.</p>
+<p>LaTeX’de varsayılan olarak <code>\chapter</code> ve <code>\section</code> gibi bölümleme
+komutlarından sonra oluşturulan ilk paragraf girintisiz, sonrakiler
+girintili olur. Bu, paragraf başlarında <code>\indent</code> ya da <code>\noindent</code>
+komutlarıyla tek seferliğine değiştirilebilir. Birinci komut girinti
+oluşturur, ikincisi ise girintiyi kaldırır.</p>
+<p>LaTeX, okumayı kolaylaştırmak için cümle sonlarında fazladan boşluklar
+bırakır. Bunu yaparken de her cümlenin nokta, soru işareti veya ünlem
+işaretiyle bittiğini varsayar. Kısaltmalarda büyük harflerden sonra
+nokta geldiğinden, büyük harften sonra nokta koyulursa LaTeX bunu cümle
+sonu saymaz. Eğer bir büyük harften sonra nokta koyuyorsanız ve burası
+cümlenin sonuysa LaTeX’in burayı cümle sonu sayması için büyük harften
+sonraki noktanın önüne <code>\@</code> koymanız gerekir.</p>
+<p>LaTeX’in noktadan sonra fazladan boşluk <em>koymamasını</em> isterseniz
+<code>\frenchspacing</code> komutunu kullanırsınız. Bu komutu kullandıysanız, artık
+noktadan önce <code>\@</code> koymanıza gerek yoktur. Daha sonra tekrar cümle
+sonlarında fazladan boşluk kullanmak istenirse de <code>\nonfrenchspacing</code>
+komutu kullanılır.</p>
+<p>Unvan kısaltmasından sonra unvanın ait olduğu kelimeyle birlikte kalması
+ve fazladan boşluk bırakılmaması için tilda (<code>~</code>) işareti
+kullanılabilir. Bu işaret hem genişlemeyen bir boşluk bırakır hem de
+satırın orada kesilmesini önler.</p>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="genel.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="önemli-yapılar.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="satır-ve-sayfa-kesme.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="aralıklar.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

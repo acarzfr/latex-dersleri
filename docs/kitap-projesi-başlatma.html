@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1.1 LaTeX Nedir? | LaTeX Dersleri</title>
+  <title>1.10 Kitap Projesi Başlatma | LaTeX Dersleri</title>
   <meta name="description" content="TeX/LaTeX’e dair bir iki kelam." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1.1 LaTeX Nedir? | LaTeX Dersleri" />
+  <meta property="og:title" content="1.10 Kitap Projesi Başlatma | LaTeX Dersleri" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://acarzfr.github.io/latex-dersleri/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="acarzfr/latex-dersleri" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1.1 LaTeX Nedir? | LaTeX Dersleri" />
+  <meta name="twitter:title" content="1.10 Kitap Projesi Başlatma | LaTeX Dersleri" />
   
   <meta name="twitter:description" content="TeX/LaTeX’e dair bir iki kelam." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="genel.html"/>
-<link rel="next" href="önemli-yapılar.html"/>
+<link rel="prev" href="bölümleme-ve-içindekiler-tablosu.html"/>
+<link rel="next" href="varsayılan-sayfa-düzenini-değiştirme.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -231,41 +231,91 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="latex-nedir" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> LaTeX Nedir?</h2>
-<p>Önce TeX’le başlayalım. TeX, 1978’den
-itibaren <a href="https://www-cs-faculty.stanford.edu/~knuth/">Donald Knuth</a> tarafından belgelerin bilgisayarda dizilmesi
-için geliştirdiği bir dizgi sistemidir.
-LaTeX ise TeX’in kullanımını kolaylaştırmak için 1984 yılında <a href="http://www.lamport.org/">Leslie
-Lamport</a> tarafından tasarlanmış bir makro pakettir.</p>
-<p>LaTeX, genelde WYSIWYG<a href="kaynaklar.html#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> editörleriyle karşılaştırılır. WYSIWYG, Microsoft
-Word, Libreoffice Writer gibi kelime işlemcilere ya da Adobe Indesign
-gibi programlara verilen genel bir isimdir. Hepsinin ortak özelliği,
-girdi ile çıktının aynı anda ve birlikte görünmesidir.</p>
-<p>Bir metnin genel görünümü ve okunabilirliği, metnin nasıl
-hizalandığından ve kesildiğinden büyük ölçüde etkilenir. LaTeX, tüm
-paragraf için hizalamayı ve kesmeleri optimize eden son derece gelişmiş
-TeX algoritmalarını kullanır. Kelime işlemciler ve diğer programlar,
-satır başına çalıştıkları için oldukça yetersiz kalırlar. Bu, diğer
-şeylerin yanı sıra düzensiz aralıklara ve birçok kısa çizgiye sebep
-olur. Sonuçları görmeniz için Microsoft Word 2008 (Mac), Adobe InDesign
-CS4 ve LaTeX’le dizilmiş bir metni <a href="http://www.rtznet.nl/zink/comparison.pdf">şuradan</a> inceleyebilirsiniz.</p>
-<p>Sonuç, LaTeX’in diğer programların her ikisinden de üstün olduğunu
-açıkça gösterir: iki kat daha az tireleme kullanır ve yine de sözcük
-aralığındaki varyasyon, Word veya InDesign’dan belirgin şekilde daha
-azdır. LaTeX’te çok büyük sözcük aralığı içeren satırlar oluşmaz.</p>
-<p>LaTeX’de girdi ve çıktı ekranı farklıdır ve
-çıktıyı görmek için girdinin derleme işleminden geçmesi gerekir. Ayrıca
-birçok şey için WYSIWYG editörlerinde olmayan yapılar vardır. Şimdi, bu
-yapıların ne oldukları ve ne işe yaradıklarını açıklayalım.</p>
+<div id="kitap-projesi-başlatma" class="section level2" number="1.10">
+<h2><span class="header-section-number">1.10</span> Kitap Projesi Başlatma</h2>
+<p>LaTeX’de kitap yazmaya başlamak için belge sınıfı <code>book</code> seçilir. Bunun
+dışında kitapların <em>Baş</em>, <em>Gövde</em> ve <em>Son</em> kısımları olur. Bu kısımların
+nerede başlayıp nerede bittikleri aşağıdaki komutlarla LaTeX’e
+bildirilir:</p>
+<ul>
+<li><code>\frontmatter</code> (baş) komutu<code>\begin{document}</code> komutundan hemen
+sonra verilir. Bu komut, baş taraftaki İçindekiler, Önsöz gibi
+kısımların sayfa numaralandırmasını Roma rakamıyla yapar. Ayrıca bu
+kısımda bölüm komutları (<code>*</code>) işareti olmadan verildiğinde (örneğin
+<code>\chapter{Önsöz}</code>) bunlara numara verilmez ancak İçindekiler
+tablosuna yazılırlar.</li>
+<li><code>\mainmatter</code> (gövde) komutu kitabın ilk bölüm başlığından hemen
+önce verilmelidir. Buradan itibaren sayfa numaralandırmasını yeniden
+başlatıp Arap rakamlarına geçer.</li>
+<li><code>\appendix</code> (ekler) komutu kitabınızın eklerindeki bölümleri
+harflerle numaralandırır (Ek A, Ek B, … ).</li>
+<li><code>\backmatter</code> (son) komutu kitabınızda her şey bittikten sonra
+verilir fakat bilinen belge sınıflarında görünürde hiçbir etkisi
+yoktur.</li>
+</ul>
+<p>Kitap gibi büyük hacimli belgelerle çalışırken kaynak dosyanızı
+parçalara ayırmak gerekebilir. LaTeX bunun için size iki komutla
+yardımcı olur: <code>\input</code> ve <code>\include</code>. İkisi arasındaki fark <code>\include</code>
+komutuyla eklediğiniz metin yeni bir sayfadan başlayarak dizilir.</p>
+<p>Bu komutların zorunlu değişkeni eklemek istediğiniz dosyanın adıdır.
+Örneğin kaynak dosyanızla aynı dizinde yer alan <code>dosya1.tex</code> dosyasını
+eklemek için</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="kitap-projesi-başlatma.html#cb30-1" aria-hidden="true" tabindex="-1"></a>\include{dosya1}</span></code></pre></div>
+<p>komutunu kullanırsınız. Eğer dosya uzantısı <code>.tex</code> değilse (örneğin
+<code>.txt</code> olsun) o zaman dosya adını uzantısıyla yazmanız gerekir:</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="kitap-projesi-başlatma.html#cb31-1" aria-hidden="true" tabindex="-1"></a>\include{dosya1.txt}</span></code></pre></div>
+<p>Ayrıca, hangi dosyaların eklenebileceğini LaTeX’e bildiren bir komut
+vardır: <code>\includeonly</code>. Bu komut, sadece sahanlığa yazılabilir. Komutun
+zorunlu değişkeninde eklenebilecek dosyalar aralarına virgül koyularak
+(ve boşluk bırakılmadan) listelenir:</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="kitap-projesi-başlatma.html#cb32-1" aria-hidden="true" tabindex="-1"></a>\includeonly{dosya1,dosya2,dosya3,...}</span></code></pre></div>
+<p>Böyle bir liste oluşturulduktan sonra bu listede olmayan bir dosya artık
+<code>\include</code> komutuyla kaynak dosyaya eklenemez.</p>
+<p><code>\input</code> komutu sahanlıkta da kullanılabilir. Örneğin, sahanlığınızı tek
+bir dosyaya yazıp, bu dosyayı bu komutla sahanlığa ekleyebilirsiniz.</p>
+<p>Daha düzenli çalışmak adına kaynak dosyanızın olduğu dizini de
+düzenleyebilirsiniz.</p>
+<div class="figure">
+<img src="images/dizin.png" alt="" />
+<p class="caption">Kaynak dosyanın olduğu dizinin
+düzenlenmesi</p>
+</div>
+<p>Bu şekilde bir düzenleme yaptığınızda <code>\input</code> ya da <code>\include</code>
+komutlarıyla dosya eklemek istediğinizde dosyanın bulunduğu dizini de
+göstermeniz gerekir.</p>
+<p>Burada kaynak dosya <code>kitap.tex</code>’dir. Bu kaynak dosyaya <code>bolum1.tex</code>
+dosyasını eklemek istediğinizde komutu</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="kitap-projesi-başlatma.html#cb33-1" aria-hidden="true" tabindex="-1"></a>\input{Bolumler<span class="sc">/</span>bolum1}</span></code></pre></div>
+<p>şeklinde verirsiniz. Bu sayede kaynak dosyanızın olduğu dizinde (Örnek
+Kitap) sadece <code>kitap</code> ile başlayan dosyalar olur. Diğer dosyalar alt
+dizinde (Bolumler) yer alır.</p>
+<p>Dikkat edilirse “Örnek Kitap” dışında, “Bolumler” alt dizini ve tüm
+dosya adları Türkçe karakter ya da boşluk içermez.</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="kitap-projesi-başlatma.html#cb34-1" aria-hidden="true" tabindex="-1"></a>\documentclass[a4paper,12pt]{book}</span>
+<span id="cb34-2"><a href="kitap-projesi-başlatma.html#cb34-2" aria-hidden="true" tabindex="-1"></a>\usepackage[T1]{fontenc}</span>
+<span id="cb34-3"><a href="kitap-projesi-başlatma.html#cb34-3" aria-hidden="true" tabindex="-1"></a>\usepackage[turkish]{babel}</span>
+<span id="cb34-4"><a href="kitap-projesi-başlatma.html#cb34-4" aria-hidden="true" tabindex="-1"></a>\title{Örnek Kitap}</span>
+<span id="cb34-5"><a href="kitap-projesi-başlatma.html#cb34-5" aria-hidden="true" tabindex="-1"></a>\author{\TeX dizgi}</span>
+<span id="cb34-6"><a href="kitap-projesi-başlatma.html#cb34-6" aria-hidden="true" tabindex="-1"></a>\begin{document}</span>
+<span id="cb34-7"><a href="kitap-projesi-başlatma.html#cb34-7" aria-hidden="true" tabindex="-1"></a>\frontmatter</span>
+<span id="cb34-8"><a href="kitap-projesi-başlatma.html#cb34-8" aria-hidden="true" tabindex="-1"></a>\maketitle</span>
+<span id="cb34-9"><a href="kitap-projesi-başlatma.html#cb34-9" aria-hidden="true" tabindex="-1"></a>\tableofcontents</span>
+<span id="cb34-10"><a href="kitap-projesi-başlatma.html#cb34-10" aria-hidden="true" tabindex="-1"></a>\input{Bolumler<span class="sc">/</span>onsoz}</span>
+<span id="cb34-11"><a href="kitap-projesi-başlatma.html#cb34-11" aria-hidden="true" tabindex="-1"></a>\mainmatter</span>
+<span id="cb34-12"><a href="kitap-projesi-başlatma.html#cb34-12" aria-hidden="true" tabindex="-1"></a>\input{Bolumler<span class="sc">/</span>bolum1}</span>
+<span id="cb34-13"><a href="kitap-projesi-başlatma.html#cb34-13" aria-hidden="true" tabindex="-1"></a>\input{Bolumler<span class="sc">/</span>bolum2}</span>
+<span id="cb34-14"><a href="kitap-projesi-başlatma.html#cb34-14" aria-hidden="true" tabindex="-1"></a>\appendix</span>
+<span id="cb34-15"><a href="kitap-projesi-başlatma.html#cb34-15" aria-hidden="true" tabindex="-1"></a>\input{Bolumler<span class="sc">/</span>ek1}</span>
+<span id="cb34-16"><a href="kitap-projesi-başlatma.html#cb34-16" aria-hidden="true" tabindex="-1"></a>\backmatter</span>
+<span id="cb34-17"><a href="kitap-projesi-başlatma.html#cb34-17" aria-hidden="true" tabindex="-1"></a>\end{document}</span></code></pre></div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="genel.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="önemli-yapılar.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="bölümleme-ve-içindekiler-tablosu.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="varsayılan-sayfa-düzenini-değiştirme.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

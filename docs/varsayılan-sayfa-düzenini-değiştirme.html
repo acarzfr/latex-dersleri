@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1.1 LaTeX Nedir? | LaTeX Dersleri</title>
+  <title>1.11 Varsayılan Sayfa Düzenini Değiştirme | LaTeX Dersleri</title>
   <meta name="description" content="TeX/LaTeX’e dair bir iki kelam." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1.1 LaTeX Nedir? | LaTeX Dersleri" />
+  <meta property="og:title" content="1.11 Varsayılan Sayfa Düzenini Değiştirme | LaTeX Dersleri" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://acarzfr.github.io/latex-dersleri/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="acarzfr/latex-dersleri" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1.1 LaTeX Nedir? | LaTeX Dersleri" />
+  <meta name="twitter:title" content="1.11 Varsayılan Sayfa Düzenini Değiştirme | LaTeX Dersleri" />
   
   <meta name="twitter:description" content="TeX/LaTeX’e dair bir iki kelam." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="genel.html"/>
-<link rel="next" href="önemli-yapılar.html"/>
+<link rel="prev" href="kitap-projesi-başlatma.html"/>
+<link rel="next" href="satır-ve-sayfa-kesme.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -231,41 +231,72 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="latex-nedir" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> LaTeX Nedir?</h2>
-<p>Önce TeX’le başlayalım. TeX, 1978’den
-itibaren <a href="https://www-cs-faculty.stanford.edu/~knuth/">Donald Knuth</a> tarafından belgelerin bilgisayarda dizilmesi
-için geliştirdiği bir dizgi sistemidir.
-LaTeX ise TeX’in kullanımını kolaylaştırmak için 1984 yılında <a href="http://www.lamport.org/">Leslie
-Lamport</a> tarafından tasarlanmış bir makro pakettir.</p>
-<p>LaTeX, genelde WYSIWYG<a href="kaynaklar.html#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> editörleriyle karşılaştırılır. WYSIWYG, Microsoft
-Word, Libreoffice Writer gibi kelime işlemcilere ya da Adobe Indesign
-gibi programlara verilen genel bir isimdir. Hepsinin ortak özelliği,
-girdi ile çıktının aynı anda ve birlikte görünmesidir.</p>
-<p>Bir metnin genel görünümü ve okunabilirliği, metnin nasıl
-hizalandığından ve kesildiğinden büyük ölçüde etkilenir. LaTeX, tüm
-paragraf için hizalamayı ve kesmeleri optimize eden son derece gelişmiş
-TeX algoritmalarını kullanır. Kelime işlemciler ve diğer programlar,
-satır başına çalıştıkları için oldukça yetersiz kalırlar. Bu, diğer
-şeylerin yanı sıra düzensiz aralıklara ve birçok kısa çizgiye sebep
-olur. Sonuçları görmeniz için Microsoft Word 2008 (Mac), Adobe InDesign
-CS4 ve LaTeX’le dizilmiş bir metni <a href="http://www.rtznet.nl/zink/comparison.pdf">şuradan</a> inceleyebilirsiniz.</p>
-<p>Sonuç, LaTeX’in diğer programların her ikisinden de üstün olduğunu
-açıkça gösterir: iki kat daha az tireleme kullanır ve yine de sözcük
-aralığındaki varyasyon, Word veya InDesign’dan belirgin şekilde daha
-azdır. LaTeX’te çok büyük sözcük aralığı içeren satırlar oluşmaz.</p>
-<p>LaTeX’de girdi ve çıktı ekranı farklıdır ve
-çıktıyı görmek için girdinin derleme işleminden geçmesi gerekir. Ayrıca
-birçok şey için WYSIWYG editörlerinde olmayan yapılar vardır. Şimdi, bu
-yapıların ne oldukları ve ne işe yaradıklarını açıklayalım.</p>
+<div id="varsayılan-sayfa-düzenini-değiştirme" class="section level2" number="1.11">
+<h2><span class="header-section-number">1.11</span> Varsayılan Sayfa Düzenini Değiştirme</h2>
+<p>LaTeX’de varsayılan kağıt boyutunun <code>letterpaper</code> olduğunu Bölün <a href="belgesinifi.html#belgesinifi">1.5</a>’de ifade etmiştik. Ayrıca aynı yazıda başka bir kağıt boyutunun
+nasıl seçileceğine de yer vermiştik. Şimdi ise hem sayfamızın kenar
+boşluklarının nasıl ayarlanacağından hem de ön tanımlı olmayan, tamamen
+keyfi bir sayfa boyutunun nasıl belirleneceğinden bahsedelim.</p>
+<p>Bu tür sayfa düzenlemeleri için LaTeX’de
+<a href="http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/geometry/geometry.pdf">geometry</a> paketi kullanılır. Öncelikle paketi</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="varsayılan-sayfa-düzenini-değiştirme.html#cb35-1" aria-hidden="true" tabindex="-1"></a>\usepackage{geometry}</span></code></pre></div>
+<p>komutuyla sahanlığa ekleyin. Ardından paket seçeneklerinde aşağıdaki
+tanımlamalarla sayfanın düzenini değiştirebilirsiniz:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Tanım</th>
+<th align="left">Değer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><code>top</code></td>
+<td align="left">üst boșluk</td>
+</tr>
+<tr class="even">
+<td align="left"><code>bottom</code></td>
+<td align="left">alt boșluk</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>left</code></td>
+<td align="left">sol boșluk</td>
+</tr>
+<tr class="even">
+<td align="left"><code>right</code></td>
+<td align="left">sağ boșluk</td>
+</tr>
+<tr class="odd">
+<td align="left"><code>paperwidht</code></td>
+<td align="left">sayfa genișliği</td>
+</tr>
+<tr class="even">
+<td align="left"><code>paperheight</code></td>
+<td align="left">sayfa yüksekliği</td>
+</tr>
+</tbody>
+</table>
+<p>Örneğin sahanlıkta</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="varsayılan-sayfa-düzenini-değiştirme.html#cb36-1" aria-hidden="true" tabindex="-1"></a>\usepackage[paperwidth<span class="ot">=</span>175mm,paperheight<span class="ot">=</span>255mm,top<span class="ot">=</span>2cm,bottom<span class="ot">=</span>2cm,left<span class="ot">=</span><span class="fl">2.5</span>cm,right<span class="ot">=</span><span class="fl">2.5</span>cm]{geometry}</span></code></pre></div>
+<p>komutunu verdiğinizde boyutu <span class="math inline">\(175\times 255\)</span> mm, üst ve alt boşluğu
+<span class="math inline">\(2\)</span> cm, sol ve sağ boşluğu <span class="math inline">\(2.5\)</span> cm olan bir sayfa düzeni
+oluşturursunuz. Dilerseniz <code>paperwidth</code> ve<code>paperheight</code> tanımlamalarını
+yerine, örneğin <code>a4paper</code> yazarak sadece kenar boşluklarla ilgili
+tanımlamaları yapabilirsiniz.</p>
+<blockquote>
+<p>LaTeX’de milimetre (mm) ve santimetre (cm) dışında inç (in), punto
+(pt), em ve ex gibi ölçü birimleri de vardır. Bunlara ileride
+değinilecektir. Ayrıca yine ileride daha ayrıntılı sayfa düzeni
+oluşturmaktan da bahsedeceğiz. Bu aşamada bu kadarı yeterli olacaktır.</p>
+</blockquote>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="genel.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="önemli-yapılar.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="kitap-projesi-başlatma.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="satır-ve-sayfa-kesme.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

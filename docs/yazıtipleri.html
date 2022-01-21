@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>1.17 Yazıtipleri | LaTeX Dersleri</title>
+  <meta name="description" content="TeX/LaTeX’e dair bir iki kelam." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="1.17 Yazıtipleri | LaTeX Dersleri" />
+  <meta property="og:type" content="book" />
+  <meta property="og:url" content="https://acarzfr.github.io/latex-dersleri/" />
+  
+  <meta property="og:description" content="TeX/LaTeX’e dair bir iki kelam." />
+  <meta name="github-repo" content="acarzfr/latex-dersleri" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1.17 Yazıtipleri | LaTeX Dersleri" />
+  
+  <meta name="twitter:description" content="TeX/LaTeX’e dair bir iki kelam." />
+  
+
+<meta name="author" content="Zafer Acar" />
+
+
+<meta name="date" content="2022-01-21" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="listeleme.html"/>
+<link rel="next" href="kaynaklar.html"/>
+<script src="libs/header-attrs-2.11/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">LaTeX Dersleri</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Önsöz</a></li>
+<li class="chapter" data-level="1" data-path="genel.html"><a href="genel.html"><i class="fa fa-check"></i><b>1</b> Genel</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="latex-nedir.html"><a href="latex-nedir.html"><i class="fa fa-check"></i><b>1.1</b> LaTeX Nedir?</a></li>
+<li class="chapter" data-level="1.2" data-path="önemli-yapılar.html"><a href="önemli-yapılar.html"><i class="fa fa-check"></i><b>1.2</b> Önemli Yapılar</a>
+<ul>
+<li class="chapter" data-level="1.2.1" data-path="önemli-yapılar.html"><a href="önemli-yapılar.html#komutlar"><i class="fa fa-check"></i><b>1.2.1</b> Komutlar</a></li>
+<li class="chapter" data-level="1.2.2" data-path="önemli-yapılar.html"><a href="önemli-yapılar.html#paketler"><i class="fa fa-check"></i><b>1.2.2</b> Paketler</a></li>
+<li class="chapter" data-level="1.2.3" data-path="önemli-yapılar.html"><a href="önemli-yapılar.html#ortamlar"><i class="fa fa-check"></i><b>1.2.3</b> Ortamlar</a></li>
+<li class="chapter" data-level="1.2.4" data-path="önemli-yapılar.html"><a href="önemli-yapılar.html#gruplar"><i class="fa fa-check"></i><b>1.2.4</b> Gruplar</a></li>
+<li class="chapter" data-level="1.2.5" data-path="önemli-yapılar.html"><a href="önemli-yapılar.html#bosluk"><i class="fa fa-check"></i><b>1.2.5</b> Boşluklar</a></li>
+<li class="chapter" data-level="1.2.6" data-path="önemli-yapılar.html"><a href="önemli-yapılar.html#özel-amaçlı-karakterler"><i class="fa fa-check"></i><b>1.2.6</b> Özel amaçlı karakterler</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="kurulum.html"><a href="kurulum.html"><i class="fa fa-check"></i><b>1.3</b> Kurulum</a>
+<ul>
+<li class="chapter" data-level="1.3.1" data-path="kurulum.html"><a href="kurulum.html#gnulinux"><i class="fa fa-check"></i><b>1.3.1</b> GNU/Linux</a></li>
+<li class="chapter" data-level="1.3.2" data-path="kurulum.html"><a href="kurulum.html#mac-os"><i class="fa fa-check"></i><b>1.3.2</b> Mac OS</a></li>
+<li class="chapter" data-level="1.3.3" data-path="kurulum.html"><a href="kurulum.html#windows"><i class="fa fa-check"></i><b>1.3.3</b> Windows</a></li>
+<li class="chapter" data-level="1.3.4" data-path="kurulum.html"><a href="kurulum.html#latex-editörleri"><i class="fa fa-check"></i><b>1.3.4</b> LaTeX Editörleri</a></li>
+<li class="chapter" data-level="1.3.5" data-path="kurulum.html"><a href="kurulum.html#çevrimiçi-editörler"><i class="fa fa-check"></i><b>1.3.5</b> Çevrimiçi Editörler</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="tipik.html"><a href="tipik.html"><i class="fa fa-check"></i><b>1.4</b> Tipik Bir Belge Yazımı</a></li>
+<li class="chapter" data-level="1.5" data-path="belgesinifi.html"><a href="belgesinifi.html"><i class="fa fa-check"></i><b>1.5</b> Belge Sınıfları ve Seçenekleri</a></li>
+<li class="chapter" data-level="1.6" data-path="turkce.html"><a href="turkce.html"><i class="fa fa-check"></i><b>1.6</b> Türkçe Dil Ayarları ve Çoklu Dil Kullanımı</a></li>
+<li class="chapter" data-level="1.7" data-path="heceleme.html"><a href="heceleme.html"><i class="fa fa-check"></i><b>1.7</b> Heceleme</a></li>
+<li class="chapter" data-level="1.8" data-path="belgeye-başlık-oluşturma.html"><a href="belgeye-başlık-oluşturma.html"><i class="fa fa-check"></i><b>1.8</b> Belgeye Başlık Oluşturma</a></li>
+<li class="chapter" data-level="1.9" data-path="bölümleme-ve-içindekiler-tablosu.html"><a href="bölümleme-ve-içindekiler-tablosu.html"><i class="fa fa-check"></i><b>1.9</b> Bölümleme ve İçindekiler Tablosu</a></li>
+<li class="chapter" data-level="1.10" data-path="kitap-projesi-başlatma.html"><a href="kitap-projesi-başlatma.html"><i class="fa fa-check"></i><b>1.10</b> Kitap Projesi Başlatma</a></li>
+<li class="chapter" data-level="1.11" data-path="varsayılan-sayfa-düzenini-değiştirme.html"><a href="varsayılan-sayfa-düzenini-değiştirme.html"><i class="fa fa-check"></i><b>1.11</b> Varsayılan Sayfa Düzenini Değiştirme</a></li>
+<li class="chapter" data-level="1.12" data-path="satır-ve-sayfa-kesme.html"><a href="satır-ve-sayfa-kesme.html"><i class="fa fa-check"></i><b>1.12</b> Satır ve Sayfa Kesme</a></li>
+<li class="chapter" data-level="1.13" data-path="paragraflar-ve-cümle-sonları.html"><a href="paragraflar-ve-cümle-sonları.html"><i class="fa fa-check"></i><b>1.13</b> Paragraflar ve Cümle Sonları</a></li>
+<li class="chapter" data-level="1.14" data-path="aralıklar.html"><a href="aralıklar.html"><i class="fa fa-check"></i><b>1.14</b> Aralıklar</a>
+<ul>
+<li class="chapter" data-level="1.14.1" data-path="aralıklar.html"><a href="aralıklar.html#dikey-aralıklar"><i class="fa fa-check"></i><b>1.14.1</b> Dikey aralıklar</a></li>
+<li class="chapter" data-level="1.14.2" data-path="aralıklar.html"><a href="aralıklar.html#yatay-aralıklar"><i class="fa fa-check"></i><b>1.14.2</b> Yatay aralıklar</a></li>
+</ul></li>
+<li class="chapter" data-level="1.15" data-path="metni-hizalamak-ve-sütunlara-bölmek.html"><a href="metni-hizalamak-ve-sütunlara-bölmek.html"><i class="fa fa-check"></i><b>1.15</b> Metni Hizalamak ve Sütunlara Bölmek</a>
+<ul>
+<li class="chapter" data-level="1.15.1" data-path="metni-hizalamak-ve-sütunlara-bölmek.html"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#hizalama"><i class="fa fa-check"></i><b>1.15.1</b> Hizalama</a></li>
+<li class="chapter" data-level="1.15.2" data-path="metni-hizalamak-ve-sütunlara-bölmek.html"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#sütunlara-bölmek"><i class="fa fa-check"></i><b>1.15.2</b> Sütunlara bölmek</a></li>
+</ul></li>
+<li class="chapter" data-level="1.16" data-path="listeleme.html"><a href="listeleme.html"><i class="fa fa-check"></i><b>1.16</b> Listeleme</a>
+<ul>
+<li class="chapter" data-level="1.16.1" data-path="listeleme.html"><a href="listeleme.html#temel-listeler"><i class="fa fa-check"></i><b>1.16.1</b> Temel listeler</a></li>
+<li class="chapter" data-level="1.16.2" data-path="listeleme.html"><a href="listeleme.html#listeleri-özelleştirmek"><i class="fa fa-check"></i><b>1.16.2</b> Listeleri özelleştirmek</a></li>
+</ul></li>
+<li class="chapter" data-level="1.17" data-path="yazıtipleri.html"><a href="yazıtipleri.html"><i class="fa fa-check"></i><b>1.17</b> Yazıtipleri</a>
+<ul>
+<li class="chapter" data-level="1.17.1" data-path="yazıtipleri.html"><a href="yazıtipleri.html#giriş"><i class="fa fa-check"></i><b>1.17.1</b> Giriş</a></li>
+<li class="chapter" data-level="1.17.2" data-path="yazıtipleri.html"><a href="yazıtipleri.html#aile"><i class="fa fa-check"></i><b>1.17.2</b> Aile</a></li>
+<li class="chapter" data-level="1.17.3" data-path="yazıtipleri.html"><a href="yazıtipleri.html#biçem"><i class="fa fa-check"></i><b>1.17.3</b> Biçem</a></li>
+<li class="chapter" data-level="1.17.4" data-path="yazıtipleri.html"><a href="yazıtipleri.html#boyut"><i class="fa fa-check"></i><b>1.17.4</b> Boyut</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="kaynaklar.html"><a href="kaynaklar.html"><i class="fa fa-check"></i>Kaynaklar</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">LaTeX Dersleri</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="yazıtipleri" class="section level2" number="1.17">
+<h2><span class="header-section-number">1.17</span> Yazıtipleri</h2>
+<div id="giriş" class="section level3" number="1.17.1">
+<h3><span class="header-section-number">1.17.1</span> Giriş</h3>
+<p>Yazıtipi konusu <em>kodlama</em>, <em>aile</em>, <em>biçem</em> ve <em>boyut</em> olmak üzere dört
+alt başlıkta incelenebilir. Kodlama çok teknik bir konu olup amacımız
+dışındadır, ancak sadece şunu belirtelim ki kodlama işini LaTeX’de Bölüm <a href="turkce.html#turkce">1.6</a>’de bahsettiğimiz <code>fontenc</code> paketi üstlenir. Bu paketi belgenize eklemiş
+olduğunuzu varsayarak devam edeceğiz.</p>
+<p>Bu yazıda anlatacağımız şeylerden bazıları bir bakıma LaTeX’in
+felsefesine aykırı olacak. Nitekim LaTeX, <code>\documentclass</code> komutunda
+belirtilen ana yazıtipi boyutuna göre, dipnot ya da başlık gibi ana
+yazıtipi boyutundan farklı dizilen şeylerin boyutunu olabilecek en güzel
+ve doğru şekilde ayarlar. O yüzden bu konudaki klasik uyarıyı biz de
+yineleyelim:</p>
+<p><img src="images/uyari.png" /></p>
+</div>
+<div id="aile" class="section level3" number="1.17.2">
+<h3><span class="header-section-number">1.17.2</span> Aile</h3>
+<p>Yazıtipleri Roman ya da Serif, Sans Serif ve Typewriter olmak üzere üç
+ailede toplanabilir. Roman ailesi tırnaklı ya da süslü diyebileceğimiz
+yazıtiplerini, Sans Serif ailesi tırnaksız ya da süssüz yazıtiplerini ve
+Typewriter ailesi de daktilo yazıtiplerini barındırır.</p>
+<p>LaTeX’de her belge sınıfı varsayılan yazıtipi ailesiyle gelir. <code>beamer</code>
+sınıfının varsayılan ailesi Sans Serif olup, diğer sınıfların varsayılan
+ailesi Roman’dır.</p>
+<p>Varsayılan aile <code>\familydefault</code> komutunda saklı olup, <code>\renewcommand</code>
+komutuyla değiştirilebilir.</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode numberSource r numberLines"><code class="sourceCode r"><span id="cb54-1"><a href="yazıtipleri.html#cb54-1"></a>\renewcommand{\familydefault}{\rmdefault}  </span>
+<span id="cb54-2"><a href="yazıtipleri.html#cb54-2"></a>\renewcommand{\familydefault}{\sfdefault}  </span>
+<span id="cb54-3"><a href="yazıtipleri.html#cb54-3"></a>\renewcommand{\familydefault}{\ttdefault} </span></code></pre></div>
+<p>Birinci komut sahanlığa yazılırsa, belge sınıfından bağımsız olarak
+varsayılan aile Roman, ikincisi yazılırsa Sans Serif, üçüncüsü yazılırsa
+Typewriter olur.</p>
+<p>Eğer belgenin tamamının değilde bazı kelime ya da cümlelerin farklı
+aileden yazılması istenirse – ki genelde böyle kullanılır – aşağıdaki
+komut ya da bildirimler kullanılır.</p>
+<div class="figure">
+<img src="images/yazitipi.png" alt="" />
+<p class="caption">Yazıtipi
+Aileleri</p>
+</div>
+<p>LaTeX’de varsayılan yazıtipi Computer Modern olup, ek bir pakete ihtiyaç
+duymadan kullanılabilecek yazıtipleri aşağıda gösterilmiştir.</p>
+<div class="figure">
+<img src="images/yazitipi2.png" alt="" />
+<p class="caption">Roman
+Yazıtipleri</p>
+</div>
+<div class="figure">
+<img src="images/yazitipi3.png" alt="" />
+<p class="caption">Sans Serif
+Yazıtipleri</p>
+</div>
+<div class="figure">
+<img src="images/yazitipi4.png" alt="" />
+<p class="caption">Typewriter Yazıtipleri<br />
+</p>
+</div>
+<div class="figure">
+<img src="images/yazitipi5.png" alt="" />
+<p class="caption">Elyazısı</p>
+</div>
+<p>Varsayılan yazıtipleri <code>\rmdefault</code>, <code>\sfdefault</code> ve <code>\ttdefault</code>
+komutlarında saklı olup, <code>\renewcommand</code> komutuyla değiştirilebilirler.</p>
+<div class="sourceCode" id="cb55"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb55-1"><a href="yazıtipleri.html#cb55-1" aria-hidden="true" tabindex="-1"></a>\renewcommand{\rmdefault}{<span class="sc">&lt;</span>kısaltma<span class="sc">&gt;</span>}</span></code></pre></div>
+<p>Burada <code>&lt;kısaltma&gt;</code>, tablolarda belirtilen kısaltmalardır. Örneğin</p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb56-1"><a href="yazıtipleri.html#cb56-1" aria-hidden="true" tabindex="-1"></a>\renewcommand{\rmdefault}{put}</span></code></pre></div>
+<p>komutu sahanlığa yazıldığında, eğer varsayılan aile Roman ise belgenizin
+ana yazıtipi Utopia olur.</p>
+<p>Eğer tüm belgenin değil, bazı kelime ya da cümlelerin farklı yazıtipinde
+yazılması istenirse <code>\fontfamily</code> komutuyla <code>\selectfont</code> komutu
+birlikte aşağıdaki şekilde kullanılır.</p>
+<div class="sourceCode" id="cb57"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb57-1"><a href="yazıtipleri.html#cb57-1" aria-hidden="true" tabindex="-1"></a>{\fontfamily{pbk}\selectfont Bookman yazıtipi.} Ana yazıtipi.</span></code></pre></div>
+<p>Varsayılan yazıtipi paket ekleyerek de değiştirilebilir. Bu hem
+pratiktir hem de bazı paketler matematiksel ifadelerin yazıtipine de
+etki eder. Bu paketlerin bazıları tabloda gösterilmiştir.</p>
+<div class="figure">
+<img src="images/yazitipi6.png" alt="" />
+<p class="caption">Yazıtipi değiştiren
+paketler</p>
+</div>
+<p>Bunların dışında beğenebileceğiniz birçok yazıtipini <a href="https://tug.org/FontCatalogue/">LaTeX
+Yazıtipi
+Kataloğu</a>’nda bulabilirsiniz.</p>
+</div>
+<div id="biçem" class="section level3" number="1.17.3">
+<h3><span class="header-section-number">1.17.3</span> Biçem</h3>
+<p>Metin içinde kelimeleri bazen italik bazen de kalın dizmek
+isteyebilirsiniz. Bu değişimler aşağıdaki tablodaki komut ya da
+bildirimlerle yapılır.</p>
+<div class="wp-block-image">
+<div class="figure">
+<img src="https://www.texdizgi.com/wp-content/uploads/2020/04/2020-04-26-19_24_54-Window.png" class="wp-image-2423" loading="lazy" srcset="https://www.texdizgi.com/wp-content/uploads/2020/04/2020-04-26-19_24_54-Window.png 564w, https://www.texdizgi.com/wp-content/uploads/2020/04/2020-04-26-19_24_54-Window-300x154.png 300w" sizes="(max-width: 564px) 100vw, 564px" width="564" height="289" alt="" />
+<p class="caption">Yazıtipi
+Biçemleri</p>
+</div>
+</div>
+<div class="wp-block-columns">
+<div class="wp-block-column is-vertically-aligned-center">
+<div class="wp-block-codemirror-blocks-code-block code-block">
+<pre class="CodeMirror" setting="{&quot;mode&quot;:&quot;stex&quot;,&quot;mime&quot;:&quot;text/x-latex&quot;,&quot;theme&quot;:&quot;monokai&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:false,&quot;language&quot;:&quot;LaTeX&quot;,&quot;modeName&quot;:&quot;stex&quot;}"><code>İzleyen kelime \textit{italik} 
+harflerle yazılmıştır.
+Metnin geri kalan kısmı
+normaldir.</code></pre>
+</div>
+</div>
+<div class="wp-block-column is-vertically-aligned-center">
+<p><a href="https://www.texdizgi.com/wp-content/uploads/2020/04/example-27.pdf" class="pdfemb-viewer" style="" data-width="max" data-height="max" toolbar="bottom" toolbar-fixed="off">example-27<br />
+</a></p>
+</div>
+</div>
+<div class="wp-block-columns">
+<div class="wp-block-column is-vertically-aligned-center">
+<div class="wp-block-codemirror-blocks-code-block code-block">
+<pre class="CodeMirror" setting="{&quot;mode&quot;:&quot;stex&quot;,&quot;mime&quot;:&quot;text/x-latex&quot;,&quot;theme&quot;:&quot;monokai&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:false,&quot;language&quot;:&quot;LaTeX&quot;,&quot;modeName&quot;:&quot;stex&quot;}"><code>İzleyen ifade {\slshape {\bfseries eğik kalındır}}.</code></pre>
+</div>
+</div>
+<div class="wp-block-column is-vertically-aligned-center">
+<p><a href="https://www.texdizgi.com/wp-content/uploads/2020/04/example-28.pdf" class="pdfemb-viewer" style="" data-width="max" data-height="max" toolbar="bottom" toolbar-fixed="off">example-28<br />
+</a></p>
+</div>
+</div>
+<div class="wp-block-columns">
+<div class="wp-block-column is-vertically-aligned-center">
+<div class="wp-block-codemirror-blocks-code-block code-block">
+<pre class="CodeMirror" setting="{&quot;mode&quot;:&quot;stex&quot;,&quot;mime&quot;:&quot;text/x-latex&quot;,&quot;theme&quot;:&quot;monokai&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:false,&quot;language&quot;:&quot;LaTeX&quot;,&quot;modeName&quot;:&quot;stex&quot;}"><code>İzleyen ifade \textit{\textbf{italik kalın}}, ama bu
+\textsc{\textit{büyük küçük harf değil}}.</code></pre>
+</div>
+</div>
+<div class="wp-block-column is-vertically-aligned-center">
+<p><a href="https://www.texdizgi.com/wp-content/uploads/2020/04/example-30.pdf" class="pdfemb-viewer" style="" data-width="max" data-height="max" toolbar="bottom" toolbar-fixed="off">example-30<br />
+</a></p>
+</div>
+</div>
+<p>Eğer vurgulu metin içinde bazı kelimeler tekrar vurgulanırsa bu
+kelimeler normale döner.</p>
+<div class="wp-block-columns">
+<div class="wp-block-column is-vertically-aligned-center">
+<div class="wp-block-codemirror-blocks-code-block code-block">
+<pre class="CodeMirror" setting="{&quot;mode&quot;:&quot;stex&quot;,&quot;mime&quot;:&quot;text/x-latex&quot;,&quot;theme&quot;:&quot;monokai&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:false,&quot;language&quot;:&quot;LaTeX&quot;,&quot;modeName&quot;:&quot;stex&quot;}"><code>{\em Vurgulu metinde tekrar
+vurgu yapılırsa {\em normale}
+döner.}</code></pre>
+</div>
+</div>
+<div class="wp-block-column is-vertically-aligned-center">
+<p><a href="https://www.texdizgi.com/wp-content/uploads/2020/04/example-32.pdf" class="pdfemb-viewer" style="" data-width="max" data-height="max" toolbar="bottom" toolbar-fixed="off">example-32<br />
+</a></p>
+</div>
+</div>
+<p>LaTeX’de vurgu yukarıdaki gibi yapılsa da altını çizerek vurgu yapmak
+isteyen olabilir. Kuyruklu harflerin altı çizildiğinde varsayılan satır
+aralığı değiştiğinden vurguyu bu şekilde yapmamanız daha doğrudur. Ancak
+illa altını çizmek isterseniz <code>\underline</code> komutunu kullanabilirsiniz.</p>
+<div class="wp-block-columns">
+<div class="wp-block-column is-vertically-aligned-center">
+<div class="wp-block-codemirror-blocks-code-block code-block">
+<pre class="CodeMirror" setting="{&quot;mode&quot;:&quot;stex&quot;,&quot;mime&quot;:&quot;text/x-latex&quot;,&quot;theme&quot;:&quot;monokai&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:false,&quot;language&quot;:&quot;LaTeX&quot;,&quot;modeName&quot;:&quot;stex&quot;}"><code>Altı \underline{çizili} 
+kelimeler satır aralığını
+bozar. İyisi mi altını çizmeyin.</code></pre>
+</div>
+</div>
+<div class="wp-block-column is-vertically-aligned-center">
+<p><a href="https://www.texdizgi.com/wp-content/uploads/2020/04/example-33.pdf" class="pdfemb-viewer" style="" data-width="max" data-height="max" toolbar="bottom" toolbar-fixed="off">example-33<br />
+</a></p>
+</div>
+</div>
+</div>
+<div id="boyut" class="section level3" number="1.17.4">
+<h3><span class="header-section-number">1.17.4</span> Boyut</h3>
+<p>Yazıtipi boyutunu değiştirmek için aşağıdaki bildirimler kullanılır.</p>
+<div class="wp-block-image">
+<div class="figure">
+<img src="https://www.texdizgi.com/wp-content/uploads/2020/04/2020-04-26-19_38_48-Window-1.png" class="wp-image-2440" loading="lazy" srcset="https://www.texdizgi.com/wp-content/uploads/2020/04/2020-04-26-19_38_48-Window-1.png 337w, https://www.texdizgi.com/wp-content/uploads/2020/04/2020-04-26-19_38_48-Window-1-261x300.png 261w" sizes="(max-width: 337px) 100vw, 337px" width="337" height="387" alt="" />
+<p class="caption">Yazıtipi Boyutu Değiştiren
+Bildirimler</p>
+</div>
+</div>
+<div class="wp-block-columns">
+<div class="wp-block-column is-vertically-aligned-center">
+<div class="wp-block-codemirror-blocks-code-block code-block">
+<pre class="CodeMirror" setting="{&quot;mode&quot;:&quot;stex&quot;,&quot;mime&quot;:&quot;text/x-latex&quot;,&quot;theme&quot;:&quot;monokai&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:false,&quot;language&quot;:&quot;LaTeX&quot;,&quot;modeName&quot;:&quot;stex&quot;}"><code>{\Large Büyük} ve
+{\scriptsize küçük} harfler.</code></pre>
+</div>
+</div>
+<div class="wp-block-column is-vertically-aligned-center">
+<p><a href="https://www.texdizgi.com/wp-content/uploads/2020/04/example-34.pdf" class="pdfemb-viewer" style="" data-width="max" data-height="max" toolbar="bottom" toolbar-fixed="off">example-34<br />
+</a></p>
+</div>
+</div>
+<p>Bu bildirimlerin aynı zamanda satır aralığını da değiştirdiğine dikkat
+edilmelidir. Aşağıdaki iki örnekte, <code>\par</code> (paragraf) komutunun
+verdiğiniz yere bağlı olarak farklı sonuçlar ürettiği gösterilmiştir.
+Doğru kullanım ikincisidir.</p>
+<div class="wp-block-columns">
+<div class="wp-block-column is-vertically-aligned-center">
+<div class="wp-block-codemirror-blocks-code-block code-block">
+<pre class="CodeMirror" setting="{&quot;mode&quot;:&quot;stex&quot;,&quot;mime&quot;:&quot;text/x-latex&quot;,&quot;theme&quot;:&quot;monokai&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:false,&quot;language&quot;:&quot;LaTeX&quot;,&quot;modeName&quot;:&quot;stex&quot;}"><code>{\large 
+Sokrates: Platon
+yalan söyleyecek
+aşağıdaki cümlede.}\par</code></pre>
+</div>
+</div>
+<div class="wp-block-column is-vertically-aligned-center">
+<p><a href="https://www.texdizgi.com/wp-content/uploads/2020/04/example-36.pdf" class="pdfemb-viewer" style="" data-width="max" data-height="max" toolbar="bottom" toolbar-fixed="off">example-36<br />
+</a></p>
+</div>
+</div>
+<div class="wp-block-columns">
+<div class="wp-block-column is-vertically-aligned-center">
+<div class="wp-block-codemirror-blocks-code-block code-block">
+<pre class="CodeMirror" setting="{&quot;mode&quot;:&quot;stex&quot;,&quot;mime&quot;:&quot;text/x-latex&quot;,&quot;theme&quot;:&quot;monokai&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:false,&quot;language&quot;:&quot;LaTeX&quot;,&quot;modeName&quot;:&quot;stex&quot;}"><code>{\large Platon: Sokrates
+doğruyu söyledi
+önceki cümlede.\par}</code></pre>
+</div>
+</div>
+<div class="wp-block-column is-vertically-aligned-center">
+<p><a href="https://www.texdizgi.com/wp-content/uploads/2020/04/example-38.pdf" class="pdfemb-viewer" style="" data-width="max" data-height="max" toolbar="bottom" toolbar-fixed="off">example-38<br />
+</a></p>
+</div>
+</div>
+<p>Bu bildirimlerin etkisi belge ana yazıtipi boyutuna bağımlıdır. Mutlak
+boyutlar aşağıdaki tabloda gösterilmiştir.</p>
+<div class="wp-block-image">
+<div class="figure">
+<img src="https://www.texdizgi.com/wp-content/uploads/2020/04/2020-04-26-19_48_34-Window.png" class="wp-image-2451" loading="lazy" srcset="https://www.texdizgi.com/wp-content/uploads/2020/04/2020-04-26-19_48_34-Window.png 674w, https://www.texdizgi.com/wp-content/uploads/2020/04/2020-04-26-19_48_34-Window-300x149.png 300w" sizes="(max-width: 674px) 100vw, 674px" width="674" height="334" alt="" />
+<p class="caption">Yazıtipleri Mutlak
+Boyutları</p>
+</div>
+</div>
+<p>Bağımsız bir yazıtipi boyutu elde etmek için <code>\fontsize</code> ile
+<code>\selectfont</code> komutları birlikte kullanılır.</p>
+<div class="wp-block-codemirror-blocks-code-block code-block">
+<pre class="CodeMirror" setting="{&quot;mode&quot;:&quot;stex&quot;,&quot;mime&quot;:&quot;text/x-latex&quot;,&quot;theme&quot;:&quot;monokai&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:false,&quot;language&quot;:&quot;LaTeX&quot;,&quot;modeName&quot;:&quot;stex&quot;}"><code>{\fontsize{&lt;boyut&gt;}{&lt;aralık&gt;}\selectfont &lt;metin&gt;}</code></pre>
+</div>
+<p>Buradaki <code>&lt;boyut&gt;</code> yazıtipi boyutu, <code>&lt;aralık&gt;</code> ise satır aralığıdır.
+İkisinin de ölçü birimi punto (pt) olup, temel kural, aralığın boyutun
+$ 1.2 $ katı olmasıdır.</p>
+<div class="wp-block-columns">
+<div class="wp-block-column is-vertically-aligned-center">
+<div class="wp-block-codemirror-blocks-code-block code-block">
+<pre class="CodeMirror" setting="{&quot;mode&quot;:&quot;stex&quot;,&quot;mime&quot;:&quot;text/x-latex&quot;,&quot;theme&quot;:&quot;monokai&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:false,&quot;language&quot;:&quot;LaTeX&quot;,&quot;modeName&quot;:&quot;stex&quot;}"><code>{\fontsize{30}{36}\selectfont
+Yazı tipi boyutu 30 punto,
+satır aralığı 36 punto.}</code></pre>
+</div>
+</div>
+<div class="wp-block-column is-vertically-aligned-center">
+<p><a href="https://www.texdizgi.com/wp-content/uploads/2020/04/example-39.pdf" class="pdfemb-viewer" style="" data-width="max" data-height="max" toolbar="bottom" toolbar-fixed="off">example-39<br />
+</a></p>
+</div>
+</div>
+<p>Ana yazıtipi boyutu <code>\normalsize</code> komutunda saklı olup, <code>\renewcommand</code>
+komutuyla değiştirilebilir.</p>
+<div class="wp-block-codemirror-blocks-code-block code-block">
+<pre class="CodeMirror" setting="{&quot;mode&quot;:&quot;stex&quot;,&quot;mime&quot;:&quot;text/x-latex&quot;,&quot;theme&quot;:&quot;monokai&quot;,&quot;lineNumbers&quot;:false,&quot;styleActiveLine&quot;:false,&quot;lineWrapping&quot;:false,&quot;readOnly&quot;:false,&quot;language&quot;:&quot;LaTeX&quot;,&quot;modeName&quot;:&quot;stex&quot;}"><code>\renewcommand{\normalsize}{\fontsize{30}{36}\selectfont}</code></pre>
+</div>
+<p>Yukarıdaki komutu sahanlığa yazarsanız belgenizin ana yazıtipi boyutu $
+30 $ pt, satır aralığı ise $ 36 $ pt olur.</p>
+
+</div>
+</div>
+<!-- </div> -->
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="listeleme.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="kaynaklar.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": true,
+"facebook": false,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["latex-dersleri.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

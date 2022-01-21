@@ -111,7 +111,7 @@ Gruplar, ortam benzeri yapılardır. Grup `\begingroup` komutuyla başlar
 ve `\endgroup` komutuyla biter. Grubun içinde kullanılan bir bildirim
 sadece gruba uygulanır.
 
-### Boşluklar
+### Boşluklar {#bosluk}
 
 LaTeX'de belgenizin metnini oluştururken ister klavyedeki Space, ister
 Tab tuşu ile boşluk bırakın, bu boşluklar LaTeX tarafından bir karakter
@@ -361,7 +361,7 @@ varsayılan olduğu ve kullanılabilir olup olmadığı gösterilmiştir.
 
   ----------------- -------- ---------- -----------
   **Seçenek**       `book`   `report`   `article`
-  **10pt**          1        1          1
+   **10pt**          1        1          1
   **letterpaper**   1        1          1
   **oneside**       1/2      1          1
   **twoside**       1        1/2        1/2
@@ -395,7 +395,7 @@ Başka bir örnek
 olsun. Bu örnekte kağıt boyutu A5, ana yazı büyüklüğü 11 punto olan bir
 kitap yazacağımızı ve kitabın iki sütun olarak dizilmesini söyledik.
 
-## Türkçe Dil Ayarları ve Çoklu Dil Kullanımı
+## Türkçe Dil Ayarları ve Çoklu Dil Kullanımı {#turkce}
 
 LaTeX'de Türkçe belgeler oluşturmak için öncelikle sahanlığa
 
@@ -689,3 +689,889 @@ komutunun verilmesi gerekir.
 \end{document}
 ```
 
+## Kitap Projesi Başlatma
+
+LaTeX'de kitap yazmaya başlamak için belge sınıfı `book` seçilir. Bunun
+dışında kitapların *Baş*, *Gövde* ve *Son* kısımları olur. Bu kısımların
+nerede başlayıp nerede bittikleri aşağıdaki komutlarla LaTeX'e
+bildirilir:
+
+-   `\frontmatter` (baş) komutu` \begin{document}` komutundan hemen
+    sonra verilir. Bu komut, baş taraftaki İçindekiler, Önsöz gibi
+    kısımların sayfa numaralandırmasını Roma rakamıyla yapar. Ayrıca bu
+    kısımda bölüm komutları (`*`) işareti olmadan verildiğinde (örneğin
+    `\chapter{Önsöz}`) bunlara numara verilmez ancak İçindekiler
+    tablosuna yazılırlar.
+-   `\mainmatter` (gövde) komutu kitabın ilk bölüm başlığından hemen
+    önce verilmelidir. Buradan itibaren sayfa numaralandırmasını yeniden
+    başlatıp Arap rakamlarına geçer.
+-   `\appendix` (ekler) komutu kitabınızın eklerindeki bölümleri
+    harflerle numaralandırır (Ek A, Ek B, ... ).
+-   `\backmatter` (son) komutu kitabınızda her şey bittikten sonra
+    verilir fakat bilinen belge sınıflarında görünürde hiçbir etkisi
+    yoktur.
+
+Kitap gibi büyük hacimli belgelerle çalışırken kaynak dosyanızı
+parçalara ayırmak gerekebilir. LaTeX bunun için size iki komutla
+yardımcı olur: `\input` ve `\include`. İkisi arasındaki fark `\include`
+komutuyla eklediğiniz metin yeni bir sayfadan başlayarak dizilir.
+
+Bu komutların zorunlu değişkeni eklemek istediğiniz dosyanın adıdır.
+Örneğin kaynak dosyanızla aynı dizinde yer alan `dosya1.tex` dosyasını
+eklemek için
+
+
+``` {r eval=FALSE}
+\include{dosya1}
+```
+
+
+komutunu kullanırsınız. Eğer dosya uzantısı `.tex` değilse (örneğin
+`.txt` olsun) o zaman dosya adını uzantısıyla yazmanız gerekir:
+
+
+``` {r eval=FALSE}
+\include{dosya1.txt}
+```
+
+
+Ayrıca, hangi dosyaların eklenebileceğini LaTeX'e bildiren bir komut
+vardır: `\includeonly`. Bu komut, sadece sahanlığa yazılabilir. Komutun
+zorunlu değişkeninde eklenebilecek dosyalar aralarına virgül koyularak
+(ve boşluk bırakılmadan) listelenir:
+
+
+``` {r eval=FALSE}
+\includeonly{dosya1,dosya2,dosya3,...}
+```
+
+
+Böyle bir liste oluşturulduktan sonra bu listede olmayan bir dosya artık
+`\include` komutuyla kaynak dosyaya eklenemez.
+
+`\input` komutu sahanlıkta da kullanılabilir. Örneğin, sahanlığınızı tek
+bir dosyaya yazıp, bu dosyayı bu komutla sahanlığa ekleyebilirsiniz.
+
+Daha düzenli çalışmak adına kaynak dosyanızın olduğu dizini de
+düzenleyebilirsiniz.
+
+
+![Kaynak dosyanın olduğu dizinin
+düzenlenmesi](images/dizin.png)
+
+
+Bu şekilde bir düzenleme yaptığınızda `\input` ya da `\include`
+komutlarıyla dosya eklemek istediğinizde dosyanın bulunduğu dizini de
+göstermeniz gerekir.
+
+Burada kaynak dosya `kitap.tex`'dir. Bu kaynak dosyaya `bolum1.tex`
+dosyasını eklemek istediğinizde komutu
+
+
+``` {r eval=FALSE}
+\input{Bolumler/bolum1}
+```
+
+
+şeklinde verirsiniz. Bu sayede kaynak dosyanızın olduğu dizinde (Örnek
+Kitap) sadece `kitap` ile başlayan dosyalar olur. Diğer dosyalar alt
+dizinde (Bolumler) yer alır.
+
+Dikkat edilirse "Örnek Kitap" dışında, "Bolumler" alt dizini ve tüm
+dosya adları Türkçe karakter ya da boşluk içermez.
+
+
+
+``` {r eval=FALSE}
+\documentclass[a4paper,12pt]{book}
+\usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+\title{Örnek Kitap}
+\author{\TeX dizgi}
+\begin{document}
+\frontmatter
+\maketitle
+\tableofcontents
+\input{Bolumler/onsoz}
+\mainmatter
+\input{Bolumler/bolum1}
+\input{Bolumler/bolum2}
+\appendix
+\input{Bolumler/ek1}
+\backmatter
+\end{document}
+```
+
+
+## Varsayılan Sayfa Düzenini Değiştirme
+
+LaTeX'de varsayılan kağıt boyutunun `letterpaper` olduğunu Bölün \@ref(belgesinifi)'de ifade etmiştik. Ayrıca aynı yazıda başka bir kağıt boyutunun
+nasıl seçileceğine de yer vermiştik. Şimdi ise hem sayfamızın kenar
+boşluklarının nasıl ayarlanacağından hem de ön tanımlı olmayan, tamamen
+keyfi bir sayfa boyutunun nasıl belirleneceğinden bahsedelim.
+
+Bu tür sayfa düzenlemeleri için LaTeX'de
+[geometry](http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/geometry/geometry.pdf) paketi kullanılır. Öncelikle paketi
+
+
+``` {r eval=FALSE}
+\usepackage{geometry}
+```
+
+
+komutuyla sahanlığa ekleyin. Ardından paket seçeneklerinde aşağıdaki
+tanımlamalarla sayfanın düzenini değiştirebilirsiniz:
+
+
+| Tanım| Değer |
+| :--- | :--- |
+|  `top` | üst boșluk |
+| `bottom` | alt boșluk |
+| `left` | sol boșluk |
+| `right` | sağ boșluk |
+| `paperwidht` | sayfa genișliği |
+| `paperheight` | sayfa yüksekliği |
+
+
+Örneğin sahanlıkta
+
+``` {r eval=FALSE}
+\usepackage[paperwidth=175mm,paperheight=255mm,top=2cm,bottom=2cm,left=2.5cm,right=2.5cm]{geometry}
+```
+
+
+komutunu verdiğinizde boyutu $175\times 255$ mm, üst ve alt boşluğu
+$2$ cm, sol ve sağ boşluğu $2.5$ cm olan bir sayfa düzeni
+oluşturursunuz. Dilerseniz `paperwidth` ve` paperheight` tanımlamalarını
+yerine, örneğin `a4paper` yazarak sadece kenar boşluklarla ilgili
+tanımlamaları yapabilirsiniz.
+
+> LaTeX'de milimetre (mm) ve santimetre (cm) dışında inç (in), punto
+> (pt), em ve ex gibi ölçü birimleri de vardır. Bunlara ileride
+> değinilecektir. Ayrıca yine ileride daha ayrıntılı sayfa düzeni
+> oluşturmaktan da bahsedeceğiz. Bu aşamada bu kadarı yeterli olacaktır.
+
+## Satır ve Sayfa Kesme
+
+LaTeX, kelimeler arası boşlukları otomatik ayarlayarak satırları iki
+yana yaslayarak dizer. Bir satırı kesip yeni bir satıra geçmek için `\\`
+veya `\newline` komutları kullanılır.
+
+Birinci komut `\\*` şeklinde verildiğinde satırdan sonra sayfa
+kesilmesini önler.
+
+Benzer şeyi `\linebreak` komutu da yapar. Fakat bu komut ile satır
+kesilirse LaTeX kalan yarım satırı iki yana yaslar. `\nolinebreak`
+komutu ise satırın kesilmesini önler.
+
+
+Birçok kelimeyi birlikte aynı satırda tutmak gerekirse `\mbox` komutu
+kullanılır:
+
+
+``` {r eval=FALSE}
+\mbox{<metin>}
+```
+
+
+Buradaki `<metin>` içindeki kelimeler her durumda birleşik kalırlar.
+Benzer şeyi `\fbox` komutu da metin etrafına çizgi çizerek yapar.
+
+Sayfayı kesip yeni bir sayfaya geçmek için `\newpage` ya da `\pagebreak`
+komutları kullanılır. `\nopagebreak` komutu sayfa kesilmesini önler.
+`\newpage` ile `\pagebreak` komutları arasında da `\newline` ile
+`\linebreak` komutlarındakine benzer bir fark vardır.
+
+
+## Paragraflar ve Cümle Sonları
+
+Boş bir satırın yeni bir paragraf açtığını Bölüm \@ref(bosluk)'de belirtmiştik. Aynı şey, `\par` komutuyla da yapılabilir.
+Ancak bu komut yeni bir paragraf açmaktan ziyade farklı amaçlar için
+kullanılır (yeri geldiğinde değinilecektir). Nitekim kaynak dosyanızın
+okunabilirliği açısından paragrafları ayırmak için boş bir satır
+bırakmak daha kullanışlıdır.
+
+LaTeX'de varsayılan olarak `\chapter` ve `\section` gibi bölümleme
+komutlarından sonra oluşturulan ilk paragraf girintisiz, sonrakiler
+girintili olur. Bu, paragraf başlarında `\indent` ya da `\noindent`
+komutlarıyla tek seferliğine değiştirilebilir. Birinci komut girinti
+oluşturur, ikincisi ise girintiyi kaldırır.
+
+LaTeX, okumayı kolaylaştırmak için cümle sonlarında fazladan boşluklar
+bırakır. Bunu yaparken de her cümlenin nokta, soru işareti veya ünlem
+işaretiyle bittiğini varsayar. Kısaltmalarda büyük harflerden sonra
+nokta geldiğinden, büyük harften sonra nokta koyulursa LaTeX bunu cümle
+sonu saymaz. Eğer bir büyük harften sonra nokta koyuyorsanız ve burası
+cümlenin sonuysa LaTeX'in burayı cümle sonu sayması için büyük harften
+sonraki noktanın önüne `\@` koymanız gerekir.
+
+
+LaTeX'in noktadan sonra fazladan boşluk *koymamasını* isterseniz
+`\frenchspacing` komutunu kullanırsınız. Bu komutu kullandıysanız, artık
+noktadan önce `\@` koymanıza gerek yoktur. Daha sonra tekrar cümle
+sonlarında fazladan boşluk kullanmak istenirse de `\nonfrenchspacing`
+komutu kullanılır.
+
+Unvan kısaltmasından sonra unvanın ait olduğu kelimeyle birlikte kalması
+ve fazladan boşluk bırakılmaması için tilda (`~`) işareti
+kullanılabilir. Bu işaret hem genişlemeyen bir boşluk bırakır hem de
+satırın orada kesilmesini önler.
+
+## Aralıklar
+
+LaTeX'de hem dikey hem de yatay aralıklar otomatik olarak ayarlanır.
+Fazladan aralıklar bırakmak için komutlar kullanılır.
+
+Aralık bırakırken kullanabileceğimiz ölçü birimleri aşağıda
+gösterilmiştir.
+
+|  Birim|  Değer|
+|:--|:--|
+|mm   |milimetre $\approx 1/25$ inç|
+|  cm|   santimetre = 10 mm|
+ | in  | inç = 25.4 mm|
+ | pt |  punto $\approx 1/72$ inç|
+ | em  | Kullanılan yazı tipinde 'M' harfinin genişliği|
+ | ex  | Kullanılan yazı tipinde 'x' harfinin yüksekliği|
+
+
+### Dikey aralıklar
+
+Dikey aralık birkaç komutla bırakılabilir. Bunlardan biri `\vspace`
+olup, komut iki boş satır arasında
+
+
+``` {r eval=FALSE}
+\vspace{<uzunluk>}
+```
+
+
+şeklinde verilir. Komut bu şekilde verildiğinde komutun zorunlu
+değişkeninde birimiyle belirtilen uzunluk kadar dikey aralık bırakılır.
+Eğer bir sayfanın başında veya sonunda aralık bırakılmak istenirse,
+komut `\vspace*` şeklinde yıldızlı vermelidir. Bu komutun aralığa ilave
+yapan `\addvspace` sürümü de vardır.
+
+
+Bir paragrafın iki satırı arasında veya bir tablonun satırları arasında
+ilave aralık açmak için
+
+
+``` {r eval=FALSE}
+\\[<uzunluk>]
+```
+
+
+komutu kullanılır.
+
+
+``` {r eval=FALSE}
+A\\[1ex]
+B
+```
+
+
+
+
+Bu komutlarda belirtilen uzunluklar negatif de olabilir.
+
+
+``` {r eval=FALSE}
+A\\[-2ex]
+B
+```
+
+
+Sınırsız bir dikey aralık oluşturmak için `\vfill` komutu kullanılır. Bu
+komuttan sonra gelen her şey sayfanın altına yaslanır.
+
+Ön tanımlı gelen `\smallskip`, `\medskip` ve `\bigskip` komutları
+sırasıyla küçük, orta ve büyük aralıklar bırakır.
+
+### Yatay aralıklar
+
+Ön tanımlı yatay aralıklar
+
+
+``` {r eval=FALSE}
+\  \,  \:  \;  \quad  \qquad  \!
+```
+
+
+komutlarıyla verilir. Bu komutlar sırasıyla bir sözcük arası, $3/\!18$ em, $4/\!18$ em, $5/\!18$ em, $1$ em, $2$ em, $-3/\!18$ em uzunlukta yatay aralık bırakır.
+
+
+
+Belli bir uzunlukta yatay aralık bırakmak için `\hspace` komutu
+kullanılır. Yine dikey aralıkta olduğu gibi yatay aralık negatif de
+olabilir. Eğer aralık satır başına veya sonuna rasgelse dahi bu aralığı
+korumak istiyorsanız, yıldızlı `\hspace*` komutu kullanırsınız.
+
+``` {r eval=FALSE}
+A\hspace{2cm}B\\
+A \hspace{2cm} B
+```
+
+
+
+
+Komutlardan önce veya sonra boşluk bırakmak farklı
+sonuçlar üretir.
+
+Sınırsız bir yatay aralık oluşturmak için `\hfill` komutu kullanılır. Bu
+komuttan sonra gelen her şey satırın sonuna yaslanır. Hem satır sonuna
+yaslamak hem de aralığı noktalarla doldurmak isterseniz `\dotfill`
+komutunu kullanırsınız. Satır sonuna yaslayıp aralığa çizgi çekmek
+isterseniz de `\hrulefill` komutunu kullanırsınız.
+
+
+``` {r eval=FALSE}
+A\hfill B\\
+A\dotfill B\\
+A\hrulefill B
+```
+
+
+
+## Metni Hizalamak ve Sütunlara Bölmek
+
+### Hizalama
+
+LaTeX'de metni sola hizalamak için `flushleft`, sağa hizalamak için
+`flushright` ve ortalı hizalamak için `center` ortamları kullanılır.
+
+``` {r eval=FALSE}
+\begin{flushleft}
+ burası sola hizalı
+\end{flushleft}
+\begin{flushright}
+ sağa hizalı
+\end{flushright}
+\begin{center}
+ ve ortalı
+\end{center}
+```
+
+
+### Sütunlara bölmek
+
+LaTeX'de belgenin tamamının iki sütun dizilmesi için `\documentclass`
+komutunun seçeneğine `twocolumn` yazılabileceğinden Bölüm \@ref(belgesinifi)'de bahsettik. Bu, tüm belgenin iki sütun dizilmesini sağlar. Bazı
+sayfaları iki, bazılarınıysa tek sütun dizmek istiyorsanız `\twocolumn`
+ve `\onecolumn` komutlarını kullanmanız gerekir. `\twocolumn` komutunun
+verildiği sayfadan sonraki sayfalar iki, `\onecolumn` komutunun
+verildiği sayfadan sonraki sayfalar tek sütun dizilir.
+
+Eğer metni daha fazla sütuna bölmek ve sütunları istediğiniz yerden
+başlatmak gibi daha fazla seçenek istiyorsanız, `multicols` ortamını
+kullanmanız gerekir. Bu ortamı kullanabilmek için
+
+
+``` {r eval=FALSE}
+\usepackage{multicol}
+```
+
+komutuyla
+[multicol](http://ftp.ntua.gr/mirror/ctan/macros/latex/required/tools/multicol.pdf) paketini eklemelisiniz.
+
+
+``` {r eval=FALSE}
+\begin{multicols}{<sütun sayısı>}
+
+\end{multicols}
+```
+
+
+Burada, `<sütun sayısı>` değişkeninde oluşturulmak istenen sütun adedi
+sayıyla belirtilir.
+
+
+
+Bu ortamda sütun genişlikleri eşit olup, sütunlar arası boşluk
+`\columnsep`, sütunlar arasındaki çizginin kalınlığı `\columnseprule` ve
+sütunlar arasındaki çizginin rengi `\columnseprulecolor` komutlarında
+saklıdır. Bu değişkenler `\setlength` ya da `\def` komutları
+kullanılarak değiştirilebilir.
+
+
+``` {r,attr.source='.numberLines',eval=FALSE}
+\setlength{\columnsep}{1cm}
+\setlength{\columnseprule}{1pt}
+\def\columnseprulecolor{\color{blue}}
+```
+
+
+Yukarıdaki birinci komutla sütunlar arasındaki boşluk 1 cm, çizgi
+kalınlığı 1 pt ve çizgi rengi mavi olarak düzenlenir. Bu komutlar ya
+sahanlığa ya da ortamı kullanmadan önce gövdeye yazılmalıdır.
+
+
+
+> Şimdiye kadar renk kullanımından bahsetmedik ancak çizgi rengini
+> değiştirmek için verilen komutun kullanılabilmesi için sahanlığa
+> `\usepackage{color}` komutuyla `color` paketinin eklenmesi gerekir.
+
+Ortam isteğe bağlı bir değişken de alabilir. Bu, çengelli parantezlerden
+sonra köşeli parantezler içine yazılır. Köşeli parantezler içinde
+yazılanlar bölünmeden ve çok sütunlu metnin üstünde dizilir.
+
+
+``` {r eval=FALSE}
+\begin{multicols}{2}
+[\section{Başlık}
+Burası sütunlara bölünmez.]
+Burası sütunlara bölünür.
+\end{multicols}
+```
+
+Sütunu kesmek için `\columnbreak` komutu kullanılır. Komutun verildiği
+yerde sütun kesilir, ardından kesme noktasından önceki paragraflar tüm
+kullanılabilir alanı doldurmak için eşit olarak dağıtılır. Dolayısıyla
+bazen beklenen sonucu vermeyebilir.
+
+
+
+
+Varsayılan `multicols` ortamında sütunların her biri aynı miktarda metin
+içerecek şekilde dengelenmiştir. Bu, ortamın yıldızlı sürümü
+(`multicols*`) kullanılarak değiştirilebilir.
+
+## Listeleme
+
+### Temel listeler
+
+LaTeX'de listeleme için değişik ortamlar vardır. Bu ortamlar tek başına
+kullanılabileceği gibi birlikte de kullanılabilirler. Her ortamda
+maddeler `\item` komutuyla belirtilir.
+
+Bir listeyi numaralı şekilde dizmek için `enumerate` ortamı kullanılır.
+
+
+``` {r eval=FALSE}
+\begin{enumerate}
+ \item madde 1
+  \begin{enumerate}
+    \item alt madde 1
+      \begin{enumerate}
+        \item en alt madde 1
+      \end{enumerate}
+    \item alt madde 2
+  \end{enumerate}
+ \item madde 2
+\end{enumerate}
+```
+
+
+Numarasız, özel işaretli listeler için `itemize` ortamı kullanılır ve bu
+ortamda madde işareti değiştirilebilir.
+
+
+``` {r eval=FALSE}
+\begin{itemize}
+\item madde 1
+\item madde 2
+\item[$\circ$] madde 3
+\item[+] madde 4
+\end{itemize}
+```
+
+
+
+
+Açıklamalı bir liste içinse `description` ortamı kullanılır. Bu ortamda
+köşeli parantez içine alınan anahtar kelimeler kalın dizilir.
+
+
+``` {r eval=FALSE}
+\begin{description}
+\item[Nokta] Boyutu olmayan
+\item[Çember] Bir noktaya eşit
+uzaklıktaki noktaların geometrik yeri
+\end{description}
+```
+
+
+### Listeleri özelleştirmek
+
+Listelerin özelleştirmek için
+[enumerate](http://ftp.ntua.gr/mirror/ctan/macros/latex/required/tools/enumerate.pdf)  paketi kullanılabilir. Paketi `\usepackage{enumerate}`
+komutuyla ekledikten sonra `enumerate` ortamını başlatan komutun peşine
+köşeli parantezler içinde madde işaretlerinin tipi belirtilebilir:
+
+
+``` {r eval=FALSE}
+\begin{enumerate}[I.]
+\item bir
+\item iki 
+\item üç
+\end{enumerate}
+```
+
+
+
+Bunun dışında çok daha fazla özelleştirmeye izin veren
+[enumitem](http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/enumitem/enumitem.pdf) paketi vardır. Bu paketi kullanarak yapılabilecek
+listelere de ilerde değineceğiz. Dileyen okur paket belgesini inceleyip
+listelerini özelleştirebilir.
+
+
+## Yazıtipleri
+
+
+### Giriş
+
+Yazıtipi konusu *kodlama*, *aile*, *biçem* ve *boyut* olmak üzere dört
+alt başlıkta incelenebilir. Kodlama çok teknik bir konu olup amacımız
+dışındadır, ancak sadece şunu belirtelim ki kodlama işini LaTeX'de Bölüm \@ref(turkce)'de bahsettiğimiz `fontenc` paketi üstlenir. Bu paketi belgenize eklemiş
+olduğunuzu varsayarak devam edeceğiz.
+
+Bu yazıda anlatacağımız şeylerden bazıları bir bakıma LaTeX'in
+felsefesine aykırı olacak. Nitekim LaTeX, `\documentclass` komutunda
+belirtilen ana yazıtipi boyutuna göre, dipnot ya da başlık gibi ana
+yazıtipi boyutundan farklı dizilen şeylerin boyutunu olabilecek en güzel
+ve doğru şekilde ayarlar. O yüzden bu konudaki klasik uyarıyı biz de
+yineleyelim:
+
+![](images/uyari.png)
+
+### Aile
+
+Yazıtipleri Roman ya da Serif, Sans Serif ve Typewriter olmak üzere üç
+ailede toplanabilir. Roman ailesi tırnaklı ya da süslü diyebileceğimiz
+yazıtiplerini, Sans Serif ailesi tırnaksız ya da süssüz yazıtiplerini ve
+Typewriter ailesi de daktilo yazıtiplerini barındırır.
+
+LaTeX'de her belge sınıfı varsayılan yazıtipi ailesiyle gelir. `beamer`
+sınıfının varsayılan ailesi Sans Serif olup, diğer sınıfların varsayılan
+ailesi Roman'dır.
+
+Varsayılan aile `\familydefault` komutunda saklı olup, `\renewcommand`
+komutuyla değiştirilebilir.
+
+
+``` {r eval=FALSE,attr.source='.numberLines'}
+\renewcommand{\familydefault}{\rmdefault}  
+\renewcommand{\familydefault}{\sfdefault}  
+\renewcommand{\familydefault}{\ttdefault} 
+```
+
+
+Birinci komut sahanlığa yazılırsa, belge sınıfından bağımsız olarak
+varsayılan aile Roman, ikincisi yazılırsa Sans Serif, üçüncüsü yazılırsa
+Typewriter olur.
+
+Eğer belgenin tamamının değilde bazı kelime ya da cümlelerin farklı
+aileden yazılması istenirse -- ki genelde böyle kullanılır -- aşağıdaki
+komut ya da bildirimler kullanılır.
+
+
+![Yazıtipi
+Aileleri](images/yazitipi.png){}
+
+
+
+LaTeX'de varsayılan yazıtipi Computer Modern olup, ek bir pakete ihtiyaç
+duymadan kullanılabilecek yazıtipleri aşağıda gösterilmiştir.
+
+
+![Roman
+Yazıtipleri](images/yazitipi2.png)
+
+
+
+![Sans Serif
+Yazıtipleri](images/yazitipi3.png)
+
+
+
+![Typewriter Yazıtipleri\
+](images/yazitipi4.png)
+
+
+![Elyazısı](images/yazitipi5.png)
+
+Varsayılan yazıtipleri `\rmdefault`, `\sfdefault` ve `\ttdefault`
+komutlarında saklı olup, `\renewcommand` komutuyla değiştirilebilirler.
+
+
+``` {r eval=FALSE}
+\renewcommand{\rmdefault}{<kısaltma>}
+```
+
+
+Burada `<kısaltma>`, tablolarda belirtilen kısaltmalardır. Örneğin
+
+
+``` {r eval=FALSE}
+\renewcommand{\rmdefault}{put}
+```
+
+
+komutu sahanlığa yazıldığında, eğer varsayılan aile Roman ise belgenizin
+ana yazıtipi Utopia olur.
+
+Eğer tüm belgenin değil, bazı kelime ya da cümlelerin farklı yazıtipinde
+yazılması istenirse `\fontfamily` komutuyla `\selectfont` komutu
+birlikte aşağıdaki şekilde kullanılır.
+
+
+``` {r eval=FALSE}
+{\fontfamily{pbk}\selectfont Bookman yazıtipi.} Ana yazıtipi.
+```
+
+
+Varsayılan yazıtipi paket ekleyerek de değiştirilebilir. Bu hem
+pratiktir hem de bazı paketler matematiksel ifadelerin yazıtipine de
+etki eder. Bu paketlerin bazıları tabloda gösterilmiştir.
+
+
+![Yazıtipi değiştiren
+paketler](images/yazitipi6.png)
+
+Bunların dışında beğenebileceğiniz birçok yazıtipini [LaTeX
+Yazıtipi
+Kataloğu](https://tug.org/FontCatalogue/)'nda bulabilirsiniz.
+
+### Biçem
+
+Metin içinde kelimeleri bazen italik bazen de kalın dizmek
+isteyebilirsiniz. Bu değişimler aşağıdaki tablodaki komut ya da
+bildirimlerle yapılır.
+
+::: wp-block-image
+![Yazıtipi
+Biçemleri](https://www.texdizgi.com/wp-content/uploads/2020/04/2020-04-26-19_24_54-Window.png){.wp-image-2423
+loading="lazy" width="564" height="289"
+srcset="https://www.texdizgi.com/wp-content/uploads/2020/04/2020-04-26-19_24_54-Window.png 564w, https://www.texdizgi.com/wp-content/uploads/2020/04/2020-04-26-19_24_54-Window-300x154.png 300w"
+sizes="(max-width: 564px) 100vw, 564px"}
+:::
+
+::: wp-block-columns
+::: {.wp-block-column .is-vertically-aligned-center}
+::: {.wp-block-codemirror-blocks-code-block .code-block}
+``` {.CodeMirror setting="{\"mode\":\"stex\",\"mime\":\"text/x-latex\",\"theme\":\"monokai\",\"lineNumbers\":false,\"styleActiveLine\":false,\"lineWrapping\":false,\"readOnly\":false,\"language\":\"LaTeX\",\"modeName\":\"stex\"}"}
+İzleyen kelime \textit{italik} 
+harflerle yazılmıştır.
+Metnin geri kalan kısmı
+normaldir.
+```
+:::
+:::
+
+::: {.wp-block-column .is-vertically-aligned-center}
+[example-27\
+](https://www.texdizgi.com/wp-content/uploads/2020/04/example-27.pdf){.pdfemb-viewer
+style="" data-width="max" data-height="max" toolbar="bottom"
+toolbar-fixed="off"}
+:::
+:::
+
+::: wp-block-columns
+::: {.wp-block-column .is-vertically-aligned-center}
+::: {.wp-block-codemirror-blocks-code-block .code-block}
+``` {.CodeMirror setting="{\"mode\":\"stex\",\"mime\":\"text/x-latex\",\"theme\":\"monokai\",\"lineNumbers\":false,\"styleActiveLine\":false,\"lineWrapping\":false,\"readOnly\":false,\"language\":\"LaTeX\",\"modeName\":\"stex\"}"}
+İzleyen ifade {\slshape {\bfseries eğik kalındır}}.
+```
+:::
+:::
+
+::: {.wp-block-column .is-vertically-aligned-center}
+[example-28\
+](https://www.texdizgi.com/wp-content/uploads/2020/04/example-28.pdf){.pdfemb-viewer
+style="" data-width="max" data-height="max" toolbar="bottom"
+toolbar-fixed="off"}
+:::
+:::
+
+::: wp-block-columns
+::: {.wp-block-column .is-vertically-aligned-center}
+::: {.wp-block-codemirror-blocks-code-block .code-block}
+``` {.CodeMirror setting="{\"mode\":\"stex\",\"mime\":\"text/x-latex\",\"theme\":\"monokai\",\"lineNumbers\":false,\"styleActiveLine\":false,\"lineWrapping\":false,\"readOnly\":false,\"language\":\"LaTeX\",\"modeName\":\"stex\"}"}
+İzleyen ifade \textit{\textbf{italik kalın}}, ama bu
+\textsc{\textit{büyük küçük harf değil}}.
+```
+:::
+:::
+
+::: {.wp-block-column .is-vertically-aligned-center}
+[example-30\
+](https://www.texdizgi.com/wp-content/uploads/2020/04/example-30.pdf){.pdfemb-viewer
+style="" data-width="max" data-height="max" toolbar="bottom"
+toolbar-fixed="off"}
+:::
+:::
+
+Eğer vurgulu metin içinde bazı kelimeler tekrar vurgulanırsa bu
+kelimeler normale döner.
+
+::: wp-block-columns
+::: {.wp-block-column .is-vertically-aligned-center}
+::: {.wp-block-codemirror-blocks-code-block .code-block}
+``` {.CodeMirror setting="{\"mode\":\"stex\",\"mime\":\"text/x-latex\",\"theme\":\"monokai\",\"lineNumbers\":false,\"styleActiveLine\":false,\"lineWrapping\":false,\"readOnly\":false,\"language\":\"LaTeX\",\"modeName\":\"stex\"}"}
+{\em Vurgulu metinde tekrar
+vurgu yapılırsa {\em normale}
+döner.}
+```
+:::
+:::
+
+::: {.wp-block-column .is-vertically-aligned-center}
+[example-32\
+](https://www.texdizgi.com/wp-content/uploads/2020/04/example-32.pdf){.pdfemb-viewer
+style="" data-width="max" data-height="max" toolbar="bottom"
+toolbar-fixed="off"}
+:::
+:::
+
+LaTeX'de vurgu yukarıdaki gibi yapılsa da altını çizerek vurgu yapmak
+isteyen olabilir. Kuyruklu harflerin altı çizildiğinde varsayılan satır
+aralığı değiştiğinden vurguyu bu şekilde yapmamanız daha doğrudur. Ancak
+illa altını çizmek isterseniz `\underline` komutunu kullanabilirsiniz.
+
+::: wp-block-columns
+::: {.wp-block-column .is-vertically-aligned-center}
+::: {.wp-block-codemirror-blocks-code-block .code-block}
+``` {.CodeMirror setting="{\"mode\":\"stex\",\"mime\":\"text/x-latex\",\"theme\":\"monokai\",\"lineNumbers\":false,\"styleActiveLine\":false,\"lineWrapping\":false,\"readOnly\":false,\"language\":\"LaTeX\",\"modeName\":\"stex\"}"}
+Altı \underline{çizili} 
+kelimeler satır aralığını
+bozar. İyisi mi altını çizmeyin.
+```
+:::
+:::
+
+::: {.wp-block-column .is-vertically-aligned-center}
+[example-33\
+](https://www.texdizgi.com/wp-content/uploads/2020/04/example-33.pdf){.pdfemb-viewer
+style="" data-width="max" data-height="max" toolbar="bottom"
+toolbar-fixed="off"}
+:::
+:::
+
+### Boyut
+
+Yazıtipi boyutunu değiştirmek için aşağıdaki bildirimler kullanılır.
+
+::: wp-block-image
+![Yazıtipi Boyutu Değiştiren
+Bildirimler](https://www.texdizgi.com/wp-content/uploads/2020/04/2020-04-26-19_38_48-Window-1.png){.wp-image-2440
+loading="lazy" width="337" height="387"
+srcset="https://www.texdizgi.com/wp-content/uploads/2020/04/2020-04-26-19_38_48-Window-1.png 337w, https://www.texdizgi.com/wp-content/uploads/2020/04/2020-04-26-19_38_48-Window-1-261x300.png 261w"
+sizes="(max-width: 337px) 100vw, 337px"}
+:::
+
+::: wp-block-columns
+::: {.wp-block-column .is-vertically-aligned-center}
+::: {.wp-block-codemirror-blocks-code-block .code-block}
+``` {.CodeMirror setting="{\"mode\":\"stex\",\"mime\":\"text/x-latex\",\"theme\":\"monokai\",\"lineNumbers\":false,\"styleActiveLine\":false,\"lineWrapping\":false,\"readOnly\":false,\"language\":\"LaTeX\",\"modeName\":\"stex\"}"}
+{\Large Büyük} ve
+{\scriptsize küçük} harfler.
+```
+:::
+:::
+
+::: {.wp-block-column .is-vertically-aligned-center}
+[example-34\
+](https://www.texdizgi.com/wp-content/uploads/2020/04/example-34.pdf){.pdfemb-viewer
+style="" data-width="max" data-height="max" toolbar="bottom"
+toolbar-fixed="off"}
+:::
+:::
+
+Bu bildirimlerin aynı zamanda satır aralığını da değiştirdiğine dikkat
+edilmelidir. Aşağıdaki iki örnekte, `\par` (paragraf) komutunun
+verdiğiniz yere bağlı olarak farklı sonuçlar ürettiği gösterilmiştir.
+Doğru kullanım ikincisidir.
+
+::: wp-block-columns
+::: {.wp-block-column .is-vertically-aligned-center}
+::: {.wp-block-codemirror-blocks-code-block .code-block}
+``` {.CodeMirror setting="{\"mode\":\"stex\",\"mime\":\"text/x-latex\",\"theme\":\"monokai\",\"lineNumbers\":false,\"styleActiveLine\":false,\"lineWrapping\":false,\"readOnly\":false,\"language\":\"LaTeX\",\"modeName\":\"stex\"}"}
+{\large 
+Sokrates: Platon
+yalan söyleyecek
+aşağıdaki cümlede.}\par
+```
+:::
+:::
+
+::: {.wp-block-column .is-vertically-aligned-center}
+[example-36\
+](https://www.texdizgi.com/wp-content/uploads/2020/04/example-36.pdf){.pdfemb-viewer
+style="" data-width="max" data-height="max" toolbar="bottom"
+toolbar-fixed="off"}
+:::
+:::
+
+::: wp-block-columns
+::: {.wp-block-column .is-vertically-aligned-center}
+::: {.wp-block-codemirror-blocks-code-block .code-block}
+``` {.CodeMirror setting="{\"mode\":\"stex\",\"mime\":\"text/x-latex\",\"theme\":\"monokai\",\"lineNumbers\":false,\"styleActiveLine\":false,\"lineWrapping\":false,\"readOnly\":false,\"language\":\"LaTeX\",\"modeName\":\"stex\"}"}
+{\large Platon: Sokrates
+doğruyu söyledi
+önceki cümlede.\par}
+```
+:::
+:::
+
+::: {.wp-block-column .is-vertically-aligned-center}
+[example-38\
+](https://www.texdizgi.com/wp-content/uploads/2020/04/example-38.pdf){.pdfemb-viewer
+style="" data-width="max" data-height="max" toolbar="bottom"
+toolbar-fixed="off"}
+:::
+:::
+
+Bu bildirimlerin etkisi belge ana yazıtipi boyutuna bağımlıdır. Mutlak
+boyutlar aşağıdaki tabloda gösterilmiştir.
+
+::: wp-block-image
+![Yazıtipleri Mutlak
+Boyutları](https://www.texdizgi.com/wp-content/uploads/2020/04/2020-04-26-19_48_34-Window.png){.wp-image-2451
+loading="lazy" width="674" height="334"
+srcset="https://www.texdizgi.com/wp-content/uploads/2020/04/2020-04-26-19_48_34-Window.png 674w, https://www.texdizgi.com/wp-content/uploads/2020/04/2020-04-26-19_48_34-Window-300x149.png 300w"
+sizes="(max-width: 674px) 100vw, 674px"}
+:::
+
+Bağımsız bir yazıtipi boyutu elde etmek için `\fontsize` ile
+`\selectfont` komutları birlikte kullanılır.
+
+::: {.wp-block-codemirror-blocks-code-block .code-block}
+``` {.CodeMirror setting="{\"mode\":\"stex\",\"mime\":\"text/x-latex\",\"theme\":\"monokai\",\"lineNumbers\":false,\"styleActiveLine\":false,\"lineWrapping\":false,\"readOnly\":false,\"language\":\"LaTeX\",\"modeName\":\"stex\"}"}
+{\fontsize{<boyut>}{<aralık>}\selectfont <metin>}
+```
+:::
+
+Buradaki `<boyut>` yazıtipi boyutu, `<aralık>` ise satır aralığıdır.
+İkisinin de ölçü birimi punto (pt) olup, temel kural, aralığın boyutun
+\$ 1.2 \$ katı olmasıdır.
+
+::: wp-block-columns
+::: {.wp-block-column .is-vertically-aligned-center}
+::: {.wp-block-codemirror-blocks-code-block .code-block}
+``` {.CodeMirror setting="{\"mode\":\"stex\",\"mime\":\"text/x-latex\",\"theme\":\"monokai\",\"lineNumbers\":false,\"styleActiveLine\":false,\"lineWrapping\":false,\"readOnly\":false,\"language\":\"LaTeX\",\"modeName\":\"stex\"}"}
+{\fontsize{30}{36}\selectfont
+Yazı tipi boyutu 30 punto,
+satır aralığı 36 punto.}
+```
+:::
+:::
+
+::: {.wp-block-column .is-vertically-aligned-center}
+[example-39\
+](https://www.texdizgi.com/wp-content/uploads/2020/04/example-39.pdf){.pdfemb-viewer
+style="" data-width="max" data-height="max" toolbar="bottom"
+toolbar-fixed="off"}
+:::
+:::
+
+Ana yazıtipi boyutu `\normalsize` komutunda saklı olup, `\renewcommand`
+komutuyla değiştirilebilir.
+
+::: {.wp-block-codemirror-blocks-code-block .code-block}
+``` {.CodeMirror setting="{\"mode\":\"stex\",\"mime\":\"text/x-latex\",\"theme\":\"monokai\",\"lineNumbers\":false,\"styleActiveLine\":false,\"lineWrapping\":false,\"readOnly\":false,\"language\":\"LaTeX\",\"modeName\":\"stex\"}"}
+\renewcommand{\normalsize}{\fontsize{30}{36}\selectfont}
+```
+:::
+
+Yukarıdaki komutu sahanlığa yazarsanız belgenizin ana yazıtipi boyutu \$
+30 \$ pt, satır aralığı ise \$ 36 \$ pt olur.

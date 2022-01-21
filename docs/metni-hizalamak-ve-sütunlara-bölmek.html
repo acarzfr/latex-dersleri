@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1.1 LaTeX Nedir? | LaTeX Dersleri</title>
+  <title>1.15 Metni Hizalamak ve Sütunlara Bölmek | LaTeX Dersleri</title>
   <meta name="description" content="TeX/LaTeX’e dair bir iki kelam." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1.1 LaTeX Nedir? | LaTeX Dersleri" />
+  <meta property="og:title" content="1.15 Metni Hizalamak ve Sütunlara Bölmek | LaTeX Dersleri" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://acarzfr.github.io/latex-dersleri/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="acarzfr/latex-dersleri" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1.1 LaTeX Nedir? | LaTeX Dersleri" />
+  <meta name="twitter:title" content="1.15 Metni Hizalamak ve Sütunlara Bölmek | LaTeX Dersleri" />
   
   <meta name="twitter:description" content="TeX/LaTeX’e dair bir iki kelam." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="genel.html"/>
-<link rel="next" href="önemli-yapılar.html"/>
+<link rel="prev" href="aralıklar.html"/>
+<link rel="next" href="listeleme.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -231,41 +231,81 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="latex-nedir" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> LaTeX Nedir?</h2>
-<p>Önce TeX’le başlayalım. TeX, 1978’den
-itibaren <a href="https://www-cs-faculty.stanford.edu/~knuth/">Donald Knuth</a> tarafından belgelerin bilgisayarda dizilmesi
-için geliştirdiği bir dizgi sistemidir.
-LaTeX ise TeX’in kullanımını kolaylaştırmak için 1984 yılında <a href="http://www.lamport.org/">Leslie
-Lamport</a> tarafından tasarlanmış bir makro pakettir.</p>
-<p>LaTeX, genelde WYSIWYG<a href="kaynaklar.html#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> editörleriyle karşılaştırılır. WYSIWYG, Microsoft
-Word, Libreoffice Writer gibi kelime işlemcilere ya da Adobe Indesign
-gibi programlara verilen genel bir isimdir. Hepsinin ortak özelliği,
-girdi ile çıktının aynı anda ve birlikte görünmesidir.</p>
-<p>Bir metnin genel görünümü ve okunabilirliği, metnin nasıl
-hizalandığından ve kesildiğinden büyük ölçüde etkilenir. LaTeX, tüm
-paragraf için hizalamayı ve kesmeleri optimize eden son derece gelişmiş
-TeX algoritmalarını kullanır. Kelime işlemciler ve diğer programlar,
-satır başına çalıştıkları için oldukça yetersiz kalırlar. Bu, diğer
-şeylerin yanı sıra düzensiz aralıklara ve birçok kısa çizgiye sebep
-olur. Sonuçları görmeniz için Microsoft Word 2008 (Mac), Adobe InDesign
-CS4 ve LaTeX’le dizilmiş bir metni <a href="http://www.rtznet.nl/zink/comparison.pdf">şuradan</a> inceleyebilirsiniz.</p>
-<p>Sonuç, LaTeX’in diğer programların her ikisinden de üstün olduğunu
-açıkça gösterir: iki kat daha az tireleme kullanır ve yine de sözcük
-aralığındaki varyasyon, Word veya InDesign’dan belirgin şekilde daha
-azdır. LaTeX’te çok büyük sözcük aralığı içeren satırlar oluşmaz.</p>
-<p>LaTeX’de girdi ve çıktı ekranı farklıdır ve
-çıktıyı görmek için girdinin derleme işleminden geçmesi gerekir. Ayrıca
-birçok şey için WYSIWYG editörlerinde olmayan yapılar vardır. Şimdi, bu
-yapıların ne oldukları ve ne işe yaradıklarını açıklayalım.</p>
+<div id="metni-hizalamak-ve-sütunlara-bölmek" class="section level2" number="1.15">
+<h2><span class="header-section-number">1.15</span> Metni Hizalamak ve Sütunlara Bölmek</h2>
+<div id="hizalama" class="section level3" number="1.15.1">
+<h3><span class="header-section-number">1.15.1</span> Hizalama</h3>
+<p>LaTeX’de metni sola hizalamak için <code>flushleft</code>, sağa hizalamak için
+<code>flushright</code> ve ortalı hizalamak için <code>center</code> ortamları kullanılır.</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb45-1" aria-hidden="true" tabindex="-1"></a>\begin{flushleft}</span>
+<span id="cb45-2"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb45-2" aria-hidden="true" tabindex="-1"></a> burası sola hizalı</span>
+<span id="cb45-3"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb45-3" aria-hidden="true" tabindex="-1"></a>\end{flushleft}</span>
+<span id="cb45-4"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb45-4" aria-hidden="true" tabindex="-1"></a>\begin{flushright}</span>
+<span id="cb45-5"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb45-5" aria-hidden="true" tabindex="-1"></a> sağa hizalı</span>
+<span id="cb45-6"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb45-6" aria-hidden="true" tabindex="-1"></a>\end{flushright}</span>
+<span id="cb45-7"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb45-7" aria-hidden="true" tabindex="-1"></a>\begin{center}</span>
+<span id="cb45-8"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb45-8" aria-hidden="true" tabindex="-1"></a> ve ortalı</span>
+<span id="cb45-9"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb45-9" aria-hidden="true" tabindex="-1"></a>\end{center}</span></code></pre></div>
+</div>
+<div id="sütunlara-bölmek" class="section level3" number="1.15.2">
+<h3><span class="header-section-number">1.15.2</span> Sütunlara bölmek</h3>
+<p>LaTeX’de belgenin tamamının iki sütun dizilmesi için <code>\documentclass</code>
+komutunun seçeneğine <code>twocolumn</code> yazılabileceğinden Bölüm <a href="belgesinifi.html#belgesinifi">1.5</a>’de bahsettik. Bu, tüm belgenin iki sütun dizilmesini sağlar. Bazı
+sayfaları iki, bazılarınıysa tek sütun dizmek istiyorsanız <code>\twocolumn</code>
+ve <code>\onecolumn</code> komutlarını kullanmanız gerekir. <code>\twocolumn</code> komutunun
+verildiği sayfadan sonraki sayfalar iki, <code>\onecolumn</code> komutunun
+verildiği sayfadan sonraki sayfalar tek sütun dizilir.</p>
+<p>Eğer metni daha fazla sütuna bölmek ve sütunları istediğiniz yerden
+başlatmak gibi daha fazla seçenek istiyorsanız, <code>multicols</code> ortamını
+kullanmanız gerekir. Bu ortamı kullanabilmek için</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb46-1" aria-hidden="true" tabindex="-1"></a>\usepackage{multicol}</span></code></pre></div>
+<p>komutuyla
+<a href="http://ftp.ntua.gr/mirror/ctan/macros/latex/required/tools/multicol.pdf">multicol</a> paketini eklemelisiniz.</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb47-1" aria-hidden="true" tabindex="-1"></a>\begin{multicols}{<span class="sc">&lt;</span>sütun sayısı<span class="sc">&gt;</span>}</span>
+<span id="cb47-2"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb47-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-3"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb47-3" aria-hidden="true" tabindex="-1"></a>\end{multicols}</span></code></pre></div>
+<p>Burada, <code>&lt;sütun sayısı&gt;</code> değişkeninde oluşturulmak istenen sütun adedi
+sayıyla belirtilir.</p>
+<p>Bu ortamda sütun genişlikleri eşit olup, sütunlar arası boşluk
+<code>\columnsep</code>, sütunlar arasındaki çizginin kalınlığı <code>\columnseprule</code> ve
+sütunlar arasındaki çizginin rengi <code>\columnseprulecolor</code> komutlarında
+saklıdır. Bu değişkenler <code>\setlength</code> ya da <code>\def</code> komutları
+kullanılarak değiştirilebilir.</p>
+<div class="sourceCode" id="cb48"><pre class="sourceCode numberSource r numberLines"><code class="sourceCode r"><span id="cb48-1"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb48-1"></a>\setlength{\columnsep}{1cm}</span>
+<span id="cb48-2"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb48-2"></a>\setlength{\columnseprule}{1pt}</span>
+<span id="cb48-3"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb48-3"></a>\def\columnseprulecolor{\color{blue}}</span></code></pre></div>
+<p>Yukarıdaki birinci komutla sütunlar arasındaki boşluk 1 cm, çizgi
+kalınlığı 1 pt ve çizgi rengi mavi olarak düzenlenir. Bu komutlar ya
+sahanlığa ya da ortamı kullanmadan önce gövdeye yazılmalıdır.</p>
+<blockquote>
+<p>Şimdiye kadar renk kullanımından bahsetmedik ancak çizgi rengini
+değiştirmek için verilen komutun kullanılabilmesi için sahanlığa
+<code>\usepackage{color}</code> komutuyla <code>color</code> paketinin eklenmesi gerekir.</p>
+</blockquote>
+<p>Ortam isteğe bağlı bir değişken de alabilir. Bu, çengelli parantezlerden
+sonra köşeli parantezler içine yazılır. Köşeli parantezler içinde
+yazılanlar bölünmeden ve çok sütunlu metnin üstünde dizilir.</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb49-1" aria-hidden="true" tabindex="-1"></a>\begin{multicols}{<span class="dv">2</span>}</span>
+<span id="cb49-2"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb49-2" aria-hidden="true" tabindex="-1"></a>[\section{Başlık}</span>
+<span id="cb49-3"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb49-3" aria-hidden="true" tabindex="-1"></a>Burası sütunlara bölünmez.]</span>
+<span id="cb49-4"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb49-4" aria-hidden="true" tabindex="-1"></a>Burası sütunlara bölünür.</span>
+<span id="cb49-5"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb49-5" aria-hidden="true" tabindex="-1"></a>\end{multicols}</span></code></pre></div>
+<p>Sütunu kesmek için <code>\columnbreak</code> komutu kullanılır. Komutun verildiği
+yerde sütun kesilir, ardından kesme noktasından önceki paragraflar tüm
+kullanılabilir alanı doldurmak için eşit olarak dağıtılır. Dolayısıyla
+bazen beklenen sonucu vermeyebilir.</p>
+<p>Varsayılan <code>multicols</code> ortamında sütunların her biri aynı miktarda metin
+içerecek şekilde dengelenmiştir. Bu, ortamın yıldızlı sürümü
+(<code>multicols*</code>) kullanılarak değiştirilebilir.</p>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="genel.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="önemli-yapılar.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="aralıklar.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="listeleme.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

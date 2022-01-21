@@ -114,7 +114,7 @@
 \setcounter{secnumdepth}{5}
 \usepackage[turkish,shorthands=:!]{babel}
 \usepackage{amsmath,amsfonts,amssymb,amsthm}
-
+\usepackage{tabularx}
 \makeatletter
 \def\thm@space@setup{%
   \thm@preskip=8pt plus 2pt minus 4pt
@@ -912,6 +912,221 @@ olması açısından bu isimler önerilmiştir.
 \SpecialCharTok{\textbackslash{}e}\StringTok{nd\{document\}}
 \end{Highlighting}
 \end{Shaded}
+
+\hypertarget{kitap-projesi-baux15flatma}{%
+\section{Kitap Projesi Başlatma}\label{kitap-projesi-baux15flatma}}
+
+LaTeX'de kitap yazmaya başlamak için belge sınıfı \texttt{book} seçilir. Bunun
+dışında kitapların \emph{Baş}, \emph{Gövde} ve \emph{Son} kısımları olur. Bu kısımların
+nerede başlayıp nerede bittikleri aşağıdaki komutlarla LaTeX'e
+bildirilir:
+
+\begin{itemize}
+\tightlist
+\item
+  \texttt{\textbackslash{}frontmatter} (baş) komutu\texttt{\textbackslash{}begin\{document\}} komutundan hemen
+  sonra verilir. Bu komut, baş taraftaki İçindekiler, Önsöz gibi
+  kısımların sayfa numaralandırmasını Roma rakamıyla yapar. Ayrıca bu
+  kısımda bölüm komutları (\texttt{*}) işareti olmadan verildiğinde (örneğin
+  \texttt{\textbackslash{}chapter\{Önsöz\}}) bunlara numara verilmez ancak İçindekiler
+  tablosuna yazılırlar.
+\item
+  \texttt{\textbackslash{}mainmatter} (gövde) komutu kitabın ilk bölüm başlığından hemen
+  önce verilmelidir. Buradan itibaren sayfa numaralandırmasını yeniden
+  başlatıp Arap rakamlarına geçer.
+\item
+  \texttt{\textbackslash{}appendix} (ekler) komutu kitabınızın eklerindeki bölümleri
+  harflerle numaralandırır (Ek A, Ek B, \ldots{} ).
+\item
+  \texttt{\textbackslash{}backmatter} (son) komutu kitabınızda her şey bittikten sonra
+  verilir fakat bilinen belge sınıflarında görünürde hiçbir etkisi
+  yoktur.
+\end{itemize}
+
+Kitap gibi büyük hacimli belgelerle çalışırken kaynak dosyanızı
+parçalara ayırmak gerekebilir. LaTeX bunun için size iki komutla
+yardımcı olur: \texttt{\textbackslash{}input} ve \texttt{\textbackslash{}include}. İkisi arasındaki fark \texttt{\textbackslash{}include}
+komutuyla eklediğiniz metin yeni bir sayfadan başlayarak dizilir.
+
+Bu komutların zorunlu değişkeni eklemek istediğiniz dosyanın adıdır.
+Örneğin kaynak dosyanızla aynı dizinde yer alan \texttt{dosya1.tex} dosyasını
+eklemek için
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}include\{dosya1\}}
+\end{Highlighting}
+\end{Shaded}
+
+komutunu kullanırsınız. Eğer dosya uzantısı \texttt{.tex} değilse (örneğin
+\texttt{.txt} olsun) o zaman dosya adını uzantısıyla yazmanız gerekir:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}include\{dosya1.txt\}}
+\end{Highlighting}
+\end{Shaded}
+
+Ayrıca, hangi dosyaların eklenebileceğini LaTeX'e bildiren bir komut
+vardır: \texttt{\textbackslash{}includeonly}. Bu komut, sadece sahanlığa yazılabilir. Komutun
+zorunlu değişkeninde eklenebilecek dosyalar aralarına virgül koyularak
+(ve boşluk bırakılmadan) listelenir:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}includeonly\{dosya1,dosya2,dosya3,...\}}
+\end{Highlighting}
+\end{Shaded}
+
+Böyle bir liste oluşturulduktan sonra bu listede olmayan bir dosya artık
+\texttt{\textbackslash{}include} komutuyla kaynak dosyaya eklenemez.
+
+\texttt{\textbackslash{}input} komutu sahanlıkta da kullanılabilir. Örneğin, sahanlığınızı tek
+bir dosyaya yazıp, bu dosyayı bu komutla sahanlığa ekleyebilirsiniz.
+
+Daha düzenli çalışmak adına kaynak dosyanızın olduğu dizini de
+düzenleyebilirsiniz.
+
+\begin{figure}
+\centering
+\includegraphics{images/dizin.png}
+\caption{Kaynak dosyanın olduğu dizinin
+düzenlenmesi}
+\end{figure}
+
+Bu şekilde bir düzenleme yaptığınızda \texttt{\textbackslash{}input} ya da \texttt{\textbackslash{}include}
+komutlarıyla dosya eklemek istediğinizde dosyanın bulunduğu dizini de
+göstermeniz gerekir.
+
+Burada kaynak dosya \texttt{kitap.tex}'dir. Bu kaynak dosyaya \texttt{bolum1.tex}
+dosyasını eklemek istediğinizde komutu
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}input\{Bolumler}\SpecialCharTok{/}\NormalTok{bolum1\}}
+\end{Highlighting}
+\end{Shaded}
+
+şeklinde verirsiniz. Bu sayede kaynak dosyanızın olduğu dizinde (Örnek
+Kitap) sadece \texttt{kitap} ile başlayan dosyalar olur. Diğer dosyalar alt
+dizinde (Bolumler) yer alır.
+
+Dikkat edilirse ``Örnek Kitap'' dışında, ``Bolumler'' alt dizini ve tüm
+dosya adları Türkçe karakter ya da boşluk içermez.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}documentclass[a4paper,12pt]\{book\}}
+\NormalTok{\textbackslash{}usepackage[T1]\{fontenc\}}
+\NormalTok{\textbackslash{}usepackage[turkish]\{babel\}}
+\NormalTok{\textbackslash{}title\{Örnek Kitap\}}
+\NormalTok{\textbackslash{}author\{\textbackslash{}TeX dizgi\}}
+\NormalTok{\textbackslash{}begin\{document\}}
+\NormalTok{\textbackslash{}frontmatter}
+\NormalTok{\textbackslash{}maketitle}
+\NormalTok{\textbackslash{}tableofcontents}
+\NormalTok{\textbackslash{}input\{Bolumler}\SpecialCharTok{/}\NormalTok{onsoz\}}
+\NormalTok{\textbackslash{}mainmatter}
+\NormalTok{\textbackslash{}input\{Bolumler}\SpecialCharTok{/}\NormalTok{bolum1\}}
+\NormalTok{\textbackslash{}input\{Bolumler}\SpecialCharTok{/}\NormalTok{bolum2\}}
+\NormalTok{\textbackslash{}appendix}
+\NormalTok{\textbackslash{}input\{Bolumler}\SpecialCharTok{/}\NormalTok{ek1\}}
+\NormalTok{\textbackslash{}backmatter}
+\NormalTok{\textbackslash{}end\{document\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{varsayux131lan-sayfa-duxfczenini-deux11fiux15ftirme}{%
+\section{Varsayılan Sayfa Düzenini Değiştirme}\label{varsayux131lan-sayfa-duxfczenini-deux11fiux15ftirme}}
+
+LaTeX'de varsayılan kağıt boyutunun \texttt{letterpaper} olduğunu Bölün \ref{belgesinifi}'de ifade etmiştik. Ayrıca aynı yazıda başka bir kağıt boyutunun
+nasıl seçileceğine de yer vermiştik. Şimdi ise hem sayfamızın kenar
+boşluklarının nasıl ayarlanacağından hem de ön tanımlı olmayan, tamamen
+keyfi bir sayfa boyutunun nasıl belirleneceğinden bahsedelim.
+
+Bu tür sayfa düzenlemeleri için LaTeX'de
+\href{http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/geometry/geometry.pdf}{geometry} paketi kullanılır. Öncelikle paketi
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}usepackage\{geometry\}}
+\end{Highlighting}
+\end{Shaded}
+
+komutuyla sahanlığa ekleyin. Ardından paket seçeneklerinde aşağıdaki
+tanımlamalarla sayfanın düzenini değiştirebilirsiniz:
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Tanım & Değer \\
+\midrule
+\endhead
+\texttt{top} & üst boșluk \\
+\texttt{bottom} & alt boșluk \\
+\texttt{left} & sol boșluk \\
+\texttt{right} & sağ boșluk \\
+\texttt{paperwidht} & sayfa genișliği \\
+\texttt{paperheight} & sayfa yüksekliği \\
+\bottomrule
+\end{longtable}
+
+Örneğin sahanlıkta
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}usepackage[paperwidth}\OtherTok{=}\NormalTok{175mm,paperheight}\OtherTok{=}\NormalTok{255mm,top}\OtherTok{=}\NormalTok{2cm,bottom}\OtherTok{=}\NormalTok{2cm,left}\OtherTok{=}\FloatTok{2.5}\NormalTok{cm,right}\OtherTok{=}\FloatTok{2.5}\NormalTok{cm]\{geometry\}}
+\end{Highlighting}
+\end{Shaded}
+
+komutunu verdiğinizde boyutu \(175\times 255\) mm, üst ve alt boşluğu
+\(2\) cm, sol ve sağ boşluğu \(2.5\) cm olan bir sayfa düzeni
+oluşturursunuz. Dilerseniz \texttt{paperwidth} ve\texttt{paperheight} tanımlamalarını
+yerine, örneğin \texttt{a4paper} yazarak sadece kenar boşluklarla ilgili
+tanımlamaları yapabilirsiniz.
+
+\begin{quote}
+LaTeX'de milimetre (mm) ve santimetre (cm) dışında inç (in), punto
+(pt), em ve ex gibi ölçü birimleri de vardır. Bunlara ileride
+değinilecektir. Ayrıca yine ileride daha ayrıntılı sayfa düzeni
+oluşturmaktan da bahsedeceğiz. Bu aşamada bu kadarı yeterli olacaktır.
+\end{quote}
+
+\hypertarget{satux131r-ve-sayfa-kesme}{%
+\section{Satır ve Sayfa Kesme}\label{satux131r-ve-sayfa-kesme}}
+
+LaTeX, kelimeler arası boşlukları otomatik ayarlayarak satırları iki
+yana yaslayarak dizer. Bir satırı kesip yeni bir satıra geçmek için \texttt{\textbackslash{}\textbackslash{}}
+veya \texttt{\textbackslash{}newline} komutları kullanılır.
+
+Birinci komut \texttt{\textbackslash{}\textbackslash{}*} şeklinde verildiğinde satırdan sonra sayfa
+kesilmesini önler.
+
+Benzer şeyi \texttt{\textbackslash{}linebreak} komutu da yapar. Fakat bu komut ile satır
+kesilirse LaTeX kalan yarım satırı iki yana yaslar. \texttt{\textbackslash{}nolinebreak}
+komutu ise satırın kesilmesini önler.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Yaslan güzelim yasla \textbackslash{}linebreak göğsüne beni.}
+\end{Highlighting}
+\end{Shaded}
+
+Birçok kelimeyi birlikte aynı satırda tutmak gerekirse \texttt{\textbackslash{}mbox} komutu
+kullanılır:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}mbox\{}\SpecialCharTok{\textless{}}\NormalTok{metin}\SpecialCharTok{\textgreater{}}\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+Buradaki \texttt{\textless{}metin\textgreater{}} içindeki kelimeler her durumda birleşik kalırlar.
+Benzer şeyi \texttt{\textbackslash{}fbox} komutu da metin etrafına çizgi çizerek yapar.
+
+Sayfayı kesip yeni bir sayfaya geçmek için \texttt{\textbackslash{}newpage} ya da \texttt{\textbackslash{}pagebreak}
+komutları kullanılır. \texttt{\textbackslash{}nopagebreak} komutu sayfa kesilmesini önler.
+\texttt{\textbackslash{}newpage} ile \texttt{\textbackslash{}pagebreak} komutları arasında da \texttt{\textbackslash{}newline} ile
+\texttt{\textbackslash{}linebreak} komutlarındakine benzer bir fark vardır.
 
 \backmatter
 

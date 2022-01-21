@@ -5,7 +5,7 @@ h3:komutlar Komutlar
 h3:paketler Paketler
 h3:ortamlar Ortamlar
 h3:gruplar Gruplar
-h3:boşluklar Boşluklar
+h3:bosluk Boşluklar
 h3:özel-amaçlı-karakterler Özel amaçlı karakterler
 h2:kurulum Kurulum
 h3:gnulinux GNU/Linux
@@ -15,8 +15,26 @@ h3:latex-editörleri LaTeX Editörleri
 h3:çevrimiçi-editörler Çevrimiçi Editörler
 h2:tipik Tipik Bir Belge Yazımı
 h2:belgesinifi Belge Sınıfları ve Seçenekleri
-h2:türkçe-dil-ayarları-ve-çoklu-dil-kullanımı Türkçe Dil Ayarları ve Çoklu Dil Kullanımı
+h2:turkce Türkçe Dil Ayarları ve Çoklu Dil Kullanımı
 h2:heceleme Heceleme
 h2:belgeye-başlık-oluşturma Belgeye Başlık Oluşturma
 h2:bölümleme-ve-içindekiler-tablosu Bölümleme ve İçindekiler Tablosu
+h2:kitap-projesi-başlatma Kitap Projesi Başlatma
+h2:varsayılan-sayfa-düzenini-değiştirme Varsayılan Sayfa Düzenini Değiştirme
+h2:satır-ve-sayfa-kesme Satır ve Sayfa Kesme
+h2:paragraflar-ve-cümle-sonları Paragraflar ve Cümle Sonları
+h2:aralıklar Aralıklar
+h3:dikey-aralıklar Dikey aralıklar
+h3:yatay-aralıklar Yatay aralıklar
+h2:metni-hizalamak-ve-sütunlara-bölmek Metni Hizalamak ve Sütunlara Bölmek
+h3:hizalama Hizalama
+h3:sütunlara-bölmek Sütunlara bölmek
+h2:listeleme Listeleme
+h3:temel-listeler Temel listeler
+h3:listeleri-özelleştirmek Listeleri özelleştirmek
+h2:yazıtipleri Yazıtipleri
+h3:giriş Giriş
+h3:aile Aile
+h3:biçem Biçem
+h3:boyut Boyut
 

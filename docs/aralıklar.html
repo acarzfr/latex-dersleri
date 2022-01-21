@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1.1 LaTeX Nedir? | LaTeX Dersleri</title>
+  <title>1.14 Aralıklar | LaTeX Dersleri</title>
   <meta name="description" content="TeX/LaTeX’e dair bir iki kelam." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1.1 LaTeX Nedir? | LaTeX Dersleri" />
+  <meta property="og:title" content="1.14 Aralıklar | LaTeX Dersleri" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://acarzfr.github.io/latex-dersleri/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="acarzfr/latex-dersleri" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1.1 LaTeX Nedir? | LaTeX Dersleri" />
+  <meta name="twitter:title" content="1.14 Aralıklar | LaTeX Dersleri" />
   
   <meta name="twitter:description" content="TeX/LaTeX’e dair bir iki kelam." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="genel.html"/>
-<link rel="next" href="önemli-yapılar.html"/>
+<link rel="prev" href="paragraflar-ve-cümle-sonları.html"/>
+<link rel="next" href="metni-hizalamak-ve-sütunlara-bölmek.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -231,41 +231,100 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="latex-nedir" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> LaTeX Nedir?</h2>
-<p>Önce TeX’le başlayalım. TeX, 1978’den
-itibaren <a href="https://www-cs-faculty.stanford.edu/~knuth/">Donald Knuth</a> tarafından belgelerin bilgisayarda dizilmesi
-için geliştirdiği bir dizgi sistemidir.
-LaTeX ise TeX’in kullanımını kolaylaştırmak için 1984 yılında <a href="http://www.lamport.org/">Leslie
-Lamport</a> tarafından tasarlanmış bir makro pakettir.</p>
-<p>LaTeX, genelde WYSIWYG<a href="kaynaklar.html#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> editörleriyle karşılaştırılır. WYSIWYG, Microsoft
-Word, Libreoffice Writer gibi kelime işlemcilere ya da Adobe Indesign
-gibi programlara verilen genel bir isimdir. Hepsinin ortak özelliği,
-girdi ile çıktının aynı anda ve birlikte görünmesidir.</p>
-<p>Bir metnin genel görünümü ve okunabilirliği, metnin nasıl
-hizalandığından ve kesildiğinden büyük ölçüde etkilenir. LaTeX, tüm
-paragraf için hizalamayı ve kesmeleri optimize eden son derece gelişmiş
-TeX algoritmalarını kullanır. Kelime işlemciler ve diğer programlar,
-satır başına çalıştıkları için oldukça yetersiz kalırlar. Bu, diğer
-şeylerin yanı sıra düzensiz aralıklara ve birçok kısa çizgiye sebep
-olur. Sonuçları görmeniz için Microsoft Word 2008 (Mac), Adobe InDesign
-CS4 ve LaTeX’le dizilmiş bir metni <a href="http://www.rtznet.nl/zink/comparison.pdf">şuradan</a> inceleyebilirsiniz.</p>
-<p>Sonuç, LaTeX’in diğer programların her ikisinden de üstün olduğunu
-açıkça gösterir: iki kat daha az tireleme kullanır ve yine de sözcük
-aralığındaki varyasyon, Word veya InDesign’dan belirgin şekilde daha
-azdır. LaTeX’te çok büyük sözcük aralığı içeren satırlar oluşmaz.</p>
-<p>LaTeX’de girdi ve çıktı ekranı farklıdır ve
-çıktıyı görmek için girdinin derleme işleminden geçmesi gerekir. Ayrıca
-birçok şey için WYSIWYG editörlerinde olmayan yapılar vardır. Şimdi, bu
-yapıların ne oldukları ve ne işe yaradıklarını açıklayalım.</p>
+<div id="aralıklar" class="section level2" number="1.14">
+<h2><span class="header-section-number">1.14</span> Aralıklar</h2>
+<p>LaTeX’de hem dikey hem de yatay aralıklar otomatik olarak ayarlanır.
+Fazladan aralıklar bırakmak için komutlar kullanılır.</p>
+<p>Aralık bırakırken kullanabileceğimiz ölçü birimleri aşağıda
+gösterilmiştir.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Birim</th>
+<th align="left">Değer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">mm</td>
+<td align="left">milimetre <span class="math inline">\(\approx 1/25\)</span> inç</td>
+</tr>
+<tr class="even">
+<td align="left">cm</td>
+<td align="left">santimetre = 10 mm</td>
+</tr>
+<tr class="odd">
+<td align="left">in</td>
+<td align="left">inç = 25.4 mm</td>
+</tr>
+<tr class="even">
+<td align="left">pt</td>
+<td align="left">punto <span class="math inline">\(\approx 1/72\)</span> inç</td>
+</tr>
+<tr class="odd">
+<td align="left">em</td>
+<td align="left">Kullanılan yazı tipinde ‘M’ harfinin genişliği</td>
+</tr>
+<tr class="even">
+<td align="left">ex</td>
+<td align="left">Kullanılan yazı tipinde ‘x’ harfinin yüksekliği</td>
+</tr>
+</tbody>
+</table>
+<div id="dikey-aralıklar" class="section level3" number="1.14.1">
+<h3><span class="header-section-number">1.14.1</span> Dikey aralıklar</h3>
+<p>Dikey aralık birkaç komutla bırakılabilir. Bunlardan biri <code>\vspace</code>
+olup, komut iki boş satır arasında</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="aralıklar.html#cb38-1" aria-hidden="true" tabindex="-1"></a>\vspace{<span class="sc">&lt;</span>uzunluk<span class="sc">&gt;</span>}</span></code></pre></div>
+<p>şeklinde verilir. Komut bu şekilde verildiğinde komutun zorunlu
+değişkeninde birimiyle belirtilen uzunluk kadar dikey aralık bırakılır.
+Eğer bir sayfanın başında veya sonunda aralık bırakılmak istenirse,
+komut <code>\vspace*</code> şeklinde yıldızlı vermelidir. Bu komutun aralığa ilave
+yapan <code>\addvspace</code> sürümü de vardır.</p>
+<p>Bir paragrafın iki satırı arasında veya bir tablonun satırları arasında
+ilave aralık açmak için</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="aralıklar.html#cb39-1" aria-hidden="true" tabindex="-1"></a>\\[<span class="sc">&lt;</span>uzunluk<span class="sc">&gt;</span>]</span></code></pre></div>
+<p>komutu kullanılır.</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="aralıklar.html#cb40-1" aria-hidden="true" tabindex="-1"></a>A\\[1ex]</span>
+<span id="cb40-2"><a href="aralıklar.html#cb40-2" aria-hidden="true" tabindex="-1"></a>B</span></code></pre></div>
+<p>Bu komutlarda belirtilen uzunluklar negatif de olabilir.</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="aralıklar.html#cb41-1" aria-hidden="true" tabindex="-1"></a>A\\[<span class="sc">-</span>2ex]</span>
+<span id="cb41-2"><a href="aralıklar.html#cb41-2" aria-hidden="true" tabindex="-1"></a>B</span></code></pre></div>
+<p>Sınırsız bir dikey aralık oluşturmak için <code>\vfill</code> komutu kullanılır. Bu
+komuttan sonra gelen her şey sayfanın altına yaslanır.</p>
+<p>Ön tanımlı gelen <code>\smallskip</code>, <code>\medskip</code> ve <code>\bigskip</code> komutları
+sırasıyla küçük, orta ve büyük aralıklar bırakır.</p>
+</div>
+<div id="yatay-aralıklar" class="section level3" number="1.14.2">
+<h3><span class="header-section-number">1.14.2</span> Yatay aralıklar</h3>
+<p>Ön tanımlı yatay aralıklar</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="aralıklar.html#cb42-1" aria-hidden="true" tabindex="-1"></a>\  \,  \<span class="sc">:</span>  \;  \quad  \qquad  \<span class="sc">!</span></span></code></pre></div>
+<p>komutlarıyla verilir. Bu komutlar sırasıyla bir sözcük arası, <span class="math inline">\(3/\!18\)</span> em, <span class="math inline">\(4/\!18\)</span> em, <span class="math inline">\(5/\!18\)</span> em, <span class="math inline">\(1\)</span> em, <span class="math inline">\(2\)</span> em, <span class="math inline">\(-3/\!18\)</span> em uzunlukta yatay aralık bırakır.</p>
+<p>Belli bir uzunlukta yatay aralık bırakmak için <code>\hspace</code> komutu
+kullanılır. Yine dikey aralıkta olduğu gibi yatay aralık negatif de
+olabilir. Eğer aralık satır başına veya sonuna rasgelse dahi bu aralığı
+korumak istiyorsanız, yıldızlı <code>\hspace*</code> komutu kullanırsınız.</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="aralıklar.html#cb43-1" aria-hidden="true" tabindex="-1"></a>A\hspace{2cm}B\\</span>
+<span id="cb43-2"><a href="aralıklar.html#cb43-2" aria-hidden="true" tabindex="-1"></a>A \hspace{2cm} B</span></code></pre></div>
+<p>Komutlardan önce veya sonra boşluk bırakmak farklı
+sonuçlar üretir.</p>
+<p>Sınırsız bir yatay aralık oluşturmak için <code>\hfill</code> komutu kullanılır. Bu
+komuttan sonra gelen her şey satırın sonuna yaslanır. Hem satır sonuna
+yaslamak hem de aralığı noktalarla doldurmak isterseniz <code>\dotfill</code>
+komutunu kullanırsınız. Satır sonuna yaslayıp aralığa çizgi çekmek
+isterseniz de <code>\hrulefill</code> komutunu kullanırsınız.</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="aralıklar.html#cb44-1" aria-hidden="true" tabindex="-1"></a>A\hfill B\\</span>
+<span id="cb44-2"><a href="aralıklar.html#cb44-2" aria-hidden="true" tabindex="-1"></a>A\dotfill B\\</span>
+<span id="cb44-3"><a href="aralıklar.html#cb44-3" aria-hidden="true" tabindex="-1"></a>A\hrulefill B</span></code></pre></div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="genel.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="önemli-yapılar.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="paragraflar-ve-cümle-sonları.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="metni-hizalamak-ve-sütunlara-bölmek.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

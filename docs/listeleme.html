@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1.1 LaTeX Nedir? | LaTeX Dersleri</title>
+  <title>1.16 Listeleme | LaTeX Dersleri</title>
   <meta name="description" content="TeX/LaTeX’e dair bir iki kelam." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1.1 LaTeX Nedir? | LaTeX Dersleri" />
+  <meta property="og:title" content="1.16 Listeleme | LaTeX Dersleri" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://acarzfr.github.io/latex-dersleri/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="acarzfr/latex-dersleri" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1.1 LaTeX Nedir? | LaTeX Dersleri" />
+  <meta name="twitter:title" content="1.16 Listeleme | LaTeX Dersleri" />
   
   <meta name="twitter:description" content="TeX/LaTeX’e dair bir iki kelam." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="genel.html"/>
-<link rel="next" href="önemli-yapılar.html"/>
+<link rel="prev" href="metni-hizalamak-ve-sütunlara-bölmek.html"/>
+<link rel="next" href="yazıtipleri.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -231,41 +231,65 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="latex-nedir" class="section level2" number="1.1">
-<h2><span class="header-section-number">1.1</span> LaTeX Nedir?</h2>
-<p>Önce TeX’le başlayalım. TeX, 1978’den
-itibaren <a href="https://www-cs-faculty.stanford.edu/~knuth/">Donald Knuth</a> tarafından belgelerin bilgisayarda dizilmesi
-için geliştirdiği bir dizgi sistemidir.
-LaTeX ise TeX’in kullanımını kolaylaştırmak için 1984 yılında <a href="http://www.lamport.org/">Leslie
-Lamport</a> tarafından tasarlanmış bir makro pakettir.</p>
-<p>LaTeX, genelde WYSIWYG<a href="kaynaklar.html#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> editörleriyle karşılaştırılır. WYSIWYG, Microsoft
-Word, Libreoffice Writer gibi kelime işlemcilere ya da Adobe Indesign
-gibi programlara verilen genel bir isimdir. Hepsinin ortak özelliği,
-girdi ile çıktının aynı anda ve birlikte görünmesidir.</p>
-<p>Bir metnin genel görünümü ve okunabilirliği, metnin nasıl
-hizalandığından ve kesildiğinden büyük ölçüde etkilenir. LaTeX, tüm
-paragraf için hizalamayı ve kesmeleri optimize eden son derece gelişmiş
-TeX algoritmalarını kullanır. Kelime işlemciler ve diğer programlar,
-satır başına çalıştıkları için oldukça yetersiz kalırlar. Bu, diğer
-şeylerin yanı sıra düzensiz aralıklara ve birçok kısa çizgiye sebep
-olur. Sonuçları görmeniz için Microsoft Word 2008 (Mac), Adobe InDesign
-CS4 ve LaTeX’le dizilmiş bir metni <a href="http://www.rtznet.nl/zink/comparison.pdf">şuradan</a> inceleyebilirsiniz.</p>
-<p>Sonuç, LaTeX’in diğer programların her ikisinden de üstün olduğunu
-açıkça gösterir: iki kat daha az tireleme kullanır ve yine de sözcük
-aralığındaki varyasyon, Word veya InDesign’dan belirgin şekilde daha
-azdır. LaTeX’te çok büyük sözcük aralığı içeren satırlar oluşmaz.</p>
-<p>LaTeX’de girdi ve çıktı ekranı farklıdır ve
-çıktıyı görmek için girdinin derleme işleminden geçmesi gerekir. Ayrıca
-birçok şey için WYSIWYG editörlerinde olmayan yapılar vardır. Şimdi, bu
-yapıların ne oldukları ve ne işe yaradıklarını açıklayalım.</p>
+<div id="listeleme" class="section level2" number="1.16">
+<h2><span class="header-section-number">1.16</span> Listeleme</h2>
+<div id="temel-listeler" class="section level3" number="1.16.1">
+<h3><span class="header-section-number">1.16.1</span> Temel listeler</h3>
+<p>LaTeX’de listeleme için değişik ortamlar vardır. Bu ortamlar tek başına
+kullanılabileceği gibi birlikte de kullanılabilirler. Her ortamda
+maddeler <code>\item</code> komutuyla belirtilir.</p>
+<p>Bir listeyi numaralı şekilde dizmek için <code>enumerate</code> ortamı kullanılır.</p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="listeleme.html#cb50-1" aria-hidden="true" tabindex="-1"></a>\begin{enumerate}</span>
+<span id="cb50-2"><a href="listeleme.html#cb50-2" aria-hidden="true" tabindex="-1"></a> \item madde <span class="dv">1</span></span>
+<span id="cb50-3"><a href="listeleme.html#cb50-3" aria-hidden="true" tabindex="-1"></a>  \begin{enumerate}</span>
+<span id="cb50-4"><a href="listeleme.html#cb50-4" aria-hidden="true" tabindex="-1"></a>    \item alt madde <span class="dv">1</span></span>
+<span id="cb50-5"><a href="listeleme.html#cb50-5" aria-hidden="true" tabindex="-1"></a>      \begin{enumerate}</span>
+<span id="cb50-6"><a href="listeleme.html#cb50-6" aria-hidden="true" tabindex="-1"></a>        \item en alt madde <span class="dv">1</span></span>
+<span id="cb50-7"><a href="listeleme.html#cb50-7" aria-hidden="true" tabindex="-1"></a>      \end{enumerate}</span>
+<span id="cb50-8"><a href="listeleme.html#cb50-8" aria-hidden="true" tabindex="-1"></a>    \item alt madde <span class="dv">2</span></span>
+<span id="cb50-9"><a href="listeleme.html#cb50-9" aria-hidden="true" tabindex="-1"></a>  \end{enumerate}</span>
+<span id="cb50-10"><a href="listeleme.html#cb50-10" aria-hidden="true" tabindex="-1"></a> \item madde <span class="dv">2</span></span>
+<span id="cb50-11"><a href="listeleme.html#cb50-11" aria-hidden="true" tabindex="-1"></a>\end{enumerate}</span></code></pre></div>
+<p>Numarasız, özel işaretli listeler için <code>itemize</code> ortamı kullanılır ve bu
+ortamda madde işareti değiştirilebilir.</p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb51-1"><a href="listeleme.html#cb51-1" aria-hidden="true" tabindex="-1"></a>\begin{itemize}</span>
+<span id="cb51-2"><a href="listeleme.html#cb51-2" aria-hidden="true" tabindex="-1"></a>\item madde <span class="dv">1</span></span>
+<span id="cb51-3"><a href="listeleme.html#cb51-3" aria-hidden="true" tabindex="-1"></a>\item madde <span class="dv">2</span></span>
+<span id="cb51-4"><a href="listeleme.html#cb51-4" aria-hidden="true" tabindex="-1"></a>\item[<span class="sc">$</span>\circ<span class="sc">$</span>] madde <span class="dv">3</span></span>
+<span id="cb51-5"><a href="listeleme.html#cb51-5" aria-hidden="true" tabindex="-1"></a>\item[<span class="sc">+</span>] madde <span class="dv">4</span></span>
+<span id="cb51-6"><a href="listeleme.html#cb51-6" aria-hidden="true" tabindex="-1"></a>\end{itemize}</span></code></pre></div>
+<p>Açıklamalı bir liste içinse <code>description</code> ortamı kullanılır. Bu ortamda
+köşeli parantez içine alınan anahtar kelimeler kalın dizilir.</p>
+<div class="sourceCode" id="cb52"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb52-1"><a href="listeleme.html#cb52-1" aria-hidden="true" tabindex="-1"></a>\begin{description}</span>
+<span id="cb52-2"><a href="listeleme.html#cb52-2" aria-hidden="true" tabindex="-1"></a>\item[Nokta] Boyutu olmayan</span>
+<span id="cb52-3"><a href="listeleme.html#cb52-3" aria-hidden="true" tabindex="-1"></a>\item[Çember] Bir noktaya eşit</span>
+<span id="cb52-4"><a href="listeleme.html#cb52-4" aria-hidden="true" tabindex="-1"></a>uzaklıktaki noktaların geometrik yeri</span>
+<span id="cb52-5"><a href="listeleme.html#cb52-5" aria-hidden="true" tabindex="-1"></a>\end{description}</span></code></pre></div>
+</div>
+<div id="listeleri-özelleştirmek" class="section level3" number="1.16.2">
+<h3><span class="header-section-number">1.16.2</span> Listeleri özelleştirmek</h3>
+<p>Listelerin özelleştirmek için
+<a href="http://ftp.ntua.gr/mirror/ctan/macros/latex/required/tools/enumerate.pdf">enumerate</a> paketi kullanılabilir. Paketi <code>\usepackage{enumerate}</code>
+komutuyla ekledikten sonra <code>enumerate</code> ortamını başlatan komutun peşine
+köşeli parantezler içinde madde işaretlerinin tipi belirtilebilir:</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="listeleme.html#cb53-1" aria-hidden="true" tabindex="-1"></a>\begin{enumerate}[I.]</span>
+<span id="cb53-2"><a href="listeleme.html#cb53-2" aria-hidden="true" tabindex="-1"></a>\item bir</span>
+<span id="cb53-3"><a href="listeleme.html#cb53-3" aria-hidden="true" tabindex="-1"></a>\item iki </span>
+<span id="cb53-4"><a href="listeleme.html#cb53-4" aria-hidden="true" tabindex="-1"></a>\item üç</span>
+<span id="cb53-5"><a href="listeleme.html#cb53-5" aria-hidden="true" tabindex="-1"></a>\end{enumerate}</span></code></pre></div>
+<p>Bunun dışında çok daha fazla özelleştirmeye izin veren
+<a href="http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/enumitem/enumitem.pdf">enumitem</a> paketi vardır. Bu paketi kullanarak yapılabilecek
+listelere de ilerde değineceğiz. Dileyen okur paket belgesini inceleyip
+listelerini özelleştirebilir.</p>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="genel.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="önemli-yapılar.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="metni-hizalamak-ve-sütunlara-bölmek.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="yazıtipleri.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
