@@ -520,8 +520,8 @@ ve \texttt{belge1.pdf} dosyalarının yanında yine \texttt{belge1} ile başlaya
 uzantılara sahip dosyalar olacaktır. Bu dosyaların ne olduklarına
 ilerleyen yazılarda değinilecektir ancak dileyen okur \citep[s. 13-14]{Oetiker}'e bakabilir.
 
-\hypertarget{belge-sux131nux131flarux131-ve-seuxe7enekleri}{%
-\section{Belge Sınıfları ve Seçenekleri}\label{belge-sux131nux131flarux131-ve-seuxe7enekleri}}
+\hypertarget{belgesinifi}{%
+\section{Belge Sınıfları ve Seçenekleri}\label{belgesinifi}}
 
 Bölüm \ref{tipik}'de \texttt{\textbackslash{}documentclass} komutunun zorunlu değişkeninin belge
 sınıfı olduğunu ve köşeli paratezler içine de seçeneklerin
@@ -605,7 +605,7 @@ olsun. Bu örnekte kağıt boyutu A5, ana yazı büyüklüğü 11 punto olan bir
 kitap yazacağımızı ve kitabın iki sütun olarak dizilmesini söyledik.
 
 \hypertarget{tuxfcrkuxe7e-dil-ayarlarux131-ve-uxe7oklu-dil-kullanux131mux131}{%
-\section{Türkçe Dil Ayarları ve Çoklu dil Kullanımı}\label{tuxfcrkuxe7e-dil-ayarlarux131-ve-uxe7oklu-dil-kullanux131mux131}}
+\section{Türkçe Dil Ayarları ve Çoklu Dil Kullanımı}\label{tuxfcrkuxe7e-dil-ayarlarux131-ve-uxe7oklu-dil-kullanux131mux131}}
 
 LaTeX'de Türkçe belgeler oluşturmak için öncelikle sahanlığa
 
@@ -712,6 +712,206 @@ olur. Örneğin
 
 komutuyla ``Heceleme'' kelimesinin nereden bölüneceği, ``FORTRAN'', ``Fortran'' ya da
 ``fortran'' kelimelerinin bölünmeyeceği LaTeX'e söylenmiş olur.
+
+\hypertarget{belgeye-baux15flux131k-oluux15fturma}{%
+\section{Belgeye Başlık Oluşturma}\label{belgeye-baux15flux131k-oluux15fturma}}
+
+LaTeX'de belgeye başlık oluşturmak için \texttt{\textbackslash{}title} komutu kullanılır.
+Yazar adı \texttt{\textbackslash{}author} komutuyla girilir. Birden fazla yazar varsa yazar
+adları arasına \texttt{\textbackslash{}and} komutu girilir.
+
+İsteğe bağlı olarak tarih için \texttt{\textbackslash{}date} komutu kullanılır. Eğer \texttt{\textbackslash{}date}
+komutu kullanılmazsa LaTeX belgenizi derlediğiniz günün tarihini basar.
+Tarihin basılmasını istemiyorsanız, bu komutu tarih yazılmadan \texttt{\textbackslash{}date\{\}}
+şeklinde kullanmanız gerekir.
+
+Son olarak, başlığın belgenize yazılması için \texttt{\textbackslash{}begin\{document\}}
+komutundan sonra başlığı oluşturmak istediğiniz yere \texttt{\textbackslash{}maketitle}
+komutunu girersiniz. Belge başlığını attıktan sonra yeni bir sayfanın
+açılıp açılmayacağı
+Bölüm \ref{belgesinifi}'de belirttiğimiz gibi belgenin sınıfına bağlı
+olarak belirlenir.
+
+Ayrıca \texttt{\textbackslash{}title}, \texttt{\textbackslash{}author} ve \texttt{\textbackslash{}date} komutları \texttt{\textbackslash{}thanks} komutunu
+içerebilir. Bu komutun değişkeni bir e-posta adresi, iş adresi veya bir
+teşekkür metni olabilir.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}documentclass[a4paper,12pt]\{article\}}
+\NormalTok{\textbackslash{}usepackage[T1]\{fontenc\}}
+\NormalTok{\textbackslash{}usepackage[turkish]\{babel\}}
+\NormalTok{\textbackslash{}title\{Belge Başlığı\}}
+\NormalTok{\textbackslash{}author\{Yazar }\DecValTok{1}\NormalTok{\textbackslash{}thanks\{A Üniversitesi\} \textbackslash{}and Yazar }\DecValTok{2}\NormalTok{\textbackslash{}thanks\{B Üniversitesi\}\}}
+\NormalTok{\textbackslash{}date\{XX.XX.XXXX\}}
+\NormalTok{\textbackslash{}begin\{document\}}
+\NormalTok{\textbackslash{}maketitle}
+
+\NormalTok{İçerik...}
+\NormalTok{\textbackslash{}end\{document\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{buxf6luxfcmleme-ve-iuxe7indekiler-tablosu}{%
+\section{Bölümleme ve İçindekiler Tablosu}\label{buxf6luxfcmleme-ve-iuxe7indekiler-tablosu}}
+
+LaTeX'de belgenizi bölümlere ayırmak için 7 seviye bulunmaktadır.
+
+\begin{longtable}[]{@{}lll@{}}
+\toprule
+Komut & Seviye & Açıklama \\
+\midrule
+\endhead
+\texttt{\textbackslash{}part\{...\}} & -1( book ve report ) o ( article) & letter hariç \\
+\texttt{\textbackslash{}chapter\{...\}} & 0 & sadece book ve report \\
+\texttt{\textbackslash{}section\{...\}} & 1 & letter hariç \\
+\texttt{\textbackslash{}subsection\{...\}} & 2 & letter hariç \\
+\texttt{\textbackslash{}subsubsection\{...\}} & 3 & letter hariç \\
+\texttt{\textbackslash{}paragraph\{...\}} & 4 & letter hariç \\
+\texttt{\textbackslash{}subparagraph\{...\}} & 5 & letter hariç \\
+\bottomrule
+\end{longtable}
+
+Türkçe dil paketi ekli belgelerde \texttt{\textbackslash{}part} komutu ``Kısım'', \texttt{\textbackslash{}chapter}
+komutu ``Bölüm'' olarak yazılır. Kısımlar I, II, III,\ldots{} şeklinde bölümler
+ise 1, 2, 3,\ldots{} şeklinde numaralandırılır. \texttt{\textbackslash{}section} komutu \texttt{book} ve
+\texttt{report} sınıflarında \texttt{\textbackslash{}chapter} komutunu takip ederek 1.1, 1.2,\ldots{}
+diğer sınıflarda 1, 2, 3,\ldots{} şeklinde numaralandırılır. \texttt{\textbackslash{}subsection}
+komutu da \texttt{\textbackslash{}section} komutunu takip ederek numaralandırılır.
+
+Türkçe dil paketi ekli belgelerde \texttt{\textbackslash{}part} komutu ``Kısım'', \texttt{\textbackslash{}chapter}
+komutu ``Bölüm'' olarak yazılır. Kısımlar I, II, III,\ldots{} şeklinde bölümler
+ise 1, 2, 3,\ldots{} şeklinde numaralandırılır. \texttt{\textbackslash{}section} komutu \texttt{book} ve
+\texttt{report} sınıflarında \texttt{\textbackslash{}chapter} komutunu takip ederek 1.1, 1.2,\ldots{}
+diğer sınıflarda 1, 2, 3,\ldots{} şeklinde numaralandırılır. \texttt{\textbackslash{}subsection}
+komutu da \texttt{\textbackslash{}section} komutunu takip ederek numaralandırılır.
+
+İçindekiler tablosu için LaTeX'e \texttt{\textbackslash{}tableofcontents} komutu verilir. Bu
+komutun yazıldığı yerde İçindekiler tablosu oluşturulur. İçindekiler
+tablosunun doğru dizilmesi için kaynak dosyanızı en az iki kere
+derlemeniz gerekir.
+
+LaTeX'de \texttt{article} sınıfında 4 ve 5'inci seviye başlıklara, \texttt{book} ve
+\texttt{report} sınıflarında ise bunlara ek 3'üncü seviye başlıklara numara
+verilmez ve numara verilmeyen başlıklar İçindekiler tablosuna yazılmaz.
+Bu seviyelerdeki başlıklara numara verilmesini ve İçindekiler tablosuna
+yazılması için iki adet \texttt{\textbackslash{}setcounter} komutu
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}setcounter\{secnumdepth\}\{}\SpecialCharTok{\textless{}}\NormalTok{seviye}\SpecialCharTok{\textgreater{}}\NormalTok{\}}
+\NormalTok{\textbackslash{}setcounter\{tocdepth\}\{}\SpecialCharTok{\textless{}}\NormalTok{seviye}\SpecialCharTok{\textgreater{}}\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+şeklinde kullanılır. Birinci komuttaki \texttt{\textless{}seviye\textgreater{}} değişkeninde kaçıncı
+seviyeye kadar olan başlıkların numaralandırılacağını, ikinci komuttaki
+\texttt{\textless{}seviye\textgreater{}} değişkeninde de kaçıncı seviyeye kadar olan başlıkların
+İçindekiler tablosuna yazılacağını sayıyla belirtirsiniz. Örneğin \texttt{book}
+ve \texttt{report} sınıflarında
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}setcounter\{secnumdepth\}\{}\DecValTok{3}\NormalTok{\}}
+\NormalTok{\textbackslash{}setcounter\{tocdepth\}\{}\DecValTok{3}\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+komutlarıyla \texttt{\textbackslash{}subsubsection} komutuna kadar olan başlıklara hem numara
+verir hem de İçindekiler tablosuna yazdırırsınız. Komutların çalışması
+için ya sahanlıkta ya da \texttt{\textbackslash{}tableofcontents} komutundan önce
+verilmelidir.
+
+Uzun başlıkların İçindekiler tablosunda daha kısa yazılması istenirse
+bölüm komutlarının zorunlu olmayan değişkenine başlıkların kısa şekli
+yazılır:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}section[Kısa Başlık]\{Uzuuuuuuuuuuuuuuuuun Başlık\}}
+\end{Highlighting}
+\end{Shaded}
+
+Bölüm komutlarının birde yıldızlı sürümleri vardır:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}part}\SpecialCharTok{*}\NormalTok{\{...\}}
+\NormalTok{\textbackslash{}chapter}\SpecialCharTok{*}\NormalTok{\{...\}}
+\NormalTok{\textbackslash{}section}\SpecialCharTok{*}\NormalTok{\{...\}}
+\NormalTok{\textbackslash{}subsection}\SpecialCharTok{*}\NormalTok{\{...\}}
+\NormalTok{\textbackslash{}subsubsection}\SpecialCharTok{*}\NormalTok{\{...\}}
+\NormalTok{\textbackslash{}paragraph}\SpecialCharTok{*}\NormalTok{\{...\}}
+\NormalTok{\textbackslash{}subparagraph}\SpecialCharTok{*}\NormalTok{\{...\}}
+\end{Highlighting}
+\end{Shaded}
+
+Komutlar bu şekilde verildiğinde başlığa numara verilmez ve İçindekiler
+tablosuna yazılmaz.
+
+İçindekiler tablosunu LaTeX otomatik oluştursa da elle eklemeler
+yapılabilir, hatta Kaynakça gibi özel sayfalarda bu eklemeler
+gereklidir. Bunun için \texttt{\textbackslash{}addcontentsline} komutu kullanılır.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}addcontentsline\{toc\}\{}\SpecialCharTok{\textless{}}\NormalTok{giriş formatı}\SpecialCharTok{\textgreater{}}\NormalTok{\}\{}\SpecialCharTok{\textless{}}\NormalTok{giriş metni}\SpecialCharTok{\textgreater{}}\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+Burada \texttt{toc}, bilginin yazılacağı İçindekiler tablosunun dosya
+uzantısıdır. Bütünleşik olarak oluşturduğunuz
+kaynakçanın İçindekiler tablosuna yazılması için
+\texttt{\textbackslash{}begin\{thebibliography\}} komutunun peşine \texttt{book} ve \texttt{report}
+sınıflarında
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}addcontentsline\{toc\}\{chapter\}\{Kaynakça\}}
+\end{Highlighting}
+\end{Shaded}
+
+\texttt{article} sınıfında ise
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}addcontentsline\{toc\}\{section\}\{Kaynaklar\}}
+\end{Highlighting}
+\end{Shaded}
+
+komutunun verilmesi gerekir.
+
+\begin{quote}
+``Kaynakça'' ya da ``Kaynaklar'' isimleri yerine farklı isimler
+kullanılabilir elbette. Ancak \texttt{thebibliography} ortamının
+oluşturulduğu yerlerde LaTeX bu isimleri yazdıracağından tutarlı
+olması açısından bu isimler önerilmiştir.
+\end{quote}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}documentclass[a4paper,12pt]\{article\}}
+\NormalTok{\textbackslash{}usepackage[T1]\{fontenc\}}
+\NormalTok{\textbackslash{}usepackage[turkish]\{babel\}}
+\NormalTok{\textbackslash{}title\{\textbackslash{}LaTeX}\StringTok{\textquotesingle{}de Bölümlendirme  ve İçindekiler Tablosu Oluşturma\}}
+\SpecialCharTok{\textbackslash{}a}\StringTok{uthor\{\textbackslash{}TeX dizgi\}}
+\SpecialCharTok{\textbackslash{}b}\StringTok{egin\{document\}}
+\StringTok{\textbackslash{}maketitle}
+\SpecialCharTok{\textbackslash{}t}\StringTok{ableofcontents}
+\StringTok{\textbackslash{}section\{Birinci Seviye Başlık\}}
+\StringTok{  İçerik...}
+\StringTok{\textbackslash{}subsection\{İkinci Seviye Başlık\}}
+\StringTok{  İçerik...}
+\StringTok{\textbackslash{}subsubsection\{Üçüncü Seviye Başlık\}}
+\StringTok{  İçerik...}
+\StringTok{\textbackslash{}section[Kısa Başlık]\{Uzuuuuuuuuun Başlık\}}
+\StringTok{  İçerik...}
+\StringTok{\textbackslash{}section*\{Numarasız Başlık\}}
+\SpecialCharTok{\textbackslash{}a}\StringTok{ddcontentsline\{toc\}\{section\}\{Numarasız Başlık\}}
+\StringTok{  İçerik...}
+\SpecialCharTok{\textbackslash{}e}\StringTok{nd\{document\}}
+\end{Highlighting}
+\end{Shaded}
 
 \backmatter
 

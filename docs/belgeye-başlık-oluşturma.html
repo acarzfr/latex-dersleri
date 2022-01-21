@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1.6 Türkçe Dil Ayarları ve Çoklu Dil Kullanımı | LaTeX Dersleri</title>
+  <title>1.8 Belgeye Başlık Oluşturma | LaTeX Dersleri</title>
   <meta name="description" content="TeX/LaTeX’e dair bir iki kelam." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1.6 Türkçe Dil Ayarları ve Çoklu Dil Kullanımı | LaTeX Dersleri" />
+  <meta property="og:title" content="1.8 Belgeye Başlık Oluşturma | LaTeX Dersleri" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://acarzfr.github.io/latex-dersleri/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="acarzfr/latex-dersleri" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1.6 Türkçe Dil Ayarları ve Çoklu Dil Kullanımı | LaTeX Dersleri" />
+  <meta name="twitter:title" content="1.8 Belgeye Başlık Oluşturma | LaTeX Dersleri" />
   
   <meta name="twitter:description" content="TeX/LaTeX’e dair bir iki kelam." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="belgesinifi.html"/>
-<link rel="next" href="heceleme.html"/>
+<link rel="prev" href="heceleme.html"/>
+<link rel="next" href="bölümleme-ve-içindekiler-tablosu.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -205,57 +205,43 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="türkçe-dil-ayarları-ve-çoklu-dil-kullanımı" class="section level2" number="1.6">
-<h2><span class="header-section-number">1.6</span> Türkçe Dil Ayarları ve Çoklu Dil Kullanımı</h2>
-<p>LaTeX’de Türkçe belgeler oluşturmak için öncelikle sahanlığa</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="türkçe-dil-ayarları-ve-çoklu-dil-kullanımı.html#cb14-1" aria-hidden="true" tabindex="-1"></a>\usepackage[T1]{fontenc}</span>
-<span id="cb14-2"><a href="türkçe-dil-ayarları-ve-çoklu-dil-kullanımı.html#cb14-2" aria-hidden="true" tabindex="-1"></a>\usepackage[turkish]{babel}</span></code></pre></div>
-<p>komutlarının verilmesi gerekir.</p>
-<p><code>T1</code> seçenekli <code>fontenc</code> paketi yazıtipi kodlamasıyla ilgili bir paket
-olup, hecelemenin doğru şekilde yapılmasını sağlar. Bir çok Avrupa
-dilinde de <code>T1</code> seçeneğiyle kullanılır. <code>turkish</code> seçenekli <code>babel</code>
-paketi de Chapter, Table, Contents,… gibi isimlerin Türkçeleşmesi
-(Bölüm, Tablo, İçindekiler,…) içindir.</p>
-<blockquote>
-<p>Yakın zamana kadar ö, ş, ç,… gibi Türkçe karakterlerin
-kullanılabilmesi için sahanlığa <code>\usepackage[utf8]{inputenc}</code> ya da
-<code>\usepackage[latin5]{inputenc}</code> komutlarından birinin verilmesi
-gerekiyordu. Bu paket (<code>inputenc</code>) girdi kodlamasını yöneten bir
-pakettir. Son güncellemelerle birlikte bu paketin kullanılma
-zorunluluğu ortadan kalkmıştır.</p>
-</blockquote>
-<p>Aşağıda Türkçe asgari bir LaTeX kaynak dosyası örneği verilmiştir.</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="türkçe-dil-ayarları-ve-çoklu-dil-kullanımı.html#cb15-1" aria-hidden="true" tabindex="-1"></a>\documentclass{article}</span>
-<span id="cb15-2"><a href="türkçe-dil-ayarları-ve-çoklu-dil-kullanımı.html#cb15-2" aria-hidden="true" tabindex="-1"></a>\usepackage[T1]{fontenc}</span>
-<span id="cb15-3"><a href="türkçe-dil-ayarları-ve-çoklu-dil-kullanımı.html#cb15-3" aria-hidden="true" tabindex="-1"></a>\usepackage[turkish]{babel}</span>
-<span id="cb15-4"><a href="türkçe-dil-ayarları-ve-çoklu-dil-kullanımı.html#cb15-4" aria-hidden="true" tabindex="-1"></a>\begin{document}</span>
-<span id="cb15-5"><a href="türkçe-dil-ayarları-ve-çoklu-dil-kullanımı.html#cb15-5" aria-hidden="true" tabindex="-1"></a>İşte  Türkçe ilk belgem.</span>
-<span id="cb15-6"><a href="türkçe-dil-ayarları-ve-çoklu-dil-kullanımı.html#cb15-6" aria-hidden="true" tabindex="-1"></a>\end{document}</span></code></pre></div>
-<p>Türkçe dışında ikinci bir dil kullanmak isterseniz, örneğin İngilizce,
-<code>babel</code> paketinin seçeneğini</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="türkçe-dil-ayarları-ve-çoklu-dil-kullanımı.html#cb16-1" aria-hidden="true" tabindex="-1"></a>\usepackage[english,turkish]{babel}</span></code></pre></div>
-<p>şeklinde değiştirmeniz gerekir. Burada etkin olan dil Türkçedir.
-İngilizceyi etkin hale getirmek için <code>\selectlanguage{english}</code> komutu
-kullanılır. Tekrar Türkçeye geçmek için de benzer şekilde
-<code>\selectlanguage{turkish}</code> komutu kullanılır.</p>
-<p>Bir kelime ya da cümle gibi kısa metinler kullanılacaksa
-<code>\foreignlanguage</code> komutu kullanılabilir:</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="türkçe-dil-ayarları-ve-çoklu-dil-kullanımı.html#cb17-1" aria-hidden="true" tabindex="-1"></a>\foreignlanguage{<span class="sc">&lt;</span>dil<span class="sc">&gt;</span>}{<span class="sc">&lt;</span>metin<span class="sc">&gt;</span>}</span></code></pre></div>
-<p>Uzun metinler içinse diğer bir seçenek <code>otherlanguage</code> ortamıdır.</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="türkçe-dil-ayarları-ve-çoklu-dil-kullanımı.html#cb18-1" aria-hidden="true" tabindex="-1"></a>\begin{otherlanguage}{<span class="sc">&lt;</span>dil<span class="sc">&gt;</span>}</span>
-<span id="cb18-2"><a href="türkçe-dil-ayarları-ve-çoklu-dil-kullanımı.html#cb18-2" aria-hidden="true" tabindex="-1"></a>...</span>
-<span id="cb18-3"><a href="türkçe-dil-ayarları-ve-çoklu-dil-kullanımı.html#cb18-3" aria-hidden="true" tabindex="-1"></a>\end{otherlanguage}</span></code></pre></div>
-<p>Bu ortamın isimleri değiştirmeyen, örneğin, dil seçeneği İngilizce
-olmasına rağmen belgeye bir tablo eklediğinizde “Table” yerine yine
-“Tablo” adını yazan yıldızlı sürümü de (<code>otherlanguage*</code>) vardır.</p>
+<div id="belgeye-başlık-oluşturma" class="section level2" number="1.8">
+<h2><span class="header-section-number">1.8</span> Belgeye Başlık Oluşturma</h2>
+<p>LaTeX’de belgeye başlık oluşturmak için <code>\title</code> komutu kullanılır.
+Yazar adı <code>\author</code> komutuyla girilir. Birden fazla yazar varsa yazar
+adları arasına <code>\and</code> komutu girilir.</p>
+<p>İsteğe bağlı olarak tarih için <code>\date</code> komutu kullanılır. Eğer <code>\date</code>
+komutu kullanılmazsa LaTeX belgenizi derlediğiniz günün tarihini basar.
+Tarihin basılmasını istemiyorsanız, bu komutu tarih yazılmadan <code>\date{}</code>
+şeklinde kullanmanız gerekir.</p>
+<p>Son olarak, başlığın belgenize yazılması için <code>\begin{document}</code>
+komutundan sonra başlığı oluşturmak istediğiniz yere <code>\maketitle</code>
+komutunu girersiniz. Belge başlığını attıktan sonra yeni bir sayfanın
+açılıp açılmayacağı
+Bölüm <a href="belgesinifi.html#belgesinifi">1.5</a>’de belirttiğimiz gibi belgenin sınıfına bağlı
+olarak belirlenir.</p>
+<p>Ayrıca <code>\title</code>, <code>\author</code> ve <code>\date</code> komutları <code>\thanks</code> komutunu
+içerebilir. Bu komutun değişkeni bir e-posta adresi, iş adresi veya bir
+teşekkür metni olabilir.</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="belgeye-başlık-oluşturma.html#cb21-1" aria-hidden="true" tabindex="-1"></a>\documentclass[a4paper,12pt]{article}</span>
+<span id="cb21-2"><a href="belgeye-başlık-oluşturma.html#cb21-2" aria-hidden="true" tabindex="-1"></a>\usepackage[T1]{fontenc}</span>
+<span id="cb21-3"><a href="belgeye-başlık-oluşturma.html#cb21-3" aria-hidden="true" tabindex="-1"></a>\usepackage[turkish]{babel}</span>
+<span id="cb21-4"><a href="belgeye-başlık-oluşturma.html#cb21-4" aria-hidden="true" tabindex="-1"></a>\title{Belge Başlığı}</span>
+<span id="cb21-5"><a href="belgeye-başlık-oluşturma.html#cb21-5" aria-hidden="true" tabindex="-1"></a>\author{Yazar <span class="dv">1</span>\thanks{A Üniversitesi} \and Yazar <span class="dv">2</span>\thanks{B Üniversitesi}}</span>
+<span id="cb21-6"><a href="belgeye-başlık-oluşturma.html#cb21-6" aria-hidden="true" tabindex="-1"></a>\date{XX.XX.XXXX}</span>
+<span id="cb21-7"><a href="belgeye-başlık-oluşturma.html#cb21-7" aria-hidden="true" tabindex="-1"></a>\begin{document}</span>
+<span id="cb21-8"><a href="belgeye-başlık-oluşturma.html#cb21-8" aria-hidden="true" tabindex="-1"></a>\maketitle</span>
+<span id="cb21-9"><a href="belgeye-başlık-oluşturma.html#cb21-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-10"><a href="belgeye-başlık-oluşturma.html#cb21-10" aria-hidden="true" tabindex="-1"></a>İçerik...</span>
+<span id="cb21-11"><a href="belgeye-başlık-oluşturma.html#cb21-11" aria-hidden="true" tabindex="-1"></a>\end{document}</span></code></pre></div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="belgesinifi.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="heceleme.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="heceleme.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="bölümleme-ve-içindekiler-tablosu.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
