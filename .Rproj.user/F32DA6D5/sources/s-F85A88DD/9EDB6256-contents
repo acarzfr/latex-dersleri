@@ -151,7 +151,7 @@ Dolayısıyla bu karakterleri doğrudan kullanmak istenmeyen sonuçlara yol
 açabilir.
 
 ```{r}
-#  $  %   &   {   }   ~  ^  _ \
+# $ %   &   {   }   ~  ^  _ \
 ```
 
 Bu karakterleri çıktıda elde etmek isterseniz, sondaki hariç, başına bir
@@ -840,8 +840,8 @@ tanımlamalarla sayfanın düzenini değiştirebilirsiniz:
 ```
 
 
-komutunu verdiğinizde boyutu $175\times 255$ mm, üst ve alt boşluğu
-$2$ cm, sol ve sağ boşluğu $2.5$ cm olan bir sayfa düzeni
+komutunu verdiğinizde boyutu$175\times 255$mm, üst ve alt boşluğu
+$2$cm, sol ve sağ boşluğu$2.5$cm olan bir sayfa düzeni
 oluşturursunuz. Dilerseniz `paperwidth` ve` paperheight` tanımlamalarını
 yerine, örneğin `a4paper` yazarak sadece kenar boşluklarla ilgili
 tanımlamaları yapabilirsiniz.
@@ -927,10 +927,10 @@ gösterilmiştir.
 
 |  Birim|  Değer|
 |:--|:--|
-|mm   |milimetre $\approx 1/25$ inç|
+|mm   |milimetre$\approx 1/25$inç|
 |  cm|   santimetre = 10 mm|
  | in  | inç = 25.4 mm|
- | pt |  punto $\approx 1/72$ inç|
+ | pt |  punto$\approx 1/72$inç|
  | em  | Kullanılan yazı tipinde 'M' harfinin genişliği|
  | ex  | Kullanılan yazı tipinde 'x' harfinin yüksekliği|
 
@@ -998,7 +998,7 @@ sırasıyla küçük, orta ve büyük aralıklar bırakır.
 ```
 
 
-komutlarıyla verilir. Bu komutlar sırasıyla bir sözcük arası, $3/\!18$ em, $4/\!18$ em, $5/\!18$ em, $1$ em, $2$ em, $-3/\!18$ em uzunlukta yatay aralık bırakır.
+komutlarıyla verilir. Bu komutlar sırasıyla bir sözcük arası,$3/\!18$em,$4/\!18$em,$5/\!18$em,$1$em,$2$em,$-3/\!18$em uzunlukta yatay aralık bırakır.
 
 
 
@@ -1351,220 +1351,268 @@ normaldir.
 ```
 
 
-::: {.wp-block-column .is-vertically-aligned-center}
-[example-27\
-](https://www.texdizgi.com/wp-content/uploads/2020/04/example-27.pdf){.pdfemb-viewer
-style="" data-width="max" data-height="max" toolbar="bottom"
-toolbar-fixed="off"}
-:::
-:::
+[Çıktı](https://github.com/acarzfr/latex-dersleri/blob/main/examples/ex3.pdf)
 
-::: wp-block-columns
-::: {.wp-block-column .is-vertically-aligned-center}
-::: {.wp-block-codemirror-blocks-code-block .code-block}
-``` {.CodeMirror setting="{\"mode\":\"stex\",\"mime\":\"text/x-latex\",\"theme\":\"monokai\",\"lineNumbers\":false,\"styleActiveLine\":false,\"lineWrapping\":false,\"readOnly\":false,\"language\":\"LaTeX\",\"modeName\":\"stex\"}"}
+
+``` {r eval=FALSE}
 İzleyen ifade {\slshape {\bfseries eğik kalındır}}.
 ```
-:::
-:::
 
-::: {.wp-block-column .is-vertically-aligned-center}
-[example-28\
-](https://www.texdizgi.com/wp-content/uploads/2020/04/example-28.pdf){.pdfemb-viewer
-style="" data-width="max" data-height="max" toolbar="bottom"
-toolbar-fixed="off"}
-:::
-:::
 
-::: wp-block-columns
-::: {.wp-block-column .is-vertically-aligned-center}
-::: {.wp-block-codemirror-blocks-code-block .code-block}
-``` {.CodeMirror setting="{\"mode\":\"stex\",\"mime\":\"text/x-latex\",\"theme\":\"monokai\",\"lineNumbers\":false,\"styleActiveLine\":false,\"lineWrapping\":false,\"readOnly\":false,\"language\":\"LaTeX\",\"modeName\":\"stex\"}"}
+``` {r eval=FALSE}
 İzleyen ifade \textit{\textbf{italik kalın}}, ama bu
 \textsc{\textit{büyük küçük harf değil}}.
 ```
-:::
-:::
 
-::: {.wp-block-column .is-vertically-aligned-center}
-[example-30\
-](https://www.texdizgi.com/wp-content/uploads/2020/04/example-30.pdf){.pdfemb-viewer
-style="" data-width="max" data-height="max" toolbar="bottom"
-toolbar-fixed="off"}
-:::
-:::
+
 
 Eğer vurgulu metin içinde bazı kelimeler tekrar vurgulanırsa bu
 kelimeler normale döner.
 
-::: wp-block-columns
-::: {.wp-block-column .is-vertically-aligned-center}
-::: {.wp-block-codemirror-blocks-code-block .code-block}
-``` {.CodeMirror setting="{\"mode\":\"stex\",\"mime\":\"text/x-latex\",\"theme\":\"monokai\",\"lineNumbers\":false,\"styleActiveLine\":false,\"lineWrapping\":false,\"readOnly\":false,\"language\":\"LaTeX\",\"modeName\":\"stex\"}"}
+``` {r eval=FALSE}
 {\em Vurgulu metinde tekrar
 vurgu yapılırsa {\em normale}
 döner.}
 ```
-:::
-:::
 
-::: {.wp-block-column .is-vertically-aligned-center}
-[example-32\
-](https://www.texdizgi.com/wp-content/uploads/2020/04/example-32.pdf){.pdfemb-viewer
-style="" data-width="max" data-height="max" toolbar="bottom"
-toolbar-fixed="off"}
-:::
-:::
+
+
 
 LaTeX'de vurgu yukarıdaki gibi yapılsa da altını çizerek vurgu yapmak
 isteyen olabilir. Kuyruklu harflerin altı çizildiğinde varsayılan satır
 aralığı değiştiğinden vurguyu bu şekilde yapmamanız daha doğrudur. Ancak
 illa altını çizmek isterseniz `\underline` komutunu kullanabilirsiniz.
 
-::: wp-block-columns
-::: {.wp-block-column .is-vertically-aligned-center}
-::: {.wp-block-codemirror-blocks-code-block .code-block}
-``` {.CodeMirror setting="{\"mode\":\"stex\",\"mime\":\"text/x-latex\",\"theme\":\"monokai\",\"lineNumbers\":false,\"styleActiveLine\":false,\"lineWrapping\":false,\"readOnly\":false,\"language\":\"LaTeX\",\"modeName\":\"stex\"}"}
-Altı \underline{çizili} 
-kelimeler satır aralığını
-bozar. İyisi mi altını çizmeyin.
-```
-:::
-:::
-
-::: {.wp-block-column .is-vertically-aligned-center}
-[example-33\
-](https://www.texdizgi.com/wp-content/uploads/2020/04/example-33.pdf){.pdfemb-viewer
-style="" data-width="max" data-height="max" toolbar="bottom"
-toolbar-fixed="off"}
-:::
-:::
 
 ### Boyut
 
 Yazıtipi boyutunu değiştirmek için aşağıdaki bildirimler kullanılır.
 
-::: wp-block-image
-![Yazıtipi Boyutu Değiştiren
-Bildirimler](https://www.texdizgi.com/wp-content/uploads/2020/04/2020-04-26-19_38_48-Window-1.png){.wp-image-2440
-loading="lazy" width="337" height="387"
-srcset="https://www.texdizgi.com/wp-content/uploads/2020/04/2020-04-26-19_38_48-Window-1.png 337w, https://www.texdizgi.com/wp-content/uploads/2020/04/2020-04-26-19_38_48-Window-1-261x300.png 261w"
-sizes="(max-width: 337px) 100vw, 337px"}
-:::
 
-::: wp-block-columns
-::: {.wp-block-column .is-vertically-aligned-center}
-::: {.wp-block-codemirror-blocks-code-block .code-block}
-``` {.CodeMirror setting="{\"mode\":\"stex\",\"mime\":\"text/x-latex\",\"theme\":\"monokai\",\"lineNumbers\":false,\"styleActiveLine\":false,\"lineWrapping\":false,\"readOnly\":false,\"language\":\"LaTeX\",\"modeName\":\"stex\"}"}
+![Yazıtipi Boyutu Değiştiren
+Bildirimler](images/yazitipi8.png)
+
+
+``` {r eval=FALSE}
 {\Large Büyük} ve
 {\scriptsize küçük} harfler.
 ```
-:::
-:::
 
-::: {.wp-block-column .is-vertically-aligned-center}
-[example-34\
-](https://www.texdizgi.com/wp-content/uploads/2020/04/example-34.pdf){.pdfemb-viewer
-style="" data-width="max" data-height="max" toolbar="bottom"
-toolbar-fixed="off"}
-:::
-:::
 
 Bu bildirimlerin aynı zamanda satır aralığını da değiştirdiğine dikkat
 edilmelidir. Aşağıdaki iki örnekte, `\par` (paragraf) komutunun
 verdiğiniz yere bağlı olarak farklı sonuçlar ürettiği gösterilmiştir.
 Doğru kullanım ikincisidir.
 
-::: wp-block-columns
-::: {.wp-block-column .is-vertically-aligned-center}
-::: {.wp-block-codemirror-blocks-code-block .code-block}
-``` {.CodeMirror setting="{\"mode\":\"stex\",\"mime\":\"text/x-latex\",\"theme\":\"monokai\",\"lineNumbers\":false,\"styleActiveLine\":false,\"lineWrapping\":false,\"readOnly\":false,\"language\":\"LaTeX\",\"modeName\":\"stex\"}"}
+
+``` {r eval=FALSE}
 {\large 
 Sokrates: Platon
 yalan söyleyecek
 aşağıdaki cümlede.}\par
 ```
-:::
-:::
 
-::: {.wp-block-column .is-vertically-aligned-center}
-[example-36\
-](https://www.texdizgi.com/wp-content/uploads/2020/04/example-36.pdf){.pdfemb-viewer
-style="" data-width="max" data-height="max" toolbar="bottom"
-toolbar-fixed="off"}
-:::
-:::
 
-::: wp-block-columns
-::: {.wp-block-column .is-vertically-aligned-center}
-::: {.wp-block-codemirror-blocks-code-block .code-block}
-``` {.CodeMirror setting="{\"mode\":\"stex\",\"mime\":\"text/x-latex\",\"theme\":\"monokai\",\"lineNumbers\":false,\"styleActiveLine\":false,\"lineWrapping\":false,\"readOnly\":false,\"language\":\"LaTeX\",\"modeName\":\"stex\"}"}
+[Çıktı](https://github.com/acarzfr/latex-dersleri/blob/main/examples/ex4.pdf)
+
+
+``` {r eval=FALSE}
 {\large Platon: Sokrates
 doğruyu söyledi
 önceki cümlede.\par}
 ```
-:::
-:::
 
-::: {.wp-block-column .is-vertically-aligned-center}
-[example-38\
-](https://www.texdizgi.com/wp-content/uploads/2020/04/example-38.pdf){.pdfemb-viewer
-style="" data-width="max" data-height="max" toolbar="bottom"
-toolbar-fixed="off"}
-:::
-:::
+
+[Çıktı](https://github.com/acarzfr/latex-dersleri/blob/main/examples/ex5.pdf)
 
 Bu bildirimlerin etkisi belge ana yazıtipi boyutuna bağımlıdır. Mutlak
 boyutlar aşağıdaki tabloda gösterilmiştir.
 
-::: wp-block-image
+
 ![Yazıtipleri Mutlak
-Boyutları](https://www.texdizgi.com/wp-content/uploads/2020/04/2020-04-26-19_48_34-Window.png){.wp-image-2451
-loading="lazy" width="674" height="334"
-srcset="https://www.texdizgi.com/wp-content/uploads/2020/04/2020-04-26-19_48_34-Window.png 674w, https://www.texdizgi.com/wp-content/uploads/2020/04/2020-04-26-19_48_34-Window-300x149.png 300w"
-sizes="(max-width: 674px) 100vw, 674px"}
-:::
+Boyutları](images/yazitipi9.png)
+
 
 Bağımsız bir yazıtipi boyutu elde etmek için `\fontsize` ile
 `\selectfont` komutları birlikte kullanılır.
 
-::: {.wp-block-codemirror-blocks-code-block .code-block}
-``` {.CodeMirror setting="{\"mode\":\"stex\",\"mime\":\"text/x-latex\",\"theme\":\"monokai\",\"lineNumbers\":false,\"styleActiveLine\":false,\"lineWrapping\":false,\"readOnly\":false,\"language\":\"LaTeX\",\"modeName\":\"stex\"}"}
+
+``` {r eval=FALSE}
 {\fontsize{<boyut>}{<aralık>}\selectfont <metin>}
 ```
-:::
+
 
 Buradaki `<boyut>` yazıtipi boyutu, `<aralık>` ise satır aralığıdır.
 İkisinin de ölçü birimi punto (pt) olup, temel kural, aralığın boyutun
-\$ 1.2 \$ katı olmasıdır.
+$1.2$katı olmasıdır.
 
-::: wp-block-columns
-::: {.wp-block-column .is-vertically-aligned-center}
-::: {.wp-block-codemirror-blocks-code-block .code-block}
-``` {.CodeMirror setting="{\"mode\":\"stex\",\"mime\":\"text/x-latex\",\"theme\":\"monokai\",\"lineNumbers\":false,\"styleActiveLine\":false,\"lineWrapping\":false,\"readOnly\":false,\"language\":\"LaTeX\",\"modeName\":\"stex\"}"}
+
+``` {r eval=FALSE}
 {\fontsize{30}{36}\selectfont
 Yazı tipi boyutu 30 punto,
 satır aralığı 36 punto.}
 ```
-:::
-:::
 
-::: {.wp-block-column .is-vertically-aligned-center}
-[example-39\
-](https://www.texdizgi.com/wp-content/uploads/2020/04/example-39.pdf){.pdfemb-viewer
-style="" data-width="max" data-height="max" toolbar="bottom"
-toolbar-fixed="off"}
-:::
-:::
 
 Ana yazıtipi boyutu `\normalsize` komutunda saklı olup, `\renewcommand`
 komutuyla değiştirilebilir.
 
-::: {.wp-block-codemirror-blocks-code-block .code-block}
-``` {.CodeMirror setting="{\"mode\":\"stex\",\"mime\":\"text/x-latex\",\"theme\":\"monokai\",\"lineNumbers\":false,\"styleActiveLine\":false,\"lineWrapping\":false,\"readOnly\":false,\"language\":\"LaTeX\",\"modeName\":\"stex\"}"}
+
+``` {r eval=FALSE}
 \renewcommand{\normalsize}{\fontsize{30}{36}\selectfont}
 ```
-:::
 
-Yukarıdaki komutu sahanlığa yazarsanız belgenizin ana yazıtipi boyutu \$
-30 \$ pt, satır aralığı ise \$ 36 \$ pt olur.
+
+Yukarıdaki komutu sahanlığa yazarsanız belgenizin ana yazıtipi boyutu 
+30  pt, satır aralığı ise  36  pt olur.
+
+
+## Renk Kullanmak
+
+LaTeX'de renkler
+[color](http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/required/graphics/color.pdf) ya da
+[xcolor](http://ftp.ntua.gr/mirror/ctan/macros/latex/contrib/xcolor/xcolor.pdf) paketleriyle kullanılır. İkinci paket daha
+güçlüdür.
+
+
+``` {r eval=FALSE}
+\usepackage{xcolor}
+```
+
+
+komutuyla paketi ekledikten sonra `\color` ya da `\textcolor` komutları
+aşağıdaki şekillerde kullanılır.
+
+
+``` {r eval=FALSE}
+\color{red}{Kırmızı}\\
+{\color{blue} Tamamı mavi}\\
+\textcolor{pink}{Pembe}
+```
+
+
+
+Kullanılabilecek renk adları black, white, gray, darkgray, lightgray,
+brown, red, green, blue, cyan, magenta, lime, olive, orange, pink,
+purple, teal, violet ve yellow'dur.
+
+Eğer `\documentclass` komutunun seçeneğine `divpsnames` yazılırsa
+aşağıdaki renkler de kullanılabilir duruma gelir.
+
+
+![**dvipsnames** seçeneğiyle gelen
+renkler](images/renkler.png)
+
+Bunlar da yeterli gelmiyorsa seçeneklere bir de `svgnames` yazın ve
+[buradaki](https://www.latextemplates.com/svgnames-colors){rel="noreferrer noopener"
+target="_blank"} yüzden fazla rengi kullanılabilir duruma getirin.
+
+
+``` {r eval=FALSE}
+\documentclass[svgnames,dvipsnames]{article}
+```
+
+
+### Yeni renkler oluşturmak
+
+LaTeX'in size hazır olarak verdiği renkler yeterli gelmezse kendi
+renklerinizi oluşturabilirsiniz. Bu, iki şekilde yapılabilir.
+
+Hazır renkler istenilen oranlarda karıştırılarak yeni renkler elde
+edilebilir. Aşağıda karışımın nasıl hazırlanabileceği gösterilmiştir.
+
+
+``` {r eval=FALSE}
+\color{blue!80}{\%80 mavi \%20 beyaz}\\
+\color{red!40!blue}{\%40 kırmızı \%60 mavi} \\
+{\color{yellow!20!green!75!black} \%20x0.75=15 sarı
+\%(100-20)x0.75=60 yeşil \%100-75=25 siyah}
+```
+
+
+
+[Çıktı](https://github.com/acarzfr/latex-dersleri/blob/main/examples/ex6.pdf)
+
+İkinci yol `\definecolor` komutuyla renk modelleri kullanmaktır.
+
+| Model | Açıklama |
+| :--- | :--- |
+| gray | Grinin tonları (0-1). 0 (siyah), 1 (beyaz). Yani 0.95 çok açk gri, 0.30 koyu gri olur. |
+| rgb | Red, Green, Blue (0-1). Üç renk (kurmızl, yeșil, mavi) 0 ile 1 arasında bir sayryla temsil edilir. |
+| RGB | Red, Green, Blue (0-255). Üç renk (karmız1, yeșil, mavi) 0 ile 255 arasında bir sayıyla temsil edilir. |
+| HTML | Red, Green, Blue (oo-FF). Kodlar RRGGBB şeklinde verilir. |
+| cmyk | Cyan, Magenta, Yellow, Black (0-1). Dört renk (camgöbeği, eflatun, sarı, siyah) 0 ile 1 arasında bir sayıyla temsil edilir. |
+
+Komut
+
+
+``` {r eval=FALSE}
+\definecolor{<isim>}{<renk modeli>}{<kod>}
+```
+
+
+şeklinde verilir. Burada `<isim>`, sizin daha sonra kullanmak üzere
+vereceğiniz bir isimdir. Kodlar için
+[HueSnap](https://www.huesnap.com/color) adresinden yararlanabilirsiniz. Örneğin
+
+
+``` {r eval=FALSE}
+\definecolor{renk1}{gray}{0.50}
+\definecolor{renk2}{rgb}{1,0.7,0.3}
+\definecolor{renk3}{RGB}{125,32,200}
+\definecolor{renk4}{HTML}{CC33CC}
+\definecolor{renk5}{cmyk}{0,0.7,1,0.5}
+```
+
+
+komutlarıyla `renk1`, `renk2`, `renk3`, `renk4` ve `renk5` adında beş
+adet renk tanımlanmış olur. Bu komutlar ya sahanlığa ya da bu renkleri
+kullanacağınız satırdan önce gövdeye yazılmalıdır.
+
+
+
+Yeni oluşturduğunuz rengi tek seferlik kullanacaksanız
+
+
+``` {r eval=FALSE}
+\color[<model>]{<kod>}
+\textcolor[<model>]{<kod>}{<metin>}
+```
+
+
+komutlarını kullanabilirsiniz.
+
+
+``` {r eval=FALSE}
+{\color[RGB]{102,0,51} Bol}\\
+\textcolor[RGB]{0,76,153}{Çeşit bol}
+```
+
+
+Metnin arka planını renklendirmek için `\colorbox` komutu kullanılır.
+Benzer `\fcolorbox` komutu aynı şeyi çizgi çizerek yapar.
+
+
+``` {r eval=FALSE}
+\colorbox{<arka plan rengi>}{<metin>}
+\colorbox[<renk modeli>]{<arka plan rengi>}{<metin>}
+\fcolorbox{<çizgi rengi>}{<arka plan rengi>}{<metin>}
+\fcolorbox[<renk modeli>]{<çizgi rengi>}{<arka plan rengi>}{<metin>}
+```
+
+
+Komutlar yukarıda gösterildiği şekilde kullanılabilir.
+
+
+``` {r eval=FALSE}
+\colorbox{Cyan}{Metin}
+\colorbox[rgb]{0.4,0.4,0.5}{Metin}
+\fcolorbox{red}{yellow}{Metin}
+\fcolorbox[RGB]{0,0,0}{255,204,255}{Metin}
+```
+
+
+Sayfaları renklendirmek için ise `\pagecolor` komutu kullanılır. Komutun
+zorunlu değişkeninde renk belirtilir. Tekrar normale (beyaz) dönmek için
+`\nopagecolor` komutu kullanılır. Eğer bu işe yaramazsa
+`\pagecolor{white}` komutunu kullanabilirsiniz.

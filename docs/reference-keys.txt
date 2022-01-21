@@ -15,7 +15,7 @@ latex-editörleri
 çevrimiçi-editörler
 tipik
 belgesinifi
-türkçe-dil-ayarları-ve-çoklu-dil-kullanımı
+turkce
 heceleme
 belgeye-başlık-oluşturma
 bölümleme-ve-içindekiler-tablosu
@@ -37,4 +37,5 @@ giriş
 aile
 biçem
 boyut
-turkce
+renk-kullanmak
+yeni-renkler-oluşturmak

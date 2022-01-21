@@ -284,8 +284,8 @@ Gruplar, ortam benzeri yapılardır. Grup \texttt{\textbackslash{}begingroup} ko
 ve \texttt{\textbackslash{}endgroup} komutuyla biter. Grubun içinde kullanılan bir bildirim
 sadece gruba uygulanır.
 
-\hypertarget{boux15fluklar}{%
-\subsection{Boşluklar}\label{boux15fluklar}}
+\hypertarget{bosluk}{%
+\subsection{Boşluklar}\label{bosluk}}
 
 LaTeX'de belgenizin metnini oluştururken ister klavyedeki Space, ister
 Tab tuşu ile boşluk bırakın, bu boşluklar LaTeX tarafından bir karakter
@@ -604,8 +604,8 @@ Başka bir örnek
 olsun. Bu örnekte kağıt boyutu A5, ana yazı büyüklüğü 11 punto olan bir
 kitap yazacağımızı ve kitabın iki sütun olarak dizilmesini söyledik.
 
-\hypertarget{tuxfcrkuxe7e-dil-ayarlarux131-ve-uxe7oklu-dil-kullanux131mux131}{%
-\section{Türkçe Dil Ayarları ve Çoklu Dil Kullanımı}\label{tuxfcrkuxe7e-dil-ayarlarux131-ve-uxe7oklu-dil-kullanux131mux131}}
+\hypertarget{turkce}{%
+\section{Türkçe Dil Ayarları ve Çoklu Dil Kullanımı}\label{turkce}}
 
 LaTeX'de Türkçe belgeler oluşturmak için öncelikle sahanlığa
 
@@ -1105,12 +1105,6 @@ Benzer şeyi \texttt{\textbackslash{}linebreak} komutu da yapar. Fakat bu komut 
 kesilirse LaTeX kalan yarım satırı iki yana yaslar. \texttt{\textbackslash{}nolinebreak}
 komutu ise satırın kesilmesini önler.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{Yaslan güzelim yasla \textbackslash{}linebreak göğsüne beni.}
-\end{Highlighting}
-\end{Shaded}
-
 Birçok kelimeyi birlikte aynı satırda tutmak gerekirse \texttt{\textbackslash{}mbox} komutu
 kullanılır:
 
@@ -1127,6 +1121,613 @@ Sayfayı kesip yeni bir sayfaya geçmek için \texttt{\textbackslash{}newpage} y
 komutları kullanılır. \texttt{\textbackslash{}nopagebreak} komutu sayfa kesilmesini önler.
 \texttt{\textbackslash{}newpage} ile \texttt{\textbackslash{}pagebreak} komutları arasında da \texttt{\textbackslash{}newline} ile
 \texttt{\textbackslash{}linebreak} komutlarındakine benzer bir fark vardır.
+
+\hypertarget{paragraflar-ve-cuxfcmle-sonlarux131}{%
+\section{Paragraflar ve Cümle Sonları}\label{paragraflar-ve-cuxfcmle-sonlarux131}}
+
+Boş bir satırın yeni bir paragraf açtığını Bölüm \ref{bosluk}'de belirtmiştik. Aynı şey, \texttt{\textbackslash{}par} komutuyla da yapılabilir.
+Ancak bu komut yeni bir paragraf açmaktan ziyade farklı amaçlar için
+kullanılır (yeri geldiğinde değinilecektir). Nitekim kaynak dosyanızın
+okunabilirliği açısından paragrafları ayırmak için boş bir satır
+bırakmak daha kullanışlıdır.
+
+LaTeX'de varsayılan olarak \texttt{\textbackslash{}chapter} ve \texttt{\textbackslash{}section} gibi bölümleme
+komutlarından sonra oluşturulan ilk paragraf girintisiz, sonrakiler
+girintili olur. Bu, paragraf başlarında \texttt{\textbackslash{}indent} ya da \texttt{\textbackslash{}noindent}
+komutlarıyla tek seferliğine değiştirilebilir. Birinci komut girinti
+oluşturur, ikincisi ise girintiyi kaldırır.
+
+LaTeX, okumayı kolaylaştırmak için cümle sonlarında fazladan boşluklar
+bırakır. Bunu yaparken de her cümlenin nokta, soru işareti veya ünlem
+işaretiyle bittiğini varsayar. Kısaltmalarda büyük harflerden sonra
+nokta geldiğinden, büyük harften sonra nokta koyulursa LaTeX bunu cümle
+sonu saymaz. Eğer bir büyük harften sonra nokta koyuyorsanız ve burası
+cümlenin sonuysa LaTeX'in burayı cümle sonu sayması için büyük harften
+sonraki noktanın önüne \texttt{\textbackslash{}@} koymanız gerekir.
+
+LaTeX'in noktadan sonra fazladan boşluk \emph{koymamasını} isterseniz
+\texttt{\textbackslash{}frenchspacing} komutunu kullanırsınız. Bu komutu kullandıysanız, artık
+noktadan önce \texttt{\textbackslash{}@} koymanıza gerek yoktur. Daha sonra tekrar cümle
+sonlarında fazladan boşluk kullanmak istenirse de \texttt{\textbackslash{}nonfrenchspacing}
+komutu kullanılır.
+
+Unvan kısaltmasından sonra unvanın ait olduğu kelimeyle birlikte kalması
+ve fazladan boşluk bırakılmaması için tilda (\texttt{\textasciitilde{}}) işareti
+kullanılabilir. Bu işaret hem genişlemeyen bir boşluk bırakır hem de
+satırın orada kesilmesini önler.
+
+\hypertarget{aralux131klar}{%
+\section{Aralıklar}\label{aralux131klar}}
+
+LaTeX'de hem dikey hem de yatay aralıklar otomatik olarak ayarlanır.
+Fazladan aralıklar bırakmak için komutlar kullanılır.
+
+Aralık bırakırken kullanabileceğimiz ölçü birimleri aşağıda
+gösterilmiştir.
+
+\begin{longtable}[]{@{}ll@{}}
+\toprule
+Birim & Değer \\
+\midrule
+\endhead
+mm & milimetre \(\approx 1/25\) inç \\
+cm & santimetre = 10 mm \\
+in & inç = 25.4 mm \\
+pt & punto \(\approx 1/72\) inç \\
+em & Kullanılan yazı tipinde `M' harfinin genişliği \\
+ex & Kullanılan yazı tipinde `x' harfinin yüksekliği \\
+\bottomrule
+\end{longtable}
+
+\hypertarget{dikey-aralux131klar}{%
+\subsection{Dikey aralıklar}\label{dikey-aralux131klar}}
+
+Dikey aralık birkaç komutla bırakılabilir. Bunlardan biri \texttt{\textbackslash{}vspace}
+olup, komut iki boş satır arasında
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}vspace\{}\SpecialCharTok{\textless{}}\NormalTok{uzunluk}\SpecialCharTok{\textgreater{}}\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+şeklinde verilir. Komut bu şekilde verildiğinde komutun zorunlu
+değişkeninde birimiyle belirtilen uzunluk kadar dikey aralık bırakılır.
+Eğer bir sayfanın başında veya sonunda aralık bırakılmak istenirse,
+komut \texttt{\textbackslash{}vspace*} şeklinde yıldızlı vermelidir. Bu komutun aralığa ilave
+yapan \texttt{\textbackslash{}addvspace} sürümü de vardır.
+
+Bir paragrafın iki satırı arasında veya bir tablonun satırları arasında
+ilave aralık açmak için
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}\textbackslash{}[}\SpecialCharTok{\textless{}}\NormalTok{uzunluk}\SpecialCharTok{\textgreater{}}\NormalTok{]}
+\end{Highlighting}
+\end{Shaded}
+
+komutu kullanılır.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{A\textbackslash{}\textbackslash{}[1ex]}
+\NormalTok{B}
+\end{Highlighting}
+\end{Shaded}
+
+Bu komutlarda belirtilen uzunluklar negatif de olabilir.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{A\textbackslash{}\textbackslash{}[}\SpecialCharTok{{-}}\NormalTok{2ex]}
+\NormalTok{B}
+\end{Highlighting}
+\end{Shaded}
+
+Sınırsız bir dikey aralık oluşturmak için \texttt{\textbackslash{}vfill} komutu kullanılır. Bu
+komuttan sonra gelen her şey sayfanın altına yaslanır.
+
+Ön tanımlı gelen \texttt{\textbackslash{}smallskip}, \texttt{\textbackslash{}medskip} ve \texttt{\textbackslash{}bigskip} komutları
+sırasıyla küçük, orta ve büyük aralıklar bırakır.
+
+\hypertarget{yatay-aralux131klar}{%
+\subsection{Yatay aralıklar}\label{yatay-aralux131klar}}
+
+Ön tanımlı yatay aralıklar
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}  \textbackslash{},  \textbackslash{}}\SpecialCharTok{:}\NormalTok{  \textbackslash{};  \textbackslash{}quad  \textbackslash{}qquad  \textbackslash{}}\SpecialCharTok{!}
+\end{Highlighting}
+\end{Shaded}
+
+komutlarıyla verilir. Bu komutlar sırasıyla bir sözcük arası, \(3/\!18\) em, \(4/\!18\) em, \(5/\!18\) em, \(1\) em, \(2\) em, \(-3/\!18\) em uzunlukta yatay aralık bırakır.
+
+Belli bir uzunlukta yatay aralık bırakmak için \texttt{\textbackslash{}hspace} komutu
+kullanılır. Yine dikey aralıkta olduğu gibi yatay aralık negatif de
+olabilir. Eğer aralık satır başına veya sonuna rasgelse dahi bu aralığı
+korumak istiyorsanız, yıldızlı \texttt{\textbackslash{}hspace*} komutu kullanırsınız.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{A\textbackslash{}hspace\{2cm\}B\textbackslash{}\textbackslash{}}
+\NormalTok{A \textbackslash{}hspace\{2cm\} B}
+\end{Highlighting}
+\end{Shaded}
+
+Komutlardan önce veya sonra boşluk bırakmak farklı
+sonuçlar üretir.
+
+Sınırsız bir yatay aralık oluşturmak için \texttt{\textbackslash{}hfill} komutu kullanılır. Bu
+komuttan sonra gelen her şey satırın sonuna yaslanır. Hem satır sonuna
+yaslamak hem de aralığı noktalarla doldurmak isterseniz \texttt{\textbackslash{}dotfill}
+komutunu kullanırsınız. Satır sonuna yaslayıp aralığa çizgi çekmek
+isterseniz de \texttt{\textbackslash{}hrulefill} komutunu kullanırsınız.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{A\textbackslash{}hfill B\textbackslash{}\textbackslash{}}
+\NormalTok{A\textbackslash{}dotfill B\textbackslash{}\textbackslash{}}
+\NormalTok{A\textbackslash{}hrulefill B}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{metni-hizalamak-ve-suxfctunlara-buxf6lmek}{%
+\section{Metni Hizalamak ve Sütunlara Bölmek}\label{metni-hizalamak-ve-suxfctunlara-buxf6lmek}}
+
+\hypertarget{hizalama}{%
+\subsection{Hizalama}\label{hizalama}}
+
+LaTeX'de metni sola hizalamak için \texttt{flushleft}, sağa hizalamak için
+\texttt{flushright} ve ortalı hizalamak için \texttt{center} ortamları kullanılır.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}begin\{flushleft\}}
+\NormalTok{ burası sola hizalı}
+\NormalTok{\textbackslash{}end\{flushleft\}}
+\NormalTok{\textbackslash{}begin\{flushright\}}
+\NormalTok{ sağa hizalı}
+\NormalTok{\textbackslash{}end\{flushright\}}
+\NormalTok{\textbackslash{}begin\{center\}}
+\NormalTok{ ve ortalı}
+\NormalTok{\textbackslash{}end\{center\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{suxfctunlara-buxf6lmek}{%
+\subsection{Sütunlara bölmek}\label{suxfctunlara-buxf6lmek}}
+
+LaTeX'de belgenin tamamının iki sütun dizilmesi için \texttt{\textbackslash{}documentclass}
+komutunun seçeneğine \texttt{twocolumn} yazılabileceğinden Bölüm \ref{belgesinifi}'de bahsettik. Bu, tüm belgenin iki sütun dizilmesini sağlar. Bazı
+sayfaları iki, bazılarınıysa tek sütun dizmek istiyorsanız \texttt{\textbackslash{}twocolumn}
+ve \texttt{\textbackslash{}onecolumn} komutlarını kullanmanız gerekir. \texttt{\textbackslash{}twocolumn} komutunun
+verildiği sayfadan sonraki sayfalar iki, \texttt{\textbackslash{}onecolumn} komutunun
+verildiği sayfadan sonraki sayfalar tek sütun dizilir.
+
+Eğer metni daha fazla sütuna bölmek ve sütunları istediğiniz yerden
+başlatmak gibi daha fazla seçenek istiyorsanız, \texttt{multicols} ortamını
+kullanmanız gerekir. Bu ortamı kullanabilmek için
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}usepackage\{multicol\}}
+\end{Highlighting}
+\end{Shaded}
+
+komutuyla
+\href{http://ftp.ntua.gr/mirror/ctan/macros/latex/required/tools/multicol.pdf}{multicol} paketini eklemelisiniz.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}begin\{multicols\}\{}\SpecialCharTok{\textless{}}\NormalTok{sütun sayısı}\SpecialCharTok{\textgreater{}}\NormalTok{\}}
+
+\NormalTok{\textbackslash{}end\{multicols\}}
+\end{Highlighting}
+\end{Shaded}
+
+Burada, \texttt{\textless{}sütun\ sayısı\textgreater{}} değişkeninde oluşturulmak istenen sütun adedi
+sayıyla belirtilir.
+
+Bu ortamda sütun genişlikleri eşit olup, sütunlar arası boşluk
+\texttt{\textbackslash{}columnsep}, sütunlar arasındaki çizginin kalınlığı \texttt{\textbackslash{}columnseprule} ve
+sütunlar arasındaki çizginin rengi \texttt{\textbackslash{}columnseprulecolor} komutlarında
+saklıdır. Bu değişkenler \texttt{\textbackslash{}setlength} ya da \texttt{\textbackslash{}def} komutları
+kullanılarak değiştirilebilir.
+
+\begin{Shaded}
+\begin{Highlighting}[numbers=left,,]
+\NormalTok{\textbackslash{}setlength\{\textbackslash{}columnsep\}\{1cm\}}
+\NormalTok{\textbackslash{}setlength\{\textbackslash{}columnseprule\}\{1pt\}}
+\NormalTok{\textbackslash{}def\textbackslash{}columnseprulecolor\{\textbackslash{}color\{blue\}\}}
+\end{Highlighting}
+\end{Shaded}
+
+Yukarıdaki birinci komutla sütunlar arasındaki boşluk 1 cm, çizgi
+kalınlığı 1 pt ve çizgi rengi mavi olarak düzenlenir. Bu komutlar ya
+sahanlığa ya da ortamı kullanmadan önce gövdeye yazılmalıdır.
+
+\begin{quote}
+Şimdiye kadar renk kullanımından bahsetmedik ancak çizgi rengini
+değiştirmek için verilen komutun kullanılabilmesi için sahanlığa
+\texttt{\textbackslash{}usepackage\{color\}} komutuyla \texttt{color} paketinin eklenmesi gerekir.
+\end{quote}
+
+Ortam isteğe bağlı bir değişken de alabilir. Bu, çengelli parantezlerden
+sonra köşeli parantezler içine yazılır. Köşeli parantezler içinde
+yazılanlar bölünmeden ve çok sütunlu metnin üstünde dizilir.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}begin\{multicols\}\{}\DecValTok{2}\NormalTok{\}}
+\NormalTok{[\textbackslash{}section\{Başlık\}}
+\NormalTok{Burası sütunlara bölünmez.]}
+\NormalTok{Burası sütunlara bölünür.}
+\NormalTok{\textbackslash{}end\{multicols\}}
+\end{Highlighting}
+\end{Shaded}
+
+Sütunu kesmek için \texttt{\textbackslash{}columnbreak} komutu kullanılır. Komutun verildiği
+yerde sütun kesilir, ardından kesme noktasından önceki paragraflar tüm
+kullanılabilir alanı doldurmak için eşit olarak dağıtılır. Dolayısıyla
+bazen beklenen sonucu vermeyebilir.
+
+Varsayılan \texttt{multicols} ortamında sütunların her biri aynı miktarda metin
+içerecek şekilde dengelenmiştir. Bu, ortamın yıldızlı sürümü
+(\texttt{multicols*}) kullanılarak değiştirilebilir.
+
+\hypertarget{listeleme}{%
+\section{Listeleme}\label{listeleme}}
+
+\hypertarget{temel-listeler}{%
+\subsection{Temel listeler}\label{temel-listeler}}
+
+LaTeX'de listeleme için değişik ortamlar vardır. Bu ortamlar tek başına
+kullanılabileceği gibi birlikte de kullanılabilirler. Her ortamda
+maddeler \texttt{\textbackslash{}item} komutuyla belirtilir.
+
+Bir listeyi numaralı şekilde dizmek için \texttt{enumerate} ortamı kullanılır.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}begin\{enumerate\}}
+\NormalTok{ \textbackslash{}item madde }\DecValTok{1}
+\NormalTok{  \textbackslash{}begin\{enumerate\}}
+\NormalTok{    \textbackslash{}item alt madde }\DecValTok{1}
+\NormalTok{      \textbackslash{}begin\{enumerate\}}
+\NormalTok{        \textbackslash{}item en alt madde }\DecValTok{1}
+\NormalTok{      \textbackslash{}end\{enumerate\}}
+\NormalTok{    \textbackslash{}item alt madde }\DecValTok{2}
+\NormalTok{  \textbackslash{}end\{enumerate\}}
+\NormalTok{ \textbackslash{}item madde }\DecValTok{2}
+\NormalTok{\textbackslash{}end\{enumerate\}}
+\end{Highlighting}
+\end{Shaded}
+
+Numarasız, özel işaretli listeler için \texttt{itemize} ortamı kullanılır ve bu
+ortamda madde işareti değiştirilebilir.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}begin\{itemize\}}
+\NormalTok{\textbackslash{}item madde }\DecValTok{1}
+\NormalTok{\textbackslash{}item madde }\DecValTok{2}
+\NormalTok{\textbackslash{}item[}\SpecialCharTok{$}\NormalTok{\textbackslash{}circ}\SpecialCharTok{$}\NormalTok{] madde }\DecValTok{3}
+\NormalTok{\textbackslash{}item[}\SpecialCharTok{+}\NormalTok{] madde }\DecValTok{4}
+\NormalTok{\textbackslash{}end\{itemize\}}
+\end{Highlighting}
+\end{Shaded}
+
+Açıklamalı bir liste içinse \texttt{description} ortamı kullanılır. Bu ortamda
+köşeli parantez içine alınan anahtar kelimeler kalın dizilir.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}begin\{description\}}
+\NormalTok{\textbackslash{}item[Nokta] Boyutu olmayan}
+\NormalTok{\textbackslash{}item[Çember] Bir noktaya eşit}
+\NormalTok{uzaklıktaki noktaların geometrik yeri}
+\NormalTok{\textbackslash{}end\{description\}}
+\end{Highlighting}
+\end{Shaded}
+
+\hypertarget{listeleri-uxf6zelleux15ftirmek}{%
+\subsection{Listeleri özelleştirmek}\label{listeleri-uxf6zelleux15ftirmek}}
+
+Listelerin özelleştirmek için
+\href{http://ftp.ntua.gr/mirror/ctan/macros/latex/required/tools/enumerate.pdf}{enumerate} paketi kullanılabilir. Paketi \texttt{\textbackslash{}usepackage\{enumerate\}}
+komutuyla ekledikten sonra \texttt{enumerate} ortamını başlatan komutun peşine
+köşeli parantezler içinde madde işaretlerinin tipi belirtilebilir:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}begin\{enumerate\}[I.]}
+\NormalTok{\textbackslash{}item bir}
+\NormalTok{\textbackslash{}item iki }
+\NormalTok{\textbackslash{}item üç}
+\NormalTok{\textbackslash{}end\{enumerate\}}
+\end{Highlighting}
+\end{Shaded}
+
+Bunun dışında çok daha fazla özelleştirmeye izin veren
+\href{http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/enumitem/enumitem.pdf}{enumitem} paketi vardır. Bu paketi kullanarak yapılabilecek
+listelere de ilerde değineceğiz. Dileyen okur paket belgesini inceleyip
+listelerini özelleştirebilir.
+
+\hypertarget{yazux131tipleri}{%
+\section{Yazıtipleri}\label{yazux131tipleri}}
+
+\hypertarget{giriux15f}{%
+\subsection{Giriş}\label{giriux15f}}
+
+Yazıtipi konusu \emph{kodlama}, \emph{aile}, \emph{biçem} ve \emph{boyut} olmak üzere dört
+alt başlıkta incelenebilir. Kodlama çok teknik bir konu olup amacımız
+dışındadır, ancak sadece şunu belirtelim ki kodlama işini LaTeX'de Bölüm \ref{turkce}'de bahsettiğimiz \texttt{fontenc} paketi üstlenir. Bu paketi belgenize eklemiş
+olduğunuzu varsayarak devam edeceğiz.
+
+Bu yazıda anlatacağımız şeylerden bazıları bir bakıma LaTeX'in
+felsefesine aykırı olacak. Nitekim LaTeX, \texttt{\textbackslash{}documentclass} komutunda
+belirtilen ana yazıtipi boyutuna göre, dipnot ya da başlık gibi ana
+yazıtipi boyutundan farklı dizilen şeylerin boyutunu olabilecek en güzel
+ve doğru şekilde ayarlar. O yüzden bu konudaki klasik uyarıyı biz de
+yineleyelim:
+
+\includegraphics{images/uyari.png}
+
+\hypertarget{aile}{%
+\subsection{Aile}\label{aile}}
+
+Yazıtipleri Roman ya da Serif, Sans Serif ve Typewriter olmak üzere üç
+ailede toplanabilir. Roman ailesi tırnaklı ya da süslü diyebileceğimiz
+yazıtiplerini, Sans Serif ailesi tırnaksız ya da süssüz yazıtiplerini ve
+Typewriter ailesi de daktilo yazıtiplerini barındırır.
+
+LaTeX'de her belge sınıfı varsayılan yazıtipi ailesiyle gelir. \texttt{beamer}
+sınıfının varsayılan ailesi Sans Serif olup, diğer sınıfların varsayılan
+ailesi Roman'dır.
+
+Varsayılan aile \texttt{\textbackslash{}familydefault} komutunda saklı olup, \texttt{\textbackslash{}renewcommand}
+komutuyla değiştirilebilir.
+
+\begin{Shaded}
+\begin{Highlighting}[numbers=left,,]
+\NormalTok{\textbackslash{}renewcommand\{\textbackslash{}familydefault\}\{\textbackslash{}rmdefault\}  }
+\NormalTok{\textbackslash{}renewcommand\{\textbackslash{}familydefault\}\{\textbackslash{}sfdefault\}  }
+\NormalTok{\textbackslash{}renewcommand\{\textbackslash{}familydefault\}\{\textbackslash{}ttdefault\} }
+\end{Highlighting}
+\end{Shaded}
+
+Birinci komut sahanlığa yazılırsa, belge sınıfından bağımsız olarak
+varsayılan aile Roman, ikincisi yazılırsa Sans Serif, üçüncüsü yazılırsa
+Typewriter olur.
+
+Eğer belgenin tamamının değilde bazı kelime ya da cümlelerin farklı
+aileden yazılması istenirse -- ki genelde böyle kullanılır -- aşağıdaki
+komut ya da bildirimler kullanılır.
+
+\begin{figure}
+\centering
+\includegraphics{images/yazitipi.png}
+\caption{Yazıtipi
+Aileleri}
+\end{figure}
+
+LaTeX'de varsayılan yazıtipi Computer Modern olup, ek bir pakete ihtiyaç
+duymadan kullanılabilecek yazıtipleri aşağıda gösterilmiştir.
+
+\begin{figure}
+\centering
+\includegraphics{images/yazitipi2.png}
+\caption{Roman
+Yazıtipleri}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{images/yazitipi3.png}
+\caption{Sans Serif
+Yazıtipleri}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{images/yazitipi4.png}
+\caption{Typewriter Yazıtipleri\\
+}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{images/yazitipi5.png}
+\caption{Elyazısı}
+\end{figure}
+
+Varsayılan yazıtipleri \texttt{\textbackslash{}rmdefault}, \texttt{\textbackslash{}sfdefault} ve \texttt{\textbackslash{}ttdefault}
+komutlarında saklı olup, \texttt{\textbackslash{}renewcommand} komutuyla değiştirilebilirler.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}renewcommand\{\textbackslash{}rmdefault\}\{}\SpecialCharTok{\textless{}}\NormalTok{kısaltma}\SpecialCharTok{\textgreater{}}\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+Burada \texttt{\textless{}kısaltma\textgreater{}}, tablolarda belirtilen kısaltmalardır. Örneğin
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}renewcommand\{\textbackslash{}rmdefault\}\{put\}}
+\end{Highlighting}
+\end{Shaded}
+
+komutu sahanlığa yazıldığında, eğer varsayılan aile Roman ise belgenizin
+ana yazıtipi Utopia olur.
+
+Eğer tüm belgenin değil, bazı kelime ya da cümlelerin farklı yazıtipinde
+yazılması istenirse \texttt{\textbackslash{}fontfamily} komutuyla \texttt{\textbackslash{}selectfont} komutu
+birlikte aşağıdaki şekilde kullanılır.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\{\textbackslash{}fontfamily\{pbk\}\textbackslash{}selectfont Bookman yazıtipi.\} Ana yazıtipi.}
+\end{Highlighting}
+\end{Shaded}
+
+Varsayılan yazıtipi paket ekleyerek de değiştirilebilir. Bu hem
+pratiktir hem de bazı paketler matematiksel ifadelerin yazıtipine de
+etki eder. Bu paketlerin bazıları tabloda gösterilmiştir.
+
+\begin{figure}
+\centering
+\includegraphics{images/yazitipi6.png}
+\caption{Yazıtipi değiştiren
+paketler}
+\end{figure}
+
+Bunların dışında beğenebileceğiniz birçok yazıtipini \href{https://tug.org/FontCatalogue/}{LaTeX
+Yazıtipi
+Kataloğu}'nda bulabilirsiniz.
+
+\hypertarget{biuxe7em}{%
+\subsection{Biçem}\label{biuxe7em}}
+
+Metin içinde kelimeleri bazen italik bazen de kalın dizmek
+isteyebilirsiniz. Bu değişimler aşağıdaki tablodaki komut ya da
+bildirimlerle yapılır.
+
+\begin{figure}
+\centering
+\includegraphics{images/yazitipi7.png}
+\caption{Yazıtipi
+Biçemleri}
+\end{figure}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{İzleyen kelime \textbackslash{}textit\{italik\} }
+\NormalTok{harflerle yazılmıştır.}
+\NormalTok{Metnin geri kalan kısmı}
+\NormalTok{normaldir.}
+\end{Highlighting}
+\end{Shaded}
+
+\href{https://github.com/acarzfr/latex-dersleri/blob/main/examples/ex3.pdf}{Çıktı}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{İzleyen ifade \{\textbackslash{}slshape \{\textbackslash{}bfseries eğik kalındır\}\}.}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{İzleyen ifade \textbackslash{}textit\{\textbackslash{}textbf\{italik kalın\}\}, ama bu}
+\NormalTok{\textbackslash{}textsc\{\textbackslash{}textit\{büyük küçük harf değil\}\}.}
+\end{Highlighting}
+\end{Shaded}
+
+Eğer vurgulu metin içinde bazı kelimeler tekrar vurgulanırsa bu
+kelimeler normale döner.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\{\textbackslash{}em Vurgulu metinde tekrar}
+\NormalTok{vurgu yapılırsa \{\textbackslash{}em normale\}}
+\NormalTok{döner.\}}
+\end{Highlighting}
+\end{Shaded}
+
+LaTeX'de vurgu yukarıdaki gibi yapılsa da altını çizerek vurgu yapmak
+isteyen olabilir. Kuyruklu harflerin altı çizildiğinde varsayılan satır
+aralığı değiştiğinden vurguyu bu şekilde yapmamanız daha doğrudur. Ancak
+illa altını çizmek isterseniz \texttt{\textbackslash{}underline} komutunu kullanabilirsiniz.
+
+\hypertarget{boyut}{%
+\subsection{Boyut}\label{boyut}}
+
+Yazıtipi boyutunu değiştirmek için aşağıdaki bildirimler kullanılır.
+
+\begin{figure}
+\centering
+\includegraphics{images/yazitipi8.png}
+\caption{Yazıtipi Boyutu Değiştiren
+Bildirimler}
+\end{figure}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\{\textbackslash{}Large Büyük\} ve}
+\NormalTok{\{\textbackslash{}scriptsize küçük\} harfler.}
+\end{Highlighting}
+\end{Shaded}
+
+Bu bildirimlerin aynı zamanda satır aralığını da değiştirdiğine dikkat
+edilmelidir. Aşağıdaki iki örnekte, \texttt{\textbackslash{}par} (paragraf) komutunun
+verdiğiniz yere bağlı olarak farklı sonuçlar ürettiği gösterilmiştir.
+Doğru kullanım ikincisidir.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\{\textbackslash{}large }
+\NormalTok{Sokrates}\SpecialCharTok{:}\NormalTok{ Platon}
+\NormalTok{yalan söyleyecek}
+\NormalTok{aşağıdaki cümlede.\}\textbackslash{}par}
+\end{Highlighting}
+\end{Shaded}
+
+\href{https://github.com/acarzfr/latex-dersleri/blob/main/examples/ex4.pdf}{Çıktı}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\{\textbackslash{}large Platon}\SpecialCharTok{:}\NormalTok{ Sokrates}
+\NormalTok{doğruyu söyledi}
+\NormalTok{önceki cümlede.\textbackslash{}par\}}
+\end{Highlighting}
+\end{Shaded}
+
+\href{https://github.com/acarzfr/latex-dersleri/blob/main/examples/ex5.pdf}{Çıktı}
+
+Bu bildirimlerin etkisi belge ana yazıtipi boyutuna bağımlıdır. Mutlak
+boyutlar aşağıdaki tabloda gösterilmiştir.
+
+\begin{figure}
+\centering
+\includegraphics{images/yazitipi9.png}
+\caption{Yazıtipleri Mutlak
+Boyutları}
+\end{figure}
+
+Bağımsız bir yazıtipi boyutu elde etmek için \texttt{\textbackslash{}fontsize} ile
+\texttt{\textbackslash{}selectfont} komutları birlikte kullanılır.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\{\textbackslash{}fontsize\{}\SpecialCharTok{\textless{}}\NormalTok{boyut}\SpecialCharTok{\textgreater{}}\NormalTok{\}\{}\SpecialCharTok{\textless{}}\NormalTok{aralık}\SpecialCharTok{\textgreater{}}\NormalTok{\}\textbackslash{}selectfont }\SpecialCharTok{\textless{}}\NormalTok{metin}\SpecialCharTok{\textgreater{}}\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+Buradaki \texttt{\textless{}boyut\textgreater{}} yazıtipi boyutu, \texttt{\textless{}aralık\textgreater{}} ise satır aralığıdır.
+İkisinin de ölçü birimi punto (pt) olup, temel kural, aralığın boyutun
+\(1.2\) katı olmasıdır.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\{\textbackslash{}fontsize\{}\DecValTok{30}\NormalTok{\}\{}\DecValTok{36}\NormalTok{\}\textbackslash{}selectfont}
+\NormalTok{Yazı tipi boyutu }\DecValTok{30}\NormalTok{ punto,}
+\NormalTok{satır aralığı }\DecValTok{36}\NormalTok{ punto.\}}
+\end{Highlighting}
+\end{Shaded}
+
+Ana yazıtipi boyutu \texttt{\textbackslash{}normalsize} komutunda saklı olup, \texttt{\textbackslash{}renewcommand}
+komutuyla değiştirilebilir.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{\textbackslash{}renewcommand\{\textbackslash{}normalsize\}\{\textbackslash{}fontsize\{}\DecValTok{30}\NormalTok{\}\{}\DecValTok{36}\NormalTok{\}\textbackslash{}selectfont\}}
+\end{Highlighting}
+\end{Shaded}
+
+Yukarıdaki komutu sahanlığa yazarsanız belgenizin ana yazıtipi boyutu
+30 pt, satır aralığı ise 36 pt olur.
 
 \backmatter
 
