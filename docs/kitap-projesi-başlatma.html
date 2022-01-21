@@ -24,7 +24,7 @@
 <meta name="author" content="Zafer Acar" />
 
 
-<meta name="date" content="2022-01-21" />
+<meta name="date" content="2022-01-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -217,6 +217,15 @@ div.csl-indent {
 <li class="chapter" data-level="1.18.1" data-path="renk-kullanmak.html"><a href="renk-kullanmak.html#yeni-renkler-oluşturmak"><i class="fa fa-check"></i><b>1.18.1</b> Yeni renkler oluşturmak</a></li>
 </ul></li>
 </ul></li>
+<li class="chapter" data-level="2" data-path="matematiksel-ifadeler.html"><a href="matematiksel-ifadeler.html"><i class="fa fa-check"></i><b>2</b> Matematiksel İfadeler</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="giriş-1.html"><a href="giriş-1.html"><i class="fa fa-check"></i><b>2.1</b> Giriş</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="giriş-1.html"><a href="giriş-1.html#genel-1"><i class="fa fa-check"></i><b>2.1.1</b> Genel</a></li>
+<li class="chapter" data-level="2.1.2" data-path="giriş-1.html"><a href="giriş-1.html#matematik-kipiyle-metin-kipi-arasındaki-farklar"><i class="fa fa-check"></i><b>2.1.2</b> Matematik Kipiyle Metin Kipi Arasındaki Farklar</a></li>
+<li class="chapter" data-level="2.1.3" data-path="giriş-1.html"><a href="giriş-1.html#gruplandırma"><i class="fa fa-check"></i><b>2.1.3</b> Gruplandırma</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="kaynaklar.html"><a href="kaynaklar.html"><i class="fa fa-check"></i>Kaynaklar</a></li>
 </ul>
 
@@ -264,15 +273,15 @@ komutuyla eklediğiniz metin yeni bir sayfadan başlayarak dizilir.</p>
 <p>Bu komutların zorunlu değişkeni eklemek istediğiniz dosyanın adıdır.
 Örneğin kaynak dosyanızla aynı dizinde yer alan <code>dosya1.tex</code> dosyasını
 eklemek için</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="kitap-projesi-başlatma.html#cb30-1" aria-hidden="true" tabindex="-1"></a>\include{dosya1}</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb30-1"><a href="kitap-projesi-başlatma.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\include</span>{<span class="ex">dosya1</span>}</span></code></pre></div>
 <p>komutunu kullanırsınız. Eğer dosya uzantısı <code>.tex</code> değilse (örneğin
 <code>.txt</code> olsun) o zaman dosya adını uzantısıyla yazmanız gerekir:</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="kitap-projesi-başlatma.html#cb31-1" aria-hidden="true" tabindex="-1"></a>\include{dosya1.txt}</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb31-1"><a href="kitap-projesi-başlatma.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\include</span>{<span class="ex">dosya1.txt</span>}</span></code></pre></div>
 <p>Ayrıca, hangi dosyaların eklenebileceğini LaTeX’e bildiren bir komut
 vardır: <code>\includeonly</code>. Bu komut, sadece sahanlığa yazılabilir. Komutun
 zorunlu değişkeninde eklenebilecek dosyalar aralarına virgül koyularak
 (ve boşluk bırakılmadan) listelenir:</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="kitap-projesi-başlatma.html#cb32-1" aria-hidden="true" tabindex="-1"></a>\includeonly{dosya1,dosya2,dosya3,...}</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb32-1"><a href="kitap-projesi-başlatma.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\includeonly</span>{dosya1,dosya2,dosya3,...}</span></code></pre></div>
 <p>Böyle bir liste oluşturulduktan sonra bu listede olmayan bir dosya artık
 <code>\include</code> komutuyla kaynak dosyaya eklenemez.</p>
 <p><code>\input</code> komutu sahanlıkta da kullanılabilir. Örneğin, sahanlığınızı tek
@@ -289,29 +298,29 @@ komutlarıyla dosya eklemek istediğinizde dosyanın bulunduğu dizini de
 göstermeniz gerekir.</p>
 <p>Burada kaynak dosya <code>kitap.tex</code>’dir. Bu kaynak dosyaya <code>bolum1.tex</code>
 dosyasını eklemek istediğinizde komutu</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="kitap-projesi-başlatma.html#cb33-1" aria-hidden="true" tabindex="-1"></a>\input{Bolumler<span class="sc">/</span>bolum1}</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb33-1"><a href="kitap-projesi-başlatma.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\input</span>{Bolumler/bolum1}</span></code></pre></div>
 <p>şeklinde verirsiniz. Bu sayede kaynak dosyanızın olduğu dizinde (Örnek
 Kitap) sadece <code>kitap</code> ile başlayan dosyalar olur. Diğer dosyalar alt
 dizinde (Bolumler) yer alır.</p>
 <p>Dikkat edilirse “Örnek Kitap” dışında, “Bolumler” alt dizini ve tüm
 dosya adları Türkçe karakter ya da boşluk içermez.</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="kitap-projesi-başlatma.html#cb34-1" aria-hidden="true" tabindex="-1"></a>\documentclass[a4paper,12pt]{book}</span>
-<span id="cb34-2"><a href="kitap-projesi-başlatma.html#cb34-2" aria-hidden="true" tabindex="-1"></a>\usepackage[T1]{fontenc}</span>
-<span id="cb34-3"><a href="kitap-projesi-başlatma.html#cb34-3" aria-hidden="true" tabindex="-1"></a>\usepackage[turkish]{babel}</span>
-<span id="cb34-4"><a href="kitap-projesi-başlatma.html#cb34-4" aria-hidden="true" tabindex="-1"></a>\title{Örnek Kitap}</span>
-<span id="cb34-5"><a href="kitap-projesi-başlatma.html#cb34-5" aria-hidden="true" tabindex="-1"></a>\author{\TeX dizgi}</span>
-<span id="cb34-6"><a href="kitap-projesi-başlatma.html#cb34-6" aria-hidden="true" tabindex="-1"></a>\begin{document}</span>
-<span id="cb34-7"><a href="kitap-projesi-başlatma.html#cb34-7" aria-hidden="true" tabindex="-1"></a>\frontmatter</span>
-<span id="cb34-8"><a href="kitap-projesi-başlatma.html#cb34-8" aria-hidden="true" tabindex="-1"></a>\maketitle</span>
-<span id="cb34-9"><a href="kitap-projesi-başlatma.html#cb34-9" aria-hidden="true" tabindex="-1"></a>\tableofcontents</span>
-<span id="cb34-10"><a href="kitap-projesi-başlatma.html#cb34-10" aria-hidden="true" tabindex="-1"></a>\input{Bolumler<span class="sc">/</span>onsoz}</span>
-<span id="cb34-11"><a href="kitap-projesi-başlatma.html#cb34-11" aria-hidden="true" tabindex="-1"></a>\mainmatter</span>
-<span id="cb34-12"><a href="kitap-projesi-başlatma.html#cb34-12" aria-hidden="true" tabindex="-1"></a>\input{Bolumler<span class="sc">/</span>bolum1}</span>
-<span id="cb34-13"><a href="kitap-projesi-başlatma.html#cb34-13" aria-hidden="true" tabindex="-1"></a>\input{Bolumler<span class="sc">/</span>bolum2}</span>
-<span id="cb34-14"><a href="kitap-projesi-başlatma.html#cb34-14" aria-hidden="true" tabindex="-1"></a>\appendix</span>
-<span id="cb34-15"><a href="kitap-projesi-başlatma.html#cb34-15" aria-hidden="true" tabindex="-1"></a>\input{Bolumler<span class="sc">/</span>ek1}</span>
-<span id="cb34-16"><a href="kitap-projesi-başlatma.html#cb34-16" aria-hidden="true" tabindex="-1"></a>\backmatter</span>
-<span id="cb34-17"><a href="kitap-projesi-başlatma.html#cb34-17" aria-hidden="true" tabindex="-1"></a>\end{document}</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb34-1"><a href="kitap-projesi-başlatma.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[a4paper,12pt]{<span class="ex">book</span>}</span>
+<span id="cb34-2"><a href="kitap-projesi-başlatma.html#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[T1]{<span class="ex">fontenc</span>}</span>
+<span id="cb34-3"><a href="kitap-projesi-başlatma.html#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[turkish]{<span class="ex">babel</span>}</span>
+<span id="cb34-4"><a href="kitap-projesi-başlatma.html#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\title</span>{Örnek Kitap}</span>
+<span id="cb34-5"><a href="kitap-projesi-başlatma.html#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\author</span>{<span class="fu">\TeX</span> dizgi}</span>
+<span id="cb34-6"><a href="kitap-projesi-başlatma.html#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb34-7"><a href="kitap-projesi-başlatma.html#cb34-7" aria-hidden="true" tabindex="-1"></a><span class="fu">\frontmatter</span></span>
+<span id="cb34-8"><a href="kitap-projesi-başlatma.html#cb34-8" aria-hidden="true" tabindex="-1"></a><span class="fu">\maketitle</span></span>
+<span id="cb34-9"><a href="kitap-projesi-başlatma.html#cb34-9" aria-hidden="true" tabindex="-1"></a><span class="fu">\tableofcontents</span></span>
+<span id="cb34-10"><a href="kitap-projesi-başlatma.html#cb34-10" aria-hidden="true" tabindex="-1"></a><span class="fu">\input</span>{Bolumler/onsoz}</span>
+<span id="cb34-11"><a href="kitap-projesi-başlatma.html#cb34-11" aria-hidden="true" tabindex="-1"></a><span class="fu">\mainmatter</span></span>
+<span id="cb34-12"><a href="kitap-projesi-başlatma.html#cb34-12" aria-hidden="true" tabindex="-1"></a><span class="fu">\input</span>{Bolumler/bolum1}</span>
+<span id="cb34-13"><a href="kitap-projesi-başlatma.html#cb34-13" aria-hidden="true" tabindex="-1"></a><span class="fu">\input</span>{Bolumler/bolum2}</span>
+<span id="cb34-14"><a href="kitap-projesi-başlatma.html#cb34-14" aria-hidden="true" tabindex="-1"></a><span class="fu">\appendix</span></span>
+<span id="cb34-15"><a href="kitap-projesi-başlatma.html#cb34-15" aria-hidden="true" tabindex="-1"></a><span class="fu">\input</span>{Bolumler/ek1}</span>
+<span id="cb34-16"><a href="kitap-projesi-başlatma.html#cb34-16" aria-hidden="true" tabindex="-1"></a><span class="fu">\backmatter</span></span>
+<span id="cb34-17"><a href="kitap-projesi-başlatma.html#cb34-17" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre></div>
 </div>
             </section>
 
@@ -361,7 +370,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": ["latex-dersleri.pdf"],
+"download": null,
 "search": {
 "engine": "fuse",
 "options": null

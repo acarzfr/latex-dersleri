@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>1.11 Varsayılan Sayfa Düzenini Değiştirme | LaTeX Dersleri</title>
+  <title>2.2 Parantezler, Gruplandırıcılar ve Oklar | LaTeX Dersleri</title>
   <meta name="description" content="TeX/LaTeX’e dair bir iki kelam." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="1.11 Varsayılan Sayfa Düzenini Değiştirme | LaTeX Dersleri" />
+  <meta property="og:title" content="2.2 Parantezler, Gruplandırıcılar ve Oklar | LaTeX Dersleri" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://acarzfr.github.io/latex-dersleri/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="acarzfr/latex-dersleri" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="1.11 Varsayılan Sayfa Düzenini Değiştirme | LaTeX Dersleri" />
+  <meta name="twitter:title" content="2.2 Parantezler, Gruplandırıcılar ve Oklar | LaTeX Dersleri" />
   
   <meta name="twitter:description" content="TeX/LaTeX’e dair bir iki kelam." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="kitap-projesi-başlatma.html"/>
-<link rel="next" href="satır-ve-sayfa-kesme.html"/>
+<link rel="prev" href="giriş-1.html"/>
+<link rel="next" href="kaynaklar.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -120,28 +120,6 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
-</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -225,6 +203,7 @@ div.csl-indent {
 <li class="chapter" data-level="2.1.2" data-path="giriş-1.html"><a href="giriş-1.html#matematik-kipiyle-metin-kipi-arasındaki-farklar"><i class="fa fa-check"></i><b>2.1.2</b> Matematik Kipiyle Metin Kipi Arasındaki Farklar</a></li>
 <li class="chapter" data-level="2.1.3" data-path="giriş-1.html"><a href="giriş-1.html#gruplandırma"><i class="fa fa-check"></i><b>2.1.3</b> Gruplandırma</a></li>
 </ul></li>
+<li class="chapter" data-level="2.2" data-path="parantezler-gruplandırıcılar-ve-oklar.html"><a href="parantezler-gruplandırıcılar-ve-oklar.html"><i class="fa fa-check"></i><b>2.2</b> Parantezler, Gruplandırıcılar ve Oklar</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="kaynaklar.html"><a href="kaynaklar.html"><i class="fa fa-check"></i>Kaynaklar</a></li>
 </ul>
@@ -244,72 +223,162 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="varsayılan-sayfa-düzenini-değiştirme" class="section level2" number="1.11">
-<h2><span class="header-section-number">1.11</span> Varsayılan Sayfa Düzenini Değiştirme</h2>
-<p>LaTeX’de varsayılan kağıt boyutunun <code>letterpaper</code> olduğunu Bölün <a href="belgesinifi.html#belgesinifi">1.5</a>’de ifade etmiştik. Ayrıca aynı yazıda başka bir kağıt boyutunun
-nasıl seçileceğine de yer vermiştik. Şimdi ise hem sayfamızın kenar
-boşluklarının nasıl ayarlanacağından hem de ön tanımlı olmayan, tamamen
-keyfi bir sayfa boyutunun nasıl belirleneceğinden bahsedelim.</p>
-<p>Bu tür sayfa düzenlemeleri için LaTeX’de
-<a href="http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/geometry/geometry.pdf">geometry</a> paketi kullanılır. Öncelikle paketi</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb35-1"><a href="varsayılan-sayfa-düzenini-değiştirme.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">geometry</span>}</span></code></pre></div>
-<p>komutuyla sahanlığa ekleyin. Ardından paket seçeneklerinde aşağıdaki
-tanımlamalarla sayfanın düzenini değiştirebilirsiniz:</p>
+<div id="parantezler-gruplandırıcılar-ve-oklar" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Parantezler, Gruplandırıcılar ve Oklar</h2>
+<p>LaTeX’de her türlü parantez ve gruplandırıcı kullanılabilir. Yuvarlak ve
+köşeli parantezler klavyedeki yerlerinden, çengelli parantez ise <code>\{</code> ve
+<code>\}</code> komutları kullanılarak girilir.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb6-1"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ss">${a,b,c}</span><span class="sc">\neq\{</span><span class="ss">a,b,c</span><span class="sc">\}</span><span class="ss">$</span></span></code></pre></div>
+<p><span class="math inline">\({a,b,c}\neq\{a,b,c\}\)</span></p>
+<p>Kullanılabilecek tüm gruplandırıcı işaretler aşağıdaki tabloda
+gösterilmiştir.</p>
 <table>
-<thead>
-<tr class="header">
-<th align="left">Tanım</th>
-<th align="left">Değer</th>
-</tr>
-</thead>
+<colgroup>
+<col width="30%" />
+<col width="38%" />
+<col width="30%" />
+</colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><code>top</code></td>
-<td align="left">üst boșluk</td>
+<td align="left">( <code>(</code> ) <code>)</code></td>
+<td align="left"><span class="math inline">\(\uparrow\)</span> <code>\uparrow</code></td>
+<td align="left"><span class="math inline">\([\)</span> <code>[</code> ya da <code>\lbrack</code></td>
 </tr>
 <tr class="even">
-<td align="left"><code>bottom</code></td>
-<td align="left">alt boșluk</td>
+<td align="left"><span class="math inline">\(]\)</span> <code>]</code> ya da <code>\rbrack</code></td>
+<td align="left"><span class="math inline">\(\downarrow\)</span> <code>\downarrow</code></td>
+<td align="left"><span class="math inline">\(\lbrace\)</span> <code>\{</code> ya da <code>\lbrace</code></td>
 </tr>
 <tr class="odd">
-<td align="left"><code>left</code></td>
-<td align="left">sol boșluk</td>
+<td align="left"><span class="math inline">\(\rbrace\)</span> <code>\}</code> ya da <code>\rbrace</code></td>
+<td align="left"><span class="math inline">\(\updownarrow\)</span> <code>\updownarrow</code></td>
+<td align="left"><span class="math inline">\(\langle\)</span> <code>\langle</code></td>
 </tr>
 <tr class="even">
-<td align="left"><code>right</code></td>
-<td align="left">sağ boșluk</td>
+<td align="left"><span class="math inline">\(\rangle\)</span> <code>\rangle</code></td>
+<td align="left"><span class="math inline">\(\vert\)</span> <code>|</code> ya da <code>\vert</code></td>
+<td align="left"><span class="math inline">\(\lfloor\)</span> <code>\lfloor</code></td>
 </tr>
 <tr class="odd">
-<td align="left"><code>paperwidht</code></td>
-<td align="left">sayfa genișliği</td>
+<td align="left"><span class="math inline">\(\rfloor\)</span> <code>\rfloor</code></td>
+<td align="left"><span class="math inline">\(\lceil\)</span> <code>\lceil</code></td>
+<td align="left"><span class="math inline">\(\rceil\)</span> <code>\rceil</code></td>
 </tr>
 <tr class="even">
-<td align="left"><code>paperheight</code></td>
-<td align="left">sayfa yüksekliği</td>
+<td align="left"><span class="math inline">\(/\)</span> <code>/</code></td>
+<td align="left"><span class="math inline">\(\backslash\)</span> <code>\backslash</code></td>
+<td align="left"><span class="math inline">\(\Updownarrow\)</span> <code>\Updownarrow</code></td>
 </tr>
 </tbody>
 </table>
-<p>Örneğin sahanlıkta</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb36-1"><a href="varsayılan-sayfa-düzenini-değiştirme.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[paperwidth=175mm,paperheight=255mm,top=2cm,bottom=2cm,left=2.5cm,right=2.5cm]{<span class="ex">geometry</span>}</span></code></pre></div>
-<p>komutunu verdiğinizde boyutu<span class="math inline">\(175\times 255\)</span>mm, üst ve alt boşluğu
-<span class="math inline">\(2\)</span>cm, sol ve sağ boşluğu<span class="math inline">\(2.5\)</span>cm olan bir sayfa düzeni
-oluşturursunuz. Dilerseniz <code>paperwidth</code> ve<code>paperheight</code> tanımlamalarını
-yerine, örneğin <code>a4paper</code> yazarak sadece kenar boşluklarla ilgili
-tanımlamaları yapabilirsiniz.</p>
-<blockquote>
-<p>LaTeX’de milimetre (mm) ve santimetre (cm) dışında inç (in), punto
-(pt), em ve ex gibi ölçü birimleri de vardır. Bunlara ileride
-değinilecektir. Ayrıca yine ileride daha ayrıntılı sayfa düzeni
-oluşturmaktan da bahsedeceğiz. Bu aşamada bu kadarı yeterli olacaktır.</p>
-</blockquote>
+<p>Grup açıcı bir sembolün önüne <code>\left</code> komutu, grup kapatıcı bir sembolün
+önüne de <code>\right</code> komutu yazılırsa LaTeX onları en uygun boyda dizer.
+Her bir <code>\left</code> komutuna karşılık mutlaka bir <code>\right</code> komutu
+bulunmalıdır. Bunların doğru boyda dizilmesi için iki komutunda aynı
+satırda yer almasına dikkat edilmelidir. Sol/sağ tarafta gruplandırıcı
+bir işaret istenmiyorsa, görünmeyen <code>\left.</code>/<code>\right.</code> komutu
+kullanılır.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb7-1"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
+<span id="cb7-2"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\left</span><span class="ss">(1+</span><span class="sc">\frac</span><span class="ss">{1}{n}</span><span class="sc">\right</span><span class="ss">)^n</span><span class="sc">\quad</span></span>
+<span id="cb7-3"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\left</span><span class="ss">.</span><span class="sc">\frac</span><span class="ss">{x^3}{3}</span><span class="sc">\right</span><span class="ss">|_0^1</span></span>
+<span id="cb7-4"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
+<p><span class="math display">\[
+\left(1+\frac{1}{n}\right)^n\quad
+\left.\frac{x^3}{3}\right|_0^1
+\]</span></p>
+<p>Bazen gruplandırıcı sembolün boyunu elle ayarlamak gerekebilir. Bunun
+için, gruplandırıcı komutun önüne <code>\big</code>, <code>\Big</code>, <code>\bigg</code> veya <code>\Bigg</code>
+komutlarından biri verilir. <code>\bigl</code> (büyük sol) ve <code>\bigr</code> (büyük sağ)
+komutları da parantezleri biraz büyütür.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb8-1"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span><span class="sc">\big</span><span class="ss">(</span><span class="sc">\Big</span><span class="ss">(</span><span class="sc">\bigg</span><span class="ss">(</span><span class="sc">\Bigg</span><span class="ss">(</span><span class="sc">\quad</span></span>
+<span id="cb8-2"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\big\}\Big\}\bigg\}\Bigg\}</span></span>
+<span id="cb8-3"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\quad</span></span>
+<span id="cb8-4"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="sc">\big\|\Big\|\bigg\|\Bigg\|</span><span class="ss">\]</span></span></code></pre></div>
+<p><span class="math display">\[
+\big(\Big(\bigg(\Bigg(\quad
+\big\}\Big\}\bigg\}\Bigg\}
+\quad
+\big\|\Big\|\bigg\|\Bigg\|
+\]</span></p>
+<p>Oklar için aşağıdaki komutlar kullanılır.</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(\leftarrow\)</span> <code>\leftarrow</code> ya da <code>\gets</code> $</td>
+<td>gleftarrow$ <code>\longleftarrow</code> $</td>
+<td>w$ <code>\uparrow</code> $</td>
+<td align="left">$ <code>\Leftarrow</code></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\Longleftarrow\)</span> <code>\Longleftarrow</code> $</td>
+<td>parrow$ <code>\Uparrow</code> $ </td>
+<td>htarrow $ <code>\rightarrow</code> ya da <code>\to</code> $</td>
+<td align="left">htarrow$ <code>\longrightarrow</code></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\downarrow\)</span> <code>\downarrow</code> $</td>
+<td>ightarrow$ <code>\Rightarrow</code> $</td>
+<td>rightarrow$ <code>\Longrightarrow</code> $</td>
+<td align="left">ow$ <code>\Downarrow</code></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\leftrightarrow\)</span> <code>\leftrightarrow</code> $</td>
+<td>ongleftrightarrow$ <code>\longleftrightarrow</code> $</td>
+<td>wnarrow$ <code>\updownarrow</code> $</td>
+<td align="left">htarrow$ <code>\Leftrightarrow</code></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\Longleftrightarrow\)</span> <code>\Longleftrightarrow</code> $</td>
+<td>pdownarrow$ <code>\Updownarrow</code> $</td>
+<td>to$ <code>\mapsto</code> $</td>
+<td align="left">sto$ <code>\longmapsto</code></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\nearrow\)</span> <code>\nearrow</code> $</td>
+<td>ookleftarrow$ <code>\hookleftarrow</code> $</td>
+<td>rightarrow$ <code>\hookrightarrow</code> $</td>
+<td align="left">$ <code>\searrow</code></td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(\leftharpoonup\)</span> <code>\leftharpoonup</code> $</td>
+<td>ightharpoonup$ <code>\rightharpoonup</code> $</td>
+<td>row$ <code>\swarrow</code> $</td>
+<td align="left">poondown$ <code>\leftharpoondown</code></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\rightharpoondown\)</span> <code>\rightharpoondown</code> $</td>
+<td>warrow$ <code>\nwarrow</code> $</td>
+<td>tleftharpoons$ <code>\rightleftharpoons</code> $</td>
+<td align="left">$ <code>\leadsto</code></td>
+</tr>
+</tbody>
+</table>
+<div class="sourceCode" id="cb9"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb9-1"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span></span>
+<span id="cb9-2"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\downarrow</span></span>
+<span id="cb9-3"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\big\downarrow</span></span>
+<span id="cb9-4"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="sc">\Big\downarrow</span></span>
+<span id="cb9-5"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="sc">\bigg\downarrow</span></span>
+<span id="cb9-6"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="sc">\Bigg\downarrow</span></span>
+<span id="cb9-7"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span></span></code></pre></div>
+<p><span class="math inline">\(\downarrow \big\downarrow \Big\downarrow \bigg\downarrow \Bigg\downarrow\)</span></p>
+<p>Bunların dışında altlarına ya da üstlerine matematiksel ifadeler
+yazılabilen <code>\xleftarrow</code> ve <code>\xrightarrow</code> komutları vardır.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb10-1"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\(</span></span>
+<span id="cb10-2"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\xleftarrow</span><span class="ss">{a}</span></span>
+<span id="cb10-3"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\xrightarrow</span><span class="ss">[X]{a+b}</span></span>
+<span id="cb10-4"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="ss">\)</span></span></code></pre></div>
+<p><span class="math inline">\(\xleftarrow{a}\)</span>
+<span class="math inline">\(\xrightarrow[X]{a+b}\)</span></p>
+
 </div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="kitap-projesi-başlatma.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="satır-ve-sayfa-kesme.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="giriş-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="kaynaklar.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

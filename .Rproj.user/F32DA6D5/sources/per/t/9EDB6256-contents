@@ -56,7 +56,7 @@ da komut adından sonra gelen köşeli parantezler içine yazılırlar. Eğer
 değişkenler birden fazlaysa aralarına virgül koyularak ayrılır.
 
 
-``` {r, attr.source='.numberLines', eval=FALSE}
+``` {tex, attr.source='.numberLines', eval=FALSE}
 \:
 \LaTeX
 \item[...]
@@ -83,7 +83,7 @@ Bu, `\usepackage` komutuyla yapılır. Bu komutun zorunlu değişkenine
 paket adı, zorunlu olmayan kısmına ise paket seçenekleri yazılır:
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \usepackage[<seçenekler>]{<paket adı>}
 ```
 
@@ -99,7 +99,7 @@ Bir ortam `\begin` komutuyla başlayıp `\end` komutuyla biter. Her iki
 komutun zorunlu değişkeni ortamın adıdır:
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \begin{<ortam adı>}
  ...
 \end{<ortam adı>}
@@ -123,7 +123,7 @@ algılanır. Arka arkaya boş bırakılan çok sayıda boş satır LaTeX
 tarafından tek bir boş satır yani paragraf başı olarak algılanır.
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
  İster bir boşluk, isterseniz de çok         sayıda boşluk bırakın. 
 İkisi de bir boşluk gibi işlem görür. 
 
@@ -137,7 +137,7 @@ gerçekten bir boşluk bırakmak için, ya `{}` ve ardından boşluk girilir
 ya da komut adından sonra özel bir boşluk komutu kullanılır.
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \LaTeX  boşluk yok.\\
 \LaTeX{} boşluk var.\\
 \LaTeX\ boşluk komutuyla  boşluk.
@@ -150,7 +150,7 @@ Aşağıdaki karakterlerin herbiri LaTeX'de özel bir amaç için kullanılır.
 Dolayısıyla bu karakterleri doğrudan kullanmak istenmeyen sonuçlara yol
 açabilir.
 
-```{r}
+```{tex}
 # $ %   &   {   }   ~  ^  _ \
 ```
 
@@ -197,13 +197,13 @@ depolarında mevcut olup, paket yöneticisi ya da komut satırı yardımıyla
 kurulabilir. Örneğin Ubuntu, Debian, Mint, Pardus gibi `.deb` uzantılı
 paketlerin kullanıldığı dağıtımlarda
 
-```{r eval=FALSE}
+```{tex eval=FALSE}
 sudo apt-get install texlive-base
 ```
 
 komutuyla temel kurulum,
 
-```{r eval=FALSE}
+```{tex eval=FALSE}
 sudo apt-get install texlive-full
 ```
 
@@ -266,7 +266,7 @@ basit bir metin editörüyle de düzenlenebilir.
 
 Bir belge hazırlamaya başlamak için verilecek ilk komut
 
-```{r eval=FALSE}
+```{tex eval=FALSE}
 \documentclass[...]{...}
 ```
 
@@ -288,7 +288,7 @@ Aşağıda asgari bir LaTeX kaynak dosyası gösterilmiştir. `\documentclass`
 komutunun değişkeni olan `article`, belgenin makale olacağını belirtir.
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \documentclass{article}
 \begin{document}
 İşte ilk belgem.
@@ -309,7 +309,7 @@ Eğer metin editörü kullanıyorsanız derlemeyi uçbirimde (terminal,
 konsol,...) yapmanız gerekir. Derleme için uçbirim kaynak dosyanın
 olduğu dizinde açılıp
 
-```{r eval=FALSE}
+```{tex eval=FALSE}
 pdflatex belge1
 ```
 
@@ -376,7 +376,7 @@ varsayılan olduğu ve kullanılabilir olup olmadığı gösterilmiştir.
 Örneğin belgeye
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \documentclass[a4paper,12pt]{article}
 ```
 
@@ -387,7 +387,7 @@ olan bir makale yazacağımızı bildirmiş oluruz.
 Başka bir örnek
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \documentclass[a5paper,11pt,twocolumn]{book}
 ```
 
@@ -400,7 +400,7 @@ kitap yazacağımızı ve kitabın iki sütun olarak dizilmesini söyledik.
 LaTeX'de Türkçe belgeler oluşturmak için öncelikle sahanlığa
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \usepackage[T1]{fontenc}
 \usepackage[turkish]{babel}
 ```
@@ -424,7 +424,7 @@ paketi de Chapter, Table, Contents,... gibi isimlerin Türkçeleşmesi
 Aşağıda Türkçe asgari bir LaTeX kaynak dosyası örneği verilmiştir.
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \documentclass{article}
 \usepackage[T1]{fontenc}
 \usepackage[turkish]{babel}
@@ -437,7 +437,7 @@ Türkçe dışında ikinci bir dil kullanmak isterseniz, örneğin İngilizce,
 `babel` paketinin seçeneğini
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \usepackage[english,turkish]{babel}
 ```
 
@@ -451,14 +451,14 @@ Bir kelime ya da cümle gibi kısa metinler kullanılacaksa
 `\foreignlanguage` komutu kullanılabilir:
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \foreignlanguage{<dil>}{<metin>}
 ```
 
 
 Uzun metinler içinse diğer bir seçenek `otherlanguage` ortamıdır.
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \begin{otherlanguage}{<dil>}
 ...
 \end{otherlanguage}
@@ -477,7 +477,7 @@ Yanlış hecelenen kelimenin bölünebileceği yerler `\-` komutuyla
 gösterilir:
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 He\-ce\-le\-me
 ```
 
@@ -490,7 +490,7 @@ olan kelime listesi oluşturulursa belgenin tamamına bu kural uygulanmış
 olur. Örneğin
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \hyphenation{He-ce-le-me FORTRAN}
 ```
 
@@ -521,7 +521,7 @@ içerebilir. Bu komutun değişkeni bir e-posta adresi, iş adresi veya bir
 teşekkür metni olabilir.
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \documentclass[a4paper,12pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[turkish]{babel}
@@ -577,7 +577,7 @@ Bu seviyelerdeki başlıklara numara verilmesini ve İçindekiler tablosuna
 yazılması için iki adet `\setcounter` komutu
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \setcounter{secnumdepth}{<seviye>}
 \setcounter{tocdepth}{<seviye>}
 ```
@@ -588,7 +588,7 @@ seviyeye kadar olan başlıkların numaralandırılacağını, ikinci komuttaki
 İçindekiler tablosuna yazılacağını sayıyla belirtirsiniz. Örneğin `book`
 ve `report` sınıflarında
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
 ```
@@ -604,7 +604,7 @@ bölüm komutlarının zorunlu olmayan değişkenine başlıkların kısa şekli
 yazılır:
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \section[Kısa Başlık]{Uzuuuuuuuuuuuuuuuuun Başlık}
 ```
 
@@ -612,7 +612,7 @@ yazılır:
 Bölüm komutlarının birde yıldızlı sürümleri vardır:
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \part*{...}
 \chapter*{...}
 \section*{...}
@@ -631,7 +631,7 @@ yapılabilir, hatta Kaynakça gibi özel sayfalarda bu eklemeler
 gereklidir. Bunun için `\addcontentsline` komutu kullanılır.
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \addcontentsline{toc}{<giriş formatı>}{<giriş metni>}
 ```
 
@@ -643,7 +643,7 @@ kaynakçanın İçindekiler tablosuna yazılması için
 sınıflarında
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \addcontentsline{toc}{chapter}{Kaynakça}
 ```
 
@@ -651,7 +651,7 @@ sınıflarında
 `article` sınıfında ise
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \addcontentsline{toc}{section}{Kaynaklar}
 ```
 
@@ -666,7 +666,7 @@ komutunun verilmesi gerekir.
 
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \documentclass[a4paper,12pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage[turkish]{babel}
@@ -721,7 +721,7 @@ Bu komutların zorunlu değişkeni eklemek istediğiniz dosyanın adıdır.
 eklemek için
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \include{dosya1}
 ```
 
@@ -730,7 +730,7 @@ komutunu kullanırsınız. Eğer dosya uzantısı `.tex` değilse (örneğin
 `.txt` olsun) o zaman dosya adını uzantısıyla yazmanız gerekir:
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \include{dosya1.txt}
 ```
 
@@ -741,7 +741,7 @@ zorunlu değişkeninde eklenebilecek dosyalar aralarına virgül koyularak
 (ve boşluk bırakılmadan) listelenir:
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \includeonly{dosya1,dosya2,dosya3,...}
 ```
 
@@ -768,7 +768,7 @@ Burada kaynak dosya `kitap.tex`'dir. Bu kaynak dosyaya `bolum1.tex`
 dosyasını eklemek istediğinizde komutu
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \input{Bolumler/bolum1}
 ```
 
@@ -782,7 +782,7 @@ dosya adları Türkçe karakter ya da boşluk içermez.
 
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \documentclass[a4paper,12pt]{book}
 \usepackage[T1]{fontenc}
 \usepackage[turkish]{babel}
@@ -814,7 +814,7 @@ Bu tür sayfa düzenlemeleri için LaTeX'de
 [geometry](http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/geometry/geometry.pdf) paketi kullanılır. Öncelikle paketi
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \usepackage{geometry}
 ```
 
@@ -835,7 +835,7 @@ tanımlamalarla sayfanın düzenini değiştirebilirsiniz:
 
 Örneğin sahanlıkta
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \usepackage[paperwidth=175mm,paperheight=255mm,top=2cm,bottom=2cm,left=2.5cm,right=2.5cm]{geometry}
 ```
 
@@ -869,7 +869,7 @@ Birçok kelimeyi birlikte aynı satırda tutmak gerekirse `\mbox` komutu
 kullanılır:
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \mbox{<metin>}
 ```
 
@@ -941,7 +941,7 @@ Dikey aralık birkaç komutla bırakılabilir. Bunlardan biri `\vspace`
 olup, komut iki boş satır arasında
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \vspace{<uzunluk>}
 ```
 
@@ -957,7 +957,7 @@ Bir paragrafın iki satırı arasında veya bir tablonun satırları arasında
 ilave aralık açmak için
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \\[<uzunluk>]
 ```
 
@@ -965,7 +965,7 @@ ilave aralık açmak için
 komutu kullanılır.
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 A\\[1ex]
 B
 ```
@@ -976,7 +976,7 @@ B
 Bu komutlarda belirtilen uzunluklar negatif de olabilir.
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 A\\[-2ex]
 B
 ```
@@ -993,7 +993,7 @@ sırasıyla küçük, orta ve büyük aralıklar bırakır.
 Ön tanımlı yatay aralıklar
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \  \,  \:  \;  \quad  \qquad  \!
 ```
 
@@ -1007,7 +1007,7 @@ kullanılır. Yine dikey aralıkta olduğu gibi yatay aralık negatif de
 olabilir. Eğer aralık satır başına veya sonuna rasgelse dahi bu aralığı
 korumak istiyorsanız, yıldızlı `\hspace*` komutu kullanırsınız.
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 A\hspace{2cm}B\\
 A \hspace{2cm} B
 ```
@@ -1025,7 +1025,7 @@ komutunu kullanırsınız. Satır sonuna yaslayıp aralığa çizgi çekmek
 isterseniz de `\hrulefill` komutunu kullanırsınız.
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 A\hfill B\\
 A\dotfill B\\
 A\hrulefill B
@@ -1040,7 +1040,7 @@ A\hrulefill B
 LaTeX'de metni sola hizalamak için `flushleft`, sağa hizalamak için
 `flushright` ve ortalı hizalamak için `center` ortamları kullanılır.
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \begin{flushleft}
  burası sola hizalı
 \end{flushleft}
@@ -1067,7 +1067,7 @@ başlatmak gibi daha fazla seçenek istiyorsanız, `multicols` ortamını
 kullanmanız gerekir. Bu ortamı kullanabilmek için
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \usepackage{multicol}
 ```
 
@@ -1075,7 +1075,7 @@ komutuyla
 [multicol](http://ftp.ntua.gr/mirror/ctan/macros/latex/required/tools/multicol.pdf) paketini eklemelisiniz.
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \begin{multicols}{<sütun sayısı>}
 
 \end{multicols}
@@ -1094,7 +1094,7 @@ saklıdır. Bu değişkenler `\setlength` ya da `\def` komutları
 kullanılarak değiştirilebilir.
 
 
-``` {r,attr.source='.numberLines',eval=FALSE}
+``` {tex,attr.source='.numberLines',eval=FALSE}
 \setlength{\columnsep}{1cm}
 \setlength{\columnseprule}{1pt}
 \def\columnseprulecolor{\color{blue}}
@@ -1116,7 +1116,7 @@ sonra köşeli parantezler içine yazılır. Köşeli parantezler içinde
 yazılanlar bölünmeden ve çok sütunlu metnin üstünde dizilir.
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \begin{multicols}{2}
 [\section{Başlık}
 Burası sütunlara bölünmez.]
@@ -1147,7 +1147,7 @@ maddeler `\item` komutuyla belirtilir.
 Bir listeyi numaralı şekilde dizmek için `enumerate` ortamı kullanılır.
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \begin{enumerate}
  \item madde 1
   \begin{enumerate}
@@ -1166,7 +1166,7 @@ Numarasız, özel işaretli listeler için `itemize` ortamı kullanılır ve bu
 ortamda madde işareti değiştirilebilir.
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \begin{itemize}
 \item madde 1
 \item madde 2
@@ -1182,7 +1182,7 @@ Açıklamalı bir liste içinse `description` ortamı kullanılır. Bu ortamda
 köşeli parantez içine alınan anahtar kelimeler kalın dizilir.
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \begin{description}
 \item[Nokta] Boyutu olmayan
 \item[Çember] Bir noktaya eşit
@@ -1199,7 +1199,7 @@ komutuyla ekledikten sonra `enumerate` ortamını başlatan komutun peşine
 köşeli parantezler içinde madde işaretlerinin tipi belirtilebilir:
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \begin{enumerate}[I.]
 \item bir
 \item iki 
@@ -1249,7 +1249,7 @@ Varsayılan aile `\familydefault` komutunda saklı olup, `\renewcommand`
 komutuyla değiştirilebilir.
 
 
-``` {r eval=FALSE,attr.source='.numberLines'}
+``` {tex eval=FALSE,attr.source='.numberLines'}
 \renewcommand{\familydefault}{\rmdefault}  
 \renewcommand{\familydefault}{\sfdefault}  
 \renewcommand{\familydefault}{\ttdefault} 
@@ -1294,7 +1294,7 @@ Varsayılan yazıtipleri `\rmdefault`, `\sfdefault` ve `\ttdefault`
 komutlarında saklı olup, `\renewcommand` komutuyla değiştirilebilirler.
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \renewcommand{\rmdefault}{<kısaltma>}
 ```
 
@@ -1302,7 +1302,7 @@ komutlarında saklı olup, `\renewcommand` komutuyla değiştirilebilirler.
 Burada `<kısaltma>`, tablolarda belirtilen kısaltmalardır. Örneğin
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \renewcommand{\rmdefault}{put}
 ```
 
@@ -1315,7 +1315,7 @@ yazılması istenirse `\fontfamily` komutuyla `\selectfont` komutu
 birlikte aşağıdaki şekilde kullanılır.
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 {\fontfamily{pbk}\selectfont Bookman yazıtipi.} Ana yazıtipi.
 ```
 
@@ -1343,7 +1343,7 @@ bildirimlerle yapılır.
 Biçemleri](images/yazitipi7.png)
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 İzleyen kelime \textit{italik} 
 harflerle yazılmıştır.
 Metnin geri kalan kısmı
@@ -1354,12 +1354,12 @@ normaldir.
 [Çıktı](https://github.com/acarzfr/latex-dersleri/blob/main/examples/ex3.pdf)
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 İzleyen ifade {\slshape {\bfseries eğik kalındır}}.
 ```
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 İzleyen ifade \textit{\textbf{italik kalın}}, ama bu
 \textsc{\textit{büyük küçük harf değil}}.
 ```
@@ -1369,7 +1369,7 @@ normaldir.
 Eğer vurgulu metin içinde bazı kelimeler tekrar vurgulanırsa bu
 kelimeler normale döner.
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 {\em Vurgulu metinde tekrar
 vurgu yapılırsa {\em normale}
 döner.}
@@ -1393,7 +1393,7 @@ Yazıtipi boyutunu değiştirmek için aşağıdaki bildirimler kullanılır.
 Bildirimler](images/yazitipi8.png)
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 {\Large Büyük} ve
 {\scriptsize küçük} harfler.
 ```
@@ -1405,7 +1405,7 @@ verdiğiniz yere bağlı olarak farklı sonuçlar ürettiği gösterilmiştir.
 Doğru kullanım ikincisidir.
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 {\large 
 Sokrates: Platon
 yalan söyleyecek
@@ -1416,7 +1416,7 @@ aşağıdaki cümlede.}\par
 [Çıktı](https://github.com/acarzfr/latex-dersleri/blob/main/examples/ex4.pdf)
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 {\large Platon: Sokrates
 doğruyu söyledi
 önceki cümlede.\par}
@@ -1437,7 +1437,7 @@ Bağımsız bir yazıtipi boyutu elde etmek için `\fontsize` ile
 `\selectfont` komutları birlikte kullanılır.
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 {\fontsize{<boyut>}{<aralık>}\selectfont <metin>}
 ```
 
@@ -1447,7 +1447,7 @@ Buradaki `<boyut>` yazıtipi boyutu, `<aralık>` ise satır aralığıdır.
 $1.2$katı olmasıdır.
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 {\fontsize{30}{36}\selectfont
 Yazı tipi boyutu 30 punto,
 satır aralığı 36 punto.}
@@ -1458,7 +1458,7 @@ Ana yazıtipi boyutu `\normalsize` komutunda saklı olup, `\renewcommand`
 komutuyla değiştirilebilir.
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \renewcommand{\normalsize}{\fontsize{30}{36}\selectfont}
 ```
 
@@ -1475,7 +1475,7 @@ LaTeX'de renkler
 güçlüdür.
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \usepackage{xcolor}
 ```
 
@@ -1484,8 +1484,8 @@ komutuyla paketi ekledikten sonra `\color` ya da `\textcolor` komutları
 aşağıdaki şekillerde kullanılır.
 
 
-``` {r eval=FALSE}
-\color{red}{Kırmızı}\\
+``` {tex eval=FALSE}
+\color{texed}{Kırmızı}\\
 {\color{blue} Tamamı mavi}\\
 \textcolor{pink}{Pembe}
 ```
@@ -1504,11 +1504,11 @@ aşağıdaki renkler de kullanılabilir duruma gelir.
 renkler](images/renkler.png)
 
 Bunlar da yeterli gelmiyorsa seçeneklere bir de `svgnames` yazın ve
-[buradaki](https://www.latextemplates.com/svgnames-colors){rel="noreferrer noopener"
+[buradaki](https://www.latextemplates.com/svgnames-colors){texel="noreferrer noopener"
 target="_blank"} yüzden fazla rengi kullanılabilir duruma getirin.
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \documentclass[svgnames,dvipsnames]{article}
 ```
 
@@ -1522,9 +1522,9 @@ Hazır renkler istenilen oranlarda karıştırılarak yeni renkler elde
 edilebilir. Aşağıda karışımın nasıl hazırlanabileceği gösterilmiştir.
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \color{blue!80}{\%80 mavi \%20 beyaz}\\
-\color{red!40!blue}{\%40 kırmızı \%60 mavi} \\
+\color{texed!40!blue}{\%40 kırmızı \%60 mavi} \\
 {\color{yellow!20!green!75!black} \%20x0.75=15 sarı
 \%(100-20)x0.75=60 yeşil \%100-75=25 siyah}
 ```
@@ -1546,7 +1546,7 @@ edilebilir. Aşağıda karışımın nasıl hazırlanabileceği gösterilmiştir
 Komut
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \definecolor{<isim>}{<renk modeli>}{<kod>}
 ```
 
@@ -1556,12 +1556,12 @@ vereceğiniz bir isimdir. Kodlar için
 [HueSnap](https://www.huesnap.com/color) adresinden yararlanabilirsiniz. Örneğin
 
 
-``` {r eval=FALSE}
-\definecolor{renk1}{gray}{0.50}
-\definecolor{renk2}{rgb}{1,0.7,0.3}
-\definecolor{renk3}{RGB}{125,32,200}
-\definecolor{renk4}{HTML}{CC33CC}
-\definecolor{renk5}{cmyk}{0,0.7,1,0.5}
+``` {tex eval=FALSE}
+\definecolor{texenk1}{gray}{0.50}
+\definecolor{texenk2}{texgb}{1,0.7,0.3}
+\definecolor{texenk3}{texGB}{125,32,200}
+\definecolor{texenk4}{HTML}{CC33CC}
+\definecolor{texenk5}{cmyk}{0,0.7,1,0.5}
 ```
 
 
@@ -1574,7 +1574,7 @@ kullanacağınız satırdan önce gövdeye yazılmalıdır.
 Yeni oluşturduğunuz rengi tek seferlik kullanacaksanız
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \color[<model>]{<kod>}
 \textcolor[<model>]{<kod>}{<metin>}
 ```
@@ -1583,7 +1583,7 @@ Yeni oluşturduğunuz rengi tek seferlik kullanacaksanız
 komutlarını kullanabilirsiniz.
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 {\color[RGB]{102,0,51} Bol}\\
 \textcolor[RGB]{0,76,153}{Çeşit bol}
 ```
@@ -1593,7 +1593,7 @@ Metnin arka planını renklendirmek için `\colorbox` komutu kullanılır.
 Benzer `\fcolorbox` komutu aynı şeyi çizgi çizerek yapar.
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \colorbox{<arka plan rengi>}{<metin>}
 \colorbox[<renk modeli>]{<arka plan rengi>}{<metin>}
 \fcolorbox{<çizgi rengi>}{<arka plan rengi>}{<metin>}
@@ -1604,10 +1604,10 @@ Benzer `\fcolorbox` komutu aynı şeyi çizgi çizerek yapar.
 Komutlar yukarıda gösterildiği şekilde kullanılabilir.
 
 
-``` {r eval=FALSE}
+``` {tex eval=FALSE}
 \colorbox{Cyan}{Metin}
 \colorbox[rgb]{0.4,0.4,0.5}{Metin}
-\fcolorbox{red}{yellow}{Metin}
+\fcolorbox{texed}{yellow}{Metin}
 \fcolorbox[RGB]{0,0,0}{255,204,255}{Metin}
 ```
 
