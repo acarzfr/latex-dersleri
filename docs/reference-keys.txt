@@ -11,6 +11,7 @@ eq:cd
 eq:efg
 def:unlabeled-div-1
 def:unlabeled-div-2
+fig:fig-google
 genel
 latex-nedir
 önemli-yapılar
@@ -36,7 +37,15 @@ sayaçlar
 kanıtlar
 teorem-stilleri
 özel-stiller
-eq:euler
+özel-sayfalar
+kaynakça
+bütünleşik-kaynakça
+kaynakçanın-ayrı-dosyada-hazırlanması
+dosyanın-hazırlanması
+kaynakçanın-yazdırılması
+dizin
+çoklu-dizin
+dizinin-içindekiler-tablosuna-yazılması
 turkce
 heceleme
 belgeye-başlık-oluşturma
@@ -72,4 +81,4 @@ fonksiyonlar
 yığın-simgeleri
 matrisler
 yazı-biçem-ve-boyutları
-exm:unlabeled-div-3
+eq:euler

@@ -24,7 +24,7 @@
 <meta name="author" content="Zafer Acar" />
 
 
-<meta name="date" content="2022-01-23" />
+<meta name="date" content="2022-01-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="denklem-ortamları.html"/>
-<link rel="next" href="kaynaklar.html"/>
+<link rel="next" href="özel-sayfalar.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -219,7 +219,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.10.4" data-path="teorem-ve-benzeri-ortamlar.html"><a href="teorem-ve-benzeri-ortamlar.html#teorem-stilleri"><i class="fa fa-check"></i><b>2.10.4</b> Teorem Stilleri</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="" data-path="kaynaklar.html"><a href="kaynaklar.html"><i class="fa fa-check"></i>Kaynaklar</a></li>
+<li class="chapter" data-level="3" data-path="özel-sayfalar.html"><a href="özel-sayfalar.html"><i class="fa fa-check"></i><b>3</b> Özel Sayfalar</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="kaynakça.html"><a href="kaynakça.html"><i class="fa fa-check"></i><b>3.1</b> Kaynakça</a>
+<ul>
+<li class="chapter" data-level="3.1.1" data-path="kaynakça.html"><a href="kaynakça.html#bütünleşik-kaynakça"><i class="fa fa-check"></i><b>3.1.1</b> Bütünleşik Kaynakça</a></li>
+<li class="chapter" data-level="3.1.2" data-path="kaynakça.html"><a href="kaynakça.html#kaynakçanın-ayrı-dosyada-hazırlanması"><i class="fa fa-check"></i><b>3.1.2</b> Kaynakçanın ayrı dosyada hazırlanması</a></li>
+</ul></li>
+<li class="chapter" data-level="3.2" data-path="dizin.html"><a href="dizin.html"><i class="fa fa-check"></i><b>3.2</b> Dizin</a>
+<ul>
+<li class="chapter" data-level="3.2.1" data-path="dizin.html"><a href="dizin.html#çoklu-dizin"><i class="fa fa-check"></i><b>3.2.1</b> Çoklu Dizin</a></li>
+<li class="chapter" data-level="3.2.2" data-path="dizin.html"><a href="dizin.html#dizinin-içindekiler-tablosuna-yazılması"><i class="fa fa-check"></i><b>3.2.2</b> Dizinin İçindekiler tablosuna yazılması</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="kaynakça-1.html"><a href="kaynakça-1.html"><i class="fa fa-check"></i>Kaynakça</a></li>
 </ul>
 
       </nav>
@@ -287,7 +300,7 @@ istenilen bölüm seviyesi (chapter, section gibi) belirtilebilir:</p>
 <div class="sourceCode" id="cb53"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb53-1"><a href="teorem-ve-benzeri-ortamlar.html#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\newtheorem</span>{&lt;ad&gt;}{&lt;başlık&gt;}[&lt;sayaç&gt;]</span></code></pre></div>
 <p>Örneğin <code>article</code> sınıfında sahanlığa</p>
 <div class="sourceCode" id="cb54"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb54-1"><a href="teorem-ve-benzeri-ortamlar.html#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\newtheorem</span>{teorem}{Teorem}[section]</span></code></pre></div>
-<p>komutunu verdiğinizde yeni teoreminiz <code>\section</code> başlık seviyesinin numarasına göre numara alır.</p>
+<p>komutunu verdiğinizde teoreminiz <code>\section</code> başlık seviyesinin numarasına göre numara alır.</p>
 <p>Varsayılan olarak, her teorem kendi sayacını kullanır. Bununla birlikte,
 benzer teoremlerin (örneğin Teoremler, Lemmalar ve Sonuçlar) bir sayacı
 paylaşması yaygındır. Bu durumda, sonraki teoremleri şöyle tanımlayın:</p>
@@ -400,12 +413,6 @@ ikinci komut numarayı, üçüncüsü ise notu biçimlendirmek içindir.</p>
 <span id="cb65-9"><a href="teorem-ve-benzeri-ortamlar.html#cb65-9" aria-hidden="true" tabindex="-1"></a>{<span class="fu">\thmname</span>{#1} <span class="fu">\thmnumber</span>{#2}<span class="fu">\thmnote</span>{---#3}.}<span class="co">%</span></span>
 <span id="cb65-10"><a href="teorem-ve-benzeri-ortamlar.html#cb65-10" aria-hidden="true" tabindex="-1"></a><span class="fu">\theoremstyle</span>{benimstilim}<span class="co">%</span></span>
 <span id="cb65-11"><a href="teorem-ve-benzeri-ortamlar.html#cb65-11" aria-hidden="true" tabindex="-1"></a><span class="fu">\newtheorem</span>{sonuc}{Sonuç}<span class="co">%</span></span></code></pre></div>
-<p>Yukarıdaki komutlar sahanlıkta yazılırsa <code>sonuc</code> ortamının çıktısı
-aşağıdaki gibi olacaktır:</p>
-<div class="sourceCode" id="cb66"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb66-1"><a href="teorem-ve-benzeri-ortamlar.html#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">sonuc</span>}[Kendi Stilim]</span>
-<span id="cb66-2"><a href="teorem-ve-benzeri-ortamlar.html#cb66-2" aria-hidden="true" tabindex="-1"></a> Elle oluşturulmuş stil.</span>
-<span id="cb66-3"><a href="teorem-ve-benzeri-ortamlar.html#cb66-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">sonuc</span>}</span></code></pre></div>
-<p><a href="https://github.com/acarzfr/latex-dersleri/blob/main/examples/ex9.pdf">Çıktı</a></p>
 
 </div>
 </div>
@@ -417,7 +424,7 @@ aşağıdaki gibi olacaktır:</p>
         </div>
       </div>
 <a href="denklem-ortamları.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="kaynaklar.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="özel-sayfalar.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -459,7 +466,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": null,
+"download": ["latex-dersleri.pdf"],
 "search": {
 "engine": "fuse",
 "options": null

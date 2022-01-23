@@ -1419,7 +1419,7 @@ aşağıdaki cümlede.}\par
  <!-- [Çıktı](https://github.com/acarzfr/latex-dersleri/blob/main/examples/ex4.pdf) --> 
 
 
-``` {tex eval=FALSE}
+```latex
 {\large Platon: Sokrates
 doğruyu söyledi
 önceki cümlede.\par}
@@ -1507,8 +1507,7 @@ aşağıdaki renkler de kullanılabilir duruma gelir.
 renkler](images/renkler.png){width=100%}
 
 Bunlar da yeterli gelmiyorsa seçeneklere bir de `svgnames` yazın ve
-[buradaki](https://www.latextemplates.com/svgnames-colors){texel="noreferrer noopener"
-target="_blank"} yüzden fazla rengi kullanılabilir duruma getirin.
+[buradaki](https://www.latextemplates.com/svgnames-colors) yüzden fazla rengi kullanılabilir duruma getirin.
 
 
 ```latex
@@ -1527,7 +1526,7 @@ edilebilir. Aşağıda karışımın nasıl hazırlanabileceği gösterilmiştir
 
 ```latex
 \color{blue!80}{\%80 mavi \%20 beyaz}\\
-\color{texed!40!blue}{\%40 kırmızı \%60 mavi} \\
+\color{red!40!blue}{\%40 kırmızı \%60 mavi} \\
 {\color{yellow!20!green!75!black} \%20x0.75=15 sarı
 \%(100-20)x0.75=60 yeşil \%100-75=25 siyah}
 ```
@@ -1560,11 +1559,11 @@ vereceğiniz bir isimdir. Kodlar için
 
 
 ```latex
-\definecolor{texenk1}{gray}{0.50}
-\definecolor{texenk2}{texgb}{1,0.7,0.3}
-\definecolor{texenk3}{texGB}{125,32,200}
-\definecolor{texenk4}{HTML}{CC33CC}
-\definecolor{texenk5}{cmyk}{0,0.7,1,0.5}
+\definecolor{renk1}{gray}{0.50}
+\definecolor{renk2}{rgb}{1,0.7,0.3}
+\definecolor{renk3}{RGB}{125,32,200}
+\definecolor{renk4}{HTML}{CC33CC}
+\definecolor{renk5}{cmyk}{0,0.7,1,0.5}
 ```
 
 
@@ -1610,7 +1609,7 @@ Komutlar yukarıda gösterildiği şekilde kullanılabilir.
 ```latex
 \colorbox{Cyan}{Metin}
 \colorbox[rgb]{0.4,0.4,0.5}{Metin}
-\fcolorbox{texed}{yellow}{Metin}
+\fcolorbox{red}{yellow}{Metin}
 \fcolorbox[RGB]{0,0,0}{255,204,255}{Metin}
 ```
 

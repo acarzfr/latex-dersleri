@@ -329,7 +329,7 @@ komutu kullanılır.
 \DeclareMathOperator{\obeb}{obeb}
 ```
 
-\DeclareMathOperator{\obeb}{obeb}
+
 Yukarıdaki komuttan sonra artık kullanabileceğiniz bir "obeb" fonksiyonu
 olur.
 
@@ -496,16 +496,16 @@ otomatik ortalanır ve sütunlar normal bir tablo gibi dizilir. Her sütun
 ```latex
 \[
 \begin{matrix}
-a & b & c \
-d & e & f \
+a & b & c \\
+d & e & f \\
 g & h & i
 \end{matrix}
 \]
 ```
 \[
 \begin{matrix}
-a & b & c \
-d & e & f \
+a & b & c \\
+d & e & f \\
 g & h & i
 \end{matrix}
 \]
@@ -519,14 +519,14 @@ dikey çubuklu matrisler oluşturur.
 ```latex
 \[
 \begin{pmatrix}
-1 & 2 \
+1 & 2 \\
 3 & 4
 \end{pmatrix}
 \]
 ```
 \[
 \begin{pmatrix}
-1 & 2 \
+1 & 2 \\
 3 & 4
 \end{pmatrix}
 \]
@@ -535,14 +535,14 @@ dikey çubuklu matrisler oluşturur.
 ```latex
 \[
 \begin{bmatrix}
-1 & 2 \
+1 & 2 \\
 3 & 4
 \end{bmatrix}
 \]
 ```
 \[
 \begin{bmatrix}
-1 & 2 \
+1 & 2 \\
 3 & 4
 \end{bmatrix}
 \]
@@ -552,8 +552,8 @@ dikey çubuklu matrisler oluşturur.
 \[
 A=
 \begin{bmatrix}
-x_{11} & x_{12} & \dots \
-x_{21} & x_{22} & \dots \
+x_{11} & x_{12} & \dots \\
+x_{21} & x_{22} & \dots \\
 \vdots & \vdots & \ddots
 \end{bmatrix}
 \]
@@ -561,8 +561,8 @@ x_{21} & x_{22} & \dots \
 \[
 A=
 \begin{bmatrix}
-x_{11} & x_{12} & \dots \
-x_{21} & x_{22} & \dots \
+x_{11} & x_{12} & \dots \\
+x_{21} & x_{22} & \dots \\
 \vdots & \vdots & \ddots
 \end{bmatrix}
 \]
@@ -575,16 +575,16 @@ matriste parantezler elle eklenmelidir.
 Şimdi yazacağımız matris
 \(A=\big(
 \begin{smallmatrix}
-a & b \
+a & b \\
 c & d
 \end{smallmatrix}
 \bigr)\)
 küçük bir matristir.
 ```
 Şimdi yazacağımız matris
-\(A=\big(
+\(A=\bigl(
 \begin{smallmatrix}
-a & b \
+a & b \\
 c & d
 \end{smallmatrix}
 \bigr)\)
@@ -598,14 +598,14 @@ matematik sürümü olan `array` ortamını kullanılmalıdır.
 ```latex
 \[
 \left(\begin{array}{r|r}
--1&2\\hline
+-1&2\\\hline
 3&-4
 \end{array}\right)
 \]
 ```
 \[
 \left(\begin{array}{r|r}
--1&2\\hline
+-1&2\\\hline
 3&-4
 \end{array}\right)
 \]
@@ -619,7 +619,7 @@ değiştirmek isteyebilirsiniz.
 LaTeX'de matematik kipindeki yazıların biçemleri aşağıdaki komutlar
 kullanılarak değiştirilir.
 
-\usepackage{mathrsfs}
+
 
   ---------------------------- -----------------------------
   `\mathnormal{ABC def 123}`   $ABC def 123$
@@ -640,6 +640,8 @@ Son satırdaki komutun kullanılabilmesi için
 ```latex
 \usepackage{mathrsfs}
 ```
+
+
 
 
 komutuyla **mathrsfs** paketi eklenmiş olmalıdır.
@@ -992,7 +994,7 @@ formülü\dots
  e &= f+g (\#eq:efg)
 \end{align}
 Yukarıdaki \@ref(eq:cd)
-formülü..
+formülü...
 
 Aynı ortamda yer alan formüllerin 1, 2,... yerine 1.a,
 1.b,... biçiminde numaralandırılması için ortamın
@@ -1109,7 +1111,7 @@ istenilen bölüm seviyesi (chapter, section gibi) belirtilebilir:
 ```
 
 
-komutunu verdiğinizde yeni teoreminiz `\section` başlık seviyesinin numarasına göre numara alır.
+komutunu verdiğinizde teoreminiz `\section` başlık seviyesinin numarasına göre numara alır.
 
 
 
@@ -1294,15 +1296,4 @@ Not değişkeni her zaman isteğe bağlıdır, ancak başlık oluşturulurken
 ```
 
 
-Yukarıdaki komutlar sahanlıkta yazılırsa `sonuc` ortamının çıktısı
-aşağıdaki gibi olacaktır:
 
-
-```latex
-\begin{sonuc}[Kendi Stilim]
- Elle oluşturulmuş stil.
-\end{sonuc}
-```
- 
-
-[Çıktı](https://github.com/acarzfr/latex-dersleri/blob/main/examples/ex9.pdf)
