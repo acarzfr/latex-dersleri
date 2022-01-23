@@ -24,7 +24,7 @@
 <meta name="author" content="Zafer Acar" />
 
 
-<meta name="date" content="2022-01-22" />
+<meta name="date" content="2022-01-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -225,6 +225,7 @@ div.csl-indent {
 <li class="chapter" data-level="2.1.2" data-path="giriş-1.html"><a href="giriş-1.html#matematik-kipiyle-metin-kipi-arasındaki-farklar"><i class="fa fa-check"></i><b>2.1.2</b> Matematik Kipiyle Metin Kipi Arasındaki Farklar</a></li>
 <li class="chapter" data-level="2.1.3" data-path="giriş-1.html"><a href="giriş-1.html#gruplandırma"><i class="fa fa-check"></i><b>2.1.3</b> Gruplandırma</a></li>
 </ul></li>
+<li class="chapter" data-level="2.2" data-path="parantezler-gruplandırıcılar-ve-oklar.html"><a href="parantezler-gruplandırıcılar-ve-oklar.html"><i class="fa fa-check"></i><b>2.2</b> Parantezler, Gruplandırıcılar ve Oklar</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="kaynaklar.html"><a href="kaynaklar.html"><i class="fa fa-check"></i>Kaynaklar</a></li>
 </ul>
@@ -273,15 +274,15 @@ komutuyla eklediğiniz metin yeni bir sayfadan başlayarak dizilir.</p>
 <p>Bu komutların zorunlu değişkeni eklemek istediğiniz dosyanın adıdır.
 Örneğin kaynak dosyanızla aynı dizinde yer alan <code>dosya1.tex</code> dosyasını
 eklemek için</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb30-1"><a href="kitap-projesi-başlatma.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\include</span>{<span class="ex">dosya1</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb30-1"><a href="kitap-projesi-başlatma.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\include</span>{<span class="ex">dosya1</span>}</span></code></pre></div>
 <p>komutunu kullanırsınız. Eğer dosya uzantısı <code>.tex</code> değilse (örneğin
 <code>.txt</code> olsun) o zaman dosya adını uzantısıyla yazmanız gerekir:</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb31-1"><a href="kitap-projesi-başlatma.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\include</span>{<span class="ex">dosya1.txt</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb31-1"><a href="kitap-projesi-başlatma.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\include</span>{<span class="ex">dosya1.txt</span>}</span></code></pre></div>
 <p>Ayrıca, hangi dosyaların eklenebileceğini LaTeX’e bildiren bir komut
 vardır: <code>\includeonly</code>. Bu komut, sadece sahanlığa yazılabilir. Komutun
 zorunlu değişkeninde eklenebilecek dosyalar aralarına virgül koyularak
 (ve boşluk bırakılmadan) listelenir:</p>
-<div class="sourceCode" id="cb32"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb32-1"><a href="kitap-projesi-başlatma.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\includeonly</span>{dosya1,dosya2,dosya3,...}</span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb32-1"><a href="kitap-projesi-başlatma.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\includeonly</span>{dosya1,dosya2,dosya3,...}</span></code></pre></div>
 <p>Böyle bir liste oluşturulduktan sonra bu listede olmayan bir dosya artık
 <code>\include</code> komutuyla kaynak dosyaya eklenemez.</p>
 <p><code>\input</code> komutu sahanlıkta da kullanılabilir. Örneğin, sahanlığınızı tek
@@ -289,7 +290,7 @@ bir dosyaya yazıp, bu dosyayı bu komutla sahanlığa ekleyebilirsiniz.</p>
 <p>Daha düzenli çalışmak adına kaynak dosyanızın olduğu dizini de
 düzenleyebilirsiniz.</p>
 <div class="figure">
-<img src="images/dizin.png" alt="" />
+<img src="images/dizin.png" style="width:50.0%" alt="" />
 <p class="caption">Kaynak dosyanın olduğu dizinin
 düzenlenmesi</p>
 </div>
@@ -298,13 +299,13 @@ komutlarıyla dosya eklemek istediğinizde dosyanın bulunduğu dizini de
 göstermeniz gerekir.</p>
 <p>Burada kaynak dosya <code>kitap.tex</code>’dir. Bu kaynak dosyaya <code>bolum1.tex</code>
 dosyasını eklemek istediğinizde komutu</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb33-1"><a href="kitap-projesi-başlatma.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\input</span>{Bolumler/bolum1}</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb33-1"><a href="kitap-projesi-başlatma.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\input</span>{Bolumler/bolum1}</span></code></pre></div>
 <p>şeklinde verirsiniz. Bu sayede kaynak dosyanızın olduğu dizinde (Örnek
 Kitap) sadece <code>kitap</code> ile başlayan dosyalar olur. Diğer dosyalar alt
 dizinde (Bolumler) yer alır.</p>
 <p>Dikkat edilirse “Örnek Kitap” dışında, “Bolumler” alt dizini ve tüm
 dosya adları Türkçe karakter ya da boşluk içermez.</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb34-1"><a href="kitap-projesi-başlatma.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[a4paper,12pt]{<span class="ex">book</span>}</span>
+<div class="sourceCode" id="cb34"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb34-1"><a href="kitap-projesi-başlatma.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[a4paper,12pt]{<span class="ex">book</span>}</span>
 <span id="cb34-2"><a href="kitap-projesi-başlatma.html#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[T1]{<span class="ex">fontenc</span>}</span>
 <span id="cb34-3"><a href="kitap-projesi-başlatma.html#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[turkish]{<span class="ex">babel</span>}</span>
 <span id="cb34-4"><a href="kitap-projesi-başlatma.html#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\title</span>{Örnek Kitap}</span>

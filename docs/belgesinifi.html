@@ -24,7 +24,7 @@
 <meta name="author" content="Zafer Acar" />
 
 
-<meta name="date" content="2022-01-22" />
+<meta name="date" content="2022-01-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,7 +32,7 @@
   
   
 <link rel="prev" href="tipik.html"/>
-<link rel="next" href="kaynaklar.html"/>
+<link rel="next" href="boşluklar.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -182,6 +182,15 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="1.4" data-path="tipik.html"><a href="tipik.html"><i class="fa fa-check"></i><b>1.4</b> Tipik Bir Belge Yazımı</a></li>
 <li class="chapter" data-level="1.5" data-path="belgesinifi.html"><a href="belgesinifi.html"><i class="fa fa-check"></i><b>1.5</b> Belge Sınıfları ve Seçenekleri</a></li>
+<li class="chapter" data-level="1.6" data-path="boşluklar.html"><a href="boşluklar.html"><i class="fa fa-check"></i><b>1.6</b> Boşluklar</a></li>
+<li class="chapter" data-level="1.7" data-path="denklem-ortamları.html"><a href="denklem-ortamları.html"><i class="fa fa-check"></i><b>1.7</b> Denklem Ortamları</a></li>
+<li class="chapter" data-level="1.8" data-path="teorem-ve-benzeri-ortamlar.html"><a href="teorem-ve-benzeri-ortamlar.html"><i class="fa fa-check"></i><b>1.8</b> Teorem ve Benzeri Ortamlar</a>
+<ul>
+<li class="chapter" data-level="1.8.1" data-path="teorem-ve-benzeri-ortamlar.html"><a href="teorem-ve-benzeri-ortamlar.html#temel-teoremler"><i class="fa fa-check"></i><b>1.8.1</b> Temel Teoremler</a></li>
+<li class="chapter" data-level="1.8.2" data-path="teorem-ve-benzeri-ortamlar.html"><a href="teorem-ve-benzeri-ortamlar.html#sayaçlar"><i class="fa fa-check"></i><b>1.8.2</b> Sayaçlar</a></li>
+<li class="chapter" data-level="1.8.3" data-path="teorem-ve-benzeri-ortamlar.html"><a href="teorem-ve-benzeri-ortamlar.html#kanıtlar"><i class="fa fa-check"></i><b>1.8.3</b> Kanıtlar</a></li>
+<li class="chapter" data-level="1.8.4" data-path="teorem-ve-benzeri-ortamlar.html"><a href="teorem-ve-benzeri-ortamlar.html#teorem-stilleri"><i class="fa fa-check"></i><b>1.8.4</b> Teorem Stilleri</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="kaynaklar.html"><a href="kaynaklar.html"><i class="fa fa-check"></i>Kaynaklar</a></li>
 </ul>
@@ -210,6 +219,16 @@ bahsedelim.</p>
 <p>Başka sınıflar olmakla birlikte LaTeX’de varsayılan olarak kullanılan
 beş belge sınıfı vardır.</p>
 <table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Sınıf</th>
+<th align="left">Açıklama</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td align="left"><code>article</code></td>
@@ -236,6 +255,16 @@ beş belge sınıfı vardır.</p>
 <p>Bu beş sınıftan <code>article</code>, <code>report</code> ve <code>book</code> için kullanılabilecek
 seçenekler aşağıdadır.</p>
 <table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Seçenek</th>
+<th align="left">Açıklama</th>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td align="left"><strong>10pt, 11pt, 12pt</strong></td>
@@ -343,7 +372,7 @@ varsayılan olduğu ve kullanılabilir olup olmadığı gösterilmiştir.</p>
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="center"><code>tex ocumentclass[a4pap</code></td>
+<td align="center"><code>latex ocumentclass[a4pap</code></td>
 <td align="left">er,12pt]{</td>
 <td align="left">article}</td>
 <td align="left"></td>
@@ -365,7 +394,7 @@ luruz.</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex ocumentclass[a5pap</code></td>
+<td align="center"><code>latex ocumentclass[a5pap</code></td>
 <td align="left">er,11pt,t</td>
 <td align="left">wocolumn]{b</td>
 <td align="left">ook}</td>
@@ -393,7 +422,7 @@ olarak dizilmesini söyledik.</td>
 <td align="left">öncelikle sahanlığa</td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex sepackage[T1]{font sepackage[turkish]</code></td>
+<td align="center"><code>latex sepackage[T1]{font sepackage[turkish]</code></td>
 <td align="left">enc}
 {babel}</td>
 <td align="left"></td>
@@ -454,7 +483,7 @@ bu paketin kullanılma</td>
 <td align="left">osyası örneği verilmiştir.</td>
 </tr>
 <tr class="odd">
-<td align="center"><code>tex ocumentclass{artic sepackage[T1]{font sepackage[turkish] egin{document} te  Türkçe ilk bel nd{document}</code></td>
+<td align="center"><code>latex ocumentclass{artic sepackage[T1]{font sepackage[turkish] egin{document} İşte  Türkçe ilk b nd{document}</code></td>
 <td align="left">le}
 enc}
 {babel}</td>
@@ -470,7 +499,7 @@ abel` paketinin se</td>
 <td align="left">isterseniz, örneğin İngilizce,</td>
 </tr>
 <tr class="odd">
-<td align="center"><code>tex sepackage[english,</code></td>
+<td align="center"><code>latex sepackage[english,</code></td>
 <td align="left">turkish]{</td>
 <td align="left">babel}</td>
 <td align="left"></td>
@@ -504,7 +533,7 @@ lanılabilir</td>
 :</td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex oreignlanguage{&lt;di</code></td>
+<td align="center"><code>latex oreignlanguage{&lt;di</code></td>
 <td align="left">l&gt;}{&lt;meti</td>
 <td align="left">n&gt;}</td>
 <td align="left"></td>
@@ -516,7 +545,7 @@ lanılabilir</td>
 <td align="left">otherlanguage` ortamıdır.</td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex egin{otherlanguage . nd{otherlanguage}</code></td>
+<td align="center"><code>latex egin{otherlanguage ... nd{otherlanguage}</code></td>
 <td align="left">}{<dil>}</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -557,7 +586,7 @@ lemeyi elle yapmak gerekir.
 i yerler <code>\-</code> komutuyla</td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex \-ce\-le\-me</code></td>
+<td align="center"><code>latex \-ce\-le\-me</code></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -585,7 +614,7 @@ ment}<code>komutundan sonra re (</code>-`) işaretiyle gösterilmiş
 in tamamına bu kural uygulanmış</td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex yphenation{He-ce-l</code></td>
+<td align="center"><code>latex yphenation{He-ce-l</code></td>
 <td align="left">e-me FORT</td>
 <td align="left">RAN}</td>
 <td align="left"></td>
@@ -665,7 +694,7 @@ eni bir e-p</td>
 osta adresi, iş adresi veya bir</td>
 </tr>
 <tr class="odd">
-<td align="center">`tex
+<td align="center">`latex
 ocumentclass[a4pap
 sepackage[T1]{font
 sepackage[turkish]
@@ -683,7 +712,7 @@ ks{A Üniv</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="center">erik…
+<td align="center">İçerik…
 nd{document}
 `</td>
 <td align="left"></td>
@@ -790,7 +819,7 @@ mesini ve İçindekiler tablosuna
 mutu</td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex etcounter{secnumde etcounter{tocdepth</code></td>
+<td align="center"><code>latex etcounter{secnumde etcounter{tocdepth</code></td>
 <td align="left">pth}{&lt;sev
 }{&lt;seviye</td>
 <td align="left">iye&gt;}
@@ -813,7 +842,7 @@ ağını sayıy</td>
 <td align="left"><seviye><code>değişkeninde kaçıncı ndırılacağını, ikinci komuttaki eye kadar olan başlıkların la belirtirsiniz. Örneğin</code>book`</td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex etcounter{secnumde etcounter{tocdepth</code></td>
+<td align="center"><code>latex etcounter{secnumde etcounter{tocdepth</code></td>
 <td align="left">pth}{3}
 }{3}</td>
 <td align="left"></td>
@@ -844,7 +873,7 @@ mayan değiş</td>
 kenine başlıkların kısa şekli</td>
 </tr>
 <tr class="odd">
-<td align="center"><code>tex ection[Kısa Başlık</code></td>
+<td align="center"><code>latex ection[Kısa Başlık</code></td>
 <td align="left">]{Uzuuuuu</td>
 <td align="left">uuuuuuuuuuu</td>
 <td align="left">un Başlık}</td>
@@ -856,7 +885,7 @@ kenine başlıkların kısa şekli</td>
 <td align="left">eri vardır:</td>
 </tr>
 <tr class="odd">
-<td align="center"><code>tex art*{...} hapter*{...} ection*{...} ubsection*{...} ubsubsection*{...} aragraph*{...} ubparagraph*{...}</code></td>
+<td align="center"><code>latex art*{...} hapter*{...} ection*{...} ubsection*{...} ubsubsection*{...} aragraph*{...} ubparagraph*{...}</code></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -883,7 +912,7 @@ yfalarda bu eklemeler
 ` komutu kullanılır.</td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex ddcontentsline{toc</code></td>
+<td align="center"><code>latex ddcontentsline{toc</code></td>
 <td align="left">}{&lt;giriş</td>
 <td align="left">formatı&gt;}{&lt;</td>
 <td align="left">giriş metni&gt;}</td>
@@ -908,7 +937,7 @@ ası için
 ne <code>book</code> ve <code>report</code></td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex ddcontentsline{toc</code></td>
+<td align="center"><code>latex ddcontentsline{toc</code></td>
 <td align="left">}{chapter</td>
 <td align="left">}{Kaynakça}</td>
 <td align="left"></td>
@@ -920,7 +949,7 @@ ne <code>book</code> ve <code>report</code></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex ddcontentsline{toc</code></td>
+<td align="center"><code>latex ddcontentsline{toc</code></td>
 <td align="left">}{section</td>
 <td align="left">}{Kaynaklar</td>
 <td align="left">}</td>
@@ -950,7 +979,7 @@ ri yazdıracağından tutarlı
 ir.</td>
 </tr>
 <tr class="odd">
-<td align="center"><code>tex ocumentclass[a4pap sepackage[T1]{font sepackage[turkish] itle{\LaTeX'de Böl uthor{\TeX dizgi} egin{document} aketitle ableofcontents ection{Birinci Sev İçerik... ubsection{İkinci S İçerik... ubsubsection{Üçünc İçerik... ection[Kısa Başlık İçerik... ection*{Numarasız ddcontentsline{toc İçerik... nd{document}</code></td>
+<td align="center"><code>latex ocumentclass[a4pap sepackage[T1]{font sepackage[turkish] itle{\LaTeX'de Böl uthor{\TeX dizgi} egin{document} aketitle ableofcontents ection{Birinci Sev İçerik... ubsection{İkinci S İçerik... ubsubsection{Üçünc İçerik... ection[Kısa Başlık İçerik... ection*{Numarasız ddcontentsline{toc İçerik... nd{document}</code></td>
 <td align="left">er,12pt]{
 enc}
 {babel}
@@ -1038,7 +1067,7 @@ nızla ayn</td>
 er alan <code>dosya1.tex</code> dosyasını</td>
 </tr>
 <tr class="odd">
-<td align="center"><code>tex nclude{dosya1}</code></td>
+<td align="center"><code>latex nclude{dosya1}</code></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1054,7 +1083,7 @@ dını uzantı</td>
 sıyla yazmanız gerekir:</td>
 </tr>
 <tr class="odd">
-<td align="center"><code>tex nclude{dosya1.txt}</code></td>
+<td align="center"><code>latex nclude{dosya1.txt}</code></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1077,7 +1106,7 @@ sahanlığa yazılabilir. Komutun
 lar aralarına virgül koyularak</td>
 </tr>
 <tr class="odd">
-<td align="center"><code>tex ncludeonly{dosya1,</code></td>
+<td align="center"><code>latex ncludeonly{dosya1,</code></td>
 <td align="left">dosya2,do</td>
 <td align="left">sya3,…}</td>
 <td align="left"></td>
@@ -1115,8 +1144,8 @@ zenlenmesi](images</td>
 <td align="left">duğu dizi
 /dizin.pn</td>
 <td align="left">nin
-g)</td>
-<td align="left"></td>
+g){width=50</td>
+<td align="left">%}</td>
 </tr>
 <tr class="even">
 <td align="center">şekilde bir düzen
@@ -1138,7 +1167,7 @@ de komutu</td>
 <td align="left">kaynak dosyaya <code>bolum1.tex</code></td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex nput{Bolumler/bolu</code></td>
+<td align="center"><code>latex nput{Bolumler/bolu</code></td>
 <td align="left">m1}</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1166,7 +1195,7 @@ ya da boşlu</td>
 k içermez.</td>
 </tr>
 <tr class="odd">
-<td align="center"><code>tex ocumentclass[a4pap sepackage[T1]{font sepackage[turkish] itle{Örnek Kitap} uthor{\TeX dizgi} egin{document} rontmatter aketitle ableofcontents nput{Bolumler/onso ainmatter nput{Bolumler/bolu nput{Bolumler/bolu ppendix nput{Bolumler/ek1} ackmatter nd{document}</code></td>
+<td align="center"><code>latex ocumentclass[a4pap sepackage[T1]{font sepackage[turkish] itle{Örnek Kitap} uthor{\TeX dizgi} egin{document} rontmatter aketitle ableofcontents nput{Bolumler/onso ainmatter nput{Bolumler/bolu nput{Bolumler/bolu ppendix nput{Bolumler/ek1} ackmatter nd{document}</code></td>
 <td align="left">er,12pt]{
 enc}
 {babel}</td>
@@ -1207,7 +1236,7 @@ gr/mirrors/</td>
 <td align="left">CTAN/macros/latex/contrib/geometry/geometry.pdf) paketi kullanılır. Öncelikle paketi</td>
 </tr>
 <tr class="odd">
-<td align="center"><code>tex sepackage{geometry</code></td>
+<td align="center"><code>latex sepackage{geometry</code></td>
 <td align="left">}</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1242,27 +1271,26 @@ rebilirsiniz:</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="center"><code>tex sepackage[paperwid</code></td>
+<td align="center"><code>latex sepackage[paperwid</code></td>
 <td align="left">th=175mm,</td>
 <td align="left">paperheight</td>
 <td align="left">=255mm,top=2cm,bottom=2cm,left=2.5cm,right=2.5cm]{geometry}</td>
 </tr>
 <tr class="even">
 <td align="center">mutunu verdiğinizd
-$cm, sol ve sağ bo
+$ cm, sol ve sağ b
 uşturursunuz. Dile
 rine, örneğin `a4p
 nımlamaları yapabi</td>
-<td align="left">e boyutu$
-şluğu$2.5
+<td align="left">e boyutu
+oşluğu $2
 rseniz <code>p aper</code> yaz
 lirsiniz.</td>
-<td align="left">175
-$cm olan bi
+<td align="left"><span class="math inline">\(175\times .5\)</span> cm olan
 aperwidth`
 arak sadece</td>
-<td align="left">55$mm, üst ve alt boşluğu
-r sayfa düzeni
+<td align="left">255$ mm, üst ve alt boşluğu
+bir sayfa düzeni
 ve<code>paperheight</code> tanımlamalarını
 kenar boşluklarla ilgili</td>
 </tr>
@@ -1331,7 +1359,7 @@ llanılır:</td>
 <td align="left">tmak gerekirse <code>\mbox</code> komutu</td>
 </tr>
 <tr class="odd">
-<td align="center"><code>tex box{&lt;metin&gt;}</code></td>
+<td align="center"><code>latex box{&lt;metin&gt;}</code></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1502,7 +1530,10 @@ sterilmiştir.</td>
 <tr class="odd">
 <td align="center">Birim| Değer|
 –|:–|
-m |milimetre<span class="math inline">\(\ap cm| santimetre in | inç = 25.4 pt | punto\)</span>
+m |milimetre $
+cm| santimetre
+in | inç = 25.4
+pt | punto $
 em | Kullanılan
 ex | Kullanılan</td>
 <td align="left"></td>
@@ -1525,7 +1556,7 @@ sında</td>
 <td align="left">r. Bunlardan biri <code>\vspace</code></td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex space{&lt;uzunluk&gt;}</code></td>
+<td align="center"><code>latex space{&lt;uzunluk&gt;}</code></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1560,7 +1591,7 @@ ave aralık açmak i</td>
 <td align="left">bir tablonun satırları arasında</td>
 </tr>
 <tr class="odd">
-<td align="center"><code>tex [&lt;uzunluk&gt;]</code></td>
+<td align="center"><code>latex [&lt;uzunluk&gt;]</code></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1572,7 +1603,7 @@ ave aralık açmak i</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="center">`tex
+<td align="center">`latex
 [1ex]</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1585,7 +1616,7 @@ ave aralık açmak i</td>
 <td align="left">tif de olabilir.</td>
 </tr>
 <tr class="odd">
-<td align="center">`tex
+<td align="center">`latex
 [-2ex]</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1624,7 +1655,7 @@ bırakır.</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex \,  \:  \;  \quad</code></td>
+<td align="center"><code>latex \,  \:  \;  \quad</code></td>
 <td align="left"></td>
 <td align="left">!</td>
 <td align="left"></td>
@@ -1633,7 +1664,7 @@ bırakır.</td>
 <td align="center">mutlarıyla verilir</td>
 <td align="left">. Bu komu</td>
 <td align="left">tlar sırası</td>
-<td align="left">yla bir sözcük arası,<span class="math inline">\(3/\!18\)</span>em,<span class="math inline">\(4/\!18\)</span>em,<span class="math inline">\(5/\!18\)</span>em,<span class="math inline">\(1\)</span>em,<span class="math inline">\(2\)</span>em,<span class="math inline">\(-3/\!18\)</span>em uzunlukta yatay aralık bırakır.</td>
+<td align="left">yla bir sözcük arası, <span class="math inline">\(3/\!18\)</span> em, <span class="math inline">\(4/\!18\)</span> em, <span class="math inline">\(5/\!18\)</span> em, <span class="math inline">\(1\)</span> em, <span class="math inline">\(2\)</span> em, <span class="math inline">\(-3/\!18\)</span> em uzunlukta yatay aralık bırakır.</td>
 </tr>
 <tr class="even">
 <td align="center">lli bir uzunlukta
@@ -1654,7 +1685,7 @@ sonuna rasgelse dahi bu aralığı
 ` komutu kullanırsınız.</td>
 </tr>
 <tr class="odd">
-<td align="center"><code>tex hspace{2cm}B\\ \hspace{2cm} B</code></td>
+<td align="center"><code>latex hspace{2cm}B\\ \hspace{2cm} B</code></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1689,7 +1720,7 @@ layıp aralığa çizgi çekmek
 anırsınız.</td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex hfill B\\ dotfill B\\ hrulefill B</code></td>
+<td align="center"><code>latex hfill B\\ dotfill B\\ hrulefill B</code></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1715,7 +1746,7 @@ lı hizala</td>
 <td align="left">hleft<code>, sağa hizalamak için enter</code> ortamları kullanılır.</td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex egin{flushleft} urası sola hizalı nd{flushleft} egin{flushright} ağa hizalı nd{flushright} egin{center} e ortalı nd{center}</code></td>
+<td align="center"><code>latex egin{flushleft} urası sola hizalı nd{flushleft} egin{flushright} ağa hizalı nd{flushright} egin{center} e ortalı nd{center}</code></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1767,7 +1798,7 @@ rsanız, <code>multicols</code> ortamını
 lmek için</td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex sepackage{multicol</code></td>
+<td align="center"><code>latex sepackage{multicol</code></td>
 <td align="left">}</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1780,7 +1811,7 @@ ulticol](<a href="http://ft" class="uri">http://ft</a></td>
 <td align="left">n/macros/latex/required/tools/multicol.pdf) paketini eklemelisiniz.</td>
 </tr>
 <tr class="even">
-<td align="center">`tex
+<td align="center">`latex
 egin{multicols}{&lt;s</td>
 <td align="left">ütun sayı</td>
 <td align="left">sı&gt;}</td>
@@ -1820,9 +1851,8 @@ in kalınlığı <code>\columnseprule</code> ve
 umnseprulecolor<code>komutlarında da</code>\def` komutları</td>
 </tr>
 <tr class="even">
-<td align="center"><code>{.tex .numberLine etlength{\columnse etlength{\columnse ef\columnsepruleco</code></td>
-<td align="left">s}
-p}{1cm}
+<td align="center"><code>latex etlength{\columnse etlength{\columnse ef\columnsepruleco</code></td>
+<td align="left">p}{1cm}
 prule}{1p
 lor{</td>
 <td align="left"></td>
@@ -1871,7 +1901,7 @@ Köşeli parantezler içinde
 nin üstünde dizilir.</td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex egin{multicols}{2} section{Başlık} rası sütunlara böl rası sütunlara böl nd{multicols}</code></td>
+<td align="center"><code>latex egin{multicols}{2} \section{Başlık} urası sütunlara bö urası sütunlara bö nd{multicols}</code></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1937,7 +1967,7 @@ nılabilirler. Her ortamda</td>
 <td align="left"><code>enumerate</code> ortamı kullanılır.</td>
 </tr>
 <tr class="odd">
-<td align="center"><code>tex egin{enumerate} item madde 1 \begin{enumerate} \item alt madde \begin{enumera \item en alt \end{enumerate \item alt madde \end{enumerate} item madde 2 nd{enumerate}</code></td>
+<td align="center"><code>latex egin{enumerate} item madde 1 \begin{enumerate} \item alt madde \begin{enumera \item en alt \end{enumerate \item alt madde \end{enumerate} item madde 2 nd{enumerate}</code></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1952,7 +1982,7 @@ rilebilir.</td>
 <td align="left">itemize` ortamı kullanılır ve bu</td>
 </tr>
 <tr class="odd">
-<td align="center"><code>tex egin{itemize} tem madde 1 tem madde 2 tem[$\circ$] madde tem[+] madde 4 nd{itemize}</code></td>
+<td align="center"><code>latex egin{itemize} tem madde 1 tem madde 2 tem[$\circ$] madde tem[+] madde 4 nd{itemize}</code></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1968,7 +1998,7 @@ anahtar kel</td>
 imeler kalın dizilir.</td>
 </tr>
 <tr class="odd">
-<td align="center"><code>tex egin{description} tem[Nokta] Boyutu tem[Çember] Bir no aklıktaki noktalar nd{description}</code></td>
+<td align="center"><code>latex egin{description} \item[Nokta] Boyut \item[Çember] Bir uzaklıktaki noktal nd{description}</code></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -1996,7 +2026,7 @@ rtamını başlatan komutun peşine
 rinin tipi belirtilebilir:</td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex egin{enumerate}[I. tem bir tem iki tem üç nd{enumerate}</code></td>
+<td align="center"><code>latex egin{enumerate}[I. item bir item iki item üç nd{enumerate}</code></td>
 <td align="left">]</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -2071,8 +2101,8 @@ nudaki klasik uyarıyı biz de</td>
 </tr>
 <tr class="even">
 <td align="center">](images/uyari.png</td>
-<td align="left">)</td>
-<td align="left"></td>
+<td align="left">){width=1</td>
+<td align="left">00%}</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
@@ -2119,9 +2149,8 @@ ebilir.</td>
 <td align="left">da saklı olup, <code>\renewcommand</code></td>
 </tr>
 <tr class="odd">
-<td align="center"><code>{.tex .numberLine enewcommand{\famil enewcommand{\famil enewcommand{\famil</code></td>
-<td align="left">s}
-ydefault}
+<td align="center"><code>latex enewcommand{\famil enewcommand{\famil enewcommand{\famil</code></td>
+<td align="left">ydefault}
 ydefault}
 ydefault}</td>
 <td align="left">{
@@ -2150,17 +2179,17 @@ mut ya da bildirim</td>
 tenirse -
 ler kulla</td>
 <td align="left">de bazı kel
-- ki geneld
+-ki genelde
 nılır.</td>
 <td align="left">ime ya da cümlelerin farklı
-e böyle kullanılır – aşağıdaki</td>
+böyle kullanılır– aşağıdaki</td>
 </tr>
 <tr class="even">
 <td align="center">Yazıtipi
 leleri](images/yaz</td>
 <td align="left">itipi.png</td>
-<td align="left">){}</td>
-<td align="left"></td>
+<td align="left">){width=50%</td>
+<td align="left">}</td>
 </tr>
 <tr class="odd">
 <td align="center">TeX’de varsayılan
@@ -2176,29 +2205,29 @@ ağıda gösterilmiştir.</td>
 <td align="center">Roman
 zıtipleri](images/</td>
 <td align="left">yazitipi2</td>
-<td align="left">.png)</td>
-<td align="left"></td>
+<td align="left">.png){width</td>
+<td align="left">=50%}</td>
 </tr>
 <tr class="odd">
 <td align="center">Sans Serif
 zıtipleri](images/</td>
 <td align="left">yazitipi3</td>
-<td align="left">.png)</td>
-<td align="left"></td>
+<td align="left">.png){width</td>
+<td align="left">=50%}</td>
 </tr>
 <tr class="even">
 <td align="center">Typewriter Yazıtip
 images/yazitipi4.p</td>
 <td align="left">leri<br />
-ng)</td>
-<td align="left"></td>
+ng){width</td>
+<td align="left">=50%}</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="center">Elyazısı](images/y</td>
 <td align="left">azitipi5.</td>
-<td align="left">png)</td>
-<td align="left"></td>
+<td align="left">png){width=</td>
+<td align="left">25%}</td>
 </tr>
 <tr class="even">
 <td align="center">rsayılan yazıtiple
@@ -2210,7 +2239,7 @@ newcommand`</td>
 komutuyla değiştirilebilirler.</td>
 </tr>
 <tr class="odd">
-<td align="center"><code>tex enewcommand{\rmdef</code></td>
+<td align="center"><code>{width=50%} enewcommand{\rmdef</code></td>
 <td align="left">ault}{&lt;kı</td>
 <td align="left">saltma&gt;}</td>
 <td align="left"></td>
@@ -2222,7 +2251,7 @@ komutuyla değiştirilebilirler.</td>
 <td align="left">en kısaltmalardır. Örneğin</td>
 </tr>
 <tr class="odd">
-<td align="center"><code>tex enewcommand{\rmdef</code></td>
+<td align="center"><code>{width=50%} enewcommand{\rmdef</code></td>
 <td align="left">ault}{put</td>
 <td align="left">}</td>
 <td align="left"></td>
@@ -2249,7 +2278,7 @@ llanılır.</td>
 yla <code>\selectfont</code> komutu</td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex fontfamily{pbk}\se</code></td>
+<td align="center"><code>{width=50%} fontfamily{pbk}\se</code></td>
 <td align="left">lectfont</td>
 <td align="left">Bookman yaz</td>
 <td align="left">ıtipi.} Ana yazıtipi.</td>
@@ -2273,8 +2302,8 @@ a gösterilmiştir.</td>
 ketler](images/yaz</td>
 <td align="left">n
 itipi6.pn</td>
-<td align="left">g)</td>
-<td align="left"></td>
+<td align="left">g){width=70</td>
+<td align="left">%}</td>
 </tr>
 <tr class="odd">
 <td align="center">nların dışında beğ
@@ -2306,11 +2335,11 @@ i tablodaki komut ya da</td>
 <td align="center">Yazıtipi
 çemleri](images/ya</td>
 <td align="left">zitipi7.p</td>
-<td align="left">ng)</td>
-<td align="left"></td>
+<td align="left">ng){width=5</td>
+<td align="left">0%}</td>
 </tr>
 <tr class="odd">
-<td align="center"><code>tex leyen kelime \text rflerle yazılmıştı tnin geri kalan kı rmaldir.</code></td>
+<td align="center"><code>latex leyen kelime \text rflerle yazılmıştı tnin geri kalan kı rmaldir.</code></td>
 <td align="left">it{italik
 r.
 smı</td>
@@ -2318,19 +2347,19 @@ smı</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="center">ıktı](<a href="https://gith" class="uri">https://gith</a></td>
-<td align="left">ub.com/ac</td>
-<td align="left">arzfr/latex</td>
-<td align="left">-dersleri/blob/main/examples/ex3.pdf)</td>
+<td align="center">!– [Çıktı](https:</td>
+<td align="left">//github.</td>
+<td align="left">com/acarzfr</td>
+<td align="left">/latex-dersleri/blob/main/examples/ex3.pdf) –&gt;</td>
 </tr>
 <tr class="odd">
-<td align="center"><code>tex leyen ifade {\slsh</code></td>
+<td align="center"><code>latex leyen ifade {\slsh</code></td>
 <td align="left">ape {</td>
 <td align="left">eries eğik</td>
 <td align="left">kalındır}}.</td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex leyen ifade \texti extsc{\textit{büyü</code></td>
+<td align="center"><code>latex leyen ifade \texti extsc{\textit{büyü</code></td>
 <td align="left">t{ küçük h</td>
 <td align="left">{italik kal
 arf değil}}</td>
@@ -2346,7 +2375,7 @@ ner.</td>
 <td align="left">tekrar vurgulanırsa bu</td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex em Vurgulu metinde rgu yapılırsa {\em ner.}</code></td>
+<td align="center"><code>latex em Vurgulu metinde rgu yapılırsa {\em ner.}</code></td>
 <td align="left">tekrar
 normale}</td>
 <td align="left"></td>
@@ -2387,11 +2416,11 @@ e` komutunu kullanabilirsiniz.</td>
 ldirimler](images/</td>
 <td align="left">ğiştiren
 yazitipi8</td>
-<td align="left">.png)</td>
-<td align="left"></td>
+<td align="left">.png){width</td>
+<td align="left">=50%}</td>
 </tr>
 <tr class="odd">
-<td align="center"><code>tex Large Büyük} ve scriptsize küçük}</code></td>
+<td align="center"><code>latex Large Büyük} ve scriptsize küçük}</code></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -2413,16 +2442,16 @@ r` (paragraf) komutunun
 çlar ürettiği gösterilmiştir.</td>
 </tr>
 <tr class="odd">
-<td align="center"><code>tex large krates: Platon lan söyleyecek ağıdaki cümlede.}\</code></td>
+<td align="center"><code>latex large krates: Platon lan söyleyecek ağıdaki cümlede.}\</code></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="center">ıktı](<a href="https://gith" class="uri">https://gith</a></td>
-<td align="left">ub.com/ac</td>
-<td align="left">arzfr/latex</td>
-<td align="left">-dersleri/blob/main/examples/ex4.pdf)</td>
+<td align="center">!– [Çıktı](https:</td>
+<td align="left">//github.</td>
+<td align="left">com/acarzfr</td>
+<td align="left">/latex-dersleri/blob/main/examples/ex4.pdf) –&gt;</td>
 </tr>
 <tr class="odd">
 <td align="center"><code>tex large Platon: Sokr ğruyu söyledi ceki cümlede.\par}</code></td>
@@ -2431,10 +2460,10 @@ r` (paragraf) komutunun
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="center">ıktı](<a href="https://gith" class="uri">https://gith</a></td>
-<td align="left">ub.com/ac</td>
-<td align="left">arzfr/latex</td>
-<td align="left">-dersleri/blob/main/examples/ex5.pdf)</td>
+<td align="center">!– [Çıktı](https:</td>
+<td align="left">//github.</td>
+<td align="left">com/acarzfr</td>
+<td align="left">/latex-dersleri/blob/main/examples/ex5.pdf) –&gt;</td>
 </tr>
 <tr class="odd">
 <td align="center">bildirimlerin etk
@@ -2450,8 +2479,8 @@ r.</td>
 <td align="center">Yazıtipleri Mutlak
 yutları](images/ya</td>
 <td align="left">zitipi9.p</td>
-<td align="left">ng)</td>
-<td align="left"></td>
+<td align="left">ng){width=7</td>
+<td align="left">0%}</td>
 </tr>
 <tr class="odd">
 <td align="center">ğımsız bir yazıtip
@@ -2464,7 +2493,7 @@ kte kullanı</td>
 lır.</td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex fontsize{&lt;boyut&gt;}{</code></td>
+<td align="center"><code>latex fontsize{&lt;boyut&gt;}{</code></td>
 <td align="left"><aralık>}</td>
 <td align="left"></td>
 <td align="left"><metin>}</td>
@@ -2472,16 +2501,17 @@ lır.</td>
 <tr class="odd">
 <td align="center">radaki <code>&lt;boyut&gt;</code> y
 isinin de ölçü bir
-.2$katı olmasıdır.</td>
+.2$ katı olmasıdır</td>
 <td align="left">azıtipi b
-imi punto</td>
+imi punto
+.</td>
 <td align="left">oyutu, `&lt;ar
 (pt) olup,</td>
 <td align="left">alık&gt;` ise satır aralığıdır.
 temel kural, aralığın boyutun</td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex fontsize{30}{36}\s zı tipi boyutu 30 tır aralığı 36 pun</code></td>
+<td align="center"><code>latex fontsize{30}{36}\s zı tipi boyutu 30 tır aralığı 36 pun</code></td>
 <td align="left">electfont
 punto,
 to.}</td>
@@ -2497,7 +2527,7 @@ ebilir.</td>
 <td align="left">nda saklı olup, <code>\renewcommand</code></td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex enewcommand{\norma</code></td>
+<td align="center"><code>latex enewcommand{\norma</code></td>
 <td align="left">lsize}{</td>
 <td align="left">ontsize{30}</td>
 <td align="left">{36}}</td>
@@ -2530,7 +2560,7 @@ irror/ctan/</td>
 macros/latex/contrib/xcolor/xcolor.pdf) paketleriyle kullanılır. İkinci paket daha</td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex sepackage{xcolor}</code></td>
+<td align="center"><code>latex sepackage{xcolor}</code></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -2545,8 +2575,8 @@ kullanıl</td>
 <td align="left">r<code>ya da</code>\textcolor` komutları</td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex olor{texed}{Kırmız color{blue} Tamamı extcolor{pink}{Pem</code></td>
-<td align="left">ı}\
+<td align="center"><code>latex olor{red}{Kırmızı} color{blue} Tamamı extcolor{pink}{Pem</code></td>
+<td align="left">\
 mavi}\
 be}</td>
 <td align="left"></td>
@@ -2579,8 +2609,9 @@ ma gelir.</td>
 <td align="center"><strong>dvipsnames</strong> seç
 nkler](images/renk</td>
 <td align="left">eneğiyle
-ler.png)</td>
-<td align="left">gelen</td>
+ler.png){</td>
+<td align="left">gelen
+width=100%}</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
@@ -2598,7 +2629,7 @@ m/svgnames-colors){texel=“noreferrer noopener”
 anılabilir duruma getirin.</td>
 </tr>
 <tr class="odd">
-<td align="center"><code>tex ocumentclass[svgna</code></td>
+<td align="center"><code>latex ocumentclass[svgna</code></td>
 <td align="left">mes,dvips</td>
 <td align="left">names]{arti</td>
 <td align="left">cle}</td>
@@ -2630,7 +2661,7 @@ nasıl hazı</td>
 rlanabileceği gösterilmiştir.</td>
 </tr>
 <tr class="odd">
-<td align="center"><code>tex olor{blue!80}{\%80 olor{texed!40!blue color{yellow!20!gr (100-20)x0.75=60 y</code></td>
+<td align="center"><code>latex olor{blue!80}{\%80 olor{texed!40!blue color{yellow!20!gr (100-20)x0.75=60 y</code></td>
 <td align="left">mavi %2
 }{%40 kı
 een!75!bl
@@ -2642,10 +2673,10 @@ ack} %20x0
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="center">ıktı](<a href="https://gith" class="uri">https://gith</a></td>
-<td align="left">ub.com/ac</td>
-<td align="left">arzfr/latex</td>
-<td align="left">-dersleri/blob/main/examples/ex6.pdf)</td>
+<td align="center">!– [Çıktı](https:</td>
+<td align="left">//github.</td>
+<td align="left">com/acarzfr</td>
+<td align="left">/latex-dersleri/blob/main/examples/ex6.pdf) –&gt;</td>
 </tr>
 <tr class="odd">
 <td align="center">inci yol `</td>
@@ -2672,7 +2703,7 @@ cmyk | Cyan, Magen</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex efinecolor{&lt;isim&gt;}</code></td>
+<td align="center"><code>latex efinecolor{&lt;isim&gt;}</code></td>
 <td align="left">{&lt;renk mo</td>
 <td align="left">deli&gt;}{&lt;kod</td>
 <td align="left">&gt;}</td>
@@ -2690,7 +2721,7 @@ ar için
 <td align="left">daha sonra kullanmak üzere</td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex efinecolor{texenk1 efinecolor{texenk2 efinecolor{texenk3 efinecolor{texenk4 efinecolor{texenk5</code></td>
+<td align="center"><code>latex efinecolor{texenk1 efinecolor{texenk2 efinecolor{texenk3 efinecolor{texenk4 efinecolor{texenk5</code></td>
 <td align="left">}{gray}{0
 }{texgb}{
 }{texGB}{
@@ -2724,7 +2755,7 @@ ya sahanlığa ya da bu renkleri
 <td align="left">ullanacaksanız</td>
 </tr>
 <tr class="odd">
-<td align="center"><code>tex olor[&lt;model&gt;]{&lt;kod extcolor[&lt;model&gt;]{</code></td>
+<td align="center"><code>latex olor[&lt;model&gt;]{&lt;kod extcolor[&lt;model&gt;]{</code></td>
 <td align="left">&gt;}
 <kod>}{&lt;m</td>
 <td align="left"></td>
@@ -2737,7 +2768,7 @@ ya sahanlığa ya da bu renkleri
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="center"><code>tex color[RGB]{102,0,5 extcolor[RGB]{0,76</code></td>
+<td align="center"><code>latex color[RGB]{102,0,5 extcolor[RGB]{0,76</code></td>
 <td align="left">1} Bol}\
 ,153}{Çeş</td>
 <td align="left"></td>
@@ -2754,7 +2785,7 @@ nı şeyi çiz</td>
 gi çizerek yapar.</td>
 </tr>
 <tr class="odd">
-<td align="center"><code>tex olorbox{&lt;arka plan olorbox[&lt;renk mode colorbox{&lt;çizgi re colorbox[&lt;renk mod</code></td>
+<td align="center"><code>latex olorbox{&lt;arka plan olorbox[&lt;renk mode colorbox{&lt;çizgi re colorbox[&lt;renk mod</code></td>
 <td align="left">rengi&gt;}{
 li&gt;]{<ark
 ngi>}{<ar
@@ -2772,7 +2803,7 @@ zgi rengi&gt;}</td>
 <td align="left">ullanılabilir.</td>
 </tr>
 <tr class="odd">
-<td align="center"><code>tex olorbox{Cyan}{Meti olorbox[rgb]{0.4,0 colorbox{texed}{ye colorbox[RGB]{0,0,</code></td>
+<td align="center"><code>latex olorbox{Cyan}{Meti olorbox[rgb]{0.4,0 colorbox{texed}{ye colorbox[RGB]{0,0,</code></td>
 <td align="left">n}
 .4,0.5}{M
 llow}{Met
@@ -2870,7 +2901,7 @@ gerekir. Bu paketler
 /macros/latex/required/amsmath/amsmath.pdf){texel=“noreferrer noopener”</td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex sepackage{amsmath,</code></td>
+<td align="center"><code>latex sepackage{amsmath,</code></td>
 <td align="left">amssymb,a</td>
 <td align="left">msfonts}</td>
 <td align="left"></td>
@@ -2937,7 +2968,7 @@ bu ortamlar ya da kısaltmalar
 </tr>
 <tr class="odd">
 <td align="center">Formüller satırı
-yazılır: (<br />
+yazılır: (_
 =
 bozmamak için se
 alttakileri yana
@@ -2946,22 +2977,22 @@ sergilenir: [
 =<br />
 </td>
 <td align="left">n içinde,
-<em>{n <br />
+{n
 ). Görül
 mbolleri
 kaydırır
 ir satırd
-im</em>{n
+im_{n
 frac{^</td>
 <td align="left">yani bildi
-infty}
+nfty} _
 düğü gibi L
 olabildiğin
 .
 a tek başla
 } }{6}.]</td>
 <td align="left">rildiği metnin gövdesi içine
-_{k=1}^n
+{k=1}^n
 aTeX, paragraf yapısını
 ce sıkıştırır ve gerek görürse</td>
 </tr>
@@ -3007,16 +3038,17 @@ belge seçe</td>
 neğine <code>fleqn</code> yazıldığında)</td>
 </tr>
 <tr class="odd">
-<td align="center"><code>tex \in \mathbb{R}$ iç egin{equation*} &lt;x&lt;1 nd{equation*}olur.</code></td>
+<td align="center"><code>latex \in \mathbb{R}$ iç egin{equation*} 1&lt;x&lt;1 nd{equation*} ur.</code></td>
 <td align="left">in $|x|&lt;1</td>
 <td align="left">$ ise</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
 <td align="center">$ içi
-egin{equation}
-&lt;x&lt;1
-nd{equation}olur.</td>
+egin{equation<em>}
+1&lt;x&lt;1
+nd{equation</em>}
+ur.</td>
 <td align="left">n <span class="math inline">\(|x|&lt;1\)</span></td>
 <td align="left">ise</td>
 <td align="left"></td>
@@ -3036,14 +3068,14 @@ lir. Atıf <code>\eqref</code> komutuyla
 nde yazılır.</td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex egin{equation} abel{eq:euler} e^{i\pi}+1=0 nd{equation} ler'in \eqref{eq:e</code></td>
+<td align="center"><code>latex egin{equation} abel{eq:euler} e^{i\pi}+1=0 nd{equation} ler'in \eqref{eq:e</code></td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
 <td align="center">egin{equation}
-{i}+1=0
+^{i}+1=0
 #eq:euler)
 nd{equation}
 ler’in @ref(eq:eu</td>
@@ -3110,16 +3142,15 @@ sterir.</td>
 <td align="left">kipi arasındaki farkları</td>
 </tr>
 <tr class="even">
-<td align="center">`tex</td>
-<td align="left"></td>
-<td align="left"></td>
+<td align="center"><code>latex ^2-1=0 \text{ise $</code></td>
+<td align="left">x=$}</td>
+<td align="left">.$</td>
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="center">^2-1=0 </td>
-<td align="left">{ise $x=<br />
-</td>
-<td align="left">pm 1<span class="math inline">\(}\)</span></td>
+<td align="center">^2-1=0 \text{ise $</td>
+<td align="left">x=$}</td>
+<td align="left">.$</td>
 <td align="left"></td>
 </tr>
 <tr class="even">
@@ -3147,8 +3178,8 @@ mesi istenirse bu karakterler
 larak gruplandırılmalıdır.</td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex a^x+y \neq a^{x+y}</code></td>
-<td align="left">$</td>
+<td align="center"><code>latex ^x+y \neq a^{x+y}$</code></td>
+<td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
@@ -3178,7 +3209,7 @@ irilir.</td>
 n, çengelli parantez ise <code>\{</code> ve</td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex a,b,c}\neq\{a,b,c\</code></td>
+<td align="center"><code>latex a,b,c}\neq\{a,b,c\</code></td>
 <td align="left">}$</td>
 <td align="left"></td>
 <td align="left"></td>
@@ -3234,7 +3265,7 @@ Sol/sağ tarafta gruplandırıcı
 ft.<code>/</code>.` komutu</td>
 </tr>
 <tr class="odd">
-<td align="center">`tex</td>
+<td align="center">`latex</td>
 <td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
@@ -3267,9 +3298,8 @@ az büyütür.</td>
 ük sol) ve <code>\bigr</code> (büyük sağ)</td>
 </tr>
 <tr class="even">
-<td align="center"><code>tex \big(\Big(\bigg(\B ig\}\Big\}\bigg\}\ uad ig\|\Big\|\bigg\|\</code></td>
-<td align="left">igg(
-Bigg}</td>
+<td align="center">`latex</td>
+<td align="left"></td>
 <td align="left"></td>
 <td align="left"></td>
 </tr>
@@ -3290,43 +3320,594 @@ Bigg}</td>
 <td align="left">kullanılır</td>
 <td align="left">.</td>
 </tr>
+<tr class="odd">
+<td align="center">| | | |
+–|:–|:–|:–|
+$ <code>\left \Longleftarrow$</code><br />
+$ <code>\down \leftrightarrow$</code>
+
+$ <code>\nearro \leftharpoonup$</code><br />
+$</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="center">`latex</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="center">ownarrow
+ig
+ig
+igg
+igg</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="center">nların dışında alt
+zılabilen `</td>
+<td align="left">larına ya
+rrow` ve</td>
+<td align="left">da üstleri
+`</td>
+<td align="left">ne matematiksel ifadeler
+ow` komutları vardır.</td>
+</tr>
+<tr class="odd">
+<td align="center">`latex</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="center">xleftarrow{a}$
+xrightarrow[X]{a+b</td>
+<td align="left">}$</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="center">Yunan Harfleri</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="center">nan harfleri matem</td>
+<td align="left">atikte ya</td>
+<td align="left">ygın olarak</td>
+<td align="left">kullanılır. Bu harfler ters eğik çizgiden sonra harfin adı yazılarak elde edilir. Eğer ilk harf küçük ise küçük, büyükse de büyük harf elde edilir. Bazı büyük Yunanca harfler Latin harfleri gibi göründüğünden (örneğin, büyük harf Alpha ve Beta yalnızca sırasıyla “A” ve “B”dir) ayrıca tanımlanmamışlardır. Küçük harf epsilon, theta, kappa, phi, pi, rho ve sigma iki farklı sürümde sunulmaktadır. Alternatif sürümü, harf adının önüne “var” eklenerek oluşturulur.</td>
+</tr>
+<tr class="odd">
+<td align="center">|
+| :–
+| <span class="math inline">\(\alpha\)</span> <code>\alph |  $\beta$</code><code>|  $\gamma$</code>
+| <span class="math inline">\(\delta\)</span> <code>\delt | $\epsilon$</code>
+| <span class="math inline">\(\varepsilon\)</span> <code>| $\zeta$</code><code>| $\eta$</code><code>| | $\Gamma$</code>
+| <span class="math inline">\(\Delta\)</span> <code>\Delt | $\Theta$</code></td>
+<td align="left"></td>
+<td align="left">|
+|
+|
+|
+|
+|
+|
+on` |
+|
+|
+|
+|
+|
+|</td>
+<td align="left">| | |
+:– | :– | :– |
+<span class="math inline">\(\theta\)</span> <code>\theta</code> | <span class="math inline">\(o\)</span> <code>o</code> | <span class="math inline">\(\tau\)</span> <code>\tau</code> |
+<span class="math inline">\(\vartheta\)</span> <code>\vartheta</code> | <span class="math inline">\(\pi\)</span> <code>\pi</code> | <span class="math inline">\(\upsilon\)</span> <code>\upsilon</code> |
+<span class="math inline">\(\iota\)</span> <code>\iota</code> | <span class="math inline">\(\varpi\)</span> <code>\varpi</code> | <span class="math inline">\(\phi\)</span> <code>\phi</code> |
+<span class="math inline">\(\kappa\)</span> <code>\kappa</code> | <span class="math inline">\(\rho\)</span> <code>\rho</code> | <span class="math inline">\(\varphi\)</span> <code>\varphi</code> |
+<span class="math inline">\(\lambda\)</span> <code>\lambda</code> | <span class="math inline">\(\varrho\)</span> <code>\varrho</code> | <span class="math inline">\(\chi\)</span> <code>\chi</code> |
+<span class="math inline">\(\mu\)</span> <code>\mu</code> | <span class="math inline">\(\sigma\)</span> <code>\sigma</code> | <span class="math inline">\(\psi\)</span> <code>\psi</code> |
+<span class="math inline">\(\nu\)</span> <code>\nu</code> | <span class="math inline">\(\varsigma\)</span> <code>\varsigma</code> | <span class="math inline">\(\omega\)</span> <code>\omega</code> |
+<span class="math inline">\(\xi\)</span> <code>\xi</code> | | |
+|
+<span class="math inline">\(\Lambda\)</span> <code>\Lambda</code> | <span class="math inline">\(\Sigma\)</span> <code>\Sigma</code> | <span class="math inline">\(\Psi\)</span> <code>\Psi</code> |
+<span class="math inline">\(\Xi\)</span> <code>\Xi</code> | <span class="math inline">\(\Upsilon\)</span> <code>\Upsilon</code> | <span class="math inline">\(\Omega\)</span> <code>\Omega</code> |
+<span class="math inline">\(\Pi\)</span> <code>\Pi</code> | <span class="math inline">\(\Phi\)</span> <code>\Phi</code> |</td>
+</tr>
+<tr class="even">
+<td align="center"><code>latex forall \epsilon&gt;0$</code></td>
+<td align="left">için</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="center">forall &gt;0$</td>
+<td align="left">için</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="center">Fonksiyonlar</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="center">TeX’de fonksiyonla</td>
+<td align="left">r aşağıda</td>
+<td align="left">ki komutlar</td>
+<td align="left">la dizilirler.</td>
+</tr>
+<tr class="even">
+<td align="center">arccos </td>
+<td align="left"><br />
+</td>
+<td align="left">ker </td>
+<td align="left">p `</td>
+</tr>
+<tr class="odd">
+<td align="center">tematik kipinde fo
+zılırlar ve boşluk</td>
+<td align="left">nksiyonla
+lar otoma</td>
+<td align="left">r diğer değ
+tik ayarlan</td>
+<td align="left">işkenler gibi italik değil düz
+ır.</td>
+</tr>
+<tr class="even">
+<td align="center"><code>latex sin x$, $\exp x$, det A$, $\min_{x\i</code></td>
+<td align="left"><span class="math inline">\(\log x\)</span>,
+n A} f(x)</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="center">sin x$, <span class="math inline">\(\exp x\)</span>,</td>
+<td align="left"><span class="math inline">\(\log x\)</span>,</td>
+<td align="left"><span class="math inline">\(\det A\)</span>,</td>
+<td align="left"><span class="math inline">\(\min_{x\in A} f(x)\)</span></td>
+</tr>
+<tr class="even">
+<td align="center">nların dışında bir
+mutu kullanılır.</td>
+<td align="left">fonksiyo</td>
+<td align="left">n tanımlama</td>
+<td align="left">k için <code>\DeclareMathOperator</code></td>
+</tr>
+<tr class="odd">
+<td align="center"><code>latex eclareMathOperator</code></td>
+<td align="left">{}{o</td>
+<td align="left">beb}</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="center">eclareMathOperator
+karıdaki komuttan
+ur.</td>
+<td align="left">{}{o
+sonra art</td>
+<td align="left">beb}
+ık kullanab</td>
+<td align="left">ileceğiniz bir “obeb” fonksiyonu</td>
+</tr>
+<tr class="odd">
+<td align="center"><code>latex obeb(12,16)=4$</code></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="center">obeb(12,16)=4$</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="center">komutun sınır değ
+rdır: `
+DeclareMathOperato
+lgede kullanırsanı</td>
+<td align="left">erleri sa
+hOperator
+r*{}{
+z şöyle b</td>
+<td align="left">ğ taraf yer
+*<code>. Örneğin Max}</code> komut
+ir çıktı al</td>
+<td align="left">ine alta dizen yıldızlı sürümü</td>
+</tr>
+<tr class="even">
+<td align="center">eclareMathOperator</td>
+<td align="left">*{}{M</td>
+<td align="left">ax}</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="center"><code>latex egin{equation*} Max_{x\in A} f(x) nd{equation*}</code></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="center">egin{equation<em>}
+Max_{xA} f(x)
+nd{equation</em>}</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="center">dülo fonksiyonu iç
+mut fonksiyonu par</td>
+<td align="left">inse `
+antez içi</td>
+<td align="left">d<code>ya da</code><br />
+nde yazar.</td>
+<td align="left">pmod` komutları verilir. İkinci</td>
+</tr>
+<tr class="even">
+<td align="center"><code>latex \equiv b\pmod p$ i</code></td>
+<td align="left">se $p</td>
+<td align="left">a-b$’dir.</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="center">bp$ i</td>
+<td align="left">se $p</td>
+<td align="left">a-b$’dir.</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="center">mit için <code>\lim</code> ko</td>
+<td align="left">mutu aşağ</td>
+<td align="left">ıdaki şekil</td>
+<td align="left">de verilir.</td>
+</tr>
+<tr class="odd">
+<td align="center"><code>latex im_{&lt;değişken&gt; \to</code></td>
+<td align="left">&lt;değişke</td>
+<td align="left">n&gt;}</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="center">radaki <code>\to</code> komut
+mutu verilir.</td>
+<td align="left">u <span class="math inline">\(\to\)</span> ü</td>
+<td align="left">retir ve $<br />
+</td>
+<td align="left">infty$ için <code>\infty</code></td>
+</tr>
+<tr class="odd">
+<td align="center">`latex</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="center">im_{x}
+rac{x}{x}=1<br />
+im_{n+}f</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="center">Yığın Simgeleri</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="center">tematikte bazen bi
+rekebilir. Bunlar</td>
+<td align="left">r ifadeni
+yığın sim</td>
+<td align="left">n altına ya
+geleri olar</td>
+<td align="left">da üstüne başka ifadeler yazmak
+ak adlandırılırlar.</td>
+</tr>
+<tr class="odd">
+<td align="center">TeX’de aşağıdaki</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="center"><code>latex verset{&lt;birinci de</code></td>
+<td align="left">ğişken&gt;}{</td>
+<td align="left">&lt;ikinci değ</td>
+<td align="left">işken&gt;}</td>
+</tr>
+<tr class="odd">
+<td align="center">mutu birinci değiş
+erine yazar. `</td>
+<td align="left">kendeki s
+erset` ko</td>
+<td align="left">embolü, nor
+mutu ise al</td>
+<td align="left">mal boyda yazılan ikincinin
+ta yazar.</td>
+</tr>
+<tr class="even">
+<td align="center">`latex</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="center">overline<code>ve</code>
+tay bir çizgi çeke</td>
+<td align="left">erline` k
+rler.</td>
+<td align="left">omutları bi</td>
+<td align="left">r ifadenin üstüne veya altına</td>
+</tr>
+<tr class="even">
+<td align="center">`latex</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="center">overbrace<code>ve</code>
+tay bir çengel ata</td>
+<td align="left">derbrace`
+rlar.</td>
+<td align="left">komutları</td>
+<td align="left">bir ifadenin üstüne veya altına</td>
+</tr>
+<tr class="even">
+<td align="center">`latex</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="center">overleftarrow<code>kom r ok çizer. Bu kom ktörler için</code></td>
+<td align="left">utu ifade
+utlar vek
+` komutu</td>
+<td align="left">nin üstüne
+törleri gös
+da kullanıl</td>
+<td align="left">sola, <code>\overrightarrow</code> ise sağa
+termek için kullanılabilir.
+ır.</td>
+</tr>
+<tr class="even">
+<td align="center">`latex</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="center">stackrel<code>komutu</code></td>
+<td align="left">`</td>
+<td align="left">gibi davra</td>
+<td align="left">nır.</td>
+</tr>
+<tr class="even">
+<td align="center">`latex</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="center">Matrisler</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="center">mel matrisler <code>mat omatik ortalanır v</code> karakteriyle ayr</td>
+<td align="left">rix` orta
+e sütunla
+ılır ve a</td>
+<td align="left">mında giril
+r normal bi
+lt satıra g</td>
+<td align="left">ir. Bu ortamda elemanlar
+r tablo gibi dizilir. Her sütun
+eçmek için <code>\</code> komutu verilir.</td>
+</tr>
+<tr class="odd">
+<td align="center">`latex</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="center">şitli matrisler di
+llanılır: `pmatrix
+tamlar sırasıyla y
+key çubuklu matris</td>
+<td align="left">zmek için
+<code>,</code>bmatr
+uvarlak,
+ler oluşt</td>
+<td align="left"><code>matrix</code> o
+ix<code>,</code>Bmatr
+köşeli, çen
+urur.</td>
+<td align="left">rtamının farklı sürümleri
+ix<code>,</code>vmatrix<code>ve</code>Vmatrix`. Bu
+gelli, dikey çubuklu ve çift</td>
+</tr>
+<tr class="odd">
+<td align="center">`latex</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="center">`latex</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="center">`latex</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="center">çük bir matris yaz
+triste parantezler</td>
+<td align="left">mak için
+elle ekl</td>
+<td align="left">`smallmatri
+enmelidir.</td>
+<td align="left">x` ortamı kullanılır. Bu</td>
+</tr>
+<tr class="odd">
+<td align="center"><code>latex mdi yazacağımız ma A=\big( egin{smallmatrix} &amp; b \ &amp; d nd{smallmatrix} igr)\) çük bir matristir.</code>
+mdi yazacağımız ma
+A=(
+egin{smallmatrix}
+&amp; b<br />
+&amp; d
+nd{smallmatrix}
+igr))
+çük bir matristir.</td>
+<td align="left">tris</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="center">zı durumlarda, hiz
+asına çizgi çekmek
+tematik sürümü ola</td>
+<td align="left">alamayı e
+istenebi
+n <code>array</code></td>
+<td align="left">lle yapmak
+lir. Bu dur
+ortamını k</td>
+<td align="left">ve sütunlar veya satırlar
+umda <code>tabular</code> ortamının
+ullanılmalıdır.</td>
+</tr>
+<tr class="odd">
+<td align="center">`latex</td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="center">Yazı Biçem ve Boy</td>
+<td align="left">utları</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="center">tematiksel ifadele
+ğiştirmek isteyebi</td>
+<td align="left">ri dizerk
+lirsiniz.</td>
+<td align="left">en bazen ya</td>
+<td align="left">zının biçemini ya da boyutunu</td>
+</tr>
+<tr class="even">
+<td align="center">TeX’de matematik k
+llanılarak değişti</td>
+<td align="left">ipindeki
+rilir.</td>
+<td align="left">yazıların b</td>
+<td align="left">içemleri aşağıdaki komutlar</td>
+</tr>
+<tr class="odd">
+<td align="center">sepackage{mathrsfs</td>
+<td align="left">}</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
 </tbody>
 </table>
-<p><span class="math inline">\(\leftarrow\)</span> <code>\leftarrow</code> ya da <code>\gets</code> <span class="math inline">\(\longleftarrow\)</span> <code>\longleftarrow</code> <span class="math inline">\(\uparrow\)</span> <code>\uparrow</code> <span class="math inline">\(\Leftarrow\)</span> <code>\Leftarrow</code>
-<span class="math inline">\(\Longleftarrow\)</span> <code>\Longleftarrow</code> <span class="math inline">\(\Uparrow\)</span> <code>\Uparrow</code> $ $ <code>\rightarrow</code> ya da <code>\to</code> <span class="math inline">\(\longrightarrow\)</span> <code>\longrightarrow</code>
-<span class="math inline">\(\downarrow\)</span> <code>\downarrow</code> <span class="math inline">\(\Rightarrow\)</span> <code>\Rightarrow</code> <span class="math inline">\(\Longrightarrow\)</span> <code>\Longrightarrow</code> <span class="math inline">\(\Downarrow\)</span> <code>\Downarrow</code>
-<span class="math inline">\(\leftrightarrow\)</span> <code>\leftrightarrow</code> <span class="math inline">\(\longleftrightarrow\)</span> <code>\longleftrightarrow</code> <span class="math inline">\(\updownarrow\)</span> <code>\updownarrow</code> <span class="math inline">\(\Leftrightarrow\)</span> <code>\Leftrightarrow</code>
-<span class="math inline">\(\Longleftrightarrow\)</span> <code>\Longleftrightarrow</code> <span class="math inline">\(\Updownarrow\)</span> <code>\Updownarrow</code> <span class="math inline">\(\mapsto\)</span> <code>\mapsto</code> <span class="math inline">\(\longmapsto\)</span> <code>\longmapsto</code>
-<span class="math inline">\(\nearrow\)</span> <code>\nearrow</code> <span class="math inline">\(\hookleftarrow\)</span> <code>\hookleftarrow</code> <span class="math inline">\(\hookrightarrow\)</span> <code>\hookrightarrow</code> <span class="math inline">\(\searrow\)</span> <code>\searrow</code>
-<span class="math inline">\(\leftharpoonup\)</span> <code>\leftharpoonup</code> <span class="math inline">\(\rightharpoonup\)</span> <code>\rightharpoonup</code> <span class="math inline">\(\swarrow\)</span> <code>\swarrow</code> <span class="math inline">\(\leftharpoondown\)</span> <code>\leftharpoondown</code>
-<span class="math inline">\(\rightharpoondown\)</span> <code>\rightharpoondown</code> <span class="math inline">\(\nwarrow\)</span> <code>\nwarrow</code> <span class="math inline">\(\rightleftharpoons\)</span> <code>\rightleftharpoons</code> <span class="math inline">\(\leadsto\)</span> <code>\leadsto</code>
-———————————————— ———————————————— ———————————————- ——————————————</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb12-1"><a href="belgesinifi.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span></span>
-<span id="cb12-2"><a href="belgesinifi.html#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\downarrow</span></span>
-<span id="cb12-3"><a href="belgesinifi.html#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\big\downarrow</span></span>
-<span id="cb12-4"><a href="belgesinifi.html#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="sc">\Big\downarrow</span></span>
-<span id="cb12-5"><a href="belgesinifi.html#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="sc">\bigg\downarrow</span></span>
-<span id="cb12-6"><a href="belgesinifi.html#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="sc">\Bigg\downarrow</span></span>
-<span id="cb12-7"><a href="belgesinifi.html#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span></span></code></pre></div>
-<p><span class="math inline">\(\downarrow \big\downarrow \Big\downarrow \bigg\downarrow \Bigg\downarrow\)</span></p>
-<p>Bunların dışında altlarına ya da üstlerine matematiksel ifadeler
-yazılabilen <code>\xleftarrow</code> ve <code>\xrightarrow</code> komutları vardır.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb13-1"><a href="belgesinifi.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\(</span></span>
-<span id="cb13-2"><a href="belgesinifi.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\xleftarrow</span><span class="ss">{a}</span></span>
-<span id="cb13-3"><a href="belgesinifi.html#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\xrightarrow</span><span class="ss">[X]{a+b}</span></span>
-<span id="cb13-4"><a href="belgesinifi.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="ss">\)</span></span></code></pre></div>
-<p><span class="math inline">\(\xleftarrow{a}\)</span>
-<span class="math inline">\(\xrightarrow[X]{a+b}\)</span></p>
-
+<p><code>\mathnormal{ABC def 123}</code> <span class="math inline">\(ABC def 123\)</span>
+<code>\mathrm{ABC def 123}</code> <span class="math inline">\(\mathrm{ABC def 123}\)</span>
+<code>\mathit{ABC def 123}</code> <span class="math inline">\(\mathit{ABC def 123}\)</span>
+<code>\mathbf{ABC def 123}</code> <span class="math inline">\(\mathbf{ABC def 123}\)</span>
+<code>\mathtt{ABC def 123}</code> <span class="math inline">\(\mathtt{ABC def 123}\)</span>
+<code>\mathsf{ABC def 123}</code> <span class="math inline">\(\mathsf{ABC def 123}\)</span>
+<code>\mathfrak{ABC def 123}</code> <span class="math inline">\(\mathfrak{ABC def 123}\)</span>
+<code>\mathbb{ABC}</code> <span class="math inline">\(\mathbb{ABC}\)</span>
+<code>\mathcal{ABC}</code> <span class="math inline">\(\mathcal{ABC}\)</span>
+<code>\mathscr{ABC}</code> <span class="math inline">\(\mathscr{ABC}\)</span>
+—————————- —————————–</p>
+<p>Son satırdaki komutun kullanılabilmesi için</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb12-1"><a href="belgesinifi.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">mathrsfs</span>}</span></code></pre></div>
+<p>komutuyla <strong>mathrsfs</strong> paketi eklenmiş olmalıdır.</p>
+<p>Bu komutlarla girilen ifadelerdeki boşluklar yine dikkate alınmaz ve
+yine aksanlı harfler girilemez.</p>
+<p>Matematik kipindeki bir ifadenin hem kalın hem de italik yazılması için
+<code>\boldsymbol</code> komutu kullanılmalıdır.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb13-1"><a href="belgesinifi.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
+<span id="cb13-2"><a href="belgesinifi.html#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\mu</span><span class="ss">, M </span><span class="sc">\qquad</span><span class="ss"> </span><span class="sc">\mathbf</span><span class="ss">{</span><span class="sc">\mu</span><span class="ss">}, </span><span class="sc">\mathbf</span><span class="ss">{M}</span><span class="sc">\qquad</span></span>
+<span id="cb13-3"><a href="belgesinifi.html#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\boldsymbol</span><span class="ss">{</span><span class="sc">\mu</span><span class="ss">}, </span><span class="sc">\boldsymbol</span><span class="ss">{M}</span></span>
+<span id="cb13-4"><a href="belgesinifi.html#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
+<p><span class="math display">\[
+\mu, M \qquad \mathbf{\mu}, \mathbf{M}\qquad
+\boldsymbol{\mu}, \boldsymbol{M}
+\]</span></p>
+<p>Matematik kipindeki yazının boyutunu elle ayarlayabileceğiniz dört komut
+vardır: <code>\displaystyle</code>, <code>\textstyle</code>, <code>\scriptstyle</code> ve
+<code>\scriptscriptstyle</code>. <code>\textstyle</code> komutu ifadeyi normal metin boyutunda
+dizer, <code>\displaystyle</code> komutu ise ifadeyi ayrı satırda sergilenir gibi
+büyük dizer. <code>\scriptstyle</code> ve <code>\scriptscriptstyle</code> komutları da normal
+metin boyutundan küçük dizerler.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb14-1"><a href="belgesinifi.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
+<span id="cb14-2"><a href="belgesinifi.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\sum</span><span class="ss">_{k=0}^n z^k </span><span class="sc">\qquad</span><span class="ss"> </span><span class="sc">\textstyle\sum</span><span class="ss">_{k=0}^n z^k</span></span>
+<span id="cb14-3"><a href="belgesinifi.html#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span>
+<span id="cb14-4"><a href="belgesinifi.html#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span><span class="sc">\displaystyle\sum</span><span class="ss">_{k=0}^n z^k$</span><span class="fu">\qquad</span> </span>
+<span id="cb14-5"><a href="belgesinifi.html#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span><span class="sc">\sum</span><span class="ss">_{k=0}^n z^k$</span> <span class="fu">\qquad</span></span>
+<span id="cb14-6"><a href="belgesinifi.html#cb14-6" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span><span class="sc">\scriptstyle\sum</span><span class="ss">_{k=0}^n z^k$</span></span></code></pre></div>
+<p><span class="math display">\[
+\sum_{k=0}^n z^k \qquad \textstyle\sum_{k=0}^n z^k
+\]</span>
+<span class="math inline">\(\displaystyle\sum_{k=0}^n z^k\)</span>
+<span class="math inline">\(\sum_{k=0}^n z^k\)</span>
+<span class="math inline">\(\scriptstyle\sum_{k=0}^n z^k\)</span></p>
+<p>Kesirler dizilirken <code>{\displaystyle\frac{…}{…}}</code> ve
+<code>{\textstyle\frac{…}{…}}</code> komutları yerine onların kısaltmaları olan
+<code>\dfrac</code> ve <code>\tfrac</code> komutları kullanılabilir. Aynı şey <code>\binom</code> komutu
+için de geçerlidir.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb15-1"><a href="belgesinifi.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span><span class="sc">\frac</span><span class="ss">{1}{n}</span><span class="sc">\log</span><span class="ss"> x$</span> <span class="fu">\quad</span></span>
+<span id="cb15-2"><a href="belgesinifi.html#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span><span class="sc">\dfrac</span><span class="ss">{1}{n}</span><span class="sc">\log</span><span class="ss"> x$</span> <span class="fu">\quad</span></span>
+<span id="cb15-3"><a href="belgesinifi.html#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span><span class="sc">\binom</span><span class="ss">{n}{3}$</span> <span class="fu">\quad</span></span>
+<span id="cb15-4"><a href="belgesinifi.html#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span><span class="sc">\dbinom</span><span class="ss">{n}{3}$</span></span>
+<span id="cb15-5"><a href="belgesinifi.html#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
+<span id="cb15-6"><a href="belgesinifi.html#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="sc">\frac</span><span class="ss">{1}{n}</span><span class="sc">\log</span><span class="ss"> x </span><span class="sc">\quad</span></span>
+<span id="cb15-7"><a href="belgesinifi.html#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="sc">\tfrac</span><span class="ss">{1}{n}</span><span class="sc">\log</span><span class="ss"> x </span><span class="sc">\quad</span></span>
+<span id="cb15-8"><a href="belgesinifi.html#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="sc">\binom</span><span class="ss">{n}{3} </span><span class="sc">\quad</span></span>
+<span id="cb15-9"><a href="belgesinifi.html#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="sc">\tbinom</span><span class="ss">{n}{3}</span></span>
+<span id="cb15-10"><a href="belgesinifi.html#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
+<p><span class="math inline">\(\frac{1}{n}\log x\)</span>
+<span class="math inline">\(\dfrac{1}{n}\log x\)</span>
+<span class="math inline">\(\binom{n}{3}\)</span>
+<span class="math inline">\(\dbinom{n}{3}\)</span>
+<span class="math display">\[
+\frac{1}{n}\log x \quad
+\tfrac{1}{n}\log x \quad
+\binom{n}{3} \quad
+\tbinom{n}{3}
+\]</span></p>
 </div>
-<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
 <a href="tipik.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="kaynaklar.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="boşluklar.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

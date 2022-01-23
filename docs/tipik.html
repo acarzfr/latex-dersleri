@@ -24,7 +24,7 @@
 <meta name="author" content="Zafer Acar" />
 
 
-<meta name="date" content="2022-01-22" />
+<meta name="date" content="2022-01-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -182,6 +182,15 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="1.4" data-path="tipik.html"><a href="tipik.html"><i class="fa fa-check"></i><b>1.4</b> Tipik Bir Belge Yazımı</a></li>
 <li class="chapter" data-level="1.5" data-path="belgesinifi.html"><a href="belgesinifi.html"><i class="fa fa-check"></i><b>1.5</b> Belge Sınıfları ve Seçenekleri</a></li>
+<li class="chapter" data-level="1.6" data-path="boşluklar.html"><a href="boşluklar.html"><i class="fa fa-check"></i><b>1.6</b> Boşluklar</a></li>
+<li class="chapter" data-level="1.7" data-path="denklem-ortamları.html"><a href="denklem-ortamları.html"><i class="fa fa-check"></i><b>1.7</b> Denklem Ortamları</a></li>
+<li class="chapter" data-level="1.8" data-path="teorem-ve-benzeri-ortamlar.html"><a href="teorem-ve-benzeri-ortamlar.html"><i class="fa fa-check"></i><b>1.8</b> Teorem ve Benzeri Ortamlar</a>
+<ul>
+<li class="chapter" data-level="1.8.1" data-path="teorem-ve-benzeri-ortamlar.html"><a href="teorem-ve-benzeri-ortamlar.html#temel-teoremler"><i class="fa fa-check"></i><b>1.8.1</b> Temel Teoremler</a></li>
+<li class="chapter" data-level="1.8.2" data-path="teorem-ve-benzeri-ortamlar.html"><a href="teorem-ve-benzeri-ortamlar.html#sayaçlar"><i class="fa fa-check"></i><b>1.8.2</b> Sayaçlar</a></li>
+<li class="chapter" data-level="1.8.3" data-path="teorem-ve-benzeri-ortamlar.html"><a href="teorem-ve-benzeri-ortamlar.html#kanıtlar"><i class="fa fa-check"></i><b>1.8.3</b> Kanıtlar</a></li>
+<li class="chapter" data-level="1.8.4" data-path="teorem-ve-benzeri-ortamlar.html"><a href="teorem-ve-benzeri-ortamlar.html#teorem-stilleri"><i class="fa fa-check"></i><b>1.8.4</b> Teorem Stilleri</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="kaynaklar.html"><a href="kaynaklar.html"><i class="fa fa-check"></i>Kaynaklar</a></li>
 </ul>
@@ -207,7 +216,7 @@ div.csl-indent {
 dosyası olup, LaTeX editörleriyle oluşturulup düzenlenebileceği gibi
 basit bir metin editörüyle de düzenlenebilir.</p>
 <p>Bir belge hazırlamaya başlamak için verilecek ilk komut</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb9-1"><a href="tipik.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[...]{<span class="ex">...</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb9-1"><a href="tipik.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[...]{<span class="ex">...</span>}</span></code></pre></div>
 <p>olup, çengelli parantezler arasına oluşturmak istediğiniz belgenin
 sınıfı yazılır. Köşeli parantezlerin içine de isteğe bağlı bazı
 değişkenler yazılabilir. Eğer bu kısım boş bırakılırsa LaTeX varsayılan
@@ -221,9 +230,9 @@ denir. Sahanlık, belgenin ayarlarının yapıldığı kısımdır ve bu kısım
 <em>gövde</em> denir. İçerik burada oluşturulur.</p>
 <p>Aşağıda asgari bir LaTeX kaynak dosyası gösterilmiştir. <code>\documentclass</code>
 komutunun değişkeni olan <code>article</code>, belgenin makale olacağını belirtir.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb10-1"><a href="tipik.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<div class="sourceCode" id="cb10"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb10-1"><a href="tipik.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
 <span id="cb10-2"><a href="tipik.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb10-3"><a href="tipik.html#cb10-3" aria-hidden="true" tabindex="-1"></a>İşte ilk belgem.</span>
+<span id="cb10-3"><a href="tipik.html#cb10-3" aria-hidden="true" tabindex="-1"></a>  İşte ilk belgem.</span>
 <span id="cb10-4"><a href="tipik.html#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre></div>
 <p>Bu noktadan sonra örnek kaynak dosyayı LaTeX editörünüzünde oluşturup
 önceden oluşturduğunuz bir dizine kaydedin. Kaydederken dosya adında
@@ -235,7 +244,7 @@ dosya derlenir ve sonuç, çıktı ekranında görünür.</p>
 <p>Eğer metin editörü kullanıyorsanız derlemeyi uçbirimde (terminal,
 konsol,…) yapmanız gerekir. Derleme için uçbirim kaynak dosyanın
 olduğu dizinde açılıp</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb11-1"><a href="tipik.html#cb11-1" aria-hidden="true" tabindex="-1"></a>pdflatex belge1</span></code></pre></div>
+<div class="sourceCode" id="cb11"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb11-1"><a href="tipik.html#cb11-1" aria-hidden="true" tabindex="-1"></a>pdflatex belge1</span></code></pre></div>
 <p>komutu verilmelidir.</p>
 <p>Derleme işleminden sonra kaynak dosyanızın olduğu dizinde <code>belge1.tex</code>
 ve <code>belge1.pdf</code> dosyalarının yanında yine <code>belge1</code> ile başlayan farklı

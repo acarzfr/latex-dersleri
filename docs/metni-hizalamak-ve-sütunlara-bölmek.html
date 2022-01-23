@@ -24,7 +24,7 @@
 <meta name="author" content="Zafer Acar" />
 
 
-<meta name="date" content="2022-01-22" />
+<meta name="date" content="2022-01-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -225,6 +225,7 @@ div.csl-indent {
 <li class="chapter" data-level="2.1.2" data-path="giriş-1.html"><a href="giriş-1.html#matematik-kipiyle-metin-kipi-arasındaki-farklar"><i class="fa fa-check"></i><b>2.1.2</b> Matematik Kipiyle Metin Kipi Arasındaki Farklar</a></li>
 <li class="chapter" data-level="2.1.3" data-path="giriş-1.html"><a href="giriş-1.html#gruplandırma"><i class="fa fa-check"></i><b>2.1.3</b> Gruplandırma</a></li>
 </ul></li>
+<li class="chapter" data-level="2.2" data-path="parantezler-gruplandırıcılar-ve-oklar.html"><a href="parantezler-gruplandırıcılar-ve-oklar.html"><i class="fa fa-check"></i><b>2.2</b> Parantezler, Gruplandırıcılar ve Oklar</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="kaynaklar.html"><a href="kaynaklar.html"><i class="fa fa-check"></i>Kaynaklar</a></li>
 </ul>
@@ -250,7 +251,7 @@ div.csl-indent {
 <h3><span class="header-section-number">1.15.1</span> Hizalama</h3>
 <p>LaTeX’de metni sola hizalamak için <code>flushleft</code>, sağa hizalamak için
 <code>flushright</code> ve ortalı hizalamak için <code>center</code> ortamları kullanılır.</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb45-1"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">flushleft</span>}</span>
+<div class="sourceCode" id="cb45"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb45-1"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">flushleft</span>}</span>
 <span id="cb45-2"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb45-2" aria-hidden="true" tabindex="-1"></a> burası sola hizalı</span>
 <span id="cb45-3"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">flushleft</span>}</span>
 <span id="cb45-4"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb45-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">flushright</span>}</span>
@@ -271,10 +272,10 @@ verildiği sayfadan sonraki sayfalar tek sütun dizilir.</p>
 <p>Eğer metni daha fazla sütuna bölmek ve sütunları istediğiniz yerden
 başlatmak gibi daha fazla seçenek istiyorsanız, <code>multicols</code> ortamını
 kullanmanız gerekir. Bu ortamı kullanabilmek için</p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb46-1"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">multicol</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb46-1"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">multicol</span>}</span></code></pre></div>
 <p>komutuyla
 <a href="http://ftp.ntua.gr/mirror/ctan/macros/latex/required/tools/multicol.pdf">multicol</a> paketini eklemelisiniz.</p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb47-1"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">multicols</span>}{&lt;sütun sayısı&gt;}</span>
+<div class="sourceCode" id="cb47"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb47-1"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">multicols</span>}{&lt;sütun sayısı&gt;}</span>
 <span id="cb47-2"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb47-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb47-3"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">multicols</span>}</span></code></pre></div>
 <p>Burada, <code>&lt;sütun sayısı&gt;</code> değişkeninde oluşturulmak istenen sütun adedi
@@ -284,9 +285,9 @@ sayıyla belirtilir.</p>
 sütunlar arasındaki çizginin rengi <code>\columnseprulecolor</code> komutlarında
 saklıdır. Bu değişkenler <code>\setlength</code> ya da <code>\def</code> komutları
 kullanılarak değiştirilebilir.</p>
-<div class="sourceCode" id="cb48"><pre class="sourceCode numberSource tex numberLines"><code class="sourceCode latex"><span id="cb48-1"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb48-1"></a><span class="fu">\setlength</span>{<span class="fu">\columnsep</span>}{1cm}</span>
-<span id="cb48-2"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb48-2"></a><span class="fu">\setlength</span>{<span class="fu">\columnseprule</span>}{1pt}</span>
-<span id="cb48-3"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb48-3"></a><span class="fu">\def\columnseprulecolor</span>{<span class="fu">\color</span>{blue}}</span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb48-1"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\setlength</span>{<span class="fu">\columnsep</span>}{1cm}</span>
+<span id="cb48-2"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\setlength</span>{<span class="fu">\columnseprule</span>}{1pt}</span>
+<span id="cb48-3"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\def\columnseprulecolor</span>{<span class="fu">\color</span>{blue}}</span></code></pre></div>
 <p>Yukarıdaki birinci komutla sütunlar arasındaki boşluk 1 cm, çizgi
 kalınlığı 1 pt ve çizgi rengi mavi olarak düzenlenir. Bu komutlar ya
 sahanlığa ya da ortamı kullanmadan önce gövdeye yazılmalıdır.</p>
@@ -298,10 +299,10 @@ değiştirmek için verilen komutun kullanılabilmesi için sahanlığa
 <p>Ortam isteğe bağlı bir değişken de alabilir. Bu, çengelli parantezlerden
 sonra köşeli parantezler içine yazılır. Köşeli parantezler içinde
 yazılanlar bölünmeden ve çok sütunlu metnin üstünde dizilir.</p>
-<div class="sourceCode" id="cb49"><pre class="sourceCode tex"><code class="sourceCode latex"><span id="cb49-1"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">multicols</span>}{2}</span>
-<span id="cb49-2"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb49-2" aria-hidden="true" tabindex="-1"></a>[<span class="kw">\section</span>{Başlık}</span>
-<span id="cb49-3"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb49-3" aria-hidden="true" tabindex="-1"></a>Burası sütunlara bölünmez.]</span>
-<span id="cb49-4"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb49-4" aria-hidden="true" tabindex="-1"></a>Burası sütunlara bölünür.</span>
+<div class="sourceCode" id="cb49"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb49-1"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">multicols</span>}{2}</span>
+<span id="cb49-2"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb49-2" aria-hidden="true" tabindex="-1"></a> [<span class="kw">\section</span>{Başlık}</span>
+<span id="cb49-3"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb49-3" aria-hidden="true" tabindex="-1"></a> Burası sütunlara bölünmez.]</span>
+<span id="cb49-4"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb49-4" aria-hidden="true" tabindex="-1"></a> Burası sütunlara bölünür.</span>
 <span id="cb49-5"><a href="metni-hizalamak-ve-sütunlara-bölmek.html#cb49-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">multicols</span>}</span></code></pre></div>
 <p>Sütunu kesmek için <code>\columnbreak</code> komutu kullanılır. Komutun verildiği
 yerde sütun kesilir, ardından kesme noktasından önceki paragraflar tüm

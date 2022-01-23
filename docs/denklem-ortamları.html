@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2.2 Parantezler, Gruplandırıcılar ve Oklar | LaTeX Dersleri</title>
+  <title>2.9 Denklem Ortamları | LaTeX Dersleri</title>
   <meta name="description" content="TeX/LaTeX’e dair bir iki kelam." />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2.2 Parantezler, Gruplandırıcılar ve Oklar | LaTeX Dersleri" />
+  <meta property="og:title" content="2.9 Denklem Ortamları | LaTeX Dersleri" />
   <meta property="og:type" content="book" />
   <meta property="og:url" content="https://acarzfr.github.io/latex-dersleri/" />
   
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="acarzfr/latex-dersleri" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2.2 Parantezler, Gruplandırıcılar ve Oklar | LaTeX Dersleri" />
+  <meta name="twitter:title" content="2.9 Denklem Ortamları | LaTeX Dersleri" />
   
   <meta name="twitter:description" content="TeX/LaTeX’e dair bir iki kelam." />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="giriş-1.html"/>
-<link rel="next" href="yunan-harfleri.html"/>
+<link rel="prev" href="boşluklar.html"/>
+<link rel="next" href="teorem-ve-benzeri-ortamlar.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -237,168 +237,189 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="parantezler-gruplandırıcılar-ve-oklar" class="section level2" number="2.2">
-<h2><span class="header-section-number">2.2</span> Parantezler, Gruplandırıcılar ve Oklar</h2>
-<p>LaTeX’de her türlü parantez ve gruplandırıcı kullanılabilir. Yuvarlak ve
-köşeli parantezler klavyedeki yerlerinden, çengelli parantez ise <code>\{</code> ve
-<code>\}</code> komutları kullanılarak girilir.</p>
-<div class="sourceCode" id="cb6"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb6-1"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ss">${a,b,c}</span><span class="sc">\neq\{</span><span class="ss">a,b,c</span><span class="sc">\}</span><span class="ss">$</span></span></code></pre></div>
-<p><span class="math inline">\({a,b,c}\neq\{a,b,c\}\)</span></p>
-<p>Kullanılabilecek tüm gruplandırıcı işaretler aşağıdaki tabloda
-gösterilmiştir.</p>
-<table>
-<colgroup>
-<col width="30%" />
-<col width="38%" />
-<col width="30%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left">( <code>(</code> ) <code>)</code></td>
-<td align="left"><span class="math inline">\(\uparrow\)</span> <code>\uparrow</code></td>
-<td align="left"><span class="math inline">\([\)</span> <code>[</code> ya da <code>\lbrack</code></td>
-</tr>
-<tr class="even">
-<td align="left"><span class="math inline">\(]\)</span> <code>]</code> ya da <code>\rbrack</code></td>
-<td align="left"><span class="math inline">\(\downarrow\)</span> <code>\downarrow</code></td>
-<td align="left"><span class="math inline">\(\lbrace\)</span> <code>\{</code> ya da <code>\lbrace</code></td>
-</tr>
-<tr class="odd">
-<td align="left"><span class="math inline">\(\rbrace\)</span> <code>\}</code> ya da <code>\rbrace</code></td>
-<td align="left"><span class="math inline">\(\updownarrow\)</span> <code>\updownarrow</code></td>
-<td align="left"><span class="math inline">\(\langle\)</span> <code>\langle</code></td>
-</tr>
-<tr class="even">
-<td align="left"><span class="math inline">\(\rangle\)</span> <code>\rangle</code></td>
-<td align="left"><span class="math inline">\(\vert\)</span> <code>|</code> ya da <code>\vert</code></td>
-<td align="left"><span class="math inline">\(\lfloor\)</span> <code>\lfloor</code></td>
-</tr>
-<tr class="odd">
-<td align="left"><span class="math inline">\(\rfloor\)</span> <code>\rfloor</code></td>
-<td align="left"><span class="math inline">\(\lceil\)</span> <code>\lceil</code></td>
-<td align="left"><span class="math inline">\(\rceil\)</span> <code>\rceil</code></td>
-</tr>
-<tr class="even">
-<td align="left"><span class="math inline">\(/\)</span> <code>/</code></td>
-<td align="left"><span class="math inline">\(\backslash\)</span> <code>\backslash</code></td>
-<td align="left"><span class="math inline">\(\Updownarrow\)</span> <code>\Updownarrow</code></td>
-</tr>
-</tbody>
-</table>
-<p>Grup açıcı bir sembolün önüne <code>\left</code> komutu, grup kapatıcı bir sembolün
-önüne de <code>\right</code> komutu yazılırsa LaTeX onları en uygun boyda dizer.
-Her bir <code>\left</code> komutuna karşılık mutlaka bir <code>\right</code> komutu
-bulunmalıdır. Bunların doğru boyda dizilmesi için iki komutunda aynı
-satırda yer almasına dikkat edilmelidir. Sol/sağ tarafta gruplandırıcı
-bir işaret istenmiyorsa, görünmeyen <code>\left.</code>/<code>\right.</code> komutu
-kullanılır.</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb7-1"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
-<span id="cb7-2"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\left</span><span class="ss">(1+</span><span class="sc">\frac</span><span class="ss">{1}{n}</span><span class="sc">\right</span><span class="ss">)^n</span><span class="sc">\quad</span></span>
-<span id="cb7-3"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\left</span><span class="ss">.</span><span class="sc">\frac</span><span class="ss">{x^3}{3}</span><span class="sc">\right</span><span class="ss">|_0^1</span></span>
-<span id="cb7-4"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
+<div id="denklem-ortamları" class="section level2" number="2.9">
+<h2><span class="header-section-number">2.9</span> Denklem Ortamları</h2>
+<p>Bir satıra sığmayacak kadar uzun bir formülü ya da birden çok satırdan
+oluşan bir denklemi veya denklem sistemlerini hizalayıp dizmek için
+LaTeX’de çeşitli ortamlar kullanılır.</p>
+<p><code>multline</code> ortamı bir formülü hizalanmamış bir kaç satıra ayırır.</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb37-1"><a href="denklem-ortamları.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">multline</span>}</span>
+<span id="cb37-2"><a href="denklem-ortamları.html#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="ss">f=a+b+c </span><span class="sc">\\</span></span>
+<span id="cb37-3"><a href="denklem-ortamları.html#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="ss">+i+j+k+l </span><span class="sc">\\</span></span>
+<span id="cb37-4"><a href="denklem-ortamları.html#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="ss">+x+y+z</span></span>
+<span id="cb37-5"><a href="denklem-ortamları.html#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">multline</span>}</span></code></pre></div>
+<p><span class="math display" id="eq:mult">\[\begin{multline}
+\tag{2.2}
+f=a+b+c \\
++i+j+k+l \\
++x+y+z\qquad \qquad
+\end{multline}\]</span></p>
+<p>Bu ortamda ilk satır sola, son satır sağa ve kalanlar ortalı hizalanır.
+Denklemin numarası da son satırın sağına yazılır. Dekleme numara
+verilmesi istenmiyorsa ortam <code>multline*</code> şeklinde kullanılmalıdır.</p>
+<p><code>split</code> ortamı denklemi dikey hizalanmış birden çok satırda dizer.</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb38-1"><a href="denklem-ortamları.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">equation</span>}</span>
+<span id="cb38-2"><a href="denklem-ortamları.html#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">split</span>}</span>
+<span id="cb38-3"><a href="denklem-ortamları.html#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="ss"> a&amp;= b+c-d</span><span class="sc">\\</span></span>
+<span id="cb38-4"><a href="denklem-ortamları.html#cb38-4" aria-hidden="true" tabindex="-1"></a><span class="ss">  &amp;= e-f</span><span class="sc">\\</span></span>
+<span id="cb38-5"><a href="denklem-ortamları.html#cb38-5" aria-hidden="true" tabindex="-1"></a><span class="ss">  &amp;= g</span></span>
+<span id="cb38-6"><a href="denklem-ortamları.html#cb38-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">split</span>}</span>
+<span id="cb38-7"><a href="denklem-ortamları.html#cb38-7" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">equation</span>}</span></code></pre></div>
+<p><span class="math display" id="eq:spl">\[\begin{equation}
+  \begin{split}
+  a&amp;= b+c-d\\
+   &amp;= e-f\\
+   &amp;= g
+\end{split}
+\tag{2.3}
+\end{equation}\]</span></p>
+<p>Hizalama <code>&amp;</code> karakteriyle yapılır (genelde <code>=</code> işaretinden hemen
+önce kullanılır). Ortam mutlaka formülün numaralandırılmasından sorumlu
+ya da numara vermeyen başka bir matematik ortamında kullanılması
+gerekir.</p>
+<p><code>gather</code> ortamı birden fazla formülü birlikte gruplandırır, ortalar ve
+her birini ayrı bir satırda numaralandırır. Yine <code>gather*</code> ortamı, aynı
+türden numaralandırılmamış formüller üretir.</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb39-1"><a href="denklem-ortamları.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">gather</span>}</span>
+<span id="cb39-2"><a href="denklem-ortamları.html#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="ss">a=b+c </span><span class="sc">\\</span></span>
+<span id="cb39-3"><a href="denklem-ortamları.html#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="ss">V+F-S=2</span></span>
+<span id="cb39-4"><a href="denklem-ortamları.html#cb39-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">gather</span>}</span></code></pre></div>
+<p><span class="math display" id="eq:gat2" id="eq:gat1">\[\begin{gather}
+a=b+c \tag{2.4}\\
+V+F-S=2
+\tag{2.5}
+\end{gather}\]</span></p>
+<p><code>align</code> ortamı, iki veya daha fazla satırdan oluşan bir denklemi her bir
+satırı hizalı ve numaralı şekilde dizmek için kullanılır. Hizalama aynı
+şekilde <code>&amp;</code> karakteriyle yapılır. Ortam yıldızlı (<code>align*</code>) şekilde
+kullanılırsa hiçbir satır numaralandırılmaz.</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb40-1"><a href="denklem-ortamları.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">align</span>}</span>
+<span id="cb40-2"><a href="denklem-ortamları.html#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="ss">   a&amp; = b+c+d </span><span class="sc">\\</span></span>
+<span id="cb40-3"><a href="denklem-ortamları.html#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="ss">   e&amp; = f </span><span class="sc">\\</span></span>
+<span id="cb40-4"><a href="denklem-ortamları.html#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="ss"> x-1&amp; = y+z </span></span>
+<span id="cb40-5"><a href="denklem-ortamları.html#cb40-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">align</span>}</span></code></pre></div>
+<p><span class="math display" id="eq:ali3" id="eq:ali2" id="eq:ali1">\[\begin{align}
+   a&amp; = b+c+d\tag{2.6} \\
+   e&amp; = f \tag{2.7}\\
+x-1&amp; = y+z \tag{2.8}
+\end{align}\]</span></p>
+<p><code>align</code> ortamı aynı zamanda birden fazla özerk formül dizisini
+birleştirmek için de kullanışlıdır. Bu durumda, <code>&amp;</code> karakteri konumuna
+bağlı olarak hizalama ve ayırıcı olmak üzere iki farklı işlev üstlenir.</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb41-1"><a href="denklem-ortamları.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">align*</span>}</span>
+<span id="cb41-2"><a href="denklem-ortamları.html#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="ss"> a &amp;=b &amp; c&amp;=d &amp; e&amp;=f </span><span class="sc">\\</span></span>
+<span id="cb41-3"><a href="denklem-ortamları.html#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="ss"> u &amp;=v &amp; w&amp;=x &amp; y&amp;=z</span></span>
+<span id="cb41-4"><a href="denklem-ortamları.html#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">align*</span>}</span></code></pre></div>
+<p><span class="math display">\[\begin{align*}
+a &amp;=b &amp; c&amp;=d &amp; e&amp;=f \\
+u &amp;=v &amp; w&amp;=x &amp; y&amp;=z
+\end{align*}\]</span></p>
+<p><code>alignat</code> ortamı <code>align</code> ortamına benzer fakat sütun sayısını belirten
+bir değişken alır (Bir satırda kullanılan <code>&amp;</code> sayısının bir fazlasının
+yarısı sütun sayısını vermelidir} ve denklemler arasındaki yatay
+boşluğun kontrolünü sağlar. Eğer boşluk komutlarından biri kullanılmazsa
+denklem sistemleri arasında boşluk bırakılmaz (örnekte boşluk komutu
+olarak <code>\qquad</code> kullanılmıştır).</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb42-1"><a href="denklem-ortamları.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">alignat*</span>}{3}</span>
+<span id="cb42-2"><a href="denklem-ortamları.html#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="ss">  a&amp;=b</span><span class="sc">\qquad</span><span class="ss"> &amp; c&amp;=d</span><span class="sc">\qquad</span><span class="ss"> &amp; e&amp;=f </span><span class="sc">\\</span></span>
+<span id="cb42-3"><a href="denklem-ortamları.html#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="ss">  u&amp;=v</span><span class="sc">\qquad</span><span class="ss"> &amp; w&amp;=x</span><span class="sc">\qquad</span><span class="ss"> &amp; y&amp;=z </span></span>
+<span id="cb42-4"><a href="denklem-ortamları.html#cb42-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">alignat*</span>}</span></code></pre></div>
+<p><span class="math display">\[\begin{alignat*}{3}
+  a&amp;=b\qquad &amp; c&amp;=d\qquad &amp; e&amp;=f \\
+  u&amp;=v\qquad &amp; w&amp;=x\qquad &amp; y&amp;=z
+\end{alignat*}\]</span></p>
+<p><code>flalign</code> ortamı <code>align</code> ortamına benzer ancak ilk denklem sistemini
+sola ve son denklem sistemini sağa yaslar.</p>
+<p><code>aligned</code> ortamı yine <code>align</code> ortamına benzer fakat başka bir matematik
+ortamında kullanılması gerekir.</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb43-1"><a href="denklem-ortamları.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
+<span id="cb43-2"><a href="denklem-ortamları.html#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\left</span><span class="ss">.</span></span>
+<span id="cb43-3"><a href="denklem-ortamları.html#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">aligned</span>}</span>
+<span id="cb43-4"><a href="denklem-ortamları.html#cb43-4" aria-hidden="true" tabindex="-1"></a><span class="ss"> a&amp;= b+1 </span><span class="sc">\\</span></span>
+<span id="cb43-5"><a href="denklem-ortamları.html#cb43-5" aria-hidden="true" tabindex="-1"></a><span class="ss"> a&amp;= 2b</span></span>
+<span id="cb43-6"><a href="denklem-ortamları.html#cb43-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">aligned</span>}</span>
+<span id="cb43-7"><a href="denklem-ortamları.html#cb43-7" aria-hidden="true" tabindex="-1"></a><span class="sc">\right\}</span></span>
+<span id="cb43-8"><a href="denklem-ortamları.html#cb43-8" aria-hidden="true" tabindex="-1"></a><span class="sc">\quad</span></span>
+<span id="cb43-9"><a href="denklem-ortamları.html#cb43-9" aria-hidden="true" tabindex="-1"></a><span class="sc">\text</span>{<span class="ss">$a=2$</span> ve <span class="ss">$b=1$</span>.}</span>
+<span id="cb43-10"><a href="denklem-ortamları.html#cb43-10" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
 <p><span class="math display">\[
-\left(1+\frac{1}{n}\right)^n\quad
-\left.\frac{x^3}{3}\right|_0^1
-\]</span></p>
-<p>Bazen gruplandırıcı sembolün boyunu elle ayarlamak gerekebilir. Bunun
-için, gruplandırıcı komutun önüne <code>\big</code>, <code>\Big</code>, <code>\bigg</code> veya <code>\Bigg</code>
-komutlarından biri verilir. <code>\bigl</code> (büyük sol) ve <code>\bigr</code> (büyük sağ)
-komutları da parantezleri biraz büyütür.</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb8-1"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
-<span id="cb8-2"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\big</span><span class="ss">(</span><span class="sc">\Big</span><span class="ss">(</span><span class="sc">\bigg</span><span class="ss">(</span><span class="sc">\Bigg</span><span class="ss">(</span><span class="sc">\quad</span></span>
-<span id="cb8-3"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\big\}\Big\}\bigg\}\Bigg\}</span></span>
-<span id="cb8-4"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="sc">\quad</span></span>
-<span id="cb8-5"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="sc">\big\|\Big\|\bigg\|\Bigg\|</span></span>
-<span id="cb8-6"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
-<p><span class="math display">\[
-\big(\Big(\bigg(\Bigg(\quad
-\big\}\Big\}\bigg\}\Bigg\}
+\left.
+\begin{aligned}
+a&amp;= b+1 \\
+a&amp;= 2b
+\end{aligned}
+\right\}
 \quad
-\big\|\Big\|\bigg\|\Bigg\|
+\text{$a=2$ ve $b=1$.}
 \]</span></p>
-<p>Oklar için aşağıdaki komutlar kullanılır.</p>
-<table>
-<colgroup>
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-<col width="25%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><span class="math inline">\(\leftarrow\)</span> <code>\leftarrow</code> ya da <code>\gets</code></td>
-<td align="left"><span class="math inline">\(\longleftarrow\)</span> <code>\longleftarrow</code></td>
-<td align="left"><span class="math inline">\(\uparrow\)</span> <code>\uparrow</code></td>
-<td align="left"><span class="math inline">\(\Leftarrow\)</span> <code>\Leftarrow</code></td>
-</tr>
-<tr class="even">
-<td align="left"><span class="math inline">\(\Longleftarrow\)</span> <code>\Longleftarrow</code></td>
-<td align="left"><span class="math inline">\(\Uparrow\)</span> <code>\Uparrow</code></td>
-<td align="left"><span class="math inline">\(\rightarrow\)</span> <code>\rightarrow</code> ya da <code>\to</code></td>
-<td align="left"><span class="math inline">\(\longrightarrow\)</span> <code>\longrightarrow</code></td>
-</tr>
-<tr class="odd">
-<td align="left"><span class="math inline">\(\downarrow\)</span> <code>\downarrow</code></td>
-<td align="left"><span class="math inline">\(\Rightarrow\)</span> <code>\Rightarrow</code></td>
-<td align="left"><span class="math inline">\(\Longrightarrow\)</span> <code>\Longrightarrow</code></td>
-<td align="left"><span class="math inline">\(\Downarrow\)</span> <code>\Downarrow</code></td>
-</tr>
-<tr class="even">
-<td align="left"><span class="math inline">\(\leftrightarrow\)</span> <code>\leftrightarrow</code></td>
-<td align="left"><span class="math inline">\(\longleftrightarrow\)</span> <code>\longleftrightarrow</code></td>
-<td align="left"><span class="math inline">\(\updownarrow\)</span> <code>\updownarrow</code></td>
-<td align="left"><span class="math inline">\(\Leftrightarrow\)</span> <code>\Leftrightarrow</code></td>
-</tr>
-<tr class="odd">
-<td align="left"><span class="math inline">\(\Longleftrightarrow\)</span> <code>\Longleftrightarrow</code></td>
-<td align="left"><span class="math inline">\(\Updownarrow\)</span> <code>\Updownarrow</code></td>
-<td align="left"><span class="math inline">\(\mapsto\)</span> <code>\mapsto</code></td>
-<td align="left"><span class="math inline">\(\longmapsto\)</span> <code>\longmapsto</code></td>
-</tr>
-<tr class="even">
-<td align="left"><span class="math inline">\(\nearrow\)</span> <code>\nearrow</code></td>
-<td align="left"><span class="math inline">\(\hookleftarrow\)</span> <code>\hookleftarrow</code></td>
-<td align="left"><span class="math inline">\(\hookrightarrow\)</span> <code>\hookrightarrow</code></td>
-<td align="left"><span class="math inline">\(\searrow\)</span> <code>\searrow</code></td>
-</tr>
-<tr class="odd">
-<td align="left"><span class="math inline">\(\leftharpoonup\)</span> <code>\leftharpoonup</code></td>
-<td align="left"><span class="math inline">\(\rightharpoonup\)</span> <code>\rightharpoonup</code></td>
-<td align="left"><span class="math inline">\(\swarrow\)</span> <code>\swarrow</code></td>
-<td align="left"><span class="math inline">\(\leftharpoondown\)</span> <code>\leftharpoondown</code></td>
-</tr>
-<tr class="even">
-<td align="left"><span class="math inline">\(\rightharpoondown\)</span> <code>\rightharpoondown</code></td>
-<td align="left"><span class="math inline">\(\nwarrow\)</span> <code>\nwarrow</code></td>
-<td align="left"><span class="math inline">\(\rightleftharpoons\)</span> <code>\rightleftharpoons</code></td>
-<td align="left"><span class="math inline">\(\leadsto\)</span> <code>\leadsto</code></td>
-</tr>
-</tbody>
-</table>
-<div class="sourceCode" id="cb9"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb9-1"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\(</span></span>
-<span id="cb9-2"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\downarrow</span></span>
-<span id="cb9-3"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\big\downarrow</span></span>
-<span id="cb9-4"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="sc">\Big\downarrow</span></span>
-<span id="cb9-5"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="sc">\bigg\downarrow</span></span>
-<span id="cb9-6"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="sc">\Bigg\downarrow</span></span>
-<span id="cb9-7"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="ss">\)</span></span></code></pre></div>
-<p><span class="math inline">\(\downarrow \big\downarrow \Big\downarrow \bigg\downarrow \Bigg\downarrow\)</span></p>
-<p>Bunların dışında altlarına ya da üstlerine matematiksel ifadeler
-yazılabilen <code>\xleftarrow</code> ve <code>\xrightarrow</code> komutları vardır.</p>
-<div class="sourceCode" id="cb10"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb10-1"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\(</span></span>
-<span id="cb10-2"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\xleftarrow</span><span class="ss">{a}</span></span>
-<span id="cb10-3"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\xrightarrow</span><span class="ss">[X]{a+b}</span></span>
-<span id="cb10-4"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="ss">\)</span></span></code></pre></div>
-<p><span class="math inline">\(\xleftarrow{a}\)</span>
-<span class="math inline">\(\xrightarrow[X]{a+b}\)</span></p>
+<p><code>cases</code> ortamı parçalı fonksiyonları dizmek için kullanışlıdır. Ortamın
+içine yazılan denklemlerin solunda uygun boyda bir çengelli parantez
+açar. Sütunlar sola yaslıdır. Ortamın başka bir matematik ortamında
+kullanılması gerekir.</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb44-1"><a href="denklem-ortamları.html#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
+<span id="cb44-2"><a href="denklem-ortamları.html#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="ss">n!=</span></span>
+<span id="cb44-3"><a href="denklem-ortamları.html#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">cases</span>}</span>
+<span id="cb44-4"><a href="denklem-ortamları.html#cb44-4" aria-hidden="true" tabindex="-1"></a><span class="ss">1 &amp; </span><span class="sc">\text</span>{<span class="ss">$n=0$</span> ise}<span class="ss"> </span><span class="sc">\\</span></span>
+<span id="cb44-5"><a href="denklem-ortamları.html#cb44-5" aria-hidden="true" tabindex="-1"></a><span class="ss">n(n-1)!&amp; </span><span class="sc">\text</span>{<span class="ss">$n\ge 1$</span> ise}</span>
+<span id="cb44-6"><a href="denklem-ortamları.html#cb44-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">cases</span>}</span>
+<span id="cb44-7"><a href="denklem-ortamları.html#cb44-7" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
+<p><span class="math display">\[
+n!=
+\begin{cases}
+1 &amp; \text{$n=0$ ise} \\
+n(n-1)!&amp; \text{$n\ge 1$ ise}
+\end{cases}
+\]</span></p>
+<p>Her satıra numara veren bir ortamda bazı satırların numarasız olması
+istenirse bu satırların sonuna <code>\notag</code> ya da <code>\nonumber</code> komutları
+verilir. <code>\tag</code> komutuyla ise keyfi bir numara ya da işaret yazılabilir.</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb45-1"><a href="denklem-ortamları.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">align</span>}</span>
+<span id="cb45-2"><a href="denklem-ortamları.html#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="ss"> x&amp;=y</span><span class="sc">\\</span></span>
+<span id="cb45-3"><a href="denklem-ortamları.html#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="ss"> z&amp;=y+1 </span><span class="sc">\notag\\</span></span>
+<span id="cb45-4"><a href="denklem-ortamları.html#cb45-4" aria-hidden="true" tabindex="-1"></a><span class="ss"> w&amp;=3 </span><span class="sc">\tag</span><span class="ss">{*}</span></span>
+<span id="cb45-5"><a href="denklem-ortamları.html#cb45-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">align</span>}</span></code></pre></div>
+<p><span class="math display" id="eq:align">\[\begin{align}
+x&amp;=y\tag{2.9}\\
+z&amp;=y+1 \notag\\
+w&amp;=3 \tag{*}
+\end{align}\]</span></p>
+<p>Numaralı formüllere etiket yine <code>\label</code> komutuyla koyulur ve <code>\eqref</code>
+komutuyla atıf yapılır.</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb46-1"><a href="denklem-ortamları.html#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">align</span>}</span>
+<span id="cb46-2"><a href="denklem-ortamları.html#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="ss"> a &amp;= b+c </span><span class="sc">\\</span></span>
+<span id="cb46-3"><a href="denklem-ortamları.html#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="ss"> c &amp;= d  </span><span class="sc">\label</span><span class="ss">{eq:cd}</span><span class="sc">\\</span></span>
+<span id="cb46-4"><a href="denklem-ortamları.html#cb46-4" aria-hidden="true" tabindex="-1"></a><span class="ss"> e &amp;= f+g</span></span>
+<span id="cb46-5"><a href="denklem-ortamları.html#cb46-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">align</span>}</span>
+<span id="cb46-6"><a href="denklem-ortamları.html#cb46-6" aria-hidden="true" tabindex="-1"></a>Yukarıdaki <span class="kw">\eqref</span>{<span class="ex">eq:cd</span>}</span>
+<span id="cb46-7"><a href="denklem-ortamları.html#cb46-7" aria-hidden="true" tabindex="-1"></a>formülü<span class="fu">\dots</span></span></code></pre></div>
+<p><span class="math display" id="eq:efg" id="eq:cd" id="eq:abc">\[\begin{align}
+a &amp;= b+c \tag{2.10}\\
+c &amp;= d \tag{2.11} \\
+e &amp;= f+g \tag{2.12}
+\end{align}\]</span>
+Yukarıdaki <a href="denklem-ortamları.html#eq:cd">(2.11)</a>
+formülü..</p>
+<p>Aynı ortamda yer alan formüllerin 1, 2,… yerine 1.a,
+1.b,… biçiminde numaralandırılması için ortamın
+<code>subequations</code> ortamının içine yazılması gerekir.</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb47-1"><a href="denklem-ortamları.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">subequations</span>}</span>
+<span id="cb47-2"><a href="denklem-ortamları.html#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\label</span>{<span class="ex">eq:sub</span>}</span>
+<span id="cb47-3"><a href="denklem-ortamları.html#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">align</span>}</span>
+<span id="cb47-4"><a href="denklem-ortamları.html#cb47-4" aria-hidden="true" tabindex="-1"></a><span class="ss"> a &amp;= b+c </span><span class="sc">\\</span></span>
+<span id="cb47-5"><a href="denklem-ortamları.html#cb47-5" aria-hidden="true" tabindex="-1"></a><span class="ss"> c &amp;= d </span><span class="sc">\label</span><span class="ss">{eq:subb} </span><span class="sc">\\</span></span>
+<span id="cb47-6"><a href="denklem-ortamları.html#cb47-6" aria-hidden="true" tabindex="-1"></a><span class="ss"> e &amp;= f+g</span></span>
+<span id="cb47-7"><a href="denklem-ortamları.html#cb47-7" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">align</span>}</span>
+<span id="cb47-8"><a href="denklem-ortamları.html#cb47-8" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">subequations</span>}</span>
+<span id="cb47-9"><a href="denklem-ortamları.html#cb47-9" aria-hidden="true" tabindex="-1"></a>Formül~<span class="kw">\eqref</span>{<span class="ex">eq:sub</span>} ve</span>
+<span id="cb47-10"><a href="denklem-ortamları.html#cb47-10" aria-hidden="true" tabindex="-1"></a>altformül~<span class="kw">\eqref</span>{<span class="ex">eq:subb</span>}<span class="fu">\dots</span></span></code></pre></div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="giriş-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="yunan-harfleri.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="boşluklar.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="teorem-ve-benzeri-ortamlar.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
