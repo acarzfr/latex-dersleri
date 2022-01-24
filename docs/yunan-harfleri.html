@@ -120,6 +120,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -233,6 +255,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="kaynakça-1.html"><a href="kaynakça-1.html"><i class="fa fa-check"></i>Kaynakça</a></li>
+<li class="divider"></li>
+<li><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.tr" target="blank">CC BY-NC-SA 4.0</a></li>
+
 </ul>
 
       </nav>
@@ -250,6 +275,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
+<div style="display: none;">
+$$
+  \newcommand{\given}{\mid}
+  \renewcommand{\neg}{\mathbin{\sim}}
+  \renewcommand{\wedge}{\mathbin{\&}}
+  \newcommand{\p}{Pr}
+  \newcommand{\degr}{^{\circ}}
+  \newcommand{\E}{E}
+  \newcommand{\EU}{EU}
+  \newcommand{\u}{U}
+  \newcommand{\pr}{Pr}
+  \newcommand{\po}{Pr^*}
+  \definecolor{bookred}{RGB}{228,6,19}
+  \definecolor{bookblue}{RGB}{0,92,169}
+  \definecolor{bookpurple}{RGB}{114,49,94}
+  \DeclareMathOperator{\obeb}{obeb}
+  \DeclareMathOperator*{\Max}{Max}
+
+$$
+</div>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+<link rel="stylesheet" type="text/css" href="https://sagecell.sagemath.org/static/sagecell_embed.css">
 <div id="yunan-harfleri" class="section level2" number="2.3">
 <h2><span class="header-section-number">2.3</span> Yunan Harfleri</h2>
 <p>Yunan harfleri matematikte yaygın olarak kullanılır. Bu harfler ters eğik çizgiden sonra harfin adı yazılarak elde edilir. Eğer ilk harf küçük ise küçük, büyükse de büyük harf elde edilir. Bazı büyük Yunanca harfler Latin harfleri gibi göründüğünden (örneğin, büyük harf Alpha ve Beta yalnızca sırasıyla “A” ve “B”dir) ayrıca tanımlanmamışlardır. Küçük harf epsilon, theta, kappa, phi, pi, rho ve sigma iki farklı sürümde sunulmaktadır. Alternatif sürümü, harf adının önüne “var” eklenerek oluşturulur.</p>
@@ -335,7 +384,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb11"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb11-1"><a href="yunan-harfleri.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span><span class="sc">\forall</span><span class="ss"> </span><span class="sc">\epsilon</span><span class="ss">&gt;0$</span> için</span></code></pre></div>
+<div class="sourceCode" id="cb88"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb88-1"><a href="yunan-harfleri.html#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span><span class="sc">\forall</span><span class="ss"> </span><span class="sc">\epsilon</span><span class="ss">&gt;0$</span> için</span></code></pre></div>
 <p><span class="math inline">\(\forall \epsilon&gt;0\)</span> için</p>
 </div>
             </section>
@@ -375,8 +424,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": null,
-"text": null
+"link": "https://github.com/acarzfr/latex-dersleri/edit/master/02-matematik.Rmd",
+"text": "Düzenle"
 },
 "history": {
 "link": null,

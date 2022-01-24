@@ -1,0 +1,28 @@
+{
+    "id": "EFCD3EF9",
+    "path": "~/GitHub/latex-dersleri/02-matematik.Rmd",
+    "project_path": "02-matematik.Rmd",
+    "type": "r_markdown",
+    "hash": "2113264602",
+    "contents": "",
+    "dirty": false,
+    "created": 1643024158615.0,
+    "source_on_save": false,
+    "relative_order": 2,
+    "properties": {
+        "tempName": "Untitled1",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "1276,3",
+        "scrollLine": "1257",
+        "working_dir": "project"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1643043358,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1643043358246,
+    "read_only": false,
+    "read_only_alternatives": []
+}

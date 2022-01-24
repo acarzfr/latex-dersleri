@@ -120,6 +120,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -233,6 +255,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="kaynakça-1.html"><a href="kaynakça-1.html"><i class="fa fa-check"></i>Kaynakça</a></li>
+<li class="divider"></li>
+<li><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.tr" target="blank">CC BY-NC-SA 4.0</a></li>
+
 </ul>
 
       </nav>
@@ -250,18 +275,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
+<div style="display: none;">
+$$
+  \newcommand{\given}{\mid}
+  \renewcommand{\neg}{\mathbin{\sim}}
+  \renewcommand{\wedge}{\mathbin{\&}}
+  \newcommand{\p}{Pr}
+  \newcommand{\degr}{^{\circ}}
+  \newcommand{\E}{E}
+  \newcommand{\EU}{EU}
+  \newcommand{\u}{U}
+  \newcommand{\pr}{Pr}
+  \newcommand{\po}{Pr^*}
+  \definecolor{bookred}{RGB}{228,6,19}
+  \definecolor{bookblue}{RGB}{0,92,169}
+  \definecolor{bookpurple}{RGB}{114,49,94}
+  \DeclareMathOperator{\obeb}{obeb}
+  \DeclareMathOperator*{\Max}{Max}
+
+$$
+</div>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+<link rel="stylesheet" type="text/css" href="https://sagecell.sagemath.org/static/sagecell_embed.css">
 <div id="matrisler" class="section level2" number="2.6">
 <h2><span class="header-section-number">2.6</span> Matrisler</h2>
 <p>Temel matrisler <code>matrix</code> ortamında girilir. Bu ortamda elemanlar
 otomatik ortalanır ve sütunlar normal bir tablo gibi dizilir. Her sütun
 <code>&amp;</code> karakteriyle ayrılır ve alt satıra geçmek için <code>\</code> komutu verilir.</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb25-1"><a href="matrisler.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
-<span id="cb25-2"><a href="matrisler.html#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">matrix</span>}</span>
-<span id="cb25-3"><a href="matrisler.html#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="ss">a &amp; b &amp; c </span><span class="sc">\\</span></span>
-<span id="cb25-4"><a href="matrisler.html#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="ss">d &amp; e &amp; f </span><span class="sc">\\</span></span>
-<span id="cb25-5"><a href="matrisler.html#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="ss">g &amp; h &amp; i</span></span>
-<span id="cb25-6"><a href="matrisler.html#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">matrix</span>}</span>
-<span id="cb25-7"><a href="matrisler.html#cb25-7" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
+<div class="sourceCode" id="cb102"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb102-1"><a href="matrisler.html#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
+<span id="cb102-2"><a href="matrisler.html#cb102-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">matrix</span>}</span>
+<span id="cb102-3"><a href="matrisler.html#cb102-3" aria-hidden="true" tabindex="-1"></a><span class="ss">a &amp; b &amp; c </span><span class="sc">\\</span></span>
+<span id="cb102-4"><a href="matrisler.html#cb102-4" aria-hidden="true" tabindex="-1"></a><span class="ss">d &amp; e &amp; f </span><span class="sc">\\</span></span>
+<span id="cb102-5"><a href="matrisler.html#cb102-5" aria-hidden="true" tabindex="-1"></a><span class="ss">g &amp; h &amp; i</span></span>
+<span id="cb102-6"><a href="matrisler.html#cb102-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">matrix</span>}</span>
+<span id="cb102-7"><a href="matrisler.html#cb102-7" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
 <p><span class="math display">\[
 \begin{matrix}
 a &amp; b &amp; c \\
@@ -273,38 +322,38 @@ g &amp; h &amp; i
 kullanılır: <code>pmatrix</code>, <code>bmatrix</code>, <code>Bmatrix</code>, <code>vmatrix</code> ve <code>Vmatrix</code>. Bu
 ortamlar sırasıyla yuvarlak, köşeli, çengelli, dikey çubuklu ve çift
 dikey çubuklu matrisler oluşturur.</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb26-1"><a href="matrisler.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
-<span id="cb26-2"><a href="matrisler.html#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">pmatrix</span>}</span>
-<span id="cb26-3"><a href="matrisler.html#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="ss">1 &amp; 2 </span><span class="sc">\\</span></span>
-<span id="cb26-4"><a href="matrisler.html#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="ss">3 &amp; 4</span></span>
-<span id="cb26-5"><a href="matrisler.html#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">pmatrix</span>}</span>
-<span id="cb26-6"><a href="matrisler.html#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
+<div class="sourceCode" id="cb103"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb103-1"><a href="matrisler.html#cb103-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
+<span id="cb103-2"><a href="matrisler.html#cb103-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">pmatrix</span>}</span>
+<span id="cb103-3"><a href="matrisler.html#cb103-3" aria-hidden="true" tabindex="-1"></a><span class="ss">1 &amp; 2 </span><span class="sc">\\</span></span>
+<span id="cb103-4"><a href="matrisler.html#cb103-4" aria-hidden="true" tabindex="-1"></a><span class="ss">3 &amp; 4</span></span>
+<span id="cb103-5"><a href="matrisler.html#cb103-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">pmatrix</span>}</span>
+<span id="cb103-6"><a href="matrisler.html#cb103-6" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
 <p><span class="math display">\[
 \begin{pmatrix}
 1 &amp; 2 \\
 3 &amp; 4
 \end{pmatrix}
 \]</span></p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb27-1"><a href="matrisler.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
-<span id="cb27-2"><a href="matrisler.html#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">bmatrix</span>}</span>
-<span id="cb27-3"><a href="matrisler.html#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="ss">1 &amp; 2 </span><span class="sc">\\</span></span>
-<span id="cb27-4"><a href="matrisler.html#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="ss">3 &amp; 4</span></span>
-<span id="cb27-5"><a href="matrisler.html#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">bmatrix</span>}</span>
-<span id="cb27-6"><a href="matrisler.html#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
+<div class="sourceCode" id="cb104"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb104-1"><a href="matrisler.html#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
+<span id="cb104-2"><a href="matrisler.html#cb104-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">bmatrix</span>}</span>
+<span id="cb104-3"><a href="matrisler.html#cb104-3" aria-hidden="true" tabindex="-1"></a><span class="ss">1 &amp; 2 </span><span class="sc">\\</span></span>
+<span id="cb104-4"><a href="matrisler.html#cb104-4" aria-hidden="true" tabindex="-1"></a><span class="ss">3 &amp; 4</span></span>
+<span id="cb104-5"><a href="matrisler.html#cb104-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">bmatrix</span>}</span>
+<span id="cb104-6"><a href="matrisler.html#cb104-6" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
 <p><span class="math display">\[
 \begin{bmatrix}
 1 &amp; 2 \\
 3 &amp; 4
 \end{bmatrix}
 \]</span></p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb28-1"><a href="matrisler.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
-<span id="cb28-2"><a href="matrisler.html#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="ss">A=</span></span>
-<span id="cb28-3"><a href="matrisler.html#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">bmatrix</span>}</span>
-<span id="cb28-4"><a href="matrisler.html#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="ss">x_{11} &amp; x_{12} &amp; </span><span class="sc">\dots</span><span class="ss"> </span><span class="sc">\\</span></span>
-<span id="cb28-5"><a href="matrisler.html#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="ss">x_{21} &amp; x_{22} &amp; </span><span class="sc">\dots</span><span class="ss"> </span><span class="sc">\\</span></span>
-<span id="cb28-6"><a href="matrisler.html#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="sc">\vdots</span><span class="ss"> &amp; </span><span class="sc">\vdots</span><span class="ss"> &amp; </span><span class="sc">\ddots</span></span>
-<span id="cb28-7"><a href="matrisler.html#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">bmatrix</span>}</span>
-<span id="cb28-8"><a href="matrisler.html#cb28-8" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
+<div class="sourceCode" id="cb105"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb105-1"><a href="matrisler.html#cb105-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
+<span id="cb105-2"><a href="matrisler.html#cb105-2" aria-hidden="true" tabindex="-1"></a><span class="ss">A=</span></span>
+<span id="cb105-3"><a href="matrisler.html#cb105-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">bmatrix</span>}</span>
+<span id="cb105-4"><a href="matrisler.html#cb105-4" aria-hidden="true" tabindex="-1"></a><span class="ss">x_{11} &amp; x_{12} &amp; </span><span class="sc">\dots</span><span class="ss"> </span><span class="sc">\\</span></span>
+<span id="cb105-5"><a href="matrisler.html#cb105-5" aria-hidden="true" tabindex="-1"></a><span class="ss">x_{21} &amp; x_{22} &amp; </span><span class="sc">\dots</span><span class="ss"> </span><span class="sc">\\</span></span>
+<span id="cb105-6"><a href="matrisler.html#cb105-6" aria-hidden="true" tabindex="-1"></a><span class="sc">\vdots</span><span class="ss"> &amp; </span><span class="sc">\vdots</span><span class="ss"> &amp; </span><span class="sc">\ddots</span></span>
+<span id="cb105-7"><a href="matrisler.html#cb105-7" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">bmatrix</span>}</span>
+<span id="cb105-8"><a href="matrisler.html#cb105-8" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
 <p><span class="math display">\[
 A=
 \begin{bmatrix}
@@ -315,26 +364,26 @@ x_{21} &amp; x_{22} &amp; \dots \\
 \]</span></p>
 <p>Küçük bir matris yazmak için <code>smallmatrix</code> ortamı kullanılır. Bu
 matriste parantezler elle eklenmelidir.</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb29-1"><a href="matrisler.html#cb29-1" aria-hidden="true" tabindex="-1"></a>Şimdi yazacağımız matris</span>
-<span id="cb29-2"><a href="matrisler.html#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="ss">\(A=</span><span class="sc">\big</span><span class="ss">(</span></span>
-<span id="cb29-3"><a href="matrisler.html#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">smallmatrix</span>}</span>
-<span id="cb29-4"><a href="matrisler.html#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="ss">a &amp; b </span><span class="sc">\\</span></span>
-<span id="cb29-5"><a href="matrisler.html#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="ss">c &amp; d</span></span>
-<span id="cb29-6"><a href="matrisler.html#cb29-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">smallmatrix</span>}</span>
-<span id="cb29-7"><a href="matrisler.html#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="sc">\bigr</span><span class="ss">)\)</span></span>
-<span id="cb29-8"><a href="matrisler.html#cb29-8" aria-hidden="true" tabindex="-1"></a>küçük bir matristir.</span></code></pre></div>
+<div class="sourceCode" id="cb106"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb106-1"><a href="matrisler.html#cb106-1" aria-hidden="true" tabindex="-1"></a>Şimdi yazacağımız matris</span>
+<span id="cb106-2"><a href="matrisler.html#cb106-2" aria-hidden="true" tabindex="-1"></a><span class="ss">\(A=</span><span class="sc">\big</span><span class="ss">(</span></span>
+<span id="cb106-3"><a href="matrisler.html#cb106-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">smallmatrix</span>}</span>
+<span id="cb106-4"><a href="matrisler.html#cb106-4" aria-hidden="true" tabindex="-1"></a><span class="ss">a &amp; b </span><span class="sc">\\</span></span>
+<span id="cb106-5"><a href="matrisler.html#cb106-5" aria-hidden="true" tabindex="-1"></a><span class="ss">c &amp; d</span></span>
+<span id="cb106-6"><a href="matrisler.html#cb106-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">smallmatrix</span>}</span>
+<span id="cb106-7"><a href="matrisler.html#cb106-7" aria-hidden="true" tabindex="-1"></a><span class="sc">\bigr</span><span class="ss">)\)</span></span>
+<span id="cb106-8"><a href="matrisler.html#cb106-8" aria-hidden="true" tabindex="-1"></a>küçük bir matristir.</span></code></pre></div>
 <p>Şimdi yazacağımız matris
 <span class="math inline">\(A=\bigl( \begin{smallmatrix} a &amp; b \\ c &amp; d \end{smallmatrix} \bigr)\)</span>
 küçük bir matristir.</p>
 <p>Bazı durumlarda, hizalamayı elle yapmak ve sütunlar veya satırlar
 arasına çizgi çekmek istenebilir. Bu durumda <code>tabular</code> ortamının
 matematik sürümü olan <code>array</code> ortamını kullanılmalıdır.</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb30-1"><a href="matrisler.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
-<span id="cb30-2"><a href="matrisler.html#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\left</span><span class="ss">(</span><span class="kw">\begin</span>{<span class="ex">array</span>}<span class="ss">{r|r}</span></span>
-<span id="cb30-3"><a href="matrisler.html#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="ss">-1&amp;2</span><span class="sc">\\\hline</span></span>
-<span id="cb30-4"><a href="matrisler.html#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="ss">3&amp;-4</span></span>
-<span id="cb30-5"><a href="matrisler.html#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">array</span>}<span class="sc">\right</span><span class="ss">)</span></span>
-<span id="cb30-6"><a href="matrisler.html#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
+<div class="sourceCode" id="cb107"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb107-1"><a href="matrisler.html#cb107-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
+<span id="cb107-2"><a href="matrisler.html#cb107-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\left</span><span class="ss">(</span><span class="kw">\begin</span>{<span class="ex">array</span>}<span class="ss">{r|r}</span></span>
+<span id="cb107-3"><a href="matrisler.html#cb107-3" aria-hidden="true" tabindex="-1"></a><span class="ss">-1&amp;2</span><span class="sc">\\\hline</span></span>
+<span id="cb107-4"><a href="matrisler.html#cb107-4" aria-hidden="true" tabindex="-1"></a><span class="ss">3&amp;-4</span></span>
+<span id="cb107-5"><a href="matrisler.html#cb107-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">array</span>}<span class="sc">\right</span><span class="ss">)</span></span>
+<span id="cb107-6"><a href="matrisler.html#cb107-6" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
 <p><span class="math display">\[
 \left(\begin{array}{r|r}
 -1&amp;2\\\hline
@@ -379,8 +428,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": null,
-"text": null
+"link": "https://github.com/acarzfr/latex-dersleri/edit/master/02-matematik.Rmd",
+"text": "Düzenle"
 },
 "history": {
 "link": null,

@@ -120,6 +120,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -233,6 +255,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="kaynakça-1.html"><a href="kaynakça-1.html"><i class="fa fa-check"></i>Kaynakça</a></li>
+<li class="divider"></li>
+<li><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.tr" target="blank">CC BY-NC-SA 4.0</a></li>
+
 </ul>
 
       </nav>
@@ -250,45 +275,69 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
+<div style="display: none;">
+$$
+  \newcommand{\given}{\mid}
+  \renewcommand{\neg}{\mathbin{\sim}}
+  \renewcommand{\wedge}{\mathbin{\&}}
+  \newcommand{\p}{Pr}
+  \newcommand{\degr}{^{\circ}}
+  \newcommand{\E}{E}
+  \newcommand{\EU}{EU}
+  \newcommand{\u}{U}
+  \newcommand{\pr}{Pr}
+  \newcommand{\po}{Pr^*}
+  \definecolor{bookred}{RGB}{228,6,19}
+  \definecolor{bookblue}{RGB}{0,92,169}
+  \definecolor{bookpurple}{RGB}{114,49,94}
+  \DeclareMathOperator{\obeb}{obeb}
+  \DeclareMathOperator*{\Max}{Max}
+
+$$
+</div>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+<link rel="stylesheet" type="text/css" href="https://sagecell.sagemath.org/static/sagecell_embed.css">
 <div id="fonksiyonlar" class="section level2" number="2.4">
 <h2><span class="header-section-number">2.4</span> Fonksiyonlar</h2>
 <p>LaTeX’de fonksiyonlar aşağıdaki komutlarla dizilirler.</p>
 <p><code>\arccos  \cos  \csc  \exp  \ker  \limsup  \min  \sinh \arcsin  \cosh  \deg  \gcd  \lg  \ln  \Pr  \sup \arctan  \cot  \det  \hom  \lim  \log  \sec  \tan \arg  \coth  \dim  \inf  \liminf  \max  \sin  \tanh</code></p>
 <p>Matematik kipinde fonksiyonlar diğer değişkenler gibi italik değil düz
 yazılırlar ve boşluklar otomatik ayarlanır.</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb12-1"><a href="fonksiyonlar.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span><span class="sc">\sin</span><span class="ss"> x$</span>, <span class="ss">$</span><span class="sc">\exp</span><span class="ss"> x$</span>, <span class="ss">$</span><span class="sc">\log</span><span class="ss"> x$</span>,</span>
-<span id="cb12-2"><a href="fonksiyonlar.html#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span><span class="sc">\det</span><span class="ss"> A$</span>, <span class="ss">$</span><span class="sc">\min</span><span class="ss">_{x</span><span class="sc">\in</span><span class="ss"> A} f(x)$</span></span></code></pre></div>
+<div class="sourceCode" id="cb89"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb89-1"><a href="fonksiyonlar.html#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span><span class="sc">\sin</span><span class="ss"> x$</span>, <span class="ss">$</span><span class="sc">\exp</span><span class="ss"> x$</span>, <span class="ss">$</span><span class="sc">\log</span><span class="ss"> x$</span>,</span>
+<span id="cb89-2"><a href="fonksiyonlar.html#cb89-2" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span><span class="sc">\det</span><span class="ss"> A$</span>, <span class="ss">$</span><span class="sc">\min</span><span class="ss">_{x</span><span class="sc">\in</span><span class="ss"> A} f(x)$</span></span></code></pre></div>
 <p><span class="math inline">\(\sin x\)</span>, <span class="math inline">\(\exp x\)</span>, <span class="math inline">\(\log x\)</span>, <span class="math inline">\(\det A\)</span>, <span class="math inline">\(\min_{x\in A} f(x)\)</span></p>
 <p>Bunların dışında bir fonksiyon tanımlamak için <code>\DeclareMathOperator</code>
 komutu kullanılır.</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb13-1"><a href="fonksiyonlar.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\DeclareMathOperator</span>{<span class="fu">\obeb</span>}{obeb}</span></code></pre></div>
+<div class="sourceCode" id="cb90"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb90-1"><a href="fonksiyonlar.html#cb90-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\DeclareMathOperator</span>{<span class="fu">\obeb</span>}{obeb}</span></code></pre></div>
 <p>Yukarıdaki komuttan sonra artık kullanabileceğiniz bir “obeb” fonksiyonu
 olur.</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb14-1"><a href="fonksiyonlar.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span><span class="sc">\obeb</span><span class="ss">(12,16)=4$</span></span></code></pre></div>
+<div class="sourceCode" id="cb91"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb91-1"><a href="fonksiyonlar.html#cb91-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span><span class="sc">\obeb</span><span class="ss">(12,16)=4$</span></span></code></pre></div>
 <p><span class="math inline">\(\obeb(12,16)=4\)</span></p>
 <p>Bu komutun sınır değerleri sağ taraf yerine alta dizen yıldızlı sürümü
 vardır: <code>\DeclareMathOperator*</code>. Örneğin
 <code>\DeclareMathOperator*{\Max}{Max}</code> komutunu sahanlıkta verdikten sonra
 belgede kullanırsanız şöyle bir çıktı alırsınız:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb15-1"><a href="fonksiyonlar.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">equation*</span>}</span>
-<span id="cb15-2"><a href="fonksiyonlar.html#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="ss"> </span><span class="sc">\Max</span><span class="ss">_{x</span><span class="sc">\in</span><span class="ss"> A} f(x)</span></span>
-<span id="cb15-3"><a href="fonksiyonlar.html#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">equation*</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb92"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb92-1"><a href="fonksiyonlar.html#cb92-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">equation*</span>}</span>
+<span id="cb92-2"><a href="fonksiyonlar.html#cb92-2" aria-hidden="true" tabindex="-1"></a><span class="ss"> </span><span class="sc">\Max</span><span class="ss">_{x</span><span class="sc">\in</span><span class="ss"> A} f(x)</span></span>
+<span id="cb92-3"><a href="fonksiyonlar.html#cb92-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">equation*</span>}</span></code></pre></div>
 <p><span class="math display">\[\begin{equation*}
-\mathop{\mathrm{Max}}_{x\in A} f(x)
+\Max_{x\in A} f(x)
 \end{equation*}\]</span></p>
 <p>Modülo fonksiyonu içinse <code>\mod</code> ya da <code>\pmod</code> komutları verilir. İkinci
 komut fonksiyonu parantez içinde yazar.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb16-1"><a href="fonksiyonlar.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$a</span><span class="sc">\equiv</span><span class="ss"> b</span><span class="sc">\pmod</span><span class="ss"> p$</span> ise <span class="ss">$p</span><span class="sc">\mid</span><span class="ss"> a-b$</span>&#39;dir.</span></code></pre></div>
+<div class="sourceCode" id="cb93"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb93-1"><a href="fonksiyonlar.html#cb93-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$a</span><span class="sc">\equiv</span><span class="ss"> b</span><span class="sc">\pmod</span><span class="ss"> p$</span> ise <span class="ss">$p</span><span class="sc">\mid</span><span class="ss"> a-b$</span>&#39;dir.</span></code></pre></div>
 <p><span class="math inline">\(a\equiv b\pmod p\)</span> ise <span class="math inline">\(p\mid a-b\)</span>’dir.</p>
 <p>Limit için <code>\lim</code> komutu aşağıdaki şekilde verilir.</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb17-1"><a href="fonksiyonlar.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\lim</span>_{&lt;değişken&gt; <span class="fu">\to</span> &lt;değişken&gt;}</span></code></pre></div>
+<div class="sourceCode" id="cb94"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb94-1"><a href="fonksiyonlar.html#cb94-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\lim</span>_{&lt;değişken&gt; <span class="fu">\to</span> &lt;değişken&gt;}</span></code></pre></div>
 <p>Buradaki <code>\to</code> komutu <span class="math inline">\(\to\)</span> üretir ve <span class="math inline">\(\infty\)</span> için <code>\infty</code>
 komutu verilir.</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb18-1"><a href="fonksiyonlar.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
-<span id="cb18-2"><a href="fonksiyonlar.html#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\lim</span><span class="ss">_{x</span><span class="sc">\to</span><span class="ss"> 0}</span></span>
-<span id="cb18-3"><a href="fonksiyonlar.html#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\frac</span><span class="ss">{</span><span class="sc">\sin</span><span class="ss"> x}{x}=1 </span><span class="sc">\qquad</span></span>
-<span id="cb18-4"><a href="fonksiyonlar.html#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="sc">\lim</span><span class="ss">_{n</span><span class="sc">\to</span><span class="ss"> +</span><span class="sc">\infty</span><span class="ss">}f_n=</span><span class="sc">\delta</span></span>
-<span id="cb18-5"><a href="fonksiyonlar.html#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
+<div class="sourceCode" id="cb95"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb95-1"><a href="fonksiyonlar.html#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
+<span id="cb95-2"><a href="fonksiyonlar.html#cb95-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\lim</span><span class="ss">_{x</span><span class="sc">\to</span><span class="ss"> 0}</span></span>
+<span id="cb95-3"><a href="fonksiyonlar.html#cb95-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\frac</span><span class="ss">{</span><span class="sc">\sin</span><span class="ss"> x}{x}=1 </span><span class="sc">\qquad</span></span>
+<span id="cb95-4"><a href="fonksiyonlar.html#cb95-4" aria-hidden="true" tabindex="-1"></a><span class="sc">\lim</span><span class="ss">_{n</span><span class="sc">\to</span><span class="ss"> +</span><span class="sc">\infty</span><span class="ss">}f_n=</span><span class="sc">\delta</span></span>
+<span id="cb95-5"><a href="fonksiyonlar.html#cb95-5" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
 <p><span class="math display">\[
 \lim_{x\to 0}
 \frac{\sin x}{x}=1 \qquad
@@ -332,8 +381,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": null,
-"text": null
+"link": "https://github.com/acarzfr/latex-dersleri/edit/master/02-matematik.Rmd",
+"text": "Düzenle"
 },
 "history": {
 "link": null,

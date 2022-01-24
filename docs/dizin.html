@@ -120,6 +120,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -233,6 +255,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="kaynakça-1.html"><a href="kaynakça-1.html"><i class="fa fa-check"></i>Kaynakça</a></li>
+<li class="divider"></li>
+<li><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.tr" target="blank">CC BY-NC-SA 4.0</a></li>
+
 </ul>
 
       </nav>
@@ -250,6 +275,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
+<div style="display: none;">
+$$
+  \newcommand{\given}{\mid}
+  \renewcommand{\neg}{\mathbin{\sim}}
+  \renewcommand{\wedge}{\mathbin{\&}}
+  \newcommand{\p}{Pr}
+  \newcommand{\degr}{^{\circ}}
+  \newcommand{\E}{E}
+  \newcommand{\EU}{EU}
+  \newcommand{\u}{U}
+  \newcommand{\pr}{Pr}
+  \newcommand{\po}{Pr^*}
+  \definecolor{bookred}{RGB}{228,6,19}
+  \definecolor{bookblue}{RGB}{0,92,169}
+  \definecolor{bookpurple}{RGB}{114,49,94}
+  \DeclareMathOperator{\obeb}{obeb}
+  \DeclareMathOperator*{\Max}{Max}
+
+$$
+</div>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+<link rel="stylesheet" type="text/css" href="https://sagecell.sagemath.org/static/sagecell_embed.css">
 <div id="dizin" class="section level2" number="3.2">
 <h2><span class="header-section-number">3.2</span> Dizin</h2>
 <p>Bilimsel bir yapıtta bulunması gereken <em>dizin</em> ya da diğer adıyla
@@ -257,14 +306,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 yer numarasıyla belirten ve yapıtın arkasında yer alan alfabetik
 listedir.</p>
 <p>LaTeX’de dizin oluşturabilmek için sahanlığa</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb16-1"><a href="dizin.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">makeidx</span>}</span>
-<span id="cb16-2"><a href="dizin.html#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\makeindex</span></span></code></pre></div>
+<div class="sourceCode" id="cb158"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb158-1"><a href="dizin.html#cb158-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">makeidx</span>}</span>
+<span id="cb158-2"><a href="dizin.html#cb158-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\makeindex</span></span></code></pre></div>
 <p>komutları girilir. Birinci komut dizin için gerekli olan
 <a href="http://ftp.ntua.gr/mirror/ctan/macros/latex/base/makeindx.pdf">makeidx</a> paketini çağırır, ikinci komut ise dizinleme
 komutlarını etkinleştirir.</p>
 <p>Dizinde gösterilmek istenen madde, <code>\index</code> komutunun değişkeni olarak
 girilir:</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb17-1"><a href="dizin.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\index</span>{&lt;madde&gt;}</span></code></pre></div>
+<div class="sourceCode" id="cb159"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb159-1"><a href="dizin.html#cb159-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\index</span>{&lt;madde&gt;}</span></code></pre></div>
 <p>Dizin maddesi girme örnekleri aşağıda gösterilmiştir.</p>
 <p><img src="images/dizina.png" style="width:90.0%" /></p>
 <p>LaTeX, kaynak dosyanızı derlediğinizde bu dizin maddelerini sayfa
@@ -299,10 +348,10 @@ yerine “cz” yazılmasıdır.</p>
 diğeri de <em>simgeler dizini</em>)
 <a href="http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/index/index.pdf">index</a> paketini kullanabilirsiniz. Her dizin paket eklendikten ve <code>\makeindex</code> komutu sahanlıkta
 verildikten sonra <code>\newindex</code> komutuyla tanıtılır.</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb19-1"><a href="dizin.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">index</span>}</span>
-<span id="cb19-2"><a href="dizin.html#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\makeindex</span></span>
-<span id="cb19-3"><a href="dizin.html#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\newindex</span>{normal}{ndx}{nnd}{Normal Dizin}</span>
-<span id="cb19-4"><a href="dizin.html#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\newindex</span>{simge}{sdx}{snd}{Simgeler Dizini}</span></code></pre></div>
+<div class="sourceCode" id="cb161"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb161-1"><a href="dizin.html#cb161-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">index</span>}</span>
+<span id="cb161-2"><a href="dizin.html#cb161-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\makeindex</span></span>
+<span id="cb161-3"><a href="dizin.html#cb161-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\newindex</span>{normal}{ndx}{nnd}{Normal Dizin}</span>
+<span id="cb161-4"><a href="dizin.html#cb161-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\newindex</span>{simge}{sdx}{snd}{Simgeler Dizini}</span></code></pre></div>
 <p>Komutun dört değişkeni vardır. Bunlar sırasıyla, dizin adı (örnekte
 <code>normal</code> ve <code>simge</code>), oluşturulacak ham dosyanın uzantısı (örnekte
 <code>.ndx</code> ve <code>.sdx</code>), <code>makeindex</code> tarafından ham dosyanın işlenmesiyle
@@ -313,49 +362,49 @@ uzantılardan farklı olmalıdır.</p>
 <p>Ardından bir kelime ya da simgeyi dizine eklemek için, eklemek istenilen
 dizine göre <code>\index</code> komutu köşeli parantezler içinde dizin adı
 belirtilerek kullanılır.</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb20-1"><a href="dizin.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\index</span>[normal]{kuvvet}</span>
-<span id="cb20-2"><a href="dizin.html#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\index</span>[simge]{F@<span class="ss">$</span><span class="sc">\vec</span><span class="ss">{F}$</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb162"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb162-1"><a href="dizin.html#cb162-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\index</span>[normal]{kuvvet}</span>
+<span id="cb162-2"><a href="dizin.html#cb162-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\index</span>[simge]{F@<span class="ss">$</span><span class="sc">\vec</span><span class="ss">{F}$</span>}</span></code></pre></div>
 <p>Birinci komut, “kuvvet” kelimesini normal dizine, ikinci komut <span class="math inline">\(\vec{F}\)</span> simgesini simgeler dizinine ekler.</p>
 <p>Belge derlendikten sonra iki tane <code>\makeindex</code> komutu uçbirimde,</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb21-1"><a href="dizin.html#cb21-1" aria-hidden="true" tabindex="-1"></a>makeindex kaynakdosya.ndx -o kaynakdosya.nnd </span>
-<span id="cb21-2"><a href="dizin.html#cb21-2" aria-hidden="true" tabindex="-1"></a>makeindex kaynakdosya.sdx -o kaynakdosya.snd </span></code></pre></div>
+<div class="sourceCode" id="cb163"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb163-1"><a href="dizin.html#cb163-1" aria-hidden="true" tabindex="-1"></a>makeindex kaynakdosya.ndx -o kaynakdosya.nnd </span>
+<span id="cb163-2"><a href="dizin.html#cb163-2" aria-hidden="true" tabindex="-1"></a>makeindex kaynakdosya.sdx -o kaynakdosya.snd </span></code></pre></div>
 <p>şeklinde verilir. Belgenizde dizinlerin yazılması istenen yere de</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb22-1"><a href="dizin.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\printindex</span>[normal]</span>
-<span id="cb22-2"><a href="dizin.html#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\printindex</span>[simge]</span></code></pre></div>
+<div class="sourceCode" id="cb164"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb164-1"><a href="dizin.html#cb164-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\printindex</span>[normal]</span>
+<span id="cb164-2"><a href="dizin.html#cb164-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\printindex</span>[simge]</span></code></pre></div>
 <p>komutları verilir. Ardından belge tekrar derlenerek dizinler yazdırılır.</p>
 <p>Çoklu dizin için diğer bir seçenek
 <a href="https://www.ctan.org/pkg/multind">multind</a> paketini kullanmaktır. Görece
 index paketine göre daha pratiktir. Sahanlığa</p>
-<div class="sourceCode" id="cb23"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb23-1"><a href="dizin.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">multind</span>}</span>
-<span id="cb23-2"><a href="dizin.html#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\makeindex</span>{normal}</span>
-<span id="cb23-3"><a href="dizin.html#cb23-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\makeindex</span>{simge}</span></code></pre></div>
+<div class="sourceCode" id="cb165"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb165-1"><a href="dizin.html#cb165-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">multind</span>}</span>
+<span id="cb165-2"><a href="dizin.html#cb165-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\makeindex</span>{normal}</span>
+<span id="cb165-3"><a href="dizin.html#cb165-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\makeindex</span>{simge}</span></code></pre></div>
 <p>komutlarıyla <code>normal</code> ve <code>simge</code> adında iki dizin tanımlanır. Yine
 dizine yazılması istenen maddeler <code>\index</code> komutundan önce çengelli
 parantezler içinde dizin adı belirtilerek girilir.</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb24-1"><a href="dizin.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\index</span>{normal}{kuvvet}</span>
-<span id="cb24-2"><a href="dizin.html#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\index</span>{simge}{F@<span class="ss">$</span><span class="sc">\vec</span><span class="ss">{F}$</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb166"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb166-1"><a href="dizin.html#cb166-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\index</span>{normal}{kuvvet}</span>
+<span id="cb166-2"><a href="dizin.html#cb166-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\index</span>{simge}{F@<span class="ss">$</span><span class="sc">\vec</span><span class="ss">{F}$</span>}</span></code></pre></div>
 <p>Bu defa <code>makeindex</code> programı uçbirimde</p>
-<div class="sourceCode" id="cb25"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb25-1"><a href="dizin.html#cb25-1" aria-hidden="true" tabindex="-1"></a>makeindex normal</span>
-<span id="cb25-2"><a href="dizin.html#cb25-2" aria-hidden="true" tabindex="-1"></a>makeindex simge</span></code></pre></div>
+<div class="sourceCode" id="cb167"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb167-1"><a href="dizin.html#cb167-1" aria-hidden="true" tabindex="-1"></a>makeindex normal</span>
+<span id="cb167-2"><a href="dizin.html#cb167-2" aria-hidden="true" tabindex="-1"></a>makeindex simge</span></code></pre></div>
 <p>komutlarıyla çalıştırılır. Yine <code>\printindex</code> komutları dizinlerin
 eklenmesi istenen yere</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb26-1"><a href="dizin.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\printindex</span>{normal}{Normal Dizin}</span>
-<span id="cb26-2"><a href="dizin.html#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\printindex</span>{simge}{Simgeler Dizini}</span></code></pre></div>
+<div class="sourceCode" id="cb168"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb168-1"><a href="dizin.html#cb168-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\printindex</span>{normal}{Normal Dizin}</span>
+<span id="cb168-2"><a href="dizin.html#cb168-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\printindex</span>{simge}{Simgeler Dizini}</span></code></pre></div>
 <p>şeklinde verilir.</p>
 </div>
 <div id="dizinin-içindekiler-tablosuna-yazılması" class="section level3" number="3.2.2">
 <h3><span class="header-section-number">3.2.2</span> Dizinin İçindekiler tablosuna yazılması</h3>
 <p>Dizini İçindekiler tablosuna yazmak için <code>\printindex</code> komutunun peşine
 <code>book</code> ve <code>report</code> sınıflarında <code>\addcontentsline</code> komutu,</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb27-1"><a href="dizin.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\addcontentsline</span>{toc}{chapter}{<span class="fu">\indexname</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb169"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb169-1"><a href="dizin.html#cb169-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\addcontentsline</span>{toc}{chapter}{<span class="fu">\indexname</span>}</span></code></pre></div>
 <p>şeklinde, <code>article</code> sınıfında ise</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb28-1"><a href="dizin.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\addcontentsline</span>{toc}{section}{<span class="fu">\indexname</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb170"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb170-1"><a href="dizin.html#cb170-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\addcontentsline</span>{toc}{section}{<span class="fu">\indexname</span>}</span></code></pre></div>
 <p>şeklinde verilmelidir. Çoklu dizin oluşturulmuşsa, <code>book</code> ve <code>report</code>
 sınıflarında</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb29-1"><a href="dizin.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\printindex</span>{normal}{Normal Dizin}</span>
-<span id="cb29-2"><a href="dizin.html#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\addcontentsline</span>{toc}{chapter}{Normal Dizin}</span>
-<span id="cb29-3"><a href="dizin.html#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\printindex</span>{simge}{Simgeler Dizini}</span>
-<span id="cb29-4"><a href="dizin.html#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\addcontentsline</span>{toc}{chapter}{Simgeler Dizini}</span></code></pre></div>
+<div class="sourceCode" id="cb171"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb171-1"><a href="dizin.html#cb171-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\printindex</span>{normal}{Normal Dizin}</span>
+<span id="cb171-2"><a href="dizin.html#cb171-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\addcontentsline</span>{toc}{chapter}{Normal Dizin}</span>
+<span id="cb171-3"><a href="dizin.html#cb171-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\printindex</span>{simge}{Simgeler Dizini}</span>
+<span id="cb171-4"><a href="dizin.html#cb171-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\addcontentsline</span>{toc}{chapter}{Simgeler Dizini}</span></code></pre></div>
 <p>şeklinde, <code>article</code> sınıfında ise komutlardaki <code>chapter</code> yazan yere
 <code>section</code> yazarak verilmelidir.</p>
 
@@ -399,8 +448,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": null,
-"text": null
+"link": "https://github.com/acarzfr/latex-dersleri/edit/master/03-ozel-sayfalar.Rmd",
+"text": "Düzenle"
 },
 "history": {
 "link": null,

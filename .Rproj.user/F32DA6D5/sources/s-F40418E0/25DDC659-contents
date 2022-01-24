@@ -1,7 +1,6 @@
 bookdown::gitbook:
   css: style.css
   split_by: section
-  repo: https://github.com/acarzfr/latex-dersleri
   includes:
   #  in_header: header.html
      before_body: preamble.html
@@ -11,7 +10,7 @@ bookdown::gitbook:
         <li><a href="./">LaTeX Dersleri</a></li>
       after: |
        <li><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.tr" target="blank">CC BY-NC-SA 4.0</a></li>
-    edit: https://github.com/acarzfr/latex-dersleri/edit/master/%s
+#    edit: https://github.com/acarzfr/latex-dersleri/edit/master/%s
     sharing:
       github: yes
       facebook: no
@@ -28,4 +27,4 @@ bookdown::pdf_book:
   toc_depth: 3
   toc_unnumbered: yes
   toc_appendix: yes
-  pandoc_args: [--top-level-division=chapter, --wrap=none]
+

@@ -120,6 +120,28 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -233,6 +255,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="kaynakça-1.html"><a href="kaynakça-1.html"><i class="fa fa-check"></i>Kaynakça</a></li>
+<li class="divider"></li>
+<li><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.tr" target="blank">CC BY-NC-SA 4.0</a></li>
+
 </ul>
 
       </nav>
@@ -250,6 +275,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
+<div style="display: none;">
+$$
+  \newcommand{\given}{\mid}
+  \renewcommand{\neg}{\mathbin{\sim}}
+  \renewcommand{\wedge}{\mathbin{\&}}
+  \newcommand{\p}{Pr}
+  \newcommand{\degr}{^{\circ}}
+  \newcommand{\E}{E}
+  \newcommand{\EU}{EU}
+  \newcommand{\u}{U}
+  \newcommand{\pr}{Pr}
+  \newcommand{\po}{Pr^*}
+  \definecolor{bookred}{RGB}{228,6,19}
+  \definecolor{bookblue}{RGB}{0,92,169}
+  \definecolor{bookpurple}{RGB}{114,49,94}
+  \DeclareMathOperator{\obeb}{obeb}
+  \DeclareMathOperator*{\Max}{Max}
+
+$$
+</div>
+
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+<script>sagecell.makeSagecell({"inputLocation": ".sage"});</script>
+<link rel="stylesheet" type="text/css" href="https://sagecell.sagemath.org/static/sagecell_embed.css">
 <div id="boşluklar" class="section level2" number="2.8">
 <h2><span class="header-section-number">2.8</span> Boşluklar</h2>
 <p>Bazen LaTeX formülleri dizerken olması gerektiği gibi boşluk bırakma
@@ -289,14 +338,14 @@ Boşluklar için kullanılabilecek komutlar tablodaki gibidir.</p>
 </table>
 <p>Örneğin <code>\,</code> komutunun bıraktığı ince boşluk bazı formüllerde çok
 kullanışlıdır.</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb35-1"><a href="boşluklar.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
-<span id="cb35-2"><a href="boşluklar.html#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\int</span><span class="ss">_a^b f(x) dx </span><span class="sc">\quad</span><span class="ss"> </span><span class="sc">\sqrt</span><span class="ss">{2} a</span></span>
-<span id="cb35-3"><a href="boşluklar.html#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\quad</span><span class="ss"> </span><span class="sc">\sqrt</span><span class="ss">{</span><span class="sc">\log</span><span class="ss"> x}</span></span>
-<span id="cb35-4"><a href="boşluklar.html#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span>
-<span id="cb35-5"><a href="boşluklar.html#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
-<span id="cb35-6"><a href="boşluklar.html#cb35-6" aria-hidden="true" tabindex="-1"></a><span class="sc">\int</span><span class="ss">_a^b f(x)</span><span class="sc">\,</span><span class="ss">dx </span><span class="sc">\quad</span></span>
-<span id="cb35-7"><a href="boşluklar.html#cb35-7" aria-hidden="true" tabindex="-1"></a><span class="sc">\sqrt</span><span class="ss">{2}</span><span class="sc">\,</span><span class="ss">a </span><span class="sc">\quad</span><span class="ss"> </span><span class="sc">\sqrt</span><span class="ss">{</span><span class="sc">\,\log</span><span class="ss"> x}</span></span>
-<span id="cb35-8"><a href="boşluklar.html#cb35-8" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
+<div class="sourceCode" id="cb112"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb112-1"><a href="boşluklar.html#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
+<span id="cb112-2"><a href="boşluklar.html#cb112-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\int</span><span class="ss">_a^b f(x) dx </span><span class="sc">\quad</span><span class="ss"> </span><span class="sc">\sqrt</span><span class="ss">{2} a</span></span>
+<span id="cb112-3"><a href="boşluklar.html#cb112-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\quad</span><span class="ss"> </span><span class="sc">\sqrt</span><span class="ss">{</span><span class="sc">\log</span><span class="ss"> x}</span></span>
+<span id="cb112-4"><a href="boşluklar.html#cb112-4" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span>
+<span id="cb112-5"><a href="boşluklar.html#cb112-5" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
+<span id="cb112-6"><a href="boşluklar.html#cb112-6" aria-hidden="true" tabindex="-1"></a><span class="sc">\int</span><span class="ss">_a^b f(x)</span><span class="sc">\,</span><span class="ss">dx </span><span class="sc">\quad</span></span>
+<span id="cb112-7"><a href="boşluklar.html#cb112-7" aria-hidden="true" tabindex="-1"></a><span class="sc">\sqrt</span><span class="ss">{2}</span><span class="sc">\,</span><span class="ss">a </span><span class="sc">\quad</span><span class="ss"> </span><span class="sc">\sqrt</span><span class="ss">{</span><span class="sc">\,\log</span><span class="ss"> x}</span></span>
+<span id="cb112-8"><a href="boşluklar.html#cb112-8" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
 <p><span class="math display">\[
 \int_a^b f(x) dx \quad \sqrt{2} a
 \quad \sqrt{\log x}
@@ -307,12 +356,12 @@ kullanışlıdır.</p>
 \]</span></p>
 <p>Negatif aralık bırakan <code>\!</code> komutu da fazla aralıklı ifadeleri birbirine
 yaklaştırmak için kullanılır.</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb36-1"><a href="boşluklar.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
-<span id="cb36-2"><a href="boşluklar.html#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="ss">x^2/2 </span><span class="sc">\quad</span><span class="ss"> a/</span><span class="sc">\sin</span><span class="ss"> b</span></span>
-<span id="cb36-3"><a href="boşluklar.html#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span>
-<span id="cb36-4"><a href="boşluklar.html#cb36-4" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
-<span id="cb36-5"><a href="boşluklar.html#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="ss">x^2</span><span class="sc">\!</span><span class="ss">/2 </span><span class="sc">\quad</span><span class="ss"> a/</span><span class="sc">\!\sin</span><span class="ss"> b</span></span>
-<span id="cb36-6"><a href="boşluklar.html#cb36-6" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
+<div class="sourceCode" id="cb113"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb113-1"><a href="boşluklar.html#cb113-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
+<span id="cb113-2"><a href="boşluklar.html#cb113-2" aria-hidden="true" tabindex="-1"></a><span class="ss">x^2/2 </span><span class="sc">\quad</span><span class="ss"> a/</span><span class="sc">\sin</span><span class="ss"> b</span></span>
+<span id="cb113-3"><a href="boşluklar.html#cb113-3" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span>
+<span id="cb113-4"><a href="boşluklar.html#cb113-4" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
+<span id="cb113-5"><a href="boşluklar.html#cb113-5" aria-hidden="true" tabindex="-1"></a><span class="ss">x^2</span><span class="sc">\!</span><span class="ss">/2 </span><span class="sc">\quad</span><span class="ss"> a/</span><span class="sc">\!\sin</span><span class="ss"> b</span></span>
+<span id="cb113-6"><a href="boşluklar.html#cb113-6" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
 <p><span class="math display">\[
 x^2/2 \quad a/\sin b
 \]</span>
@@ -357,8 +406,8 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": null,
-"text": null
+"link": "https://github.com/acarzfr/latex-dersleri/edit/master/02-matematik.Rmd",
+"text": "Düzenle"
 },
 "history": {
 "link": null,
