@@ -620,7 +620,7 @@ kullanılarak değiştirilir.
 
 
 
-|      |               |
+|  Komut    |      Görünüm         |
 |  :--   |  :--      |
 |  `\mathnormal{ABC def 123}` |  $ABC def 123$|
  | `\mathrm{ABC def 123}`      | $\mathrm{ABC def 123}$|
@@ -1230,9 +1230,8 @@ Buradaki `<stil adı>` kullanmak istediğiniz stildir. Bu komuttan sonra
 tanımlanmış tüm teoremler bu stili kullanacaktır. LaTeX'de önceden
 tanımlanmış stiller aşağıdakilerdir:
 
-|             |                 |               |  
+|**Stil Adı**  | **Açıklama**      |     **Görünüm**         |  
 |  :---       |    :--          |  :--          | 
-|**Stil Adı**  | **Açıklama**      |     **Görünüm**         |                
 |  `plain`      |  Teoremler, lemmalar, önermeler vb. için kullanılır (varsayılan)  | Başlık düz ve kalın, gövde metni vurgulu|
 |  `definition`  | Tanımlar ve örnekler için kullanılır|                              Başlık düz ve kalın, gövde metni düz|
 |  `remark`     |  Açıklamalar ve notlar için kullanılır |                            Başlık vurgulu, gövde metni düz|

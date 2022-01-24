@@ -362,17 +362,17 @@ Bu seçeneklerin her birinin kullanılabilirliği belge sınıfına göre
 farklılık gösterir. Aşağıdaki tabloda hangi seçeneğin hangi sınıf için
 varsayılan olduğu ve kullanılabilir olup olmadığı gösterilmiştir.
 
-  ----------------- -------- ---------- -----------
-  **Seçenek**       `book`   `report`   `article`
-   **10pt**          1        1          1
-  **letterpaper**   1        1          1
-  **oneside**       1/2      1          1
-  **twoside**       1        1/2        1/2
-  **openany**       1/2      1          0
-  **openright**     1        1/2        0
-  **titlepage**     1        1          1/2
-  **final**         1        1          1
-  ----------------- -------- ---------- -----------
+|   **Seçenek**               |   `book`      |    `report`      |  `article`    |
+| :--             | :--     |  :--    |  :--       |
+|   **10pt**       |   1     |   1       |   1|
+|  **letterpaper** |  1      |  1        |  1|
+|  **oneside**     |  1/2    |  1        |  1|
+|  **twoside**     |  1       | 1/2      |  1/2|
+|  **openany**     |  1/2    |  1        |  0|
+|  **openright**    | 1       | 1/2      |  0|
+|  **titlepage**   |  1      |  1        |  1/2|
+|  **final**       |  1      |  1        |  1|
+
 1: varsayılan 1/2: kullanılabilir 0:kullanılamaz
 
 

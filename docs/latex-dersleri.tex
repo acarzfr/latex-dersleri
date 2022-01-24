@@ -479,10 +479,23 @@ Açıklama
 
 Bu seçeneklerin her birinin kullanılabilirliği belge sınıfına göre farklılık gösterir. Aşağıdaki tabloda hangi seçeneğin hangi sınıf için varsayılan olduğu ve kullanılabilir olup olmadığı gösterilmiştir.
 
-\begin{longtable}[]{@{}llll@{}}
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}@{}}
 \toprule
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Seçenek}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\texttt{book}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\texttt{report}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\texttt{article}
+\end{minipage} \\
+\midrule
 \endhead
-\textbf{Seçenek} & \texttt{book} & \texttt{report} & \texttt{article} \\
 \textbf{10pt} & 1 & 1 & 1 \\
 \textbf{letterpaper} & 1 & 1 & 1 \\
 \textbf{oneside} & 1/2 & 1 & 1 \\
@@ -2085,6 +2098,8 @@ LaTeX'de matematik kipindeki yazıların biçemleri aşağıdaki komutlar kullan
 
 \begin{longtable}[]{@{}ll@{}}
 \toprule
+Komut & Görünüm \\
+\midrule
 \endhead
 \texttt{\textbackslash{}mathnormal\{ABC\ def\ 123\}} & \(ABC def 123\) \\
 \texttt{\textbackslash{}mathrm\{ABC\ def\ 123\}} & \(\mathrm{ABC def 123}\) \\
@@ -2632,8 +2647,15 @@ Buradaki \texttt{\textless{}stil\ adı\textgreater{}} kullanmak istediğiniz sti
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3000}}@{}}
 \toprule
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Stil Adı}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Açıklama}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Görünüm}
+\end{minipage} \\
+\midrule
 \endhead
-\textbf{Stil Adı} & \textbf{Açıklama} & \textbf{Görünüm} \\
 \texttt{plain} & Teoremler, lemmalar, önermeler vb. için kullanılır (varsayılan) & Başlık düz ve kalın, gövde metni vurgulu \\
 \texttt{definition} & Tanımlar ve örnekler için kullanılır & Başlık düz ve kalın, gövde metni düz \\
 \texttt{remark} & Açıklamalar ve notlar için kullanılır & Başlık vurgulu, gövde metni düz \\
@@ -2696,7 +2718,7 @@ Not değişkeni her zaman isteğe bağlıdır, ancak başlık oluşturulurken \t
 \hypertarget{uxf6zel-sayfalar}{%
 \chapter{Özel Sayfalar}\label{uxf6zel-sayfalar}}
 
-Bu bölümde bir kitaptaki özel nitelikli sayfalar olan kaynakça ve dizinden bahsedeceğiz.
+Bu bölümde bir kitaptaki özel sayfalar olan kaynakça ve dizinden bahsedeceğiz.
 
 \hypertarget{kaynakuxe7a}{%
 \section{Kaynakça}\label{kaynakuxe7a}}

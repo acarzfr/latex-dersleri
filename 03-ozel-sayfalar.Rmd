@@ -1,6 +1,6 @@
 # Özel Sayfalar
 
- Bu bölümde bir kitaptaki özel nitelikli sayfalar olan kaynakça ve dizinden bahsedeceğiz.
+ Bu bölümde bir kitaptaki özel  sayfalar olan kaynakça ve dizinden bahsedeceğiz.
  
 ## Kaynakça
 
