@@ -16,7 +16,7 @@ bookdown::gitbook:
       github: yes
       facebook: no
     download: [pdf]
-
+    info: false
 bookdown::pdf_book:
   includes:
     in_header:   preamble.tex

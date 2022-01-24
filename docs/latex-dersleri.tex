@@ -155,7 +155,7 @@
 
 \title{LaTeX Dersleri}
 \author{Zafer Acar}
-\date{2022-01-24}
+\date{2022-01-25}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Teorem}[chapter]
@@ -194,14 +194,14 @@
 \hypertarget{genel}{%
 \chapter{Genel}\label{genel}}
 
-Bu bölümde LaTeX kullanımıyla ilgili genel bilgilerden bahsedeceğiz.
+Bu bölümde LaTeX'le ilgili genel bilgilerden bahsedeceğiz.
 
 \hypertarget{latex-nedir}{%
 \section{LaTeX Nedir?}\label{latex-nedir}}
 
 Önce TeX'le başlayalım. TeX, 1978'den itibaren \href{https://www-cs-faculty.stanford.edu/~knuth/}{Donald Knuth} tarafından belgelerin bilgisayarda dizilmesi için geliştirdiği bir dizgi sistemidir. LaTeX ise TeX'in kullanımını kolaylaştırmak için 1984 yılında \href{http://www.lamport.org/}{Leslie Lamport} tarafından tasarlanmış bir makro pakettir.
 
-LaTeX, genelde WYSIWYG\footnote{WYSIWYG, İngilizce'de ``What You See Is What You Get'' teriminin baş harflerinden oluşan bir bilgisayar terimidir. Türkçesi \emph{Ne Görüyorsan Onu Alırsın} demek olup ekranda görülene çok benzer bir çıktı alınacağı ortamları tanımlar.} editörleriyle karşılaştırılır. WYSIWYG, Microsoft Word, Libreoffice Writer gibi kelime işlemcilere ya da Adobe Indesign gibi programlara verilen genel bir isimdir. Hepsinin ortak özelliği, girdi ile çıktının aynı anda ve birlikte görünmesidir.
+LaTeX, genelde WYSIWYG (\emph{Ne Görüyorsan Onu Alırsın}) editörleriyle karşılaştırılır. WYSIWYG, Microsoft Word, Libreoffice Writer gibi kelime işlemcilere ya da Adobe Indesign gibi programlara verilen genel bir isimdir. Hepsinin ortak özelliği, girdi ile çıktının aynı anda ve birlikte görünmesidir.
 
 Bir metnin genel görünümü ve okunabilirliği, metnin nasıl hizalandığından ve kesildiğinden büyük ölçüde etkilenir. LaTeX, tüm paragraf için hizalamayı ve kesmeleri optimize eden son derece gelişmiş TeX algoritmalarını kullanır. Kelime işlemciler ve diğer programlar, satır başına çalıştıkları için oldukça yetersiz kalırlar. Bu, diğer şeylerin yanı sıra düzensiz aralıklara ve birçok kısa çizgiye sebep olur. Sonuçları görmeniz için Microsoft Word 2008 (Mac), Adobe InDesign CS4 ve LaTeX'le dizilmiş bir metni \href{http://www.rtznet.nl/zink/comparison.pdf}{şuradan} inceleyebilirsiniz.
 
@@ -323,15 +323,19 @@ LaTeX'i kurmak için ilk olarak bir TeX dağıtımı edinmeniz gerekir. Dağıt�
 
 Linux sistemlere \href{https://miktex.org/download}{MiKTeX} ya da \href{http://www.tug.org/texlive/}{TeX Live} kurulabilir. MiKTeX'in indirme sayfasında Ubuntu, Mint, Debian, Fedora, CentOS ve openSUSE gibi Linux dağıtımlarında nasıl kurulacağı anlatılmıştır. TeX Live ise tüm popüler Linux dağıtımlarının depolarında mevcut olup, paket yöneticisi ya da komut satırı yardımıyla kurulabilir. Örneğin Ubuntu, Debian, Mint, Pardus gibi \texttt{.deb} uzantılı paketlerin kullanıldığı dağıtımlarda
 
-\begin{verbatim}
-sudo apt-get install texlive-base
-\end{verbatim}
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sudo}\NormalTok{ apt{-}get install texlive{-}base}
+\end{Highlighting}
+\end{Shaded}
 
 komutuyla temel kurulum,
 
-\begin{verbatim}
-sudo apt-get install texlive-full
-\end{verbatim}
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{sudo}\NormalTok{ apt{-}get install texlive{-}full}
+\end{Highlighting}
+\end{Shaded}
 
 komutuyla da tam kurulum yapılır.
 
@@ -417,7 +421,7 @@ Eğer metin editörü kullanıyorsanız derlemeyi uçbirimde (terminal, konsol,\
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{pdflatex belge1}
+\ExtensionTok{pdflatex}\NormalTok{ belge1}
 \end{Highlighting}
 \end{Shaded}
 
@@ -435,11 +439,20 @@ Başka sınıflar olmakla birlikte LaTeX'de varsayılan olarak kullanılan beş 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\caption{\label{tab:belgesin} LaTeX'de Belge Sınıfları}\tabularnewline
 \toprule
 \begin{minipage}[b]{\linewidth}\raggedright
-Sınıf
+\textbf{Sınıf}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Açıklama
+\textbf{Açıklama}
+\end{minipage} \\
+\midrule
+\endfirsthead
+\toprule
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Sınıf}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Açıklama}
 \end{minipage} \\
 \midrule
 \endhead
@@ -451,16 +464,25 @@ Açıklama
 \bottomrule
 \end{longtable}
 
-Bu beş sınıftan \texttt{article}, \texttt{report} ve \texttt{book} için kullanılabilecek seçenekler aşağıdadır.
+Bu beş sınıftan \texttt{article}, \texttt{report} ve \texttt{book} için kullanılabilecek seçenekler Tablo \ref{tab:belgesec}'de gösterilmiştir.
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\caption{\label{tab:belgesec} LaTeX'de Belge Seçenekleri}\tabularnewline
 \toprule
 \begin{minipage}[b]{\linewidth}\raggedright
-Seçenek
+\textbf{Seçenek}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Açıklama
+\textbf{Açıklama}
+\end{minipage} \\
+\midrule
+\endfirsthead
+\toprule
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Seçenek}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Açıklama}
 \end{minipage} \\
 \midrule
 \endhead
@@ -543,10 +565,10 @@ LaTeX'de Türkçe belgeler oluşturmak için öncelikle sahanlığa
 
 komutlarının verilmesi gerekir.
 
-\texttt{T1} seçenekli \texttt{fontenc} paketi yazıtipi kodlamasıyla ilgili bir paket olup, hecelemenin doğru şekilde yapılmasını sağlar. Bir çok Avrupa dilinde de \texttt{T1} seçeneğiyle kullanılır. \texttt{turkish} seçenekli \texttt{babel} paketi de Chapter, Table, Contents,\ldots{} gibi isimlerin Türkçeleşmesi (Bölüm, Tablo, İçindekiler,\ldots) içindir.
+\texttt{T1} seçenekli \textbf{fontenc} paketi yazıtipi kodlamasıyla ilgili bir paket olup, hecelemenin doğru şekilde yapılmasını sağlar. Bir çok Avrupa dilinde de \texttt{T1} seçeneğiyle kullanılır. \texttt{turkish} seçenekli \textbf{babel} paketi de Chapter, Table, Contents,\ldots{} gibi isimlerin Türkçeleşmesi (Bölüm, Tablo, İçindekiler,\ldots) içindir.
 
 \begin{quote}
-Yakın zamana kadar ö, ş, ç,\ldots{} gibi Türkçe karakterlerin kullanılabilmesi için sahanlığa \texttt{\textbackslash{}usepackage{[}utf8{]}\{inputenc\}} ya da \texttt{\textbackslash{}usepackage{[}latin5{]}\{inputenc\}} komutlarından birinin verilmesi gerekiyordu. Bu paket (\texttt{inputenc}) girdi kodlamasını yöneten bir pakettir. Son güncellemelerle birlikte bu paketin kullanılma zorunluluğu ortadan kalkmıştır.
+Yakın zamana kadar ö, ş, ç,\ldots{} gibi Türkçe karakterlerin kullanılabilmesi için sahanlığa \texttt{\textbackslash{}usepackage{[}utf8{]}\{inputenc\}} ya da \texttt{\textbackslash{}usepackage{[}latin5{]}\{inputenc\}} komutlarından birinin verilmesi gerekiyordu. Bu paket (\textbf{inputenc}) girdi kodlamasını yöneten bir pakettir. Son güncellemelerle birlikte bu paketin kullanılma zorunluluğu ortadan kalkmıştır.
 \end{quote}
 
 Aşağıda Türkçe asgari bir LaTeX kaynak dosyası örneği verilmiştir.
@@ -562,7 +584,7 @@ Aşağıda Türkçe asgari bir LaTeX kaynak dosyası örneği verilmiştir.
 \end{Highlighting}
 \end{Shaded}
 
-Türkçe dışında ikinci bir dil kullanmak isterseniz, örneğin İngilizce, \texttt{babel} paketinin seçeneğini
+Türkçe dışında ikinci bir dil kullanmak isterseniz, örneğin İngilizce, \textbf{babel} paketinin seçeneğini
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -646,8 +668,13 @@ Ayrıca \texttt{\textbackslash{}title}, \texttt{\textbackslash{}author} ve \text
 LaTeX'de belgenizi bölümlere ayırmak için 7 seviye bulunmaktadır.
 
 \begin{longtable}[]{@{}lll@{}}
+\caption{\label{tab:bolsev} LaTeX'de Bölüm Seviyeleri}\tabularnewline
 \toprule
-Komut & Seviye & Açıklama \\
+\textbf{Komut} & \textbf{Seviye} & \textbf{Açıklama} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Komut} & \textbf{Seviye} & \textbf{Açıklama} \\
 \midrule
 \endhead
 \texttt{\textbackslash{}part\{...\}} & -1( book ve report ) o ( article) & letter hariç \\
@@ -861,7 +888,7 @@ Dikkat edilirse ``Örnek Kitap'' dışında, ``Bolumler'' alt dizini ve tüm dos
 
 LaTeX'de varsayılan kağıt boyutunun \texttt{letterpaper} olduğunu Bölün \ref{belgesinifi}'de ifade etmiştik. Ayrıca aynı yazıda başka bir kağıt boyutunun nasıl seçileceğine de yer vermiştik. Şimdi ise hem sayfamızın kenar boşluklarının nasıl ayarlanacağından hem de ön tanımlı olmayan, tamamen keyfi bir sayfa boyutunun nasıl belirleneceğinden bahsedelim.
 
-Bu tür sayfa düzenlemeleri için LaTeX'de \href{http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/geometry/geometry.pdf}{geometry} paketi kullanılır. Öncelikle paketi
+Bu tür sayfa düzenlemeleri için LaTeX'de \href{http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/geometry/geometry.pdf}{\textbf{geometry}} paketi kullanılır. Öncelikle paketi
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -889,7 +916,8 @@ Tanım & Değer \\
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\BuiltInTok{\textbackslash{}usepackage}\NormalTok{[paperwidth=175mm,paperheight=255mm,top=2cm,bottom=2cm,left=2.5cm,right=2.5cm]\{}\ExtensionTok{geometry}\NormalTok{\}}
+\BuiltInTok{\textbackslash{}usepackage}\NormalTok{[paperwidth=175mm,paperheight=255mm,top=2cm,bottom=2cm,}
+\NormalTok{left=2.5cm,right=2.5cm]\{}\ExtensionTok{geometry}\NormalTok{\}}
 \end{Highlighting}
 \end{Shaded}
 
@@ -938,9 +966,14 @@ Unvan kısaltmasından sonra unvanın ait olduğu kelimeyle birlikte kalması ve
 
 LaTeX'de hem dikey hem de yatay aralıklar otomatik olarak ayarlanır. Fazladan aralıklar bırakmak için komutlar kullanılır.
 
-Aralık bırakırken kullanabileceğimiz ölçü birimleri aşağıda gösterilmiştir.
+Aralık bırakırken kullanabileceğimiz ölçü birimleri Tablo \ref{tab:olcubir}'de gösterilmiştir.
 
 \begin{longtable}[]{@{}ll@{}}
+\caption{\label{tab:olcubir} LaTeX'de Ölçü Birimleri}\tabularnewline
+\toprule
+Birim & Değer \\
+\midrule
+\endfirsthead
 \toprule
 Birim & Değer \\
 \midrule
@@ -1066,7 +1099,7 @@ Eğer metni daha fazla sütuna bölmek ve sütunları istediğiniz yerden başla
 \end{Highlighting}
 \end{Shaded}
 
-komutuyla \href{http://ftp.ntua.gr/mirror/ctan/macros/latex/required/tools/multicol.pdf}{multicol} paketini eklemelisiniz.
+komutuyla \href{http://ftp.ntua.gr/mirror/ctan/macros/latex/required/tools/multicol.pdf}{\textbf{multicol}} paketini eklemelisiniz.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1164,7 +1197,7 @@ Açıklamalı bir liste içinse \texttt{description} ortamı kullanılır. Bu or
 \hypertarget{listeleri-uxf6zelleux15ftirmek}{%
 \subsection{Listeleri özelleştirmek}\label{listeleri-uxf6zelleux15ftirmek}}
 
-Listelerin özelleştirmek için \href{http://ftp.ntua.gr/mirror/ctan/macros/latex/required/tools/enumerate.pdf}{enumerate} paketi kullanılabilir. Paketi \texttt{\textbackslash{}usepackage\{enumerate\}} komutuyla ekledikten sonra \texttt{enumerate} ortamını başlatan komutun peşine köşeli parantezler içinde madde işaretlerinin tipi belirtilebilir:
+Listelerin özelleştirmek için \href{http://ftp.ntua.gr/mirror/ctan/macros/latex/required/tools/enumerate.pdf}{\textbf{enumerate}} paketi kullanılabilir. Paketi \texttt{\textbackslash{}usepackage\{enumerate\}} komutuyla ekledikten sonra \texttt{enumerate} ortamını başlatan komutun peşine köşeli parantezler içinde madde işaretlerinin tipi belirtilebilir:
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1176,7 +1209,7 @@ Listelerin özelleştirmek için \href{http://ftp.ntua.gr/mirror/ctan/macros/lat
 \end{Highlighting}
 \end{Shaded}
 
-Bunun dışında çok daha fazla özelleştirmeye izin veren \href{http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/enumitem/enumitem.pdf}{enumitem} paketi vardır. Bu paketi kullanarak yapılabilecek listelere de ilerde değineceğiz. Dileyen okur paket belgesini inceleyip listelerini özelleştirebilir.
+Bunun dışında çok daha fazla özelleştirmeye izin veren \href{http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/enumitem/enumitem.pdf}{\textbf{enumitem}} paketi vardır. Bu paketi kullanarak yapılabilecek listelere de ilerde değineceğiz. Dileyen okur paket belgesini inceleyip listelerini özelleştirebilir.
 
 \hypertarget{yazux131tipleri}{%
 \section{Yazıtipleri}\label{yazux131tipleri}}
@@ -1184,7 +1217,7 @@ Bunun dışında çok daha fazla özelleştirmeye izin veren \href{http://ftp.cc
 \hypertarget{giriux15f}{%
 \subsection{Giriş}\label{giriux15f}}
 
-Yazıtipi konusu \emph{kodlama}, \emph{aile}, \emph{biçem} ve \emph{boyut} olmak üzere dört alt başlıkta incelenebilir. Kodlama çok teknik bir konu olup amacımız dışındadır, ancak sadece şunu belirtelim ki kodlama işini LaTeX'de Bölüm \ref{turkce}'de bahsettiğimiz \texttt{fontenc} paketi üstlenir. Bu paketi belgenize eklemiş olduğunuzu varsayarak devam edeceğiz.
+Yazıtipi konusu \emph{kodlama}, \emph{aile}, \emph{biçem} ve \emph{boyut} olmak üzere dört alt başlıkta incelenebilir. Kodlama çok teknik bir konu olup amacımız dışındadır, ancak sadece şunu belirtelim ki kodlama işini LaTeX'de Bölüm \ref{turkce}'de bahsettiğimiz \textbf{fontenc} paketi üstlenir. Bu paketi belgenize eklemiş olduğunuzu varsayarak devam edeceğiz.
 
 Bu yazıda anlatacağımız şeylerden bazıları bir bakıma LaTeX'in felsefesine aykırı olacak. Nitekim LaTeX, \texttt{\textbackslash{}documentclass} komutunda belirtilen ana yazıtipi boyutuna göre, dipnot ya da başlık gibi ana yazıtipi boyutundan farklı dizilen şeylerin boyutunu olabilecek en güzel ve doğru şekilde ayarlar. O yüzden bu konudaki klasik uyarıyı biz de yineleyelim:
 
@@ -1395,7 +1428,7 @@ Yukarıdaki komutu sahanlığa yazarsanız belgenizin ana yazıtipi boyutu 30 pt
 \hypertarget{renk-kullanmak}{%
 \section{Renk Kullanmak}\label{renk-kullanmak}}
 
-LaTeX'de renkler \href{http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/required/graphics/color.pdf}{color} ya da \href{http://ftp.ntua.gr/mirror/ctan/macros/latex/contrib/xcolor/xcolor.pdf}{xcolor} paketleriyle kullanılır. İkinci paket daha güçlüdür.
+LaTeX'de renkler \href{http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/required/graphics/color.pdf}{\textbf{color}} ya da \href{http://ftp.ntua.gr/mirror/ctan/macros/latex/contrib/xcolor/xcolor.pdf}{\textbf{xcolor}} paketleriyle kullanılır. İkinci paket daha güçlüdür.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1452,11 +1485,20 @@ Hazır renkler istenilen oranlarda karıştırılarak yeni renkler elde edilebil
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 2\tabcolsep) * \real{0.5000}}@{}}
+\caption{\label{tab:renkmod} Renk Modelleri}\tabularnewline
 \toprule
 \begin{minipage}[b]{\linewidth}\raggedright
-Model
+\textbf{Model}
 \end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
-Açıklama
+\textbf{Açıklama}
+\end{minipage} \\
+\midrule
+\endfirsthead
+\toprule
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Model}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Açıklama}
 \end{minipage} \\
 \midrule
 \endhead
@@ -1540,7 +1582,7 @@ Matematik formüllerini dizmek, kuşkusuz, LaTeX'in en güçlü olduğu konulard
 \hypertarget{giriux15f-1}{%
 \section{Giriş}\label{giriux15f-1}}
 
-Belgenizde yalnızca birkaç basit matematiksel formül kullanacaksanız herhangi bir pakete gerek olmadan yazabilirsiniz. Ancak çok sayıda karmaşık formül içeren bilimsel bir belge yazma niyetindeyseniz temel \href{https://www.ams.org/publications/authors/tex/amslatex}{AMS} paketlerini kullanmanız gerekir. Bu paketler \href{http://ftp.ntua.gr/mirror/ctan/macros/latex/required/amsmath/amsmath.pdf}{amsmath} , \href{https://texdoc.net/texmf-dist/doc/fonts/amsfonts/amssymb.pdf}{amssymb} ve \href{http://ftp.ntua.gr/mirror/ctan/fonts/amsfonts/doc/amsfonts.pdf}{amsfonts}'dir.
+Belgenizde yalnızca birkaç basit matematiksel formül kullanacaksanız herhangi bir pakete gerek olmadan yazabilirsiniz. Ancak çok sayıda karmaşık formül içeren bilimsel bir belge yazma niyetindeyseniz temel \href{https://www.ams.org/publications/authors/tex/amslatex}{AMS} paketlerini kullanmanız gerekir. Bu paketler \href{http://ftp.ntua.gr/mirror/ctan/macros/latex/required/amsmath/amsmath.pdf}{\textbf{amsmath}} , \href{https://texdoc.net/texmf-dist/doc/fonts/amsfonts/amssymb.pdf}{\textbf{amssymb}} ve \href{http://ftp.ntua.gr/mirror/ctan/fonts/amsfonts/doc/amsfonts.pdf}{\textbf{amsfonts}}'dir.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -1659,12 +1701,13 @@ LaTeX'de her türlü parantez ve gruplandırıcı kullanılabilir. Yuvarlak ve k
 
 \({a,b,c}\neq\{a,b,c\}\)
 
-Kullanılabilecek tüm gruplandırıcı işaretler aşağıdaki tabloda gösterilmiştir.
+Kullanılabilecek tüm gruplandırıcı işaretler Tablo \ref{tab:grup}'de gösterilmiştir.
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3077}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3846}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3077}}@{}}
+\caption{\label{tab:grup} Gruplandırıcılar}\tabularnewline
 \toprule
 \endhead
 ( \texttt{(} ) \texttt{)} & \(\uparrow\) \texttt{\textbackslash{}uparrow} & \([\) \texttt{{[}} ya da \texttt{\textbackslash{}lbrack} \\
@@ -1712,13 +1755,14 @@ Bazen gruplandırıcı sembolün boyunu elle ayarlamak gerekebilir. Bunun için,
 \big\|\Big\|\bigg\|\Bigg\|
 \]
 
-Oklar için aşağıdaki komutlar kullanılır.
+Oklar için Tablo \ref{tab:oklar}'deki komutlar kullanılır.
 
 \begin{longtable}[]{@{}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\caption{\label{tab:oklar} Oklar}\tabularnewline
 \toprule
 \endhead
 \(\leftarrow\) \texttt{\textbackslash{}leftarrow} ya da \texttt{\textbackslash{}gets} & \(\longleftarrow\) \texttt{\textbackslash{}longleftarrow} & \(\uparrow\) \texttt{\textbackslash{}uparrow} & \(\Leftarrow\) \texttt{\textbackslash{}Leftarrow} \\
@@ -1769,6 +1813,7 @@ Yunan harfleri matematikte yaygın olarak kullanılır. Bu harfler ters eğik ç
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2500}}@{}}
+\caption{\label{tab:yunan} Yunan Harfleri}\tabularnewline
 \toprule
 \endhead
 \(\alpha\) \texttt{\textbackslash{}alpha} & \(\theta\) \texttt{\textbackslash{}theta} & \(o\) \texttt{o} & \(\tau\) \texttt{\textbackslash{}tau} \\
@@ -2097,8 +2142,13 @@ Matematiksel ifadeleri dizerken bazen yazının biçemini ya da boyutunu değiş
 LaTeX'de matematik kipindeki yazıların biçemleri aşağıdaki komutlar kullanılarak değiştirilir.
 
 \begin{longtable}[]{@{}ll@{}}
+\caption{\label{tab:matyazi} Matematik Kipinde Yazı Biçemleri}\tabularnewline
 \toprule
-Komut & Görünüm \\
+\textbf{Komut} & \textbf{Görünüm} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Komut} & \textbf{Görünüm} \\
 \midrule
 \endhead
 \texttt{\textbackslash{}mathnormal\{ABC\ def\ 123\}} & \(ABC def 123\) \\
@@ -2646,6 +2696,17 @@ Buradaki \texttt{\textless{}stil\ adı\textgreater{}} kullanmak istediğiniz sti
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.4000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3000}}
   >{\raggedright\arraybackslash}p{(\columnwidth - 4\tabcolsep) * \real{0.3000}}@{}}
+\caption{\label{tab:teorem} Teorem Stilleri}\tabularnewline
+\toprule
+\begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Stil Adı}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Açıklama}
+\end{minipage} & \begin{minipage}[b]{\linewidth}\raggedright
+\textbf{Görünüm}
+\end{minipage} \\
+\midrule
+\endfirsthead
 \toprule
 \begin{minipage}[b]{\linewidth}\raggedright
 \textbf{Stil Adı}
@@ -2959,7 +3020,7 @@ Görüldüğü gibi ilk altı satır zorunlu, OPT ile başlayanlar isteğe bağl
 
 Editörden yararlanmanın diğer bir yolu ``Kaynakça \(\rightarrow\) Kaynakça Kaydı Ekle\ldots{}'' yolunu izlemektir. Bu yolu izlediğinizde aşağıdaki pencere açılır (örnek TeXstudio editörüne aittir).
 
-\includegraphics[width=0.6\textwidth,height=\textheight]{images/tex-studio.png}
+\includegraphics{images/tex-studio.png}
 
 Pencerenin solunda kaydı eklemek istediğiniz dosyayı ve ortada kayıt türünü belirtir, sağda da kaynağın bilgilerini girersiniz. Zorunlu bilgiler en üstte yer alan kalın yazılmış olanlardır.
 
@@ -2991,12 +3052,14 @@ Eğer tüm kaynakların bu kuraldan ayrı tutulması isteniyorsa komut \texttt{\
 
 Kaynakçanın belgeye yazılması için kaynak dosyanın derlenip, BiBTeX programının çalıştırılması ve ardından dosyanın en az iki kere daha derlenmesi gerekir. BiBTeX programı, editörde ``Araçlar \(\rightarrow\) Kaynakça'' yoluyla çalıştırılır (klavye kısa yolu F8). Aynı şey, uçbirimde sırasıyla
 
-\begin{verbatim}
-pdflatex kaynakdosya
-bibtex kaynakdosya
-pdflatex kaynakdosya
-pdflatex kaynakdosya
-\end{verbatim}
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{pdflatex}\NormalTok{ kaynakdosya}
+\ExtensionTok{bibtex}\NormalTok{ kaynakdosya}
+\ExtensionTok{pdflatex}\NormalTok{ kaynakdosya}
+\ExtensionTok{pdflatex}\NormalTok{ kaynakdosya}
+\end{Highlighting}
+\end{Shaded}
 
 komutları çalıştırılarak yapılabilir.
 
@@ -3035,7 +3098,7 @@ LaTeX'de dizin oluşturabilmek için sahanlığa
 \end{Highlighting}
 \end{Shaded}
 
-komutları girilir. Birinci komut dizin için gerekli olan \href{http://ftp.ntua.gr/mirror/ctan/macros/latex/base/makeindx.pdf}{makeidx} paketini çağırır, ikinci komut ise dizinleme komutlarını etkinleştirir.
+komutları girilir. Birinci komut dizin için gerekli olan \href{http://ftp.ntua.gr/mirror/ctan/macros/latex/base/makeindx.pdf}{\textbf{makeidx}} paketini çağırır, ikinci komut ise dizinleme komutlarını etkinleştirir.
 
 Dizinde gösterilmek istenen madde, \texttt{\textbackslash{}index} komutunun değişkeni olarak girilir:
 
@@ -3051,9 +3114,11 @@ Dizin maddesi girme örnekleri aşağıda gösterilmiştir.
 
 LaTeX, kaynak dosyanızı derlediğinizde bu dizin maddelerini sayfa numaralarıyla birlikte, kaynak dosyayla adı aynı fakat uzantısı \texttt{.idx} olan bir dosyaya kaydeder (bu dosyaya \emph{ham dosya} denir). Bu dosyanın \texttt{makeindex} programından geçirilmesi gerekir. Bu editörde ``Araçlar \(\rightarrow\) Dizin'' yoluyla yapılır. Aynı şey uçbirimde,
 
-\begin{verbatim}
-makeindex kaynakdosya
-\end{verbatim}
+\begin{Shaded}
+\begin{Highlighting}[]
+\ExtensionTok{makeindex}\NormalTok{ kaynakdosya}
+\end{Highlighting}
+\end{Shaded}
 
 komutu girilerek yapılabilir. Dosya tekrar derlendiğinde sıralanmış dizin belgeye yazılır. Bunun için dizinin yazılması istenen yere \texttt{\textbackslash{}printindex} komutu verilir. Bu genelde, belgenin en sonunda \texttt{\textbackslash{}end\{document\}} komutundan hemen öncedir. Komutun girildiği yere LaTeX, Türkçe dil paketi ekli belgelerde ``Dizin'' başlığını oluşturur ve belgede \texttt{\textbackslash{}index} komutuyla eklenmiş maddeleri sırayla dizer.
 
@@ -3066,7 +3131,7 @@ Aksanlı harflerle başlayan kelimelerin doğru yerde yazılmaları için aksanl
 \hypertarget{uxe7oklu-dizin}{%
 \subsection{Çoklu Dizin}\label{uxe7oklu-dizin}}
 
-Birden fazla dizin oluşturmak isterseniz (örneğin biri \emph{normal dizin} diğeri de \emph{simgeler dizini}) \href{http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/index/index.pdf}{index} paketini kullanabilirsiniz. Her dizin paket eklendikten ve \texttt{\textbackslash{}makeindex} komutu sahanlıkta verildikten sonra \texttt{\textbackslash{}newindex} komutuyla tanıtılır.
+Birden fazla dizin oluşturmak isterseniz (örneğin biri \emph{normal dizin} diğeri de \emph{simgeler dizini}) \href{http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/index/index.pdf}{\textbf{index}} paketini kullanabilirsiniz. Her dizin paket eklendikten ve \texttt{\textbackslash{}makeindex} komutu sahanlıkta verildikten sonra \texttt{\textbackslash{}newindex} komutuyla tanıtılır.
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -3094,8 +3159,8 @@ Belge derlendikten sonra iki tane \texttt{\textbackslash{}makeindex} komutu uçb
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{makeindex kaynakdosya.ndx {-}o kaynakdosya.nnd }
-\NormalTok{makeindex kaynakdosya.sdx {-}o kaynakdosya.snd }
+\ExtensionTok{makeindex}\NormalTok{ kaynakdosya.ndx }\AttributeTok{{-}o}\NormalTok{ kaynakdosya.nnd }
+\ExtensionTok{makeindex}\NormalTok{ kaynakdosya.sdx }\AttributeTok{{-}o}\NormalTok{ kaynakdosya.snd }
 \end{Highlighting}
 \end{Shaded}
 
@@ -3110,7 +3175,7 @@ Belge derlendikten sonra iki tane \texttt{\textbackslash{}makeindex} komutu uçb
 
 komutları verilir. Ardından belge tekrar derlenerek dizinler yazdırılır.
 
-Çoklu dizin için diğer bir seçenek \href{https://www.ctan.org/pkg/multind}{multind} paketini kullanmaktır. Görece index paketine göre daha pratiktir. Sahanlığa
+Çoklu dizin için diğer bir seçenek \href{https://www.ctan.org/pkg/multind}{\textbf{multind}} paketini kullanmaktır. Görece index paketine göre daha pratiktir. Sahanlığa
 
 \begin{Shaded}
 \begin{Highlighting}[]
@@ -3133,8 +3198,8 @@ Bu defa \texttt{makeindex} programı uçbirimde
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\NormalTok{makeindex normal}
-\NormalTok{makeindex simge}
+\ExtensionTok{makeindex}\NormalTok{ normal}
+\ExtensionTok{makeindex}\NormalTok{ simge}
 \end{Highlighting}
 \end{Shaded}
 

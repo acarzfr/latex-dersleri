@@ -2,7 +2,8 @@
 
 # Genel {#genel}
 
-Bu bölümde LaTeX kullanımıyla ilgili genel bilgilerden bahsedeceğiz.
+Bu bölümde LaTeX'le ilgili genel bilgilerden bahsedeceğiz.
+
 
 ## LaTeX Nedir?
 
@@ -12,7 +13,7 @@ için geliştirdiği bir dizgi sistemidir.
 LaTeX ise TeX'in kullanımını kolaylaştırmak için 1984 yılında [Leslie
 Lamport](http://www.lamport.org/) tarafından tasarlanmış bir makro pakettir.
 
-LaTeX, genelde WYSIWYG^[WYSIWYG, İngilizce'de "What You See Is What You Get" teriminin baş harflerinden oluşan bir bilgisayar terimidir. Türkçesi *Ne Görüyorsan Onu Alırsın* demek olup ekranda görülene çok benzer bir çıktı alınacağı ortamları tanımlar.] editörleriyle karşılaştırılır. WYSIWYG, Microsoft
+LaTeX, genelde WYSIWYG (*Ne Görüyorsan Onu Alırsın*) editörleriyle karşılaştırılır. WYSIWYG, Microsoft
 Word, Libreoffice Writer gibi kelime işlemcilere ya da Adobe Indesign
 gibi programlara verilen genel bir isimdir. Hepsinin ortak özelliği,
 girdi ile çıktının aynı anda ve birlikte görünmesidir.
@@ -197,13 +198,13 @@ depolarında mevcut olup, paket yöneticisi ya da komut satırı yardımıyla
 kurulabilir. Örneğin Ubuntu, Debian, Mint, Pardus gibi `.deb` uzantılı
 paketlerin kullanıldığı dağıtımlarda
 
-```
+```bash
 sudo apt-get install texlive-base
 ```
 
 komutuyla temel kurulum,
 
-```
+```bash
 sudo apt-get install texlive-full
 ```
 
@@ -309,7 +310,7 @@ Eğer metin editörü kullanıyorsanız derlemeyi uçbirimde (terminal,
 konsol,...) yapmanız gerekir. Derleme için uçbirim kaynak dosyanın
 olduğu dizinde açılıp
 
-```latex
+```bash
 pdflatex belge1
 ```
 
@@ -331,8 +332,9 @@ bahsedelim.
 Başka sınıflar olmakla birlikte LaTeX'de varsayılan olarak kullanılan
 beş belge sınıfı vardır.
 
+Table: (\#tab:belgesin) LaTeX'de Belge Sınıfları
 
-| Sınıf | Açıklama |
+| **Sınıf** | **Açıklama** |
 |:--|  :--|
  | `article`  | Makale|
  | `report`  |  Makaleden daha hacimli belgeler için kullanılır. Rapor, tez gibi|
@@ -342,9 +344,11 @@ beş belge sınıfı vardır.
 
 
 Bu beş sınıftan `article`, `report` ve `book` için kullanılabilecek
-seçenekler aşağıdadır.
+seçenekler Tablo \@ref(tab:belgesec)'de gösterilmiştir.
 
-| Seçenek | Açıklama |
+Table: (\#tab:belgesec) LaTeX'de Belge Seçenekleri
+
+| **Seçenek** | **Açıklama** |
 |:--|  :--|
 |  **10pt, 11pt, 12pt**         |           Belge ana yazı büyüklüğü.|
 |  **a4paper, a5paper, letterpaper,...**  | Kağıt boyutu.| 
@@ -411,16 +415,16 @@ LaTeX'de Türkçe belgeler oluşturmak için öncelikle sahanlığa
 
 komutlarının verilmesi gerekir.
 
-`T1` seçenekli `fontenc` paketi yazıtipi kodlamasıyla ilgili bir paket
+`T1` seçenekli **fontenc** paketi yazıtipi kodlamasıyla ilgili bir paket
 olup, hecelemenin doğru şekilde yapılmasını sağlar. Bir çok Avrupa
-dilinde de `T1` seçeneğiyle kullanılır. `turkish` seçenekli `babel`
+dilinde de `T1` seçeneğiyle kullanılır. `turkish` seçenekli **babel**
 paketi de Chapter, Table, Contents,... gibi isimlerin Türkçeleşmesi
 (Bölüm, Tablo, İçindekiler,...) içindir.
 
 > Yakın zamana kadar ö, ş, ç,... gibi Türkçe karakterlerin
 > kullanılabilmesi için sahanlığa `\usepackage[utf8]{inputenc}` ya da
 > `\usepackage[latin5]{inputenc}` komutlarından birinin verilmesi
-> gerekiyordu. Bu paket (`inputenc`) girdi kodlamasını yöneten bir
+> gerekiyordu. Bu paket (**inputenc**) girdi kodlamasını yöneten bir
 > pakettir. Son güncellemelerle birlikte bu paketin kullanılma
 > zorunluluğu ortadan kalkmıştır.
 
@@ -437,7 +441,7 @@ Aşağıda Türkçe asgari bir LaTeX kaynak dosyası örneği verilmiştir.
 ```
 
 Türkçe dışında ikinci bir dil kullanmak isterseniz, örneğin İngilizce,
-`babel` paketinin seçeneğini
+**babel** paketinin seçeneğini
 
 
 ```latex
@@ -542,7 +546,9 @@ teşekkür metni olabilir.
 
 LaTeX'de belgenizi bölümlere ayırmak için 7 seviye bulunmaktadır.
 
-| Komut | Seviye | Açıklama |
+Table: (\#tab:bolsev) LaTeX'de Bölüm Seviyeleri
+
+| **Komut** | **Seviye** | **Açıklama** |
 | :--- | :--- | :--- |
 | `\part{...}` | -1( book ve report ) o ( article) | letter hariç |
 | `\chapter{...}` | 0 | sadece book ve report |
@@ -763,6 +769,7 @@ düzenleyebilirsiniz.
 düzenlenmesi](images/dizin.png){width=50%}
 
 
+
 Bu şekilde bir düzenleme yaptığınızda `\input` ya da `\include`
 komutlarıyla dosya eklemek istediğinizde dosyanın bulunduğu dizini de
 göstermeniz gerekir.
@@ -814,7 +821,7 @@ boşluklarının nasıl ayarlanacağından hem de ön tanımlı olmayan, tamamen
 keyfi bir sayfa boyutunun nasıl belirleneceğinden bahsedelim.
 
 Bu tür sayfa düzenlemeleri için LaTeX'de
-[geometry](http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/geometry/geometry.pdf) paketi kullanılır. Öncelikle paketi
+[**geometry**](http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/geometry/geometry.pdf) paketi kullanılır. Öncelikle paketi
 
 
 ```latex
@@ -839,7 +846,8 @@ tanımlamalarla sayfanın düzenini değiştirebilirsiniz:
 Örneğin sahanlıkta
 
 ```latex
-\usepackage[paperwidth=175mm,paperheight=255mm,top=2cm,bottom=2cm,left=2.5cm,right=2.5cm]{geometry}
+\usepackage[paperwidth=175mm,paperheight=255mm,top=2cm,bottom=2cm,
+left=2.5cm,right=2.5cm]{geometry}
 ```
 
 
@@ -925,8 +933,10 @@ satırın orada kesilmesini önler.
 LaTeX'de hem dikey hem de yatay aralıklar otomatik olarak ayarlanır.
 Fazladan aralıklar bırakmak için komutlar kullanılır.
 
-Aralık bırakırken kullanabileceğimiz ölçü birimleri aşağıda
+Aralık bırakırken kullanabileceğimiz ölçü birimleri Tablo \@ref(tab:olcubir)'de
 gösterilmiştir.
+
+Table: (\#tab:olcubir) LaTeX'de Ölçü Birimleri
 
 |  Birim|  Değer|
 |:--|:--|
@@ -1075,7 +1085,7 @@ kullanmanız gerekir. Bu ortamı kullanabilmek için
 ```
 
 komutuyla
-[multicol](http://ftp.ntua.gr/mirror/ctan/macros/latex/required/tools/multicol.pdf) paketini eklemelisiniz.
+[**multicol**](http://ftp.ntua.gr/mirror/ctan/macros/latex/required/tools/multicol.pdf) paketini eklemelisiniz.
 
 
 ```latex
@@ -1197,7 +1207,7 @@ köşeli parantez içine alınan anahtar kelimeler kalın dizilir.
 ### Listeleri özelleştirmek
 
 Listelerin özelleştirmek için
-[enumerate](http://ftp.ntua.gr/mirror/ctan/macros/latex/required/tools/enumerate.pdf)  paketi kullanılabilir. Paketi `\usepackage{enumerate}`
+[**enumerate**](http://ftp.ntua.gr/mirror/ctan/macros/latex/required/tools/enumerate.pdf)  paketi kullanılabilir. Paketi `\usepackage{enumerate}`
 komutuyla ekledikten sonra `enumerate` ortamını başlatan komutun peşine
 köşeli parantezler içinde madde işaretlerinin tipi belirtilebilir:
 
@@ -1213,7 +1223,7 @@ köşeli parantezler içinde madde işaretlerinin tipi belirtilebilir:
 
 
 Bunun dışında çok daha fazla özelleştirmeye izin veren
-[enumitem](http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/enumitem/enumitem.pdf) paketi vardır. Bu paketi kullanarak yapılabilecek
+[**enumitem**](http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/enumitem/enumitem.pdf) paketi vardır. Bu paketi kullanarak yapılabilecek
 listelere de ilerde değineceğiz. Dileyen okur paket belgesini inceleyip
 listelerini özelleştirebilir.
 
@@ -1225,7 +1235,7 @@ listelerini özelleştirebilir.
 
 Yazıtipi konusu *kodlama*, *aile*, *biçem* ve *boyut* olmak üzere dört
 alt başlıkta incelenebilir. Kodlama çok teknik bir konu olup amacımız
-dışındadır, ancak sadece şunu belirtelim ki kodlama işini LaTeX'de Bölüm \@ref(turkce)'de bahsettiğimiz `fontenc` paketi üstlenir. Bu paketi belgenize eklemiş
+dışındadır, ancak sadece şunu belirtelim ki kodlama işini LaTeX'de Bölüm \@ref(turkce)'de bahsettiğimiz **fontenc** paketi üstlenir. Bu paketi belgenize eklemiş
 olduğunuzu varsayarak devam edeceğiz.
 
 Bu yazıda anlatacağımız şeylerden bazıları bir bakıma LaTeX'in
@@ -1268,8 +1278,8 @@ aileden yazılması istenirse --ki genelde böyle kullanılır-- aşağıdaki
 komut ya da bildirimler kullanılır.
 
 
-![Yazıtipi
-Aileleri](images/yazitipi.png){width=50%}
+
+![Yazıtipi Aileleri](images/yazitipi.png){width=50%}
 
 
 
@@ -1473,8 +1483,8 @@ Yukarıdaki komutu sahanlığa yazarsanız belgenizin ana yazıtipi boyutu
 ## Renk Kullanmak
 
 LaTeX'de renkler
-[color](http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/required/graphics/color.pdf) ya da
-[xcolor](http://ftp.ntua.gr/mirror/ctan/macros/latex/contrib/xcolor/xcolor.pdf) paketleriyle kullanılır. İkinci paket daha
+[**color**](http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/required/graphics/color.pdf) ya da
+[**xcolor**](http://ftp.ntua.gr/mirror/ctan/macros/latex/contrib/xcolor/xcolor.pdf) paketleriyle kullanılır. İkinci paket daha
 güçlüdür.
 
 
@@ -1537,7 +1547,9 @@ edilebilir. Aşağıda karışımın nasıl hazırlanabileceği gösterilmiştir
 
 İkinci yol `\definecolor` komutuyla renk modelleri kullanmaktır.
 
-| Model | Açıklama |
+Table: (\#tab:renkmod) Renk Modelleri
+
+| **Model** | **Açıklama** |
 | :--- | :--- |
 | gray | Grinin tonları (0-1). 0 (siyah), 1 (beyaz). Yani 0.95 çok açık gri, 0.30 koyu gri olur. |
 | rgb | Red, Green, Blue (0-1). Üç renk (kırmızı, yeșil, mavi) 0 ile 1 arasında bir sayıyla temsil edilir. |

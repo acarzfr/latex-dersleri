@@ -297,7 +297,7 @@ Editörden yararlanmanın diğer bir yolu "Kaynakça $\rightarrow$
 Kaynakça Kaydı Ekle..." yolunu izlemektir. Bu yolu izlediğinizde
 aşağıdaki pencere açılır (örnek TeXstudio editörüne aittir).
 
-![](images/tex-studio.png){width=60%}
+![](images/tex-studio.png){width=60%, align="center"}
 
 Pencerenin solunda kaydı eklemek istediğiniz dosyayı ve ortada kayıt
 türünü belirtir, sağda da kaynağın bilgilerini girersiniz. Zorunlu
@@ -351,7 +351,7 @@ derlenmesi gerekir. BiBTeX programı, editörde "Araçlar $\rightarrow$ Kaynakç
 uçbirimde sırasıyla
 
 
-```
+```bash
 pdflatex kaynakdosya
 bibtex kaynakdosya
 pdflatex kaynakdosya
@@ -398,7 +398,7 @@ LaTeX'de dizin oluşturabilmek için sahanlığa
 
 
 komutları girilir. Birinci komut dizin için gerekli olan
-[makeidx](http://ftp.ntua.gr/mirror/ctan/macros/latex/base/makeindx.pdf) paketini çağırır, ikinci komut ise dizinleme
+[**makeidx**](http://ftp.ntua.gr/mirror/ctan/macros/latex/base/makeindx.pdf) paketini çağırır, ikinci komut ise dizinleme
 komutlarını etkinleştirir.
 
 Dizinde gösterilmek istenen madde, `\index` komutunun değişkeni olarak
@@ -420,7 +420,7 @@ numaralarıyla birlikte, kaynak dosyayla adı aynı fakat uzantısı `.idx`
 olan bir dosyaya kaydeder (bu dosyaya *ham dosya* denir). Bu dosyanın
 `makeindex` programından geçirilmesi gerekir. Bu editörde "Araçlar $\rightarrow$ Dizin" yoluyla yapılır. Aynı şey uçbirimde,
 
-```
+```bash
 makeindex kaynakdosya
 ```
 
@@ -450,7 +450,7 @@ düzeltme en son yapılmalıdır.
 
 Birden fazla dizin oluşturmak isterseniz (örneğin biri *normal dizin*
 diğeri de *simgeler dizini*)
-[index](http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/index/index.pdf) paketini kullanabilirsiniz. Her dizin paket eklendikten ve `\makeindex` komutu sahanlıkta
+[**index**](http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/index/index.pdf) paketini kullanabilirsiniz. Her dizin paket eklendikten ve `\makeindex` komutu sahanlıkta
 verildikten sonra `\newindex` komutuyla tanıtılır.
 
 
@@ -486,7 +486,7 @@ Birinci komut, "kuvvet" kelimesini normal dizine, ikinci komut $\vec{F}$ simgesi
 Belge derlendikten sonra iki tane `\makeindex` komutu uçbirimde,
 
 
-```latex
+```bash
 makeindex kaynakdosya.ndx -o kaynakdosya.nnd 
 makeindex kaynakdosya.sdx -o kaynakdosya.snd 
 ```
@@ -504,7 +504,7 @@ makeindex kaynakdosya.sdx -o kaynakdosya.snd
 komutları verilir. Ardından belge tekrar derlenerek dizinler yazdırılır.
 
 Çoklu dizin için diğer bir seçenek
-[multind](https://www.ctan.org/pkg/multind) paketini kullanmaktır. Görece
+[**multind**](https://www.ctan.org/pkg/multind) paketini kullanmaktır. Görece
 index paketine göre daha pratiktir. Sahanlığa
 
 
@@ -529,7 +529,7 @@ parantezler içinde dizin adı belirtilerek girilir.
 Bu defa `makeindex` programı uçbirimde
 
 
-```latex
+```bash
 makeindex normal
 makeindex simge
 ```

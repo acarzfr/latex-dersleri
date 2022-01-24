@@ -14,11 +14,11 @@ herhangi bir pakete gerek olmadan yazabilirsiniz. Ancak çok sayıda
 karmaşık formül içeren bilimsel bir belge yazma niyetindeyseniz temel
 [AMS](https://www.ams.org/publications/authors/tex/amslatex){texel="noreferrer noopener"
 target="_blank"} paketlerini kullanmanız gerekir. Bu paketler
-[amsmath](http://ftp.ntua.gr/mirror/ctan/macros/latex/required/amsmath/amsmath.pdf){texel="noreferrer noopener"
+[**amsmath**](http://ftp.ntua.gr/mirror/ctan/macros/latex/required/amsmath/amsmath.pdf){texel="noreferrer noopener"
 target="_blank"} ,
-[amssymb](https://texdoc.net/texmf-dist/doc/fonts/amsfonts/amssymb.pdf){texel="noreferrer noopener"
+[**amssymb**](https://texdoc.net/texmf-dist/doc/fonts/amsfonts/amssymb.pdf){texel="noreferrer noopener"
 target="_blank"} ve
-[amsfonts](http://ftp.ntua.gr/mirror/ctan/fonts/amsfonts/doc/amsfonts.pdf){texel="noreferrer noopener"
+[**amsfonts**](http://ftp.ntua.gr/mirror/ctan/fonts/amsfonts/doc/amsfonts.pdf){texel="noreferrer noopener"
 target="_blank"}'dir.
 
 
@@ -164,9 +164,10 @@ ${a,b,c}\neq\{a,b,c\}$
 ${a,b,c}\neq\{a,b,c\}$
 
 
-Kullanılabilecek tüm gruplandırıcı işaretler aşağıdaki tabloda
+Kullanılabilecek tüm gruplandırıcı işaretler Tablo \@ref(tab:grup)'de
 gösterilmiştir.
 
+Table: (\#tab:grup) Gruplandırıcılar
 
 |    |     |    |
 |:---|:----|:---|
@@ -227,7 +228,9 @@ komutları da parantezleri biraz büyütür.
 \]
 
 
-Oklar için aşağıdaki komutlar kullanılır.
+Oklar için Tablo \@ref(tab:oklar)'deki komutlar kullanılır.
+
+Table: (\#tab:oklar) Oklar
 
 |   |   |   |   |
 |:--|:--|:--|:--|
@@ -280,6 +283,8 @@ $\xrightarrow[X]{a+b}$
 ## Yunan Harfleri
 
 Yunan harfleri matematikte yaygın olarak kullanılır. Bu harfler ters eğik çizgiden sonra harfin adı yazılarak elde edilir. Eğer ilk harf küçük ise küçük, büyükse de büyük harf elde edilir. Bazı büyük Yunanca harfler Latin harfleri gibi göründüğünden (örneğin, büyük harf Alpha ve Beta yalnızca sırasıyla "A" ve "B"dir) ayrıca tanımlanmamışlardır. Küçük harf epsilon, theta, kappa, phi, pi, rho ve sigma iki farklı sürümde sunulmaktadır. Alternatif sürümü, harf adının önüne “var” eklenerek oluşturulur.
+
+Table: (\#tab:yunan) Yunan Harfleri
 
   |                           |                               |                            |                           |
   |           :--             |              :--                  |    :--                |         :--               |
@@ -618,9 +623,9 @@ değiştirmek isteyebilirsiniz.
 LaTeX'de matematik kipindeki yazıların biçemleri aşağıdaki komutlar
 kullanılarak değiştirilir.
 
+Table: (\#tab:matyazi) Matematik  Kipinde Yazı Biçemleri
 
-
-|  Komut    |      Görünüm         |
+|  **Komut**    |      **Görünüm**         |
 |  :--   |  :--      |
 |  `\mathnormal{ABC def 123}` |  $ABC def 123$|
  | `\mathrm{ABC def 123}`      | $\mathrm{ABC def 123}$|
@@ -1229,6 +1234,8 @@ değiştirme olanağını verir.
 Buradaki `<stil adı>` kullanmak istediğiniz stildir. Bu komuttan sonra
 tanımlanmış tüm teoremler bu stili kullanacaktır. LaTeX'de önceden
 tanımlanmış stiller aşağıdakilerdir:
+
+Table: (\#tab:teorem) Teorem Stilleri
 
 |**Stil Adı**  | **Açıklama**      |     **Görünüm**         |  
 |  :---       |    :--          |  :--          | 

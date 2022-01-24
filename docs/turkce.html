@@ -24,7 +24,7 @@
 <meta name="author" content="Zafer Acar" />
 
 
-<meta name="date" content="2022-01-24" />
+<meta name="date" content="2022-01-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -305,16 +305,16 @@ $$
 <div class="sourceCode" id="cb14"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb14-1"><a href="turkce.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[T1]{<span class="ex">fontenc</span>}</span>
 <span id="cb14-2"><a href="turkce.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[turkish]{<span class="ex">babel</span>}</span></code></pre></div>
 <p>komutlarının verilmesi gerekir.</p>
-<p><code>T1</code> seçenekli <code>fontenc</code> paketi yazıtipi kodlamasıyla ilgili bir paket
+<p><code>T1</code> seçenekli <strong>fontenc</strong> paketi yazıtipi kodlamasıyla ilgili bir paket
 olup, hecelemenin doğru şekilde yapılmasını sağlar. Bir çok Avrupa
-dilinde de <code>T1</code> seçeneğiyle kullanılır. <code>turkish</code> seçenekli <code>babel</code>
+dilinde de <code>T1</code> seçeneğiyle kullanılır. <code>turkish</code> seçenekli <strong>babel</strong>
 paketi de Chapter, Table, Contents,… gibi isimlerin Türkçeleşmesi
 (Bölüm, Tablo, İçindekiler,…) içindir.</p>
 <blockquote>
 <p>Yakın zamana kadar ö, ş, ç,… gibi Türkçe karakterlerin
 kullanılabilmesi için sahanlığa <code>\usepackage[utf8]{inputenc}</code> ya da
 <code>\usepackage[latin5]{inputenc}</code> komutlarından birinin verilmesi
-gerekiyordu. Bu paket (<code>inputenc</code>) girdi kodlamasını yöneten bir
+gerekiyordu. Bu paket (<strong>inputenc</strong>) girdi kodlamasını yöneten bir
 pakettir. Son güncellemelerle birlikte bu paketin kullanılma
 zorunluluğu ortadan kalkmıştır.</p>
 </blockquote>
@@ -326,7 +326,7 @@ zorunluluğu ortadan kalkmıştır.</p>
 <span id="cb15-5"><a href="turkce.html#cb15-5" aria-hidden="true" tabindex="-1"></a>  İşte  Türkçe ilk belgem.</span>
 <span id="cb15-6"><a href="turkce.html#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre></div>
 <p>Türkçe dışında ikinci bir dil kullanmak isterseniz, örneğin İngilizce,
-<code>babel</code> paketinin seçeneğini</p>
+<strong>babel</strong> paketinin seçeneğini</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb16-1"><a href="turkce.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[english,turkish]{<span class="ex">babel</span>}</span></code></pre></div>
 <p>şeklinde değiştirmeniz gerekir. Burada etkin olan dil Türkçedir.
 İngilizceyi etkin hale getirmek için <code>\selectlanguage{english}</code> komutu
@@ -398,7 +398,8 @@ gitbook.start({
 },
 "toc": {
 "collapse": "subsection"
-}
+},
+"info": false
 });
 });
 </script>

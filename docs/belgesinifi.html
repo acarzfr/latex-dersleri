@@ -24,7 +24,7 @@
 <meta name="author" content="Zafer Acar" />
 
 
-<meta name="date" content="2022-01-24" />
+<meta name="date" content="2022-01-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -308,14 +308,15 @@ bahsedelim.</p>
 <p>Başka sınıflar olmakla birlikte LaTeX’de varsayılan olarak kullanılan
 beş belge sınıfı vardır.</p>
 <table>
+<caption><span id="tab:belgesin">Tablo 1.1: </span> LaTeX’de Belge Sınıfları</caption>
 <colgroup>
 <col width="50%" />
 <col width="50%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Sınıf</th>
-<th align="left">Açıklama</th>
+<th align="left"><strong>Sınıf</strong></th>
+<th align="left"><strong>Açıklama</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -342,16 +343,17 @@ beş belge sınıfı vardır.</p>
 </tbody>
 </table>
 <p>Bu beş sınıftan <code>article</code>, <code>report</code> ve <code>book</code> için kullanılabilecek
-seçenekler aşağıdadır.</p>
+seçenekler Tablo <a href="belgesinifi.html#tab:belgesec">1.2</a>’de gösterilmiştir.</p>
 <table>
+<caption><span id="tab:belgesec">Tablo 1.2: </span> LaTeX’de Belge Seçenekleri</caption>
 <colgroup>
 <col width="50%" />
 <col width="50%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Seçenek</th>
-<th align="left">Açıklama</th>
+<th align="left"><strong>Seçenek</strong></th>
+<th align="left"><strong>Açıklama</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -531,7 +533,8 @@ gitbook.start({
 },
 "toc": {
 "collapse": "subsection"
-}
+},
+"info": false
 });
 });
 </script>
