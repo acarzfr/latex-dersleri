@@ -5,6 +5,7 @@
 Bu bölümde LaTeX'le ilgili genel bilgilerden bahsedeceğiz.
 
 
+
 ## LaTeX Nedir?
 
 Önce TeX'le başlayalım. TeX, 1978'den
@@ -130,8 +131,11 @@ tarafından tek bir boş satır yani paragraf başı olarak algılanır.
 
 Boş bir satır yeni paragraf demektir, burada olduğu gibi.
 ```
- <!-- [Çıktı](https://github.com/acarzfr/latex-dersleri/blob/main/examples/ex1.pdf) --> 
 
+
+\insvg
+![](examples/ex1.svg) 
+\outsvg
 
 Komutlardan sonra gelen boşlukları LaTeX dikkate almaz. Komuttan sonra
 gerçekten bir boşluk bırakmak için, ya `{}` ve ardından boşluk girilir
@@ -143,7 +147,9 @@ ya da komut adından sonra özel bir boşluk komutu kullanılır.
 \LaTeX{} boşluk var.\\
 \LaTeX\ boşluk komutuyla  boşluk.
 ```
- <!-- [Çıktı](https://github.com/acarzfr/latex-dersleri/blob/main/examples/ex2.pdf) --> 
+\insvg
+![](examples/ex2.svg)
+\outsvg
 
 ### Özel amaçlı karakterler
 
@@ -1173,7 +1179,9 @@ Bir listeyi numaralı şekilde dizmek için `enumerate` ortamı kullanılır.
  \item madde 2
 \end{enumerate}
 ```
-
+\insvg
+![](examples/ex3.svg) 
+\outsvg
 
 Numarasız, özel işaretli listeler için `itemize` ortamı kullanılır ve bu
 ortamda madde işareti değiştirilebilir.

@@ -145,6 +145,15 @@
 \usepackage{makeidx}
 \makeindex
 
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{graphicx}
+\usepackage{svg}
+\svgsetup{%inkscapeformat={png},inkscapedpi=600,
+    inkscapearea=page,
+}%
+%\svgpath{{svg/}{./examples}}
 
 \frontmatter
 \ifLuaTeX
@@ -155,7 +164,7 @@
 
 \title{LaTeX Dersleri}
 \author{Zafer Acar}
-\date{2022-01-25}
+\date{2022-01-27}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Teorem}[chapter]
@@ -177,7 +186,14 @@
 \begin{document}
 \maketitle
 
-
+\newcommand{\insvg}{\begingroup%
+\renewcommand{\includegraphics}{\includesvg}%
+\noindent\rule{\textwidth}{1pt}%
+}%
+\newcommand{\outsvg}{%
+\\\noindent\rule{\textwidth}{1pt}%
+\endgroup%
+}%
 
 {
 \setcounter{tocdepth}{2}
@@ -284,6 +300,10 @@ Bütün bir satırın boş bırakılması LaTeX tarafından paragraf başı olar
 \end{Highlighting}
 \end{Shaded}
 
+\insvg
+
+\includegraphics{examples/ex1.svg} \outsvg
+
 Komutlardan sonra gelen boşlukları LaTeX dikkate almaz. Komuttan sonra gerçekten bir boşluk bırakmak için, ya \texttt{\{\}} ve ardından boşluk girilir ya da komut adından sonra özel bir boşluk komutu kullanılır.
 
 \begin{Shaded}
@@ -293,6 +313,10 @@ Komutlardan sonra gelen boşlukları LaTeX dikkate almaz. Komuttan sonra gerçek
 \FunctionTok{\textbackslash{}LaTeX\textbackslash{} }\NormalTok{boşluk komutuyla  boşluk.}
 \end{Highlighting}
 \end{Shaded}
+
+\insvg
+
+\includegraphics{examples/ex2.svg} \outsvg
 
 \hypertarget{uxf6zel-amauxe7lux131-karakterler}{%
 \subsection{Özel amaçlı karakterler}\label{uxf6zel-amauxe7lux131-karakterler}}
@@ -1168,6 +1192,10 @@ Bir listeyi numaralı şekilde dizmek için \texttt{enumerate} ortamı kullanıl
 \KeywordTok{\textbackslash{}end}\NormalTok{\{}\ExtensionTok{enumerate}\NormalTok{\}}
 \end{Highlighting}
 \end{Shaded}
+
+\insvg
+
+\includegraphics{examples/ex3.svg} \outsvg
 
 Numarasız, özel işaretli listeler için \texttt{itemize} ortamı kullanılır ve bu ortamda madde işareti değiştirilebilir.
 
