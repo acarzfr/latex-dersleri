@@ -31125,7 +31125,7 @@ function make(args, cellInfo, k) {
         args.code = $.trim(args.code);
     }
     var defaults = {"editor": "codemirror",
-                    "evalButtonText": "Evaluate",
+                    "evalButtonText": "Değerlendir",
                     "hide": ["messages"],
                     "mode": "normal",
                     "replaceOutput": true,
