@@ -1,0 +1,522 @@
+.sagecell_messages div {
+    margin-bottom: 12pt !important;
+}
+
+.sagecell_sliderControl {
+    max-width: 40em !important;
+    margin-right: 1.0em !important;
+    margin-left: 0.5em !important;
+}
+
+.sagecell_multiSliderContainer {
+    margin-left: 1.0em !important;
+    whitespace: nowrap !important;
+}
+
+.sagecell_multiSliderControl {
+    display: inline-block !important;
+    margin-right: 0.5em !important;
+    margin-left: 0.5em !important;
+    margin-top: 0.25em !important;
+}
+
+.sagecell_colorSelector {
+    display: inline-block !important;
+    width: 2em !important;
+    height: 2em !important;
+    border: 2px solid gray !important;
+    border-radius: 3px !important;
+    padding: 1px !important;
+    cursor: pointer !important;
+    vertical-align: middle !important;
+}
+
+.sagecell .error, .sagecell .stderr {
+    color: red !important;
+}
+
+.sagecell .colorpicker {
+    z-index: 10 !important;
+}
+
+.sagecell .CodeMirror {
+    border: 1px solid !important;
+    height: auto !important;
+}
+
+.sagecell .CodeMirror-scroll {
+    min-height: 3em !important;
+    max-height: 14em !important;
+}
+
+.sagecell .CodeMirror-fullscreen .CodeMirror-scroll {
+    max-height: none !important;
+}
+
+.sagecell .CodeMirror-hints {
+    padding-right: 10px !important;
+}
+
+.sagecell .ui-dialog-content {
+    font-size: 80% !important;
+}
+
+.sagecell_input {
+    overflow: hidden !important;
+    padding-right: 2px !important;
+}
+
+.sagecell button.sagecell_evalButton {
+    cursor: default !important;
+}
+
+.sagecell_output {
+    padding-right: 2px !important;
+}
+
+.sagecell_output_elements {
+    margin-top: 0.5em !important;
+}
+
+.sagecell_permalink {
+    padding-right: 5px !important;
+    text-align: right !important;
+    position: relative !important;
+}
+
+.sagecell_permalink_result {
+    position: absolute !important;
+    padding-right: 5px !important;
+    text-align: right !important;
+    right: 3px !important;
+    z-index: 100 !important;
+    background-color: white !important;
+    border: 1px solid black !important;
+    border-radius: 3px !important;
+    padding: 5px !important;
+}
+
+.sagecell_permalink_result a:not([href]) {
+    color: gray !important;
+    text-decoration: none !important;
+    cursor: default !important;
+}
+
+.sagecell_permalink_result img {
+    display: inline-block !important;
+    background-color: lightgray !important;
+    width: 200px !important;
+    height: 200px !important;
+}
+
+.sagecell_sessionContainer {
+    position: relative !important;
+}
+
+.sagecell_sessionContainer:after {
+    display: table !important;
+    content: " " !important;
+    clear: both !important;
+}
+
+.sagecell_sessionOutput {
+    position: relative !important;
+    border: 2px solid !important;
+    padding: 5px !important;
+    margin-top: 2px !important;
+    min-height: 16px !important;
+    overflow-x: auto !important;
+}
+
+.sagecell_sessionOutput pre {
+    margin: 0px !important;
+}
+
+.sagecell_sessionOutput.sagecell_active {
+    border-color: #080 !important;
+}
+
+.sagecell_poweredBy {
+    float: right !important;
+    padding: 3px 5px 5px 0px !important;
+    text-align: right !important;
+    overflow: visible !important;
+    font-size: 80% !important;
+}
+
+.sagecell_poweredBy img {
+    vertical-align: -5px !important;
+    border-style: none !important;
+    text-decoration: none !important;
+}
+
+.sagecell_spinner {
+    position: absolute !important;
+    right: 5px !important;
+    top: 5px !important;
+}
+
+.sagecell_sessionFiles {
+    width: 80% !important;
+    padding-bottom: 1.0em !important;
+}
+
+.sagecell_interactContainer {
+    position: relative !important;
+    padding: 15px 5px 5px 5px !important;
+    border: 2px solid lightgray !important;
+    margin-bottom: 2px !important;
+}
+
+.sagecell_bookmarks {
+    cursor: default !important;
+}
+
+.sagecell_interactContainer .sagecell_bookmarks {
+    position: absolute !important;
+    right: 3px !important;
+    top: 3px !important;
+}
+
+.sagecell_bookmarks div {
+    display: inline-block !important;
+    height: 1.5em !important;
+    vertical-align: bottom !important;
+    overflow-y: hidden !important;
+    font-size: 1.3em !important;
+    font-family: Arial !important;
+    color: #8c8c8c !important;
+    transition: color 0.25s ease-out !important;
+}
+
+.sagecell_bookmarks div:first-child {
+    color: transparent !important;
+    visibility: hidden !important;
+}
+
+.sagecell_bookmarks div:last-child {
+    margin-left: 10px !important;
+    width: 1.5em !important;
+}
+
+.sagecell_bookmarks div:last-child:before {
+    display: inline-block !important;
+    content: "\2605" !important;
+}
+
+.sagecell_bookmarks div.sagecell_export {
+    visibility: visible !important;
+    transition: color 0.5s 0.5s !important;
+    color: inherit !important;
+    cursor: pointer !important;
+}
+
+.sagecell_export:before {
+    content: "\22ef" !important;
+}
+
+.sagecell_bookmarks input {
+    border: 1px solid black !important;
+    border-radius: 3px !important;
+    vertical-align: 50% !important;
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    font-family: monospace !important;
+}
+
+.sagecell_sessionOutput.sagecell_active .sagecell_bookmarks div:last-child:hover {
+    color: #ffa500 !important;
+    cursor: pointer !important;
+}
+
+.sagecell_bookmarks_list.ui-menu {
+    display: inline-block !important;
+    min-width: 15em !important;
+    cursor: default !important;
+    z-index: 99 !important;
+}
+
+.sagecell_bookmarks_list.ui-menu li.ui-state-disabled {
+    opacity: 1 !important;
+    margin: 0px !important;
+}
+
+.sagecell_bookmarks_list > li > a > input,
+.sagecell_bookmarks_list > li > a > div:first-child {
+    display: inline-block !important;
+    width: 85% !important;
+    border: none !important;
+    border-radius: 3px !important;
+}
+
+.sagecell_bookmarks_list > li > a > div:last-child {
+    float: right !important;
+    width: 1.5em !important;
+    text-align: center !important;
+    font-weight: bold !important;
+    color: #777 !important;
+    cursor: pointer !important;
+    transition: 0.25s color !important;
+}
+
+.sagecell_bookmarks_list > li:not(:last-child):not(:hover) > a > div:last-child {
+     display: none !important;
+}
+
+.sagecell_bookmarks_list > li > a > div:last-child:hover {
+    color: darkred !important;
+}
+
+.sagecell_bookmarks_list > li > a > div:last-child:before {
+    content: "\2716" !important;
+}
+
+.sagecell_bookmarks_list > li:last-child > a > div:hover {
+    color: darkblue !important;
+}
+
+.sagecell_bookmarks_list > li:last-child > a > div:before {
+    content: "+" !important;
+}
+
+.sagecell_interactOutput {
+    padding: 10px !important;
+    padding-right: 2em !important;
+    padding-left: 2em !important;
+    overflow-x: auto !important;
+    vertical-align: top !important;
+}
+
+.sagecell_interactValueBox {
+    border: 1px solid transparent !important;
+    background-color: transparent !important;
+    vertical-align: baseline !important;
+    font-family: monospace !important;  /* Required since dynamic input box size is determined by monospaced fonts */
+    max-width: 10ex !important;
+}
+
+.sagecell_interactValueBox:hover {
+    border-color: lightgray !important;
+}
+
+.sagecell_interactValueBox:focus {
+    border-color: gray !important;
+}
+
+.sagecell_interactControlCell {
+    display: inline-table !important;
+    vertical-align: top !important;
+    min-width: 200px !important;
+}
+
+.sagecell_interactControlLabel {
+    display: table-cell !important;
+    text-align: right !important !important;
+    vertical-align: middle !important !important;
+    padding-right: 0.5ex !important !important;
+    padding-top: 0.6ex !important !important;
+    padding-bottom: 0.6ex !important !important;
+    min-width: 10ex !important;
+    overflow-wrap: break-word !important;
+}
+
+.sagecell_interactControl {
+    display: table-cell !important;
+    width: 100% !important;
+    height: 100% !important;
+    vertical-align: middle !important;
+}
+
+.sagecell_interactContainer .sagecell_interactControl {
+    /* only pad if we are setting up the layout.  If we have an inline control
+       don't pad, but leave it up to the user */
+    padding: 1ex !important;
+}
+
+.sagecell_sliderContainer {
+    display: table !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 700px !important;
+    min-width: 200px !important;
+}
+
+.sagecell_sliderContainer > div:first-child {
+    display: table-cell !important;
+    width: 100% !important;
+    vertical-align: middle !important;
+}
+
+.sagecell_sliderContainer > div:first-child + div {
+    display: table-cell !important;
+    min-width: 11ex !important;
+}
+
+.sagecell_interactTextbox[size="0"] {
+    width: 100% !important;
+    max-width: 40em !important;
+}
+
+.sagecell_dirtyControl {
+    box-shadow: 0px 0px 2px 1px #c00 !important;
+    transition: box-shadow 1s !important;
+    border-radius: 2px !important;
+}
+
+.sagecell_commands, .sagecell .ui-widget .sagecell_commands {
+    width: 100% !important;
+    height: 200px !important;
+    border: 1px solid !important;
+    font-family: monospace !important;
+    font-size: 10pt !important;
+}
+
+.sagecell_editor {
+    margin-bottom: 8px !important;
+}
+
+.sagecell_options {
+    display: inline-block !important;
+    margin-right: 2px !important;
+    float: right !important;
+    text-align: right !important;
+    font-size: 80% !important;
+}
+
+.sagecell_fullScreen {
+    position: absolute !important;
+    right: 1.5em !important;
+    top: 0.5em !important;
+    z-index: 10 !important;
+    padding: 2px !important;
+    color: rgb(128,128,128) !important;
+}
+
+.sagecell_editor div.ui-accordion-content.ui-helper-reset {
+    padding: 1em 0.5em !important;
+    font-size: 90.9% !important;
+}
+
+.sagecell_advancedFrame {
+    border-radius: 5px !important;
+    background-color: #ddf !important;
+    border: 1px solid !important;
+    padding: 0.2em !important;
+    display: inline-block !important;
+    width: 300px !important;
+    overflow: hidden !important;
+    margin-left: 3em !important;
+    margin-bottom: 1em !important;
+    vertical-align: top !important;
+}
+
+.sagecell_advancedTitle {
+    cursor: default !important;
+}
+
+.sagecell_advancedFields {
+    border: 1px solid gray !important;
+    background-color: white !important;
+    padding: 5px !important;
+}
+
+.sagecell_fileList li {
+    list-style: none !important;
+    position: relative !important;
+}
+
+.sagecell_fileName {
+    position: relative !important;
+    display: inline-block !important;
+    white-space: nowrap !important;
+    width: 230px !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+.sagecell_deleteButton {
+    position: absolute !important;
+    left: -1.2em !important;
+    cursor: pointer !important;
+    margin-right: 5px !important;
+}
+
+.sagecell_deleteButton:hover {
+    color: red !important;
+}
+
+.sagecell_deleteButton:active {
+    color: darkred !important;
+}
+
+.sagecell_deleteButton:before {
+    content: "\2716" !important;
+}
+
+.sagecell table.table_form tr.row-a {
+    background-color: #f8f8f8 !important;
+}
+
+.sagecell table.table_form tr.row-b {
+    background-color: #efefef !important;
+}
+
+.sagecell table.table_form td {
+    padding: 5px 15px !important;
+    color: #00a !important;
+}
+
+.sagecell .sagecell-templates .hide {
+ display: none !important;   
+}
+
+.sagecell .sagecell-templates .pull-right {
+    float: right !important;
+}
+
+.sagecell .sagecell-templates .lighten {
+    color: gray !important;
+}
+
+/* These colors are constructed in
+ * notebook/static/notebook/less/ansicolors.less
+ * but were copied from
+ * notebook/static/style/ipython.min.css
+ * and processed in Python via
+ * replace("{\n  ", "{").replace("\n}", "}").replace("\n.","\n.sagecell .")
+ */
+.sagecell .ansi-black-fg {color: #3E424D !important;}
+.sagecell .ansi-black-bg {background-color: #3E424D !important;}
+.sagecell .ansi-black-intense-fg {color: #282C36 !important;}
+.sagecell .ansi-black-intense-bg {background-color: #282C36 !important;}
+.sagecell .ansi-red-fg {color: #E75C58 !important;}
+.sagecell .ansi-red-bg {background-color: #E75C58 !important;}
+.sagecell .ansi-red-intense-fg {color: #B22B31 !important;}
+.sagecell .ansi-red-intense-bg {background-color: #B22B31 !important;}
+.sagecell .ansi-green-fg {color: #00A250 !important;}
+.sagecell .ansi-green-bg {background-color: #00A250 !important;}
+.sagecell .ansi-green-intense-fg {color: #007427 !important;}
+.sagecell .ansi-green-intense-bg {background-color: #007427 !important;}
+.sagecell .ansi-yellow-fg {color: #DDB62B !important;}
+.sagecell .ansi-yellow-bg {background-color: #DDB62B !important;}
+.sagecell .ansi-yellow-intense-fg {color: #B27D12 !important;}
+.sagecell .ansi-yellow-intense-bg {background-color: #B27D12 !important;}
+.sagecell .ansi-blue-fg {color: #208FFB !important;}
+.sagecell .ansi-blue-bg {background-color: #208FFB !important;}
+.sagecell .ansi-blue-intense-fg {color: #0065CA !important;}
+.sagecell .ansi-blue-intense-bg {background-color: #0065CA !important;}
+.sagecell .ansi-magenta-fg {color: #D160C4 !important;}
+.sagecell .ansi-magenta-bg {background-color: #D160C4 !important;}
+.sagecell .ansi-magenta-intense-fg {color: #A03196 !important;}
+.sagecell .ansi-magenta-intense-bg {background-color: #A03196 !important;}
+.sagecell .ansi-cyan-fg {color: #60C6C8 !important;}
+.sagecell .ansi-cyan-bg {background-color: #60C6C8 !important;}
+.sagecell .ansi-cyan-intense-fg {color: #258F8F !important;}
+.sagecell .ansi-cyan-intense-bg {background-color: #258F8F !important;}
+.sagecell .ansi-white-fg {color: #C5C1B4 !important;}
+.sagecell .ansi-white-bg {background-color: #C5C1B4 !important;}
+.sagecell .ansi-white-intense-fg {color: #A1A6B2 !important;}
+.sagecell .ansi-white-intense-bg {background-color: #A1A6B2 !important;}
+.sagecell .ansi-default-inverse-fg {color: #FFFFFF !important;}
+.sagecell .ansi-default-inverse-bg {background-color: #000000 !important;}
+.sagecell .ansi-bold {font-weight: bold !important;}
+.sagecell .ansi-underline {text-decoration: underline !important;}
