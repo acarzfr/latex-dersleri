@@ -6,6 +6,7 @@ rmd_files:
   - 03-ozel-sayfalar.Rmd
   - 99-kaynakca.Rmd
 output_dir: docs
+
 language:
   label:
     fig: 'Şekil '
@@ -28,3 +29,4 @@ language:
     chapter_name: 'Bölüm '
     appendix_name: 'Ek '
 delete_merged_file: true
+
