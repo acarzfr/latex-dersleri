@@ -126,16 +126,17 @@ tarafından tek bir boş satır yani paragraf başı olarak algılanır.
 
 
 ```latex
- İster bir boşluk, isterseniz de çok         sayıda boşluk bırakın. 
-İkisi de bir boşluk gibi işlem görür. 
+ İster bir boşluk, isterseniz de çok         sayıda boşluk bırakın.
+İkisi de bir boşluk gibi işlem görür. Değişen bir şey yok.
 
-Boş bir satır yeni paragraf demektir, burada olduğu gibi.
+Ayrıca boş bir satır yeni paragraf demektir, burada olduğu gibi.
 ```
 
-
+:::{.border}
 \insvg
-![](examples/ex1.svg) 
+![](examples/ex1.svg){width=100%}
 \outsvg
+:::
 
 Komutlardan sonra gelen boşlukları LaTeX dikkate almaz. Komuttan sonra
 gerçekten bir boşluk bırakmak için, ya `{}` ve ardından boşluk girilir
@@ -147,9 +148,11 @@ ya da komut adından sonra özel bir boşluk komutu kullanılır.
 \LaTeX{} boşluk var.\\
 \LaTeX\ boşluk komutuyla  boşluk.
 ```
+:::{.border}
 \insvg
 ![](examples/ex2.svg)
 \outsvg
+:::
 
 ### Özel amaçlı karakterler
 
