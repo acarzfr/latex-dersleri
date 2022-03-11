@@ -25,10 +25,5 @@ github-repo: acarzfr/latex-dersleri
 # Sunuş {-}
 
 
-```latex
-\documentclass{article}
-\begin{document}
-  İşte ilk belgem.
-\end{document}
-```
+
 
