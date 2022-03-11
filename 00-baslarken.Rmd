@@ -1,0 +1,299 @@
+\mainmatter
+
+# Başlarken
+
+## TeX
+
+ Stanford Üniversitesi'nde bilgisayar bilimleri profesörü olan [Donald Knuth](https://www-cs-faculty.stanford.edu/~knuth/),\index{Knuth, Donald E.} başyapıtı ``The Art of Computer Programming'' (Bilgisayar Programlama Sanatı) serisini yazdığında dönemin teknolojilerinin serisini yüksek kalitede basmaya olanak vermediğini görür. Bunun üzerine yüksek kalitede belgeler oluşturulabilecek bir dizgi programı yazmaya karar verir. TeX, böylece 1977'de yazılmaya başlanır.
+
+TeX'in ilk genel versiyonu 1982'de çıkmıştır ve o tarihten itibaren güncellenip iyileştirilmiştir. Son gözden geçirilip düzenlenmesi 2014 yılında yapılmıştır.
+
+TeX'in sürüm sayısı $\pi$ sayısına her defasında bir ondalık eklenerek ifade edilir ve bugün $3.14159265$ sayılı sürümdedir. Bunun anlamı her yeni sürümün kendinden öncekileri içermesi ve bu sayede eski sürümle oluşturulan bir belgenin sonraki sürümlerde de geçerli olmasıdır. 
+
+
+
+## LaTeX
+
+LaTeX (La(mport)TeX), [Leslie Lamport](http://www.lamport.org/)\index{Lamport, Leslie} tarafından 1978'de yazılmaya başlanmış olup TeX üzerine kurulmuştur. Amacı TeX'i daha işlevli ve kolay hale getirmektir.
+
+İki program arasındaki ilişki şöyle ifade edilebilir: *TeX bir vücutsa LaTeX'de onun üzerine giydirilen bir elbisedir*  [@Pantieri2017]. 
+
+Günümüzde  Frank Mittelbach\index{Mittelbach, Frank} liderliğinde bir grup programcı tarafından güncelleştirilmektedir. 
+
+
+## Temel Farklılıklar
+
+LaTeX, genelde WYSIWYG (*Ne Görüyorsan Onu Alırsın*) editörleriyle karşılaştırılır. WYSIWYG, Microsoft
+Word, Libreoffice Writer gibi kelime işlemcilere ya da Adobe Indesign
+gibi programlara verilen genel bir isimdir. Hepsinin ortak özelliği,
+girdi ile çıktının aynı anda ve birlikte görünmesidir.
+
+LaTeX'de girdi ve çıktı ekranı farklıdır ve
+çıktıyı görmek için girdinin derleme işleminden geçmesi gerekir. LaTeX'in zor gibi görünmesinin bir nedeni de komutlarla çalışmasıdır.  Gerçekten de WYSIWYG programlarına alışkın bir kullanıcı için bu süreç başlangıçta biraz sıkıcı ve  zor  olabilir. Ancak belli bir aşamaya geldiğinizde komutlarla çalışmanın aslında işleri kolaylaştırdığını göreceksinizdir. Örneğin LaTeX'le  yüzlerce hatta  binlerce sayfadan oluşan bir kitabın  İçindekiler tablosunu oluşturmak için  sadece `\tableofcontents` komutunu girersiniz ve LaTeX bu komutu girdiğiniz yere  İçindekiler tablosunu hatasız bir şekilde oluşturur. Ayrıca örnekte görüldüğü gibi LaTeX komutları doğal dile^[Tabii ki İngilizce.] oldukça yakındır. "İçindekiler Tablosu''nun İngilizcesi "Table of Contents'' olup komut sadece harflerin küçük halde yan yana dizilmesiyle oluşur. Bu da işleri oldukça kolaylaştırır.
+
+Bir metnin genel görünümü ve okunabilirliği, metnin nasıl
+hizalandığından ve kesildiğinden büyük ölçüde etkilenir. LaTeX, tüm
+paragraf için hizalamayı ve kesmeleri optimize eden son derece gelişmiş
+TeX algoritmalarını kullanır. Kelime işlemciler ve diğer programlar,
+satır başına çalıştıkları için oldukça yetersiz kalırlar. Bu, diğer
+şeylerin yanı sıra düzensiz aralıklara ve birçok kısa çizgiye sebep
+olur. Sonuçları görmeniz için Microsoft Word 2008 (Mac), Adobe InDesign
+CS4 ve LaTeX'le dizilmiş bir metni [şuradan](http://www.rtznet.nl/zink/comparison.pdf) inceleyebilirsiniz.
+
+
+
+Sonuç, LaTeX'in diğer programların her ikisinden de üstün olduğunu
+açıkça gösterir: iki kat daha az tireleme kullanır ve yine de sözcük
+aralığındaki varyasyon, Word veya InDesign'dan belirgin şekilde daha
+azdır. LaTeX'te çok büyük sözcük aralığı içeren satırlar oluşmaz.
+
+
+## Neden LaTeX
+
+  - Ücretsizdir ve tüm işletim sistemlerinde düşük donanım gereksinimleriyle çalışır.
+
+  - Basit bir metin editörüyle bile kaynak dosyanızı düzenleyebilirsiniz. 
+
+  - Her sürüm bir önceki sürümü içerdiğinden şimdi hazırladığınız bir belgeyi on yıl sonra da kullanabilirsiniz, hiçbir zaman "Dosya bu sürümle uyumlu değil'' biçiminde bir uyarıyla karşılaşmazsınız.
+
+  - Bir belgedeki biçim veya metni diğer bir belgeye kolaylıkla
+    taşıyabilir ve düzenleyebilirsiniz. Bu, internetten bulabileceğiniz binlerce     şablonu kullanabileceğiniz anlamına gelir.
+
+  - Belgenizi LaTeX biçimlendirir, siz sadece içeriğe odaklanırsınız.
+
+  - Dipnot koymak, atıf yapmak, kaynakça, dizin ve içindekiler tablosu oluşturmak işten bile sayılmaz.
+
+  - Matematiksel formüller kullanacaksanız, bu LaTeX'in en güçlü olduğu konudur. Formülleri  belgenize adeta *inci dizer gibi* dizer.
+
+  - Çok yaygındır.^[Maalesef ülkemizde değil.] Uluslararası bir çok yayınevi (örneğin Springer) ve dergi yazarlardan LaTeX dosyalarını talep eder.  
+
+  - Bu kadar güzel görünen belgeleri  ancak LaTeX'le oluşturabilirsiniz. 
+  
+##  Önemli Yapılar
+
+### Komutlar
+
+LaTeX komutları bir geribölü (`\`) işaretiyle başlar ve ya sadece
+harflerden ya da bir tane harf olmayan karakterden oluşurlar. Komut
+yazıldıktan sonra ya boşluk, ya bir sayı ya da harf olmayan bir karakter
+gelebilir.
+
+Çoğu komut, zorunlu değişken alır. Bu zorunlu değişken komut adından
+sonra çengelli parantezler içine yazılır. Zorunlu değişken alan
+komutlar, zorunlu olmayan (isteğe bağlı) değişkenler de alabilir, bunlar
+da komut adından sonra gelen köşeli parantezler içine yazılırlar. Eğer
+değişkenler birden fazlaysa aralarına virgül koyularak ayrılır.
+
+
+```latex
+\:
+\LaTeX
+\item[...]
+\emph{...}
+\documentclass[...]{...}
+\subfloat[...][...]{...}
+\raisebox{...}[...][...]{...}
+\multicolumn{...}{...}{...}
+{\bfseries ...}
+```
+
+
+Fikir vermesi açısından yukarıda dokuz adet komut örneği verilmiştir.
+Birinci komut bir tane harf olmayan karakterden oluşan bir komuttur.
+İkincisi, değişkeni olmayan bir komuttur. Bazı harflerin büyük
+bazılarınınsa küçük olması komutların büyük-küçük harfe duyarlı olduğunu
+gösterir. Dokuzuncu komut ise bildirim şeklinde verilmiştir.
+
+### Paketler
+
+LaTeX'de bazı özelliklerin (renkli yazmak, şekil eklemek vb.)
+kullanılabilmesi için kaynak dosyaya bazı paketlerin eklenmesi gerekir.
+Bu, `\usepackage` komutuyla yapılır. Bu komutun zorunlu değişkenine
+paket adı, zorunlu olmayan kısmına ise paket seçenekleri yazılır:
+
+
+```latex
+\usepackage[<seçenekler>]{<paket adı>}
+```
+
+Bu komutla paketin kaynak dosyaya eklenmesi TeX dağıtımıyla sisteminize
+kurulmuş olan paketin belgeye çağrılarak işe koşulması demektir.
+
+### Ortamlar
+
+LaTeX'de ortamlar önemli bir yer tutar. Örneğin `document` bir ortamdır.
+Ortamları birden fazla ögeye uygulanan komutlar olarak düşünebiliriz.
+
+Bir ortam `\begin` komutuyla başlayıp `\end` komutuyla biter. Her iki
+komutun zorunlu değişkeni ortamın adıdır:
+
+
+```latex
+\begin{<ortam adı>}
+ ...
+\end{<ortam adı>}
+```
+
+### Gruplar
+
+Gruplar, ortam benzeri yapılardır. Grup `\begingroup` komutuyla başlar
+ve `\endgroup` komutuyla biter. Grubun içinde kullanılan bir bildirim
+sadece gruba uygulanır.
+
+### Boşluklar {#bosluk}
+
+LaTeX'de belgenizin metnini oluştururken ister klavyedeki Space, ister
+Tab tuşu ile boşluk bırakın, bu boşluklar LaTeX tarafından bir karakter
+boşluk olarak algılanır. Arka arkaya çok sayıda boşluk bırakılsa da
+LaTeX bunu tek bir boşluk olarak algılar.
+
+Bütün bir satırın boş bırakılması LaTeX tarafından paragraf başı olarak
+algılanır. Arka arkaya boş bırakılan çok sayıda boş satır LaTeX
+tarafından tek bir boş satır yani paragraf başı olarak algılanır.
+
+
+```latex
+ İster bir boşluk, isterseniz de çok         sayıda boşluk bırakın.
+İkisi de bir boşluk gibi işlem görür. Değişen bir şey yok.
+
+Ayrıca boş bir satır yeni paragraf demektir, burada olduğu gibi.
+```
+
+:::{.border}
+\insvg
+![](examples/ex1.svg){width=100%}
+
+
+\outsvg
+:::
+
+Komutlardan sonra gelen boşlukları LaTeX dikkate almaz. Komuttan sonra
+gerçekten bir boşluk bırakmak için, ya `{}` ve ardından boşluk girilir
+ya da komut adından sonra özel bir boşluk komutu kullanılır.
+
+
+```latex
+\LaTeX  boşluk yok.\\
+\LaTeX{} boşluk var.\\
+\LaTeX\ boşluk komutuyla  boşluk.
+```
+:::{.border}
+\insvg
+![](examples/ex2.svg)
+\outsvg
+:::
+
+### Özel amaçlı karakterler
+
+Aşağıdaki karakterlerin herbiri LaTeX'de özel bir amaç için kullanılır.
+Dolayısıyla bu karakterleri doğrudan kullanmak istenmeyen sonuçlara yol
+açabilir.
+
+```latex
+# $ %   &   {   }   ~  ^  _ \
+```
+
+Bu karakterleri çıktıda elde etmek isterseniz, sondaki hariç, başına bir
+geribölü koymanız gerekir. Sondaki için, yani bir geribölü sembolü elde
+etmek içinse `\textbackslash` komutunu kullanabilirsiniz. Eğer `\\`
+komutunu verirseniz yeni bir satır başlatmış olursunuz.
+
+Bu karakterlerden örneğin yüzde (`%`) karakteri kaynak dosyanızda yorum
+ya da açıklama yazmaya yarar. Bu sembolden sonra yazılanları LaTeX
+dikkate almaz ve çıktıda görünmez.
+
+
+Diğer karakterlerden örneğin (`$`) nin matematik kipini açma ve
+kapatmaya yarar. (`&`) karekteri tablo ve benzeri yapılarda dikey
+hizalama yapmak için veya sütun ayracı olarak kullanılır. Çengelli
+parantezlerden zaten yeterince bahsettik. (`#`) karakteri yeni komutlar
+tanımlamakta kullanılır. Tilda (`~`) ise genişlemeyen bir boşluk
+yaratmak için kullanılır. (`^`) ve (`_`) karakterleri de matematikte üst
+ve alt indis yazmak için kullanılır. Her birinin kullanımlarından yeri
+geldiğinde tekrar bahsedeceğiz.
+
+
+## Kurulum
+
+LaTeX'i kurmak için ilk olarak bir TeX dağıtımı edinmeniz gerekir.
+Dağıtımlar, dizgi sistemini ve LaTeX'de belge oluşturabilmek için
+gereken paketleri içerir.
+
+İkinci ihtiyaç duyacağınız şey bir LaTeX editörüdür. Edindiğiniz TeX
+dağıtımları genelde bir LaTeX editörüyle birlikte gelir. Tabi editör
+kişisel bir tercihtir ve bir LaTeX editörü yerine basit bir metin
+editörü kullanabilirsiniz. Ancak farklı işletim sistemleri için birçok
+iyi LaTeX editörü vardır ve bunların kod vurgulama, otomatik tamamlama,
+otomatik belge oluşturma gibi LaTeX'e özgü işlevleri vardır. Dolayısıyla
+LaTeX'de yeniyseniz bir editör kullanmanızı tavsiye ederiz.
+
+### GNU/Linux
+
+Linux sistemlere [MiKTeX](https://miktex.org/download) ya da [TeX
+Live](http://www.tug.org/texlive/) kurulabilir. MiKTeX'in indirme sayfasında Ubuntu, Mint,
+Debian, Fedora, CentOS ve openSUSE gibi Linux dağıtımlarında nasıl
+kurulacağı anlatılmıştır. TeX Live ise tüm popüler Linux dağıtımlarının
+depolarında mevcut olup, paket yöneticisi ya da komut satırı yardımıyla
+kurulabilir. Örneğin Ubuntu, Debian, Mint, Pardus gibi `.deb` uzantılı
+paketlerin kullanıldığı dağıtımlarda
+
+```bash
+sudo apt-get install texlive-base
+```
+
+komutuyla temel kurulum,
+
+```bash
+sudo apt-get install texlive-full
+```
+
+komutuyla da tam kurulum yapılır.
+
+### Mac OS
+
+Mac OS kullanıcıları için iki seçenek mevcuttur:
+[MiKTeX](https://miktex.org/download) ya da
+[MacTeX](http://www.tug.org/mactex/). MiKTeX kurulumu için `.dmg` uzantılı, MacTeX içinse
+`.pkg` uzantılı dosya indirilir ve standart kurulum yapılır.
+
+### Windows
+
+Windows için aşağıdaki dağıtımlardan birini kurabilirsiniz.
+
+-   [MiKTeX](https://miktex.org/download)
+-   [TeX Live](http://www.tug.org/texlive/)
+-   [proTeXt](https://tug.org/protext/)
+
+MiKTeX veya TeX Live dağıtımını kurarsanız sisteminize
+[TeXworks](https://www.tug.org/texworks/) editörü de kurulur. proTeXt dağıtımı MiKTeX tabanlı bir
+dağıtım olup, tüm paketleri içerir ve beraberinde
+[TeXstudio](https://texstudio.org/) editörüyle gelir.
+
+### LaTeX Editörleri
+
+Hangi editörü kullanacağınıza birkaç deneme yaptıktan sonra karar
+verebilirsiniz. [Burada](https://beebom.com/best-latex-editors/) en çok
+beğenilen editörler listelenmiş.
+
+Her LaTeX editöründe olan özelliklerin (otomatik kod tamamlama vb.) yanı
+sıra kullanıcı dostu arayüzü, yüzde yüze yakın Türkçe desteği, ücretsiz
+oluşu ve her üç sistemde de çalışabilmesinden dolayı
+[TeXstudio](https://texstudio.org/)'yu tavsiye ediyoruz. Karar sizin.
+
+### Çevrimiçi Editörler
+
+LaTeX'i hiçbir kurulum yapmadan çevrimiçi de kullanabilirsiniz. Aşağıda
+üç tanesi listelenmiştir.
+
+-   [Overleaf](https://www.overleaf.com/){target="_blank"
+    rel="noreferrer noopener"}
+-   [Papeeria](https://papeeria.com/){target="_blank"
+    rel="noreferrer noopener"}
+-   [LaTeX Base](https://latexbase.com/){target="_blank"
+    rel="noreferrer noopener"}
+
+En popüler olanı Overleaf olup, sayfasında beğenebileceğiniz binlerce
+[şablon](https://www.overleaf.com/latex/templates){target="_blank"
+rel="noreferrer noopener"} ve LaTeX kullanımına yönelik
+[anlatımlar](https://www.overleaf.com/learn){target="_blank"
+rel="noreferrer noopener"} bulunur.

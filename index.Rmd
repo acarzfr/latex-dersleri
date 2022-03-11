@@ -3,11 +3,7 @@ title: "LaTeX Dersleri"
 author: "Zafer Acar"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
-#output:
-#  bookdown::gitbook:
-#    highlight: kate
-#  bookdown::pdf_book:
-#    highlight: kate
+output: bookdown::gitbook
 documentclass: scrbook
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
@@ -26,9 +22,13 @@ url: 'https://acarzfr.github.io/latex-dersleri/'
 github-repo: acarzfr/latex-dersleri
 ---
 
-# Önsöz {-}
+# Sunuş {-}
 
 
-
-
+```latex
+\documentclass{article}
+\begin{document}
+  İşte ilk belgem.
+\end{document}
+```
 

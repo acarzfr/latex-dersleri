@@ -166,7 +166,7 @@
 
 \title{LaTeX Dersleri}
 \author{Zafer Acar}
-\date{2022-02-28}
+\date{2022-03-06}
 
 \usepackage{amsthm}
 \newtheorem{theorem}{Teorem}[chapter]
@@ -208,6 +208,60 @@
 \addcontentsline{toc}{chapter}{Önsöz}
 
 \mainmatter
+
+\hypertarget{baux15flarken}{%
+\chapter{Başlarken}\label{baux15flarken}}
+
+\hypertarget{tex}{%
+\section{TeX}\label{tex}}
+
+Stanford Üniversitesi'nde bilgisayar bilimleri profesörü olan \href{https://www-cs-faculty.stanford.edu/~knuth/}{Donald Knuth},\index{Knuth, Donald E.} başyapıtı ``The Art of Computer Programming'\,' (Bilgisayar Programlama Sanatı) serisini yazdığında dönemin teknolojilerinin serisini yüksek kalitede basmaya olanak vermediğini görür. Bunun üzerine yüksek kalitede belgeler oluşturulabilecek bir dizgi programı yazmaya karar verir. TeX, böylece 1977'de yazılmaya başlanır.
+
+TeX'in ilk genel versiyonu 1982'de çıkmıştır ve o tarihten itibaren güncellenip iyileştirilmiştir. Son gözden geçirilip düzenlenmesi 2014 yılında yapılmıştır.
+
+TeX'in sürüm sayısı \(\pi\) sayısına her defasında bir ondalık eklenerek ifade edilir ve bugün \(3.14159265\) sayılı sürümdedir. Bunun anlamı her yeni sürümün kendinden öncekileri içermesi ve bu sayede eski sürümle oluşturulan bir belgenin sonraki sürümlerde de geçerli olmasıdır.
+
+\hypertarget{latex}{%
+\section{LaTeX}\label{latex}}
+
+LaTeX (La(mport)TeX), \href{http://www.lamport.org/}{Leslie Lamport}\index{Lamport, Leslie} tarafından 1978'de yazılmaya başlanmış olup TeX üzerine kurulmuştur. Amacı TeX'i daha işlevli ve kolay hale getirmektir.
+
+İki program arasındaki ilişki şöyle ifade edilebilir \citep{Pantieri2017}: \emph{TeX bir vücutsa LaTeX'de onun üzerine oturtulan bir elbisedir}. Günümüzde Frank Mittelbach\index{Mittelbach, Frank} liderliğinde bir grup programcı tarafından güncelleştirilmektedir.
+
+\hypertarget{temel-farklux131lux131klar}{%
+\section{Temel Farklılıklar}\label{temel-farklux131lux131klar}}
+
+LaTeX, genelde WYSIWYG (\emph{Ne Görüyorsan Onu Alırsın}) editörleriyle karşılaştırılır. WYSIWYG, Microsoft Word, Libreoffice Writer gibi kelime işlemcilere ya da Adobe Indesign gibi programlara verilen genel bir isimdir. Hepsinin ortak özelliği, girdi ile çıktının aynı anda ve birlikte görünmesidir.
+
+LaTeX'de girdi ve çıktı ekranı farklıdır ve çıktıyı görmek için girdinin derleme işleminden geçmesi gerekir. LaTeX'in zor gibi görünmesinin bir nedeni de komutlarla çalışmasıdır. Gerçekten de WYSIWYG programlarına alışkın bir kullanıcı için bu süreç başlangıçta biraz sıkıcı ve zor olabilir. Ancak belli bir aşamaya geldiğinizde komutlarla çalışmanın aslında işleri kolaylaştırdığını göreceksinizdir. Örneğin LaTeX'le yüzlerce hatta binlerce sayfadan oluşan bir kitabın İçindekiler tablosunu oluşturmak için sadece \texttt{\textbackslash{}tableofcontents} komutunu girersiniz ve LaTeX bu komutu girdiğiniz yere İçindekiler tablosunu hatasız bir şekilde oluşturur. Ayrıca örnekte görüldüğü gibi LaTeX komutları doğal dile\footnote{Tabii ki İngilizce.} oldukça yakındır. ``İçindekiler Tablosu'`nun İngilizcesi ``Table of Contents'' olup komut sadece harflerin küçük halde yan yana dizilmesiyle oluşur. Bu da işleri oldukça kolaylaştırır.
+
+Bir metnin genel görünümü ve okunabilirliği, metnin nasıl hizalandığından ve kesildiğinden büyük ölçüde etkilenir. LaTeX, tüm paragraf için hizalamayı ve kesmeleri optimize eden son derece gelişmiş TeX algoritmalarını kullanır. Kelime işlemciler ve diğer programlar, satır başına çalıştıkları için oldukça yetersiz kalırlar. Bu, diğer şeylerin yanı sıra düzensiz aralıklara ve birçok kısa çizgiye sebep olur. Sonuçları görmeniz için Microsoft Word 2008 (Mac), Adobe InDesign CS4 ve LaTeX'le dizilmiş bir metni \href{http://www.rtznet.nl/zink/comparison.pdf}{şuradan} inceleyebilirsiniz.
+
+Sonuç, LaTeX'in diğer programların her ikisinden de üstün olduğunu açıkça gösterir: iki kat daha az tireleme kullanır ve yine de sözcük aralığındaki varyasyon, Word veya InDesign'dan belirgin şekilde daha azdır. LaTeX'te çok büyük sözcük aralığı içeren satırlar oluşmaz.
+
+\hypertarget{neden-latex}{%
+\section{Neden LaTeX}\label{neden-latex}}
+
+\begin{itemize}
+\item
+  Ücretsizdir ve tüm işletim sistemlerinde düşük donanım gereksinimleriyle çalışır.
+\item
+  Basit bir metin editörüyle bile kaynak dosyanızı düzenleyebilirsiniz.
+\item
+  Her sürüm bir önceki sürümü içerdiğinden şimdi hazırladığınız bir belgeyi on yıl sonra da kullanabilirsiniz, hiçbir zaman ``Dosya bu sürümle uyumlu değil'\,' biçiminde bir uyarıyla karşılaşmazsınız.
+\item
+  Bir belgedeki biçim veya metni diğer bir belgeye kolaylıkla taşıyabilir ve düzenleyebilirsiniz. Bu, internetten bulabileceğiniz binlerce şablonu kullanabileceğiniz anlamına gelir.
+\item
+  Belgenizi LaTeX biçimlendirir, siz sadece içeriğe odaklanırsınız.
+\item
+  Dipnot koymak, atıf yapmak, kaynakça, dizin ve içindekiler tablosu oluşturmak işten bile sayılmaz.
+\item
+  Matematiksel formüller kullanacaksanız, bu LaTeX'in en güçlü olduğu konudur. Formülleri belgenize adeta \emph{inci dizer gibi} dizer.
+\item
+  Çok yaygındır.\footnote{Maalesef ülkemizde değil.} Uluslararası bir çok yayınevi (örneğin Springer) ve dergi yazarlardan LaTeX dosyalarını talep eder.
+\item
+  Bu kadar güzel görünen belgeleri ancak LaTeX'le oluşturabilirsiniz.
+\end{itemize}
 
 \hypertarget{genel}{%
 \chapter{Genel}\label{genel}}

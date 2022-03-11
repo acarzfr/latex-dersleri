@@ -3,5 +3,5 @@
 
 
 `r if (knitr:::is_html_output()) '
-# Kaynakça {-}
+# Kaynaklar {-}
 '`

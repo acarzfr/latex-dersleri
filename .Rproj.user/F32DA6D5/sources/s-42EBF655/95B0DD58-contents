@@ -1,10 +1,11 @@
 book_filename: "latex-dersleri"
 rmd_files:
   - index.Rmd
-  - 01-genel.Rmd
-  - 02-matematik.Rmd
-  - 03-ozel-sayfalar.Rmd
-  - 99-kaynakca.Rmd
+#  - 00-baslarken.Rmd
+#  - 01-genel.Rmd
+#  - 02-matematik.Rmd
+#  - 03-ozel-sayfalar.Rmd
+#  - 99-kaynakca.Rmd
 output_dir: docs
 
 language:
