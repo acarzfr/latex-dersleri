@@ -331,9 +331,9 @@ $$
       runlatex.overleafURI=null;
 
       runlatex.texts ={
-	  "Open in Overleaf": "Overleaf'ta aç",
+	  "Open in Overleaf": "Overleaf",
 	  "TeXLive.net":      "Çalıştır",
-	  "Delete Output":    "Çıktıyı temizle",
+	  "Delete Output":    "Çıktıyı Temizle",
 	  "Compiling PDF":    "PDF veya HTML derleme",
 	  "Added Code":       "",
 	  "End Added Code":   "",
@@ -366,7 +366,44 @@ $$
   window.addEventListener('load', fillForm, false);
 
 
-    </script>
+</script>
+
+
+
+<!--   GeoGebra  -->
+
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+
+<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+
+
+<!-- Kullanım
+
+<div id="ggb-element">
+<script>
+    var params = {"appName": "graphing", "width": 800, "height": 600, "showToolBar": true, "showAlgebraInput": true, "showMenuBar": true };
+    var applet = new GGBApplet(params, true);
+    window.addEventListener("load", function() {
+        applet.inject('ggb-element');
+    });
+</script>
+</div>
+
+grphing yerine geometry , 3d
+
+"material_id":"RHYH3UQ8"
+
+"filename":"myFile.ggb"
+
+
+
+
+
+
+
+-->
+
 <div id="giriş-1" class="section level2" number="2.1">
 <h2><span class="header-section-number">2.1</span> Giriş</h2>
 <p>Belgenizde yalnızca birkaç basit matematiksel formül kullanacaksanız
@@ -376,7 +413,7 @@ karmaşık formül içeren bilimsel bir belge yazma niyetindeyseniz temel
 <a href="http://ftp.ntua.gr/mirror/ctan/macros/latex/required/amsmath/amsmath.pdf" texel="noreferrer noopener" target="_blank"><strong>amsmath</strong></a> ,
 <a href="https://texdoc.net/texmf-dist/doc/fonts/amsfonts/amssymb.pdf" texel="noreferrer noopener" target="_blank"><strong>amssymb</strong></a> ve
 <a href="http://ftp.ntua.gr/mirror/ctan/fonts/amsfonts/doc/amsfonts.pdf" texel="noreferrer noopener" target="_blank"><strong>amsfonts</strong></a>’dir.</p>
-<div class="sourceCode" id="cb79"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb79-1"><a href="giriş-1.html#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath,amssymb,amsfonts</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb78"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb78-1"><a href="giriş-1.html#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath,amssymb,amsfonts</span>}</span></code></pre></div>
 <p>Yukarıdaki komutu sahanlığa yazarak paketleri belgenize ekleyiniz.
 Bundan sonra bu paketleri eklediğinizi varsayarak devam edeceğiz ve
 bunların dışında bir pakete ihtiyaç duyarsak ayrıca belirteceğiz.</p>
@@ -414,11 +451,11 @@ arasına yazılırdı. Bu kullanım hala geçerlidir ancak bazı sorunlara
 yol açabildiğinden (örneğin belge seçeneğine <code>fleqn</code> yazıldığında)
 kullanımı önerilmez.</p>
 </blockquote>
-<div class="sourceCode" id="cb80"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb80-1"><a href="giriş-1.html#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$x</span><span class="sc">\in</span><span class="ss"> </span><span class="sc">\mathbb</span><span class="ss">{R}$</span> için <span class="ss">$|x|&lt;1$</span> ise</span>
-<span id="cb80-2"><a href="giriş-1.html#cb80-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">equation*</span>}</span>
-<span id="cb80-3"><a href="giriş-1.html#cb80-3" aria-hidden="true" tabindex="-1"></a><span class="ss"> -1&lt;x&lt;1</span></span>
-<span id="cb80-4"><a href="giriş-1.html#cb80-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">equation*</span>}</span>
-<span id="cb80-5"><a href="giriş-1.html#cb80-5" aria-hidden="true" tabindex="-1"></a>olur.</span></code></pre></div>
+<div class="sourceCode" id="cb79"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb79-1"><a href="giriş-1.html#cb79-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$x</span><span class="sc">\in</span><span class="ss"> </span><span class="sc">\mathbb</span><span class="ss">{R}$</span> için <span class="ss">$|x|&lt;1$</span> ise</span>
+<span id="cb79-2"><a href="giriş-1.html#cb79-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">equation*</span>}</span>
+<span id="cb79-3"><a href="giriş-1.html#cb79-3" aria-hidden="true" tabindex="-1"></a><span class="ss"> -1&lt;x&lt;1</span></span>
+<span id="cb79-4"><a href="giriş-1.html#cb79-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">equation*</span>}</span>
+<span id="cb79-5"><a href="giriş-1.html#cb79-5" aria-hidden="true" tabindex="-1"></a>olur.</span></code></pre></div>
 <p><span class="math inline">\(x\in\mathbb{R}\)</span> için <span class="math inline">\(|x|&lt;1\)</span> ise
 <span class="math display">\[\begin{equation*}
 -1&lt;x&lt;1
@@ -427,11 +464,11 @@ olur.</p>
 <p>Numara verilen bir formülü <code>\label</code> komutuyla etiketleyip, <code>\ref</code> ya da
 <code>\eqref</code> komutuyla formüle atıf yapılabilir. Atıf <code>\eqref</code> komutuyla
 yapılırsa formülün numarası parantez içinde yazılır.</p>
-<div class="sourceCode" id="cb81"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb81-1"><a href="giriş-1.html#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">equation</span>}</span>
-<span id="cb81-2"><a href="giriş-1.html#cb81-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\label</span><span class="ss">{eq:euler}</span></span>
-<span id="cb81-3"><a href="giriş-1.html#cb81-3" aria-hidden="true" tabindex="-1"></a><span class="ss">  e^{i</span><span class="sc">\pi</span><span class="ss">}+1=0</span></span>
-<span id="cb81-4"><a href="giriş-1.html#cb81-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">equation</span>}</span>
-<span id="cb81-5"><a href="giriş-1.html#cb81-5" aria-hidden="true" tabindex="-1"></a>Euler&#39;in <span class="kw">\eqref</span>{<span class="ex">eq:euler</span>} formülüne göre<span class="fu">\dots</span></span></code></pre></div>
+<div class="sourceCode" id="cb80"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb80-1"><a href="giriş-1.html#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">equation</span>}</span>
+<span id="cb80-2"><a href="giriş-1.html#cb80-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\label</span><span class="ss">{eq:euler}</span></span>
+<span id="cb80-3"><a href="giriş-1.html#cb80-3" aria-hidden="true" tabindex="-1"></a><span class="ss">  e^{i</span><span class="sc">\pi</span><span class="ss">}+1=0</span></span>
+<span id="cb80-4"><a href="giriş-1.html#cb80-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">equation</span>}</span>
+<span id="cb80-5"><a href="giriş-1.html#cb80-5" aria-hidden="true" tabindex="-1"></a>Euler&#39;in <span class="kw">\eqref</span>{<span class="ex">eq:euler</span>} formülüne göre<span class="fu">\dots</span></span></code></pre></div>
 <p><span class="math display" id="eq:euler">\[\begin{equation}
 e^{i\pi}+1=0
 \tag{2.1}
@@ -458,7 +495,7 @@ aksanlı harfler de kullanılabilir.</li>
 </ol>
 <p>Aşağıdaki örnek matematik kipi ile metin kipi arasındaki farkları
 gösterir.</p>
-<div class="sourceCode" id="cb82"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb82-1"><a href="giriş-1.html#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$x^2-1=0 </span><span class="sc">\text</span>{ise <span class="ss">$x=\pm 1$</span>}<span class="ss">.$</span></span></code></pre></div>
+<div class="sourceCode" id="cb81"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb81-1"><a href="giriş-1.html#cb81-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$x^2-1=0 </span><span class="sc">\text</span>{ise <span class="ss">$x=\pm 1$</span>}<span class="ss">.$</span></span></code></pre></div>
 <p><span class="math inline">\(x^2-1=0 \text{ise $x=\pm 1$}.\)</span></p>
 </div>
 <div id="gruplandırma" class="section level3" number="2.1.3">
@@ -467,7 +504,7 @@ gösterir.</p>
 çoğunun kendisinden sonra ilk gelen karaktere etki etmesidir. Bu yüzden
 bir komutun çok sayıda karaktere etki etmesi istenirse bu karakterler
 iki çengelli parantez <code>{…}</code> arasına yazılarak gruplandırılmalıdır.</p>
-<div class="sourceCode" id="cb83"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb83-1"><a href="giriş-1.html#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$a^x+y </span><span class="sc">\neq</span><span class="ss"> a^{x+y}$</span></span></code></pre></div>
+<div class="sourceCode" id="cb82"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb82-1"><a href="giriş-1.html#cb82-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$a^x+y </span><span class="sc">\neq</span><span class="ss"> a^{x+y}$</span></span></code></pre></div>
 <p><span class="math inline">\(a^x+y \neq a^{x+y}\)</span></p>
 </div>
 </div>

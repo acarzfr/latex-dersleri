@@ -331,9 +331,9 @@ $$
       runlatex.overleafURI=null;
 
       runlatex.texts ={
-	  "Open in Overleaf": "Overleaf'ta aç",
+	  "Open in Overleaf": "Overleaf",
 	  "TeXLive.net":      "Çalıştır",
-	  "Delete Output":    "Çıktıyı temizle",
+	  "Delete Output":    "Çıktıyı Temizle",
 	  "Compiling PDF":    "PDF veya HTML derleme",
 	  "Added Code":       "",
 	  "End Added Code":   "",
@@ -366,7 +366,44 @@ $$
   window.addEventListener('load', fillForm, false);
 
 
-    </script>
+</script>
+
+
+
+<!--   GeoGebra  -->
+
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+
+<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+
+
+<!-- Kullanım
+
+<div id="ggb-element">
+<script>
+    var params = {"appName": "graphing", "width": 800, "height": 600, "showToolBar": true, "showAlgebraInput": true, "showMenuBar": true };
+    var applet = new GGBApplet(params, true);
+    window.addEventListener("load", function() {
+        applet.inject('ggb-element');
+    });
+</script>
+</div>
+
+grphing yerine geometry , 3d
+
+"material_id":"RHYH3UQ8"
+
+"filename":"myFile.ggb"
+
+
+
+
+
+
+
+-->
+
 <div id="aralıklar" class="section level2" number="1.17">
 <h2><span class="header-section-number">1.17</span> Aralıklar</h2>
 <p>LaTeX’de hem dikey hem de yatay aralıklar otomatik olarak ayarlanır.
@@ -412,7 +449,7 @@ gösterilmiştir.</p>
 <h3><span class="header-section-number">1.17.1</span> Dikey aralıklar</h3>
 <p>Dikey aralık birkaç komutla bırakılabilir. Bunlardan biri <code>\vspace</code>
 olup, komut iki boş satır arasında</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb39-1"><a href="aralıklar.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\vspace</span>{&lt;uzunluk&gt;}</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb38-1"><a href="aralıklar.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\vspace</span>{&lt;uzunluk&gt;}</span></code></pre></div>
 <p>şeklinde verilir. Komut bu şekilde verildiğinde komutun zorunlu
 değişkeninde birimiyle belirtilen uzunluk kadar dikey aralık bırakılır.
 Eğer bir sayfanın başında veya sonunda aralık bırakılmak istenirse,
@@ -420,13 +457,13 @@ komut <code>\vspace*</code> şeklinde yıldızlı vermelidir. Bu komutun aralı�
 yapan <code>\addvspace</code> sürümü de vardır.</p>
 <p>Bir paragrafın iki satırı arasında veya bir tablonun satırları arasında
 ilave aralık açmak için</p>
-<div class="sourceCode" id="cb40"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb40-1"><a href="aralıklar.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\\</span>[&lt;uzunluk&gt;]</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb39-1"><a href="aralıklar.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\\</span>[&lt;uzunluk&gt;]</span></code></pre></div>
 <p>komutu kullanılır.</p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb41-1"><a href="aralıklar.html#cb41-1" aria-hidden="true" tabindex="-1"></a>A<span class="fu">\\</span>[1ex]</span>
-<span id="cb41-2"><a href="aralıklar.html#cb41-2" aria-hidden="true" tabindex="-1"></a>B</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb40-1"><a href="aralıklar.html#cb40-1" aria-hidden="true" tabindex="-1"></a>A<span class="fu">\\</span>[1ex]</span>
+<span id="cb40-2"><a href="aralıklar.html#cb40-2" aria-hidden="true" tabindex="-1"></a>B</span></code></pre></div>
 <p>Bu komutlarda belirtilen uzunluklar negatif de olabilir.</p>
-<div class="sourceCode" id="cb42"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb42-1"><a href="aralıklar.html#cb42-1" aria-hidden="true" tabindex="-1"></a>A<span class="fu">\\</span>[-2ex]</span>
-<span id="cb42-2"><a href="aralıklar.html#cb42-2" aria-hidden="true" tabindex="-1"></a>B</span></code></pre></div>
+<div class="sourceCode" id="cb41"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb41-1"><a href="aralıklar.html#cb41-1" aria-hidden="true" tabindex="-1"></a>A<span class="fu">\\</span>[-2ex]</span>
+<span id="cb41-2"><a href="aralıklar.html#cb41-2" aria-hidden="true" tabindex="-1"></a>B</span></code></pre></div>
 <p>Sınırsız bir dikey aralık oluşturmak için <code>\vfill</code> komutu kullanılır. Bu
 komuttan sonra gelen her şey sayfanın altına yaslanır.</p>
 <p>Ön tanımlı gelen <code>\smallskip</code>, <code>\medskip</code> ve <code>\bigskip</code> komutları
@@ -435,14 +472,14 @@ sırasıyla küçük, orta ve büyük aralıklar bırakır.</p>
 <div id="yatay-aralıklar" class="section level3" number="1.17.2">
 <h3><span class="header-section-number">1.17.2</span> Yatay aralıklar</h3>
 <p>Ön tanımlı yatay aralıklar</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb43-1"><a href="aralıklar.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\ </span> <span class="fu">\,</span>  <span class="fu">\:</span>  <span class="fu">\;</span>  <span class="fu">\quad</span>  <span class="fu">\qquad</span>  <span class="fu">\!</span></span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb42-1"><a href="aralıklar.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\ </span> <span class="fu">\,</span>  <span class="fu">\:</span>  <span class="fu">\;</span>  <span class="fu">\quad</span>  <span class="fu">\qquad</span>  <span class="fu">\!</span></span></code></pre></div>
 <p>komutlarıyla verilir. Bu komutlar sırasıyla bir sözcük arası, <span class="math inline">\(3/\!18\)</span> em, <span class="math inline">\(4/\!18\)</span> em, <span class="math inline">\(5/\!18\)</span> em, <span class="math inline">\(1\)</span> em, <span class="math inline">\(2\)</span> em, <span class="math inline">\(-3/\!18\)</span> em uzunlukta yatay aralık bırakır.</p>
 <p>Belli bir uzunlukta yatay aralık bırakmak için <code>\hspace</code> komutu
 kullanılır. Yine dikey aralıkta olduğu gibi yatay aralık negatif de
 olabilir. Eğer aralık satır başına veya sonuna rasgelse dahi bu aralığı
 korumak istiyorsanız, yıldızlı <code>\hspace*</code> komutu kullanırsınız.</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb44-1"><a href="aralıklar.html#cb44-1" aria-hidden="true" tabindex="-1"></a>A<span class="fu">\hspace</span>{2cm}B<span class="fu">\\</span></span>
-<span id="cb44-2"><a href="aralıklar.html#cb44-2" aria-hidden="true" tabindex="-1"></a>A <span class="fu">\hspace</span>{2cm} B</span></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb43-1"><a href="aralıklar.html#cb43-1" aria-hidden="true" tabindex="-1"></a>A<span class="fu">\hspace</span>{2cm}B<span class="fu">\\</span></span>
+<span id="cb43-2"><a href="aralıklar.html#cb43-2" aria-hidden="true" tabindex="-1"></a>A <span class="fu">\hspace</span>{2cm} B</span></code></pre></div>
 <p>Komutlardan önce veya sonra boşluk bırakmak farklı
 sonuçlar üretir.</p>
 <p>Sınırsız bir yatay aralık oluşturmak için <code>\hfill</code> komutu kullanılır. Bu
@@ -450,9 +487,9 @@ komuttan sonra gelen her şey satırın sonuna yaslanır. Hem satır sonuna
 yaslamak hem de aralığı noktalarla doldurmak isterseniz <code>\dotfill</code>
 komutunu kullanırsınız. Satır sonuna yaslayıp aralığa çizgi çekmek
 isterseniz de <code>\hrulefill</code> komutunu kullanırsınız.</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb45-1"><a href="aralıklar.html#cb45-1" aria-hidden="true" tabindex="-1"></a>A<span class="fu">\hfill</span> B<span class="fu">\\</span></span>
-<span id="cb45-2"><a href="aralıklar.html#cb45-2" aria-hidden="true" tabindex="-1"></a>A<span class="fu">\dotfill</span> B<span class="fu">\\</span></span>
-<span id="cb45-3"><a href="aralıklar.html#cb45-3" aria-hidden="true" tabindex="-1"></a>A<span class="fu">\hrulefill</span> B</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb44-1"><a href="aralıklar.html#cb44-1" aria-hidden="true" tabindex="-1"></a>A<span class="fu">\hfill</span> B<span class="fu">\\</span></span>
+<span id="cb44-2"><a href="aralıklar.html#cb44-2" aria-hidden="true" tabindex="-1"></a>A<span class="fu">\dotfill</span> B<span class="fu">\\</span></span>
+<span id="cb44-3"><a href="aralıklar.html#cb44-3" aria-hidden="true" tabindex="-1"></a>A<span class="fu">\hrulefill</span> B</span></code></pre></div>
 </div>
 </div>
             </section>

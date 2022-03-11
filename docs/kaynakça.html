@@ -331,9 +331,9 @@ $$
       runlatex.overleafURI=null;
 
       runlatex.texts ={
-	  "Open in Overleaf": "Overleaf'ta aç",
+	  "Open in Overleaf": "Overleaf",
 	  "TeXLive.net":      "Çalıştır",
-	  "Delete Output":    "Çıktıyı temizle",
+	  "Delete Output":    "Çıktıyı Temizle",
 	  "Compiling PDF":    "PDF veya HTML derleme",
 	  "Added Code":       "",
 	  "End Added Code":   "",
@@ -366,7 +366,44 @@ $$
   window.addEventListener('load', fillForm, false);
 
 
-    </script>
+</script>
+
+
+
+<!--   GeoGebra  -->
+
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+
+<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+
+
+<!-- Kullanım
+
+<div id="ggb-element">
+<script>
+    var params = {"appName": "graphing", "width": 800, "height": 600, "showToolBar": true, "showAlgebraInput": true, "showMenuBar": true };
+    var applet = new GGBApplet(params, true);
+    window.addEventListener("load", function() {
+        applet.inject('ggb-element');
+    });
+</script>
+</div>
+
+grphing yerine geometry , 3d
+
+"material_id":"RHYH3UQ8"
+
+"filename":"myFile.ggb"
+
+
+
+
+
+
+
+-->
+
 <div id="kaynakça" class="section level2" number="3.1">
 <h2><span class="header-section-number">3.1</span> Kaynakça</h2>
 <div id="bütünleşik-kaynakça" class="section level3" number="3.1.1">
@@ -374,15 +411,15 @@ $$
 <p>LaTeX’de kaynakça oluşturmanın bir yolu, kaynakçayı kaynak dosyanızın
 (<code>.tex</code> uzantılı ana dosyanız) içindeki bir ortamda hazırlamaktır.
 Kullanacağınız ortam <code>thebibliography</code> ortamıdır.</p>
-<div class="sourceCode" id="cb144"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb144-1"><a href="kaynakça.html#cb144-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">thebibliography</span>}{&lt;sayı&gt;}</span>
-<span id="cb144-2"><a href="kaynakça.html#cb144-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb144-3"><a href="kaynakça.html#cb144-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">thebibliography</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb143"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb143-1"><a href="kaynakça.html#cb143-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">thebibliography</span>}{&lt;sayı&gt;}</span>
+<span id="cb143-2"><a href="kaynakça.html#cb143-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb143-3"><a href="kaynakça.html#cb143-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">thebibliography</span>}</span></code></pre></div>
 <p>Ortam komutundaki <code>&lt;sayı&gt;</code> değişkeni, kaynağın etiketi veya etiket
 girilmediği takdirde verilen sıra numarasının kaç karakter uzunluğunda
 olacağını belirtir. Örneğin ortam</p>
-<div class="sourceCode" id="cb145"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb145-1"><a href="kaynakça.html#cb145-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">thebibliography</span>}{9}</span>
-<span id="cb145-2"><a href="kaynakça.html#cb145-2" aria-hidden="true" tabindex="-1"></a>        </span>
-<span id="cb145-3"><a href="kaynakça.html#cb145-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">thebibliography</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb144"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb144-1"><a href="kaynakça.html#cb144-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">thebibliography</span>}{9}</span>
+<span id="cb144-2"><a href="kaynakça.html#cb144-2" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb144-3"><a href="kaynakça.html#cb144-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">thebibliography</span>}</span></code></pre></div>
 <p>şeklinde oluşturulursa etiket veya etiket girilmediği takdirde verilen
 sıra numarası için bir karakter uzunluğunda yer ayrılması gerektiği ve
 toplamda bu ortama en fazla dokuz adet kaynak girileceği belirtilmiş
@@ -391,7 +428,7 @@ veren “45” gibi iki basamaklı bir sayı girilebilir.</p>
 <p>Ortama her kaynak <code>\bibitem</code> komutuyla eklenir ve komuttan sonra kaynağı
 tanımlayıcı bilgiler girilir. Bu bilgiler girilirken biçim elle
 oluşturulur.</p>
-<div class="sourceCode" id="cb146"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb146-1"><a href="kaynakça.html#cb146-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\bibitem</span>[&lt;etiket&gt;]{&lt;anahtar&gt;}</span></code></pre></div>
+<div class="sourceCode" id="cb145"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb145-1"><a href="kaynakça.html#cb145-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\bibitem</span>[&lt;etiket&gt;]{&lt;anahtar&gt;}</span></code></pre></div>
 <p>Komutun zorunlu değişkeni olan <code>&lt;anahtar&gt;</code>, ileride kaynağa atıf yapmak
 için kullanacağınız bir tanımlayıcıdır ve her kaynak için benzersiz
 olmalıdır. Genelde akılda kolay kalması için yazarın soyadı ve yayın
@@ -400,9 +437,9 @@ yılı olacak şekilde düzenlenir.</p>
 köşeli parantezler içinde kaynağın sıra numarası yazdırılır.</p>
 <p>Kaynağın sıra numarasının köşeli parantezler içinde yazılması istenmezse
 aşağıdaki komutlarla değişiklik yapılabilir.</p>
-<div class="sourceCode" id="cb147"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb147-1"><a href="kaynakça.html#cb147-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\makeatletter</span></span>
-<span id="cb147-2"><a href="kaynakça.html#cb147-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\renewcommand</span>{<span class="ex">\@biblabel</span>}[1]{<span class="fu">\textbf</span>{#1.}}</span>
-<span id="cb147-3"><a href="kaynakça.html#cb147-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\makeatother</span></span></code></pre></div>
+<div class="sourceCode" id="cb146"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb146-1"><a href="kaynakça.html#cb146-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\makeatletter</span></span>
+<span id="cb146-2"><a href="kaynakça.html#cb146-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\renewcommand</span>{<span class="ex">\@biblabel</span>}[1]{<span class="fu">\textbf</span>{#1.}}</span>
+<span id="cb146-3"><a href="kaynakça.html#cb146-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\makeatother</span></span></code></pre></div>
 <p>Bu komut verilirse sıra numaraları parantezsiz, kalın ve ardında nokta
 olacak şekilde yazılır.</p>
 <p>Ortam genelde <code>\end{document}</code> komutundan hemen önce oluşturulur ve
@@ -410,7 +447,7 @@ ortamın oluşturulduğu yerde LaTeX, <code>book</code> ve <code>report</code> s
 Türkçe dil paketi eklenmişse “Kaynakça”, <code>article</code> sınıfında ise
 “Kaynaklar” ismini ve ardından kaynakları yazdırır.</p>
 <p>Kaynaklardan herhangi birine atıf <code>\cite</code> komutuyla yapılır.</p>
-<div class="sourceCode" id="cb148"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb148-1"><a href="kaynakça.html#cb148-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\cite</span>[&lt;seçenekler&gt;]{<span class="ex">&lt;anahtar&gt;</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb147"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb147-1"><a href="kaynakça.html#cb147-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\cite</span>[&lt;seçenekler&gt;]{<span class="ex">&lt;anahtar&gt;</span>}</span></code></pre></div>
 <p>Komutun zorunlu değişkeni olan <code>&lt;anahtar&gt;</code>, atıf yapılmak istenen
 kaynağın <code>\bibitem</code> komutundaki zorunlu değişkenidir. İsteğe bağlı
 <code>&lt;seçenekler&gt;</code> değişkeninde ise sayfa numarası, bölüm numarası gibi
@@ -421,35 +458,35 @@ vurgu varsa, bu, etiket ya da sıra numarasının devamında virgülden sonra
 yazdırılır.</p>
 <p>Aynı yerde birden fazla kaynağa atıf yapılacaksa atıf yapılacak
 kaynakların anahtarları aralarına virgül koyularak yazılır:</p>
-<div class="sourceCode" id="cb149"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb149-1"><a href="kaynakça.html#cb149-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\cite</span>{<span class="ex">&lt;anahtar1&gt;,&lt;anahtar2&gt;,&lt;anahtar3&gt;</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb148"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb148-1"><a href="kaynakça.html#cb148-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\cite</span>{<span class="ex">&lt;anahtar1&gt;,&lt;anahtar2&gt;,&lt;anahtar3&gt;</span>}</span></code></pre></div>
 <p>Aşağıda kaynak dosya örneği verilmiştir.</p>
-<div class="sourceCode" id="cb150"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb150-1"><a href="kaynakça.html#cb150-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb150-2"><a href="kaynakça.html#cb150-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[T1]{<span class="ex">fontenc</span>}</span>
-<span id="cb150-3"><a href="kaynakça.html#cb150-3" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[turkish]{<span class="ex">babel</span>}</span>
-<span id="cb150-4"><a href="kaynakça.html#cb150-4" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">url</span>}</span>
-<span id="cb150-5"><a href="kaynakça.html#cb150-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\title</span>{<span class="fu">\LaTeX</span>&#39;de Kaynakça Yönetimi 1: Bütünleşik Kaynakça}</span>
-<span id="cb150-6"><a href="kaynakça.html#cb150-6" aria-hidden="true" tabindex="-1"></a><span class="fu">\author</span>{Zafer Acar}</span>
-<span id="cb150-7"><a href="kaynakça.html#cb150-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb150-8"><a href="kaynakça.html#cb150-8" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb150-9"><a href="kaynakça.html#cb150-9" aria-hidden="true" tabindex="-1"></a><span class="fu">\maketitle</span></span>
-<span id="cb150-10"><a href="kaynakça.html#cb150-10" aria-hidden="true" tabindex="-1"></a>WYSIWYG editörleri yerine, <span class="fu">\TeX</span>/<span class="fu">\LaTeX</span>{}  <span class="kw">\cite</span>{<span class="ex">lamport94</span>}</span>
-<span id="cb150-11"><a href="kaynakça.html#cb150-11" aria-hidden="true" tabindex="-1"></a>dizgi sistemini kullanmaya başlayın. Görüldüğü gibi kaynakça oluşturmak </span>
-<span id="cb150-12"><a href="kaynakça.html#cb150-12" aria-hidden="true" tabindex="-1"></a>ve atıf yapmak oldukça kolaydır.</span>
-<span id="cb150-13"><a href="kaynakça.html#cb150-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb150-14"><a href="kaynakça.html#cb150-14" aria-hidden="true" tabindex="-1"></a>Ali Nesin, <span class="kw">\cite</span>[s.~47]{<span class="ex">nesin07</span>}&#39;de pokerin matematiğini anlatıyor.</span>
-<span id="cb150-15"><a href="kaynakça.html#cb150-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb150-16"><a href="kaynakça.html#cb150-16" aria-hidden="true" tabindex="-1"></a>İki kaynağa birden atıf <span class="kw">\cite</span>{<span class="ex">lamport94,nesin07</span>} şeklinde yapılır.</span>
-<span id="cb150-17"><a href="kaynakça.html#cb150-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb150-18"><a href="kaynakça.html#cb150-18" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">thebibliography</span>}{9}</span>
-<span id="cb150-19"><a href="kaynakça.html#cb150-19" aria-hidden="true" tabindex="-1"></a><span class="fu">\bibitem</span>{lamport94}</span>
-<span id="cb150-20"><a href="kaynakça.html#cb150-20" aria-hidden="true" tabindex="-1"></a>Leslie Lamport,</span>
-<span id="cb150-21"><a href="kaynakça.html#cb150-21" aria-hidden="true" tabindex="-1"></a><span class="fu">\textit</span>{<span class="fu">\LaTeX</span>: a document preparation system}, Addison Wesley,</span>
-<span id="cb150-22"><a href="kaynakça.html#cb150-22" aria-hidden="true" tabindex="-1"></a>Massachusetts, 2nd edition, 1994.</span>
-<span id="cb150-23"><a href="kaynakça.html#cb150-23" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb150-24"><a href="kaynakça.html#cb150-24" aria-hidden="true" tabindex="-1"></a><span class="fu">\bibitem</span>[N]{nesin07} Ali Nesin, <span class="fu">\textit</span>{Matematik ve Oyun}, </span>
-<span id="cb150-25"><a href="kaynakça.html#cb150-25" aria-hidden="true" tabindex="-1"></a> Nesin Yayıncılık, 2007.</span>
-<span id="cb150-26"><a href="kaynakça.html#cb150-26" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">thebibliography</span>}</span>
-<span id="cb150-27"><a href="kaynakça.html#cb150-27" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb149"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb149-1"><a href="kaynakça.html#cb149-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb149-2"><a href="kaynakça.html#cb149-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[T1]{<span class="ex">fontenc</span>}</span>
+<span id="cb149-3"><a href="kaynakça.html#cb149-3" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[turkish]{<span class="ex">babel</span>}</span>
+<span id="cb149-4"><a href="kaynakça.html#cb149-4" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">url</span>}</span>
+<span id="cb149-5"><a href="kaynakça.html#cb149-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\title</span>{<span class="fu">\LaTeX</span>&#39;de Kaynakça Yönetimi 1: Bütünleşik Kaynakça}</span>
+<span id="cb149-6"><a href="kaynakça.html#cb149-6" aria-hidden="true" tabindex="-1"></a><span class="fu">\author</span>{Zafer Acar}</span>
+<span id="cb149-7"><a href="kaynakça.html#cb149-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb149-8"><a href="kaynakça.html#cb149-8" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb149-9"><a href="kaynakça.html#cb149-9" aria-hidden="true" tabindex="-1"></a><span class="fu">\maketitle</span></span>
+<span id="cb149-10"><a href="kaynakça.html#cb149-10" aria-hidden="true" tabindex="-1"></a>WYSIWYG editörleri yerine, <span class="fu">\TeX</span>/<span class="fu">\LaTeX</span>{}  <span class="kw">\cite</span>{<span class="ex">lamport94</span>}</span>
+<span id="cb149-11"><a href="kaynakça.html#cb149-11" aria-hidden="true" tabindex="-1"></a>dizgi sistemini kullanmaya başlayın. Görüldüğü gibi kaynakça oluşturmak </span>
+<span id="cb149-12"><a href="kaynakça.html#cb149-12" aria-hidden="true" tabindex="-1"></a>ve atıf yapmak oldukça kolaydır.</span>
+<span id="cb149-13"><a href="kaynakça.html#cb149-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb149-14"><a href="kaynakça.html#cb149-14" aria-hidden="true" tabindex="-1"></a>Ali Nesin, <span class="kw">\cite</span>[s.~47]{<span class="ex">nesin07</span>}&#39;de pokerin matematiğini anlatıyor.</span>
+<span id="cb149-15"><a href="kaynakça.html#cb149-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb149-16"><a href="kaynakça.html#cb149-16" aria-hidden="true" tabindex="-1"></a>İki kaynağa birden atıf <span class="kw">\cite</span>{<span class="ex">lamport94,nesin07</span>} şeklinde yapılır.</span>
+<span id="cb149-17"><a href="kaynakça.html#cb149-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb149-18"><a href="kaynakça.html#cb149-18" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">thebibliography</span>}{9}</span>
+<span id="cb149-19"><a href="kaynakça.html#cb149-19" aria-hidden="true" tabindex="-1"></a><span class="fu">\bibitem</span>{lamport94}</span>
+<span id="cb149-20"><a href="kaynakça.html#cb149-20" aria-hidden="true" tabindex="-1"></a>Leslie Lamport,</span>
+<span id="cb149-21"><a href="kaynakça.html#cb149-21" aria-hidden="true" tabindex="-1"></a><span class="fu">\textit</span>{<span class="fu">\LaTeX</span>: a document preparation system}, Addison Wesley,</span>
+<span id="cb149-22"><a href="kaynakça.html#cb149-22" aria-hidden="true" tabindex="-1"></a>Massachusetts, 2nd edition, 1994.</span>
+<span id="cb149-23"><a href="kaynakça.html#cb149-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb149-24"><a href="kaynakça.html#cb149-24" aria-hidden="true" tabindex="-1"></a><span class="fu">\bibitem</span>[N]{nesin07} Ali Nesin, <span class="fu">\textit</span>{Matematik ve Oyun}, </span>
+<span id="cb149-25"><a href="kaynakça.html#cb149-25" aria-hidden="true" tabindex="-1"></a> Nesin Yayıncılık, 2007.</span>
+<span id="cb149-26"><a href="kaynakça.html#cb149-26" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">thebibliography</span>}</span>
+<span id="cb149-27"><a href="kaynakça.html#cb149-27" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre></div>
 </div>
 <div id="kaynakçanın-ayrı-dosyada-hazırlanması" class="section level3" number="3.1.2">
 <h3><span class="header-section-number">3.1.2</span> Kaynakçanın ayrı dosyada hazırlanması</h3>
@@ -487,34 +524,34 @@ oluşturabilir, düzenleyebilirsiniz.</li>
 <div id="dosyanın-hazırlanması" class="section level4" number="3.1.2.1">
 <h4><span class="header-section-number">3.1.2.1</span> Dosyanın hazırlanması</h4>
 <p>Aşağıda <code>.bib</code> uzantılı bir dosya örneği gösterilmiştir.</p>
-<div class="sourceCode" id="cb151"><pre class="sourceCode bibtex"><code class="sourceCode bibtex"><span id="cb151-1"><a href="kaynakça.html#cb151-1" aria-hidden="true" tabindex="-1"></a><span class="va">@book</span>{<span class="ot">lang13</span>,</span>
-<span id="cb151-2"><a href="kaynakça.html#cb151-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span>={Algebraic number theory},</span>
-<span id="cb151-3"><a href="kaynakça.html#cb151-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">author</span>={Lang, Serge},</span>
-<span id="cb151-4"><a href="kaynakça.html#cb151-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">volume</span>={110},</span>
-<span id="cb151-5"><a href="kaynakça.html#cb151-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">year</span>={2013},</span>
-<span id="cb151-6"><a href="kaynakça.html#cb151-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">publisher</span>={Springer Science <span class="ch">\&amp;</span> Business Media},</span>
-<span id="cb151-7"><a href="kaynakça.html#cb151-7" aria-hidden="true" tabindex="-1"></a>    }</span>
-<span id="cb151-8"><a href="kaynakça.html#cb151-8" aria-hidden="true" tabindex="-1"></a><span class="va">@article</span>{<span class="ot">lamport78</span>,</span>
-<span id="cb151-9"><a href="kaynakça.html#cb151-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span>={Time, clocks, and the ordering of events in a</span>
-<span id="cb151-10"><a href="kaynakça.html#cb151-10" aria-hidden="true" tabindex="-1"></a>        distributed system},</span>
-<span id="cb151-11"><a href="kaynakça.html#cb151-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">author</span>={Lamport, Leslie},</span>
-<span id="cb151-12"><a href="kaynakça.html#cb151-12" aria-hidden="true" tabindex="-1"></a>    <span class="dt">journal</span>={Communications of the ACM},</span>
-<span id="cb151-13"><a href="kaynakça.html#cb151-13" aria-hidden="true" tabindex="-1"></a>    <span class="dt">volume</span>={21},</span>
-<span id="cb151-14"><a href="kaynakça.html#cb151-14" aria-hidden="true" tabindex="-1"></a>    <span class="dt">number</span>={7},</span>
-<span id="cb151-15"><a href="kaynakça.html#cb151-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">pages</span>={558--565},</span>
-<span id="cb151-16"><a href="kaynakça.html#cb151-16" aria-hidden="true" tabindex="-1"></a>    <span class="dt">year</span>={1978},</span>
-<span id="cb151-17"><a href="kaynakça.html#cb151-17" aria-hidden="true" tabindex="-1"></a>    <span class="dt">publisher</span>={ACM},</span>
-<span id="cb151-18"><a href="kaynakça.html#cb151-18" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb151-19"><a href="kaynakça.html#cb151-19" aria-hidden="true" tabindex="-1"></a><span class="va">@manual</span>{<span class="ot">Oetiker06</span>,</span>
-<span id="cb151-20"><a href="kaynakça.html#cb151-20" aria-hidden="true" tabindex="-1"></a>    <span class="dt">author</span> = {Oetiker, Tobias and Partl, Hubert and Hyna, Irene</span>
-<span id="cb151-21"><a href="kaynakça.html#cb151-21" aria-hidden="true" tabindex="-1"></a>        and Schlegl, Elisabeth},</span>
-<span id="cb151-22"><a href="kaynakça.html#cb151-22" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span>  = {İnce bir {<span class="ch">\LaTeXe</span>} Elkitabı veya, 116 dakikada</span>
-<span id="cb151-23"><a href="kaynakça.html#cb151-23" aria-hidden="true" tabindex="-1"></a>        {<span class="ch">\LaTeXe</span>}},</span>
-<span id="cb151-24"><a href="kaynakça.html#cb151-24" aria-hidden="true" tabindex="-1"></a>    <span class="dt">note</span>   = {Türkçesi: Bekir Karaoğlu},</span>
-<span id="cb151-25"><a href="kaynakça.html#cb151-25" aria-hidden="true" tabindex="-1"></a>    <span class="dt">url</span>    = {http://ftp.ntua.gr/mirror/ctan/info/lshort/turkish/</span>
-<span id="cb151-26"><a href="kaynakça.html#cb151-26" aria-hidden="true" tabindex="-1"></a>        lshort-tr.pdf},</span>
-<span id="cb151-27"><a href="kaynakça.html#cb151-27" aria-hidden="true" tabindex="-1"></a>    <span class="dt">year</span>   = {2006},</span>
-<span id="cb151-28"><a href="kaynakça.html#cb151-28" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb150"><pre class="sourceCode bibtex"><code class="sourceCode bibtex"><span id="cb150-1"><a href="kaynakça.html#cb150-1" aria-hidden="true" tabindex="-1"></a><span class="va">@book</span>{<span class="ot">lang13</span>,</span>
+<span id="cb150-2"><a href="kaynakça.html#cb150-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span>={Algebraic number theory},</span>
+<span id="cb150-3"><a href="kaynakça.html#cb150-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">author</span>={Lang, Serge},</span>
+<span id="cb150-4"><a href="kaynakça.html#cb150-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">volume</span>={110},</span>
+<span id="cb150-5"><a href="kaynakça.html#cb150-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">year</span>={2013},</span>
+<span id="cb150-6"><a href="kaynakça.html#cb150-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">publisher</span>={Springer Science <span class="ch">\&amp;</span> Business Media},</span>
+<span id="cb150-7"><a href="kaynakça.html#cb150-7" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb150-8"><a href="kaynakça.html#cb150-8" aria-hidden="true" tabindex="-1"></a><span class="va">@article</span>{<span class="ot">lamport78</span>,</span>
+<span id="cb150-9"><a href="kaynakça.html#cb150-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span>={Time, clocks, and the ordering of events in a</span>
+<span id="cb150-10"><a href="kaynakça.html#cb150-10" aria-hidden="true" tabindex="-1"></a>        distributed system},</span>
+<span id="cb150-11"><a href="kaynakça.html#cb150-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">author</span>={Lamport, Leslie},</span>
+<span id="cb150-12"><a href="kaynakça.html#cb150-12" aria-hidden="true" tabindex="-1"></a>    <span class="dt">journal</span>={Communications of the ACM},</span>
+<span id="cb150-13"><a href="kaynakça.html#cb150-13" aria-hidden="true" tabindex="-1"></a>    <span class="dt">volume</span>={21},</span>
+<span id="cb150-14"><a href="kaynakça.html#cb150-14" aria-hidden="true" tabindex="-1"></a>    <span class="dt">number</span>={7},</span>
+<span id="cb150-15"><a href="kaynakça.html#cb150-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">pages</span>={558--565},</span>
+<span id="cb150-16"><a href="kaynakça.html#cb150-16" aria-hidden="true" tabindex="-1"></a>    <span class="dt">year</span>={1978},</span>
+<span id="cb150-17"><a href="kaynakça.html#cb150-17" aria-hidden="true" tabindex="-1"></a>    <span class="dt">publisher</span>={ACM},</span>
+<span id="cb150-18"><a href="kaynakça.html#cb150-18" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb150-19"><a href="kaynakça.html#cb150-19" aria-hidden="true" tabindex="-1"></a><span class="va">@manual</span>{<span class="ot">Oetiker06</span>,</span>
+<span id="cb150-20"><a href="kaynakça.html#cb150-20" aria-hidden="true" tabindex="-1"></a>    <span class="dt">author</span> = {Oetiker, Tobias and Partl, Hubert and Hyna, Irene</span>
+<span id="cb150-21"><a href="kaynakça.html#cb150-21" aria-hidden="true" tabindex="-1"></a>        and Schlegl, Elisabeth},</span>
+<span id="cb150-22"><a href="kaynakça.html#cb150-22" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span>  = {İnce bir {<span class="ch">\LaTeXe</span>} Elkitabı veya, 116 dakikada</span>
+<span id="cb150-23"><a href="kaynakça.html#cb150-23" aria-hidden="true" tabindex="-1"></a>        {<span class="ch">\LaTeXe</span>}},</span>
+<span id="cb150-24"><a href="kaynakça.html#cb150-24" aria-hidden="true" tabindex="-1"></a>    <span class="dt">note</span>   = {Türkçesi: Bekir Karaoğlu},</span>
+<span id="cb150-25"><a href="kaynakça.html#cb150-25" aria-hidden="true" tabindex="-1"></a>    <span class="dt">url</span>    = {http://ftp.ntua.gr/mirror/ctan/info/lshort/turkish/</span>
+<span id="cb150-26"><a href="kaynakça.html#cb150-26" aria-hidden="true" tabindex="-1"></a>        lshort-tr.pdf},</span>
+<span id="cb150-27"><a href="kaynakça.html#cb150-27" aria-hidden="true" tabindex="-1"></a>    <span class="dt">year</span>   = {2006},</span>
+<span id="cb150-28"><a href="kaynakça.html#cb150-28" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>Bu dosyada Serge Lang’a ait bir kitap (<code>@book</code>), Leslie Lamport’a ait
 bir makale (<code>@article</code>) ve LaTeX için bir teknik kılavuz (<code>@manual</code>)
 vardır.</p>
@@ -531,9 +568,9 @@ biri eşittir işaretinden sonra iki çengelli parantez arasında yapılır
 (çift tırnak da kullanılabilir) ve her tanımlama (sonuncusu olsa dahi)
 virgülle ayrılır.</p>
 <p>Yazar adı ya</p>
-<div class="sourceCode" id="cb152"><pre class="sourceCode bibtex"><code class="sourceCode bibtex"><span id="cb152-1"><a href="kaynakça.html#cb152-1" aria-hidden="true" tabindex="-1"></a><span class="co">author={Adı Soyadı}</span></span></code></pre></div>
+<div class="sourceCode" id="cb151"><pre class="sourceCode bibtex"><code class="sourceCode bibtex"><span id="cb151-1"><a href="kaynakça.html#cb151-1" aria-hidden="true" tabindex="-1"></a><span class="co">author={Adı Soyadı}</span></span></code></pre></div>
 <p>ya da</p>
-<div class="sourceCode" id="cb153"><pre class="sourceCode bibtex"><code class="sourceCode bibtex"><span id="cb153-1"><a href="kaynakça.html#cb153-1" aria-hidden="true" tabindex="-1"></a><span class="co">author={Soyadı, Adı}</span></span></code></pre></div>
+<div class="sourceCode" id="cb152"><pre class="sourceCode bibtex"><code class="sourceCode bibtex"><span id="cb152-1"><a href="kaynakça.html#cb152-1" aria-hidden="true" tabindex="-1"></a><span class="co">author={Soyadı, Adı}</span></span></code></pre></div>
 <p>şeklinde girilmelidir ve birden fazla yazar varsa yazarlar yukarıdaki
 yazımdan dolayı virgülle değil <code>and</code> ile ayrılmalıdır. Yazarları ayırmak
 için virgül kullanırsanız yüksek ihtimalle LaTeX, yazarların adları ve
@@ -548,31 +585,31 @@ bağlı bilgiler vardır. Bunların ne olduklarını tahmin etmek zor
 değildir. Bu konuda editörden de yararlanabilirsiniz. Örneğin, <code>.bib</code>
 uzantılı dosyayı açıp editörde “Kaynakça <span class="math inline">\(\rightarrow\)</span> Tez” yolunu
 izlerseniz aşağıdaki listeyi yazdıracaktır.</p>
-<div class="sourceCode" id="cb154"><pre class="sourceCode bibtex"><code class="sourceCode bibtex"><span id="cb154-1"><a href="kaynakça.html#cb154-1" aria-hidden="true" tabindex="-1"></a><span class="va">@thesis</span>{<span class="ot">ID</span>,</span>
-<span id="cb154-2"><a href="kaynakça.html#cb154-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">author</span> = {author},</span>
-<span id="cb154-3"><a href="kaynakça.html#cb154-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span> = {title},</span>
-<span id="cb154-4"><a href="kaynakça.html#cb154-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">type</span> = {type},</span>
-<span id="cb154-5"><a href="kaynakça.html#cb154-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">institution</span> = {institution},</span>
-<span id="cb154-6"><a href="kaynakça.html#cb154-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">date</span> = {date},</span>
-<span id="cb154-7"><a href="kaynakça.html#cb154-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTsubtitle</span> = {subtitle},</span>
-<span id="cb154-8"><a href="kaynakça.html#cb154-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTtitleaddon</span> = {titleaddon},</span>
-<span id="cb154-9"><a href="kaynakça.html#cb154-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTlanguage</span> = {language},</span>
-<span id="cb154-10"><a href="kaynakça.html#cb154-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTnote</span> = {note},</span>
-<span id="cb154-11"><a href="kaynakça.html#cb154-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTlocation</span> = {location},</span>
-<span id="cb154-12"><a href="kaynakça.html#cb154-12" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTmonth</span> = {month},</span>
-<span id="cb154-13"><a href="kaynakça.html#cb154-13" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTisbn</span> = {isbn},</span>
-<span id="cb154-14"><a href="kaynakça.html#cb154-14" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTchapter</span> = {chapter},</span>
-<span id="cb154-15"><a href="kaynakça.html#cb154-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTpages</span> = {pages},</span>
-<span id="cb154-16"><a href="kaynakça.html#cb154-16" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTpagetotal</span> = {pagetotal},</span>
-<span id="cb154-17"><a href="kaynakça.html#cb154-17" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTaddendum</span> = {addendum},</span>
-<span id="cb154-18"><a href="kaynakça.html#cb154-18" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTpubstate</span> = {pubstate},</span>
-<span id="cb154-19"><a href="kaynakça.html#cb154-19" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTdoi</span> = {doi},</span>
-<span id="cb154-20"><a href="kaynakça.html#cb154-20" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTeprint</span> = {eprint},</span>
-<span id="cb154-21"><a href="kaynakça.html#cb154-21" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTeprintclass</span> = {eprintclass},</span>
-<span id="cb154-22"><a href="kaynakça.html#cb154-22" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTeprinttype</span> = {eprinttype},</span>
-<span id="cb154-23"><a href="kaynakça.html#cb154-23" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTurl</span> = {url},</span>
-<span id="cb154-24"><a href="kaynakça.html#cb154-24" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTurldate</span> = {urldate},</span>
-<span id="cb154-25"><a href="kaynakça.html#cb154-25" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<div class="sourceCode" id="cb153"><pre class="sourceCode bibtex"><code class="sourceCode bibtex"><span id="cb153-1"><a href="kaynakça.html#cb153-1" aria-hidden="true" tabindex="-1"></a><span class="va">@thesis</span>{<span class="ot">ID</span>,</span>
+<span id="cb153-2"><a href="kaynakça.html#cb153-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">author</span> = {author},</span>
+<span id="cb153-3"><a href="kaynakça.html#cb153-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span> = {title},</span>
+<span id="cb153-4"><a href="kaynakça.html#cb153-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">type</span> = {type},</span>
+<span id="cb153-5"><a href="kaynakça.html#cb153-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">institution</span> = {institution},</span>
+<span id="cb153-6"><a href="kaynakça.html#cb153-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">date</span> = {date},</span>
+<span id="cb153-7"><a href="kaynakça.html#cb153-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTsubtitle</span> = {subtitle},</span>
+<span id="cb153-8"><a href="kaynakça.html#cb153-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTtitleaddon</span> = {titleaddon},</span>
+<span id="cb153-9"><a href="kaynakça.html#cb153-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTlanguage</span> = {language},</span>
+<span id="cb153-10"><a href="kaynakça.html#cb153-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTnote</span> = {note},</span>
+<span id="cb153-11"><a href="kaynakça.html#cb153-11" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTlocation</span> = {location},</span>
+<span id="cb153-12"><a href="kaynakça.html#cb153-12" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTmonth</span> = {month},</span>
+<span id="cb153-13"><a href="kaynakça.html#cb153-13" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTisbn</span> = {isbn},</span>
+<span id="cb153-14"><a href="kaynakça.html#cb153-14" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTchapter</span> = {chapter},</span>
+<span id="cb153-15"><a href="kaynakça.html#cb153-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTpages</span> = {pages},</span>
+<span id="cb153-16"><a href="kaynakça.html#cb153-16" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTpagetotal</span> = {pagetotal},</span>
+<span id="cb153-17"><a href="kaynakça.html#cb153-17" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTaddendum</span> = {addendum},</span>
+<span id="cb153-18"><a href="kaynakça.html#cb153-18" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTpubstate</span> = {pubstate},</span>
+<span id="cb153-19"><a href="kaynakça.html#cb153-19" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTdoi</span> = {doi},</span>
+<span id="cb153-20"><a href="kaynakça.html#cb153-20" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTeprint</span> = {eprint},</span>
+<span id="cb153-21"><a href="kaynakça.html#cb153-21" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTeprintclass</span> = {eprintclass},</span>
+<span id="cb153-22"><a href="kaynakça.html#cb153-22" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTeprinttype</span> = {eprinttype},</span>
+<span id="cb153-23"><a href="kaynakça.html#cb153-23" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTurl</span> = {url},</span>
+<span id="cb153-24"><a href="kaynakça.html#cb153-24" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTurldate</span> = {urldate},</span>
+<span id="cb153-25"><a href="kaynakça.html#cb153-25" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
 <p>Görüldüğü gibi ilk altı satır zorunlu, OPT ile başlayanlar
 isteğe bağlıdır. İsteğe bağlı olanlardan belirtmek istediklerinizin
 başında bulunan OPT’yi silip tanımlamayı yapabilirsiniz.</p>
@@ -592,8 +629,8 @@ kullanmak için ek bir şey yapmanız gerekmez.</p>
 <p>Oluşturulan <code>.bib</code> uzantılı dosya <code>\bibliography</code> komutuyla içeri
 aktarılır, <code>\bibliographystyle</code> komutuyla da kullanılacak biçim
 belirtilir.</p>
-<div class="sourceCode" id="cb155"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb155-1"><a href="kaynakça.html#cb155-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\bibliographystyle</span>{<span class="ex">&lt;biçim&gt;</span>}</span>
-<span id="cb155-2"><a href="kaynakça.html#cb155-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\bibliography</span>{<span class="ex">&lt;dosya&gt;</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb154"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb154-1"><a href="kaynakça.html#cb154-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\bibliographystyle</span>{<span class="ex">&lt;biçim&gt;</span>}</span>
+<span id="cb154-2"><a href="kaynakça.html#cb154-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\bibliography</span>{<span class="ex">&lt;dosya&gt;</span>}</span></code></pre></div>
 <p>Burada yer alan <code>&lt;dosya&gt;</code> uzantısının belirtilmesine gerek yoktur.
 Dosyanın <code>kaynakca.bib</code> olduğunu varsayarak, komut
 <code>\bibliography{kaynakca}</code> şeklinde verilir. Kullanılabilecek biçimler
@@ -605,33 +642,33 @@ bütünleşik kaynakçadan farklı olarak atıf yapılmayan kaynaklar
 yazdırılmaz. Bazı kaynakların bu kuraldan ayrı tutulması istenirse
 <code>\nocite</code> komutu, değişkenine kaynağın anahtarı yazılarak
 <code>\bibliography</code> komutundan önce verilmelidir.</p>
-<div class="sourceCode" id="cb156"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb156-1"><a href="kaynakça.html#cb156-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\nocite</span>{<span class="ex">&lt;anahtar&gt;</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb155"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb155-1"><a href="kaynakça.html#cb155-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\nocite</span>{<span class="ex">&lt;anahtar&gt;</span>}</span></code></pre></div>
 <p>Eğer tüm kaynakların bu kuraldan ayrı tutulması isteniyorsa komut
 <code>\nocite{*}</code> şeklinde verilmelidir.</p>
 <p>Kaynakçanın belgeye yazılması için kaynak dosyanın derlenip, BiBTeX
 programının çalıştırılması ve ardından dosyanın en az iki kere daha
 derlenmesi gerekir. BiBTeX programı, editörde “Araçlar <span class="math inline">\(\rightarrow\)</span> Kaynakça” yoluyla çalıştırılır (klavye kısa yolu F8). Aynı şey,
 uçbirimde sırasıyla</p>
-<div class="sourceCode" id="cb157"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb157-1"><a href="kaynakça.html#cb157-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pdflatex</span> kaynakdosya</span>
-<span id="cb157-2"><a href="kaynakça.html#cb157-2" aria-hidden="true" tabindex="-1"></a><span class="ex">bibtex</span> kaynakdosya</span>
-<span id="cb157-3"><a href="kaynakça.html#cb157-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pdflatex</span> kaynakdosya</span>
-<span id="cb157-4"><a href="kaynakça.html#cb157-4" aria-hidden="true" tabindex="-1"></a><span class="ex">pdflatex</span> kaynakdosya</span></code></pre></div>
+<div class="sourceCode" id="cb156"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb156-1"><a href="kaynakça.html#cb156-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pdflatex</span> kaynakdosya</span>
+<span id="cb156-2"><a href="kaynakça.html#cb156-2" aria-hidden="true" tabindex="-1"></a><span class="ex">bibtex</span> kaynakdosya</span>
+<span id="cb156-3"><a href="kaynakça.html#cb156-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pdflatex</span> kaynakdosya</span>
+<span id="cb156-4"><a href="kaynakça.html#cb156-4" aria-hidden="true" tabindex="-1"></a><span class="ex">pdflatex</span> kaynakdosya</span></code></pre></div>
 <p>komutları çalıştırılarak yapılabilir.</p>
 <p>Aşağıda kaynak dosya örneği verilmiştir. Bu dosyayı derleyebilmeniz için içeriği yukarıda verilen <code>kaynakca.bib</code> dosyasının bu dosyayla aynı dizinde olması gerektiğini unutmayınız.</p>
-<div class="sourceCode" id="cb158"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb158-1"><a href="kaynakça.html#cb158-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[10pt,a4paper]{<span class="ex">article</span>}</span>
-<span id="cb158-2"><a href="kaynakça.html#cb158-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[T1]{<span class="ex">fontenc</span>}</span>
-<span id="cb158-3"><a href="kaynakça.html#cb158-3" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[turkish]{<span class="ex">babel</span>}</span>
-<span id="cb158-4"><a href="kaynakça.html#cb158-4" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">dtk-logos</span>} <span class="co">% \BibTeX komutu için...</span></span>
-<span id="cb158-5"><a href="kaynakça.html#cb158-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\title</span>{Kaynakça Yönetimi 2: <span class="fu">\BibTeX</span>}</span>
-<span id="cb158-6"><a href="kaynakça.html#cb158-6" aria-hidden="true" tabindex="-1"></a><span class="fu">\author</span>{Zafer Acar}</span>
-<span id="cb158-7"><a href="kaynakça.html#cb158-7" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb158-8"><a href="kaynakça.html#cb158-8" aria-hidden="true" tabindex="-1"></a><span class="fu">\maketitle</span></span>
-<span id="cb158-9"><a href="kaynakça.html#cb158-9" aria-hidden="true" tabindex="-1"></a>Lang&#39;ın kitabı <span class="kw">\cite</span>{<span class="ex">lang13</span>}, Lamport&#39;un makalesi  <span class="kw">\cite</span>{<span class="ex">lamport78</span>} </span>
-<span id="cb158-10"><a href="kaynakça.html#cb158-10" aria-hidden="true" tabindex="-1"></a>ve <span class="fu">\LaTeX</span>{} için Türkçe kaynak <span class="kw">\cite</span>{<span class="ex">Oetiker06</span>} <span class="fu">\dots</span></span>
-<span id="cb158-11"><a href="kaynakça.html#cb158-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb158-12"><a href="kaynakça.html#cb158-12" aria-hidden="true" tabindex="-1"></a><span class="bu">\bibliographystyle</span>{<span class="ex">siam</span>}</span>
-<span id="cb158-13"><a href="kaynakça.html#cb158-13" aria-hidden="true" tabindex="-1"></a><span class="bu">\bibliography</span>{<span class="ex">kaynakca</span>}</span>
-<span id="cb158-14"><a href="kaynakça.html#cb158-14" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb157"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb157-1"><a href="kaynakça.html#cb157-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[10pt,a4paper]{<span class="ex">article</span>}</span>
+<span id="cb157-2"><a href="kaynakça.html#cb157-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[T1]{<span class="ex">fontenc</span>}</span>
+<span id="cb157-3"><a href="kaynakça.html#cb157-3" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[turkish]{<span class="ex">babel</span>}</span>
+<span id="cb157-4"><a href="kaynakça.html#cb157-4" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">dtk-logos</span>} <span class="co">% \BibTeX komutu için...</span></span>
+<span id="cb157-5"><a href="kaynakça.html#cb157-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\title</span>{Kaynakça Yönetimi 2: <span class="fu">\BibTeX</span>}</span>
+<span id="cb157-6"><a href="kaynakça.html#cb157-6" aria-hidden="true" tabindex="-1"></a><span class="fu">\author</span>{Zafer Acar}</span>
+<span id="cb157-7"><a href="kaynakça.html#cb157-7" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb157-8"><a href="kaynakça.html#cb157-8" aria-hidden="true" tabindex="-1"></a><span class="fu">\maketitle</span></span>
+<span id="cb157-9"><a href="kaynakça.html#cb157-9" aria-hidden="true" tabindex="-1"></a>Lang&#39;ın kitabı <span class="kw">\cite</span>{<span class="ex">lang13</span>}, Lamport&#39;un makalesi  <span class="kw">\cite</span>{<span class="ex">lamport78</span>} </span>
+<span id="cb157-10"><a href="kaynakça.html#cb157-10" aria-hidden="true" tabindex="-1"></a>ve <span class="fu">\LaTeX</span>{} için Türkçe kaynak <span class="kw">\cite</span>{<span class="ex">Oetiker06</span>} <span class="fu">\dots</span></span>
+<span id="cb157-11"><a href="kaynakça.html#cb157-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb157-12"><a href="kaynakça.html#cb157-12" aria-hidden="true" tabindex="-1"></a><span class="bu">\bibliographystyle</span>{<span class="ex">siam</span>}</span>
+<span id="cb157-13"><a href="kaynakça.html#cb157-13" aria-hidden="true" tabindex="-1"></a><span class="bu">\bibliography</span>{<span class="ex">kaynakca</span>}</span>
+<span id="cb157-14"><a href="kaynakça.html#cb157-14" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre></div>
 </div>
 </div>
 </div>

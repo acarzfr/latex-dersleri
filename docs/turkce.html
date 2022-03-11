@@ -331,9 +331,9 @@ $$
       runlatex.overleafURI=null;
 
       runlatex.texts ={
-	  "Open in Overleaf": "Overleaf'ta aç",
+	  "Open in Overleaf": "Overleaf",
 	  "TeXLive.net":      "Çalıştır",
-	  "Delete Output":    "Çıktıyı temizle",
+	  "Delete Output":    "Çıktıyı Temizle",
 	  "Compiling PDF":    "PDF veya HTML derleme",
 	  "Added Code":       "",
 	  "End Added Code":   "",
@@ -366,12 +366,49 @@ $$
   window.addEventListener('load', fillForm, false);
 
 
-    </script>
+</script>
+
+
+
+<!--   GeoGebra  -->
+
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+
+<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+
+
+<!-- Kullanım
+
+<div id="ggb-element">
+<script>
+    var params = {"appName": "graphing", "width": 800, "height": 600, "showToolBar": true, "showAlgebraInput": true, "showMenuBar": true };
+    var applet = new GGBApplet(params, true);
+    window.addEventListener("load", function() {
+        applet.inject('ggb-element');
+    });
+</script>
+</div>
+
+grphing yerine geometry , 3d
+
+"material_id":"RHYH3UQ8"
+
+"filename":"myFile.ggb"
+
+
+
+
+
+
+
+-->
+
 <div id="turkce" class="section level2" number="1.9">
 <h2><span class="header-section-number">1.9</span> Türkçe Dil Ayarları ve Çoklu Dil Kullanımı</h2>
 <p>LaTeX’de Türkçe belgeler oluşturmak için öncelikle sahanlığa</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb15-1"><a href="turkce.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[T1]{<span class="ex">fontenc</span>}</span>
-<span id="cb15-2"><a href="turkce.html#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[turkish]{<span class="ex">babel</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb14-1"><a href="turkce.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[T1]{<span class="ex">fontenc</span>}</span>
+<span id="cb14-2"><a href="turkce.html#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[turkish]{<span class="ex">babel</span>}</span></code></pre></div>
 <p>komutlarının verilmesi gerekir.</p>
 <p><code>T1</code> seçenekli <strong>fontenc</strong> paketi yazıtipi kodlamasıyla ilgili bir paket
 olup, hecelemenin doğru şekilde yapılmasını sağlar. Bir çok Avrupa
@@ -387,26 +424,26 @@ pakettir. Son güncellemelerle birlikte bu paketin kullanılma
 zorunluluğu ortadan kalkmıştır.</p>
 </blockquote>
 <p>Aşağıda Türkçe asgari bir LaTeX kaynak dosyası örneği verilmiştir.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb16-1"><a href="turkce.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
-<span id="cb16-2"><a href="turkce.html#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[T1]{<span class="ex">fontenc</span>}</span>
-<span id="cb16-3"><a href="turkce.html#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[turkish]{<span class="ex">babel</span>}</span>
-<span id="cb16-4"><a href="turkce.html#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb16-5"><a href="turkce.html#cb16-5" aria-hidden="true" tabindex="-1"></a>  İşte  Türkçe ilk belgem.</span>
-<span id="cb16-6"><a href="turkce.html#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb15-1"><a href="turkce.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb15-2"><a href="turkce.html#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[T1]{<span class="ex">fontenc</span>}</span>
+<span id="cb15-3"><a href="turkce.html#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[turkish]{<span class="ex">babel</span>}</span>
+<span id="cb15-4"><a href="turkce.html#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb15-5"><a href="turkce.html#cb15-5" aria-hidden="true" tabindex="-1"></a>  İşte  Türkçe ilk belgem.</span>
+<span id="cb15-6"><a href="turkce.html#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre></div>
 <p>Türkçe dışında ikinci bir dil kullanmak isterseniz, örneğin İngilizce,
 <strong>babel</strong> paketinin seçeneğini</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb17-1"><a href="turkce.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[english,turkish]{<span class="ex">babel</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb16-1"><a href="turkce.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[english,turkish]{<span class="ex">babel</span>}</span></code></pre></div>
 <p>şeklinde değiştirmeniz gerekir. Burada etkin olan dil Türkçedir.
 İngilizceyi etkin hale getirmek için <code>\selectlanguage{english}</code> komutu
 kullanılır. Tekrar Türkçeye geçmek için de benzer şekilde
 <code>\selectlanguage{turkish}</code> komutu kullanılır.</p>
 <p>Bir kelime ya da cümle gibi kısa metinler kullanılacaksa
 <code>\foreignlanguage</code> komutu kullanılabilir:</p>
-<div class="sourceCode" id="cb18"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb18-1"><a href="turkce.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\foreignlanguage</span>{&lt;dil&gt;}{&lt;metin&gt;}</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb17-1"><a href="turkce.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\foreignlanguage</span>{&lt;dil&gt;}{&lt;metin&gt;}</span></code></pre></div>
 <p>Uzun metinler içinse diğer bir seçenek <code>otherlanguage</code> ortamıdır.</p>
-<div class="sourceCode" id="cb19"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb19-1"><a href="turkce.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">otherlanguage</span>}{&lt;dil&gt;}</span>
-<span id="cb19-2"><a href="turkce.html#cb19-2" aria-hidden="true" tabindex="-1"></a>  ...</span>
-<span id="cb19-3"><a href="turkce.html#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">otherlanguage</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb18-1"><a href="turkce.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">otherlanguage</span>}{&lt;dil&gt;}</span>
+<span id="cb18-2"><a href="turkce.html#cb18-2" aria-hidden="true" tabindex="-1"></a>  ...</span>
+<span id="cb18-3"><a href="turkce.html#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">otherlanguage</span>}</span></code></pre></div>
 <p>Bu ortamın isimleri değiştirmeyen, örneğin, dil seçeneği İngilizce
 olmasına rağmen belgeye bir tablo eklediğinizde “Table” yerine yine
 “Tablo” adını yazan yıldızlı sürümü de (<code>otherlanguage*</code>) vardır.</p>

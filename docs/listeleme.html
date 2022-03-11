@@ -331,9 +331,9 @@ $$
       runlatex.overleafURI=null;
 
       runlatex.texts ={
-	  "Open in Overleaf": "Overleaf'ta aç",
+	  "Open in Overleaf": "Overleaf",
 	  "TeXLive.net":      "Çalıştır",
-	  "Delete Output":    "Çıktıyı temizle",
+	  "Delete Output":    "Çıktıyı Temizle",
 	  "Compiling PDF":    "PDF veya HTML derleme",
 	  "Added Code":       "",
 	  "End Added Code":   "",
@@ -366,7 +366,44 @@ $$
   window.addEventListener('load', fillForm, false);
 
 
-    </script>
+</script>
+
+
+
+<!--   GeoGebra  -->
+
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+
+<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+
+
+<!-- Kullanım
+
+<div id="ggb-element">
+<script>
+    var params = {"appName": "graphing", "width": 800, "height": 600, "showToolBar": true, "showAlgebraInput": true, "showMenuBar": true };
+    var applet = new GGBApplet(params, true);
+    window.addEventListener("load", function() {
+        applet.inject('ggb-element');
+    });
+</script>
+</div>
+
+grphing yerine geometry , 3d
+
+"material_id":"RHYH3UQ8"
+
+"filename":"myFile.ggb"
+
+
+
+
+
+
+
+-->
+
 <div id="listeleme" class="section level2" number="1.19">
 <h2><span class="header-section-number">1.19</span> Listeleme</h2>
 <div id="temel-listeler" class="section level3" number="1.19.1">
@@ -375,34 +412,34 @@ $$
 kullanılabileceği gibi birlikte de kullanılabilirler. Her ortamda
 maddeler <code>\item</code> komutuyla belirtilir.</p>
 <p>Bir listeyi numaralı şekilde dizmek için <code>enumerate</code> ortamı kullanılır.</p>
-<div class="sourceCode" id="cb51"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb51-1"><a href="listeleme.html#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
-<span id="cb51-2"><a href="listeleme.html#cb51-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">\item</span> madde 1</span>
-<span id="cb51-3"><a href="listeleme.html#cb51-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
-<span id="cb51-4"><a href="listeleme.html#cb51-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\item</span> alt madde 1</span>
-<span id="cb51-5"><a href="listeleme.html#cb51-5" aria-hidden="true" tabindex="-1"></a>      <span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
-<span id="cb51-6"><a href="listeleme.html#cb51-6" aria-hidden="true" tabindex="-1"></a>        <span class="fu">\item</span> en alt madde 1</span>
-<span id="cb51-7"><a href="listeleme.html#cb51-7" aria-hidden="true" tabindex="-1"></a>      <span class="kw">\end</span>{<span class="ex">enumerate</span>}</span>
-<span id="cb51-8"><a href="listeleme.html#cb51-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\item</span> alt madde 2</span>
-<span id="cb51-9"><a href="listeleme.html#cb51-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">\end</span>{<span class="ex">enumerate</span>}</span>
-<span id="cb51-10"><a href="listeleme.html#cb51-10" aria-hidden="true" tabindex="-1"></a> <span class="fu">\item</span> madde 2</span>
-<span id="cb51-11"><a href="listeleme.html#cb51-11" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">enumerate</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb50"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb50-1"><a href="listeleme.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb50-2"><a href="listeleme.html#cb50-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">\item</span> madde 1</span>
+<span id="cb50-3"><a href="listeleme.html#cb50-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb50-4"><a href="listeleme.html#cb50-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\item</span> alt madde 1</span>
+<span id="cb50-5"><a href="listeleme.html#cb50-5" aria-hidden="true" tabindex="-1"></a>      <span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb50-6"><a href="listeleme.html#cb50-6" aria-hidden="true" tabindex="-1"></a>        <span class="fu">\item</span> en alt madde 1</span>
+<span id="cb50-7"><a href="listeleme.html#cb50-7" aria-hidden="true" tabindex="-1"></a>      <span class="kw">\end</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb50-8"><a href="listeleme.html#cb50-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\item</span> alt madde 2</span>
+<span id="cb50-9"><a href="listeleme.html#cb50-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">\end</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb50-10"><a href="listeleme.html#cb50-10" aria-hidden="true" tabindex="-1"></a> <span class="fu">\item</span> madde 2</span>
+<span id="cb50-11"><a href="listeleme.html#cb50-11" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">enumerate</span>}</span></code></pre></div>
 <p><img src="examples/ex3.svg" />
 </p>
 <p>Numarasız, özel işaretli listeler için <code>itemize</code> ortamı kullanılır ve bu
 ortamda madde işareti değiştirilebilir.</p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb52-1"><a href="listeleme.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
-<span id="cb52-2"><a href="listeleme.html#cb52-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\item</span> madde 1</span>
-<span id="cb52-3"><a href="listeleme.html#cb52-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\item</span> madde 2</span>
-<span id="cb52-4"><a href="listeleme.html#cb52-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\item</span>[<span class="ss">$</span><span class="sc">\circ</span><span class="ss">$</span>] madde 3</span>
-<span id="cb52-5"><a href="listeleme.html#cb52-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\item</span>[+] madde 4</span>
-<span id="cb52-6"><a href="listeleme.html#cb52-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb51"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb51-1"><a href="listeleme.html#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb51-2"><a href="listeleme.html#cb51-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\item</span> madde 1</span>
+<span id="cb51-3"><a href="listeleme.html#cb51-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\item</span> madde 2</span>
+<span id="cb51-4"><a href="listeleme.html#cb51-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\item</span>[<span class="ss">$</span><span class="sc">\circ</span><span class="ss">$</span>] madde 3</span>
+<span id="cb51-5"><a href="listeleme.html#cb51-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\item</span>[+] madde 4</span>
+<span id="cb51-6"><a href="listeleme.html#cb51-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span></code></pre></div>
 <p>Açıklamalı bir liste içinse <code>description</code> ortamı kullanılır. Bu ortamda
 köşeli parantez içine alınan anahtar kelimeler kalın dizilir.</p>
-<div class="sourceCode" id="cb53"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb53-1"><a href="listeleme.html#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">description</span>}</span>
-<span id="cb53-2"><a href="listeleme.html#cb53-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\item</span>[Nokta] Boyutu olmayan</span>
-<span id="cb53-3"><a href="listeleme.html#cb53-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\item</span>[Çember] Bir noktaya eşit</span>
-<span id="cb53-4"><a href="listeleme.html#cb53-4" aria-hidden="true" tabindex="-1"></a>  uzaklıktaki noktaların geometrik yeri</span>
-<span id="cb53-5"><a href="listeleme.html#cb53-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">description</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb52"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb52-1"><a href="listeleme.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">description</span>}</span>
+<span id="cb52-2"><a href="listeleme.html#cb52-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\item</span>[Nokta] Boyutu olmayan</span>
+<span id="cb52-3"><a href="listeleme.html#cb52-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\item</span>[Çember] Bir noktaya eşit</span>
+<span id="cb52-4"><a href="listeleme.html#cb52-4" aria-hidden="true" tabindex="-1"></a>  uzaklıktaki noktaların geometrik yeri</span>
+<span id="cb52-5"><a href="listeleme.html#cb52-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">description</span>}</span></code></pre></div>
 </div>
 <div id="listeleri-özelleştirmek" class="section level3" number="1.19.2">
 <h3><span class="header-section-number">1.19.2</span> Listeleri özelleştirmek</h3>
@@ -410,11 +447,11 @@ köşeli parantez içine alınan anahtar kelimeler kalın dizilir.</p>
 <a href="http://ftp.ntua.gr/mirror/ctan/macros/latex/required/tools/enumerate.pdf"><strong>enumerate</strong></a> paketi kullanılabilir. Paketi <code>\usepackage{enumerate}</code>
 komutuyla ekledikten sonra <code>enumerate</code> ortamını başlatan komutun peşine
 köşeli parantezler içinde madde işaretlerinin tipi belirtilebilir:</p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb54-1"><a href="listeleme.html#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">enumerate</span>}[I.]</span>
-<span id="cb54-2"><a href="listeleme.html#cb54-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">\item</span> bir</span>
-<span id="cb54-3"><a href="listeleme.html#cb54-3" aria-hidden="true" tabindex="-1"></a> <span class="fu">\item</span> iki </span>
-<span id="cb54-4"><a href="listeleme.html#cb54-4" aria-hidden="true" tabindex="-1"></a> <span class="fu">\item</span> üç</span>
-<span id="cb54-5"><a href="listeleme.html#cb54-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">enumerate</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb53-1"><a href="listeleme.html#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">enumerate</span>}[I.]</span>
+<span id="cb53-2"><a href="listeleme.html#cb53-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">\item</span> bir</span>
+<span id="cb53-3"><a href="listeleme.html#cb53-3" aria-hidden="true" tabindex="-1"></a> <span class="fu">\item</span> iki </span>
+<span id="cb53-4"><a href="listeleme.html#cb53-4" aria-hidden="true" tabindex="-1"></a> <span class="fu">\item</span> üç</span>
+<span id="cb53-5"><a href="listeleme.html#cb53-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">enumerate</span>}</span></code></pre></div>
 <p>Bunun dışında çok daha fazla özelleştirmeye izin veren
 <a href="http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/enumitem/enumitem.pdf"><strong>enumitem</strong></a> paketi vardır. Bu paketi kullanarak yapılabilecek
 listelere de ilerde değineceğiz. Dileyen okur paket belgesini inceleyip

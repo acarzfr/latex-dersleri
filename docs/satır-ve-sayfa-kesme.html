@@ -331,9 +331,9 @@ $$
       runlatex.overleafURI=null;
 
       runlatex.texts ={
-	  "Open in Overleaf": "Overleaf'ta aç",
+	  "Open in Overleaf": "Overleaf",
 	  "TeXLive.net":      "Çalıştır",
-	  "Delete Output":    "Çıktıyı temizle",
+	  "Delete Output":    "Çıktıyı Temizle",
 	  "Compiling PDF":    "PDF veya HTML derleme",
 	  "Added Code":       "",
 	  "End Added Code":   "",
@@ -366,7 +366,44 @@ $$
   window.addEventListener('load', fillForm, false);
 
 
-    </script>
+</script>
+
+
+
+<!--   GeoGebra  -->
+
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+
+<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+
+
+<!-- Kullanım
+
+<div id="ggb-element">
+<script>
+    var params = {"appName": "graphing", "width": 800, "height": 600, "showToolBar": true, "showAlgebraInput": true, "showMenuBar": true };
+    var applet = new GGBApplet(params, true);
+    window.addEventListener("load", function() {
+        applet.inject('ggb-element');
+    });
+</script>
+</div>
+
+grphing yerine geometry , 3d
+
+"material_id":"RHYH3UQ8"
+
+"filename":"myFile.ggb"
+
+
+
+
+
+
+
+-->
+
 <div id="satır-ve-sayfa-kesme" class="section level2" number="1.15">
 <h2><span class="header-section-number">1.15</span> Satır ve Sayfa Kesme</h2>
 <p>LaTeX, kelimeler arası boşlukları otomatik ayarlayarak satırları iki
@@ -379,7 +416,7 @@ kesilirse LaTeX kalan yarım satırı iki yana yaslar. <code>\nolinebreak</code>
 komutu ise satırın kesilmesini önler.</p>
 <p>Birçok kelimeyi birlikte aynı satırda tutmak gerekirse <code>\mbox</code> komutu
 kullanılır:</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb38-1"><a href="satır-ve-sayfa-kesme.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\mbox</span>{&lt;metin&gt;}</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb37-1"><a href="satır-ve-sayfa-kesme.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\mbox</span>{&lt;metin&gt;}</span></code></pre></div>
 <p>Buradaki <code>&lt;metin&gt;</code> içindeki kelimeler her durumda birleşik kalırlar.
 Benzer şeyi <code>\fbox</code> komutu da metin etrafına çizgi çizerek yapar.</p>
 <p>Sayfayı kesip yeni bir sayfaya geçmek için <code>\newpage</code> ya da <code>\pagebreak</code>

@@ -331,9 +331,9 @@ $$
       runlatex.overleafURI=null;
 
       runlatex.texts ={
-	  "Open in Overleaf": "Overleaf'ta aç",
+	  "Open in Overleaf": "Overleaf",
 	  "TeXLive.net":      "Çalıştır",
-	  "Delete Output":    "Çıktıyı temizle",
+	  "Delete Output":    "Çıktıyı Temizle",
 	  "Compiling PDF":    "PDF veya HTML derleme",
 	  "Added Code":       "",
 	  "End Added Code":   "",
@@ -366,7 +366,44 @@ $$
   window.addEventListener('load', fillForm, false);
 
 
-    </script>
+</script>
+
+
+
+<!--   GeoGebra  -->
+
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+
+<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+
+
+<!-- Kullanım
+
+<div id="ggb-element">
+<script>
+    var params = {"appName": "graphing", "width": 800, "height": 600, "showToolBar": true, "showAlgebraInput": true, "showMenuBar": true };
+    var applet = new GGBApplet(params, true);
+    window.addEventListener("load", function() {
+        applet.inject('ggb-element');
+    });
+</script>
+</div>
+
+grphing yerine geometry , 3d
+
+"material_id":"RHYH3UQ8"
+
+"filename":"myFile.ggb"
+
+
+
+
+
+
+
+-->
+
 <div id="belgesinifi" class="section level2" number="1.8">
 <h2><span class="header-section-number">1.8</span> Belge Sınıfları ve Seçenekleri</h2>
 <p>Bölüm <a href="tipik.html#tipik">1.7</a>’de <code>\documentclass</code> komutunun zorunlu değişkeninin belge
@@ -538,11 +575,11 @@ varsayılan olduğu ve kullanılabilir olup olmadığı gösterilmiştir.</p>
 </table>
 <p>1: varsayılan 1/2: kullanılabilir 0:kullanılamaz</p>
 <p>Örneğin belgeye</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb13-1"><a href="belgesinifi.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[a4paper,12pt]{<span class="ex">article</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb12-1"><a href="belgesinifi.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[a4paper,12pt]{<span class="ex">article</span>}</span></code></pre></div>
 <p>komutuyla başlarsak LaTeX’e kağıt boyutu A4, ana yazı büyüklüğü 12 punto
 olan bir makale yazacağımızı bildirmiş oluruz.</p>
 <p>Başka bir örnek</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb14-1"><a href="belgesinifi.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[a5paper,11pt,twocolumn]{<span class="ex">book</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb13-1"><a href="belgesinifi.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[a5paper,11pt,twocolumn]{<span class="ex">book</span>}</span></code></pre></div>
 <p>olsun. Bu örnekte kağıt boyutu A5, ana yazı büyüklüğü 11 punto olan bir
 kitap yazacağımızı ve kitabın iki sütun olarak dizilmesini söyledik.</p>
 </div>

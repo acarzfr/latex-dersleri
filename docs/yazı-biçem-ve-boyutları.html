@@ -331,9 +331,9 @@ $$
       runlatex.overleafURI=null;
 
       runlatex.texts ={
-	  "Open in Overleaf": "Overleaf'ta aç",
+	  "Open in Overleaf": "Overleaf",
 	  "TeXLive.net":      "Çalıştır",
-	  "Delete Output":    "Çıktıyı temizle",
+	  "Delete Output":    "Çıktıyı Temizle",
 	  "Compiling PDF":    "PDF veya HTML derleme",
 	  "Added Code":       "",
 	  "End Added Code":   "",
@@ -366,7 +366,44 @@ $$
   window.addEventListener('load', fillForm, false);
 
 
-    </script>
+</script>
+
+
+
+<!--   GeoGebra  -->
+
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+
+<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+
+
+<!-- Kullanım
+
+<div id="ggb-element">
+<script>
+    var params = {"appName": "graphing", "width": 800, "height": 600, "showToolBar": true, "showAlgebraInput": true, "showMenuBar": true };
+    var applet = new GGBApplet(params, true);
+    window.addEventListener("load", function() {
+        applet.inject('ggb-element');
+    });
+</script>
+</div>
+
+grphing yerine geometry , 3d
+
+"material_id":"RHYH3UQ8"
+
+"filename":"myFile.ggb"
+
+
+
+
+
+
+
+-->
+
 <div id="yazı-biçem-ve-boyutları" class="section level2" number="2.7">
 <h2><span class="header-section-number">2.7</span> Yazı Biçem ve Boyutları</h2>
 <p>Matematiksel ifadeleri dizerken bazen yazının biçemini ya da boyutunu
@@ -425,16 +462,16 @@ kullanılarak değiştirilir.</p>
 </tbody>
 </table>
 <p>Son satırdaki komutun kullanılabilmesi için</p>
-<div class="sourceCode" id="cb109"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb109-1"><a href="yazı-biçem-ve-boyutları.html#cb109-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">mathrsfs</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb108"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb108-1"><a href="yazı-biçem-ve-boyutları.html#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">mathrsfs</span>}</span></code></pre></div>
 <p>komutuyla <strong>mathrsfs</strong> paketi eklenmiş olmalıdır.</p>
 <p>Bu komutlarla girilen ifadelerdeki boşluklar yine dikkate alınmaz ve
 yine aksanlı harfler girilemez.</p>
 <p>Matematik kipindeki bir ifadenin hem kalın hem de italik yazılması için
 <code>\boldsymbol</code> komutu kullanılmalıdır.</p>
-<div class="sourceCode" id="cb110"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb110-1"><a href="yazı-biçem-ve-boyutları.html#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
-<span id="cb110-2"><a href="yazı-biçem-ve-boyutları.html#cb110-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\mu</span><span class="ss">, M </span><span class="sc">\qquad</span><span class="ss"> </span><span class="sc">\mathbf</span><span class="ss">{</span><span class="sc">\mu</span><span class="ss">}, </span><span class="sc">\mathbf</span><span class="ss">{M}</span><span class="sc">\qquad</span></span>
-<span id="cb110-3"><a href="yazı-biçem-ve-boyutları.html#cb110-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\boldsymbol</span><span class="ss">{</span><span class="sc">\mu</span><span class="ss">}, </span><span class="sc">\boldsymbol</span><span class="ss">{M}</span></span>
-<span id="cb110-4"><a href="yazı-biçem-ve-boyutları.html#cb110-4" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
+<div class="sourceCode" id="cb109"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb109-1"><a href="yazı-biçem-ve-boyutları.html#cb109-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
+<span id="cb109-2"><a href="yazı-biçem-ve-boyutları.html#cb109-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\mu</span><span class="ss">, M </span><span class="sc">\qquad</span><span class="ss"> </span><span class="sc">\mathbf</span><span class="ss">{</span><span class="sc">\mu</span><span class="ss">}, </span><span class="sc">\mathbf</span><span class="ss">{M}</span><span class="sc">\qquad</span></span>
+<span id="cb109-3"><a href="yazı-biçem-ve-boyutları.html#cb109-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\boldsymbol</span><span class="ss">{</span><span class="sc">\mu</span><span class="ss">}, </span><span class="sc">\boldsymbol</span><span class="ss">{M}</span></span>
+<span id="cb109-4"><a href="yazı-biçem-ve-boyutları.html#cb109-4" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
 <p><span class="math display">\[
 \mu, M \qquad \mathbf{\mu}, \mathbf{M}\qquad
 \boldsymbol{\mu}, \boldsymbol{M}
@@ -445,12 +482,12 @@ vardır: <code>\displaystyle</code>, <code>\textstyle</code>, <code>\scriptstyle
 dizer, <code>\displaystyle</code> komutu ise ifadeyi ayrı satırda sergilenir gibi
 büyük dizer. <code>\scriptstyle</code> ve <code>\scriptscriptstyle</code> komutları da normal
 metin boyutundan küçük dizerler.</p>
-<div class="sourceCode" id="cb111"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb111-1"><a href="yazı-biçem-ve-boyutları.html#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
-<span id="cb111-2"><a href="yazı-biçem-ve-boyutları.html#cb111-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\sum</span><span class="ss">_{k=0}^n z^k </span><span class="sc">\qquad</span><span class="ss"> </span><span class="sc">\textstyle\sum</span><span class="ss">_{k=0}^n z^k</span></span>
-<span id="cb111-3"><a href="yazı-biçem-ve-boyutları.html#cb111-3" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span>
-<span id="cb111-4"><a href="yazı-biçem-ve-boyutları.html#cb111-4" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span><span class="sc">\displaystyle\sum</span><span class="ss">_{k=0}^n z^k$</span><span class="fu">\qquad</span> </span>
-<span id="cb111-5"><a href="yazı-biçem-ve-boyutları.html#cb111-5" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span><span class="sc">\sum</span><span class="ss">_{k=0}^n z^k$</span> <span class="fu">\qquad</span></span>
-<span id="cb111-6"><a href="yazı-biçem-ve-boyutları.html#cb111-6" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span><span class="sc">\scriptstyle\sum</span><span class="ss">_{k=0}^n z^k$</span></span></code></pre></div>
+<div class="sourceCode" id="cb110"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb110-1"><a href="yazı-biçem-ve-boyutları.html#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
+<span id="cb110-2"><a href="yazı-biçem-ve-boyutları.html#cb110-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\sum</span><span class="ss">_{k=0}^n z^k </span><span class="sc">\qquad</span><span class="ss"> </span><span class="sc">\textstyle\sum</span><span class="ss">_{k=0}^n z^k</span></span>
+<span id="cb110-3"><a href="yazı-biçem-ve-boyutları.html#cb110-3" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span>
+<span id="cb110-4"><a href="yazı-biçem-ve-boyutları.html#cb110-4" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span><span class="sc">\displaystyle\sum</span><span class="ss">_{k=0}^n z^k$</span><span class="fu">\qquad</span> </span>
+<span id="cb110-5"><a href="yazı-biçem-ve-boyutları.html#cb110-5" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span><span class="sc">\sum</span><span class="ss">_{k=0}^n z^k$</span> <span class="fu">\qquad</span></span>
+<span id="cb110-6"><a href="yazı-biçem-ve-boyutları.html#cb110-6" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span><span class="sc">\scriptstyle\sum</span><span class="ss">_{k=0}^n z^k$</span></span></code></pre></div>
 <p><span class="math display">\[
 \sum_{k=0}^n z^k \qquad \textstyle\sum_{k=0}^n z^k
 \]</span>
@@ -461,16 +498,16 @@ metin boyutundan küçük dizerler.</p>
 <code>{\textstyle\frac{…}{…}}</code> komutları yerine onların kısaltmaları olan
 <code>\dfrac</code> ve <code>\tfrac</code> komutları kullanılabilir. Aynı şey <code>\binom</code> komutu
 için de geçerlidir.</p>
-<div class="sourceCode" id="cb112"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb112-1"><a href="yazı-biçem-ve-boyutları.html#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span><span class="sc">\frac</span><span class="ss">{1}{n}</span><span class="sc">\log</span><span class="ss"> x$</span> <span class="fu">\quad</span></span>
-<span id="cb112-2"><a href="yazı-biçem-ve-boyutları.html#cb112-2" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span><span class="sc">\dfrac</span><span class="ss">{1}{n}</span><span class="sc">\log</span><span class="ss"> x$</span> <span class="fu">\quad</span></span>
-<span id="cb112-3"><a href="yazı-biçem-ve-boyutları.html#cb112-3" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span><span class="sc">\binom</span><span class="ss">{n}{3}$</span> <span class="fu">\quad</span></span>
-<span id="cb112-4"><a href="yazı-biçem-ve-boyutları.html#cb112-4" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span><span class="sc">\dbinom</span><span class="ss">{n}{3}$</span></span>
-<span id="cb112-5"><a href="yazı-biçem-ve-boyutları.html#cb112-5" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
-<span id="cb112-6"><a href="yazı-biçem-ve-boyutları.html#cb112-6" aria-hidden="true" tabindex="-1"></a><span class="sc">\frac</span><span class="ss">{1}{n}</span><span class="sc">\log</span><span class="ss"> x </span><span class="sc">\quad</span></span>
-<span id="cb112-7"><a href="yazı-biçem-ve-boyutları.html#cb112-7" aria-hidden="true" tabindex="-1"></a><span class="sc">\tfrac</span><span class="ss">{1}{n}</span><span class="sc">\log</span><span class="ss"> x </span><span class="sc">\quad</span></span>
-<span id="cb112-8"><a href="yazı-biçem-ve-boyutları.html#cb112-8" aria-hidden="true" tabindex="-1"></a><span class="sc">\binom</span><span class="ss">{n}{3} </span><span class="sc">\quad</span></span>
-<span id="cb112-9"><a href="yazı-biçem-ve-boyutları.html#cb112-9" aria-hidden="true" tabindex="-1"></a><span class="sc">\tbinom</span><span class="ss">{n}{3}</span></span>
-<span id="cb112-10"><a href="yazı-biçem-ve-boyutları.html#cb112-10" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
+<div class="sourceCode" id="cb111"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb111-1"><a href="yazı-biçem-ve-boyutları.html#cb111-1" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span><span class="sc">\frac</span><span class="ss">{1}{n}</span><span class="sc">\log</span><span class="ss"> x$</span> <span class="fu">\quad</span></span>
+<span id="cb111-2"><a href="yazı-biçem-ve-boyutları.html#cb111-2" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span><span class="sc">\dfrac</span><span class="ss">{1}{n}</span><span class="sc">\log</span><span class="ss"> x$</span> <span class="fu">\quad</span></span>
+<span id="cb111-3"><a href="yazı-biçem-ve-boyutları.html#cb111-3" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span><span class="sc">\binom</span><span class="ss">{n}{3}$</span> <span class="fu">\quad</span></span>
+<span id="cb111-4"><a href="yazı-biçem-ve-boyutları.html#cb111-4" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span><span class="sc">\dbinom</span><span class="ss">{n}{3}$</span></span>
+<span id="cb111-5"><a href="yazı-biçem-ve-boyutları.html#cb111-5" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
+<span id="cb111-6"><a href="yazı-biçem-ve-boyutları.html#cb111-6" aria-hidden="true" tabindex="-1"></a><span class="sc">\frac</span><span class="ss">{1}{n}</span><span class="sc">\log</span><span class="ss"> x </span><span class="sc">\quad</span></span>
+<span id="cb111-7"><a href="yazı-biçem-ve-boyutları.html#cb111-7" aria-hidden="true" tabindex="-1"></a><span class="sc">\tfrac</span><span class="ss">{1}{n}</span><span class="sc">\log</span><span class="ss"> x </span><span class="sc">\quad</span></span>
+<span id="cb111-8"><a href="yazı-biçem-ve-boyutları.html#cb111-8" aria-hidden="true" tabindex="-1"></a><span class="sc">\binom</span><span class="ss">{n}{3} </span><span class="sc">\quad</span></span>
+<span id="cb111-9"><a href="yazı-biçem-ve-boyutları.html#cb111-9" aria-hidden="true" tabindex="-1"></a><span class="sc">\tbinom</span><span class="ss">{n}{3}</span></span>
+<span id="cb111-10"><a href="yazı-biçem-ve-boyutları.html#cb111-10" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
 <p><span class="math inline">\(\frac{1}{n}\log x\quad\)</span>
 <span class="math inline">\(\dfrac{1}{n}\log x\quad\)</span>
 <span class="math inline">\(\binom{n}{3}\quad\)</span>

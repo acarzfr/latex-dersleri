@@ -331,9 +331,9 @@ $$
       runlatex.overleafURI=null;
 
       runlatex.texts ={
-	  "Open in Overleaf": "Overleaf'ta aç",
+	  "Open in Overleaf": "Overleaf",
 	  "TeXLive.net":      "Çalıştır",
-	  "Delete Output":    "Çıktıyı temizle",
+	  "Delete Output":    "Çıktıyı Temizle",
 	  "Compiling PDF":    "PDF veya HTML derleme",
 	  "Added Code":       "",
 	  "End Added Code":   "",
@@ -366,7 +366,44 @@ $$
   window.addEventListener('load', fillForm, false);
 
 
-    </script>
+</script>
+
+
+
+<!--   GeoGebra  -->
+
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+
+<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+
+
+<!-- Kullanım
+
+<div id="ggb-element">
+<script>
+    var params = {"appName": "graphing", "width": 800, "height": 600, "showToolBar": true, "showAlgebraInput": true, "showMenuBar": true };
+    var applet = new GGBApplet(params, true);
+    window.addEventListener("load", function() {
+        applet.inject('ggb-element');
+    });
+</script>
+</div>
+
+grphing yerine geometry , 3d
+
+"material_id":"RHYH3UQ8"
+
+"filename":"myFile.ggb"
+
+
+
+
+
+
+
+-->
+
 <div id="belgeye-başlık-oluşturma" class="section level2" number="1.11">
 <h2><span class="header-section-number">1.11</span> Belgeye Başlık Oluşturma</h2>
 <p>LaTeX’de belgeye başlık oluşturmak için <code>\title</code> komutu kullanılır.
@@ -385,17 +422,17 @@ olarak belirlenir.</p>
 <p>Ayrıca <code>\title</code>, <code>\author</code> ve <code>\date</code> komutları <code>\thanks</code> komutunu
 içerebilir. Bu komutun değişkeni bir e-posta adresi, iş adresi veya bir
 teşekkür metni olabilir.</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb22-1"><a href="belgeye-başlık-oluşturma.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[a4paper,12pt]{<span class="ex">article</span>}</span>
-<span id="cb22-2"><a href="belgeye-başlık-oluşturma.html#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[T1]{<span class="ex">fontenc</span>}</span>
-<span id="cb22-3"><a href="belgeye-başlık-oluşturma.html#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[turkish]{<span class="ex">babel</span>}</span>
-<span id="cb22-4"><a href="belgeye-başlık-oluşturma.html#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\title</span>{Belge Başlığı}</span>
-<span id="cb22-5"><a href="belgeye-başlık-oluşturma.html#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\author</span>{Yazar 1<span class="fu">\thanks</span>{A Üniversitesi} <span class="fu">\and</span> Yazar 2<span class="fu">\thanks</span>{B Üniversitesi}}</span>
-<span id="cb22-6"><a href="belgeye-başlık-oluşturma.html#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="fu">\date</span>{XX.XX.XXXX}</span>
-<span id="cb22-7"><a href="belgeye-başlık-oluşturma.html#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
-<span id="cb22-8"><a href="belgeye-başlık-oluşturma.html#cb22-8" aria-hidden="true" tabindex="-1"></a><span class="fu">\maketitle</span></span>
-<span id="cb22-9"><a href="belgeye-başlık-oluşturma.html#cb22-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-10"><a href="belgeye-başlık-oluşturma.html#cb22-10" aria-hidden="true" tabindex="-1"></a>  İçerik...</span>
-<span id="cb22-11"><a href="belgeye-başlık-oluşturma.html#cb22-11" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb21-1"><a href="belgeye-başlık-oluşturma.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[a4paper,12pt]{<span class="ex">article</span>}</span>
+<span id="cb21-2"><a href="belgeye-başlık-oluşturma.html#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[T1]{<span class="ex">fontenc</span>}</span>
+<span id="cb21-3"><a href="belgeye-başlık-oluşturma.html#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[turkish]{<span class="ex">babel</span>}</span>
+<span id="cb21-4"><a href="belgeye-başlık-oluşturma.html#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\title</span>{Belge Başlığı}</span>
+<span id="cb21-5"><a href="belgeye-başlık-oluşturma.html#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\author</span>{Yazar 1<span class="fu">\thanks</span>{A Üniversitesi} <span class="fu">\and</span> Yazar 2<span class="fu">\thanks</span>{B Üniversitesi}}</span>
+<span id="cb21-6"><a href="belgeye-başlık-oluşturma.html#cb21-6" aria-hidden="true" tabindex="-1"></a><span class="fu">\date</span>{XX.XX.XXXX}</span>
+<span id="cb21-7"><a href="belgeye-başlık-oluşturma.html#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb21-8"><a href="belgeye-başlık-oluşturma.html#cb21-8" aria-hidden="true" tabindex="-1"></a><span class="fu">\maketitle</span></span>
+<span id="cb21-9"><a href="belgeye-başlık-oluşturma.html#cb21-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-10"><a href="belgeye-başlık-oluşturma.html#cb21-10" aria-hidden="true" tabindex="-1"></a>  İçerik...</span>
+<span id="cb21-11"><a href="belgeye-başlık-oluşturma.html#cb21-11" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code></pre></div>
 </div>
             </section>
 

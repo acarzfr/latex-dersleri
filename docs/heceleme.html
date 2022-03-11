@@ -331,9 +331,9 @@ $$
       runlatex.overleafURI=null;
 
       runlatex.texts ={
-	  "Open in Overleaf": "Overleaf'ta aç",
+	  "Open in Overleaf": "Overleaf",
 	  "TeXLive.net":      "Çalıştır",
-	  "Delete Output":    "Çıktıyı temizle",
+	  "Delete Output":    "Çıktıyı Temizle",
 	  "Compiling PDF":    "PDF veya HTML derleme",
 	  "Added Code":       "",
 	  "End Added Code":   "",
@@ -366,21 +366,58 @@ $$
   window.addEventListener('load', fillForm, false);
 
 
-    </script>
+</script>
+
+
+
+<!--   GeoGebra  -->
+
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+
+<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+
+
+<!-- Kullanım
+
+<div id="ggb-element">
+<script>
+    var params = {"appName": "graphing", "width": 800, "height": 600, "showToolBar": true, "showAlgebraInput": true, "showMenuBar": true };
+    var applet = new GGBApplet(params, true);
+    window.addEventListener("load", function() {
+        applet.inject('ggb-element');
+    });
+</script>
+</div>
+
+grphing yerine geometry , 3d
+
+"material_id":"RHYH3UQ8"
+
+"filename":"myFile.ggb"
+
+
+
+
+
+
+
+-->
+
 <div id="heceleme" class="section level2" number="1.10">
 <h2><span class="header-section-number">1.10</span> Heceleme</h2>
 <p>Bazen tüm bu ayarlamalara rağmen LaTeX bazı kelimeleri doğru
 heceleyemeyebilir. Böyle durumlarda hecelemeyi elle yapmak gerekir.
 Yanlış hecelenen kelimenin bölünebileceği yerler <code>\-</code> komutuyla
 gösterilir:</p>
-<div class="sourceCode" id="cb20"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb20-1"><a href="heceleme.html#cb20-1" aria-hidden="true" tabindex="-1"></a>He<span class="fu">\-</span>ce<span class="fu">\-</span>le<span class="fu">\-</span>me</span></code></pre></div>
+<div class="sourceCode" id="cb19"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb19-1"><a href="heceleme.html#cb19-1" aria-hidden="true" tabindex="-1"></a>He<span class="fu">\-</span>ce<span class="fu">\-</span>le<span class="fu">\-</span>me</span></code></pre></div>
 <p>Bu sadece ilgili kelimenin tireyle ayrıldığı yerde doğru hecelenmesini
 sağlar. Aynı kelime belgenin başka bir yerinde yine yalnış
 hecelenebilir. Bunun yerine <code>\begin{document}</code> komutundan sonra
 <code>\hyphenation</code> komutuyla hece yerleri tire (<code>-</code>) işaretiyle gösterilmiş
 olan kelime listesi oluşturulursa belgenin tamamına bu kural uygulanmış
 olur. Örneğin</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb21-1"><a href="heceleme.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\hyphenation</span>{He-ce-le-me FORTRAN}</span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb20-1"><a href="heceleme.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\hyphenation</span>{He-ce-le-me FORTRAN}</span></code></pre></div>
 <p>komutuyla “Heceleme” kelimesinin nereden bölüneceği, “FORTRAN”, “Fortran” ya da
 “fortran” kelimelerinin bölünmeyeceği LaTeX’e söylenmiş olur.</p>
 </div>

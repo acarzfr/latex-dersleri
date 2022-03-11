@@ -331,9 +331,9 @@ $$
       runlatex.overleafURI=null;
 
       runlatex.texts ={
-	  "Open in Overleaf": "Overleaf'ta aç",
+	  "Open in Overleaf": "Overleaf",
 	  "TeXLive.net":      "Çalıştır",
-	  "Delete Output":    "Çıktıyı temizle",
+	  "Delete Output":    "Çıktıyı Temizle",
 	  "Compiling PDF":    "PDF veya HTML derleme",
 	  "Added Code":       "",
 	  "End Added Code":   "",
@@ -366,18 +366,55 @@ $$
   window.addEventListener('load', fillForm, false);
 
 
-    </script>
+</script>
+
+
+
+<!--   GeoGebra  -->
+
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+
+<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+
+
+<!-- Kullanım
+
+<div id="ggb-element">
+<script>
+    var params = {"appName": "graphing", "width": 800, "height": 600, "showToolBar": true, "showAlgebraInput": true, "showMenuBar": true };
+    var applet = new GGBApplet(params, true);
+    window.addEventListener("load", function() {
+        applet.inject('ggb-element');
+    });
+</script>
+</div>
+
+grphing yerine geometry , 3d
+
+"material_id":"RHYH3UQ8"
+
+"filename":"myFile.ggb"
+
+
+
+
+
+
+
+-->
+
 <div id="denklem-ortamları" class="section level2" number="2.9">
 <h2><span class="header-section-number">2.9</span> Denklem Ortamları</h2>
 <p>Bir satıra sığmayacak kadar uzun bir formülü ya da birden çok satırdan
 oluşan bir denklemi veya denklem sistemlerini hizalayıp dizmek için
 LaTeX’de çeşitli ortamlar kullanılır.</p>
 <p><code>multline</code> ortamı bir formülü hizalanmamış bir kaç satıra ayırır.</p>
-<div class="sourceCode" id="cb115"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb115-1"><a href="denklem-ortamları.html#cb115-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">multline</span>}</span>
-<span id="cb115-2"><a href="denklem-ortamları.html#cb115-2" aria-hidden="true" tabindex="-1"></a><span class="ss">f=a+b+c </span><span class="sc">\\</span></span>
-<span id="cb115-3"><a href="denklem-ortamları.html#cb115-3" aria-hidden="true" tabindex="-1"></a><span class="ss">+i+j+k+l </span><span class="sc">\\</span></span>
-<span id="cb115-4"><a href="denklem-ortamları.html#cb115-4" aria-hidden="true" tabindex="-1"></a><span class="ss">+x+y+z</span></span>
-<span id="cb115-5"><a href="denklem-ortamları.html#cb115-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">multline</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb114"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb114-1"><a href="denklem-ortamları.html#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">multline</span>}</span>
+<span id="cb114-2"><a href="denklem-ortamları.html#cb114-2" aria-hidden="true" tabindex="-1"></a><span class="ss">f=a+b+c </span><span class="sc">\\</span></span>
+<span id="cb114-3"><a href="denklem-ortamları.html#cb114-3" aria-hidden="true" tabindex="-1"></a><span class="ss">+i+j+k+l </span><span class="sc">\\</span></span>
+<span id="cb114-4"><a href="denklem-ortamları.html#cb114-4" aria-hidden="true" tabindex="-1"></a><span class="ss">+x+y+z</span></span>
+<span id="cb114-5"><a href="denklem-ortamları.html#cb114-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">multline</span>}</span></code></pre></div>
 <p><span class="math display" id="eq:mult">\[\begin{multline}
 \tag{2.2}
 f=a+b+c \\
@@ -388,13 +425,13 @@ f=a+b+c \\
 Denklemin numarası da son satırın sağına yazılır. Dekleme numara
 verilmesi istenmiyorsa ortam <code>multline*</code> şeklinde kullanılmalıdır.</p>
 <p><code>split</code> ortamı denklemi dikey hizalanmış birden çok satırda dizer.</p>
-<div class="sourceCode" id="cb116"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb116-1"><a href="denklem-ortamları.html#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">equation</span>}</span>
-<span id="cb116-2"><a href="denklem-ortamları.html#cb116-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">split</span>}</span>
-<span id="cb116-3"><a href="denklem-ortamları.html#cb116-3" aria-hidden="true" tabindex="-1"></a><span class="ss"> a&amp;= b+c-d</span><span class="sc">\\</span></span>
-<span id="cb116-4"><a href="denklem-ortamları.html#cb116-4" aria-hidden="true" tabindex="-1"></a><span class="ss">  &amp;= e-f</span><span class="sc">\\</span></span>
-<span id="cb116-5"><a href="denklem-ortamları.html#cb116-5" aria-hidden="true" tabindex="-1"></a><span class="ss">  &amp;= g</span></span>
-<span id="cb116-6"><a href="denklem-ortamları.html#cb116-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">split</span>}</span>
-<span id="cb116-7"><a href="denklem-ortamları.html#cb116-7" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">equation</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb115"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb115-1"><a href="denklem-ortamları.html#cb115-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">equation</span>}</span>
+<span id="cb115-2"><a href="denklem-ortamları.html#cb115-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">split</span>}</span>
+<span id="cb115-3"><a href="denklem-ortamları.html#cb115-3" aria-hidden="true" tabindex="-1"></a><span class="ss"> a&amp;= b+c-d</span><span class="sc">\\</span></span>
+<span id="cb115-4"><a href="denklem-ortamları.html#cb115-4" aria-hidden="true" tabindex="-1"></a><span class="ss">  &amp;= e-f</span><span class="sc">\\</span></span>
+<span id="cb115-5"><a href="denklem-ortamları.html#cb115-5" aria-hidden="true" tabindex="-1"></a><span class="ss">  &amp;= g</span></span>
+<span id="cb115-6"><a href="denklem-ortamları.html#cb115-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">split</span>}</span>
+<span id="cb115-7"><a href="denklem-ortamları.html#cb115-7" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">equation</span>}</span></code></pre></div>
 <p><span class="math display" id="eq:spl">\[\begin{equation}
   \begin{split}
   a&amp;= b+c-d\\
@@ -410,10 +447,10 @@ gerekir.</p>
 <p><code>gather</code> ortamı birden fazla formülü birlikte gruplandırır, ortalar ve
 her birini ayrı bir satırda numaralandırır. Yine <code>gather*</code> ortamı, aynı
 türden numaralandırılmamış formüller üretir.</p>
-<div class="sourceCode" id="cb117"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb117-1"><a href="denklem-ortamları.html#cb117-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">gather</span>}</span>
-<span id="cb117-2"><a href="denklem-ortamları.html#cb117-2" aria-hidden="true" tabindex="-1"></a><span class="ss">a=b+c </span><span class="sc">\\</span></span>
-<span id="cb117-3"><a href="denklem-ortamları.html#cb117-3" aria-hidden="true" tabindex="-1"></a><span class="ss">V+F-S=2</span></span>
-<span id="cb117-4"><a href="denklem-ortamları.html#cb117-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">gather</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb116"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb116-1"><a href="denklem-ortamları.html#cb116-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">gather</span>}</span>
+<span id="cb116-2"><a href="denklem-ortamları.html#cb116-2" aria-hidden="true" tabindex="-1"></a><span class="ss">a=b+c </span><span class="sc">\\</span></span>
+<span id="cb116-3"><a href="denklem-ortamları.html#cb116-3" aria-hidden="true" tabindex="-1"></a><span class="ss">V+F-S=2</span></span>
+<span id="cb116-4"><a href="denklem-ortamları.html#cb116-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">gather</span>}</span></code></pre></div>
 <p><span class="math display" id="eq:gat2" id="eq:gat1">\[\begin{gather}
 a=b+c \tag{2.4}\\
 V+F-S=2
@@ -423,11 +460,11 @@ V+F-S=2
 satırı hizalı ve numaralı şekilde dizmek için kullanılır. Hizalama aynı
 şekilde <code>&amp;</code> karakteriyle yapılır. Ortam yıldızlı (<code>align*</code>) şekilde
 kullanılırsa hiçbir satır numaralandırılmaz.</p>
-<div class="sourceCode" id="cb118"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb118-1"><a href="denklem-ortamları.html#cb118-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">align</span>}</span>
-<span id="cb118-2"><a href="denklem-ortamları.html#cb118-2" aria-hidden="true" tabindex="-1"></a><span class="ss">   a&amp; = b+c+d </span><span class="sc">\\</span></span>
-<span id="cb118-3"><a href="denklem-ortamları.html#cb118-3" aria-hidden="true" tabindex="-1"></a><span class="ss">   e&amp; = f </span><span class="sc">\\</span></span>
-<span id="cb118-4"><a href="denklem-ortamları.html#cb118-4" aria-hidden="true" tabindex="-1"></a><span class="ss"> x-1&amp; = y+z </span></span>
-<span id="cb118-5"><a href="denklem-ortamları.html#cb118-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">align</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb117"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb117-1"><a href="denklem-ortamları.html#cb117-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">align</span>}</span>
+<span id="cb117-2"><a href="denklem-ortamları.html#cb117-2" aria-hidden="true" tabindex="-1"></a><span class="ss">   a&amp; = b+c+d </span><span class="sc">\\</span></span>
+<span id="cb117-3"><a href="denklem-ortamları.html#cb117-3" aria-hidden="true" tabindex="-1"></a><span class="ss">   e&amp; = f </span><span class="sc">\\</span></span>
+<span id="cb117-4"><a href="denklem-ortamları.html#cb117-4" aria-hidden="true" tabindex="-1"></a><span class="ss"> x-1&amp; = y+z </span></span>
+<span id="cb117-5"><a href="denklem-ortamları.html#cb117-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">align</span>}</span></code></pre></div>
 <p><span class="math display" id="eq:ali3" id="eq:ali2" id="eq:ali1">\[\begin{align}
    a&amp; = b+c+d\tag{2.6} \\
    e&amp; = f \tag{2.7}\\
@@ -436,10 +473,10 @@ x-1&amp; = y+z \tag{2.8}
 <p><code>align</code> ortamı aynı zamanda birden fazla özerk formül dizisini
 birleştirmek için de kullanışlıdır. Bu durumda, <code>&amp;</code> karakteri konumuna
 bağlı olarak hizalama ve ayırıcı olmak üzere iki farklı işlev üstlenir.</p>
-<div class="sourceCode" id="cb119"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb119-1"><a href="denklem-ortamları.html#cb119-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">align*</span>}</span>
-<span id="cb119-2"><a href="denklem-ortamları.html#cb119-2" aria-hidden="true" tabindex="-1"></a><span class="ss"> a &amp;=b &amp; c&amp;=d &amp; e&amp;=f </span><span class="sc">\\</span></span>
-<span id="cb119-3"><a href="denklem-ortamları.html#cb119-3" aria-hidden="true" tabindex="-1"></a><span class="ss"> u &amp;=v &amp; w&amp;=x &amp; y&amp;=z</span></span>
-<span id="cb119-4"><a href="denklem-ortamları.html#cb119-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">align*</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb118"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb118-1"><a href="denklem-ortamları.html#cb118-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">align*</span>}</span>
+<span id="cb118-2"><a href="denklem-ortamları.html#cb118-2" aria-hidden="true" tabindex="-1"></a><span class="ss"> a &amp;=b &amp; c&amp;=d &amp; e&amp;=f </span><span class="sc">\\</span></span>
+<span id="cb118-3"><a href="denklem-ortamları.html#cb118-3" aria-hidden="true" tabindex="-1"></a><span class="ss"> u &amp;=v &amp; w&amp;=x &amp; y&amp;=z</span></span>
+<span id="cb118-4"><a href="denklem-ortamları.html#cb118-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">align*</span>}</span></code></pre></div>
 <p><span class="math display">\[\begin{align*}
 a &amp;=b &amp; c&amp;=d &amp; e&amp;=f \\
 u &amp;=v &amp; w&amp;=x &amp; y&amp;=z
@@ -450,10 +487,10 @@ yarısı sütun sayısını vermelidir} ve denklemler arasındaki yatay
 boşluğun kontrolünü sağlar. Eğer boşluk komutlarından biri kullanılmazsa
 denklem sistemleri arasında boşluk bırakılmaz (örnekte boşluk komutu
 olarak <code>\qquad</code> kullanılmıştır).</p>
-<div class="sourceCode" id="cb120"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb120-1"><a href="denklem-ortamları.html#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">alignat*</span>}{3}</span>
-<span id="cb120-2"><a href="denklem-ortamları.html#cb120-2" aria-hidden="true" tabindex="-1"></a><span class="ss">  a&amp;=b</span><span class="sc">\qquad</span><span class="ss"> &amp; c&amp;=d</span><span class="sc">\qquad</span><span class="ss"> &amp; e&amp;=f </span><span class="sc">\\</span></span>
-<span id="cb120-3"><a href="denklem-ortamları.html#cb120-3" aria-hidden="true" tabindex="-1"></a><span class="ss">  u&amp;=v</span><span class="sc">\qquad</span><span class="ss"> &amp; w&amp;=x</span><span class="sc">\qquad</span><span class="ss"> &amp; y&amp;=z </span></span>
-<span id="cb120-4"><a href="denklem-ortamları.html#cb120-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">alignat*</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb119"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb119-1"><a href="denklem-ortamları.html#cb119-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">alignat*</span>}{3}</span>
+<span id="cb119-2"><a href="denklem-ortamları.html#cb119-2" aria-hidden="true" tabindex="-1"></a><span class="ss">  a&amp;=b</span><span class="sc">\qquad</span><span class="ss"> &amp; c&amp;=d</span><span class="sc">\qquad</span><span class="ss"> &amp; e&amp;=f </span><span class="sc">\\</span></span>
+<span id="cb119-3"><a href="denklem-ortamları.html#cb119-3" aria-hidden="true" tabindex="-1"></a><span class="ss">  u&amp;=v</span><span class="sc">\qquad</span><span class="ss"> &amp; w&amp;=x</span><span class="sc">\qquad</span><span class="ss"> &amp; y&amp;=z </span></span>
+<span id="cb119-4"><a href="denklem-ortamları.html#cb119-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">alignat*</span>}</span></code></pre></div>
 <p><span class="math display">\[\begin{alignat*}{3}
   a&amp;=b\qquad &amp; c&amp;=d\qquad &amp; e&amp;=f \\
   u&amp;=v\qquad &amp; w&amp;=x\qquad &amp; y&amp;=z
@@ -462,16 +499,16 @@ olarak <code>\qquad</code> kullanılmıştır).</p>
 sola ve son denklem sistemini sağa yaslar.</p>
 <p><code>aligned</code> ortamı yine <code>align</code> ortamına benzer fakat başka bir matematik
 ortamında kullanılması gerekir.</p>
-<div class="sourceCode" id="cb121"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb121-1"><a href="denklem-ortamları.html#cb121-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
-<span id="cb121-2"><a href="denklem-ortamları.html#cb121-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\left</span><span class="ss">.</span></span>
-<span id="cb121-3"><a href="denklem-ortamları.html#cb121-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">aligned</span>}</span>
-<span id="cb121-4"><a href="denklem-ortamları.html#cb121-4" aria-hidden="true" tabindex="-1"></a><span class="ss"> a&amp;= b+1 </span><span class="sc">\\</span></span>
-<span id="cb121-5"><a href="denklem-ortamları.html#cb121-5" aria-hidden="true" tabindex="-1"></a><span class="ss"> a&amp;= 2b</span></span>
-<span id="cb121-6"><a href="denklem-ortamları.html#cb121-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">aligned</span>}</span>
-<span id="cb121-7"><a href="denklem-ortamları.html#cb121-7" aria-hidden="true" tabindex="-1"></a><span class="sc">\right\}</span></span>
-<span id="cb121-8"><a href="denklem-ortamları.html#cb121-8" aria-hidden="true" tabindex="-1"></a><span class="sc">\quad</span></span>
-<span id="cb121-9"><a href="denklem-ortamları.html#cb121-9" aria-hidden="true" tabindex="-1"></a><span class="sc">\text</span>{<span class="ss">$a=2$</span> ve <span class="ss">$b=1$</span>.}</span>
-<span id="cb121-10"><a href="denklem-ortamları.html#cb121-10" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
+<div class="sourceCode" id="cb120"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb120-1"><a href="denklem-ortamları.html#cb120-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
+<span id="cb120-2"><a href="denklem-ortamları.html#cb120-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\left</span><span class="ss">.</span></span>
+<span id="cb120-3"><a href="denklem-ortamları.html#cb120-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">aligned</span>}</span>
+<span id="cb120-4"><a href="denklem-ortamları.html#cb120-4" aria-hidden="true" tabindex="-1"></a><span class="ss"> a&amp;= b+1 </span><span class="sc">\\</span></span>
+<span id="cb120-5"><a href="denklem-ortamları.html#cb120-5" aria-hidden="true" tabindex="-1"></a><span class="ss"> a&amp;= 2b</span></span>
+<span id="cb120-6"><a href="denklem-ortamları.html#cb120-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">aligned</span>}</span>
+<span id="cb120-7"><a href="denklem-ortamları.html#cb120-7" aria-hidden="true" tabindex="-1"></a><span class="sc">\right\}</span></span>
+<span id="cb120-8"><a href="denklem-ortamları.html#cb120-8" aria-hidden="true" tabindex="-1"></a><span class="sc">\quad</span></span>
+<span id="cb120-9"><a href="denklem-ortamları.html#cb120-9" aria-hidden="true" tabindex="-1"></a><span class="sc">\text</span>{<span class="ss">$a=2$</span> ve <span class="ss">$b=1$</span>.}</span>
+<span id="cb120-10"><a href="denklem-ortamları.html#cb120-10" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
 <p><span class="math display">\[
 \left.
 \begin{aligned}
@@ -486,13 +523,13 @@ a&amp;= 2b
 içine yazılan denklemlerin solunda uygun boyda bir çengelli parantez
 açar. Sütunlar sola yaslıdır. Ortamın başka bir matematik ortamında
 kullanılması gerekir.</p>
-<div class="sourceCode" id="cb122"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb122-1"><a href="denklem-ortamları.html#cb122-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
-<span id="cb122-2"><a href="denklem-ortamları.html#cb122-2" aria-hidden="true" tabindex="-1"></a><span class="ss">n!=</span></span>
-<span id="cb122-3"><a href="denklem-ortamları.html#cb122-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">cases</span>}</span>
-<span id="cb122-4"><a href="denklem-ortamları.html#cb122-4" aria-hidden="true" tabindex="-1"></a><span class="ss">1 &amp; </span><span class="sc">\text</span>{<span class="ss">$n=0$</span> ise}<span class="ss"> </span><span class="sc">\\</span></span>
-<span id="cb122-5"><a href="denklem-ortamları.html#cb122-5" aria-hidden="true" tabindex="-1"></a><span class="ss">n(n-1)!&amp; </span><span class="sc">\text</span>{<span class="ss">$n\ge 1$</span> ise}</span>
-<span id="cb122-6"><a href="denklem-ortamları.html#cb122-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">cases</span>}</span>
-<span id="cb122-7"><a href="denklem-ortamları.html#cb122-7" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
+<div class="sourceCode" id="cb121"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb121-1"><a href="denklem-ortamları.html#cb121-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
+<span id="cb121-2"><a href="denklem-ortamları.html#cb121-2" aria-hidden="true" tabindex="-1"></a><span class="ss">n!=</span></span>
+<span id="cb121-3"><a href="denklem-ortamları.html#cb121-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">cases</span>}</span>
+<span id="cb121-4"><a href="denklem-ortamları.html#cb121-4" aria-hidden="true" tabindex="-1"></a><span class="ss">1 &amp; </span><span class="sc">\text</span>{<span class="ss">$n=0$</span> ise}<span class="ss"> </span><span class="sc">\\</span></span>
+<span id="cb121-5"><a href="denklem-ortamları.html#cb121-5" aria-hidden="true" tabindex="-1"></a><span class="ss">n(n-1)!&amp; </span><span class="sc">\text</span>{<span class="ss">$n\ge 1$</span> ise}</span>
+<span id="cb121-6"><a href="denklem-ortamları.html#cb121-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">cases</span>}</span>
+<span id="cb121-7"><a href="denklem-ortamları.html#cb121-7" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
 <p><span class="math display">\[
 n!=
 \begin{cases}
@@ -503,11 +540,11 @@ n(n-1)!&amp; \text{$n\ge 1$ ise}
 <p>Her satıra numara veren bir ortamda bazı satırların numarasız olması
 istenirse bu satırların sonuna <code>\notag</code> ya da <code>\nonumber</code> komutları
 verilir. <code>\tag</code> komutuyla ise keyfi bir numara ya da işaret yazılabilir.</p>
-<div class="sourceCode" id="cb123"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb123-1"><a href="denklem-ortamları.html#cb123-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">align</span>}</span>
-<span id="cb123-2"><a href="denklem-ortamları.html#cb123-2" aria-hidden="true" tabindex="-1"></a><span class="ss"> x&amp;=y</span><span class="sc">\\</span></span>
-<span id="cb123-3"><a href="denklem-ortamları.html#cb123-3" aria-hidden="true" tabindex="-1"></a><span class="ss"> z&amp;=y+1 </span><span class="sc">\notag\\</span></span>
-<span id="cb123-4"><a href="denklem-ortamları.html#cb123-4" aria-hidden="true" tabindex="-1"></a><span class="ss"> w&amp;=3 </span><span class="sc">\tag</span><span class="ss">{*}</span></span>
-<span id="cb123-5"><a href="denklem-ortamları.html#cb123-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">align</span>}</span></code></pre></div>
+<div class="sourceCode" id="cb122"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb122-1"><a href="denklem-ortamları.html#cb122-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">align</span>}</span>
+<span id="cb122-2"><a href="denklem-ortamları.html#cb122-2" aria-hidden="true" tabindex="-1"></a><span class="ss"> x&amp;=y</span><span class="sc">\\</span></span>
+<span id="cb122-3"><a href="denklem-ortamları.html#cb122-3" aria-hidden="true" tabindex="-1"></a><span class="ss"> z&amp;=y+1 </span><span class="sc">\notag\\</span></span>
+<span id="cb122-4"><a href="denklem-ortamları.html#cb122-4" aria-hidden="true" tabindex="-1"></a><span class="ss"> w&amp;=3 </span><span class="sc">\tag</span><span class="ss">{*}</span></span>
+<span id="cb122-5"><a href="denklem-ortamları.html#cb122-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">align</span>}</span></code></pre></div>
 <p><span class="math display" id="eq:align">\[\begin{align}
 x&amp;=y\tag{2.9}\\
 z&amp;=y+1 \notag\\
@@ -515,13 +552,13 @@ w&amp;=3 \tag{*}
 \end{align}\]</span></p>
 <p>Numaralı formüllere etiket yine <code>\label</code> komutuyla koyulur ve <code>\eqref</code>
 komutuyla atıf yapılır.</p>
-<div class="sourceCode" id="cb124"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb124-1"><a href="denklem-ortamları.html#cb124-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">align</span>}</span>
-<span id="cb124-2"><a href="denklem-ortamları.html#cb124-2" aria-hidden="true" tabindex="-1"></a><span class="ss"> a &amp;= b+c </span><span class="sc">\\</span></span>
-<span id="cb124-3"><a href="denklem-ortamları.html#cb124-3" aria-hidden="true" tabindex="-1"></a><span class="ss"> c &amp;= d  </span><span class="sc">\label</span><span class="ss">{eq:cd}</span><span class="sc">\\</span></span>
-<span id="cb124-4"><a href="denklem-ortamları.html#cb124-4" aria-hidden="true" tabindex="-1"></a><span class="ss"> e &amp;= f+g</span></span>
-<span id="cb124-5"><a href="denklem-ortamları.html#cb124-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">align</span>}</span>
-<span id="cb124-6"><a href="denklem-ortamları.html#cb124-6" aria-hidden="true" tabindex="-1"></a>Yukarıdaki <span class="kw">\eqref</span>{<span class="ex">eq:cd</span>}</span>
-<span id="cb124-7"><a href="denklem-ortamları.html#cb124-7" aria-hidden="true" tabindex="-1"></a>formülü<span class="fu">\dots</span></span></code></pre></div>
+<div class="sourceCode" id="cb123"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb123-1"><a href="denklem-ortamları.html#cb123-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">align</span>}</span>
+<span id="cb123-2"><a href="denklem-ortamları.html#cb123-2" aria-hidden="true" tabindex="-1"></a><span class="ss"> a &amp;= b+c </span><span class="sc">\\</span></span>
+<span id="cb123-3"><a href="denklem-ortamları.html#cb123-3" aria-hidden="true" tabindex="-1"></a><span class="ss"> c &amp;= d  </span><span class="sc">\label</span><span class="ss">{eq:cd}</span><span class="sc">\\</span></span>
+<span id="cb123-4"><a href="denklem-ortamları.html#cb123-4" aria-hidden="true" tabindex="-1"></a><span class="ss"> e &amp;= f+g</span></span>
+<span id="cb123-5"><a href="denklem-ortamları.html#cb123-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">align</span>}</span>
+<span id="cb123-6"><a href="denklem-ortamları.html#cb123-6" aria-hidden="true" tabindex="-1"></a>Yukarıdaki <span class="kw">\eqref</span>{<span class="ex">eq:cd</span>}</span>
+<span id="cb123-7"><a href="denklem-ortamları.html#cb123-7" aria-hidden="true" tabindex="-1"></a>formülü<span class="fu">\dots</span></span></code></pre></div>
 <p><span class="math display" id="eq:efg" id="eq:cd" id="eq:abc">\[\begin{align}
 a &amp;= b+c \tag{2.10}\\
 c &amp;= d \tag{2.11} \\
@@ -532,16 +569,16 @@ formülü…</p>
 <p>Aynı ortamda yer alan formüllerin 1, 2,… yerine 1.a,
 1.b,… biçiminde numaralandırılması için ortamın
 <code>subequations</code> ortamının içine yazılması gerekir.</p>
-<div class="sourceCode" id="cb125"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb125-1"><a href="denklem-ortamları.html#cb125-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">subequations</span>}</span>
-<span id="cb125-2"><a href="denklem-ortamları.html#cb125-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\label</span>{<span class="ex">eq:sub</span>}</span>
-<span id="cb125-3"><a href="denklem-ortamları.html#cb125-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">align</span>}</span>
-<span id="cb125-4"><a href="denklem-ortamları.html#cb125-4" aria-hidden="true" tabindex="-1"></a><span class="ss"> a &amp;= b+c </span><span class="sc">\\</span></span>
-<span id="cb125-5"><a href="denklem-ortamları.html#cb125-5" aria-hidden="true" tabindex="-1"></a><span class="ss"> c &amp;= d </span><span class="sc">\label</span><span class="ss">{eq:subb} </span><span class="sc">\\</span></span>
-<span id="cb125-6"><a href="denklem-ortamları.html#cb125-6" aria-hidden="true" tabindex="-1"></a><span class="ss"> e &amp;= f+g</span></span>
-<span id="cb125-7"><a href="denklem-ortamları.html#cb125-7" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">align</span>}</span>
-<span id="cb125-8"><a href="denklem-ortamları.html#cb125-8" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">subequations</span>}</span>
-<span id="cb125-9"><a href="denklem-ortamları.html#cb125-9" aria-hidden="true" tabindex="-1"></a>Formül~<span class="kw">\eqref</span>{<span class="ex">eq:sub</span>} ve</span>
-<span id="cb125-10"><a href="denklem-ortamları.html#cb125-10" aria-hidden="true" tabindex="-1"></a>altformül~<span class="kw">\eqref</span>{<span class="ex">eq:subb</span>}<span class="fu">\dots</span></span></code></pre></div>
+<div class="sourceCode" id="cb124"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb124-1"><a href="denklem-ortamları.html#cb124-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">subequations</span>}</span>
+<span id="cb124-2"><a href="denklem-ortamları.html#cb124-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\label</span>{<span class="ex">eq:sub</span>}</span>
+<span id="cb124-3"><a href="denklem-ortamları.html#cb124-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">align</span>}</span>
+<span id="cb124-4"><a href="denklem-ortamları.html#cb124-4" aria-hidden="true" tabindex="-1"></a><span class="ss"> a &amp;= b+c </span><span class="sc">\\</span></span>
+<span id="cb124-5"><a href="denklem-ortamları.html#cb124-5" aria-hidden="true" tabindex="-1"></a><span class="ss"> c &amp;= d </span><span class="sc">\label</span><span class="ss">{eq:subb} </span><span class="sc">\\</span></span>
+<span id="cb124-6"><a href="denklem-ortamları.html#cb124-6" aria-hidden="true" tabindex="-1"></a><span class="ss"> e &amp;= f+g</span></span>
+<span id="cb124-7"><a href="denklem-ortamları.html#cb124-7" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">align</span>}</span>
+<span id="cb124-8"><a href="denklem-ortamları.html#cb124-8" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">subequations</span>}</span>
+<span id="cb124-9"><a href="denklem-ortamları.html#cb124-9" aria-hidden="true" tabindex="-1"></a>Formül~<span class="kw">\eqref</span>{<span class="ex">eq:sub</span>} ve</span>
+<span id="cb124-10"><a href="denklem-ortamları.html#cb124-10" aria-hidden="true" tabindex="-1"></a>altformül~<span class="kw">\eqref</span>{<span class="ex">eq:subb</span>}<span class="fu">\dots</span></span></code></pre></div>
 </div>
             </section>
 

@@ -331,9 +331,9 @@ $$
       runlatex.overleafURI=null;
 
       runlatex.texts ={
-	  "Open in Overleaf": "Overleaf'ta aç",
+	  "Open in Overleaf": "Overleaf",
 	  "TeXLive.net":      "Çalıştır",
-	  "Delete Output":    "Çıktıyı temizle",
+	  "Delete Output":    "Çıktıyı Temizle",
 	  "Compiling PDF":    "PDF veya HTML derleme",
 	  "Added Code":       "",
 	  "End Added Code":   "",
@@ -366,7 +366,44 @@ $$
   window.addEventListener('load', fillForm, false);
 
 
-    </script>
+</script>
+
+
+
+<!--   GeoGebra  -->
+
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+
+<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+
+
+<!-- Kullanım
+
+<div id="ggb-element">
+<script>
+    var params = {"appName": "graphing", "width": 800, "height": 600, "showToolBar": true, "showAlgebraInput": true, "showMenuBar": true };
+    var applet = new GGBApplet(params, true);
+    window.addEventListener("load", function() {
+        applet.inject('ggb-element');
+    });
+</script>
+</div>
+
+grphing yerine geometry , 3d
+
+"material_id":"RHYH3UQ8"
+
+"filename":"myFile.ggb"
+
+
+
+
+
+
+
+-->
+
 <div id="kurulum" class="section level2" number="1.6">
 <h2><span class="header-section-number">1.6</span> Kurulum</h2>
 <p>LaTeX’i kurmak için ilk olarak bir TeX dağıtımı edinmeniz gerekir.
@@ -388,9 +425,9 @@ kurulacağı anlatılmıştır. TeX Live ise tüm popüler Linux dağıtımları
 depolarında mevcut olup, paket yöneticisi ya da komut satırı yardımıyla
 kurulabilir. Örneğin Ubuntu, Debian, Mint, Pardus gibi <code>.deb</code> uzantılı
 paketlerin kullanıldığı dağıtımlarda</p>
-<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="kurulum.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install texlive-base</span></code></pre></div>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="kurulum.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install texlive-base</span></code></pre></div>
 <p>komutuyla temel kurulum,</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="kurulum.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install texlive-full</span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="kurulum.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sudo</span> apt-get install texlive-full</span></code></pre></div>
 <p>komutuyla da tam kurulum yapılır.</p>
 </div>
 <div id="mac-os" class="section level3" number="1.6.2">

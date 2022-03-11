@@ -331,9 +331,9 @@ $$
       runlatex.overleafURI=null;
 
       runlatex.texts ={
-	  "Open in Overleaf": "Overleaf'ta aç",
+	  "Open in Overleaf": "Overleaf",
 	  "TeXLive.net":      "Çalıştır",
-	  "Delete Output":    "Çıktıyı temizle",
+	  "Delete Output":    "Çıktıyı Temizle",
 	  "Compiling PDF":    "PDF veya HTML derleme",
 	  "Added Code":       "",
 	  "End Added Code":   "",
@@ -366,13 +366,50 @@ $$
   window.addEventListener('load', fillForm, false);
 
 
-    </script>
+</script>
+
+
+
+<!--   GeoGebra  -->
+
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta charset="utf-8"/>
+
+<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+
+
+<!-- Kullanım
+
+<div id="ggb-element">
+<script>
+    var params = {"appName": "graphing", "width": 800, "height": 600, "showToolBar": true, "showAlgebraInput": true, "showMenuBar": true };
+    var applet = new GGBApplet(params, true);
+    window.addEventListener("load", function() {
+        applet.inject('ggb-element');
+    });
+</script>
+</div>
+
+grphing yerine geometry , 3d
+
+"material_id":"RHYH3UQ8"
+
+"filename":"myFile.ggb"
+
+
+
+
+
+
+
+-->
+
 <div id="parantezler-gruplandırıcılar-ve-oklar" class="section level2" number="2.2">
 <h2><span class="header-section-number">2.2</span> Parantezler, Gruplandırıcılar ve Oklar</h2>
 <p>LaTeX’de her türlü parantez ve gruplandırıcı kullanılabilir. Yuvarlak ve
 köşeli parantezler klavyedeki yerlerinden, çengelli parantez ise <code>\{</code> ve
 <code>\}</code> komutları kullanılarak girilir.</p>
-<div class="sourceCode" id="cb84"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb84-1"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="ss">${a,b,c}</span><span class="sc">\neq\{</span><span class="ss">a,b,c</span><span class="sc">\}</span><span class="ss">$</span></span></code></pre></div>
+<div class="sourceCode" id="cb83"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb83-1"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb83-1" aria-hidden="true" tabindex="-1"></a><span class="ss">${a,b,c}</span><span class="sc">\neq\{</span><span class="ss">a,b,c</span><span class="sc">\}</span><span class="ss">$</span></span></code></pre></div>
 <p><span class="math inline">\({a,b,c}\neq\{a,b,c\}\)</span></p>
 <p>Kullanılabilecek tüm gruplandırıcı işaretler Tablo <a href="parantezler-gruplandırıcılar-ve-oklar.html#tab:grup">2.1</a>’de
 gösterilmiştir.</p>
@@ -423,10 +460,10 @@ bulunmalıdır. Bunların doğru boyda dizilmesi için iki komutunda aynı
 satırda yer almasına dikkat edilmelidir. Sol/sağ tarafta gruplandırıcı
 bir işaret istenmiyorsa, görünmeyen <code>\left.</code>/<code>\right.</code> komutu
 kullanılır.</p>
-<div class="sourceCode" id="cb85"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb85-1"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
-<span id="cb85-2"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb85-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\left</span><span class="ss">(1+</span><span class="sc">\frac</span><span class="ss">{1}{n}</span><span class="sc">\right</span><span class="ss">)^n</span><span class="sc">\quad</span></span>
-<span id="cb85-3"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb85-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\left</span><span class="ss">.</span><span class="sc">\frac</span><span class="ss">{x^3}{3}</span><span class="sc">\right</span><span class="ss">|_0^1</span></span>
-<span id="cb85-4"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb85-4" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
+<div class="sourceCode" id="cb84"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb84-1"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb84-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
+<span id="cb84-2"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb84-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\left</span><span class="ss">(1+</span><span class="sc">\frac</span><span class="ss">{1}{n}</span><span class="sc">\right</span><span class="ss">)^n</span><span class="sc">\quad</span></span>
+<span id="cb84-3"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb84-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\left</span><span class="ss">.</span><span class="sc">\frac</span><span class="ss">{x^3}{3}</span><span class="sc">\right</span><span class="ss">|_0^1</span></span>
+<span id="cb84-4"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb84-4" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
 <p><span class="math display">\[
 \left(1+\frac{1}{n}\right)^n\quad
 \left.\frac{x^3}{3}\right|_0^1
@@ -435,12 +472,12 @@ kullanılır.</p>
 için, gruplandırıcı komutun önüne <code>\big</code>, <code>\Big</code>, <code>\bigg</code> veya <code>\Bigg</code>
 komutlarından biri verilir. <code>\bigl</code> (büyük sol) ve <code>\bigr</code> (büyük sağ)
 komutları da parantezleri biraz büyütür.</p>
-<div class="sourceCode" id="cb86"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb86-1"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
-<span id="cb86-2"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb86-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\big</span><span class="ss">(</span><span class="sc">\Big</span><span class="ss">(</span><span class="sc">\bigg</span><span class="ss">(</span><span class="sc">\Bigg</span><span class="ss">(</span><span class="sc">\quad</span></span>
-<span id="cb86-3"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb86-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\big\}\Big\}\bigg\}\Bigg\}</span></span>
-<span id="cb86-4"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb86-4" aria-hidden="true" tabindex="-1"></a><span class="sc">\quad</span></span>
-<span id="cb86-5"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb86-5" aria-hidden="true" tabindex="-1"></a><span class="sc">\big\|\Big\|\bigg\|\Bigg\|</span></span>
-<span id="cb86-6"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb86-6" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
+<div class="sourceCode" id="cb85"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb85-1"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb85-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\[</span></span>
+<span id="cb85-2"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb85-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\big</span><span class="ss">(</span><span class="sc">\Big</span><span class="ss">(</span><span class="sc">\bigg</span><span class="ss">(</span><span class="sc">\Bigg</span><span class="ss">(</span><span class="sc">\quad</span></span>
+<span id="cb85-3"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb85-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\big\}\Big\}\bigg\}\Bigg\}</span></span>
+<span id="cb85-4"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb85-4" aria-hidden="true" tabindex="-1"></a><span class="sc">\quad</span></span>
+<span id="cb85-5"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb85-5" aria-hidden="true" tabindex="-1"></a><span class="sc">\big\|\Big\|\bigg\|\Bigg\|</span></span>
+<span id="cb85-6"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb85-6" aria-hidden="true" tabindex="-1"></a><span class="ss">\]</span></span></code></pre></div>
 <p><span class="math display">\[
 \big(\Big(\bigg(\Bigg(\quad
 \big\}\Big\}\bigg\}\Bigg\}
@@ -507,20 +544,20 @@ komutları da parantezleri biraz büyütür.</p>
 </tr>
 </tbody>
 </table>
-<div class="sourceCode" id="cb87"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb87-1"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\(</span></span>
-<span id="cb87-2"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb87-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\downarrow</span></span>
-<span id="cb87-3"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb87-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\big\downarrow</span></span>
-<span id="cb87-4"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb87-4" aria-hidden="true" tabindex="-1"></a><span class="sc">\Big\downarrow</span></span>
-<span id="cb87-5"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb87-5" aria-hidden="true" tabindex="-1"></a><span class="sc">\bigg\downarrow</span></span>
-<span id="cb87-6"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb87-6" aria-hidden="true" tabindex="-1"></a><span class="sc">\Bigg\downarrow</span></span>
-<span id="cb87-7"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb87-7" aria-hidden="true" tabindex="-1"></a><span class="ss">\)</span></span></code></pre></div>
+<div class="sourceCode" id="cb86"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb86-1"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb86-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\(</span></span>
+<span id="cb86-2"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb86-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\downarrow</span></span>
+<span id="cb86-3"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb86-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\big\downarrow</span></span>
+<span id="cb86-4"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb86-4" aria-hidden="true" tabindex="-1"></a><span class="sc">\Big\downarrow</span></span>
+<span id="cb86-5"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb86-5" aria-hidden="true" tabindex="-1"></a><span class="sc">\bigg\downarrow</span></span>
+<span id="cb86-6"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb86-6" aria-hidden="true" tabindex="-1"></a><span class="sc">\Bigg\downarrow</span></span>
+<span id="cb86-7"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb86-7" aria-hidden="true" tabindex="-1"></a><span class="ss">\)</span></span></code></pre></div>
 <p><span class="math inline">\(\downarrow \big\downarrow \Big\downarrow \bigg\downarrow \Bigg\downarrow\)</span></p>
 <p>Bunların dışında altlarına ya da üstlerine matematiksel ifadeler
 yazılabilen <code>\xleftarrow</code> ve <code>\xrightarrow</code> komutları vardır.</p>
-<div class="sourceCode" id="cb88"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb88-1"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb88-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\(</span></span>
-<span id="cb88-2"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb88-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\xleftarrow</span><span class="ss">{a}</span></span>
-<span id="cb88-3"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb88-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\xrightarrow</span><span class="ss">[X]{a+b}</span></span>
-<span id="cb88-4"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb88-4" aria-hidden="true" tabindex="-1"></a><span class="ss">\)</span></span></code></pre></div>
+<div class="sourceCode" id="cb87"><pre class="sourceCode latex"><code class="sourceCode latex"><span id="cb87-1"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb87-1" aria-hidden="true" tabindex="-1"></a><span class="ss">\(</span></span>
+<span id="cb87-2"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb87-2" aria-hidden="true" tabindex="-1"></a><span class="sc">\xleftarrow</span><span class="ss">{a}</span></span>
+<span id="cb87-3"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb87-3" aria-hidden="true" tabindex="-1"></a><span class="sc">\xrightarrow</span><span class="ss">[X]{a+b}</span></span>
+<span id="cb87-4"><a href="parantezler-gruplandırıcılar-ve-oklar.html#cb87-4" aria-hidden="true" tabindex="-1"></a><span class="ss">\)</span></span></code></pre></div>
 <p><span class="math inline">\(\xleftarrow{a}\)</span>
 <span class="math inline">\(\xrightarrow[X]{a+b}\)</span></p>
 </div>

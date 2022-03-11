@@ -3,7 +3,7 @@
     "path": "~/GitHub/latex-dersleri/preamble.html",
     "project_path": "preamble.html",
     "type": "html",
-    "hash": "2999093608",
+    "hash": "235073087",
     "contents": "",
     "dirty": false,
     "created": 1647041915346.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "110,0",
-        "scrollLine": "99"
+        "cursorPosition": "55,33",
+        "scrollLine": "37"
     },
     "folds": "",
-    "lastKnownWriteTime": 1647042286,
+    "lastKnownWriteTime": 1647042742,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1647042286183,
+    "last_content_update": 1647042742610,
     "read_only": false,
     "read_only_alternatives": []
 }
