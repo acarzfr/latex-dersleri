@@ -1,0 +1,27 @@
+{
+    "id": "17747BAF",
+    "path": "~/GitHub/latex-dersleri/index.Rmd",
+    "project_path": "index.Rmd",
+    "type": "r_markdown",
+    "hash": "2110875719",
+    "contents": "",
+    "dirty": false,
+    "created": 1647041907632.0,
+    "source_on_save": false,
+    "relative_order": 1,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "35,6",
+        "scrollLine": "15",
+        "working_dir": "project"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1647042293,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1647042293557,
+    "read_only": false,
+    "read_only_alternatives": []
+}
