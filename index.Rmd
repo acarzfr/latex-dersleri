@@ -25,12 +25,4 @@ github-repo: acarzfr/latex-dersleri
 # Sunuş {-}
 
 
-<div id="ggb-element">
-<script>  
-    var params = {"ggbBase64":"images/gg.ggb", "width": 800, "height": 600, "showToolBar": true, "showAlgebraInput": true, "showMenuBar": true };
-    var applet = new GGBApplet(params, true);
-    window.addEventListener("load", function() { 
-        applet.inject('ggb-element');
-    });
-</script>
-</div>
+
