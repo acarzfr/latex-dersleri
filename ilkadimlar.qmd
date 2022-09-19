@@ -1,0 +1,525 @@
+# İlk Adımlar
+
+## Tipik Bir Belge Yazımı
+
+LaTeX'in varsayılan dosya uzantısı `.tex`'tir. Bu basit bir metin
+dosyası olup, LaTeX editörleriyle oluşturulup düzenlenebileceği gibi
+basit bir metin editörüyle de düzenlenebilir.
+
+Bir belge hazırlamaya başlamak için verilecek ilk komut  `\documentclass[...]{...}` olup, çengelli parantezler arasına oluşturmak istediğiniz belgenin sınıfı yazılır. Köşeli parantezlerin içine de isteğe bağlı bazı
+değişkenler yazılabilir. Eğer bu kısım boş bırakılırsa LaTeX varsayılan
+değerleri alacaktır. Bu komutun ardından sırasıyla `\begin{document}` ve
+`\end{document}` komutları verilerek belge ortamı oluşturulur.
+`\end{document}` komutuyla LaTeX'e belgenin bittiği söylenmiş olur ve
+LaTeX bu komuttan sonra girilenleri dikkate almaz.
+
+`\documentclass` komutuyla `\begin{document}` komutu arasına *sahanlık*
+denir. Sahanlık, belgenin ayarlarının yapıldığı kısımdır ve bu kısım
+çıktıda görünmez. `\begin{document}` ile `\end{document}` arasına da
+*gövde* denir. İçerik burada oluşturulur.
+
+Aşağıda asgari bir LaTeX kaynak dosyası gösterilmiştir. `\documentclass`
+komutunun değişkeni olan `article`, belgenin makale olacağını belirtir.
+
+
+```latex
+\documentclass{article}
+\begin{document}
+  İşte ilk belgem.
+\end{document}
+```
+
+
+Bu noktadan sonra örnek kaynak dosyayı LaTeX editörünüzünde oluşturup
+önceden oluşturduğunuz bir dizine kaydedin. Kaydederken dosya adında
+boşluk ve Türkçe karakter kullanmayın. Örneğin kaynak dosyanız
+`belge1.tex` olsun.
+
+İkinci aşama kaynak dosyanın derlenmesidir. Derleme işlemi için LaTeX
+editörlerinde genelde araç çubuğunda oklar bulunur. Oka tıklandığında
+dosya derlenir ve sonuç, çıktı ekranında görünür. 
+
+Eğer metin editörü kullanıyorsanız derlemeyi uçbirimde (terminal,
+konsol,...) yapmanız gerekir. Derleme için uçbirim kaynak dosyanın
+olduğu dizinde açılıp
+
+```bash
+pdflatex belge1
+```
+
+komutu verilmelidir.
+
+Derleme işleminden sonra kaynak dosyanızın olduğu dizinde `belge1.tex`
+ve `belge1.pdf` dosyalarının yanında yine `belge1` ile başlayan farklı
+uzantılara sahip dosyalar olacaktır. Bu dosyaların ne olduklarına
+ilerleyen yazılarda değinilecektir ancak dileyen okur @Oetiker'e bakabilir.
+
+
+## Belge Sınıfları ve Seçenekleri {#ch-belgesinifi}
+
+Başka sınıflar olmakla birlikte LaTeX'de varsayılan olarak kullanılan
+beş belge sınıfı vardır (@tbl-belgesin).  
+
+
+Table: LaTeX'de Belge Sınıfları {#tbl-belgesin}
+
+| **Sınıf** | **Açıklama** |
+|:--|  :--|
+ | `article`  | Makale|
+ | `report`  |  Makaleden daha hacimli belgeler için kullanılır. Rapor, tez gibi|
+ | `book`    |  Kitap |
+|  `letter`  |  Mektup |
+ | `beamer`   | Sunu  |
+
+
+Bu beş sınıftan `article`, `report` ve `book` için kullanılabilecek
+seçenekler  @tbl-belgesec'de gösterilmiştir.
+
+Table:  LaTeX'de Belge Seçenekleri {#tbl-belgesec}
+
+| **Seçenek** | **Açıklama** |
+|:--|  :--|
+|  **10pt, 11pt, 12pt**         |           Belge ana yazı büyüklüğü.|
+|  **a4paper, a5paper, letterpaper,...**  | Kağıt boyutu.| 
+|  **fleqn**        |                       Formülleri ortada yazmak yerine, sola bitişik yazar.|
+|  **leqno**              |                 Formül numaralarını sağ yerine sol tarafa koyar.|
+|  **titlepage, notitlepage**     |         Belge başlığını attıktan sonra yeni bir sayfa açıp açmayacağını belirler.|
+|  **onecolumn, twocolumn**      |          Belgenin tek sütun veya çift sütun dizileceğini belirtir.|
+ | **twoside, oneside**     |               Belgenin kağıdın hep tek tarafına mı yoksa iki tarafına mı basılacağını belirtir.|
+|  **landscape**      |                     Belgeyi enine tutulmuş kağıda basılmak üzere hazırlar.|
+|  **openright, openany**    |              Belgede bölümleri hep sağ sayfalardan veya ilk gelen boş sayfadan başlatır.|
+|  **draft, final**        |                Belgeyi sırasıyla *taslak* ve *son* şeklinde hazırlar. **draft** seçilirse, sağ taraftan fırlamış olan satırlar kalın siyah bir çizgiyle işaretlenir.|
+
+
+Bu seçeneklerin her birinin kullanılabilirliği belge sınıfına göre
+farklılık gösterir. @tbl-seckul'de hangi seçeneğin hangi sınıf için
+varsayılan olduğu ve kullanılabilir olup olmadığı gösterilmiştir.
+
+Table: Seçeneklerin belge sınıflarına göre kullanılabilirliği (1: varsayılan 1/2: kullanılabilir 0: kullanılamaz) {#tbl-seckul} 
+
+|   **Seçenek**               |   `book`      |    `report`      |  `article`    |
+| :--             | :--     |  :--    |  :--       |
+|   **10pt**       |   1     |   1       |   1|
+|  **letterpaper** |  1      |  1        |  1|
+|  **oneside**     |  1/2    |  1        |  1|
+|  **twoside**     |  1       | 1/2      |  1/2|
+|  **openany**     |  1/2    |  1        |  0|
+|  **openright**    | 1       | 1/2      |  0|
+|  **titlepage**   |  1      |  1        |  1/2|
+|  **final**       |  1      |  1        |  1|
+
+
+
+
+Örneğin belgeye `\documentclass[a4paper,12pt]{article}`
+komutuyla başlarsak LaTeX'e kağıt boyutu A4, ana yazı büyüklüğü 12 punto
+olan bir makale yazacağımızı bildirmiş oluruz.
+Başka bir örnek `\documentclass[a5paper,11pt,twocolumn]{book}`
+olsun. Bu örnekte kağıt boyutu A5, ana yazı büyüklüğü 11 punto olan bir
+kitap yazacağımızı ve kitabın iki sütun olarak dizilmesini söyledik.
+
+## Türkçe Dil Ayarları ve Çoklu Dil Kullanımı 
+
+LaTeX'de Türkçe belgeler oluşturmak için öncelikle sahanlığa
+
+
+```latex
+\usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+```
+
+
+komutlarının verilmesi gerekir.
+
+`T1` seçenekli **fontenc** paketi yazıtipi kodlamasıyla ilgili bir paket
+olup, hecelemenin doğru şekilde yapılmasını sağlar. Bir çok Avrupa
+dilinde de `T1` seçeneğiyle kullanılır. `turkish` seçenekli **babel**
+paketi de Chapter, Table, Contents,... gibi isimlerin Türkçeleşmesi
+(Bölüm, Tablo, İçindekiler,...) içindir.
+
+
+:::{.callout-note}
+Yakın zamana kadar ö, ş, ç,\dots{} gibi Türkçe karakterlerin
+ kullanılabilmesi için sahanlığa `\usepackage[utf8]{inputenc}` ya da
+`\usepackage[latin5]{inputenc}` komutlarından birinin verilmesi
+gerekiyordu. Bu paket (**inputenc**) girdi kodlamasını yöneten bir
+pakettir. Son güncellemelerle birlikte bu paketin kullanılma
+zorunluluğu ortadan kalkmıştır.
+:::
+
+
+Aşağıda Türkçe asgari bir LaTeX kaynak dosyası örneği verilmiştir.
+
+
+```latex
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+\begin{document}
+  İşte  Türkçe ilk belgem.
+\end{document}
+```
+
+Türkçe dışında ikinci bir dil kullanmak isterseniz, örneğin İngilizce,
+**babel** paketinin seçeneğini
+
+
+```latex
+\usepackage[english,turkish]{babel}
+```
+
+
+şeklinde değiştirmeniz gerekir. Burada etkin olan dil Türkçedir.
+İngilizceyi etkin hale getirmek için `\selectlanguage{english}` komutu
+kullanılır. Tekrar Türkçeye geçmek için de benzer şekilde
+`\selectlanguage{turkish}` komutu kullanılır.
+
+Bir kelime ya da cümle gibi kısa metinler kullanılacaksa
+`\foreignlanguage` komutu kullanılabilir:
+
+
+```latex
+\foreignlanguage{<dil>}{<metin>}
+```
+
+
+Uzun metinler içinse diğer bir seçenek `otherlanguage` ortamıdır.
+
+```latex
+\begin{otherlanguage}{<dil>}
+  ...
+\end{otherlanguage}
+```
+
+
+Bu ortamın isimleri değiştirmeyen, örneğin, dil seçeneği İngilizce
+olmasına rağmen belgeye bir tablo eklediğinizde "Table" yerine yine
+"Tablo" adını yazan yıldızlı sürümü de (`otherlanguage*`) vardır.
+
+
+
+## Belgeye Başlık Oluşturma
+
+LaTeX'de belgeye başlık oluşturmak için `\title` komutu kullanılır.
+Yazar adı `\author` komutuyla girilir. Birden fazla yazar varsa yazar
+adları arasına `\and` komutu girilir.
+
+İsteğe bağlı olarak tarih için `\date` komutu kullanılır. Eğer `\date`
+komutu kullanılmazsa LaTeX belgenizi derlediğiniz günün tarihini basar.
+Tarihin basılmasını istemiyorsanız, bu komutu tarih yazılmadan `\date{}`
+şeklinde kullanmanız gerekir.
+
+Son olarak, başlığın belgenize yazılması için `\begin{document}`
+komutundan sonra başlığı oluşturmak istediğiniz yere `\maketitle`
+komutunu girersiniz. Belge başlığını attıktan sonra yeni bir sayfanın
+açılıp açılmayacağı belgenin sınıfına bağlı
+olarak belirlenir.
+
+Ayrıca `\title`, `\author` ve `\date` komutları `\thanks` komutunu
+içerebilir. Bu komutun değişkeni bir e-posta adresi, iş adresi veya bir
+teşekkür metni olabilir.
+
+
+```latex
+\documentclass[a4paper,12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+\title{Belge Başlığı}
+\author{Yazar 1\thanks{A Üniversitesi} \and Yazar 2\thanks{B Üniversitesi}}
+\date{XX.XX.XXXX}
+\begin{document}
+\maketitle
+  İçerik...
+\end{document}
+```
+
+## Bölümleme ve İçindekiler Tablosu
+
+LaTeX'de belgenizi bölümlere ayırmak için 7 seviye bulunmaktadır.
+
+Table:  LaTeX'de Bölüm Seviyeleri {#tbl-bolumseviyeleri}
+
+| **Komut** | **Seviye** | **Açıklama** |
+| :--- | :--- | :--- |
+| `\part{...}` | -1( book ve report ) 0 ( article) | letter hariç |
+| `\chapter{...}` | 0 | sadece book ve report |
+| `\section{...}` | 1 | letter hariç |
+| `\subsection{...}` | 2 | letter hariç |
+| `\subsubsection{...}` | 3 | letter hariç |
+| `\paragraph{...}` | 4 | letter hariç |
+| `\subparagraph{...}` | 5 | letter hariç |
+
+
+
+Türkçe dil paketi ekli belgelerde `\part` komutu "Kısım", `\chapter`
+komutu "Bölüm" olarak yazılır. Kısımlar I, II, III,... şeklinde bölümler
+ise 1, 2, 3,... şeklinde numaralandırılır. `\section` komutu `book` ve
+`report` sınıflarında `\chapter` komutunu takip ederek 1.1, 1.2,...
+diğer sınıflarda 1, 2, 3,... şeklinde numaralandırılır. `\subsection`
+komutu da `\section` komutunu takip ederek numaralandırılır.
+
+Türkçe dil paketi ekli belgelerde `\part` komutu "Kısım", `\chapter`
+komutu "Bölüm" olarak yazılır. Kısımlar I, II, III,... şeklinde bölümler
+ise 1, 2, 3,... şeklinde numaralandırılır. `\section` komutu `book` ve
+`report` sınıflarında `\chapter` komutunu takip ederek 1.1, 1.2,...
+diğer sınıflarda 1, 2, 3,... şeklinde numaralandırılır. `\subsection`
+komutu da `\section` komutunu takip ederek numaralandırılır.
+
+İçindekiler tablosu için LaTeX'e `\tableofcontents` komutu verilir. Bu
+komutun yazıldığı yerde İçindekiler tablosu oluşturulur. İçindekiler
+tablosunun doğru dizilmesi için kaynak dosyanızı en az iki kere
+derlemeniz gerekir.
+
+LaTeX'de `article` sınıfında 4 ve 5'inci seviye başlıklara, `book` ve
+`report` sınıflarında ise bunlara ek 3'üncü seviye başlıklara numara
+verilmez ve numara verilmeyen başlıklar İçindekiler tablosuna yazılmaz.
+Bu seviyelerdeki başlıklara numara verilmesini ve İçindekiler tablosuna
+yazılması için iki adet `\setcounter` komutu
+
+
+```latex
+\setcounter{secnumdepth}{<seviye>}
+\setcounter{tocdepth}{<seviye>}
+```
+
+şeklinde kullanılır. Birinci komuttaki `<seviye>` değişkeninde kaçıncı
+seviyeye kadar olan başlıkların numaralandırılacağını, ikinci komuttaki
+`<seviye>` değişkeninde de kaçıncı seviyeye kadar olan başlıkların
+İçindekiler tablosuna yazılacağını sayıyla belirtirsiniz. Örneğin `book`
+ve `report` sınıflarında
+
+```latex
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+```
+
+
+komutlarıyla `\subsubsection` komutuna kadar olan başlıklara hem numara
+verir hem de İçindekiler tablosuna yazdırırsınız. Komutların çalışması
+için ya sahanlıkta ya da `\tableofcontents` komutundan önce
+verilmelidir.
+
+Uzun başlıkların İçindekiler tablosunda daha kısa yazılması istenirse
+bölüm komutlarının zorunlu olmayan değişkenine başlıkların kısa şekli
+yazılır:
+
+
+```latex
+\section[Kısa Başlık]{Uzuuuuuuuuuuuuuuuuun Başlık}
+```
+
+
+Bölüm komutlarının birde yıldızlı sürümleri vardır:
+
+
+```latex
+\part*{...}
+\chapter*{...}
+\section*{...}
+\subsection*{...}
+\subsubsection*{...}
+\paragraph*{...}
+\subparagraph*{...}
+```
+
+
+Komutlar bu şekilde verildiğinde başlığa numara verilmez ve İçindekiler
+tablosuna yazılmaz.
+
+İçindekiler tablosunu LaTeX otomatik oluştursa da elle eklemeler
+yapılabilir, hatta Kaynakça gibi özel sayfalarda bu eklemeler
+gereklidir. Bunun için `\addcontentsline` komutu kullanılır.
+
+
+```latex
+\addcontentsline{toc}{<giriş formatı>}{<giriş metni>}
+```
+
+
+Burada `toc`, bilginin yazılacağı İçindekiler tablosunun dosya
+uzantısıdır. Bütünleşik olarak oluşturduğunuz
+kaynakçanın İçindekiler tablosuna yazılması için
+`\begin{thebibliography}` komutunun peşine `book` ve `report`
+sınıflarında
+
+
+```latex
+\addcontentsline{toc}{chapter}{Kaynakça}
+```
+
+
+`article` sınıfında ise
+
+
+```latex
+\addcontentsline{toc}{section}{Kaynaklar}
+```
+
+
+komutunun verilmesi gerekir.
+
+:::{.callout-note}
+"Kaynakça" ya da "Kaynaklar" isimleri yerine farklı isimler
+kullanılabilir elbette. Ancak `thebibliography` ortamının oluşturulduğu yerlerde LaTeX bu isimleri yazdıracağından tutarlı
+olması açısından bu isimler önerilmiştir.
+:::
+
+
+
+
+
+```latex
+\documentclass[a4paper,12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+\title{\LaTeX'de Bölümlendirme  ve İçindekiler Tablosu Oluşturma}
+\author{Zafer Acar}
+\begin{document}
+\maketitle
+\tableofcontents
+\section{Birinci Seviye Başlık}
+  İçerik...
+\subsection{İkinci Seviye Başlık}
+  İçerik...
+\subsubsection{Üçüncü Seviye Başlık}
+  İçerik...
+\section[Kısa Başlık]{Uzuuuuuuuuun Başlık}
+  İçerik...
+\section*{Numarasız Başlık}
+\addcontentsline{toc}{section}{Numarasız Başlık}
+  İçerik...
+\end{document}
+```
+
+## Büyük Projeler
+
+LaTeX'de kitap yazmaya başlamak için belge sınıfı `book` seçilir. Bunun
+dışında kitapların *Baş*, *Gövde* ve *Son* kısımları olur. Bu kısımların
+nerede başlayıp nerede bittikleri aşağıdaki komutlarla LaTeX'e
+bildirilir:
+
+-   `\frontmatter` (baş) komutu` \begin{document}` komutundan hemen
+    sonra verilir. Bu komut, baş taraftaki İçindekiler, Önsöz gibi
+    kısımların sayfa numaralandırmasını Roma rakamıyla yapar. Ayrıca bu
+    kısımda bölüm komutları (`*`) işareti olmadan verildiğinde (örneğin
+    `\chapter{Önsöz}`) bunlara numara verilmez ancak İçindekiler
+    tablosuna yazılırlar.
+-   `\mainmatter` (gövde) komutu kitabın ilk bölüm başlığından hemen
+    önce verilmelidir. Buradan itibaren sayfa numaralandırmasını yeniden
+    başlatıp Arap rakamlarına geçer.
+-   `\appendix` (ekler) komutu kitabınızın eklerindeki bölümleri
+    harflerle numaralandırır (Ek A, Ek B, ... ).
+-   `\backmatter` (son) komutu kitabınızda her şey bittikten sonra
+    verilir fakat bilinen belge sınıflarında görünürde hiçbir etkisi
+    yoktur.
+
+```latex
+\documentclass[a4paper,12pt]{book}
+\usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+\title{Başlık}%Başlık
+\author{Yazar Adı}%yazar
+\date{Eylül 2022}%Tarih
+
+\begin{document}
+\frontmatter%sayfa numaraları I,II,...
+\maketitle%başlığı oluştur
+\tableofcontents%içindekiler tablosu
+
+\chapter{Önsöz}
+  İçerik...
+
+\mainmatter % sayfa numaraları 1,2,3,...
+
+\part{Birinci Kısım}
+
+\chapter{Birinci Bölüm}
+\section{Altbölüm}
+  İçerik...
+
+\appendix %eklerin başlangıcı
+
+\part{Ekler}
+
+\chapter{Birinci Ek}
+
+  İçerik...
+
+\backmatter
+
+\end{document}
+```
+
+Kitap gibi büyük hacimli belgelerle çalışırken kaynak dosyanızı
+parçalara ayırmak gerekebilir. LaTeX bunun için size iki komutla
+yardımcı olur: `\input` ve `\include`. İkisi arasındaki fark `\include`
+komutuyla eklediğiniz metin yeni bir sayfadan başlayarak dizilir.
+
+Bu komutların zorunlu değişkeni eklemek istediğiniz dosyanın adıdır.
+Örneğin kaynak dosyanızla aynı dizinde yer alan `dosya1.tex` dosyasını
+eklemek için
+
+
+```latex
+\include{dosya1}
+```
+
+
+komutunu kullanırsınız. Eğer dosya uzantısı `.tex` değilse (örneğin
+`.txt` olsun) o zaman dosya adını uzantısıyla yazmanız gerekir:
+
+
+```latex
+\include{dosya1.txt}
+```
+
+
+Ayrıca, hangi dosyaların eklenebileceğini LaTeX'e bildiren bir komut
+vardır: `\includeonly`. Bu komut, sadece sahanlığa yazılabilir. Komutun
+zorunlu değişkeninde eklenebilecek dosyalar aralarına virgül koyularak
+(ve boşluk bırakılmadan) listelenir:
+
+
+```latex
+\includeonly{dosya1,dosya2,dosya3,...}
+```
+
+
+Böyle bir liste oluşturulduktan sonra bu listede olmayan bir dosya artık
+`\include` komutuyla kaynak dosyaya eklenemez.
+
+`\input` komutu sahanlıkta da kullanılabilir. Örneğin, sahanlığınızı tek
+bir dosyaya yazıp, bu dosyayı bu komutla sahanlığa ekleyebilirsiniz.
+
+Daha düzenli çalışmak adına kaynak dosyanızın olduğu dizini de
+düzenleyebilirsiniz.
+
+
+![Kaynak dosyanın olduğu dizinin
+düzenlenmesi](images/dizin.png){#fig-dizin width=60%}
+
+
+
+Bu şekilde bir düzenleme yaptığınızda `\input` ya da `\include`
+komutlarıyla dosya eklemek istediğinizde dosyanın bulunduğu dizini de
+göstermeniz gerekir.
+
+Burada kaynak dosya `kitap.tex`'dir. Bu kaynak dosyaya `bolum1.tex`
+dosyasını eklemek istediğinizde komutu
+
+
+```latex
+\input{Bolumler/bolum1}
+```
+
+
+şeklinde verirsiniz. Bu sayede kaynak dosyanızın olduğu dizinde (Örnek
+Kitap) sadece `kitap` ile başlayan dosyalar olur. Diğer dosyalar alt
+dizinde (Bolumler) yer alır.
+
+Dikkat edilirse "Örnek Kitap" dışında, "Bolumler" alt dizini ve tüm
+dosya adları Türkçe karakter ya da boşluk içermez.
+
+
+
+
