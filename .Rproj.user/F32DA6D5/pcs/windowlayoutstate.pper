@@ -1,7 +1,11 @@
 {
     "left": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         "splitterpos": 390,
+=======
+        "splitterpos": 383,
+>>>>>>> Stashed changes
 =======
         "splitterpos": 383,
 >>>>>>> Stashed changes
@@ -11,7 +15,11 @@
     },
     "right": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
         "splitterpos": 662,
+=======
+        "splitterpos": 648,
+>>>>>>> Stashed changes
 =======
         "splitterpos": 648,
 >>>>>>> Stashed changes
