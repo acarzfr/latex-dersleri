@@ -1,4 +1,14 @@
 # Özel Sayfalar
+<script>
+    runlatex.preincludes = {
+     "pre1": {
+        "pre0": "kaynakca.bib"
+       },
+     "pre2": {
+        "pre0": "kaynakca.bib"
+       }
+    }
+</script>
 
  Bu bölümde bir kitaptaki özel  sayfalar olan kaynakça ve dizinden bahsedeceğiz.
  
@@ -367,16 +377,7 @@ komutları çalıştırılarak yapılabilir.
 
 Aşağıda kaynak dosya örneği verilmiştir. Bu dosyayı derleyebilmeniz için içeriği yukarıda verilen `kaynakca.bib` dosyasının bu dosyayla aynı dizinde olması gerektiğini unutmayınız.
 
- <script>
-        runlatex.preincludes = {
-         "pre1": {
-            "pre0": "kaynakca.bib"
-           },
-         "pre2": {
-            "pre0": "kaynakca.bib"
-           }
-        }
-</script>
+
 
 
 ```latex

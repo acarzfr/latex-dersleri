@@ -231,6 +231,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </script>
 
 
+
 <!--   GeoGebra  -->
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -393,6 +394,16 @@ graphing yerine geometry , 3d
 
 </header>
 
+<script>
+    runlatex.preincludes = {
+     "pre1": {
+        "pre0": "kaynakca.bib"
+       },
+     "pre2": {
+        "pre0": "kaynakca.bib"
+       }
+    }
+</script>
 <p>Bu bölümde bir kitaptaki özel sayfalar olan kaynakça ve dizinden bahsedeceğiz.</p>
 <section id="kaynakça" class="level2" data-number="5.1">
 <h2 data-number="5.1" class="anchored" data-anchor-id="kaynakça"><span class="header-section-number">5.1</span> Kaynakça</h2>
@@ -578,16 +589,6 @@ graphing yerine geometry , 3d
 <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="ex">pdflatex</span> kaynakdosya</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>komutları çalıştırılarak yapılabilir.</p>
 <p>Aşağıda kaynak dosya örneği verilmiştir. Bu dosyayı derleyebilmeniz için içeriği yukarıda verilen <code>kaynakca.bib</code> dosyasının bu dosyayla aynı dizinde olması gerektiğini unutmayınız.</p>
-<script>
-        runlatex.preincludes = {
-         "pre1": {
-            "pre0": "kaynakca.bib"
-           },
-         "pre2": {
-            "pre0": "kaynakca.bib"
-           }
-        }
-</script>
 <div class="sourceCode" id="cb14"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[10pt,a4paper]{<span class="ex">article</span>}</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[T1]{<span class="ex">fontenc</span>}</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[turkish]{<span class="ex">babel</span>}</span>
@@ -799,7 +800,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom","loop":true,"selector":".lightbox"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":true,"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","descPosition":"bottom"});</script>
 
 
 
