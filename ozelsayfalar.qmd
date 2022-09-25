@@ -1,14 +1,5 @@
 # Özel Sayfalar
-<script>
-    runlatex.preincludes = {
-     "pre1": {
-        "pre0": "kaynakca.bib"
-       },
-     "pre2": {
-        "pre0": "kaynakca.bib"
-       }
-    }
-</script>
+
 
  Bu bölümde bir kitaptaki özel  sayfalar olan kaynakça ve dizinden bahsedeceğiz.
  

@@ -35,6 +35,8 @@ format:
      # dark: solar
     lang: tr
     include-in-header: preamble.html
+    
+
     filters:
      - lightbox
      - latex-environment
