@@ -1,7 +1,7 @@
 # Matematiksel İfadeler
 
 
-Matematik formüllerini dizmek, kuşkusuz, LaTeX'in en güçlü olduğu
+Matematik formüllerini dizmek, kuşkusuz, {{< latex >}}'in en güçlü olduğu
 konulardan biridir. Çok fazla matematiksel gösterimin varlığından dolayı
 da büyük bir konudur. Bu bölümde ileri bir
 matematik kitabını dizmek için gereken birçok şey anlatılacaktır ancak
@@ -33,20 +33,20 @@ bunların dışında bir pakete ihtiyaç duyarsak ayrıca belirteceğiz.
 
 ### Genel
 
-Belgenizin metnini oluştururken LaTeX'in metnin ne zaman matematiksel
-olduğunu bilmesi gerekir. Bunun nedeni, LaTeX'in matematiksel ifadeleri
+Belgenizin metnini oluştururken {{< latex >}}'in metnin ne zaman matematiksel
+olduğunu bilmesi gerekir. Bunun nedeni, {{< latex >}}'in matematiksel ifadeleri
 normal metinden farklı bir şekilde dizmesidir. Bu nedenle matematiksel
 ifadeler, normal metinden farklı olarak bazı ortamlarda girilirler.
 
 Matematik özel ortamlar gerektirdiğinden, doğal olarak standart şekilde
 kullanabileceğiniz uygun ortam adları vardır. Bununla birlikte, diğer
 ortamların çoğundan farklı olarak, formülünüzü bildirmek için bazı
-kullanışlı kısaltmalar vardır. LaTeX'de bu ortamlar ya da kısaltmalar
+kullanışlı kısaltmalar vardır. {{< latex >}}'de bu ortamlar ya da kısaltmalar
 kullanılarak formüller iki türlü dizilir:
 
 -   Formüller satırın içinde, yani bildirildiği metnin gövdesi içine
     yazılır:
-     $\lim_{n \to \infty} \sum_{k=1}^n \frac{1}{k^2} =\frac{\pi^2}{6}$. Görüldüğü gibi LaTeX, paragraf yapısını
+     $\lim_{n \to \infty} \sum_{k=1}^n \frac{1}{k^2} =\frac{\pi^2}{6}$. Görüldüğü gibi {{< latex >}}, paragraf yapısını
     bozmamak için sembolleri olabildiğince sıkıştırır ve gerek görürse
     alttakileri yana kaydırır.
 -   Formüller ayrı bir satırda tek başlarına tüm detaylarıyla
@@ -61,12 +61,12 @@ Formülün satır içerisinde dizilmesi için ya `$...$` arasına arasına, ya
 
 Formülün sergilenmesi içinse ya `\[...\]` arasına ya `displaymath`
 ortamında ya da `equation` ortamında yazılması gerekir.
-`equation `ortamında yazılan formülü LaTeX otomatik numaralandırır.
+`equation `ortamında yazılan formülü {{< latex >}} otomatik numaralandırır.
 Numara verilmesini istemezseniz ortamı `equation*` şeklinde kullanmanız
 gerekir.
 
 :::{.callout-note}
-TeX'in eski sürümlerinde formüller, sergilenmeleri için `$$...$$`
+{{< tex >}}'in eski sürümlerinde formüller, sergilenmeleri için `$$...$$`
 arasına yazılırdı. Bu kullanım hala geçerlidir ancak bazı sorunlara
 yol açabildiğinden (örneğin belge seçeneğine `fleqn` yazıldığında)
 kullanımı önerilmez.
@@ -164,7 +164,7 @@ iki çengelli parantez `{…}` arasına yazılarak gruplandırılmalıdır.
 ### Boşluklar
 
 
-Bazen LaTeX formülleri dizerken olması gerektiği gibi boşluk bırakma
+Bazen {{< latex >}} formülleri dizerken olması gerektiği gibi boşluk bırakma
 konusunda yetersiz kalabilir. Bu durumda boşluklar elle oluşturulur.
 Boşluklar için kullanılabilecek komutlar tablodaki gibidir.
 
@@ -225,7 +225,7 @@ x^2\!/2 \quad a/\!\sin b
 ## Parantezler, Gruplandırıcılar ve Oklar
 
 
-LaTeX'de her türlü parantez ve gruplandırıcı kullanılabilir. Yuvarlak ve
+{{< latex >}}'de her türlü parantez ve gruplandırıcı kullanılabilir. Yuvarlak ve
 köşeli parantezler klavyedeki yerlerinden, çengelli parantez ise `\{` ve
 `\}` komutları kullanılarak girilir.
 
@@ -264,7 +264,7 @@ Table:  Gruplandırıcılar {#tbl-grup}
 
 
 Grup açıcı bir sembolün önüne `\left` komutu, grup kapatıcı bir sembolün
-önüne de `\right` komutu yazılırsa LaTeX onları en uygun boyda dizer.
+önüne de `\right` komutu yazılırsa {{< latex >}} onları en uygun boyda dizer.
 Her bir `\left` komutuna karşılık mutlaka bir `\right` komutu
 bulunmalıdır. Bunların doğru boyda dizilmesi için iki komutunda aynı
 satırda yer almasına dikkat edilmelidir. Sol/sağ tarafta gruplandırıcı
@@ -421,7 +421,7 @@ $\forall \epsilon>0$ için
 
 ## Fonksiyonlar
 
-LaTeX'de fonksiyonlar aşağıdaki komutlarla dizilirler.
+{{< latex >}}'de fonksiyonlar aşağıdaki komutlarla dizilirler.
 
 `\arccos  \cos  \csc  \exp  \ker  \limsup  \min  \sinh \arcsin  \cosh  \deg  \gcd  \lg  \ln  \Pr  \sup \arctan  \cot  \det  \hom  \lim  \log  \sec  \tan \arg  \coth  \dim  \inf  \liminf  \max  \sin  \tanh`
 
@@ -541,7 +541,7 @@ komutu verilir.
 Matematikte bazen bir ifadenin altına ya da üstüne başka ifadeler yazmak
 gerekebilir. Bunlar yığın simgeleri olarak adlandırılırlar.
 
-LaTeX'de aşağıdaki
+{{< latex >}}'de aşağıdaki
 
 
 ```latex
@@ -730,7 +730,7 @@ matematik sürümü olan `array` ortamını kullanılmalıdır.
 Matematiksel ifadeleri dizerken bazen yazının biçemini ya da boyutunu
 değiştirmek isteyebilirsiniz.
 
-LaTeX'de matematik kipindeki yazıların biçemleri aşağıdaki komutlar
+{{< latex >}}'de matematik kipindeki yazıların biçemleri aşağıdaki komutlar
 kullanılarak değiştirilir.
 
 Table:  Matematik  Kipinde Yazı Biçemleri {#tbl-matyazi}
@@ -841,7 +841,7 @@ $\dbinom{n}{3}$
 
 Bir satıra sığmayacak kadar uzun bir formülü ya da birden çok satırdan
 oluşan bir denklemi veya denklem sistemlerini hizalayıp dizmek için
-LaTeX'de çeşitli ortamlar kullanılır.
+{{< latex >}}'de çeşitli ortamlar kullanılır.
 
 `multline` ortamı bir formülü hizalanmamış bir kaç satıra ayırır.
 
@@ -1098,7 +1098,7 @@ metnin geri kalanından ayrılmış ve yanında sıralı sayılarla etiketli
 paragraflardır. Bu, matematikte teoremler için yaygın olarak kullanılır,
 ancak her şey için kullanılabilir.
 
-LaTeX, herhangi bir teorem benzeri bildirimi kolayca tanımlamanıza izin
+{{< latex >}}, herhangi bir teorem benzeri bildirimi kolayca tanımlamanıza izin
 veren bir komut sunar: `\newtheorem`.
 
 ### Temel Teoremler
@@ -1120,7 +1120,7 @@ komutuyla `amsthm` paketini ekleyiniz. En basit kullanım
 
 
 komutunun sahanlığa verilmesidir. İlk değişken olan `<ad>`, referans
-olarak kullanacağınız addır, ikinci değişken `<başlık>` ise LaTeX'in her
+olarak kullanacağınız addır, ikinci değişken `<başlık>` ise {{< latex >}}'in her
 kullandığınızda yazdıracağı çıktıdır. `<ad>` değişkeni aksanlı bir harf
 içermemelidir. Örneğin
 
@@ -1130,7 +1130,7 @@ içermemelidir. Örneğin
 ```
 
 
-komutunu sahanlığa verdiğinizde `tanim` ortamını LaTeX'e tanıtmış olursunuz. Ayrıca kullanılan teoreme (bu örnekte Tanım) özel bir ad vermek ya da
+komutunu sahanlığa verdiğinizde `tanim` ortamını {{< latex >}}'e tanıtmış olursunuz. Ayrıca kullanılan teoreme (bu örnekte Tanım) özel bir ad vermek ya da
 not düşmek isteyebilirsiniz. Bu, ortam komutundan sonra köşeli
 parantezler içinde belirtilebilir:
 
@@ -1355,7 +1355,7 @@ değiştirme olanağını verir.
 
 
 Buradaki `<stil adı>` kullanmak istediğiniz stildir. Bu komuttan sonra
-tanımlanmış tüm teoremler bu stili kullanacaktır. LaTeX'de önceden
+tanımlanmış tüm teoremler bu stili kullanacaktır. {{< latex >}}'de önceden
 tanımlanmış stiller aşağıdakilerdir:
 
 Table:  Teorem Stilleri {#tbl-teoremstil}

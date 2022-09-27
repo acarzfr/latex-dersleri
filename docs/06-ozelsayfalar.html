@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>LaTeX Dersleri - 5&nbsp; Özel Sayfalar</title>
+<title>\LaTeX Dersleri - 6&nbsp; Özel Sayfalar</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -88,8 +88,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./ozellestirmeler.html" rel="next">
-<link href="./matematik.html" rel="prev">
+<link href="./07-ozellestirmeler.html" rel="next">
+<link href="./05-yuzergezer.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -271,7 +271,23 @@ graphing yerine geometry , 3d
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 </head>
 
@@ -281,7 +297,7 @@ graphing yerine geometry , 3d
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Özel Sayfalar</span></h1>
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Özel Sayfalar</span></h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -294,10 +310,10 @@ graphing yerine geometry , 3d
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">LaTeX Dersleri</a> 
+      <a href="./"><span class="math inline">\LaTeX</span> Dersleri</a> 
         <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/acarzfr/latex-dersleri/" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
-    <a href="./LaTeX-Dersleri.pdf" title="Download PDF" class="sidebar-tool px-1"><i class="bi bi-file-pdf"></i></a>
+    <a href="./{{--latex--}}-Dersleri.pdf" title="Download PDF" class="sidebar-tool px-1"><i class="bi bi-file-pdf"></i></a>
     <a href="" title="Share" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-share"></i></a>
     <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
         <li>
@@ -330,37 +346,42 @@ graphing yerine geometry , 3d
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./temeller.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Temeller</span></a>
+  <a href="./01-temeller.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Temeller</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ilkadimlar.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">İlk Adımlar</span></a>
+  <a href="./02-ilkadimlar.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">İlk Adımlar</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dizgi.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dizgi</span></a>
+  <a href="./03-dizgi.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dizgi</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./matematik.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Matematiksel İfadeler</span></a>
+  <a href="./04-matematik.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Matematiksel İfadeler</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ozelsayfalar.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Özel Sayfalar</span></a>
+  <a href="./05-yuzergezer.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Yüzer Gezer Nesneler</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ozellestirmeler.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Özelleştirmeler</span></a>
+  <a href="./06-ozelsayfalar.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Özel Sayfalar</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./kaynakca.html" class="sidebar-item-text sidebar-link">Kaynakça</a>
+  <a href="./07-ozellestirmeler.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Özelleştirmeler</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-kaynakca.html" class="sidebar-item-text sidebar-link">Kaynakça</a>
   </div>
 </li>
     </ul>
@@ -372,15 +393,15 @@ graphing yerine geometry , 3d
     <h2 id="toc-title">İçindekiler</h2>
    
   <ul>
-  <li><a href="#kaynakça" id="toc-kaynakça" class="nav-link active" data-scroll-target="#kaynakça"> <span class="header-section-number">5.1</span> Kaynakça</a>
+  <li><a href="#kaynakça" id="toc-kaynakça" class="nav-link active" data-scroll-target="#kaynakça"> <span class="header-section-number">6.1</span> Kaynakça</a>
   <ul class="collapse">
-  <li><a href="#bütünleşik-kaynakça" id="toc-bütünleşik-kaynakça" class="nav-link" data-scroll-target="#bütünleşik-kaynakça"> <span class="header-section-number">5.1.1</span> Bütünleşik Kaynakça</a></li>
-  <li><a href="#kaynakçanın-ayrı-dosyada-hazırlanması" id="toc-kaynakçanın-ayrı-dosyada-hazırlanması" class="nav-link" data-scroll-target="#kaynakçanın-ayrı-dosyada-hazırlanması"> <span class="header-section-number">5.1.2</span> Kaynakçanın ayrı dosyada hazırlanması</a></li>
+  <li><a href="#bütünleşik-kaynakça" id="toc-bütünleşik-kaynakça" class="nav-link" data-scroll-target="#bütünleşik-kaynakça"> <span class="header-section-number">6.1.1</span> Bütünleşik Kaynakça</a></li>
+  <li><a href="#kaynakçanın-ayrı-dosyada-hazırlanması" id="toc-kaynakçanın-ayrı-dosyada-hazırlanması" class="nav-link" data-scroll-target="#kaynakçanın-ayrı-dosyada-hazırlanması"> <span class="header-section-number">6.1.2</span> Kaynakçanın ayrı dosyada hazırlanması</a></li>
   </ul></li>
-  <li><a href="#dizin" id="toc-dizin" class="nav-link" data-scroll-target="#dizin"> <span class="header-section-number">5.2</span> Dizin</a>
+  <li><a href="#dizin" id="toc-dizin" class="nav-link" data-scroll-target="#dizin"> <span class="header-section-number">6.2</span> Dizin</a>
   <ul class="collapse">
-  <li><a href="#çoklu-dizin" id="toc-çoklu-dizin" class="nav-link" data-scroll-target="#çoklu-dizin"> <span class="header-section-number">5.2.1</span> Çoklu Dizin</a></li>
-  <li><a href="#dizinin-içindekiler-tablosuna-yazılması" id="toc-dizinin-içindekiler-tablosuna-yazılması" class="nav-link" data-scroll-target="#dizinin-içindekiler-tablosuna-yazılması"> <span class="header-section-number">5.2.2</span> Dizinin İçindekiler tablosuna yazılması</a></li>
+  <li><a href="#çoklu-dizin" id="toc-çoklu-dizin" class="nav-link" data-scroll-target="#çoklu-dizin"> <span class="header-section-number">6.2.1</span> Çoklu Dizin</a></li>
+  <li><a href="#dizinin-içindekiler-tablosuna-yazılması" id="toc-dizinin-içindekiler-tablosuna-yazılması" class="nav-link" data-scroll-target="#dizinin-içindekiler-tablosuna-yazılması"> <span class="header-section-number">6.2.2</span> Dizinin İçindekiler tablosuna yazılması</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -390,7 +411,7 @@ graphing yerine geometry , 3d
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Özel Sayfalar</span></h1>
+<h1 class="title d-none d-lg-block"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Özel Sayfalar</span></h1>
 </div>
 
 
@@ -405,11 +426,11 @@ graphing yerine geometry , 3d
 </header>
 
 <p>Bu bölümde bir kitaptaki özel sayfalar olan kaynakça ve dizinden bahsedeceğiz.</p>
-<section id="kaynakça" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="kaynakça"><span class="header-section-number">5.1</span> Kaynakça</h2>
-<section id="bütünleşik-kaynakça" class="level3" data-number="5.1.1">
-<h3 data-number="5.1.1" class="anchored" data-anchor-id="bütünleşik-kaynakça"><span class="header-section-number">5.1.1</span> Bütünleşik Kaynakça</h3>
-<p>LaTeX’de kaynakça oluşturmanın bir yolu, kaynakçayı kaynak dosyanızın (<code>.tex</code> uzantılı ana dosyanız) içindeki bir ortamda hazırlamaktır. Kullanacağınız ortam <code>thebibliography</code> ortamıdır.</p>
+<section id="kaynakça" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="kaynakça"><span class="header-section-number">6.1</span> Kaynakça</h2>
+<section id="bütünleşik-kaynakça" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="bütünleşik-kaynakça"><span class="header-section-number">6.1.1</span> Bütünleşik Kaynakça</h3>
+<p><span class="math inline">\LaTeX</span>’de kaynakça oluşturmanın bir yolu, kaynakçayı kaynak dosyanızın (<code>.tex</code> uzantılı ana dosyanız) içindeki bir ortamda hazırlamaktır. Kullanacağınız ortam <code>thebibliography</code> ortamıdır.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">thebibliography</span>}{&lt;sayı&gt;}</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">thebibliography</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -427,7 +448,7 @@ graphing yerine geometry , 3d
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\renewcommand</span>{<span class="ex">\@biblabel</span>}[1]{<span class="fu">\textbf</span>{#1.}}</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\makeatother</span></span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Bu komut verilirse sıra numaraları parantezsiz, kalın ve ardında nokta olacak şekilde yazılır.</p>
-<p>Ortam genelde <code>\end{document}</code> komutundan hemen önce oluşturulur ve ortamın oluşturulduğu yerde LaTeX, <code>book</code> ve <code>report</code> sınıflarında eğer Türkçe dil paketi eklenmişse “Kaynakça”, <code>article</code> sınıfında ise “Kaynaklar” ismini ve ardından kaynakları yazdırır.</p>
+<p>Ortam genelde <code>\end{document}</code> komutundan hemen önce oluşturulur ve ortamın oluşturulduğu yerde <span class="math inline">\LaTeX</span>, <code>book</code> ve <code>report</code> sınıflarında eğer Türkçe dil paketi eklenmişse “Kaynakça”, <code>article</code> sınıfında ise “Kaynaklar” ismini ve ardından kaynakları yazdırır.</p>
 <p>Kaynaklardan herhangi birine atıf <code>\cite</code> komutuyla yapılır.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\cite</span>[&lt;seçenekler&gt;]{<span class="ex">&lt;anahtar&gt;</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Komutun zorunlu değişkeni olan <code>&lt;anahtar&gt;</code>, atıf yapılmak istenen kaynağın <code>\bibitem</code> komutundaki zorunlu değişkenidir. İsteğe bağlı <code>&lt;seçenekler&gt;</code> değişkeninde ise sayfa numarası, bölüm numarası gibi fazladan vurgulanmak istenen bilgiler girilebilir.</p>
@@ -461,16 +482,16 @@ graphing yerine geometry , 3d
 <span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">thebibliography</span>}</span>
 <span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="kaynakçanın-ayrı-dosyada-hazırlanması" class="level3" data-number="5.1.2">
-<h3 data-number="5.1.2" class="anchored" data-anchor-id="kaynakçanın-ayrı-dosyada-hazırlanması"><span class="header-section-number">5.1.2</span> Kaynakçanın ayrı dosyada hazırlanması</h3>
-<p>Kaynakçayı ayrı bir dosyada hazırlayıp TeX dağıtımlarıyla hazır olarak gelen BiBTeX programıyla yazdırabiliriz.</p>
-<p>Bu yöntemde kaynakça, uzantısı <code>.bib</code> olan ayrı bir dosyada hazırlanır. Bu dosya basit bir metin dosyası olup, metin editörü ya da LaTeX editörü kullanılarak oluşturulabilir, düzenlenebilir. Ayrıca <a href="https://www.mendeley.com/?interaction_required=true">Mendeley</a> ya da <a href="https://www.jabref.org/">Jabref</a> gibi akademik referans düzenleme programlarından da yararlanılabilir.</p>
+<section id="kaynakçanın-ayrı-dosyada-hazırlanması" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="kaynakçanın-ayrı-dosyada-hazırlanması"><span class="header-section-number">6.1.2</span> Kaynakçanın ayrı dosyada hazırlanması</h3>
+<p>Kaynakçayı ayrı bir dosyada hazırlayıp <span class="math inline">\TeX</span> dağıtımlarıyla hazır olarak gelen <span style="font-variant: small-caps;">Bib</span><span style="letter-spacing:-2px;">T</span><sub style="font-size: inherit; letter-spacing:-1px;">E</sub>X programıyla yazdırabiliriz.</p>
+<p>Bu yöntemde kaynakça, uzantısı <code>.bib</code> olan ayrı bir dosyada hazırlanır. Bu dosya basit bir metin dosyası olup, metin editörü ya da <span class="math inline">\LaTeX</span> editörü kullanılarak oluşturulabilir, düzenlenebilir. Ayrıca <a href="https://www.mendeley.com/?interaction_required=true">Mendeley</a> ya da <a href="https://www.jabref.org/">Jabref</a> gibi akademik referans düzenleme programlarından da yararlanılabilir.</p>
 <p>Bu yöntemin önemli avantajları vardır:</p>
 <ol type="1">
 <li>Biçimlendirme otomatik yapılır. Eğer çalışmanızı yayımlayacak dergi ya da yayınevi kaynakçayı farklı bir formatta isterse her kaynağı tek tek elle biçimlendirmek zorunda kalmazsınız. Basit bir komut işinizi görür.</li>
 <li>Dosyayı bir kere oluşturur ve sonra başka çalışmalarda kullanabilirsiniz.</li>
-<li><a href="https://scholar.google.com.tr/" rel="noreferrer noopener" target="_blank">Google Akademik</a>, <a href="https://books.google.com.tr/" rel="noreferrer noopener" target="_blank">Google Kitaplar</a> ve <a href="http://www.dergipark.org.tr/tr/" rel="noreferrer noopener" target="_blank">DergiPark</a> gibi platformlardan kullandığınız kaynakların BiBTeX kodunu çekebilirsiniz (bkz. Şekil @ref(fig:fig-google)).</li>
-<li>Yukarıda da bahsettiğimiz gibi Mendeley ve Jabref gibi akademik atıf düzenleme programlarını kullanarak kaynakların BiBTeX kodunu oluşturabilir, düzenleyebilirsiniz.</li>
+<li><a href="https://scholar.google.com.tr/" rel="noreferrer noopener" target="_blank">Google Akademik</a>, <a href="https://books.google.com.tr/" rel="noreferrer noopener" target="_blank">Google Kitaplar</a> ve <a href="http://www.dergipark.org.tr/tr/" rel="noreferrer noopener" target="_blank">DergiPark</a> gibi platformlardan kullandığınız kaynakların <span style="font-variant: small-caps;">Bib</span><span style="letter-spacing:-2px;">T</span><sub style="font-size: inherit; letter-spacing:-1px;">E</sub>X kodunu çekebilirsiniz (bkz. Şekil @ref(fig:fig-google)).</li>
+<li>Yukarıda da bahsettiğimiz gibi Mendeley ve Jabref gibi akademik atıf düzenleme programlarını kullanarak kaynakların <span style="font-variant: small-caps;">Bib</span><span style="letter-spacing:-2px;">T</span><sub style="font-size: inherit; letter-spacing:-1px;">E</sub>X kodunu oluşturabilir, düzenleyebilirsiniz.</li>
 </ol>
 <div id="fig-google" class="quarto-layout-panel">
 <figure class="figure">
@@ -494,11 +515,11 @@ graphing yerine geometry , 3d
 </figure>
 </div>
 </div>
-<p></p><figcaption class="figure-caption">Şekil 5.1: Google Akademik alıntı yapma</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Şekil 6.1: Google Akademik alıntı yapma</figcaption><p></p>
 </figure>
 </div>
-<section id="dosyanın-hazırlanması" class="level4" data-number="5.1.2.1">
-<h4 data-number="5.1.2.1" class="anchored" data-anchor-id="dosyanın-hazırlanması"><span class="header-section-number">5.1.2.1</span> Dosyanın hazırlanması</h4>
+<section id="dosyanın-hazırlanması" class="level4" data-number="6.1.2.1">
+<h4 data-number="6.1.2.1" class="anchored" data-anchor-id="dosyanın-hazırlanması"><span class="header-section-number">6.1.2.1</span> Dosyanın hazırlanması</h4>
 <p>Aşağıda <code>.bib</code> uzantılı bir dosya örneği gösterilmiştir.</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode bibtex code-with-copy"><code class="sourceCode bibtex"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="va">@book</span>{<span class="ot">lang13</span>,</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span>={Algebraic number theory},</span>
@@ -528,16 +549,16 @@ graphing yerine geometry , 3d
 <span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>        lshort-tr.pdf},</span>
 <span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>    <span class="dt">year</span>   = {2006},</span>
 <span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Bu dosyada Serge Lang’a ait bir kitap (<code>@book</code>), Leslie Lamport’a ait bir makale (<code>@article</code>) ve LaTeX için bir teknik kılavuz (<code>@manual</code>) vardır.</p>
-<p>Her kaynağın ilk olarak <code>@</code> işaretiyle türü belirtilir. Yukarıdakilere ek olarak rapor için <code>@report</code>, tez için <code>@thesis</code>, çevrimiçi kaynaklar için <code>@online</code> kullanılır. Bunların dışındaki birçok türe LaTeX editörlerinin menü çubuğuklarında bulunan “Kaynakça (Bibliography)” menüsünden ulaşılabilir.</p>
+<p>Bu dosyada Serge Lang’a ait bir kitap (<code>@book</code>), Leslie Lamport’a ait bir makale (<code>@article</code>) ve <span class="math inline">\LaTeX</span> için bir teknik kılavuz (<code>@manual</code>) vardır.</p>
+<p>Her kaynağın ilk olarak <code>@</code> işaretiyle türü belirtilir. Yukarıdakilere ek olarak rapor için <code>@report</code>, tez için <code>@thesis</code>, çevrimiçi kaynaklar için <code>@online</code> kullanılır. Bunların dışındaki birçok türe <span class="math inline">\LaTeX</span> editörlerinin menü çubuğuklarında bulunan “Kaynakça (Bibliography)” menüsünden ulaşılabilir.</p>
 <p>İlk girdi (<code>lang13</code>, <code>lamport78</code>, <code>Oetiker06</code>) kaynağa atıf yapmak için kullanılan anahtardır. Sonrasında gelenler de tahmin edilebileceği gibi başlık (<code>title</code>), yazar (<code>author</code>), yayıncı (<code>publisher</code>), yıl (<code>year</code>), dergi (<code>journal</code>), cilt (<code>volume</code>)… gibi kaynağı tanımlayan bilgilerdir. Bu tanımlamaların her biri eşittir işaretinden sonra iki çengelli parantez arasında yapılır (çift tırnak da kullanılabilir) ve her tanımlama (sonuncusu olsa dahi) virgülle ayrılır.</p>
 <p>Yazar adı ya</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode bibtex code-with-copy"><code class="sourceCode bibtex"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">author={Adı Soyadı}</span></span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>ya da</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode bibtex code-with-copy"><code class="sourceCode bibtex"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">author={Soyadı, Adı}</span></span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>şeklinde girilmelidir ve birden fazla yazar varsa yazarlar yukarıdaki yazımdan dolayı virgülle değil <code>and</code> ile ayrılmalıdır. Yazarları ayırmak için virgül kullanırsanız yüksek ihtimalle LaTeX, yazarların adları ve soyadlarını karıştıracaktır.</p>
+<p>şeklinde girilmelidir ve birden fazla yazar varsa yazarlar yukarıdaki yazımdan dolayı virgülle değil <code>and</code> ile ayrılmalıdır. Yazarları ayırmak için virgül kullanırsanız yüksek ihtimalle <span class="math inline">\LaTeX</span>, yazarların adları ve soyadlarını karıştıracaktır.</p>
 <p>Bir diğer önemli nokta özel kelimeleri yazmak için kullanılan komutları ve aksanlı harfleri iki çengelli parantez içinde yazmaktır. Örneğin “â” için <code>{\^a}</code> yazılmalıdır. Genel olarak sorun yaşanan karakterleri iki çengelli parantez içine yazmak gerekir.</p>
-<p>Her tür için zorunlu olarak belirtilmesi gereken bilgiler ve isteğe bağlı bilgiler vardır. Bunların ne olduklarını tahmin etmek zor değildir. Bu konuda editörden de yararlanabilirsiniz. Örneğin, <code>.bib</code> uzantılı dosyayı açıp editörde “Kaynakça <span class="math inline">\(\rightarrow\)</span> Tez” yolunu izlerseniz aşağıdaki listeyi yazdıracaktır.</p>
+<p>Her tür için zorunlu olarak belirtilmesi gereken bilgiler ve isteğe bağlı bilgiler vardır. Bunların ne olduklarını tahmin etmek zor değildir. Bu konuda editörden de yararlanabilirsiniz. Örneğin, <code>.bib</code> uzantılı dosyayı açıp editörde “Kaynakça <span class="math inline">\rightarrow</span> Tez” yolunu izlerseniz aşağıdaki listeyi yazdıracaktır.</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode bibtex code-with-copy"><code class="sourceCode bibtex"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="va">@thesis</span>{<span class="ot">ID</span>,</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">author</span> = {author},</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span> = {title},</span>
@@ -564,7 +585,7 @@ graphing yerine geometry , 3d
 <span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>    <span class="dt">OPTurldate</span> = {urldate},</span>
 <span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Görüldüğü gibi ilk altı satır zorunlu, OPT ile başlayanlar isteğe bağlıdır. İsteğe bağlı olanlardan belirtmek istediklerinizin başında bulunan OPT’yi silip tanımlamayı yapabilirsiniz.</p>
-<p>Editörden yararlanmanın diğer bir yolu “Kaynakça <span class="math inline">\(\rightarrow\)</span> Kaynakça Kaydı Ekle…” yolunu izlemektir. Bu yolu izlediğinizde aşağıdaki pencere açılır (örnek TeXstudio editörüne aittir).</p>
+<p>Editörden yararlanmanın diğer bir yolu “Kaynakça <span class="math inline">\rightarrow</span> Kaynakça Kaydı Ekle…” yolunu izlemektir. Bu yolu izlediğinizde aşağıdaki pencere açılır (örnek TeXstudio editörüne aittir).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><a href="images/tex-studio.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4"><img src="images/tex-studio.png" class="img-fluid figure-img" data-align="center"></a></p>
@@ -572,9 +593,9 @@ graphing yerine geometry , 3d
 </div>
 <p>Pencerenin solunda kaydı eklemek istediğiniz dosyayı ve ortada kayıt türünü belirtir, sağda da kaynağın bilgilerini girersiniz. Zorunlu bilgiler en üstte yer alan kalın yazılmış olanlardır.</p>
 </section>
-<section id="kaynakçanın-yazdırılması" class="level4" data-number="5.1.2.2">
-<h4 data-number="5.1.2.2" class="anchored" data-anchor-id="kaynakçanın-yazdırılması"><span class="header-section-number">5.1.2.2</span> Kaynakçanın yazdırılması</h4>
-<p>Kaynakçayı yazdırmak için BiBTeX’i kullanacağız. BiBTeX’in LaTeX’le standart olarak geldiğini ifade etmiştik. Dolayısıyla bu programı kullanmak için ek bir şey yapmanız gerekmez.</p>
+<section id="kaynakçanın-yazdırılması" class="level4" data-number="6.1.2.2">
+<h4 data-number="6.1.2.2" class="anchored" data-anchor-id="kaynakçanın-yazdırılması"><span class="header-section-number">6.1.2.2</span> Kaynakçanın yazdırılması</h4>
+<p>Kaynakçayı yazdırmak için <span style="font-variant: small-caps;">Bib</span><span style="letter-spacing:-2px;">T</span><sub style="font-size: inherit; letter-spacing:-1px;">E</sub>X’i kullanacağız. <span style="font-variant: small-caps;">Bib</span><span style="letter-spacing:-2px;">T</span><sub style="font-size: inherit; letter-spacing:-1px;">E</sub>X’in <span class="math inline">\LaTeX</span>’le standart olarak geldiğini ifade etmiştik. Dolayısıyla bu programı kullanmak için ek bir şey yapmanız gerekmez.</p>
 <p>Oluşturulan <code>.bib</code> uzantılı dosya <code>\bibliography</code> komutuyla içeri aktarılır, <code>\bibliographystyle</code> komutuyla da kullanılacak biçim belirtilir.</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\bibliographystyle</span>{<span class="ex">&lt;biçim&gt;</span>}</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\bibliography</span>{<span class="ex">&lt;dosya&gt;</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -582,7 +603,7 @@ graphing yerine geometry , 3d
 <p>Atıf, bütünleşik kaynakçada olduğu gibi <code>\cite</code> komutuyla yapılır fakat bütünleşik kaynakçadan farklı olarak atıf yapılmayan kaynaklar yazdırılmaz. Bazı kaynakların bu kuraldan ayrı tutulması istenirse <code>\nocite</code> komutu, değişkenine kaynağın anahtarı yazılarak <code>\bibliography</code> komutundan önce verilmelidir.</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\nocite</span>{<span class="ex">&lt;anahtar&gt;</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Eğer tüm kaynakların bu kuraldan ayrı tutulması isteniyorsa komut <code>\nocite{*}</code> şeklinde verilmelidir.</p>
-<p>Kaynakçanın belgeye yazılması için kaynak dosyanın derlenip, BiBTeX programının çalıştırılması ve ardından dosyanın en az iki kere daha derlenmesi gerekir. BiBTeX programı, editörde “Araçlar <span class="math inline">\(\rightarrow\)</span> Kaynakça” yoluyla çalıştırılır (klavye kısa yolu F8). Aynı şey, uçbirimde sırasıyla</p>
+<p>Kaynakçanın belgeye yazılması için kaynak dosyanın derlenip, <span style="font-variant: small-caps;">Bib</span><span style="letter-spacing:-2px;">T</span><sub style="font-size: inherit; letter-spacing:-1px;">E</sub>X programının çalıştırılması ve ardından dosyanın en az iki kere daha derlenmesi gerekir. <span style="font-variant: small-caps;">Bib</span><span style="letter-spacing:-2px;">T</span><sub style="font-size: inherit; letter-spacing:-1px;">E</sub>X programı, editörde “Araçlar <span class="math inline">\rightarrow</span> Kaynakça” yoluyla çalıştırılır (klavye kısa yolu F8). Aynı şey, uçbirimde sırasıyla</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pdflatex</span> kaynakdosya</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="ex">bibtex</span> kaynakdosya</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pdflatex</span> kaynakdosya</span>
@@ -606,10 +627,10 @@ graphing yerine geometry , 3d
 </section>
 </section>
 </section>
-<section id="dizin" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="dizin"><span class="header-section-number">5.2</span> Dizin</h2>
+<section id="dizin" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="dizin"><span class="header-section-number">6.2</span> Dizin</h2>
 <p>Bilimsel bir yapıtta bulunması gereken <em>dizin</em> ya da diğer adıyla <em>indeks</em>, bir yapıtın kişi, konu, yer adı vb. bakımından içindekileri yer numarasıyla belirten ve yapıtın arkasında yer alan alfabetik listedir.</p>
-<p>LaTeX’de dizin oluşturabilmek için sahanlığa</p>
+<p><span class="math inline">\LaTeX</span>’de dizin oluşturabilmek için sahanlığa</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">makeidx</span>}</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\makeindex</span></span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>komutları girilir. Birinci komut dizin için gerekli olan <a href="http://ftp.ntua.gr/mirror/ctan/macros/latex/base/makeindx.pdf"><strong>makeidx</strong></a> paketini çağırır, ikinci komut ise dizinleme komutlarını etkinleştirir.</p>
@@ -621,9 +642,9 @@ graphing yerine geometry , 3d
 <p><a href="images/dizina.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/dizina.png" class="img-fluid figure-img"></a></p>
 </figure>
 </div>
-<p>LaTeX, kaynak dosyanızı derlediğinizde bu dizin maddelerini sayfa numaralarıyla birlikte, kaynak dosyayla adı aynı fakat uzantısı <code>.idx</code> olan bir dosyaya kaydeder (bu dosyaya <em>ham dosya</em> denir). Bu dosyanın <code>makeindex</code> programından geçirilmesi gerekir. Bu editörde “Araçlar <span class="math inline">\(\rightarrow\)</span> Dizin” yoluyla yapılır. Aynı şey uçbirimde,</p>
+<p><span class="math inline">\LaTeX</span>, kaynak dosyanızı derlediğinizde bu dizin maddelerini sayfa numaralarıyla birlikte, kaynak dosyayla adı aynı fakat uzantısı <code>.idx</code> olan bir dosyaya kaydeder (bu dosyaya <em>ham dosya</em> denir). Bu dosyanın <code>makeindex</code> programından geçirilmesi gerekir. Bu editörde “Araçlar <span class="math inline">\rightarrow</span> Dizin” yoluyla yapılır. Aynı şey uçbirimde,</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">makeindex</span> kaynakdosya</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>komutu girilerek yapılabilir. Dosya tekrar derlendiğinde sıralanmış dizin belgeye yazılır. Bunun için dizinin yazılması istenen yere <code>\printindex</code> komutu verilir. Bu genelde, belgenin en sonunda <code>\end{document}</code> komutundan hemen öncedir. Komutun girildiği yere LaTeX, Türkçe dil paketi ekli belgelerde “Dizin” başlığını oluşturur ve belgede <code>\index</code> komutuyla eklenmiş maddeleri sırayla dizer.</p>
+<p>komutu girilerek yapılabilir. Dosya tekrar derlendiğinde sıralanmış dizin belgeye yazılır. Bunun için dizinin yazılması istenen yere <code>\printindex</code> komutu verilir. Bu genelde, belgenin en sonunda <code>\end{document}</code> komutundan hemen öncedir. Komutun girildiği yere <span class="math inline">\LaTeX</span>, Türkçe dil paketi ekli belgelerde “Dizin” başlığını oluşturur ve belgede <code>\index</code> komutuyla eklenmiş maddeleri sırayla dizer.</p>
 <p>Program, ham dosyayı işleyip dizin maddelerini abece sırasına göre dizer ve <code>.ind</code> uzantılı bir dosyaya aktarır. Ancak, Türkçe aksanlı harflerle başlayan kelimeler doğru yerde yazılmazlar. Bu harflerin doğru yere yazılması için <code>.ind</code> uzantılı dosyanın metin editörüyle açılarak elle düzenlenmesi gerekir. Ardından kaynak dosya derlenir. Elle düzeltmeden sonra tekrar <code>makeindex</code> programı çalıştırılırsa <code>.ind</code> uzantılı dosya tekrar oluşturulacağı için elle yapılan düzeltmeler bozulur. O yüzden düzeltme en son yapılmalıdır.</p>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -638,8 +659,8 @@ Not
 <p>Aksanlı harflerle başlayan kelimelerin doğru yerde yazılmaları için aksanlı madde girme komutundan faydalanılabilir. Örneğin “çekiç” kelimesinin peşine <code>\index{czekiç@çekiç}</code> komutu verilirse bu kelime doğru yerde dizilecektir. Burada yapılan sorun yaratan “ç” harfi yerine “cz” yazılmasıdır.</p>
 </div>
 </div>
-<section id="çoklu-dizin" class="level3" data-number="5.2.1">
-<h3 data-number="5.2.1" class="anchored" data-anchor-id="çoklu-dizin"><span class="header-section-number">5.2.1</span> Çoklu Dizin</h3>
+<section id="çoklu-dizin" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="çoklu-dizin"><span class="header-section-number">6.2.1</span> Çoklu Dizin</h3>
 <p>Birden fazla dizin oluşturmak isterseniz (örneğin biri <em>normal dizin</em> diğeri de <em>simgeler dizini</em>) <a href="http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/index/index.pdf"><strong>index</strong></a> paketini kullanabilirsiniz. Her dizin paket eklendikten ve <code>\makeindex</code> komutu sahanlıkta verildikten sonra <code>\newindex</code> komutuyla tanıtılır.</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">index</span>}</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\makeindex</span></span>
@@ -649,7 +670,7 @@ Not
 <p>Ardından bir kelime ya da simgeyi dizine eklemek için, eklemek istenilen dizine göre <code>\index</code> komutu köşeli parantezler içinde dizin adı belirtilerek kullanılır.</p>
 <div class="sourceCode" id="cb19"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\index</span>[normal]{kuvvet}</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\index</span>[simge]{F@<span class="ss">$</span><span class="sc">\vec</span><span class="ss">{F}$</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Birinci komut, “kuvvet” kelimesini normal dizine, ikinci komut <span class="math inline">\(\vec{F}\)</span> simgesini simgeler dizinine ekler.</p>
+<p>Birinci komut, “kuvvet” kelimesini normal dizine, ikinci komut <span class="math inline">\vec{F}</span> simgesini simgeler dizinine ekler.</p>
 <p>Belge derlendikten sonra iki tane <code>\makeindex</code> komutu uçbirimde,</p>
 <div class="sourceCode" id="cb20"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ex">makeindex</span> kaynakdosya.ndx <span class="at">-o</span> kaynakdosya.nnd </span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="ex">makeindex</span> kaynakdosya.sdx <span class="at">-o</span> kaynakdosya.snd </span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -672,8 +693,8 @@ Not
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\printindex</span>{simge}{Simgeler Dizini}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>şeklinde verilir.</p>
 </section>
-<section id="dizinin-içindekiler-tablosuna-yazılması" class="level3" data-number="5.2.2">
-<h3 data-number="5.2.2" class="anchored" data-anchor-id="dizinin-içindekiler-tablosuna-yazılması"><span class="header-section-number">5.2.2</span> Dizinin İçindekiler tablosuna yazılması</h3>
+<section id="dizinin-içindekiler-tablosuna-yazılması" class="level3" data-number="6.2.2">
+<h3 data-number="6.2.2" class="anchored" data-anchor-id="dizinin-içindekiler-tablosuna-yazılması"><span class="header-section-number">6.2.2</span> Dizinin İçindekiler tablosuna yazılması</h3>
 <p>Dizini İçindekiler tablosuna yazmak için <code>\printindex</code> komutunun peşine <code>book</code> ve <code>report</code> sınıflarında <code>\addcontentsline</code> komutu,</p>
 <div class="sourceCode" id="cb26"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\addcontentsline</span>{toc}{chapter}{<span class="fu">\indexname</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>şeklinde, <code>article</code> sınıfında ise</p>
@@ -789,18 +810,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./matematik.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Matematiksel İfadeler</span></span>
+      <a href="./05-yuzergezer.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Yüzer Gezer Nesneler</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./ozellestirmeler.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Özelleştirmeler</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./07-ozellestirmeler.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Özelleştirmeler</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":true,"selector":".lightbox","openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom"});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","loop":true,"descPosition":"bottom"});</script>
 
 
 

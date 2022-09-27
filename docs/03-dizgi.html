@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>\LaTeX Dersleri - 3&nbsp; Dizgi</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./04-matematik.html" rel="next">
+<link href="./02-ilkadimlar.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Sonuç yok",
+    "search-matching-documents-text": "Eşleşen belgeler",
+    "search-copy-link-title": "Aramak için bağlantıyı kopyalayın",
+    "search-hide-matches-text": "Ek eşleşmeleri gizle",
+    "search-more-match-text": "Bu belgede daha fazla eşleşme",
+    "search-more-matches-text": "Bu belgede daha fazla eşleşme",
+    "search-clear-button-title": "Temizle",
+    "search-detached-cancel-button-title": "Kapat",
+    "search-submit-button-title": "Gönder"
+  }
+}</script>
+
+ <!-- SAGE -->
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width">
+ <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
+
+ <script>
+     // Make the div with id 'mycell' a Sage cell
+     sagecell.makeSagecell({inputLocation:  'div.m_sage',
+                            linked: true,
+                            template: sagecell.templates.minimal,
+                            evalButtonText: "Çalıştır"});
+
+     // Make *any* div with class 'compute' a Sage cell
+     sagecell.makeSagecell({inputLocation: 'div.sage',
+                            linked: false,
+                            evalButtonText: "Çalıştır",
+                            hide: ["fullScreen", "permalink"],
+                  //        languages: ["sage", "r"],
+
+     });
+
+     // Make *any* div with class 'compute' a Sage cell
+     sagecell.makeSagecell({inputLocation: 'div.o_sage',
+                            linked: true,
+                            autoeval: true,
+                        //  evalButtonText: "Çalıştır",
+                            hide: ["fullScreen", "permalink","editor","evalButton"],
+                  //        languages: ["sage", "r"],
+
+     });
+ </script>
+
+
+   <!--  KULLANIM
+
+ <div class="sage"><script type="text/x-sage">
+ 2**52
+ </script>
+ </div>
+
+ -->
+
+
+
+<!--   LaTeX  -->
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.min.js"></script>
+
+    <style type="text/css" media="screen">
+      .ace_editor {
+	  border: 1px solid lightgray;
+	  margin-bottom: 1px !important;
+	  width: 100%;
+      }
+      div.spacer {
+	  margin-top:16px;
+      }
+      a { text-decoration:none; color:#93c54b}
+      a:hover	   {text-decoration:underline}
+    </style>
+
+    <script src="https://davidcarlisle.github.io/latexcgi/runlatex.js"></script>
+
+
+    <script>
+      runlatex.editorlines=40;
+      runlatex.adddefaultpreamble=false;
+      runlatex.adddefaultengine=false;
+
+      runlatex.overleafURI=null;
+
+      runlatex.texts ={
+        	  "Open in Overleaf": "Overleaf'ta açın",
+	          "TeXLive.net":      "Derle",
+	          "Delete Output":    "Çıktıyı Temizle",
+	          "Compiling PDF":    "PDF derleme",
+	          "Added Code":       "",
+	          "End Added Code":   "",
+	          "Top Caption":      ""
+      }
+  function updateURL () {
+      var t =  editors["pre0"].getValue();
+      var newl="?" + encodeURI(t);
+      // copy to clipboard
+      var nn=document.createElement("textarea");
+      nn.value=document.location.protocol + "//" + document.location.host + document.location.pathname + newl;
+      document.body.appendChild(nn);
+      nn.select();
+      document.execCommand("copy");
+      document.body.removeChild(nn);
+      // update
+      if(newl != document.location.search){
+	  document.location.search = "?" + encodeURI(t);
+      }
+  }
+
+  function fillForm() {
+  if(document.location.search != "") {
+      editors["pre0"].setValue(decodeURI(document.location.search.substring(1)),0);
+      editors["pre0"].clearSelection();
+      latexcgi("pre0");
+  }
+  }
+
+  window.addEventListener('load', fillForm, false);
+
+</script>
+
+<script>
+    runlatex.preincludes = {
+     "pre1": {
+        "pre0": "kaynakca.bib"
+       },
+     "pre2": {
+        "pre0": "kaynakca.bib"
+       }
+    }
+</script>
+
+
+<!--   GeoGebra  -->
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+
+<script src="https://www.geogebra.org/apps/deployggb.js"></script>
+
+<!-- Kullanım
+
+<div id="ggb-element">
+<script>
+    var params = {"appName": "graphing", "width": 800, "height": 600, "showToolBar": true, "showAlgebraInput": true, "showMenuBar": true };
+    var applet = new GGBApplet(params, true);
+    window.addEventListener("load", function() {
+        applet.inject('ggb-element');
+    });
+</script>
+</div>
+
+graphing yerine geometry , 3d
+
+"material_id":"RHYH3UQ8"
+
+"filename":"myFile.ggb"
+
+-->
+
+
+
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+    <div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dizgi</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./"><span class="math inline">\LaTeX</span> Dersleri</a> 
+        <div class="sidebar-tools-main tools-wide">
+    <a href="https://github.com/acarzfr/latex-dersleri/" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+    <a href="./{{--latex--}}-Dersleri.pdf" title="Download PDF" class="sidebar-tool px-1"><i class="bi bi-file-pdf"></i></a>
+    <a href="" title="Share" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-share"></i></a>
+    <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
+            <i class="bi bi-bi-twitter pe-1"></i>
+          Twitter
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="https://www.linkedin.com/sharing/share-offsite/?url=|url|">
+            <i class="bi bi-bi-linkedin pe-1"></i>
+          LinkedIn
+          </a>
+        </li>
+    </ul>
+</div>
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Sunuş</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./01-temeller.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Temeller</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./02-ilkadimlar.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">İlk Adımlar</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./03-dizgi.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dizgi</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./04-matematik.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Matematiksel İfadeler</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./05-yuzergezer.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Yüzer Gezer Nesneler</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./06-ozelsayfalar.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Özel Sayfalar</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./07-ozellestirmeler.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Özelleştirmeler</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-kaynakca.html" class="sidebar-item-text sidebar-link">Kaynakça</a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">İçindekiler</h2>
+   
+  <ul>
+  <li><a href="#satır-ve-sayfa-kesme" id="toc-satır-ve-sayfa-kesme" class="nav-link active" data-scroll-target="#satır-ve-sayfa-kesme"> <span class="header-section-number">3.1</span> Satır ve Sayfa Kesme</a></li>
+  <li><a href="#heceleme" id="toc-heceleme" class="nav-link" data-scroll-target="#heceleme"> <span class="header-section-number">3.2</span> Heceleme</a></li>
+  <li><a href="#paragraflar-ve-cümle-sonları" id="toc-paragraflar-ve-cümle-sonları" class="nav-link" data-scroll-target="#paragraflar-ve-cümle-sonları"> <span class="header-section-number">3.3</span> Paragraflar ve Cümle Sonları</a></li>
+  <li><a href="#aralıklar" id="toc-aralıklar" class="nav-link" data-scroll-target="#aralıklar"> <span class="header-section-number">3.4</span> Aralıklar</a>
+  <ul class="collapse">
+  <li><a href="#dikey-aralıklar" id="toc-dikey-aralıklar" class="nav-link" data-scroll-target="#dikey-aralıklar"> <span class="header-section-number">3.4.1</span> Dikey aralıklar</a></li>
+  <li><a href="#yatay-aralıklar" id="toc-yatay-aralıklar" class="nav-link" data-scroll-target="#yatay-aralıklar"> <span class="header-section-number">3.4.2</span> Yatay aralıklar</a></li>
+  </ul></li>
+  <li><a href="#metni-hizalamak-ve-sütunlara-bölmek" id="toc-metni-hizalamak-ve-sütunlara-bölmek" class="nav-link" data-scroll-target="#metni-hizalamak-ve-sütunlara-bölmek"> <span class="header-section-number">3.5</span> Metni Hizalamak ve Sütunlara Bölmek</a>
+  <ul class="collapse">
+  <li><a href="#hizalama" id="toc-hizalama" class="nav-link" data-scroll-target="#hizalama"> <span class="header-section-number">3.5.1</span> Hizalama</a></li>
+  <li><a href="#sütunlara-bölmek" id="toc-sütunlara-bölmek" class="nav-link" data-scroll-target="#sütunlara-bölmek"> <span class="header-section-number">3.5.2</span> Sütunlara bölmek</a></li>
+  </ul></li>
+  <li><a href="#listeleme" id="toc-listeleme" class="nav-link" data-scroll-target="#listeleme"> <span class="header-section-number">3.6</span> Listeleme</a>
+  <ul class="collapse">
+  <li><a href="#temel-listeler" id="toc-temel-listeler" class="nav-link" data-scroll-target="#temel-listeler"> <span class="header-section-number">3.6.1</span> Temel listeler</a></li>
+  <li><a href="#listeleri-özelleştirmek" id="toc-listeleri-özelleştirmek" class="nav-link" data-scroll-target="#listeleri-özelleştirmek"> <span class="header-section-number">3.6.2</span> Listeleri özelleştirmek</a></li>
+  </ul></li>
+  <li><a href="#yazıtipleri" id="toc-yazıtipleri" class="nav-link" data-scroll-target="#yazıtipleri"> <span class="header-section-number">3.7</span> Yazıtipleri</a>
+  <ul class="collapse">
+  <li><a href="#giriş" id="toc-giriş" class="nav-link" data-scroll-target="#giriş"> <span class="header-section-number">3.7.1</span> Giriş</a></li>
+  <li><a href="#aile" id="toc-aile" class="nav-link" data-scroll-target="#aile"> <span class="header-section-number">3.7.2</span> Aile</a></li>
+  <li><a href="#biçem" id="toc-biçem" class="nav-link" data-scroll-target="#biçem"> <span class="header-section-number">3.7.3</span> Biçem</a></li>
+  <li><a href="#boyut" id="toc-boyut" class="nav-link" data-scroll-target="#boyut"> <span class="header-section-number">3.7.4</span> Boyut</a></li>
+  </ul></li>
+  <li><a href="#renk-kullanmak" id="toc-renk-kullanmak" class="nav-link" data-scroll-target="#renk-kullanmak"> <span class="header-section-number">3.8</span> Renk Kullanmak</a>
+  <ul class="collapse">
+  <li><a href="#yeni-renkler-oluşturmak" id="toc-yeni-renkler-oluşturmak" class="nav-link" data-scroll-target="#yeni-renkler-oluşturmak"> <span class="header-section-number">3.8.1</span> Yeni renkler oluşturmak</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dizgi</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header>
+
+<section id="satır-ve-sayfa-kesme" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="satır-ve-sayfa-kesme"><span class="header-section-number">3.1</span> Satır ve Sayfa Kesme</h2>
+<p><span class="math inline">\LaTeX</span>, kelimeler arası boşlukları otomatik ayarlayarak satırları iki yana yaslayarak dizer. Bir satırı kesip yeni bir satıra geçmek için <code>\\</code> veya <code>\newline</code> komutları kullanılır.</p>
+<p>Birinci komut <code>\\*</code> şeklinde verildiğinde satırdan sonra sayfa kesilmesini önler.</p>
+<p>Benzer şeyi <code>\linebreak</code> komutu da yapar. Fakat bu komut ile satır kesilirse <span class="math inline">\LaTeX</span> kalan yarım satırı iki yana yaslar. <code>\nolinebreak</code> komutu ise satırın kesilmesini önler.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[T1]{<span class="ex">fontenc</span>}</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[turkish]{<span class="ex">babel</span>}</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">\LaTeX</span>, kelimeler arası boşlukları otomatik ayarlayarak satırları iki</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>yana yaslayarak dizer. Bir satırı kesip yeni bir satıra geçmek için <span class="fu">\\</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>veya <span class="fu">\newline</span> komutları kullanılır.</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Birçok kelimeyi birlikte aynı satırda tutmak gerekirse <code>\mbox</code> komutu kullanılır:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\mbox</span>{&lt;metin&gt;}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Buradaki <code>&lt;metin&gt;</code> içindeki kelimeler her durumda birleşik kalırlar. Benzer şeyi <code>\fbox</code> komutu da metin etrafına çizgi çizerek yapar.</p>
+<p>Sayfayı kesip yeni bir sayfaya geçmek için <code>\newpage</code> ya da <code>\pagebreak</code> komutları kullanılır. <code>\nopagebreak</code> komutu sayfa kesilmesini önler. <code>\newpage</code> ile <code>\pagebreak</code> komutları arasında da <code>\newline</code> ile <code>\linebreak</code> komutlarındakine benzer bir fark vardır.</p>
+</section>
+<section id="heceleme" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="heceleme"><span class="header-section-number">3.2</span> Heceleme</h2>
+<p>Bazen tüm bu ayarlamalara rağmen <span class="math inline">\LaTeX</span> bazı kelimeleri doğru heceleyemeyebilir. Böyle durumlarda hecelemeyi elle yapmak gerekir. Yanlış hecelenen kelimenin bölünebileceği yerler <code>\-</code> komutuyla gösterilir:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>He<span class="fu">\-</span>ce<span class="fu">\-</span>le<span class="fu">\-</span>me</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Bu sadece ilgili kelimenin tireyle ayrıldığı yerde doğru hecelenmesini sağlar. Aynı kelime belgenin başka bir yerinde yine yalnış hecelenebilir. Bunun yerine <code>\begin{document}</code> komutundan sonra <code>\hyphenation</code> komutuyla hece yerleri tire (<code>-</code>) işaretiyle gösterilmiş olan kelime listesi oluşturulursa belgenin tamamına bu kural uygulanmış olur. Örneğin</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\hyphenation</span>{He-ce-le-me FORTRAN}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>komutuyla “Heceleme” kelimesinin nereden bölüneceği, “FORTRAN”, “Fortran” ya da “fortran” kelimelerinin bölünmeyeceği <span class="math inline">\LaTeX</span>’e söylenmiş olur.</p>
+</section>
+<section id="paragraflar-ve-cümle-sonları" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="paragraflar-ve-cümle-sonları"><span class="header-section-number">3.3</span> Paragraflar ve Cümle Sonları</h2>
+<p>Boş bir satırın yeni bir paragraf açtığını daha önce belirtmiştik. Aynı şey, <code>\par</code> komutuyla da yapılabilir. Ancak bu komut yeni bir paragraf açmaktan ziyade farklı amaçlar için kullanılır (yeri geldiğinde değinilecektir). Nitekim kaynak dosyanızın okunabilirliği açısından paragrafları ayırmak için boş bir satır bırakmak daha kullanışlıdır.</p>
+<p><span class="math inline">\LaTeX</span>’de varsayılan olarak <code>\chapter</code> ve <code>\section</code> gibi bölümleme komutlarından sonra oluşturulan ilk paragraf girintisiz, sonrakiler girintili olur. Bu, paragraf başlarında <code>\indent</code> ya da <code>\noindent</code> komutlarıyla tek seferliğine değiştirilebilir. Birinci komut girinti oluşturur, ikincisi ise girintiyi kaldırır.</p>
+<p><span class="math inline">\LaTeX</span>, okumayı kolaylaştırmak için cümle sonlarında fazladan boşluklar bırakır. Bunu yaparken de her cümlenin nokta, soru işareti veya ünlem işaretiyle bittiğini varsayar. Kısaltmalarda büyük harflerden sonra nokta gel(ebil)diğinden, büyük harften sonra nokta koyulursa <span class="math inline">\LaTeX</span> bunu cümle sonu saymaz. Eğer bir büyük harften sonra nokta koyuyorsanız ve burası cümlenin sonuysa <span class="math inline">\LaTeX</span>’in burayı cümle sonu sayması için büyük harften sonraki noktanın önüne <code>\@</code> koymanız gerekir.</p>
+<p><span class="math inline">\LaTeX</span>’in noktadan sonra fazladan boşluk <em>koymamasını</em> isterseniz <code>\frenchspacing</code> komutunu kullanırsınız. Bu komutu kullandıysanız, artık noktadan önce <code>\@</code> koymanıza gerek yoktur. Daha sonra tekrar cümle sonlarında fazladan boşluk kullanmak istenirse de <code>\nonfrenchspacing</code> komutu kullanılır.</p>
+<p>Unvan kısaltmasından sonra unvanın ait olduğu kelimeyle birlikte kalması ve fazladan boşluk bırakılmaması için tilda (<code>~</code>) işareti kullanılabilir. Bu işaret hem genişlemeyen bir boşluk bırakır hem de satırın orada kesilmesini önler.</p>
+</section>
+<section id="aralıklar" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="aralıklar"><span class="header-section-number">3.4</span> Aralıklar</h2>
+<p><span class="math inline">\LaTeX</span>’de hem dikey hem de yatay aralıklar otomatik olarak ayarlanır. Fazladan aralıklar bırakmak için komutlar kullanılır.</p>
+<p>Aralık bırakırken kullanabileceğimiz ölçü birimleri <a href="#tbl-olcu">Tablo&nbsp;<span>3.1</span></a>’de gösterilmiştir.</p>
+<div id="tbl-olcu" class="anchored">
+<table class="table">
+<caption>Tablo 3.1: <span class="math inline">\LaTeX</span>’de Ölçü Birimleri</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Birim</th>
+<th style="text-align: left;">Değer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">mm</td>
+<td style="text-align: left;">milimetre <span class="math inline">\approx 1/25</span> inç</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">cm</td>
+<td style="text-align: left;">santimetre = 10 mm</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">in</td>
+<td style="text-align: left;">inç = 25.4 mm</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">pt</td>
+<td style="text-align: left;">punto <span class="math inline">\approx 1/72</span> inç</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">em</td>
+<td style="text-align: left;">Kullanılan yazı tipinde ‘M’ harfinin genişliği</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">ex</td>
+<td style="text-align: left;">Kullanılan yazı tipinde ‘x’ harfinin yüksekliği</td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="dikey-aralıklar" class="level3" data-number="3.4.1">
+<h3 data-number="3.4.1" class="anchored" data-anchor-id="dikey-aralıklar"><span class="header-section-number">3.4.1</span> Dikey aralıklar</h3>
+<p>Dikey aralık birkaç komutla bırakılabilir. Bunlardan biri <code>\vspace</code> olup, komut iki boş satır arasında</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\vspace</span>{&lt;uzunluk&gt;}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>şeklinde verilir. Komut bu şekilde verildiğinde komutun zorunlu değişkeninde birimiyle belirtilen uzunluk kadar dikey aralık bırakılır. Eğer bir sayfanın başında veya sonunda aralık bırakılmak istenirse, komut <code>\vspace*</code> şeklinde yıldızlı vermelidir. Bu komutun aralığa ilave yapan <code>\addvspace</code> sürümü de vardır.</p>
+<p>Bir paragrafın iki satırı arasında veya bir tablonun satırları arasında ilave aralık açmak için</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\\</span>[&lt;uzunluk&gt;]</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>komutu kullanılır. Bu komutlarda belirtilen uzunluklar negatif de olabilir.</p>
+<p>Sınırsız bir dikey aralık oluşturmak için <code>\vfill</code> komutu kullanılır. Bu komuttan sonra gelen her şey sayfanın altına yaslanır.</p>
+<p>Ön tanımlı gelen <code>\smallskip</code>, <code>\medskip</code> ve <code>\bigskip</code> komutları sırasıyla küçük, orta ve büyük aralıklar bırakır.</p>
+</section>
+<section id="yatay-aralıklar" class="level3" data-number="3.4.2">
+<h3 data-number="3.4.2" class="anchored" data-anchor-id="yatay-aralıklar"><span class="header-section-number">3.4.2</span> Yatay aralıklar</h3>
+<p>Ön tanımlı yatay aralıklar</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\ </span> <span class="fu">\,</span>  <span class="fu">\:</span>  <span class="fu">\;</span>  <span class="fu">\quad</span>  <span class="fu">\qquad</span>  <span class="fu">\!</span></span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>komutlarıyla verilir. Bu komutlar sırasıyla bir sözcük arası, <span class="math inline">3/\!18</span> em, <span class="math inline">4/\!18</span> em, <span class="math inline">5/\!18</span> em, <span class="math inline">1</span> em, <span class="math inline">2</span> em, <span class="math inline">-3/\!18</span> em uzunlukta yatay aralık bırakır.</p>
+<p>Belli bir uzunlukta yatay aralık bırakmak için <code>\hspace</code> komutu kullanılır. Yine dikey aralıkta olduğu gibi yatay aralık negatif de olabilir. Eğer aralık satır başına veya sonuna rasgelse dahi bu aralığı korumak istiyorsanız, yıldızlı <code>\hspace*</code> komutu kullanırsınız.</p>
+<p>Komutlardan önce veya sonra boşluk bırakmak farklı sonuçlar üretir.</p>
+<p>Sınırsız bir yatay aralık oluşturmak için <code>\hfill</code> komutu kullanılır. Bu komuttan sonra gelen her şey satırın sonuna yaslanır. Hem satır sonuna yaslamak hem de aralığı noktalarla doldurmak isterseniz <code>\dotfill</code> komutunu kullanırsınız. Satır sonuna yaslayıp aralığa çizgi çekmek isterseniz de <code>\hrulefill</code> komutunu kullanırsınız.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[T1]{<span class="ex">fontenc</span>}</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[turkish]{<span class="ex">babel</span>}</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="fu">\noindent</span> </span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>A<span class="fu">\\</span>[1ex]</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>B</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="fu">\bigskip</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a><span class="fu">\noindent</span> </span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>A<span class="fu">\\</span>[-2ex]</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>B</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a><span class="fu">\bigskip</span></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a><span class="fu">\noindent</span> </span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>A<span class="fu">\hspace</span>{2cm}B<span class="fu">\\</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>A <span class="fu">\hspace</span>{2cm} B</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a><span class="fu">\bigskip</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a><span class="fu">\noindent</span> </span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>A<span class="fu">\hfill</span> B<span class="fu">\\</span></span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>A<span class="fu">\dotfill</span> B<span class="fu">\\</span></span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>A<span class="fu">\hrulefill</span> B</span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="metni-hizalamak-ve-sütunlara-bölmek" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="metni-hizalamak-ve-sütunlara-bölmek"><span class="header-section-number">3.5</span> Metni Hizalamak ve Sütunlara Bölmek</h2>
+<section id="hizalama" class="level3" data-number="3.5.1">
+<h3 data-number="3.5.1" class="anchored" data-anchor-id="hizalama"><span class="header-section-number">3.5.1</span> Hizalama</h3>
+<p><span class="math inline">\LaTeX</span>’de metni sola hizalamak için <code>flushleft</code>, sağa hizalamak için <code>flushright</code> ve ortalı hizalamak için <code>center</code> ortamları kullanılır.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[T1]{<span class="ex">fontenc</span>}</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[turkish]{<span class="ex">babel</span>}</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">flushleft</span>}</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a> burası sola hizalı</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">flushleft</span>}</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">flushright</span>}</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a> sağa hizalı</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">flushright</span>}</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">center</span>}</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a> ve ortalı</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">center</span>}</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="sütunlara-bölmek" class="level3" data-number="3.5.2">
+<h3 data-number="3.5.2" class="anchored" data-anchor-id="sütunlara-bölmek"><span class="header-section-number">3.5.2</span> Sütunlara bölmek</h3>
+<p><span class="math inline">\LaTeX</span>’de belgenin tamamının iki sütun dizilmesi için <code>\documentclass</code> komutunun seçeneğine <code>twocolumn</code> yazılabileceğinden bahsettik. Bu, tüm belgenin iki sütun dizilmesini sağlar. Bazı sayfaları iki, bazılarınıysa tek sütun dizmek istiyorsanız <code>\twocolumn</code> ve <code>\onecolumn</code> komutlarını kullanmanız gerekir. <code>\twocolumn</code> komutunun verildiği sayfadan sonraki sayfalar iki, <code>\onecolumn</code> komutunun verildiği sayfadan sonraki sayfalar tek sütun dizilir.</p>
+<p>Eğer metni daha fazla sütuna bölmek ve sütunları istediğiniz yerden başlatmak gibi daha fazla seçenek istiyorsanız, <code>multicols</code> ortamını kullanmanız gerekir. Bu ortamı kullanabilmek için</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">multicol</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>komutuyla <a href="http://ftp.ntua.gr/mirror/ctan/macros/latex/required/tools/multicol.pdf"><strong>multicol</strong></a> paketini eklemelisiniz.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">multicols</span>}{&lt;sütun sayısı&gt;}</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">multicols</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Burada, <code>&lt;sütun sayısı&gt;</code> değişkeninde oluşturulmak istenen sütun adedi sayıyla belirtilir.</p>
+<p>Bu ortamda sütun genişlikleri eşit olup, sütunlar arası boşluk <code>\columnsep</code>, sütunlar arasındaki çizginin kalınlığı <code>\columnseprule</code> ve sütunlar arasındaki çizginin rengi <code>\columnseprulecolor</code> komutlarında saklıdır. Bu değişkenler <code>\setlength</code> ya da <code>\def</code> komutları kullanılarak değiştirilebilir.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\setlength</span>{<span class="fu">\columnsep</span>}{1cm}</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\setlength</span>{<span class="fu">\columnseprule</span>}{1pt}</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\def\columnseprulecolor</span>{<span class="fu">\color</span>{blue}}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Yukarıdaki birinci komutla sütunlar arasındaki boşluk 1 cm, çizgi kalınlığı 1 pt ve çizgi rengi mavi olarak düzenlenir. Bu komutlar ya sahanlığa ya da ortamı kullanmadan önce gövdeye yazılmalıdır.</p>
+<blockquote class="blockquote">
+<p>Şimdiye kadar renk kullanımından bahsetmedik ancak çizgi rengini değiştirmek için verilen komutun kullanılabilmesi için sahanlığa <code>\usepackage{color}</code> komutuyla <code>color</code> paketinin eklenmesi gerekir.</p>
+</blockquote>
+<p>Ortam isteğe bağlı bir değişken de alabilir. Bu, çengelli parantezlerden sonra köşeli parantezler içine yazılır. Köşeli parantezler içinde yazılanlar bölünmeden ve çok sütunlu metnin üstünde dizilir.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">multicols</span>}{2}</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a> [<span class="kw">\section</span>{Başlık}</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a> Burası sütunlara bölünmez.]</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a> Burası sütunlara bölünür.</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">multicols</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Sütunu kesmek için <code>\columnbreak</code> komutu kullanılır. Komutun verildiği yerde sütun kesilir, ardından kesme noktasından önceki paragraflar tüm kullanılabilir alanı doldurmak için eşit olarak dağıtılır. Dolayısıyla bazen beklenen sonucu vermeyebilir.</p>
+<p>Varsayılan <code>multicols</code> ortamında sütunların her biri aynı miktarda metin içerecek şekilde dengelenmiştir. Bu, ortamın yıldızlı sürümü (<code>multicols*</code>) kullanılarak değiştirilebilir.</p>
+</section>
+</section>
+<section id="listeleme" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="listeleme"><span class="header-section-number">3.6</span> Listeleme</h2>
+<section id="temel-listeler" class="level3" data-number="3.6.1">
+<h3 data-number="3.6.1" class="anchored" data-anchor-id="temel-listeler"><span class="header-section-number">3.6.1</span> Temel listeler</h3>
+<p><span class="math inline">\LaTeX</span>’de listeleme için değişik ortamlar vardır. Bu ortamlar tek başına kullanılabileceği gibi birlikte de kullanılabilirler. Her ortamda maddeler <code>\item</code> komutuyla belirtilir.</p>
+<p>Bir listeyi numaralı şekilde dizmek için <code>enumerate</code> ortamı kullanılır.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">\item</span> madde 1</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\item</span> alt madde 1</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>      <span class="kw">\begin</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>        <span class="fu">\item</span> en alt madde 1</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>      <span class="kw">\end</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\item</span> alt madde 2</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">\end</span>{<span class="ex">enumerate</span>}</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a> <span class="fu">\item</span> madde 2</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">enumerate</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Numarasız, özel işaretli listeler için <code>itemize</code> ortamı kullanılır ve bu ortamda madde işareti değiştirilebilir.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">itemize</span>}</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\item</span> madde 1</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\item</span> madde 2</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\item</span>[<span class="ss">$</span><span class="sc">\circ</span><span class="ss">$</span>] madde 3</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\item</span>[+] madde 4</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">itemize</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Açıklamalı bir liste içinse <code>description</code> ortamı kullanılır. Bu ortamda köşeli parantez içine alınan anahtar kelimeler kalın dizilir.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">description</span>}</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\item</span>[Nokta] Boyutu olmayan</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">\item</span>[Çember] Bir noktaya eşit</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  uzaklıktaki noktaların geometrik yeri</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">description</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="listeleri-özelleştirmek" class="level3" data-number="3.6.2">
+<h3 data-number="3.6.2" class="anchored" data-anchor-id="listeleri-özelleştirmek"><span class="header-section-number">3.6.2</span> Listeleri özelleştirmek</h3>
+<p>Listelerin özelleştirmek için <a href="http://ftp.ntua.gr/mirror/ctan/macros/latex/required/tools/enumerate.pdf"><strong>enumerate</strong></a> paketi kullanılabilir. Paketi <code>\usepackage{enumerate}</code> komutuyla ekledikten sonra <code>enumerate</code> ortamını başlatan komutun peşine köşeli parantezler içinde madde işaretlerinin tipi belirtilebilir:</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">enumerate</span>}[I.]</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">\item</span> bir</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a> <span class="fu">\item</span> iki </span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a> <span class="fu">\item</span> üç</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">enumerate</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Bunun dışında çok daha fazla özelleştirmeye izin veren <a href="http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/enumitem/enumitem.pdf"><strong>enumitem</strong></a> paketi vardır. Bu paketi kullanarak yapılabilecek listelere de ilerde değineceğiz. Dileyen okur paket belgesini inceleyip listelerini özelleştirebilir.</p>
+</section>
+</section>
+<section id="yazıtipleri" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="yazıtipleri"><span class="header-section-number">3.7</span> Yazıtipleri</h2>
+<section id="giriş" class="level3" data-number="3.7.1">
+<h3 data-number="3.7.1" class="anchored" data-anchor-id="giriş"><span class="header-section-number">3.7.1</span> Giriş</h3>
+<p>Yazıtipi konusu <em>kodlama</em>, <em>aile</em>, <em>biçem</em> ve <em>boyut</em> olmak üzere dört alt başlıkta incelenebilir. Kodlama çok teknik bir konu olup amacımız dışındadır, ancak sadece şunu belirtelim ki kodlama işini <span class="math inline">\LaTeX</span>’de daha önce bahsettiğimiz <strong>fontenc</strong> paketi üstlenir. Bu paketi belgenize eklemiş olduğunuzu varsayarak devam edeceğiz.</p>
+<p>Bu yazıda anlatacağımız şeylerden bazıları bir bakıma <span class="math inline">\LaTeX</span>’in felsefesine aykırı olacak. Nitekim <span class="math inline">\LaTeX</span>, <code>\documentclass</code> komutunda belirtilen ana yazıtipi boyutuna göre, dipnot ya da başlık gibi ana yazıtipi boyutundan farklı dizilen şeylerin boyutunu olabilecek en güzel ve doğru şekilde ayarlar. O yüzden bu konudaki klasik uyarıyı biz de yineleyelim:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/uyari.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="images/uyari.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+</figure>
+</div>
+</section>
+<section id="aile" class="level3" data-number="3.7.2">
+<h3 data-number="3.7.2" class="anchored" data-anchor-id="aile"><span class="header-section-number">3.7.2</span> Aile</h3>
+<p>Yazıtipleri Roman ya da Serif, Sans Serif ve Typewriter olmak üzere üç ailede toplanabilir. Roman ailesi tırnaklı ya da süslü diyebileceğimiz yazıtiplerini, Sans Serif ailesi tırnaksız ya da süssüz yazıtiplerini ve Typewriter ailesi de daktilo yazıtiplerini barındırır.</p>
+<p><span class="math inline">\LaTeX</span>’de her belge sınıfı varsayılan yazıtipi ailesiyle gelir. <code>beamer</code> sınıfının varsayılan ailesi Sans Serif olup, diğer sınıfların varsayılan ailesi Roman’dır.</p>
+<p>Varsayılan aile <code>\familydefault</code> komutunda saklı olup, <code>\renewcommand</code> komutuyla değiştirilebilir.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\renewcommand</span>{<span class="ex">\familydefault</span>}{<span class="fu">\rmdefault</span>}  </span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\renewcommand</span>{<span class="ex">\familydefault</span>}{<span class="fu">\sfdefault</span>}  </span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\renewcommand</span>{<span class="ex">\familydefault</span>}{<span class="fu">\ttdefault</span>} </span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Birinci komut sahanlığa yazılırsa, belge sınıfından bağımsız olarak varsayılan aile Roman, ikincisi yazılırsa Sans Serif, üçüncüsü yazılırsa Typewriter olur.</p>
+<p>Eğer belgenin tamamının değilde bazı kelime ya da cümlelerin farklı aileden yazılması istenirse –ki genelde böyle kullanılır– aşağıdaki komut ya da bildirimler kullanılır.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Komut</th>
+<th style="text-align: left;">Bildirim</th>
+<th style="text-align: left;">Aile</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>\textrm</code></td>
+<td style="text-align: left;"><code>\rmfamily</code></td>
+<td style="text-align: left;"><span class="math inline">\textrm{Roman (Serif)}</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>\textsf</code></td>
+<td style="text-align: left;"><code>\sffamily</code></td>
+<td style="text-align: left;"><span class="math inline">\textsf{Sans Serif}</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>\texttt</code></td>
+<td style="text-align: left;"><code>\ttfamily</code></td>
+<td style="text-align: left;"><span class="math inline">\texttt{Typewriter}</span></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math inline">\LaTeX</span>’de varsayılan yazıtipi Computer Modern olup, ek bir pakete ihtiyaç duymadan kullanılabilecek yazıtipleri aşağıda gösterilmiştir.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/yazitipi2.png" class="lightbox" title="Roman Yazıtipleri" data-gallery="quarto-lightbox-gallery-2"><img src="images/yazitipi2.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
+<p></p><figcaption class="figure-caption">Roman Yazıtipleri</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/yazitipi3.png" class="lightbox" title="Sans Serif Yazıtipleri" data-gallery="quarto-lightbox-gallery-3"><img src="images/yazitipi3.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
+<p></p><figcaption class="figure-caption">Sans Serif Yazıtipleri</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/yazitipi4.png" class="lightbox" title="Typewriter Yazıtipleri " data-gallery="quarto-lightbox-gallery-4"><img src="images/yazitipi4.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
+<p></p><figcaption class="figure-caption">Typewriter Yazıtipleri<br>
+</figcaption><p></p>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/yazitipi5.png" class="lightbox" title="Elyazısı" data-gallery="quarto-lightbox-gallery-5"><img src="images/yazitipi5.png" class="img-fluid figure-img" style="width:25.0%"></a></p>
+<p></p><figcaption class="figure-caption">Elyazısı</figcaption><p></p>
+</figure>
+</div>
+<p>Varsayılan yazıtipleri <code>\rmdefault</code>, <code>\sfdefault</code> ve <code>\ttdefault</code> komutlarında saklı olup, <code>\renewcommand</code> komutuyla değiştirilebilirler.</p>
+<pre width="50%"><code>\renewcommand{\rmdefault}{&lt;kısaltma&gt;}</code></pre>
+<p>Burada <code>&lt;kısaltma&gt;</code>, tablolarda belirtilen kısaltmalardır. Örneğin</p>
+<pre width="50%"><code>\renewcommand{\rmdefault}{put}</code></pre>
+<p>komutu sahanlığa yazıldığında, eğer varsayılan aile Roman ise belgenizin ana yazıtipi Utopia olur.</p>
+<p>Eğer tüm belgenin değil, bazı kelime ya da cümlelerin farklı yazıtipinde yazılması istenirse <code>\fontfamily</code> komutuyla <code>\selectfont</code> komutu birlikte aşağıdaki şekilde kullanılır.</p>
+<pre width="50%"><code>{\fontfamily{pbk}\selectfont Bookman yazıtipi.} Ana yazıtipi.</code></pre>
+<p>Varsayılan yazıtipi paket ekleyerek de değiştirilebilir. Bu hem pratiktir hem de bazı paketler matematiksel ifadelerin yazıtipine de etki eder. Bu paketlerin bazıları tabloda gösterilmiştir.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/yazitipi6.png" class="lightbox" title="Yazıtipi değiştiren paketler" data-gallery="quarto-lightbox-gallery-6"><img src="images/yazitipi6.png" class="img-fluid figure-img" style="width:70.0%"></a></p>
+<p></p><figcaption class="figure-caption">Yazıtipi değiştiren paketler</figcaption><p></p>
+</figure>
+</div>
+<p>Bunların dışında beğenebileceğiniz birçok yazıtipini <a href="https://tug.org/FontCatalogue/"><span class="math inline">\LaTeX</span> Yazıtipi Kataloğu</a>’nda bulabilirsiniz.</p>
+</section>
+<section id="biçem" class="level3" data-number="3.7.3">
+<h3 data-number="3.7.3" class="anchored" data-anchor-id="biçem"><span class="header-section-number">3.7.3</span> Biçem</h3>
+<p>Metin içinde kelimeleri bazen italik bazen de kalın dizmek isteyebilirsiniz. Bu değişimler aşağıdaki tablodaki komut ya da bildirimlerle yapılır.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/yazitipi7.png" class="lightbox" title="Yazıtipi Biçemleri" data-gallery="quarto-lightbox-gallery-7"><img src="images/yazitipi7.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
+<p></p><figcaption class="figure-caption">Yazıtipi Biçemleri</figcaption><p></p>
+</figure>
+</div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>İzleyen kelime <span class="fu">\textit</span>{italik} </span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>harflerle yazılmıştır.</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>Metnin geri kalan kısmı</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>normaldir.</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>İzleyen ifade {<span class="fu">\slshape</span> {<span class="fu">\bfseries</span> eğik kalındır}}.</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>İzleyen ifade <span class="fu">\textit</span>{<span class="fu">\textbf</span>{italik kalın}}, ama bu</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\textsc</span>{<span class="fu">\textit</span>{büyük küçük harf değil}}.</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Eğer vurgulu metin içinde bazı kelimeler tekrar vurgulanırsa bu kelimeler normale döner.</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>{<span class="fu">\em</span> Vurgulu metinde tekrar</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>vurgu yapılırsa {<span class="fu">\em</span> normale}</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>döner.}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><span class="math inline">\LaTeX</span>’de vurgu yukarıdaki gibi yapılsa da altını çizerek vurgu yapmak isteyen olabilir. Kuyruklu harflerin altı çizildiğinde varsayılan satır aralığı değiştiğinden vurguyu bu şekilde yapmamanız daha doğrudur. Ancak illa altını çizmek isterseniz <code>\underline</code> komutunu kullanabilirsiniz.</p>
+</section>
+<section id="boyut" class="level3" data-number="3.7.4">
+<h3 data-number="3.7.4" class="anchored" data-anchor-id="boyut"><span class="header-section-number">3.7.4</span> Boyut</h3>
+<p>Yazıtipi boyutunu değiştirmek için aşağıdaki bildirimler kullanılır.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/yazitipi8.png" class="lightbox" title="Yazıtipi Boyutu Değiştiren Bildirimler" data-gallery="quarto-lightbox-gallery-8"><img src="images/yazitipi8.png" class="img-fluid figure-img" style="width:50.0%"></a></p>
+<p></p><figcaption class="figure-caption">Yazıtipi Boyutu Değiştiren Bildirimler</figcaption><p></p>
+</figure>
+</div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>{<span class="fu">\Large</span> Büyük} ve</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>{<span class="fu">\scriptsize</span> küçük} harfler.</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Bu bildirimlerin aynı zamanda satır aralığını da değiştirdiğine dikkat edilmelidir. Aşağıdaki iki örnekte, <code>\par</code> (paragraf) komutunun verdiğiniz yere bağlı olarak farklı sonuçlar ürettiği gösterilmiştir. Doğru kullanım ikincisidir.</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>{<span class="fu">\large</span> </span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>Sokrates: Platon</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>yalan söyleyecek</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>aşağıdaki cümlede.}<span class="fu">\par</span></span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><!-- [Çıktı](https://github.com/acarzfr/latex-dersleri/blob/main/examples/ex4.pdf) --></p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>{<span class="fu">\large</span> Platon: Sokrates</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>doğruyu söyledi</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>önceki cümlede.<span class="fu">\par</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><!-- [Çıktı](https://github.com/acarzfr/latex-dersleri/blob/main/examples/ex5.pdf) --></p>
+<p>Bu bildirimlerin etkisi belge ana yazıtipi boyutuna bağımlıdır. Mutlak boyutlar aşağıdaki tabloda gösterilmiştir.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/yazitipi9.png" class="lightbox" title="Yazıtipleri Mutlak Boyutları" data-gallery="quarto-lightbox-gallery-9"><img src="images/yazitipi9.png" class="img-fluid figure-img" style="width:70.0%"></a></p>
+<p></p><figcaption class="figure-caption">Yazıtipleri Mutlak Boyutları</figcaption><p></p>
+</figure>
+</div>
+<p>Bağımsız bir yazıtipi boyutu elde etmek için <code>\fontsize</code> ile <code>\selectfont</code> komutları birlikte kullanılır.</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>{<span class="fu">\fontsize</span>{&lt;boyut&gt;}{&lt;aralık&gt;}<span class="fu">\selectfont</span> &lt;metin&gt;}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Buradaki <code>&lt;boyut&gt;</code> yazıtipi boyutu, <code>&lt;aralık&gt;</code> ise satır aralığıdır. İkisinin de ölçü birimi punto (pt) olup, temel kural, aralığın boyutun <span class="math inline">1.2</span> katı olmasıdır.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>{<span class="fu">\fontsize</span>{30}{36}<span class="fu">\selectfont</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>Yazı tipi boyutu 30 punto,</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>satır aralığı 36 punto.}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Ana yazıtipi boyutu <code>\normalsize</code> komutunda saklı olup, <code>\renewcommand</code> komutuyla değiştirilebilir.</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\renewcommand</span>{<span class="ex">\normalsize</span>}{<span class="fu">\fontsize</span>{30}{36}<span class="fu">\selectfont</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Yukarıdaki komutu sahanlığa yazarsanız belgenizin ana yazıtipi boyutu 30 pt, satır aralığı ise 36 pt olur.</p>
+</section>
+</section>
+<section id="renk-kullanmak" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="renk-kullanmak"><span class="header-section-number">3.8</span> Renk Kullanmak</h2>
+<p><span class="math inline">\LaTeX</span>’de renkler <a href="http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/required/graphics/color.pdf"><strong>color</strong></a> ya da <a href="http://ftp.ntua.gr/mirror/ctan/macros/latex/contrib/xcolor/xcolor.pdf"><strong>xcolor</strong></a> paketleriyle kullanılır. İkinci paket daha güçlüdür.</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">xcolor</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>komutuyla paketi ekledikten sonra <code>\color</code> ya da <code>\textcolor</code> komutları aşağıdaki şekillerde kullanılır.</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\color</span>{red}{Kırmızı}<span class="fu">\\</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>{<span class="fu">\color</span>{blue} Tamamı mavi}<span class="fu">\\</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\textcolor</span>{pink}{Pembe}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Kullanılabilecek renk adları black, white, gray, darkgray, lightgray, brown, red, green, blue, cyan, magenta, lime, olive, orange, pink, purple, teal, violet ve yellow’dur.</p>
+<p>Eğer <code>\documentclass</code> komutunun seçeneğine <code>divpsnames</code> yazılırsa aşağıdaki renkler de kullanılabilir duruma gelir.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="images/renkler.png" class="lightbox" title="dvipsnames seçeneğiyle gelen renkler" data-gallery="quarto-lightbox-gallery-10"><img src="images/renkler.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
+<p></p><figcaption class="figure-caption"><strong>dvipsnames</strong> seçeneğiyle gelen renkler</figcaption><p></p>
+</figure>
+</div>
+<p>Bunlar da yeterli gelmiyorsa seçeneklere bir de <code>svgnames</code> yazın ve <a href="https://www.latextemplates.com/svgnames-colors">buradaki</a> yüzden fazla rengi kullanılabilir duruma getirin.</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[svgnames,dvipsnames]{<span class="ex">article</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="yeni-renkler-oluşturmak" class="level3" data-number="3.8.1">
+<h3 data-number="3.8.1" class="anchored" data-anchor-id="yeni-renkler-oluşturmak"><span class="header-section-number">3.8.1</span> Yeni renkler oluşturmak</h3>
+<p><span class="math inline">\LaTeX</span>’in size hazır olarak verdiği renkler yeterli gelmezse kendi renklerinizi oluşturabilirsiniz. Bu, iki şekilde yapılabilir.</p>
+<p>Hazır renkler istenilen oranlarda karıştırılarak yeni renkler elde edilebilir. Aşağıda karışımın nasıl hazırlanabileceği gösterilmiştir.</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\color</span>{blue!80}{<span class="fu">\%</span>80 mavi <span class="fu">\%</span>20 beyaz}<span class="fu">\\</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\color</span>{red!40!blue}{<span class="fu">\%</span>40 kırmızı <span class="fu">\%</span>60 mavi} <span class="fu">\\</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>{<span class="fu">\color</span>{yellow!20!green!75!black} <span class="fu">\%</span>20x0.75=15 sarı</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\%</span>(100-20)x0.75=60 yeşil <span class="fu">\%</span>100-75=25 siyah}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><!-- [Çıktı](https://github.com/acarzfr/latex-dersleri/blob/main/examples/ex6.pdf) --></p>
+<p>İkinci yol <code>\definecolor</code> komutuyla renk modelleri kullanmaktır.</p>
+<table class="table">
+<caption>(#tab:renkmod) Renk Modelleri</caption>
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Model</strong></th>
+<th style="text-align: left;"><strong>Açıklama</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">gray</td>
+<td style="text-align: left;">Grinin tonları (0-1). 0 (siyah), 1 (beyaz). Yani 0.95 çok açık gri, 0.30 koyu gri olur.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">rgb</td>
+<td style="text-align: left;">Red, Green, Blue (0-1). Üç renk (kırmızı, yeșil, mavi) 0 ile 1 arasında bir sayıyla temsil edilir.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">RGB</td>
+<td style="text-align: left;">Red, Green, Blue (0-255). Üç renk (karmızı, yeșil, mavi) 0 ile 255 arasında bir sayıyla temsil edilir.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">HTML</td>
+<td style="text-align: left;">Red, Green, Blue (OO-FF). Kodlar RRGGBB şeklinde verilir.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">cmyk</td>
+<td style="text-align: left;">Cyan, Magenta, Yellow, Black (0-1). Dört renk (camgöbeği, eflatun, sarı, siyah) 0 ile 1 arasında bir sayıyla temsil edilir.</td>
+</tr>
+</tbody>
+</table>
+<p>Komut</p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\definecolor</span>{&lt;isim&gt;}{&lt;renk modeli&gt;}{&lt;kod&gt;}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>şeklinde verilir. Burada <code>&lt;isim&gt;</code>, sizin daha sonra kullanmak üzere vereceğiniz bir isimdir. Kodlar için <a href="https://www.huesnap.com/color">HueSnap</a> adresinden yararlanabilirsiniz. Örneğin</p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\definecolor</span>{renk1}{gray}{0.50}</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\definecolor</span>{renk2}{rgb}{1,0.7,0.3}</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\definecolor</span>{renk3}{RGB}{125,32,200}</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\definecolor</span>{renk4}{HTML}{CC33CC}</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\definecolor</span>{renk5}{cmyk}{0,0.7,1,0.5}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>komutlarıyla <code>renk1</code>, <code>renk2</code>, <code>renk3</code>, <code>renk4</code> ve <code>renk5</code> adında beş adet renk tanımlanmış olur. Bu komutlar ya sahanlığa ya da bu renkleri kullanacağınız satırdan önce gövdeye yazılmalıdır.</p>
+<p>Yeni oluşturduğunuz rengi tek seferlik kullanacaksanız</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\color</span>[&lt;model&gt;]{&lt;kod&gt;}</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\textcolor</span>[&lt;model&gt;]{&lt;kod&gt;}{&lt;metin&gt;}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>komutlarını kullanabilirsiniz.</p>
+<div class="sourceCode" id="cb39"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>{<span class="fu">\color</span>[RGB]{102,0,51} Bol}<span class="fu">\\</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\textcolor</span>[RGB]{0,76,153}{Çeşit bol}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Metnin arka planını renklendirmek için <code>\colorbox</code> komutu kullanılır. Benzer <code>\fcolorbox</code> komutu aynı şeyi çizgi çizerek yapar.</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\colorbox</span>{&lt;arka plan rengi&gt;}{&lt;metin&gt;}</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\colorbox</span>[&lt;renk modeli&gt;]{&lt;arka plan rengi&gt;}{&lt;metin&gt;}</span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\fcolorbox</span>{&lt;çizgi rengi&gt;}{&lt;arka plan rengi&gt;}{&lt;metin&gt;}</span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\fcolorbox</span>[&lt;renk modeli&gt;]{&lt;çizgi rengi&gt;}{&lt;arka plan rengi&gt;}{&lt;metin&gt;}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Komutlar yukarıda gösterildiği şekilde kullanılabilir.</p>
+<div class="sourceCode" id="cb41"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\colorbox</span>{Cyan}{Metin}</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\colorbox</span>[rgb]{0.4,0.4,0.5}{Metin}</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\fcolorbox</span>{red}{yellow}{Metin}</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="fu">\fcolorbox</span>[RGB]{0,0,0}{255,204,255}{Metin}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Sayfaları renklendirmek için ise <code>\pagecolor</code> komutu kullanılır. Komutun zorunlu değişkeninde renk belirtilir. Tekrar normale (beyaz) dönmek için <code>\nopagecolor</code> komutu kullanılır. Eğer bu işe yaramazsa <code>\pagecolor{white}</code> komutunu kullanabilirsiniz.</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Kopyalandı!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./02-ilkadimlar.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">İlk Adımlar</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./04-matematik.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Matematiksel İfadeler</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":true,"descPosition":"bottom","openEffect":"zoom","selector":".lightbox"});</script>
+
+
+
+</body></html>

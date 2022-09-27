@@ -7,7 +7,7 @@
 
 ### Bütünleşik Kaynakça
 
-LaTeX'de kaynakça oluşturmanın bir yolu, kaynakçayı kaynak dosyanızın
+{{< latex >}}'de kaynakça oluşturmanın bir yolu, kaynakçayı kaynak dosyanızın
 (`.tex` uzantılı ana dosyanız) içindeki bir ortamda hazırlamaktır.
 Kullanacağınız ortam `thebibliography` ortamıdır.
 
@@ -70,7 +70,7 @@ Bu komut verilirse sıra numaraları parantezsiz, kalın ve ardında nokta
 olacak şekilde yazılır.
 
 Ortam genelde `\end{document}` komutundan hemen önce oluşturulur ve
-ortamın oluşturulduğu yerde LaTeX, `book` ve `report` sınıflarında eğer
+ortamın oluşturulduğu yerde {{< latex >}}, `book` ve `report` sınıflarında eğer
 Türkçe dil paketi eklenmişse "Kaynakça", `article` sınıfında ise
 "Kaynaklar" ismini ve ardından kaynakları yazdırır.
 
@@ -133,11 +133,11 @@ Massachusetts, 2nd edition, 1994.
 
 ### Kaynakçanın ayrı dosyada hazırlanması
 
-Kaynakçayı ayrı bir dosyada hazırlayıp TeX
-dağıtımlarıyla hazır olarak gelen BiBTeX programıyla yazdırabiliriz.
+Kaynakçayı ayrı bir dosyada hazırlayıp {{< tex >}}
+dağıtımlarıyla hazır olarak gelen {{< bibtex >}} programıyla yazdırabiliriz.
 
 Bu yöntemde kaynakça, uzantısı `.bib` olan ayrı bir dosyada hazırlanır.
-Bu dosya basit bir metin dosyası olup, metin editörü ya da LaTeX editörü
+Bu dosya basit bir metin dosyası olup, metin editörü ya da {{< latex >}} editörü
 kullanılarak oluşturulabilir, düzenlenebilir. Ayrıca
 [Mendeley](https://www.mendeley.com/?interaction_required=true) ya da
 [Jabref](https://www.jabref.org/) gibi akademik referans düzenleme programlarından da
@@ -158,9 +158,9 @@ Bu yöntemin önemli avantajları vardır:
     target="_blank"} ve
     [DergiPark](http://www.dergipark.org.tr/tr/){rel="noreferrer noopener"
     target="_blank"} gibi platformlardan kullandığınız kaynakların
-    BiBTeX kodunu çekebilirsiniz (bkz. Şekil \@ref(fig:fig-google)).
+    {{< bibtex >}} kodunu çekebilirsiniz (bkz. Şekil \@ref(fig:fig-google)).
 4.  Yukarıda da bahsettiğimiz gibi Mendeley ve Jabref gibi akademik atıf
-    düzenleme programlarını kullanarak kaynakların BiBTeX kodunu
+    düzenleme programlarını kullanarak kaynakların {{< bibtex >}} kodunu
     oluşturabilir, düzenleyebilirsiniz.
 
 ::: {#fig-google layout-ncol=3}
@@ -213,12 +213,12 @@ Aşağıda `.bib` uzantılı bir dosya örneği gösterilmiştir.
 
 
 Bu dosyada Serge Lang'a ait bir kitap (`@book`), Leslie Lamport'a ait
-bir makale (`@article`) ve LaTeX için bir teknik kılavuz (`@manual`)
+bir makale (`@article`) ve {{< latex >}} için bir teknik kılavuz (`@manual`)
 vardır.
 
 Her kaynağın ilk olarak `@` işaretiyle türü belirtilir. Yukarıdakilere
 ek olarak rapor için `@report`, tez için `@thesis`, çevrimiçi kaynaklar
-için `@online` kullanılır. Bunların dışındaki birçok türe LaTeX
+için `@online` kullanılır. Bunların dışındaki birçok türe {{< latex >}}
 editörlerinin menü çubuğuklarında bulunan "Kaynakça (Bibliography)"
 menüsünden ulaşılabilir.
 
@@ -248,7 +248,7 @@ author={Soyadı, Adı}
 
 şeklinde girilmelidir ve birden fazla yazar varsa yazarlar yukarıdaki
 yazımdan dolayı virgülle değil `and` ile ayrılmalıdır. Yazarları ayırmak
-için virgül kullanırsanız yüksek ihtimalle LaTeX, yazarların adları ve
+için virgül kullanırsanız yüksek ihtimalle {{< latex >}}, yazarların adları ve
 soyadlarını karıştıracaktır.
 
 Bir diğer önemli nokta özel kelimeleri yazmak için kullanılan komutları
@@ -309,7 +309,7 @@ bilgiler en üstte yer alan kalın yazılmış olanlardır.
 
 #### Kaynakçanın yazdırılması
 
-Kaynakçayı yazdırmak için BiBTeX'i kullanacağız. BiBTeX'in LaTeX'le
+Kaynakçayı yazdırmak için {{< bibtex >}}'i kullanacağız. {{< bibtex >}}'in {{< latex >}}'le
 standart olarak geldiğini ifade etmiştik. Dolayısıyla bu programı
 kullanmak için ek bir şey yapmanız gerekmez.
 
@@ -349,9 +349,9 @@ yazdırılmaz. Bazı kaynakların bu kuraldan ayrı tutulması istenirse
 Eğer tüm kaynakların bu kuraldan ayrı tutulması isteniyorsa komut
 `\nocite{*}` şeklinde verilmelidir.
 
-Kaynakçanın belgeye yazılması için kaynak dosyanın derlenip, BiBTeX
+Kaynakçanın belgeye yazılması için kaynak dosyanın derlenip, {{< bibtex >}}
 programının çalıştırılması ve ardından dosyanın en az iki kere daha
-derlenmesi gerekir. BiBTeX programı, editörde "Araçlar $\rightarrow$ Kaynakça" yoluyla çalıştırılır (klavye kısa yolu F8). Aynı şey,
+derlenmesi gerekir. {{< bibtex >}} programı, editörde "Araçlar $\rightarrow$ Kaynakça" yoluyla çalıştırılır (klavye kısa yolu F8). Aynı şey,
 uçbirimde sırasıyla
 
 
@@ -395,7 +395,7 @@ Bilimsel bir yapıtta bulunması gereken *dizin* ya da diğer adıyla
 yer numarasıyla belirten ve yapıtın arkasında yer alan alfabetik
 listedir.
 
-LaTeX'de dizin oluşturabilmek için sahanlığa
+{{< latex >}}'de dizin oluşturabilmek için sahanlığa
 
 
 ```latex
@@ -423,7 +423,7 @@ Dizin maddesi girme örnekleri aşağıda gösterilmiştir.
 ![](images/dizina.png){}
 
 
-LaTeX, kaynak dosyanızı derlediğinizde bu dizin maddelerini sayfa
+{{< latex >}}, kaynak dosyanızı derlediğinizde bu dizin maddelerini sayfa
 numaralarıyla birlikte, kaynak dosyayla adı aynı fakat uzantısı `.idx`
 olan bir dosyaya kaydeder (bu dosyaya *ham dosya* denir). Bu dosyanın
 `makeindex` programından geçirilmesi gerekir. Bu editörde "Araçlar $\rightarrow$ Dizin" yoluyla yapılır. Aynı şey uçbirimde,
@@ -435,7 +435,7 @@ makeindex kaynakdosya
 komutu girilerek yapılabilir. Dosya tekrar derlendiğinde sıralanmış
 dizin belgeye yazılır. Bunun için dizinin yazılması istenen yere
 `\printindex` komutu verilir. Bu genelde, belgenin en sonunda
-`\end{document}` komutundan hemen öncedir. Komutun girildiği yere LaTeX,
+`\end{document}` komutundan hemen öncedir. Komutun girildiği yere {{< latex >}},
 Türkçe dil paketi ekli belgelerde "Dizin" başlığını oluşturur ve belgede
 `\index` komutuyla eklenmiş maddeleri sırayla dizer.
 

@@ -2,7 +2,7 @@ project:
   type: book
   output-dir: docs
 book:
-  title: "LaTeX Dersleri"
+  title: "{{< latex >}} Dersleri"
   author: "Zafer ACAR"
   date: 2022-03-06
   date-format: "DD/MM/YYYY"
@@ -13,13 +13,14 @@ book:
 
   chapters:
     - index.qmd
-    - temeller.qmd
-    - ilkadimlar.qmd
-    - dizgi.qmd
-    - matematik.qmd
-    - ozelsayfalar.qmd
-    - ozellestirmeler.qmd
-    - kaynakca.qmd
+    - 01-temeller.qmd
+    - 02-ilkadimlar.qmd
+    - 03-dizgi.qmd
+    - 04-matematik.qmd
+    - 05-yuzergezer.qmd
+    - 06-ozelsayfalar.qmd
+    - 07-ozellestirmeler.qmd
+    - 08-kaynakca.qmd
   search: true
   repo-url: https://github.com/acarzfr/latex-dersleri/
   #repo-actions: [edit]
@@ -33,6 +34,7 @@ format:
     theme: sandstone
      # light: sandstone
      # dark: solar
+    html-math-method: katex
     lang: tr
     include-in-header: preamble.html
     

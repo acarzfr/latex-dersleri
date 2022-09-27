@@ -1,0 +1,810 @@
+# Dizgi
+
+## Satır ve Sayfa Kesme
+
+{{< latex >}}, kelimeler arası boşlukları otomatik ayarlayarak satırları iki
+yana yaslayarak dizer. Bir satırı kesip yeni bir satıra geçmek için `\\`
+veya `\newline` komutları kullanılır.
+
+Birinci komut `\\*` şeklinde verildiğinde satırdan sonra sayfa
+kesilmesini önler.
+
+Benzer şeyi `\linebreak` komutu da yapar. Fakat bu komut ile satır
+kesilirse {{< latex >}} kalan yarım satırı iki yana yaslar. `\nolinebreak`
+komutu ise satırın kesilmesini önler.
+
+```latex
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+\begin{document}
+
+\LaTeX, kelimeler arası boşlukları otomatik ayarlayarak satırları iki
+yana yaslayarak dizer. Bir satırı kesip yeni bir satıra geçmek için \\
+veya \newline komutları kullanılır.
+
+\end{document}
+```
+
+Birçok kelimeyi birlikte aynı satırda tutmak gerekirse `\mbox` komutu
+kullanılır:
+
+
+```latex
+\mbox{<metin>}
+```
+
+
+Buradaki `<metin>` içindeki kelimeler her durumda birleşik kalırlar.
+Benzer şeyi `\fbox` komutu da metin etrafına çizgi çizerek yapar.
+
+
+Sayfayı kesip yeni bir sayfaya geçmek için `\newpage` ya da `\pagebreak`
+komutları kullanılır. `\nopagebreak` komutu sayfa kesilmesini önler.
+`\newpage` ile `\pagebreak` komutları arasında da `\newline` ile
+`\linebreak` komutlarındakine benzer bir fark vardır.
+
+## Heceleme
+
+Bazen tüm bu ayarlamalara rağmen {{< latex >}} bazı kelimeleri doğru
+heceleyemeyebilir. Böyle durumlarda hecelemeyi elle yapmak gerekir.
+Yanlış hecelenen kelimenin bölünebileceği yerler `\-` komutuyla
+gösterilir:
+
+
+```latex
+He\-ce\-le\-me
+```
+
+
+Bu sadece ilgili kelimenin tireyle ayrıldığı yerde doğru hecelenmesini
+sağlar. Aynı kelime belgenin başka bir yerinde yine yalnış
+hecelenebilir. Bunun yerine `\begin{document}` komutundan sonra
+`\hyphenation` komutuyla hece yerleri tire (`-`) işaretiyle gösterilmiş
+olan kelime listesi oluşturulursa belgenin tamamına bu kural uygulanmış
+olur. Örneğin
+
+```latex
+\hyphenation{He-ce-le-me FORTRAN}
+```
+
+komutuyla "Heceleme" kelimesinin nereden bölüneceği, "FORTRAN", "Fortran" ya da
+"fortran" kelimelerinin bölünmeyeceği {{< latex >}}'e söylenmiş olur.
+
+## Paragraflar ve Cümle Sonları
+
+Boş bir satırın yeni bir paragraf açtığını daha önce belirtmiştik. Aynı şey, `\par` komutuyla da yapılabilir.
+Ancak bu komut yeni bir paragraf açmaktan ziyade farklı amaçlar için
+kullanılır (yeri geldiğinde değinilecektir). Nitekim kaynak dosyanızın
+okunabilirliği açısından paragrafları ayırmak için boş bir satır
+bırakmak daha kullanışlıdır.
+
+{{< latex >}}'de varsayılan olarak `\chapter` ve `\section` gibi bölümleme
+komutlarından sonra oluşturulan ilk paragraf girintisiz, sonrakiler
+girintili olur. Bu, paragraf başlarında `\indent` ya da `\noindent`
+komutlarıyla tek seferliğine değiştirilebilir. Birinci komut girinti
+oluşturur, ikincisi ise girintiyi kaldırır.
+
+{{< latex >}}, okumayı kolaylaştırmak için cümle sonlarında fazladan boşluklar
+bırakır. Bunu yaparken de her cümlenin nokta, soru işareti veya ünlem
+işaretiyle bittiğini varsayar. Kısaltmalarda büyük harflerden sonra
+nokta gel(ebil)diğinden, büyük harften sonra nokta koyulursa {{< latex >}} bunu cümle
+sonu saymaz. Eğer bir büyük harften sonra nokta koyuyorsanız ve burası
+cümlenin sonuysa {{< latex >}}'in burayı cümle sonu sayması için büyük harften
+sonraki noktanın önüne `\@` koymanız gerekir.
+
+
+{{< latex >}}'in noktadan sonra fazladan boşluk *koymamasını* isterseniz
+`\frenchspacing` komutunu kullanırsınız. Bu komutu kullandıysanız, artık
+noktadan önce `\@` koymanıza gerek yoktur. Daha sonra tekrar cümle
+sonlarında fazladan boşluk kullanmak istenirse de `\nonfrenchspacing`
+komutu kullanılır.
+
+Unvan kısaltmasından sonra unvanın ait olduğu kelimeyle birlikte kalması
+ve fazladan boşluk bırakılmaması için tilda (`~`) işareti
+kullanılabilir. Bu işaret hem genişlemeyen bir boşluk bırakır hem de
+satırın orada kesilmesini önler.
+
+## Aralıklar
+
+{{< latex >}}'de hem dikey hem de yatay aralıklar otomatik olarak ayarlanır.
+Fazladan aralıklar bırakmak için komutlar kullanılır.
+
+Aralık bırakırken kullanabileceğimiz ölçü birimleri @tbl-olcu'de
+gösterilmiştir.
+
+Table:  {{< latex >}}'de Ölçü Birimleri {#tbl-olcu}
+
+|  Birim|  Değer|
+|:--|:--|
+|mm   |milimetre $\approx 1/25$ inç|
+|  cm|   santimetre = 10 mm|
+ | in  | inç = 25.4 mm|
+ | pt |  punto $\approx 1/72$ inç|
+ | em  | Kullanılan yazı tipinde 'M' harfinin genişliği|
+ | ex  | Kullanılan yazı tipinde 'x' harfinin yüksekliği|
+
+
+### Dikey aralıklar
+
+Dikey aralık birkaç komutla bırakılabilir. Bunlardan biri `\vspace`
+olup, komut iki boş satır arasında
+
+```latex
+\vspace{<uzunluk>}
+```
+
+şeklinde verilir. Komut bu şekilde verildiğinde komutun zorunlu
+değişkeninde birimiyle belirtilen uzunluk kadar dikey aralık bırakılır.
+Eğer bir sayfanın başında veya sonunda aralık bırakılmak istenirse,
+komut `\vspace*` şeklinde yıldızlı vermelidir. Bu komutun aralığa ilave
+yapan `\addvspace` sürümü de vardır.
+
+
+Bir paragrafın iki satırı arasında veya bir tablonun satırları arasında
+ilave aralık açmak için
+
+
+```latex
+\\[<uzunluk>]
+```
+
+komutu kullanılır. Bu komutlarda belirtilen uzunluklar negatif de olabilir.
+
+Sınırsız bir dikey aralık oluşturmak için `\vfill` komutu kullanılır. Bu
+komuttan sonra gelen her şey sayfanın altına yaslanır.
+
+Ön tanımlı gelen `\smallskip`, `\medskip` ve `\bigskip` komutları
+sırasıyla küçük, orta ve büyük aralıklar bırakır.
+
+### Yatay aralıklar
+
+Ön tanımlı yatay aralıklar
+
+
+```latex
+\  \,  \:  \;  \quad  \qquad  \!
+```
+
+
+komutlarıyla verilir. Bu komutlar sırasıyla bir sözcük arası, $3/\!18$ em, $4/\!18$ em, $5/\!18$ em, $1$ em, $2$ em, $-3/\!18$ em uzunlukta yatay aralık bırakır.
+
+
+
+Belli bir uzunlukta yatay aralık bırakmak için `\hspace` komutu
+kullanılır. Yine dikey aralıkta olduğu gibi yatay aralık negatif de
+olabilir. Eğer aralık satır başına veya sonuna rasgelse dahi bu aralığı
+korumak istiyorsanız, yıldızlı `\hspace*` komutu kullanırsınız.
+
+Komutlardan önce veya sonra boşluk bırakmak farklı
+sonuçlar üretir.
+
+Sınırsız bir yatay aralık oluşturmak için `\hfill` komutu kullanılır. Bu
+komuttan sonra gelen her şey satırın sonuna yaslanır. Hem satır sonuna
+yaslamak hem de aralığı noktalarla doldurmak isterseniz `\dotfill`
+komutunu kullanırsınız. Satır sonuna yaslayıp aralığa çizgi çekmek
+isterseniz de `\hrulefill` komutunu kullanırsınız.
+
+
+```latex
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+\begin{document}
+
+\noindent 
+A\\[1ex]
+B
+
+\bigskip
+
+\noindent 
+A\\[-2ex]
+B
+
+\bigskip
+
+\noindent 
+A\hspace{2cm}B\\
+A \hspace{2cm} B
+
+\bigskip
+
+\noindent 
+A\hfill B\\
+A\dotfill B\\
+A\hrulefill B
+
+\end{document}
+```
+
+
+## Metni Hizalamak ve Sütunlara Bölmek
+
+### Hizalama
+
+{{< latex >}}'de metni sola hizalamak için `flushleft`, sağa hizalamak için
+`flushright` ve ortalı hizalamak için `center` ortamları kullanılır.
+
+```latex
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+\begin{document}
+
+\begin{flushleft}
+ burası sola hizalı
+\end{flushleft}
+\begin{flushright}
+ sağa hizalı
+\end{flushright}
+\begin{center}
+ ve ortalı
+\end{center}
+
+
+\end{document}
+```
+
+
+
+### Sütunlara bölmek
+
+{{< latex >}}'de belgenin tamamının iki sütun dizilmesi için `\documentclass`
+komutunun seçeneğine `twocolumn` yazılabileceğinden bahsettik. Bu, tüm belgenin iki sütun dizilmesini sağlar. Bazı
+sayfaları iki, bazılarınıysa tek sütun dizmek istiyorsanız `\twocolumn`
+ve `\onecolumn` komutlarını kullanmanız gerekir. `\twocolumn` komutunun
+verildiği sayfadan sonraki sayfalar iki, `\onecolumn` komutunun
+verildiği sayfadan sonraki sayfalar tek sütun dizilir.
+
+Eğer metni daha fazla sütuna bölmek ve sütunları istediğiniz yerden
+başlatmak gibi daha fazla seçenek istiyorsanız, `multicols` ortamını
+kullanmanız gerekir. Bu ortamı kullanabilmek için
+
+
+```latex
+\usepackage{multicol}
+```
+
+komutuyla
+[**multicol**](http://ftp.ntua.gr/mirror/ctan/macros/latex/required/tools/multicol.pdf) paketini eklemelisiniz.
+
+
+```latex
+\begin{multicols}{<sütun sayısı>}
+
+\end{multicols}
+```
+
+
+Burada, `<sütun sayısı>` değişkeninde oluşturulmak istenen sütun adedi
+sayıyla belirtilir.
+
+
+
+Bu ortamda sütun genişlikleri eşit olup, sütunlar arası boşluk
+`\columnsep`, sütunlar arasındaki çizginin kalınlığı `\columnseprule` ve
+sütunlar arasındaki çizginin rengi `\columnseprulecolor` komutlarında
+saklıdır. Bu değişkenler `\setlength` ya da `\def` komutları
+kullanılarak değiştirilebilir.
+
+
+```latex
+\setlength{\columnsep}{1cm}
+\setlength{\columnseprule}{1pt}
+\def\columnseprulecolor{\color{blue}}
+```
+
+
+Yukarıdaki birinci komutla sütunlar arasındaki boşluk 1 cm, çizgi
+kalınlığı 1 pt ve çizgi rengi mavi olarak düzenlenir. Bu komutlar ya
+sahanlığa ya da ortamı kullanmadan önce gövdeye yazılmalıdır.
+
+
+
+> Şimdiye kadar renk kullanımından bahsetmedik ancak çizgi rengini
+> değiştirmek için verilen komutun kullanılabilmesi için sahanlığa
+> `\usepackage{color}` komutuyla `color` paketinin eklenmesi gerekir.
+
+Ortam isteğe bağlı bir değişken de alabilir. Bu, çengelli parantezlerden
+sonra köşeli parantezler içine yazılır. Köşeli parantezler içinde
+yazılanlar bölünmeden ve çok sütunlu metnin üstünde dizilir.
+
+
+```latex
+\begin{multicols}{2}
+ [\section{Başlık}
+ Burası sütunlara bölünmez.]
+ Burası sütunlara bölünür.
+\end{multicols}
+```
+
+Sütunu kesmek için `\columnbreak` komutu kullanılır. Komutun verildiği
+yerde sütun kesilir, ardından kesme noktasından önceki paragraflar tüm
+kullanılabilir alanı doldurmak için eşit olarak dağıtılır. Dolayısıyla
+bazen beklenen sonucu vermeyebilir.
+
+
+
+
+Varsayılan `multicols` ortamında sütunların her biri aynı miktarda metin
+içerecek şekilde dengelenmiştir. Bu, ortamın yıldızlı sürümü
+(`multicols*`) kullanılarak değiştirilebilir.
+
+## Listeleme
+
+### Temel listeler
+
+{{< latex >}}'de listeleme için değişik ortamlar vardır. Bu ortamlar tek başına
+kullanılabileceği gibi birlikte de kullanılabilirler. Her ortamda
+maddeler `\item` komutuyla belirtilir.
+
+Bir listeyi numaralı şekilde dizmek için `enumerate` ortamı kullanılır.
+
+
+```latex
+\begin{enumerate}
+ \item madde 1
+  \begin{enumerate}
+    \item alt madde 1
+      \begin{enumerate}
+        \item en alt madde 1
+      \end{enumerate}
+    \item alt madde 2
+  \end{enumerate}
+ \item madde 2
+\end{enumerate}
+```
+
+
+Numarasız, özel işaretli listeler için `itemize` ortamı kullanılır ve bu
+ortamda madde işareti değiştirilebilir.
+
+
+```latex
+\begin{itemize}
+\item madde 1
+\item madde 2
+\item[$\circ$] madde 3
+\item[+] madde 4
+\end{itemize}
+```
+
+
+
+
+Açıklamalı bir liste içinse `description` ortamı kullanılır. Bu ortamda
+köşeli parantez içine alınan anahtar kelimeler kalın dizilir.
+
+
+```latex
+\begin{description}
+  \item[Nokta] Boyutu olmayan
+  \item[Çember] Bir noktaya eşit
+  uzaklıktaki noktaların geometrik yeri
+\end{description}
+```
+
+
+### Listeleri özelleştirmek
+
+Listelerin özelleştirmek için
+[**enumerate**](http://ftp.ntua.gr/mirror/ctan/macros/latex/required/tools/enumerate.pdf)  paketi kullanılabilir. Paketi `\usepackage{enumerate}`
+komutuyla ekledikten sonra `enumerate` ortamını başlatan komutun peşine
+köşeli parantezler içinde madde işaretlerinin tipi belirtilebilir:
+
+
+```latex
+\begin{enumerate}[I.]
+ \item bir
+ \item iki 
+ \item üç
+\end{enumerate}
+```
+
+
+
+Bunun dışında çok daha fazla özelleştirmeye izin veren
+[**enumitem**](http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/enumitem/enumitem.pdf) paketi vardır. Bu paketi kullanarak yapılabilecek
+listelere de ilerde değineceğiz. Dileyen okur paket belgesini inceleyip
+listelerini özelleştirebilir.
+
+
+## Yazıtipleri
+
+
+### Giriş
+
+Yazıtipi konusu *kodlama*, *aile*, *biçem* ve *boyut* olmak üzere dört
+alt başlıkta incelenebilir. Kodlama çok teknik bir konu olup amacımız
+dışındadır, ancak sadece şunu belirtelim ki kodlama işini {{< latex >}}'de daha önce  bahsettiğimiz **fontenc** paketi üstlenir. Bu paketi belgenize eklemiş
+olduğunuzu varsayarak devam edeceğiz.
+
+Bu yazıda anlatacağımız şeylerden bazıları bir bakıma {{< latex >}}'in
+felsefesine aykırı olacak. Nitekim {{< latex >}}, `\documentclass` komutunda
+belirtilen ana yazıtipi boyutuna göre, dipnot ya da başlık gibi ana
+yazıtipi boyutundan farklı dizilen şeylerin boyutunu olabilecek en güzel
+ve doğru şekilde ayarlar. O yüzden bu konudaki klasik uyarıyı biz de
+yineleyelim:
+
+![](images/uyari.png){width=100%}
+
+### Aile
+
+Yazıtipleri Roman ya da Serif, Sans Serif ve Typewriter olmak üzere üç
+ailede toplanabilir. Roman ailesi tırnaklı ya da süslü diyebileceğimiz
+yazıtiplerini, Sans Serif ailesi tırnaksız ya da süssüz yazıtiplerini ve
+Typewriter ailesi de daktilo yazıtiplerini barındırır.
+
+{{< latex >}}'de her belge sınıfı varsayılan yazıtipi ailesiyle gelir. `beamer`
+sınıfının varsayılan ailesi Sans Serif olup, diğer sınıfların varsayılan
+ailesi Roman'dır.
+
+Varsayılan aile `\familydefault` komutunda saklı olup, `\renewcommand`
+komutuyla değiştirilebilir.
+
+
+```latex
+\renewcommand{\familydefault}{\rmdefault}  
+\renewcommand{\familydefault}{\sfdefault}  
+\renewcommand{\familydefault}{\ttdefault} 
+```
+
+Birinci komut sahanlığa yazılırsa, belge sınıfından bağımsız olarak
+varsayılan aile Roman, ikincisi yazılırsa Sans Serif, üçüncüsü yazılırsa
+Typewriter olur.
+
+Eğer belgenin tamamının değilde bazı kelime ya da cümlelerin farklı
+aileden yazılması istenirse --ki genelde böyle kullanılır-- aşağıdaki
+komut ya da bildirimler kullanılır.
+
+| Komut | Bildirim | Aile |
+| :--- | :--- | :--- |
+| `\textrm` | `\rmfamily` | $\textrm{Roman (Serif)}$ |
+| `\textsf` | `\sffamily` | $\textsf{Sans Serif}$ |
+| `\texttt` | `\ttfamily` | $\texttt{Typewriter}$ |
+
+
+
+{{< latex >}}'de varsayılan yazıtipi Computer Modern olup, ek bir pakete ihtiyaç
+duymadan kullanılabilecek yazıtipleri aşağıda gösterilmiştir.
+
+
+![Roman
+Yazıtipleri](images/yazitipi2.png){width=50%}
+
+
+
+![Sans Serif
+Yazıtipleri](images/yazitipi3.png){width=50%}
+
+
+
+![Typewriter Yazıtipleri\
+](images/yazitipi4.png){width=50%}
+
+
+![Elyazısı](images/yazitipi5.png){width=25%}
+
+Varsayılan yazıtipleri `\rmdefault`, `\sfdefault` ve `\ttdefault`
+komutlarında saklı olup, `\renewcommand` komutuyla değiştirilebilirler.
+
+
+```{width=50%}
+\renewcommand{\rmdefault}{<kısaltma>}
+```
+
+
+Burada `<kısaltma>`, tablolarda belirtilen kısaltmalardır. Örneğin
+
+
+```{width=50%}
+\renewcommand{\rmdefault}{put}
+```
+
+
+komutu sahanlığa yazıldığında, eğer varsayılan aile Roman ise belgenizin
+ana yazıtipi Utopia olur.
+
+Eğer tüm belgenin değil, bazı kelime ya da cümlelerin farklı yazıtipinde
+yazılması istenirse `\fontfamily` komutuyla `\selectfont` komutu
+birlikte aşağıdaki şekilde kullanılır.
+
+
+```{width=50%}
+{\fontfamily{pbk}\selectfont Bookman yazıtipi.} Ana yazıtipi.
+```
+
+
+Varsayılan yazıtipi paket ekleyerek de değiştirilebilir. Bu hem
+pratiktir hem de bazı paketler matematiksel ifadelerin yazıtipine de
+etki eder. Bu paketlerin bazıları tabloda gösterilmiştir.
+
+
+![Yazıtipi değiştiren
+paketler](images/yazitipi6.png){width=70%}
+
+Bunların dışında beğenebileceğiniz birçok yazıtipini [{{< latex >}}
+Yazıtipi
+Kataloğu](https://tug.org/FontCatalogue/)'nda bulabilirsiniz.
+
+### Biçem
+
+Metin içinde kelimeleri bazen italik bazen de kalın dizmek
+isteyebilirsiniz. Bu değişimler aşağıdaki tablodaki komut ya da
+bildirimlerle yapılır.
+
+
+![Yazıtipi
+Biçemleri](images/yazitipi7.png){width=50%}
+
+
+```latex
+İzleyen kelime \textit{italik} 
+harflerle yazılmıştır.
+Metnin geri kalan kısmı
+normaldir.
+```
+
+```latex
+İzleyen ifade {\slshape {\bfseries eğik kalındır}}.
+```
+
+
+```latex
+İzleyen ifade \textit{\textbf{italik kalın}}, ama bu
+\textsc{\textit{büyük küçük harf değil}}.
+```
+
+
+
+Eğer vurgulu metin içinde bazı kelimeler tekrar vurgulanırsa bu
+kelimeler normale döner.
+
+```latex
+{\em Vurgulu metinde tekrar
+vurgu yapılırsa {\em normale}
+döner.}
+```
+
+
+
+
+{{< latex >}}'de vurgu yukarıdaki gibi yapılsa da altını çizerek vurgu yapmak
+isteyen olabilir. Kuyruklu harflerin altı çizildiğinde varsayılan satır
+aralığı değiştiğinden vurguyu bu şekilde yapmamanız daha doğrudur. Ancak
+illa altını çizmek isterseniz `\underline` komutunu kullanabilirsiniz.
+
+
+### Boyut
+
+Yazıtipi boyutunu değiştirmek için aşağıdaki bildirimler kullanılır.
+
+
+![Yazıtipi Boyutu Değiştiren
+Bildirimler](images/yazitipi8.png){width=50%}
+
+
+```latex
+{\Large Büyük} ve
+{\scriptsize küçük} harfler.
+```
+
+
+Bu bildirimlerin aynı zamanda satır aralığını da değiştirdiğine dikkat
+edilmelidir. Aşağıdaki iki örnekte, `\par` (paragraf) komutunun
+verdiğiniz yere bağlı olarak farklı sonuçlar ürettiği gösterilmiştir.
+Doğru kullanım ikincisidir.
+
+
+```latex
+{\large 
+Sokrates: Platon
+yalan söyleyecek
+aşağıdaki cümlede.}\par
+```
+
+
+ <!-- [Çıktı](https://github.com/acarzfr/latex-dersleri/blob/main/examples/ex4.pdf) --> 
+
+
+```latex
+{\large Platon: Sokrates
+doğruyu söyledi
+önceki cümlede.\par}
+```
+
+
+ <!-- [Çıktı](https://github.com/acarzfr/latex-dersleri/blob/main/examples/ex5.pdf) --> 
+
+Bu bildirimlerin etkisi belge ana yazıtipi boyutuna bağımlıdır. Mutlak
+boyutlar aşağıdaki tabloda gösterilmiştir.
+
+
+![Yazıtipleri Mutlak
+Boyutları](images/yazitipi9.png){width=70%}
+
+
+Bağımsız bir yazıtipi boyutu elde etmek için `\fontsize` ile
+`\selectfont` komutları birlikte kullanılır.
+
+
+```latex
+{\fontsize{<boyut>}{<aralık>}\selectfont <metin>}
+```
+
+
+Buradaki `<boyut>` yazıtipi boyutu, `<aralık>` ise satır aralığıdır.
+İkisinin de ölçü birimi punto (pt) olup, temel kural, aralığın boyutun
+$1.2$ katı olmasıdır.
+
+
+```latex
+{\fontsize{30}{36}\selectfont
+Yazı tipi boyutu 30 punto,
+satır aralığı 36 punto.}
+```
+
+
+Ana yazıtipi boyutu `\normalsize` komutunda saklı olup, `\renewcommand`
+komutuyla değiştirilebilir.
+
+
+```latex
+\renewcommand{\normalsize}{\fontsize{30}{36}\selectfont}
+```
+
+
+Yukarıdaki komutu sahanlığa yazarsanız belgenizin ana yazıtipi boyutu 
+30  pt, satır aralığı ise  36  pt olur.
+
+## Renk Kullanmak
+
+{{< latex >}}'de renkler
+[**color**](http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/required/graphics/color.pdf) ya da
+[**xcolor**](http://ftp.ntua.gr/mirror/ctan/macros/latex/contrib/xcolor/xcolor.pdf) paketleriyle kullanılır. İkinci paket daha
+güçlüdür.
+
+
+```latex
+\usepackage{xcolor}
+```
+
+
+komutuyla paketi ekledikten sonra `\color` ya da `\textcolor` komutları
+aşağıdaki şekillerde kullanılır.
+
+
+```latex
+\color{red}{Kırmızı}\\
+{\color{blue} Tamamı mavi}\\
+\textcolor{pink}{Pembe}
+```
+
+
+
+Kullanılabilecek renk adları black, white, gray, darkgray, lightgray,
+brown, red, green, blue, cyan, magenta, lime, olive, orange, pink,
+purple, teal, violet ve yellow'dur.
+
+Eğer `\documentclass` komutunun seçeneğine `divpsnames` yazılırsa
+aşağıdaki renkler de kullanılabilir duruma gelir.
+
+
+![**dvipsnames** seçeneğiyle gelen
+renkler](images/renkler.png){width=100%}
+
+Bunlar da yeterli gelmiyorsa seçeneklere bir de `svgnames` yazın ve
+[buradaki](https://www.latextemplates.com/svgnames-colors) yüzden fazla rengi kullanılabilir duruma getirin.
+
+
+```latex
+\documentclass[svgnames,dvipsnames]{article}
+```
+
+
+### Yeni renkler oluşturmak
+
+{{< latex >}}'in size hazır olarak verdiği renkler yeterli gelmezse kendi
+renklerinizi oluşturabilirsiniz. Bu, iki şekilde yapılabilir.
+
+Hazır renkler istenilen oranlarda karıştırılarak yeni renkler elde
+edilebilir. Aşağıda karışımın nasıl hazırlanabileceği gösterilmiştir.
+
+
+```latex
+\color{blue!80}{\%80 mavi \%20 beyaz}\\
+\color{red!40!blue}{\%40 kırmızı \%60 mavi} \\
+{\color{yellow!20!green!75!black} \%20x0.75=15 sarı
+\%(100-20)x0.75=60 yeşil \%100-75=25 siyah}
+```
+
+
+
+ <!-- [Çıktı](https://github.com/acarzfr/latex-dersleri/blob/main/examples/ex6.pdf) --> 
+
+İkinci yol `\definecolor` komutuyla renk modelleri kullanmaktır.
+
+Table: (\#tab:renkmod) Renk Modelleri
+
+| **Model** | **Açıklama** |
+| :--- | :--- |
+| gray | Grinin tonları (0-1). 0 (siyah), 1 (beyaz). Yani 0.95 çok açık gri, 0.30 koyu gri olur. |
+| rgb | Red, Green, Blue (0-1). Üç renk (kırmızı, yeșil, mavi) 0 ile 1 arasında bir sayıyla temsil edilir. |
+| RGB | Red, Green, Blue (0-255). Üç renk (karmızı, yeșil, mavi) 0 ile 255 arasında bir sayıyla temsil edilir. |
+| HTML | Red, Green, Blue (OO-FF). Kodlar RRGGBB şeklinde verilir. |
+| cmyk | Cyan, Magenta, Yellow, Black (0-1). Dört renk (camgöbeği, eflatun, sarı, siyah) 0 ile 1 arasında bir sayıyla temsil edilir. |
+
+Komut
+
+
+```latex
+\definecolor{<isim>}{<renk modeli>}{<kod>}
+```
+
+
+şeklinde verilir. Burada `<isim>`, sizin daha sonra kullanmak üzere
+vereceğiniz bir isimdir. Kodlar için
+[HueSnap](https://www.huesnap.com/color) adresinden yararlanabilirsiniz. Örneğin
+
+
+```latex
+\definecolor{renk1}{gray}{0.50}
+\definecolor{renk2}{rgb}{1,0.7,0.3}
+\definecolor{renk3}{RGB}{125,32,200}
+\definecolor{renk4}{HTML}{CC33CC}
+\definecolor{renk5}{cmyk}{0,0.7,1,0.5}
+```
+
+
+komutlarıyla `renk1`, `renk2`, `renk3`, `renk4` ve `renk5` adında beş
+adet renk tanımlanmış olur. Bu komutlar ya sahanlığa ya da bu renkleri
+kullanacağınız satırdan önce gövdeye yazılmalıdır.
+
+
+
+Yeni oluşturduğunuz rengi tek seferlik kullanacaksanız
+
+
+```latex
+\color[<model>]{<kod>}
+\textcolor[<model>]{<kod>}{<metin>}
+```
+
+
+komutlarını kullanabilirsiniz.
+
+
+```latex
+{\color[RGB]{102,0,51} Bol}\\
+\textcolor[RGB]{0,76,153}{Çeşit bol}
+```
+
+
+Metnin arka planını renklendirmek için `\colorbox` komutu kullanılır.
+Benzer `\fcolorbox` komutu aynı şeyi çizgi çizerek yapar.
+
+
+```latex
+\colorbox{<arka plan rengi>}{<metin>}
+\colorbox[<renk modeli>]{<arka plan rengi>}{<metin>}
+\fcolorbox{<çizgi rengi>}{<arka plan rengi>}{<metin>}
+\fcolorbox[<renk modeli>]{<çizgi rengi>}{<arka plan rengi>}{<metin>}
+```
+
+
+Komutlar yukarıda gösterildiği şekilde kullanılabilir.
+
+
+```latex
+\colorbox{Cyan}{Metin}
+\colorbox[rgb]{0.4,0.4,0.5}{Metin}
+\fcolorbox{red}{yellow}{Metin}
+\fcolorbox[RGB]{0,0,0}{255,204,255}{Metin}
+```
+
+
+Sayfaları renklendirmek için ise `\pagecolor` komutu kullanılır. Komutun
+zorunlu değişkeninde renk belirtilir. Tekrar normale (beyaz) dönmek için
+`\nopagecolor` komutu kullanılır. Eğer bu işe yaramazsa
+`\pagecolor{white}` komutunu kullanabilirsiniz.

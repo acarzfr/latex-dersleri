@@ -2,23 +2,23 @@
 
 ## Tipik Bir Belge Yazımı
 
-LaTeX'in varsayılan dosya uzantısı `.tex`'tir. Bu basit bir metin
-dosyası olup, LaTeX editörleriyle oluşturulup düzenlenebileceği gibi
+{{< latex >}}'in varsayılan dosya uzantısı `.tex`'tir. Bu basit bir metin
+dosyası olup, {{< latex >}} editörleriyle oluşturulup düzenlenebileceği gibi
 basit bir metin editörüyle de düzenlenebilir.
 
 Bir belge hazırlamaya başlamak için verilecek ilk komut  `\documentclass[...]{...}` olup, çengelli parantezler arasına oluşturmak istediğiniz belgenin sınıfı yazılır. Köşeli parantezlerin içine de isteğe bağlı bazı
-değişkenler yazılabilir. Eğer bu kısım boş bırakılırsa LaTeX varsayılan
+değişkenler yazılabilir. Eğer bu kısım boş bırakılırsa {{< latex >}} varsayılan
 değerleri alacaktır. Bu komutun ardından sırasıyla `\begin{document}` ve
 `\end{document}` komutları verilerek belge ortamı oluşturulur.
-`\end{document}` komutuyla LaTeX'e belgenin bittiği söylenmiş olur ve
-LaTeX bu komuttan sonra girilenleri dikkate almaz.
+`\end{document}` komutuyla {{< latex >}}'e belgenin bittiği söylenmiş olur ve
+{{< latex >}} bu komuttan sonra girilenleri dikkate almaz.
 
 `\documentclass` komutuyla `\begin{document}` komutu arasına *sahanlık*
 denir. Sahanlık, belgenin ayarlarının yapıldığı kısımdır ve bu kısım
 çıktıda görünmez. `\begin{document}` ile `\end{document}` arasına da
 *gövde* denir. İçerik burada oluşturulur.
 
-Aşağıda asgari bir LaTeX kaynak dosyası gösterilmiştir. `\documentclass`
+Aşağıda asgari bir {{< latex >}} kaynak dosyası gösterilmiştir. `\documentclass`
 komutunun değişkeni olan `article`, belgenin makale olacağını belirtir.
 
 
@@ -30,12 +30,12 @@ komutunun değişkeni olan `article`, belgenin makale olacağını belirtir.
 ```
 
 
-Bu noktadan sonra örnek kaynak dosyayı LaTeX editörünüzünde oluşturup
+Bu noktadan sonra örnek kaynak dosyayı {{< latex >}} editörünüzünde oluşturup
 önceden oluşturduğunuz bir dizine kaydedin. Kaydederken dosya adında
 boşluk ve Türkçe karakter kullanmayın. Örneğin kaynak dosyanız
 `belge1.tex` olsun.
 
-İkinci aşama kaynak dosyanın derlenmesidir. Derleme işlemi için LaTeX
+İkinci aşama kaynak dosyanın derlenmesidir. Derleme işlemi için {{< latex >}}
 editörlerinde genelde araç çubuğunda oklar bulunur. Oka tıklandığında
 dosya derlenir ve sonuç, çıktı ekranında görünür. 
 
@@ -57,11 +57,11 @@ ilerleyen yazılarda değinilecektir ancak dileyen okur @Oetiker'e bakabilir.
 
 ## Belge Sınıfları ve Seçenekleri {#ch-belgesinifi}
 
-Başka sınıflar olmakla birlikte LaTeX'de varsayılan olarak kullanılan
+Başka sınıflar olmakla birlikte {{< latex >}}'de varsayılan olarak kullanılan
 beş belge sınıfı vardır (@tbl-belgesin).  
 
 
-Table: LaTeX'de Belge Sınıfları {#tbl-belgesin}
+Table: {{< latex >}}'de Belge Sınıfları {#tbl-belgesin}
 
 | **Sınıf** | **Açıklama** |
 |:--|  :--|
@@ -75,7 +75,7 @@ Table: LaTeX'de Belge Sınıfları {#tbl-belgesin}
 Bu beş sınıftan `article`, `report` ve `book` için kullanılabilecek
 seçenekler  @tbl-belgesec'de gösterilmiştir.
 
-Table:  LaTeX'de Belge Seçenekleri {#tbl-belgesec}
+Table:  {{< latex >}}'de Belge Seçenekleri {#tbl-belgesec}
 
 | **Seçenek** | **Açıklama** |
 |:--|  :--|
@@ -112,7 +112,7 @@ Table: Seçeneklerin belge sınıflarına göre kullanılabilirliği (1: varsay�
 
 
 Örneğin belgeye `\documentclass[a4paper,12pt]{article}`
-komutuyla başlarsak LaTeX'e kağıt boyutu A4, ana yazı büyüklüğü 12 punto
+komutuyla başlarsak {{< latex >}}'e kağıt boyutu A4, ana yazı büyüklüğü 12 punto
 olan bir makale yazacağımızı bildirmiş oluruz.
 Başka bir örnek `\documentclass[a5paper,11pt,twocolumn]{book}`
 olsun. Bu örnekte kağıt boyutu A5, ana yazı büyüklüğü 11 punto olan bir
@@ -120,7 +120,7 @@ kitap yazacağımızı ve kitabın iki sütun olarak dizilmesini söyledik.
 
 ## Türkçe Dil Ayarları ve Çoklu Dil Kullanımı 
 
-LaTeX'de Türkçe belgeler oluşturmak için öncelikle sahanlığa
+{{< latex >}}'de Türkçe belgeler oluşturmak için öncelikle sahanlığa
 
 
 ```latex
@@ -148,7 +148,7 @@ zorunluluğu ortadan kalkmıştır.
 :::
 
 
-Aşağıda Türkçe asgari bir LaTeX kaynak dosyası örneği verilmiştir.
+Aşağıda Türkçe asgari bir {{< latex >}} kaynak dosyası örneği verilmiştir.
 
 
 ```latex
@@ -200,12 +200,12 @@ olmasına rağmen belgeye bir tablo eklediğinizde "Table" yerine yine
 
 ## Belgeye Başlık Oluşturma
 
-LaTeX'de belgeye başlık oluşturmak için `\title` komutu kullanılır.
+{{< latex >}}'de belgeye başlık oluşturmak için `\title` komutu kullanılır.
 Yazar adı `\author` komutuyla girilir. Birden fazla yazar varsa yazar
 adları arasına `\and` komutu girilir.
 
 İsteğe bağlı olarak tarih için `\date` komutu kullanılır. Eğer `\date`
-komutu kullanılmazsa LaTeX belgenizi derlediğiniz günün tarihini basar.
+komutu kullanılmazsa {{< latex >}} belgenizi derlediğiniz günün tarihini basar.
 Tarihin basılmasını istemiyorsanız, bu komutu tarih yazılmadan `\date{}`
 şeklinde kullanmanız gerekir.
 
@@ -235,9 +235,9 @@ teşekkür metni olabilir.
 
 ## Bölümleme ve İçindekiler Tablosu
 
-LaTeX'de belgenizi bölümlere ayırmak için 7 seviye bulunmaktadır.
+{{< latex >}}'de belgenizi bölümlere ayırmak için 7 seviye bulunmaktadır.
 
-Table:  LaTeX'de Bölüm Seviyeleri {#tbl-bolumseviyeleri}
+Table:  {{< latex >}}'de Bölüm Seviyeleri {#tbl-bolumseviyeleri}
 
 | **Komut** | **Seviye** | **Açıklama** |
 | :--- | :--- | :--- |
@@ -265,12 +265,12 @@ ise 1, 2, 3,... şeklinde numaralandırılır. `\section` komutu `book` ve
 diğer sınıflarda 1, 2, 3,... şeklinde numaralandırılır. `\subsection`
 komutu da `\section` komutunu takip ederek numaralandırılır.
 
-İçindekiler tablosu için LaTeX'e `\tableofcontents` komutu verilir. Bu
+İçindekiler tablosu için {{< latex >}}'e `\tableofcontents` komutu verilir. Bu
 komutun yazıldığı yerde İçindekiler tablosu oluşturulur. İçindekiler
 tablosunun doğru dizilmesi için kaynak dosyanızı en az iki kere
 derlemeniz gerekir.
 
-LaTeX'de `article` sınıfında 4 ve 5'inci seviye başlıklara, `book` ve
+{{< latex >}}'de `article` sınıfında 4 ve 5'inci seviye başlıklara, `book` ve
 `report` sınıflarında ise bunlara ek 3'üncü seviye başlıklara numara
 verilmez ve numara verilmeyen başlıklar İçindekiler tablosuna yazılmaz.
 Bu seviyelerdeki başlıklara numara verilmesini ve İçindekiler tablosuna
@@ -326,7 +326,7 @@ Bölüm komutlarının birde yıldızlı sürümleri vardır:
 Komutlar bu şekilde verildiğinde başlığa numara verilmez ve İçindekiler
 tablosuna yazılmaz.
 
-İçindekiler tablosunu LaTeX otomatik oluştursa da elle eklemeler
+İçindekiler tablosunu {{< latex >}} otomatik oluştursa da elle eklemeler
 yapılabilir, hatta Kaynakça gibi özel sayfalarda bu eklemeler
 gereklidir. Bunun için `\addcontentsline` komutu kullanılır.
 
@@ -360,7 +360,7 @@ komutunun verilmesi gerekir.
 
 :::{.callout-note}
 "Kaynakça" ya da "Kaynaklar" isimleri yerine farklı isimler
-kullanılabilir elbette. Ancak `thebibliography` ortamının oluşturulduğu yerlerde LaTeX bu isimleri yazdıracağından tutarlı
+kullanılabilir elbette. Ancak `thebibliography` ortamının oluşturulduğu yerlerde {{< latex >}} bu isimleri yazdıracağından tutarlı
 olması açısından bu isimler önerilmiştir.
 :::
 
@@ -393,9 +393,9 @@ olması açısından bu isimler önerilmiştir.
 
 ## Büyük Projeler
 
-LaTeX'de kitap yazmaya başlamak için belge sınıfı `book` seçilir. Bunun
+{{< latex >}}'de kitap yazmaya başlamak için belge sınıfı `book` seçilir. Bunun
 dışında kitapların *Baş*, *Gövde* ve *Son* kısımları olur. Bu kısımların
-nerede başlayıp nerede bittikleri aşağıdaki komutlarla LaTeX'e
+nerede başlayıp nerede bittikleri aşağıdaki komutlarla {{< latex >}}'e
 bildirilir:
 
 -   `\frontmatter` (baş) komutu` \begin{document}` komutundan hemen
@@ -451,7 +451,7 @@ bildirilir:
 ```
 
 Kitap gibi büyük hacimli belgelerle çalışırken kaynak dosyanızı
-parçalara ayırmak gerekebilir. LaTeX bunun için size iki komutla
+parçalara ayırmak gerekebilir. {{< latex >}} bunun için size iki komutla
 yardımcı olur: `\input` ve `\include`. İkisi arasındaki fark `\include`
 komutuyla eklediğiniz metin yeni bir sayfadan başlayarak dizilir.
 
@@ -474,7 +474,7 @@ komutunu kullanırsınız. Eğer dosya uzantısı `.tex` değilse (örneğin
 ```
 
 
-Ayrıca, hangi dosyaların eklenebileceğini LaTeX'e bildiren bir komut
+Ayrıca, hangi dosyaların eklenebileceğini {{< latex >}}'e bildiren bir komut
 vardır: `\includeonly`. Bu komut, sadece sahanlığa yazılabilir. Komutun
 zorunlu değişkeninde eklenebilecek dosyalar aralarına virgül koyularak
 (ve boşluk bırakılmadan) listelenir:

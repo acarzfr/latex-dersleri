@@ -1,0 +1,53 @@
+# Özelleştirmeler
+
+## Varsayılan Sayfa Düzenini Değiştirme
+
+{{< latex >}}'de varsayılan kağıt boyutunun `letterpaper` olduğunu Bölün \@ref(belgesinifi)'de ifade etmiştik. Ayrıca aynı yazıda başka bir kağıt boyutunun
+nasıl seçileceğine de yer vermiştik. Şimdi ise hem sayfamızın kenar
+boşluklarının nasıl ayarlanacağından hem de ön tanımlı olmayan, tamamen
+keyfi bir sayfa boyutunun nasıl belirleneceğinden bahsedelim.
+
+Bu tür sayfa düzenlemeleri için {{< latex >}}'de
+[**geometry**](http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/geometry/geometry.pdf) paketi kullanılır. Öncelikle paketi
+
+
+```latex
+\usepackage{geometry}
+```
+
+
+komutuyla sahanlığa ekleyin. Ardından paket seçeneklerinde aşağıdaki
+tanımlamalarla sayfanın düzenini değiştirebilirsiniz:
+
+
+| Tanım| Değer |
+| :--- | :--- |
+|  `top` | üst boșluk |
+| `bottom` | alt boșluk |
+| `left` | sol boșluk |
+| `right` | sağ boșluk |
+| `paperwidht` | sayfa genișliği |
+| `paperheight` | sayfa yüksekliği |
+
+
+Örneğin sahanlıkta
+
+```latex
+\usepackage[paperwidth=175mm,paperheight=255mm,top=2cm,bottom=2cm,
+left=2.5cm,right=2.5cm]{geometry}
+```
+
+
+komutunu verdiğinizde boyutu $175\times 255$ mm, üst ve alt boşluğu
+$2$ cm, sol ve sağ boşluğu $2.5$ cm olan bir sayfa düzeni
+oluşturursunuz. Dilerseniz `paperwidth` ve` paperheight` tanımlamalarını
+yerine, örneğin `a4paper` yazarak sadece kenar boşluklarla ilgili
+tanımlamaları yapabilirsiniz.
+
+
+:::{.callout-note}
+{{< latex >}}'de milimetre (mm) ve santimetre (cm) dışında inç (in), punto
+(pt), em ve ex gibi ölçü birimleri de vardır. Bunlara ileride
+ değinilecektir. Ayrıca yine ileride daha ayrıntılı sayfa düzeni
+oluşturmaktan da bahsedeceğiz. Bu aşamada bu kadarı yeterli olacaktır.
+:::

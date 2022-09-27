@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>LaTeX Dersleri - 2&nbsp; İlk Adımlar</title>
+<title>\LaTeX Dersleri - 2&nbsp; İlk Adımlar</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -107,8 +107,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./dizgi.html" rel="next">
-<link href="./temeller.html" rel="prev">
+<link href="./03-dizgi.html" rel="next">
+<link href="./01-temeller.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -260,6 +260,7 @@ div.csl-indent {
     }
 </script>
 
+
 <!--   GeoGebra  -->
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -290,6 +291,23 @@ graphing yerine geometry , 3d
 
 
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+
 </head>
 
 <body class="nav-sidebar floating">
@@ -311,10 +329,10 @@ graphing yerine geometry , 3d
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">LaTeX Dersleri</a> 
+      <a href="./"><span class="math inline">\LaTeX</span> Dersleri</a> 
         <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/acarzfr/latex-dersleri/" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
-    <a href="./LaTeX-Dersleri.pdf" title="Download PDF" class="sidebar-tool px-1"><i class="bi bi-file-pdf"></i></a>
+    <a href="./{{--latex--}}-Dersleri.pdf" title="Download PDF" class="sidebar-tool px-1"><i class="bi bi-file-pdf"></i></a>
     <a href="" title="Share" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-share"></i></a>
     <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
         <li>
@@ -347,37 +365,42 @@ graphing yerine geometry , 3d
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./temeller.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Temeller</span></a>
+  <a href="./01-temeller.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Temeller</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ilkadimlar.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">İlk Adımlar</span></a>
+  <a href="./02-ilkadimlar.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">İlk Adımlar</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dizgi.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dizgi</span></a>
+  <a href="./03-dizgi.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dizgi</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./matematik.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Matematiksel İfadeler</span></a>
+  <a href="./04-matematik.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Matematiksel İfadeler</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ozelsayfalar.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Özel Sayfalar</span></a>
+  <a href="./05-yuzergezer.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Yüzer Gezer Nesneler</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ozellestirmeler.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Özelleştirmeler</span></a>
+  <a href="./06-ozelsayfalar.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Özel Sayfalar</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./kaynakca.html" class="sidebar-item-text sidebar-link">Kaynakça</a>
+  <a href="./07-ozellestirmeler.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Özelleştirmeler</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-kaynakca.html" class="sidebar-item-text sidebar-link">Kaynakça</a>
   </div>
 </li>
     </ul>
@@ -419,27 +442,27 @@ graphing yerine geometry , 3d
 
 <section id="tipik-bir-belge-yazımı" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="tipik-bir-belge-yazımı"><span class="header-section-number">2.1</span> Tipik Bir Belge Yazımı</h2>
-<p>LaTeX’in varsayılan dosya uzantısı <code>.tex</code>’tir. Bu basit bir metin dosyası olup, LaTeX editörleriyle oluşturulup düzenlenebileceği gibi basit bir metin editörüyle de düzenlenebilir.</p>
-<p>Bir belge hazırlamaya başlamak için verilecek ilk komut <code>\documentclass[...]{...}</code> olup, çengelli parantezler arasına oluşturmak istediğiniz belgenin sınıfı yazılır. Köşeli parantezlerin içine de isteğe bağlı bazı değişkenler yazılabilir. Eğer bu kısım boş bırakılırsa LaTeX varsayılan değerleri alacaktır. Bu komutun ardından sırasıyla <code>\begin{document}</code> ve <code>\end{document}</code> komutları verilerek belge ortamı oluşturulur. <code>\end{document}</code> komutuyla LaTeX’e belgenin bittiği söylenmiş olur ve LaTeX bu komuttan sonra girilenleri dikkate almaz.</p>
+<p><span class="math inline">\LaTeX</span>’in varsayılan dosya uzantısı <code>.tex</code>’tir. Bu basit bir metin dosyası olup, <span class="math inline">\LaTeX</span> editörleriyle oluşturulup düzenlenebileceği gibi basit bir metin editörüyle de düzenlenebilir.</p>
+<p>Bir belge hazırlamaya başlamak için verilecek ilk komut <code>\documentclass[...]{...}</code> olup, çengelli parantezler arasına oluşturmak istediğiniz belgenin sınıfı yazılır. Köşeli parantezlerin içine de isteğe bağlı bazı değişkenler yazılabilir. Eğer bu kısım boş bırakılırsa <span class="math inline">\LaTeX</span> varsayılan değerleri alacaktır. Bu komutun ardından sırasıyla <code>\begin{document}</code> ve <code>\end{document}</code> komutları verilerek belge ortamı oluşturulur. <code>\end{document}</code> komutuyla <span class="math inline">\LaTeX</span>’e belgenin bittiği söylenmiş olur ve <span class="math inline">\LaTeX</span> bu komuttan sonra girilenleri dikkate almaz.</p>
 <p><code>\documentclass</code> komutuyla <code>\begin{document}</code> komutu arasına <em>sahanlık</em> denir. Sahanlık, belgenin ayarlarının yapıldığı kısımdır ve bu kısım çıktıda görünmez. <code>\begin{document}</code> ile <code>\end{document}</code> arasına da <em>gövde</em> denir. İçerik burada oluşturulur.</p>
-<p>Aşağıda asgari bir LaTeX kaynak dosyası gösterilmiştir. <code>\documentclass</code> komutunun değişkeni olan <code>article</code>, belgenin makale olacağını belirtir.</p>
+<p>Aşağıda asgari bir <span class="math inline">\LaTeX</span> kaynak dosyası gösterilmiştir. <code>\documentclass</code> komutunun değişkeni olan <code>article</code>, belgenin makale olacağını belirtir.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  İşte ilk belgem.</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Bu noktadan sonra örnek kaynak dosyayı LaTeX editörünüzünde oluşturup önceden oluşturduğunuz bir dizine kaydedin. Kaydederken dosya adında boşluk ve Türkçe karakter kullanmayın. Örneğin kaynak dosyanız <code>belge1.tex</code> olsun.</p>
-<p>İkinci aşama kaynak dosyanın derlenmesidir. Derleme işlemi için LaTeX editörlerinde genelde araç çubuğunda oklar bulunur. Oka tıklandığında dosya derlenir ve sonuç, çıktı ekranında görünür.</p>
+<p>Bu noktadan sonra örnek kaynak dosyayı <span class="math inline">\LaTeX</span> editörünüzünde oluşturup önceden oluşturduğunuz bir dizine kaydedin. Kaydederken dosya adında boşluk ve Türkçe karakter kullanmayın. Örneğin kaynak dosyanız <code>belge1.tex</code> olsun.</p>
+<p>İkinci aşama kaynak dosyanın derlenmesidir. Derleme işlemi için <span class="math inline">\LaTeX</span> editörlerinde genelde araç çubuğunda oklar bulunur. Oka tıklandığında dosya derlenir ve sonuç, çıktı ekranında görünür.</p>
 <p>Eğer metin editörü kullanıyorsanız derlemeyi uçbirimde (terminal, konsol,…) yapmanız gerekir. Derleme için uçbirim kaynak dosyanın olduğu dizinde açılıp</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pdflatex</span> belge1</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>komutu verilmelidir.</p>
-<p>Derleme işleminden sonra kaynak dosyanızın olduğu dizinde <code>belge1.tex</code> ve <code>belge1.pdf</code> dosyalarının yanında yine <code>belge1</code> ile başlayan farklı uzantılara sahip dosyalar olacaktır. Bu dosyaların ne olduklarına ilerleyen yazılarda değinilecektir ancak dileyen okur <span class="citation" data-cites="Oetiker">Oetiker vd. (<a href="kaynakca.html#ref-Oetiker" role="doc-biblioref">2006</a>)</span>’e bakabilir.</p>
+<p>Derleme işleminden sonra kaynak dosyanızın olduğu dizinde <code>belge1.tex</code> ve <code>belge1.pdf</code> dosyalarının yanında yine <code>belge1</code> ile başlayan farklı uzantılara sahip dosyalar olacaktır. Bu dosyaların ne olduklarına ilerleyen yazılarda değinilecektir ancak dileyen okur <span class="citation" data-cites="Oetiker">Oetiker vd. (<a href="08-kaynakca.html#ref-Oetiker" role="doc-biblioref">2006</a>)</span>’e bakabilir.</p>
 </section>
 <section id="ch-belgesinifi" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="ch-belgesinifi"><span class="header-section-number">2.2</span> Belge Sınıfları ve Seçenekleri</h2>
-<p>Başka sınıflar olmakla birlikte LaTeX’de varsayılan olarak kullanılan beş belge sınıfı vardır (<a href="#tbl-belgesin">Tablo&nbsp;<span>2.1</span></a>).</p>
+<p>Başka sınıflar olmakla birlikte <span class="math inline">\LaTeX</span>’de varsayılan olarak kullanılan beş belge sınıfı vardır (<a href="#tbl-belgesin">Tablo&nbsp;<span>2.1</span></a>).</p>
 <div id="tbl-belgesin" class="anchored">
 <table class="table">
-<caption>Tablo 2.1: LaTeX’de Belge Sınıfları</caption>
+<caption>Tablo 2.1: <span class="math inline">\LaTeX</span>’de Belge Sınıfları</caption>
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -477,7 +500,7 @@ graphing yerine geometry , 3d
 <p>Bu beş sınıftan <code>article</code>, <code>report</code> ve <code>book</code> için kullanılabilecek seçenekler <a href="#tbl-belgesec">Tablo&nbsp;<span>2.2</span></a>’de gösterilmiştir.</p>
 <div id="tbl-belgesec" class="anchored">
 <table class="table">
-<caption>Tablo 2.2: LaTeX’de Belge Seçenekleri</caption>
+<caption>Tablo 2.2: <span class="math inline">\LaTeX</span>’de Belge Seçenekleri</caption>
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -602,11 +625,11 @@ graphing yerine geometry , 3d
 </tbody>
 </table>
 </div>
-<p>Örneğin belgeye <code>\documentclass[a4paper,12pt]{article}</code> komutuyla başlarsak LaTeX’e kağıt boyutu A4, ana yazı büyüklüğü 12 punto olan bir makale yazacağımızı bildirmiş oluruz. Başka bir örnek <code>\documentclass[a5paper,11pt,twocolumn]{book}</code> olsun. Bu örnekte kağıt boyutu A5, ana yazı büyüklüğü 11 punto olan bir kitap yazacağımızı ve kitabın iki sütun olarak dizilmesini söyledik.</p>
+<p>Örneğin belgeye <code>\documentclass[a4paper,12pt]{article}</code> komutuyla başlarsak <span class="math inline">\LaTeX</span>’e kağıt boyutu A4, ana yazı büyüklüğü 12 punto olan bir makale yazacağımızı bildirmiş oluruz. Başka bir örnek <code>\documentclass[a5paper,11pt,twocolumn]{book}</code> olsun. Bu örnekte kağıt boyutu A5, ana yazı büyüklüğü 11 punto olan bir kitap yazacağımızı ve kitabın iki sütun olarak dizilmesini söyledik.</p>
 </section>
 <section id="türkçe-dil-ayarları-ve-çoklu-dil-kullanımı" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="türkçe-dil-ayarları-ve-çoklu-dil-kullanımı"><span class="header-section-number">2.3</span> Türkçe Dil Ayarları ve Çoklu Dil Kullanımı</h2>
-<p>LaTeX’de Türkçe belgeler oluşturmak için öncelikle sahanlığa</p>
+<p><span class="math inline">\LaTeX</span>’de Türkçe belgeler oluşturmak için öncelikle sahanlığa</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[T1]{<span class="ex">fontenc</span>}</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[turkish]{<span class="ex">babel</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>komutlarının verilmesi gerekir.</p>
@@ -624,7 +647,7 @@ Not
 <p>Yakın zamana kadar ö, ş, ç, gibi Türkçe karakterlerin kullanılabilmesi için sahanlığa <code>\usepackage[utf8]{inputenc}</code> ya da <code>\usepackage[latin5]{inputenc}</code> komutlarından birinin verilmesi gerekiyordu. Bu paket (<strong>inputenc</strong>) girdi kodlamasını yöneten bir pakettir. Son güncellemelerle birlikte bu paketin kullanılma zorunluluğu ortadan kalkmıştır.</p>
 </div>
 </div>
-<p>Aşağıda Türkçe asgari bir LaTeX kaynak dosyası örneği verilmiştir.</p>
+<p>Aşağıda Türkçe asgari bir <span class="math inline">\LaTeX</span> kaynak dosyası örneği verilmiştir.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[T1]{<span class="ex">fontenc</span>}</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[turkish]{<span class="ex">babel</span>}</span>
@@ -644,8 +667,8 @@ Not
 </section>
 <section id="belgeye-başlık-oluşturma" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="belgeye-başlık-oluşturma"><span class="header-section-number">2.4</span> Belgeye Başlık Oluşturma</h2>
-<p>LaTeX’de belgeye başlık oluşturmak için <code>\title</code> komutu kullanılır. Yazar adı <code>\author</code> komutuyla girilir. Birden fazla yazar varsa yazar adları arasına <code>\and</code> komutu girilir.</p>
-<p>İsteğe bağlı olarak tarih için <code>\date</code> komutu kullanılır. Eğer <code>\date</code> komutu kullanılmazsa LaTeX belgenizi derlediğiniz günün tarihini basar. Tarihin basılmasını istemiyorsanız, bu komutu tarih yazılmadan <code>\date{}</code> şeklinde kullanmanız gerekir.</p>
+<p><span class="math inline">\LaTeX</span>’de belgeye başlık oluşturmak için <code>\title</code> komutu kullanılır. Yazar adı <code>\author</code> komutuyla girilir. Birden fazla yazar varsa yazar adları arasına <code>\and</code> komutu girilir.</p>
+<p>İsteğe bağlı olarak tarih için <code>\date</code> komutu kullanılır. Eğer <code>\date</code> komutu kullanılmazsa <span class="math inline">\LaTeX</span> belgenizi derlediğiniz günün tarihini basar. Tarihin basılmasını istemiyorsanız, bu komutu tarih yazılmadan <code>\date{}</code> şeklinde kullanmanız gerekir.</p>
 <p>Son olarak, başlığın belgenize yazılması için <code>\begin{document}</code> komutundan sonra başlığı oluşturmak istediğiniz yere <code>\maketitle</code> komutunu girersiniz. Belge başlığını attıktan sonra yeni bir sayfanın açılıp açılmayacağı belgenin sınıfına bağlı olarak belirlenir.</p>
 <p>Ayrıca <code>\title</code>, <code>\author</code> ve <code>\date</code> komutları <code>\thanks</code> komutunu içerebilir. Bu komutun değişkeni bir e-posta adresi, iş adresi veya bir teşekkür metni olabilir.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[a4paper,12pt]{<span class="ex">article</span>}</span>
@@ -661,10 +684,10 @@ Not
 </section>
 <section id="bölümleme-ve-içindekiler-tablosu" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="bölümleme-ve-içindekiler-tablosu"><span class="header-section-number">2.5</span> Bölümleme ve İçindekiler Tablosu</h2>
-<p>LaTeX’de belgenizi bölümlere ayırmak için 7 seviye bulunmaktadır.</p>
+<p><span class="math inline">\LaTeX</span>’de belgenizi bölümlere ayırmak için 7 seviye bulunmaktadır.</p>
 <div id="tbl-bolumseviyeleri" class="anchored">
 <table class="table">
-<caption>Tablo 2.4: LaTeX’de Bölüm Seviyeleri</caption>
+<caption>Tablo 2.4: <span class="math inline">\LaTeX</span>’de Bölüm Seviyeleri</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;"><strong>Komut</strong></th>
@@ -713,8 +736,8 @@ Not
 </div>
 <p>Türkçe dil paketi ekli belgelerde <code>\part</code> komutu “Kısım”, <code>\chapter</code> komutu “Bölüm” olarak yazılır. Kısımlar I, II, III,… şeklinde bölümler ise 1, 2, 3,… şeklinde numaralandırılır. <code>\section</code> komutu <code>book</code> ve <code>report</code> sınıflarında <code>\chapter</code> komutunu takip ederek 1.1, 1.2,… diğer sınıflarda 1, 2, 3,… şeklinde numaralandırılır. <code>\subsection</code> komutu da <code>\section</code> komutunu takip ederek numaralandırılır.</p>
 <p>Türkçe dil paketi ekli belgelerde <code>\part</code> komutu “Kısım”, <code>\chapter</code> komutu “Bölüm” olarak yazılır. Kısımlar I, II, III,… şeklinde bölümler ise 1, 2, 3,… şeklinde numaralandırılır. <code>\section</code> komutu <code>book</code> ve <code>report</code> sınıflarında <code>\chapter</code> komutunu takip ederek 1.1, 1.2,… diğer sınıflarda 1, 2, 3,… şeklinde numaralandırılır. <code>\subsection</code> komutu da <code>\section</code> komutunu takip ederek numaralandırılır.</p>
-<p>İçindekiler tablosu için LaTeX’e <code>\tableofcontents</code> komutu verilir. Bu komutun yazıldığı yerde İçindekiler tablosu oluşturulur. İçindekiler tablosunun doğru dizilmesi için kaynak dosyanızı en az iki kere derlemeniz gerekir.</p>
-<p>LaTeX’de <code>article</code> sınıfında 4 ve 5’inci seviye başlıklara, <code>book</code> ve <code>report</code> sınıflarında ise bunlara ek 3’üncü seviye başlıklara numara verilmez ve numara verilmeyen başlıklar İçindekiler tablosuna yazılmaz. Bu seviyelerdeki başlıklara numara verilmesini ve İçindekiler tablosuna yazılması için iki adet <code>\setcounter</code> komutu</p>
+<p>İçindekiler tablosu için <span class="math inline">\LaTeX</span>’e <code>\tableofcontents</code> komutu verilir. Bu komutun yazıldığı yerde İçindekiler tablosu oluşturulur. İçindekiler tablosunun doğru dizilmesi için kaynak dosyanızı en az iki kere derlemeniz gerekir.</p>
+<p><span class="math inline">\LaTeX</span>’de <code>article</code> sınıfında 4 ve 5’inci seviye başlıklara, <code>book</code> ve <code>report</code> sınıflarında ise bunlara ek 3’üncü seviye başlıklara numara verilmez ve numara verilmeyen başlıklar İçindekiler tablosuna yazılmaz. Bu seviyelerdeki başlıklara numara verilmesini ve İçindekiler tablosuna yazılması için iki adet <code>\setcounter</code> komutu</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\setcounter</span>{secnumdepth}{&lt;seviye&gt;}</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\setcounter</span>{tocdepth}{&lt;seviye&gt;}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>şeklinde kullanılır. Birinci komuttaki <code>&lt;seviye&gt;</code> değişkeninde kaçıncı seviyeye kadar olan başlıkların numaralandırılacağını, ikinci komuttaki <code>&lt;seviye&gt;</code> değişkeninde de kaçıncı seviyeye kadar olan başlıkların İçindekiler tablosuna yazılacağını sayıyla belirtirsiniz. Örneğin <code>book</code> ve <code>report</code> sınıflarında</p>
@@ -732,7 +755,7 @@ Not
 <span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\paragraph*</span>{...}</span>
 <span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="kw">\subparagraph*</span>{...}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Komutlar bu şekilde verildiğinde başlığa numara verilmez ve İçindekiler tablosuna yazılmaz.</p>
-<p>İçindekiler tablosunu LaTeX otomatik oluştursa da elle eklemeler yapılabilir, hatta Kaynakça gibi özel sayfalarda bu eklemeler gereklidir. Bunun için <code>\addcontentsline</code> komutu kullanılır.</p>
+<p>İçindekiler tablosunu <span class="math inline">\LaTeX</span> otomatik oluştursa da elle eklemeler yapılabilir, hatta Kaynakça gibi özel sayfalarda bu eklemeler gereklidir. Bunun için <code>\addcontentsline</code> komutu kullanılır.</p>
 <div class="sourceCode" id="cb13"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\addcontentsline</span>{toc}{&lt;giriş formatı&gt;}{&lt;giriş metni&gt;}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Burada <code>toc</code>, bilginin yazılacağı İçindekiler tablosunun dosya uzantısıdır. Bütünleşik olarak oluşturduğunuz kaynakçanın İçindekiler tablosuna yazılması için <code>\begin{thebibliography}</code> komutunun peşine <code>book</code> ve <code>report</code> sınıflarında</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\addcontentsline</span>{toc}{chapter}{Kaynakça}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -749,7 +772,7 @@ Not
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>“Kaynakça” ya da “Kaynaklar” isimleri yerine farklı isimler kullanılabilir elbette. Ancak <code>thebibliography</code> ortamının oluşturulduğu yerlerde LaTeX bu isimleri yazdıracağından tutarlı olması açısından bu isimler önerilmiştir.</p>
+<p>“Kaynakça” ya da “Kaynaklar” isimleri yerine farklı isimler kullanılabilir elbette. Ancak <code>thebibliography</code> ortamının oluşturulduğu yerlerde <span class="math inline">\LaTeX</span> bu isimleri yazdıracağından tutarlı olması açısından bu isimler önerilmiştir.</p>
 </div>
 </div>
 <div class="sourceCode" id="cb16"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>[a4paper,12pt]{<span class="ex">article</span>}</span>
@@ -775,7 +798,7 @@ Not
 </section>
 <section id="büyük-projeler" class="level2" data-number="2.6">
 <h2 data-number="2.6" class="anchored" data-anchor-id="büyük-projeler"><span class="header-section-number">2.6</span> Büyük Projeler</h2>
-<p>LaTeX’de kitap yazmaya başlamak için belge sınıfı <code>book</code> seçilir. Bunun dışında kitapların <em>Baş</em>, <em>Gövde</em> ve <em>Son</em> kısımları olur. Bu kısımların nerede başlayıp nerede bittikleri aşağıdaki komutlarla LaTeX’e bildirilir:</p>
+<p><span class="math inline">\LaTeX</span>’de kitap yazmaya başlamak için belge sınıfı <code>book</code> seçilir. Bunun dışında kitapların <em>Baş</em>, <em>Gövde</em> ve <em>Son</em> kısımları olur. Bu kısımların nerede başlayıp nerede bittikleri aşağıdaki komutlarla <span class="math inline">\LaTeX</span>’e bildirilir:</p>
 <ul>
 <li><code>\frontmatter</code> (baş) komutu<code>\begin{document}</code> komutundan hemen sonra verilir. Bu komut, baş taraftaki İçindekiler, Önsöz gibi kısımların sayfa numaralandırmasını Roma rakamıyla yapar. Ayrıca bu kısımda bölüm komutları (<code>*</code>) işareti olmadan verildiğinde (örneğin <code>\chapter{Önsöz}</code>) bunlara numara verilmez ancak İçindekiler tablosuna yazılırlar.</li>
 <li><code>\mainmatter</code> (gövde) komutu kitabın ilk bölüm başlığından hemen önce verilmelidir. Buradan itibaren sayfa numaralandırmasını yeniden başlatıp Arap rakamlarına geçer.</li>
@@ -816,12 +839,12 @@ Not
 <span id="cb17-32"><a href="#cb17-32" aria-hidden="true" tabindex="-1"></a><span class="fu">\backmatter</span></span>
 <span id="cb17-33"><a href="#cb17-33" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb17-34"><a href="#cb17-34" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Kitap gibi büyük hacimli belgelerle çalışırken kaynak dosyanızı parçalara ayırmak gerekebilir. LaTeX bunun için size iki komutla yardımcı olur: <code>\input</code> ve <code>\include</code>. İkisi arasındaki fark <code>\include</code> komutuyla eklediğiniz metin yeni bir sayfadan başlayarak dizilir.</p>
+<p>Kitap gibi büyük hacimli belgelerle çalışırken kaynak dosyanızı parçalara ayırmak gerekebilir. <span class="math inline">\LaTeX</span> bunun için size iki komutla yardımcı olur: <code>\input</code> ve <code>\include</code>. İkisi arasındaki fark <code>\include</code> komutuyla eklediğiniz metin yeni bir sayfadan başlayarak dizilir.</p>
 <p>Bu komutların zorunlu değişkeni eklemek istediğiniz dosyanın adıdır. Örneğin kaynak dosyanızla aynı dizinde yer alan <code>dosya1.tex</code> dosyasını eklemek için</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\include</span>{<span class="ex">dosya1</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>komutunu kullanırsınız. Eğer dosya uzantısı <code>.tex</code> değilse (örneğin <code>.txt</code> olsun) o zaman dosya adını uzantısıyla yazmanız gerekir:</p>
 <div class="sourceCode" id="cb19"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\include</span>{<span class="ex">dosya1.txt</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Ayrıca, hangi dosyaların eklenebileceğini LaTeX’e bildiren bir komut vardır: <code>\includeonly</code>. Bu komut, sadece sahanlığa yazılabilir. Komutun zorunlu değişkeninde eklenebilecek dosyalar aralarına virgül koyularak (ve boşluk bırakılmadan) listelenir:</p>
+<p>Ayrıca, hangi dosyaların eklenebileceğini <span class="math inline">\LaTeX</span>’e bildiren bir komut vardır: <code>\includeonly</code>. Bu komut, sadece sahanlığa yazılabilir. Komutun zorunlu değişkeninde eklenebilecek dosyalar aralarına virgül koyularak (ve boşluk bırakılmadan) listelenir:</p>
 <div class="sourceCode" id="cb20"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\includeonly</span>{dosya1,dosya2,dosya3,...}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Böyle bir liste oluşturulduktan sonra bu listede olmayan bir dosya artık <code>\include</code> komutuyla kaynak dosyaya eklenemez.</p>
 <p><code>\input</code> komutu sahanlıkta da kullanılabilir. Örneğin, sahanlığınızı tek bir dosyaya yazıp, bu dosyayı bu komutla sahanlığa ekleyebilirsiniz.</p>
@@ -946,23 +969,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./temeller.html" class="pagination-link">
+      <a href="./01-temeller.html" class="pagination-link">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Temeller</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./dizgi.html" class="pagination-link">
+      <a href="./03-dizgi.html" class="pagination-link">
         <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dizgi</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left"><a href="https://creativecommons.org/licenses/by-sa/4.0/deed.tr">CC BY-SA 4.0</a></div>   
-  </div>
-</footer>
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom","loop":true,"selector":".lightbox"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":true,"closeEffect":"zoom","selector":".lightbox","descPosition":"bottom","openEffect":"zoom"});</script>
 
 
 

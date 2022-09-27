@@ -9,7 +9,7 @@
 <meta name="author" content="Zafer ACAR">
 <meta name="dcterms.date" content="2022-06-03">
 
-<title>LaTeX Dersleri</title>
+<title>\LaTeX Dersleri</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -90,7 +90,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./temeller.html" rel="next">
+<link href="./01-temeller.html" rel="next">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -270,6 +270,23 @@ graphing yerine geometry , 3d
 
 
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+
 </head>
 
 <body class="nav-sidebar floating">
@@ -278,7 +295,7 @@ graphing yerine geometry , 3d
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
     <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">LaTeX Dersleri</h1>
+      <h1 class="quarto-secondary-nav-title"><span class="math inline">\LaTeX</span> Dersleri</h1>
       <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
         <i class="bi bi-chevron-right"></i>
       </button>
@@ -291,10 +308,10 @@ graphing yerine geometry , 3d
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">LaTeX Dersleri</a> 
+      <a href="./"><span class="math inline">\LaTeX</span> Dersleri</a> 
         <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/acarzfr/latex-dersleri/" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
-    <a href="./LaTeX-Dersleri.pdf" title="Download PDF" class="sidebar-tool px-1"><i class="bi bi-file-pdf"></i></a>
+    <a href="./{{--latex--}}-Dersleri.pdf" title="Download PDF" class="sidebar-tool px-1"><i class="bi bi-file-pdf"></i></a>
     <a href="" title="Share" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-share"></i></a>
     <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
         <li>
@@ -327,37 +344,42 @@ graphing yerine geometry , 3d
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./temeller.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Temeller</span></a>
+  <a href="./01-temeller.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Temeller</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ilkadimlar.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">İlk Adımlar</span></a>
+  <a href="./02-ilkadimlar.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">İlk Adımlar</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dizgi.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dizgi</span></a>
+  <a href="./03-dizgi.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dizgi</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./matematik.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Matematiksel İfadeler</span></a>
+  <a href="./04-matematik.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Matematiksel İfadeler</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ozelsayfalar.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Özel Sayfalar</span></a>
+  <a href="./05-yuzergezer.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Yüzer Gezer Nesneler</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ozellestirmeler.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Özelleştirmeler</span></a>
+  <a href="./06-ozelsayfalar.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Özel Sayfalar</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./kaynakca.html" class="sidebar-item-text sidebar-link">Kaynakça</a>
+  <a href="./07-ozellestirmeler.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Özelleştirmeler</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-kaynakca.html" class="sidebar-item-text sidebar-link">Kaynakça</a>
   </div>
 </li>
     </ul>
@@ -378,7 +400,7 @@ graphing yerine geometry , 3d
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">LaTeX Dersleri</h1>
+<h1 class="title d-none d-lg-block"><span class="math inline">\LaTeX</span> Dersleri</h1>
 </div>
 
 
@@ -406,14 +428,14 @@ graphing yerine geometry , 3d
 
 <section id="sunuş" class="level1 unnumbered">
 <h1 class="unnumbered">Sunuş</h1>
-<p>Bu kitap, artık aktif olmayan <a href="https://texdizgi.com/" class="uri">https://texdizgi.com/</a> adresinde yazmış olduğum yazıların derlenmesiyle ortaya çıktı. Aslında oradaki yazılar da LaTeX’le ilgili yazmaya başladığım ve bir türlü sonunun getiremediğim kitabın tamamlanmış bölümlerinin ürünüydü.</p>
-<p>Kitabı doğal olarak LaTeX’le yazıyordum. <a href="https://rmarkdown.rstudio.com/">RMarkdown</a> ve <a href="https://quarto.org/">Quarto</a> ile tanıştıktan sonra kitabı yalnızca PDF olarak değil, etkileşime izin vermesi ve daha bir çok avantajından dolayı HTML olarak da dağıtmaya karar verdim.</p>
+<p>Bu kitap, artık aktif olmayan <a href="https://texdizgi.com/" class="uri">https://texdizgi.com/</a> adresinde yazmış olduğum yazıların derlenmesiyle ortaya çıktı. Aslında oradaki yazılar da <span class="math inline">\LaTeX</span>’le ilgili yazmaya başladığım ve bir türlü sonunun getiremediğim kitabın tamamlanmış bölümlerinin ürünüydü.</p>
+<p>Kitabı doğal olarak <span class="math inline">\LaTeX</span>’le yazıyordum. <a href="https://rmarkdown.rstudio.com/">RMarkdown</a> ve <a href="https://quarto.org/">Quarto</a> ile tanıştıktan sonra kitabı yalnızca PDF olarak değil, etkileşime izin vermesi ve daha bir çok avantajından dolayı HTML olarak da dağıtmaya karar verdim.</p>
 <p>Kitap etkileşimli hale <a href="https://texlive.net/">TeXLive.net</a> sayesinde geldi. Okurun internet bağlantısı olduğunda etkileşimli HTML sürümünü kullanması önerilir.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  Merhaba <span class="fu">\LaTeX</span>!</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Yukarıdaki “Derle” düğmesine bastığınızda LaTeX çıktısı ile “Çıktıyı Temizle” düğmesi görünecek.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Dilerseniz bu düğmeye basarak çıktıyı temizleyebilirsiniz. Ayrıca içeriği değiştirerek kendi denemelerinizi yapabilirsiniz.</p>
+<p>Yukarıdaki “Derle” düğmesine bastığınızda <span class="math inline">\LaTeX</span> çıktısı ile “Çıktıyı Temizle” düğmesi görünecek.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Dilerseniz bu düğmeye basarak çıktıyı temizleyebilirsiniz. Ayrıca içeriği değiştirerek kendi denemelerinizi yapabilirsiniz.</p>
 <p>Keyifli okumalar.</p>
 
 
@@ -527,7 +549,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   <div class="nav-page nav-page-previous">
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./temeller.html" class="pagination-link">
+      <a href="./01-temeller.html" class="pagination-link">
         <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Temeller</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>

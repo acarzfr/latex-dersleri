@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>LaTeX Dersleri - 1&nbsp; Temeller</title>
+<title>\LaTeX Dersleri - 1&nbsp; Temeller</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -88,7 +88,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./ilkadimlar.html" rel="next">
+<link href="./02-ilkadimlar.html" rel="next">
 <link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -238,6 +238,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     }
 </script>
 
+
 <!--   GeoGebra  -->
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -268,6 +269,23 @@ graphing yerine geometry , 3d
 
 
 
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+
 </head>
 
 <body class="nav-sidebar floating">
@@ -289,10 +307,10 @@ graphing yerine geometry , 3d
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">LaTeX Dersleri</a> 
+      <a href="./"><span class="math inline">\LaTeX</span> Dersleri</a> 
         <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/acarzfr/latex-dersleri/" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
-    <a href="./LaTeX-Dersleri.pdf" title="Download PDF" class="sidebar-tool px-1"><i class="bi bi-file-pdf"></i></a>
+    <a href="./{{--latex--}}-Dersleri.pdf" title="Download PDF" class="sidebar-tool px-1"><i class="bi bi-file-pdf"></i></a>
     <a href="" title="Share" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-share"></i></a>
     <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
         <li>
@@ -325,37 +343,42 @@ graphing yerine geometry , 3d
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./temeller.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Temeller</span></a>
+  <a href="./01-temeller.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Temeller</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ilkadimlar.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">İlk Adımlar</span></a>
+  <a href="./02-ilkadimlar.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">İlk Adımlar</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dizgi.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dizgi</span></a>
+  <a href="./03-dizgi.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dizgi</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./matematik.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Matematiksel İfadeler</span></a>
+  <a href="./04-matematik.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Matematiksel İfadeler</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ozelsayfalar.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Özel Sayfalar</span></a>
+  <a href="./05-yuzergezer.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Yüzer Gezer Nesneler</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ozellestirmeler.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Özelleştirmeler</span></a>
+  <a href="./06-ozelsayfalar.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Özel Sayfalar</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./kaynakca.html" class="sidebar-item-text sidebar-link">Kaynakça</a>
+  <a href="./07-ozellestirmeler.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Özelleştirmeler</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-kaynakca.html" class="sidebar-item-text sidebar-link">Kaynakça</a>
   </div>
 </li>
     </ul>
@@ -367,10 +390,10 @@ graphing yerine geometry , 3d
     <h2 id="toc-title">İçindekiler</h2>
    
   <ul>
-  <li><a href="#tex" id="toc-tex" class="nav-link active" data-scroll-target="#tex"> <span class="header-section-number">1.1</span> TeX</a></li>
-  <li><a href="#latex" id="toc-latex" class="nav-link" data-scroll-target="#latex"> <span class="header-section-number">1.2</span> LaTeX</a></li>
+  <li><a href="#tex" id="toc-tex" class="nav-link active" data-scroll-target="#tex"> <span class="header-section-number">1.1</span> <span class="math inline">\TeX</span></a></li>
+  <li><a href="#latex" id="toc-latex" class="nav-link" data-scroll-target="#latex"> <span class="header-section-number">1.2</span> <span class="math inline">\LaTeX</span></a></li>
   <li><a href="#temel-farklılıklar" id="toc-temel-farklılıklar" class="nav-link" data-scroll-target="#temel-farklılıklar"> <span class="header-section-number">1.3</span> Temel Farklılıklar</a></li>
-  <li><a href="#neden-latex" id="toc-neden-latex" class="nav-link" data-scroll-target="#neden-latex"> <span class="header-section-number">1.4</span> Neden LaTeX</a></li>
+  <li><a href="#neden-latex" id="toc-neden-latex" class="nav-link" data-scroll-target="#neden-latex"> <span class="header-section-number">1.4</span> Neden <span class="math inline">\LaTeX</span></a></li>
   <li><a href="#önemli-yapılar" id="toc-önemli-yapılar" class="nav-link" data-scroll-target="#önemli-yapılar"> <span class="header-section-number">1.5</span> Önemli Yapılar</a>
   <ul class="collapse">
   <li><a href="#komutlar" id="toc-komutlar" class="nav-link" data-scroll-target="#komutlar"> <span class="header-section-number">1.5.1</span> Komutlar</a></li>
@@ -386,7 +409,7 @@ graphing yerine geometry , 3d
   <li><a href="#gnulinux" id="toc-gnulinux" class="nav-link" data-scroll-target="#gnulinux"> <span class="header-section-number">1.6.1</span> GNU/Linux</a></li>
   <li><a href="#mac-os" id="toc-mac-os" class="nav-link" data-scroll-target="#mac-os"> <span class="header-section-number">1.6.2</span> Mac OS</a></li>
   <li><a href="#windows" id="toc-windows" class="nav-link" data-scroll-target="#windows"> <span class="header-section-number">1.6.3</span> Windows</a></li>
-  <li><a href="#latex-editörleri" id="toc-latex-editörleri" class="nav-link" data-scroll-target="#latex-editörleri"> <span class="header-section-number">1.6.4</span> LaTeX editörleri</a></li>
+  <li><a href="#latex-editörleri" id="toc-latex-editörleri" class="nav-link" data-scroll-target="#latex-editörleri"> <span class="header-section-number">1.6.4</span> <span class="math inline">\LaTeX</span> editörleri</a></li>
   <li><a href="#çevrimiçi-editörler" id="toc-çevrimiçi-editörler" class="nav-link" data-scroll-target="#çevrimiçi-editörler"> <span class="header-section-number">1.6.5</span> Çevrimiçi editörler</a></li>
   </ul></li>
   </ul>
@@ -412,40 +435,40 @@ graphing yerine geometry , 3d
 </header>
 
 <section id="tex" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="tex"><span class="header-section-number">1.1</span> TeX</h2>
-<p>TEX, birçok matematiksel ve teknik ifade içeren belgeleri yüksek kaliteli çıktı ile üretmek için Stanford Üniversitesi’nden Profesör <a href="https://www-cs-faculty.stanford.edu/~knuth/">Donald E.Knuth</a> tarafından, başlangıçta “<a href="https://www-cs-faculty.stanford.edu/~knuth/taocp.html">Bilgisayar Programlama Sanatı</a>” adlı kitap serisinin hazırlanması için tasarlanmış bir dizgi programıdır. Teknik kitaplar ve makaleler üreten birçok yazar ve yayıncı tarafından benimsenmiştir. TeX, Knuth tarafından ücretsiz olarak kullanıma sunulmuştur.</p>
+<h2 data-number="1.1" class="anchored" data-anchor-id="tex"><span class="header-section-number">1.1</span> <span class="math inline">\TeX</span></h2>
+<p><span class="math inline">\TeX</span>, birçok matematiksel ve teknik ifade içeren belgeleri yüksek kaliteli çıktı ile üretmek için Stanford Üniversitesi’nden Profesör <a href="https://www-cs-faculty.stanford.edu/~knuth/">Donald E.Knuth</a> tarafından, başlangıçta “<a href="https://www-cs-faculty.stanford.edu/~knuth/taocp.html">Bilgisayar Programlama Sanatı</a>” adlı kitap serisinin hazırlanması için tasarlanmış bir dizgi programıdır. Teknik kitaplar ve makaleler üreten birçok yazar ve yayıncı tarafından benimsenmiştir. <span class="math inline">\TeX</span>, Knuth tarafından ücretsiz olarak kullanıma sunulmuştur.</p>
 </section>
 <section id="latex" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="latex"><span class="header-section-number">1.2</span> LaTeX</h2>
-<p>LaTeX (La(mport)TeX), <a href="http://www.lamport.org/">Leslie Lamport</a> tarafından TeX üzerine kurulmuştur. Amacı TeX’i daha işlevli ve kolay hale getirmektir.</p>
+<h2 data-number="1.2" class="anchored" data-anchor-id="latex"><span class="header-section-number">1.2</span> <span class="math inline">\LaTeX</span></h2>
+<p><span class="math inline">\LaTeX</span> (La(mport)<span class="math inline">\TeX</span>), <a href="http://www.lamport.org/">Leslie Lamport</a> tarafından <span class="math inline">\TeX</span> üzerine kurulmuştur. Amacı <span class="math inline">\TeX</span>’i daha işlevli ve kolay hale getirmektir.</p>
 <p>Günümüzde Frank Mittelbach liderliğinde bir grup programcı tarafından <a href="https://www.latex-project.org/latex3/">geliştirilmektedir</a>.</p>
 </section>
 <section id="temel-farklılıklar" class="level2" data-number="1.3">
 <h2 data-number="1.3" class="anchored" data-anchor-id="temel-farklılıklar"><span class="header-section-number">1.3</span> Temel Farklılıklar</h2>
-<p>LaTeX, genelde WYSIWYG (<em>Ne Görüyorsan Onu Alırsın</em>) editörleriyle karşılaştırılır. WYSIWYG, Microsoft Word, Libreoffice Writer gibi kelime işlemcilere ya da Adobe Indesign gibi programlara verilen genel bir isimdir. Hepsinin ortak özelliği, girdi ile çıktının aynı anda ve birlikte görünmesidir.</p>
-<p>LaTeX’de girdi ve çıktı ekranı farklıdır ve çıktıyı görmek için girdinin derleme işleminden geçmesi gerekir. LaTeX’in zor gibi görünmesinin bir nedeni de komutlarla çalışmasıdır. Gerçekten de WYSIWYG programlarına alışkın bir kullanıcı için bu süreç başlangıçta biraz sıkıcı ve zor olabilir. Ancak belli bir aşamaya geldiğinizde komutlarla çalışmanın aslında işleri kolaylaştırdığını göreceksinizdir. Örneğin LaTeX’le binlerce sayfadan oluşan bir kitabın içindekiler tablosunu oluşturmak için sadece <code>\tableofcontents</code> komutunu girersiniz ve LaTeX bu komutu girdiğiniz yere içindekiler tablosunu hatasız bir şekilde yazdırır. Ayrıca örnekte görüldüğü gibi LaTeX komutları doğal dile<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> oldukça yakındır.</p>
-<p>Bir metnin genel görünümü ve okunabilirliği, metnin nasıl hizalandığından ve kesildiğinden büyük ölçüde etkilenir. LaTeX, tüm paragraf için hizalamayı ve kesmeleri optimize eden son derece gelişmiş TeX algoritmalarını kullanır. Kelime işlemciler ve diğer programlar, satır başına çalıştıkları için oldukça yetersiz kalırlar. Bu, diğer şeylerin yanı sıra düzensiz aralıklara ve birçok kısa çizgiye sebep olur. Sonuçları görmeniz için Microsoft Word 2008 (Mac), Adobe InDesign CS4 ve LaTeX’le dizilmiş bir metni <a href="http://www.rtznet.nl/zink/comparison.pdf">şuradan</a> inceleyebilirsiniz.</p>
-<p>Sonuç, LaTeX’in diğer programların her ikisinden de üstün olduğunu açıkça gösterir: iki kat daha az tireleme kullanır ve yine de sözcük aralığındaki varyasyon, Word veya InDesign’dan belirgin şekilde daha azdır. LaTeX’te çok büyük sözcük aralığı içeren satırlar oluşmaz.</p>
+<p><span class="math inline">\LaTeX</span>, genelde WYSIWYG (<em>Ne Görüyorsan Onu Alırsın</em>) editörleriyle karşılaştırılır. WYSIWYG, Microsoft Word, Libreoffice Writer gibi kelime işlemcilere ya da Adobe Indesign gibi programlara verilen genel bir isimdir. Hepsinin ortak özelliği, girdi ile çıktının aynı anda ve birlikte görünmesidir.</p>
+<p><span class="math inline">\LaTeX</span>’de girdi ve çıktı ekranı farklıdır ve çıktıyı görmek için girdinin derleme işleminden geçmesi gerekir. <span class="math inline">\LaTeX</span>’in zor gibi görünmesinin bir nedeni de komutlarla çalışmasıdır. Gerçekten de WYSIWYG programlarına alışkın bir kullanıcı için bu süreç başlangıçta biraz sıkıcı ve zor olabilir. Ancak belli bir aşamaya geldiğinizde komutlarla çalışmanın aslında işleri kolaylaştırdığını göreceksinizdir. Örneğin <span class="math inline">\LaTeX</span>’le binlerce sayfadan oluşan bir kitabın içindekiler tablosunu oluşturmak için sadece <code>\tableofcontents</code> komutunu girersiniz ve <span class="math inline">\LaTeX</span> bu komutu girdiğiniz yere içindekiler tablosunu hatasız bir şekilde yazdırır. Ayrıca örnekte görüldüğü gibi <span class="math inline">\LaTeX</span> komutları doğal dile<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> oldukça yakındır.</p>
+<p>Bir metnin genel görünümü ve okunabilirliği, metnin nasıl hizalandığından ve kesildiğinden büyük ölçüde etkilenir. <span class="math inline">\LaTeX</span>, tüm paragraf için hizalamayı ve kesmeleri optimize eden son derece gelişmiş <span class="math inline">\TeX</span> algoritmalarını kullanır. Kelime işlemciler ve diğer programlar, satır başına çalıştıkları için oldukça yetersiz kalırlar. Bu, diğer şeylerin yanı sıra düzensiz aralıklara ve birçok kısa çizgiye sebep olur. Sonuçları görmeniz için Microsoft Word 2008 (Mac), Adobe InDesign CS4 ve <span class="math inline">\LaTeX</span>’le dizilmiş bir metni <a href="http://www.rtznet.nl/zink/comparison.pdf">şuradan</a> inceleyebilirsiniz.</p>
+<p>Sonuç, <span class="math inline">\LaTeX</span>’in diğer programların her ikisinden de üstün olduğunu açıkça gösterir: iki kat daha az tireleme kullanır ve yine de sözcük aralığındaki varyasyon, Word veya InDesign’dan belirgin şekilde daha azdır. <span class="math inline">\LaTeX</span>’te çok büyük sözcük aralığı içeren satırlar oluşmaz.</p>
 </section>
 <section id="neden-latex" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="neden-latex"><span class="header-section-number">1.4</span> Neden LaTeX</h2>
-<p>LaTeX’i kullanmaya karar vermeniz için birkaç neden:</p>
+<h2 data-number="1.4" class="anchored" data-anchor-id="neden-latex"><span class="header-section-number">1.4</span> Neden <span class="math inline">\LaTeX</span></h2>
+<p><span class="math inline">\LaTeX</span>’i kullanmaya karar vermeniz için birkaç neden:</p>
 <ul>
 <li><p>Ücretsizdir ve tüm işletim sistemlerinde düşük donanım gereksinimleriyle çalışır.</p></li>
 <li><p>Basit bir metin editörüyle bile kaynak dosyanızı düzenleyebilirsiniz.</p></li>
 <li><p>Her sürüm bir önceki sürümü içerdiğinden şimdi hazırladığınız bir belgeyi on yıl sonra da kullanabilirsiniz, hiçbir zaman “Dosya bu sürümle uyumlu değil’’ biçiminde bir uyarıyla karşılaşmazsınız.</p></li>
 <li><p>Bir belgedeki biçim veya metni diğer bir belgeye kolaylıkla taşıyabilir ve düzenleyebilirsiniz. Bu, internetten bulabileceğiniz binlerce şablonu kullanabileceğiniz anlamına gelir.</p></li>
-<li><p>Belgenizi LaTeX biçimlendirir, siz sadece içeriğe odaklanırsınız.</p></li>
+<li><p>Belgenizi <span class="math inline">\LaTeX</span> biçimlendirir, siz sadece içeriğe odaklanırsınız.</p></li>
 <li><p>Dipnot koymak, atıf yapmak, kaynakça, dizin ve içindekiler tablosu oluşturmak işten bile sayılmaz.</p></li>
-<li><p>Matematiksel formüller kullanacaksanız, bu LaTeX’in en güçlü olduğu konudur. Formülleri belgenize adeta <em>inci dizer gibi</em> dizer.</p></li>
-<li><p>Çok yaygındır. Uluslararası bir çok yayınevi (örneğin Springer) ve dergi yazarlardan LaTeX dosyalarını talep eder.</p></li>
+<li><p>Matematiksel formüller kullanacaksanız, bu <span class="math inline">\LaTeX</span>’in en güçlü olduğu konudur. Formülleri belgenize adeta <em>inci dizer gibi</em> dizer.</p></li>
+<li><p>Çok yaygındır. Uluslararası bir çok yayınevi (örneğin Springer) ve dergi yazarlardan <span class="math inline">\LaTeX</span> dosyalarını talep eder.</p></li>
 </ul>
 </section>
 <section id="önemli-yapılar" class="level2" data-number="1.5">
 <h2 data-number="1.5" class="anchored" data-anchor-id="önemli-yapılar"><span class="header-section-number">1.5</span> Önemli Yapılar</h2>
 <section id="komutlar" class="level3" data-number="1.5.1">
 <h3 data-number="1.5.1" class="anchored" data-anchor-id="komutlar"><span class="header-section-number">1.5.1</span> Komutlar</h3>
-<p>LaTeX komutları bir geribölü (<code>\</code>) işaretiyle başlar ve ya sadece harflerden ya da bir tane harf olmayan karakterden oluşurlar. Komut yazıldıktan sonra ya boşluk, ya bir sayı ya da harf olmayan bir karakter gelebilir.</p>
+<p><span class="math inline">\LaTeX</span> komutları bir geribölü (<code>\</code>) işaretiyle başlar ve ya sadece harflerden ya da bir tane harf olmayan karakterden oluşurlar. Komut yazıldıktan sonra ya boşluk, ya bir sayı ya da harf olmayan bir karakter gelebilir.</p>
 <p>Çoğu komut, zorunlu değişken alır. Bu zorunlu değişken komut adından sonra çengelli parantezler içine yazılır. Zorunlu değişken alan komutlar, zorunlu olmayan (isteğe bağlı) değişkenler de alabilir, bunlar da komut adından sonra gelen köşeli parantezler içine yazılırlar. Eğer değişkenler birden fazlaysa aralarına virgül koyularak ayrılır.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\:</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\LaTeX</span></span>
@@ -459,13 +482,13 @@ graphing yerine geometry , 3d
 </section>
 <section id="paketler" class="level3" data-number="1.5.2">
 <h3 data-number="1.5.2" class="anchored" data-anchor-id="paketler"><span class="header-section-number">1.5.2</span> Paketler</h3>
-<p>LaTeX’de bazı özelliklerin (renkli yazmak, şekil eklemek vb.) kullanılabilmesi için kaynak dosyaya bazı paketlerin eklenmesi gerekir. Bu, <code>\usepackage</code> komutuyla yapılır. Bu komutun zorunlu değişkenine paket adı, zorunlu olmayan kısmına ise paket seçenekleri yazılır:</p>
+<p><span class="math inline">\LaTeX</span>’de bazı özelliklerin (renkli yazmak, şekil eklemek vb.) kullanılabilmesi için kaynak dosyaya bazı paketlerin eklenmesi gerekir. Bu, <code>\usepackage</code> komutuyla yapılır. Bu komutun zorunlu değişkenine paket adı, zorunlu olmayan kısmına ise paket seçenekleri yazılır:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[&lt;seçenekler&gt;]{<span class="ex">&lt;paket adı&gt;</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Bu komutla paketin kaynak dosyaya eklenmesi TeX dağıtımıyla sisteminize kurulmuş olan paketin belgeye çağrılarak işe koşulması demektir.</p>
+<p>Bu komutla paketin kaynak dosyaya eklenmesi <span class="math inline">\TeX</span> dağıtımıyla sisteminize kurulmuş olan paketin belgeye çağrılarak işe koşulması demektir.</p>
 </section>
 <section id="ortamlar" class="level3" data-number="1.5.3">
 <h3 data-number="1.5.3" class="anchored" data-anchor-id="ortamlar"><span class="header-section-number">1.5.3</span> Ortamlar</h3>
-<p>LaTeX’de ortamlar önemli bir yer tutar. Örneğin <code>document</code> bir ortamdır. Ortamları birden fazla ögeye uygulanan komutlar olarak düşünebiliriz.</p>
+<p><span class="math inline">\LaTeX</span>’de ortamlar önemli bir yer tutar. Örneğin <code>document</code> bir ortamdır. Ortamları birden fazla ögeye uygulanan komutlar olarak düşünebiliriz.</p>
 <p>Bir ortam <code>\begin</code> komutuyla başlayıp <code>\end</code> komutuyla biter. Her iki komutun zorunlu değişkeni ortamın adıdır:</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="er">&lt;</span>ortam adı&gt;}</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a> ...</span>
@@ -477,8 +500,8 @@ graphing yerine geometry , 3d
 </section>
 <section id="boşluklar" class="level3" data-number="1.5.5">
 <h3 data-number="1.5.5" class="anchored" data-anchor-id="boşluklar"><span class="header-section-number">1.5.5</span> Boşluklar</h3>
-<p>LaTeX’de belgenizin metnini oluştururken ister klavyedeki Space, ister Tab tuşu ile boşluk bırakın, bu boşluklar LaTeX tarafından bir karakter boşluk olarak algılanır. Arka arkaya çok sayıda boşluk bırakılsa da LaTeX bunu tek bir boşluk olarak algılar.</p>
-<p>Bütün bir satırın boş bırakılması LaTeX tarafından paragraf başı olarak algılanır. Arka arkaya boş bırakılan çok sayıda boş satır LaTeX tarafından tek bir boş satır yani paragraf başı olarak algılanır.</p>
+<p><span class="math inline">\LaTeX</span>’de belgenizin metnini oluştururken ister klavyedeki Space, ister Tab tuşu ile boşluk bırakın, bu boşluklar <span class="math inline">\LaTeX</span> tarafından bir karakter boşluk olarak algılanır. Arka arkaya çok sayıda boşluk bırakılsa da <span class="math inline">\LaTeX</span> bunu tek bir boşluk olarak algılar.</p>
+<p>Bütün bir satırın boş bırakılması <span class="math inline">\LaTeX</span> tarafından paragraf başı olarak algılanır. Arka arkaya boş bırakılan çok sayıda boş satır <span class="math inline">\LaTeX</span> tarafından tek bir boş satır yani paragraf başı olarak algılanır.</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a> <span class="kw">\begin</span>{<span class="ex">document</span>}</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    İster bir boşluk, isterseniz de çok         sayıda boşluk bırakın.</span>
@@ -486,7 +509,7 @@ graphing yerine geometry , 3d
 <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    Ayrıca boş bir satır yeni paragraf demektir, burada olduğu gibi.</span>
 <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a> <span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Komutlardan sonra gelen boşlukları LaTeX dikkate almaz. Komuttan sonra gerçekten bir boşluk bırakmak için, ya <code>{}</code> ve ardından boşluk girilir ya da komut adından sonra özel bir boşluk komutu kullanılır.</p>
+<p>Komutlardan sonra gelen boşlukları <span class="math inline">\LaTeX</span> dikkate almaz. Komuttan sonra gerçekten bir boşluk bırakmak için, ya <code>{}</code> ve ardından boşluk girilir ya da komut adından sonra özel bir boşluk komutu kullanılır.</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a> <span class="kw">\begin</span>{<span class="ex">document</span>}</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">\LaTeX</span>  boşluk yok.<span class="fu">\\</span></span>
@@ -496,7 +519,7 @@ graphing yerine geometry , 3d
 </section>
 <section id="yorum-satırları" class="level3" data-number="1.5.6">
 <h3 data-number="1.5.6" class="anchored" data-anchor-id="yorum-satırları"><span class="header-section-number">1.5.6</span> Yorum satırları</h3>
-<p>Yazar, kaynak dosyada, baskıda gözükmeyecek, kendine hatırlatma yapmak amacıyla yorumlar eklemek isteyebilir. Bunun için <code>%</code> sembolü kullanılır. LaTeX, bu sembolü gördüğü anda, o satırın geri kalanındaki her şeyi işlemeden bırakır ve bir sonraki satırın başına geçip devam eder.</p>
+<p>Yazar, kaynak dosyada, baskıda gözükmeyecek, kendine hatırlatma yapmak amacıyla yorumlar eklemek isteyebilir. Bunun için <code>%</code> sembolü kullanılır. <span class="math inline">\LaTeX</span>, bu sembolü gördüğü anda, o satırın geri kalanındaki her şeyi işlemeden bırakır ve bir sonraki satırın başına geçip devam eder.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a> <span class="kw">\begin</span>{<span class="ex">document</span>}</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  Yaz, <span class="co">% sonrası yok.</span></span>
@@ -517,7 +540,7 @@ graphing yerine geometry , 3d
 </section>
 <section id="özel-amaçlı-karakterler" class="level3" data-number="1.5.7">
 <h3 data-number="1.5.7" class="anchored" data-anchor-id="özel-amaçlı-karakterler"><span class="header-section-number">1.5.7</span> Özel amaçlı karakterler</h3>
-<p>Aşağıdaki karakterlerin herbiri LaTeX’de özel bir amaç için kullanılır. Dolayısıyla bu karakterleri doğrudan kullanmak istenmeyen sonuçlara yol açabilir.</p>
+<p>Aşağıdaki karakterlerin herbiri <span class="math inline">\LaTeX</span>’de özel bir amaç için kullanılır. Dolayısıyla bu karakterleri doğrudan kullanmak istenmeyen sonuçlara yol açabilir.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a># <span class="ss">$ </span><span class="co">%   &amp;   {   }   ~  ^  _ \</span></span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Bu karakterleri çıktıda elde etmek isterseniz, sondaki hariç, başına bir geribölü koymanız gerekir. Sondaki için, yani bir geribölü sembolü elde etmek içinse <code>\textbackslash</code> komutunu kullanabilirsiniz. Eğer <code>\\</code> komutunu verirseniz yeni bir satır başlatmış olursunuz.</p>
 <p>Örneğin (<code>$</code>) karakteri matematik kipini açma ve kapatmaya yarar. (<code>&amp;</code>) karekteri tablo ve benzeri yapılarda dikey hizalama yapmak için veya sütun ayracı olarak kullanılır. Çengelli parantezlerden ve yüzde sembolünden bahsettik. (<code>#</code>) karakteri yeni komutlar tanımlamakta kullanılır. Tilda (<code>~</code>) ise genişlemeyen bir boşluk yaratmak için kullanılır. (<code>^</code>) ve (<code>_</code>) karakterleri de matematikte üst ve alt indis yazmak için kullanılır. Her birinin kullanımlarından yeri geldiğinde tekrar bahsedeceğiz.</p>
@@ -525,8 +548,8 @@ graphing yerine geometry , 3d
 </section>
 <section id="kurulum" class="level2" data-number="1.6">
 <h2 data-number="1.6" class="anchored" data-anchor-id="kurulum"><span class="header-section-number">1.6</span> Kurulum</h2>
-<p>LaTeX’i kurmak için ilk olarak bir TeX dağıtımı edinmeniz gerekir. Dağıtımlar, dizgi sistemini ve LaTeX’de belge oluşturabilmek için gereken paketleri içerir.</p>
-<p>İkinci ihtiyaç duyacağınız şey bir LaTeX editörüdür. Edindiğiniz TeX dağıtımları genelde bir LaTeX editörüyle birlikte gelir. Tabi editör kişisel bir tercihtir ve bir LaTeX editörü yerine basit bir metin editörü kullanabilirsiniz. Ancak farklı işletim sistemleri için birçok iyi LaTeX editörü vardır ve bunların kod vurgulama, otomatik tamamlama, otomatik belge oluşturma gibi LaTeX’e özgü işlevleri vardır. Dolayısıyla LaTeX’de yeniyseniz bir editör kullanmanızı tavsiye ederiz.</p>
+<p><span class="math inline">\LaTeX</span>’i kurmak için ilk olarak bir <span class="math inline">\TeX</span> dağıtımı edinmeniz gerekir. Dağıtımlar, dizgi sistemini ve <span class="math inline">\LaTeX</span>’de belge oluşturabilmek için gereken paketleri içerir.</p>
+<p>İkinci ihtiyaç duyacağınız şey bir <span class="math inline">\LaTeX</span> editörüdür. Edindiğiniz <span class="math inline">\TeX</span> dağıtımları genelde bir <span class="math inline">\LaTeX</span> editörüyle birlikte gelir. Tabi editör kişisel bir tercihtir ve bir <span class="math inline">\LaTeX</span> editörü yerine basit bir metin editörü kullanabilirsiniz. Ancak farklı işletim sistemleri için birçok iyi <span class="math inline">\LaTeX</span> editörü vardır ve bunların kod vurgulama, otomatik tamamlama, otomatik belge oluşturma gibi <span class="math inline">\LaTeX</span>’e özgü işlevleri vardır. Dolayısıyla <span class="math inline">\LaTeX</span>’de yeniyseniz bir editör kullanmanızı tavsiye ederiz.</p>
 <section id="gnulinux" class="level3" data-number="1.6.1">
 <h3 data-number="1.6.1" class="anchored" data-anchor-id="gnulinux"><span class="header-section-number">1.6.1</span> GNU/Linux</h3>
 <p>Linux sistemlere <a href="https://miktex.org/download">MiKTeX</a> ya da <a href="http://www.tug.org/texlive/">TeX Live</a> kurulabilir. MiKTeX’in indirme sayfasında Ubuntu, Mint, Debian, Fedora, CentOS ve openSUSE gibi Linux dağıtımlarında nasıl kurulacağı anlatılmıştır. TeX Live ise tüm popüler Linux dağıtımlarının depolarında mevcut olup, paket yöneticisi ya da komut satırı yardımıyla kurulabilir. Örneğin Ubuntu, Debian, Mint, Pardus gibi <code>.deb</code> uzantılı paketlerin kullanıldığı dağıtımlarda</p>
@@ -550,19 +573,19 @@ graphing yerine geometry , 3d
 <p>MiKTeX veya TeX Live dağıtımını kurarsanız sisteminize <a href="https://www.tug.org/texworks/">TeXworks</a> editörü de kurulur. proTeXt dağıtımı MiKTeX tabanlı bir dağıtım olup, tüm paketleri içerir ve beraberinde <a href="https://texstudio.org/">TeXstudio</a> editörüyle gelir.</p>
 </section>
 <section id="latex-editörleri" class="level3" data-number="1.6.4">
-<h3 data-number="1.6.4" class="anchored" data-anchor-id="latex-editörleri"><span class="header-section-number">1.6.4</span> LaTeX editörleri</h3>
+<h3 data-number="1.6.4" class="anchored" data-anchor-id="latex-editörleri"><span class="header-section-number">1.6.4</span> <span class="math inline">\LaTeX</span> editörleri</h3>
 <p>Hangi editörü kullanacağınıza birkaç deneme yaptıktan sonra karar verebilirsiniz. <a href="https://beebom.com/best-latex-editors/">Burada</a> en çok beğenilen editörler listelenmiş.</p>
-<p>Her LaTeX editöründe olan özelliklerin (otomatik kod tamamlama vb.) yanı sıra kullanıcı dostu arayüzü, yüzde yüze yakın Türkçe desteği, ücretsiz oluşu ve her üç sistemde de çalışabilmesinden dolayı <a href="https://texstudio.org/">TeXstudio</a>’yu tavsiye ediyoruz. Karar sizin.</p>
+<p>Her <span class="math inline">\LaTeX</span> editöründe olan özelliklerin (otomatik kod tamamlama vb.) yanı sıra kullanıcı dostu arayüzü, yüzde yüze yakın Türkçe desteği, ücretsiz oluşu ve her üç sistemde de çalışabilmesinden dolayı <a href="https://texstudio.org/">TeXstudio</a>’yu tavsiye ediyoruz. Karar sizin.</p>
 </section>
 <section id="çevrimiçi-editörler" class="level3" data-number="1.6.5">
 <h3 data-number="1.6.5" class="anchored" data-anchor-id="çevrimiçi-editörler"><span class="header-section-number">1.6.5</span> Çevrimiçi editörler</h3>
-<p>LaTeX’i hiçbir kurulum yapmadan çevrimiçi de kullanabilirsiniz. Aşağıda üç tanesi listelenmiştir.</p>
+<p><span class="math inline">\LaTeX</span>’i hiçbir kurulum yapmadan çevrimiçi de kullanabilirsiniz. Aşağıda üç tanesi listelenmiştir.</p>
 <ul>
 <li><a href="https://www.overleaf.com/" target="_blank" rel="noreferrer noopener">Overleaf</a></li>
 <li><a href="https://papeeria.com/" target="_blank" rel="noreferrer noopener">Papeeria</a></li>
-<li><a href="https://latexbase.com/" target="_blank" rel="noreferrer noopener">LaTeX Base</a></li>
+<li><a href="https://latexbase.com/" target="_blank" rel="noreferrer noopener"><span class="math inline">\LaTeX</span> Base</a></li>
 </ul>
-<p>En popüler olanı Overleaf olup, sayfasında beğenebileceğiniz binlerce <a href="https://www.overleaf.com/latex/templates" target="_blank" rel="noreferrer noopener">şablon</a> ve LaTeX kullanımına yönelik <a href="https://www.overleaf.com/learn" target="_blank" rel="noreferrer noopener">anlatımlar</a> bulunur.</p>
+<p>En popüler olanı Overleaf olup, sayfasında beğenebileceğiniz binlerce <a href="https://www.overleaf.com/latex/templates" target="_blank" rel="noreferrer noopener">şablon</a> ve <span class="math inline">\LaTeX</span> kullanımına yönelik <a href="https://www.overleaf.com/learn" target="_blank" rel="noreferrer noopener">anlatımlar</a> bulunur.</p>
 
 
 </section>
@@ -679,7 +702,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./ilkadimlar.html" class="pagination-link">
+      <a href="./02-ilkadimlar.html" class="pagination-link">
         <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">İlk Adımlar</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>

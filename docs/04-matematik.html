@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>LaTeX Dersleri - 4&nbsp; Matematiksel İfadeler</title>
+<title>\LaTeX Dersleri - 4&nbsp; Matematiksel İfadeler</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -88,8 +88,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./ozelsayfalar.html" rel="next">
-<link href="./dizgi.html" rel="prev">
+<link href="./05-yuzergezer.html" rel="next">
+<link href="./03-dizgi.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -238,6 +238,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     }
 </script>
 
+
 <!--   GeoGebra  -->
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -267,7 +268,23 @@ graphing yerine geometry , 3d
 
 
 
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+ var mathElements = document.getElementsByClassName("math");
+ var macros = [];
+ for (var i = 0; i < mathElements.length; i++) {
+  var texText = mathElements[i].firstChild;
+  if (mathElements[i].tagName == "SPAN") {
+   katex.render(texText.data, mathElements[i], {
+    displayMode: mathElements[i].classList.contains('display'),
+    throwOnError: false,
+    macros: macros,
+    fleqn: false
+   });
+}}});
+  </script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
 </head>
 
@@ -290,10 +307,10 @@ graphing yerine geometry , 3d
   <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">LaTeX Dersleri</a> 
+      <a href="./"><span class="math inline">\LaTeX</span> Dersleri</a> 
         <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/acarzfr/latex-dersleri/" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
-    <a href="./LaTeX-Dersleri.pdf" title="Download PDF" class="sidebar-tool px-1"><i class="bi bi-file-pdf"></i></a>
+    <a href="./{{--latex--}}-Dersleri.pdf" title="Download PDF" class="sidebar-tool px-1"><i class="bi bi-file-pdf"></i></a>
     <a href="" title="Share" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-share"></i></a>
     <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
         <li>
@@ -326,37 +343,42 @@ graphing yerine geometry , 3d
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./temeller.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Temeller</span></a>
+  <a href="./01-temeller.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Temeller</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ilkadimlar.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">İlk Adımlar</span></a>
+  <a href="./02-ilkadimlar.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">İlk Adımlar</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./dizgi.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dizgi</span></a>
+  <a href="./03-dizgi.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dizgi</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./matematik.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Matematiksel İfadeler</span></a>
+  <a href="./04-matematik.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Matematiksel İfadeler</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ozelsayfalar.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Özel Sayfalar</span></a>
+  <a href="./05-yuzergezer.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Yüzer Gezer Nesneler</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./ozellestirmeler.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Özelleştirmeler</span></a>
+  <a href="./06-ozelsayfalar.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Özel Sayfalar</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./kaynakca.html" class="sidebar-item-text sidebar-link">Kaynakça</a>
+  <a href="./07-ozellestirmeler.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Özelleştirmeler</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./08-kaynakca.html" class="sidebar-item-text sidebar-link">Kaynakça</a>
   </div>
 </li>
     </ul>
@@ -411,7 +433,7 @@ graphing yerine geometry , 3d
 
 </header>
 
-<p>Matematik formüllerini dizmek, kuşkusuz, LaTeX’in en güçlü olduğu konulardan biridir. Çok fazla matematiksel gösterimin varlığından dolayı da büyük bir konudur. Bu bölümde ileri bir matematik kitabını dizmek için gereken birçok şey anlatılacaktır ancak işin sınırları göz önüne alındığında başka kaynaklara da başvurmanız gerekebilir.</p>
+<p>Matematik formüllerini dizmek, kuşkusuz, <span class="math inline">\LaTeX</span>’in en güçlü olduğu konulardan biridir. Çok fazla matematiksel gösterimin varlığından dolayı da büyük bir konudur. Bu bölümde ileri bir matematik kitabını dizmek için gereken birçok şey anlatılacaktır ancak işin sınırları göz önüne alındığında başka kaynaklara da başvurmanız gerekebilir.</p>
 <section id="giriş" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="giriş"><span class="header-section-number">4.1</span> Giriş</h2>
 <p>Belgenizde yalnızca birkaç basit matematiksel formül kullanacaksanız herhangi bir pakete gerek olmadan yazabilirsiniz. Ancak çok sayıda karmaşık formül içeren bilimsel bir belge yazma niyetindeyseniz temel <a href="https://www.ams.org/publications/authors/tex/amslatex" data-texel="noreferrer noopener" target="_blank">AMS</a> paketlerini kullanmanız gerekir. Bu paketler <a href="http://ftp.ntua.gr/mirror/ctan/macros/latex/required/amsmath/amsmath.pdf" data-texel="noreferrer noopener" target="_blank">amsmath</a> , <a href="https://texdoc.net/texmf-dist/doc/fonts/amsfonts/amssymb.pdf" data-texel="noreferrer noopener" target="_blank">amssymb</a> ve <a href="http://ftp.ntua.gr/mirror/ctan/fonts/amsfonts/doc/amsfonts.pdf" data-texel="noreferrer noopener" target="_blank">amsfonts</a>’dir.</p>
@@ -419,15 +441,15 @@ graphing yerine geometry , 3d
 <p>Yukarıdaki komutu sahanlığa yazarak paketleri belgenize ekleyiniz. Bundan sonra bu paketleri eklediğinizi varsayarak devam edeceğiz ve bunların dışında bir pakete ihtiyaç duyarsak ayrıca belirteceğiz.</p>
 <section id="genel" class="level3" data-number="4.1.1">
 <h3 data-number="4.1.1" class="anchored" data-anchor-id="genel"><span class="header-section-number">4.1.1</span> Genel</h3>
-<p>Belgenizin metnini oluştururken LaTeX’in metnin ne zaman matematiksel olduğunu bilmesi gerekir. Bunun nedeni, LaTeX’in matematiksel ifadeleri normal metinden farklı bir şekilde dizmesidir. Bu nedenle matematiksel ifadeler, normal metinden farklı olarak bazı ortamlarda girilirler.</p>
-<p>Matematik özel ortamlar gerektirdiğinden, doğal olarak standart şekilde kullanabileceğiniz uygun ortam adları vardır. Bununla birlikte, diğer ortamların çoğundan farklı olarak, formülünüzü bildirmek için bazı kullanışlı kısaltmalar vardır. LaTeX’de bu ortamlar ya da kısaltmalar kullanılarak formüller iki türlü dizilir:</p>
+<p>Belgenizin metnini oluştururken <span class="math inline">\LaTeX</span>’in metnin ne zaman matematiksel olduğunu bilmesi gerekir. Bunun nedeni, <span class="math inline">\LaTeX</span>’in matematiksel ifadeleri normal metinden farklı bir şekilde dizmesidir. Bu nedenle matematiksel ifadeler, normal metinden farklı olarak bazı ortamlarda girilirler.</p>
+<p>Matematik özel ortamlar gerektirdiğinden, doğal olarak standart şekilde kullanabileceğiniz uygun ortam adları vardır. Bununla birlikte, diğer ortamların çoğundan farklı olarak, formülünüzü bildirmek için bazı kullanışlı kısaltmalar vardır. <span class="math inline">\LaTeX</span>’de bu ortamlar ya da kısaltmalar kullanılarak formüller iki türlü dizilir:</p>
 <ul>
-<li>Formüller satırın içinde, yani bildirildiği metnin gövdesi içine yazılır: <span class="math inline">\(\lim_{n \to \infty} \sum_{k=1}^n \frac{1}{k^2} =\frac{\pi^2}{6}\)</span>. Görüldüğü gibi LaTeX, paragraf yapısını bozmamak için sembolleri olabildiğince sıkıştırır ve gerek görürse alttakileri yana kaydırır.</li>
-<li>Formüller ayrı bir satırda tek başlarına tüm detaylarıyla sergilenir: <span class="math display">\[\lim_{n \to \infty} \sum_{k=1}^n
-\frac{1}{k^2} =\frac{\pi^2}{6}.\]</span></li>
+<li>Formüller satırın içinde, yani bildirildiği metnin gövdesi içine yazılır: <span class="math inline">\lim_{n \to \infty} \sum_{k=1}^n \frac{1}{k^2} =\frac{\pi^2}{6}</span>. Görüldüğü gibi <span class="math inline">\LaTeX</span>, paragraf yapısını bozmamak için sembolleri olabildiğince sıkıştırır ve gerek görürse alttakileri yana kaydırır.</li>
+<li>Formüller ayrı bir satırda tek başlarına tüm detaylarıyla sergilenir: <span class="math display">\lim_{n \to \infty} \sum_{k=1}^n
+\frac{1}{k^2} =\frac{\pi^2}{6}.</span></li>
 </ul>
 <p>Formülün satır içerisinde dizilmesi için ya <code>$...$</code> arasına arasına, ya <code>\(...\)</code> arasına ya da <code>\begin{math}</code> ile <code>\end{math}</code>arasına, yani <code>math</code> ortamında yazılması gerekir. Üçü de aynı sonucu verir.</p>
-<p>Formülün sergilenmesi içinse ya <code>\[...\]</code> arasına ya <code>displaymath</code> ortamında ya da <code>equation</code> ortamında yazılması gerekir. <code>equation</code>ortamında yazılan formülü LaTeX otomatik numaralandırır. Numara verilmesini istemezseniz ortamı <code>equation*</code> şeklinde kullanmanız gerekir.</p>
+<p>Formülün sergilenmesi içinse ya <code>\[...\]</code> arasına ya <code>displaymath</code> ortamında ya da <code>equation</code> ortamında yazılması gerekir. <code>equation</code>ortamında yazılan formülü <span class="math inline">\LaTeX</span> otomatik numaralandırır. Numara verilmesini istemezseniz ortamı <code>equation*</code> şeklinde kullanmanız gerekir.</p>
 <div class="callout-note callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -438,7 +460,7 @@ Not
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>TeX’in eski sürümlerinde formüller, sergilenmeleri için <code>$$...$$</code> arasına yazılırdı. Bu kullanım hala geçerlidir ancak bazı sorunlara yol açabildiğinden (örneğin belge seçeneğine <code>fleqn</code> yazıldığında) kullanımı önerilmez.</p>
+<p><span class="math inline">\TeX</span>’in eski sürümlerinde formüller, sergilenmeleri için <code>$$...$$</code> arasına yazılırdı. Bu kullanım hala geçerlidir ancak bazı sorunlara yol açabildiğinden (örneğin belge seçeneğine <code>fleqn</code> yazıldığında) kullanımı önerilmez.</p>
 </div>
 </div>
 <div class="sourceCode" id="cb2"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
@@ -499,7 +521,7 @@ Not
 </section>
 <section id="boşluklar" class="level3" data-number="4.1.4">
 <h3 data-number="4.1.4" class="anchored" data-anchor-id="boşluklar"><span class="header-section-number">4.1.4</span> Boşluklar</h3>
-<p>Bazen LaTeX formülleri dizerken olması gerektiği gibi boşluk bırakma konusunda yetersiz kalabilir. Bu durumda boşluklar elle oluşturulur. Boşluklar için kullanılabilecek komutlar tablodaki gibidir.</p>
+<p>Bazen <span class="math inline">\LaTeX</span> formülleri dizerken olması gerektiği gibi boşluk bırakma konusunda yetersiz kalabilir. Bu durumda boşluklar elle oluşturulur. Boşluklar için kullanılabilecek komutlar tablodaki gibidir.</p>
 <table class="table">
 <tbody>
 <tr class="odd">
@@ -568,7 +590,7 @@ Not
 </section>
 <section id="parantezler-gruplandırıcılar-ve-oklar" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="parantezler-gruplandırıcılar-ve-oklar"><span class="header-section-number">4.2</span> Parantezler, Gruplandırıcılar ve Oklar</h2>
-<p>LaTeX’de her türlü parantez ve gruplandırıcı kullanılabilir. Yuvarlak ve köşeli parantezler klavyedeki yerlerinden, çengelli parantez ise <code>\{</code> ve <code>\}</code> komutları kullanılarak girilir.</p>
+<p><span class="math inline">\LaTeX</span>’de her türlü parantez ve gruplandırıcı kullanılabilir. Yuvarlak ve köşeli parantezler klavyedeki yerlerinden, çengelli parantez ise <code>\{</code> ve <code>\}</code> komutları kullanılarak girilir.</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[T1]{<span class="ex">fontenc</span>}</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[turkish]{<span class="ex">babel</span>}</span>
@@ -590,38 +612,38 @@ Not
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">( <code>(</code> ) <code>)</code></td>
-<td style="text-align: left;"><span class="math inline">\(\uparrow\)</span> <code>\uparrow</code></td>
-<td style="text-align: left;"><span class="math inline">\([\)</span> <code>[</code> ya da <code>\lbrack</code></td>
+<td style="text-align: left;"><span class="math inline">\uparrow</span> <code>\uparrow</code></td>
+<td style="text-align: left;"><span class="math inline">[</span> <code>[</code> ya da <code>\lbrack</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">\(]\)</span> <code>]</code> ya da <code>\rbrack</code></td>
-<td style="text-align: left;"><span class="math inline">\(\downarrow\)</span> <code>\downarrow</code></td>
-<td style="text-align: left;"><span class="math inline">\(\lbrace\)</span> <code>\{</code> ya da <code>\lbrace</code></td>
+<td style="text-align: left;"><span class="math inline">]</span> <code>]</code> ya da <code>\rbrack</code></td>
+<td style="text-align: left;"><span class="math inline">\downarrow</span> <code>\downarrow</code></td>
+<td style="text-align: left;"><span class="math inline">\lbrace</span> <code>\{</code> ya da <code>\lbrace</code></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(\rbrace\)</span> <code>\}</code> ya da <code>\rbrace</code></td>
-<td style="text-align: left;"><span class="math inline">\(\updownarrow\)</span> <code>\updownarrow</code></td>
-<td style="text-align: left;"><span class="math inline">\(\langle\)</span> <code>\langle</code></td>
+<td style="text-align: left;"><span class="math inline">\rbrace</span> <code>\}</code> ya da <code>\rbrace</code></td>
+<td style="text-align: left;"><span class="math inline">\updownarrow</span> <code>\updownarrow</code></td>
+<td style="text-align: left;"><span class="math inline">\langle</span> <code>\langle</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\rangle\)</span> <code>\rangle</code></td>
-<td style="text-align: left;"><span class="math inline">\(\vert\)</span> <code>|</code> ya da <code>\vert</code></td>
-<td style="text-align: left;"><span class="math inline">\(\lfloor\)</span> <code>\lfloor</code></td>
+<td style="text-align: left;"><span class="math inline">\rangle</span> <code>\rangle</code></td>
+<td style="text-align: left;"><span class="math inline">\vert</span> <code>|</code> ya da <code>\vert</code></td>
+<td style="text-align: left;"><span class="math inline">\lfloor</span> <code>\lfloor</code></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(\rfloor\)</span> <code>\rfloor</code></td>
-<td style="text-align: left;"><span class="math inline">\(\lceil\)</span> <code>\lceil</code></td>
-<td style="text-align: left;"><span class="math inline">\(\rceil\)</span> <code>\rceil</code></td>
+<td style="text-align: left;"><span class="math inline">\rfloor</span> <code>\rfloor</code></td>
+<td style="text-align: left;"><span class="math inline">\lceil</span> <code>\lceil</code></td>
+<td style="text-align: left;"><span class="math inline">\rceil</span> <code>\rceil</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">\(/\)</span> <code>/</code></td>
-<td style="text-align: left;"><span class="math inline">\(\backslash\)</span> <code>\backslash</code></td>
-<td style="text-align: left;"><span class="math inline">\(\Updownarrow\)</span> <code>\Updownarrow</code></td>
+<td style="text-align: left;"><span class="math inline">/</span> <code>/</code></td>
+<td style="text-align: left;"><span class="math inline">\backslash</span> <code>\backslash</code></td>
+<td style="text-align: left;"><span class="math inline">\Updownarrow</span> <code>\Updownarrow</code></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>Grup açıcı bir sembolün önüne <code>\left</code> komutu, grup kapatıcı bir sembolün önüne de <code>\right</code> komutu yazılırsa LaTeX onları en uygun boyda dizer. Her bir <code>\left</code> komutuna karşılık mutlaka bir <code>\right</code> komutu bulunmalıdır. Bunların doğru boyda dizilmesi için iki komutunda aynı satırda yer almasına dikkat edilmelidir. Sol/sağ tarafta gruplandırıcı bir işaret istenmiyorsa, görünmeyen <code>\left.</code>/<code>\right.</code> komutu kullanılır.</p>
+<p>Grup açıcı bir sembolün önüne <code>\left</code> komutu, grup kapatıcı bir sembolün önüne de <code>\right</code> komutu yazılırsa <span class="math inline">\LaTeX</span> onları en uygun boyda dizer. Her bir <code>\left</code> komutuna karşılık mutlaka bir <code>\right</code> komutu bulunmalıdır. Bunların doğru boyda dizilmesi için iki komutunda aynı satırda yer almasına dikkat edilmelidir. Sol/sağ tarafta gruplandırıcı bir işaret istenmiyorsa, görünmeyen <code>\left.</code>/<code>\right.</code> komutu kullanılır.</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[T1]{<span class="ex">fontenc</span>}</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[turkish]{<span class="ex">babel</span>}</span>
@@ -661,52 +683,52 @@ Not
 </colgroup>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(\leftarrow\)</span> <code>\leftarrow</code> ya da <code>\gets</code></td>
-<td style="text-align: left;"><span class="math inline">\(\longleftarrow\)</span> <code>\longleftarrow</code></td>
-<td style="text-align: left;"><span class="math inline">\(\uparrow\)</span> <code>\uparrow</code></td>
-<td style="text-align: left;"><span class="math inline">\(\Leftarrow\)</span> <code>\Leftarrow</code></td>
+<td style="text-align: left;"><span class="math inline">\leftarrow</span> <code>\leftarrow</code> ya da <code>\gets</code></td>
+<td style="text-align: left;"><span class="math inline">\longleftarrow</span> <code>\longleftarrow</code></td>
+<td style="text-align: left;"><span class="math inline">\uparrow</span> <code>\uparrow</code></td>
+<td style="text-align: left;"><span class="math inline">\Leftarrow</span> <code>\Leftarrow</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\Longleftarrow\)</span> <code>\Longleftarrow</code></td>
-<td style="text-align: left;"><span class="math inline">\(\Uparrow\)</span> <code>\Uparrow</code></td>
-<td style="text-align: left;"><span class="math inline">\(\rightarrow\)</span> <code>\rightarrow</code> ya da <code>\to</code></td>
-<td style="text-align: left;"><span class="math inline">\(\longrightarrow\)</span> <code>\longrightarrow</code></td>
+<td style="text-align: left;"><span class="math inline">\Longleftarrow</span> <code>\Longleftarrow</code></td>
+<td style="text-align: left;"><span class="math inline">\Uparrow</span> <code>\Uparrow</code></td>
+<td style="text-align: left;"><span class="math inline">\rightarrow</span> <code>\rightarrow</code> ya da <code>\to</code></td>
+<td style="text-align: left;"><span class="math inline">\longrightarrow</span> <code>\longrightarrow</code></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(\downarrow\)</span> <code>\downarrow</code></td>
-<td style="text-align: left;"><span class="math inline">\(\Rightarrow\)</span> <code>\Rightarrow</code></td>
-<td style="text-align: left;"><span class="math inline">\(\Longrightarrow\)</span> <code>\Longrightarrow</code></td>
-<td style="text-align: left;"><span class="math inline">\(\Downarrow\)</span> <code>\Downarrow</code></td>
+<td style="text-align: left;"><span class="math inline">\downarrow</span> <code>\downarrow</code></td>
+<td style="text-align: left;"><span class="math inline">\Rightarrow</span> <code>\Rightarrow</code></td>
+<td style="text-align: left;"><span class="math inline">\Longrightarrow</span> <code>\Longrightarrow</code></td>
+<td style="text-align: left;"><span class="math inline">\Downarrow</span> <code>\Downarrow</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\leftrightarrow\)</span> <code>\leftrightarrow</code></td>
-<td style="text-align: left;"><span class="math inline">\(\longleftrightarrow\)</span> <code>\longleftrightarrow</code></td>
-<td style="text-align: left;"><span class="math inline">\(\updownarrow\)</span> <code>\updownarrow</code></td>
-<td style="text-align: left;"><span class="math inline">\(\Leftrightarrow\)</span> <code>\Leftrightarrow</code></td>
+<td style="text-align: left;"><span class="math inline">\leftrightarrow</span> <code>\leftrightarrow</code></td>
+<td style="text-align: left;"><span class="math inline">\longleftrightarrow</span> <code>\longleftrightarrow</code></td>
+<td style="text-align: left;"><span class="math inline">\updownarrow</span> <code>\updownarrow</code></td>
+<td style="text-align: left;"><span class="math inline">\Leftrightarrow</span> <code>\Leftrightarrow</code></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(\Longleftrightarrow\)</span> <code>\Longleftrightarrow</code></td>
-<td style="text-align: left;"><span class="math inline">\(\Updownarrow\)</span> <code>\Updownarrow</code></td>
-<td style="text-align: left;"><span class="math inline">\(\mapsto\)</span> <code>\mapsto</code></td>
-<td style="text-align: left;"><span class="math inline">\(\longmapsto\)</span> <code>\longmapsto</code></td>
+<td style="text-align: left;"><span class="math inline">\Longleftrightarrow</span> <code>\Longleftrightarrow</code></td>
+<td style="text-align: left;"><span class="math inline">\Updownarrow</span> <code>\Updownarrow</code></td>
+<td style="text-align: left;"><span class="math inline">\mapsto</span> <code>\mapsto</code></td>
+<td style="text-align: left;"><span class="math inline">\longmapsto</span> <code>\longmapsto</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\nearrow\)</span> <code>\nearrow</code></td>
-<td style="text-align: left;"><span class="math inline">\(\hookleftarrow\)</span> <code>\hookleftarrow</code></td>
-<td style="text-align: left;"><span class="math inline">\(\hookrightarrow\)</span> <code>\hookrightarrow</code></td>
-<td style="text-align: left;"><span class="math inline">\(\searrow\)</span> <code>\searrow</code></td>
+<td style="text-align: left;"><span class="math inline">\nearrow</span> <code>\nearrow</code></td>
+<td style="text-align: left;"><span class="math inline">\hookleftarrow</span> <code>\hookleftarrow</code></td>
+<td style="text-align: left;"><span class="math inline">\hookrightarrow</span> <code>\hookrightarrow</code></td>
+<td style="text-align: left;"><span class="math inline">\searrow</span> <code>\searrow</code></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(\leftharpoonup\)</span> <code>\leftharpoonup</code></td>
-<td style="text-align: left;"><span class="math inline">\(\rightharpoonup\)</span> <code>\rightharpoonup</code></td>
-<td style="text-align: left;"><span class="math inline">\(\swarrow\)</span> <code>\swarrow</code></td>
-<td style="text-align: left;"><span class="math inline">\(\leftharpoondown\)</span> <code>\leftharpoondown</code></td>
+<td style="text-align: left;"><span class="math inline">\leftharpoonup</span> <code>\leftharpoonup</code></td>
+<td style="text-align: left;"><span class="math inline">\rightharpoonup</span> <code>\rightharpoonup</code></td>
+<td style="text-align: left;"><span class="math inline">\swarrow</span> <code>\swarrow</code></td>
+<td style="text-align: left;"><span class="math inline">\leftharpoondown</span> <code>\leftharpoondown</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\rightharpoondown\)</span> <code>\rightharpoondown</code></td>
-<td style="text-align: left;"><span class="math inline">\(\nwarrow\)</span> <code>\nwarrow</code></td>
-<td style="text-align: left;"><span class="math inline">\(\rightleftharpoons\)</span> <code>\rightleftharpoons</code></td>
-<td style="text-align: left;"><span class="math inline">\(\leadsto\)</span> <code>\leadsto</code></td>
+<td style="text-align: left;"><span class="math inline">\rightharpoondown</span> <code>\rightharpoondown</code></td>
+<td style="text-align: left;"><span class="math inline">\nwarrow</span> <code>\nwarrow</code></td>
+<td style="text-align: left;"><span class="math inline">\rightleftharpoons</span> <code>\rightleftharpoons</code></td>
+<td style="text-align: left;"><span class="math inline">\leadsto</span> <code>\leadsto</code></td>
 </tr>
 </tbody>
 </table>
@@ -754,50 +776,50 @@ Not
 </colgroup>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(\alpha\)</span> <code>\alpha</code></td>
-<td style="text-align: left;"><span class="math inline">\(\theta\)</span> <code>\theta</code></td>
-<td style="text-align: left;"><span class="math inline">\(o\)</span> <code>o</code></td>
-<td style="text-align: left;"><span class="math inline">\(\tau\)</span> <code>\tau</code></td>
+<td style="text-align: left;"><span class="math inline">\alpha</span> <code>\alpha</code></td>
+<td style="text-align: left;"><span class="math inline">\theta</span> <code>\theta</code></td>
+<td style="text-align: left;"><span class="math inline">o</span> <code>o</code></td>
+<td style="text-align: left;"><span class="math inline">\tau</span> <code>\tau</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\beta\)</span> <code>\beta</code></td>
-<td style="text-align: left;"><span class="math inline">\(\vartheta\)</span> <code>\vartheta</code></td>
-<td style="text-align: left;"><span class="math inline">\(\pi\)</span> <code>\pi</code></td>
-<td style="text-align: left;"><span class="math inline">\(\upsilon\)</span> <code>\upsilon</code></td>
+<td style="text-align: left;"><span class="math inline">\beta</span> <code>\beta</code></td>
+<td style="text-align: left;"><span class="math inline">\vartheta</span> <code>\vartheta</code></td>
+<td style="text-align: left;"><span class="math inline">\pi</span> <code>\pi</code></td>
+<td style="text-align: left;"><span class="math inline">\upsilon</span> <code>\upsilon</code></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(\gamma\)</span> <code>\gamma</code></td>
-<td style="text-align: left;"><span class="math inline">\(\iota\)</span> <code>\iota</code></td>
-<td style="text-align: left;"><span class="math inline">\(\varpi\)</span> <code>\varpi</code></td>
-<td style="text-align: left;"><span class="math inline">\(\phi\)</span> <code>\phi</code></td>
+<td style="text-align: left;"><span class="math inline">\gamma</span> <code>\gamma</code></td>
+<td style="text-align: left;"><span class="math inline">\iota</span> <code>\iota</code></td>
+<td style="text-align: left;"><span class="math inline">\varpi</span> <code>\varpi</code></td>
+<td style="text-align: left;"><span class="math inline">\phi</span> <code>\phi</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\delta\)</span> <code>\delta</code></td>
-<td style="text-align: left;"><span class="math inline">\(\kappa\)</span> <code>\kappa</code></td>
-<td style="text-align: left;"><span class="math inline">\(\rho\)</span> <code>\rho</code></td>
-<td style="text-align: left;"><span class="math inline">\(\varphi\)</span> <code>\varphi</code></td>
+<td style="text-align: left;"><span class="math inline">\delta</span> <code>\delta</code></td>
+<td style="text-align: left;"><span class="math inline">\kappa</span> <code>\kappa</code></td>
+<td style="text-align: left;"><span class="math inline">\rho</span> <code>\rho</code></td>
+<td style="text-align: left;"><span class="math inline">\varphi</span> <code>\varphi</code></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(\epsilon\)</span> <code>\epsilon</code></td>
-<td style="text-align: left;"><span class="math inline">\(\lambda\)</span> <code>\lambda</code></td>
-<td style="text-align: left;"><span class="math inline">\(\varrho\)</span> <code>\varrho</code></td>
-<td style="text-align: left;"><span class="math inline">\(\chi\)</span> <code>\chi</code></td>
+<td style="text-align: left;"><span class="math inline">\epsilon</span> <code>\epsilon</code></td>
+<td style="text-align: left;"><span class="math inline">\lambda</span> <code>\lambda</code></td>
+<td style="text-align: left;"><span class="math inline">\varrho</span> <code>\varrho</code></td>
+<td style="text-align: left;"><span class="math inline">\chi</span> <code>\chi</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\varepsilon\)</span> <code>\varepsilon</code></td>
-<td style="text-align: left;"><span class="math inline">\(\mu\)</span> <code>\mu</code></td>
-<td style="text-align: left;"><span class="math inline">\(\sigma\)</span> <code>\sigma</code></td>
-<td style="text-align: left;"><span class="math inline">\(\psi\)</span> <code>\psi</code></td>
+<td style="text-align: left;"><span class="math inline">\varepsilon</span> <code>\varepsilon</code></td>
+<td style="text-align: left;"><span class="math inline">\mu</span> <code>\mu</code></td>
+<td style="text-align: left;"><span class="math inline">\sigma</span> <code>\sigma</code></td>
+<td style="text-align: left;"><span class="math inline">\psi</span> <code>\psi</code></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(\zeta\)</span> <code>\zeta</code></td>
-<td style="text-align: left;"><span class="math inline">\(\nu\)</span> <code>\nu</code></td>
-<td style="text-align: left;"><span class="math inline">\(\varsigma\)</span> <code>\varsigma</code></td>
-<td style="text-align: left;"><span class="math inline">\(\omega\)</span> <code>\omega</code></td>
+<td style="text-align: left;"><span class="math inline">\zeta</span> <code>\zeta</code></td>
+<td style="text-align: left;"><span class="math inline">\nu</span> <code>\nu</code></td>
+<td style="text-align: left;"><span class="math inline">\varsigma</span> <code>\varsigma</code></td>
+<td style="text-align: left;"><span class="math inline">\omega</span> <code>\omega</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\eta\)</span> <code>\eta</code></td>
-<td style="text-align: left;"><span class="math inline">\(\xi\)</span> <code>\xi</code></td>
+<td style="text-align: left;"><span class="math inline">\eta</span> <code>\eta</code></td>
+<td style="text-align: left;"><span class="math inline">\xi</span> <code>\xi</code></td>
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 </tr>
@@ -808,21 +830,21 @@ Not
 <td style="text-align: left;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\Gamma\)</span> <code>\Gamma</code></td>
-<td style="text-align: left;"><span class="math inline">\(\Lambda\)</span> <code>\Lambda</code></td>
-<td style="text-align: left;"><span class="math inline">\(\Sigma\)</span> <code>\Sigma</code></td>
-<td style="text-align: left;"><span class="math inline">\(\Psi\)</span> <code>\Psi</code></td>
+<td style="text-align: left;"><span class="math inline">\Gamma</span> <code>\Gamma</code></td>
+<td style="text-align: left;"><span class="math inline">\Lambda</span> <code>\Lambda</code></td>
+<td style="text-align: left;"><span class="math inline">\Sigma</span> <code>\Sigma</code></td>
+<td style="text-align: left;"><span class="math inline">\Psi</span> <code>\Psi</code></td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><span class="math inline">\(\Delta\)</span> <code>\Delta</code></td>
-<td style="text-align: left;"><span class="math inline">\(\Xi\)</span> <code>\Xi</code></td>
-<td style="text-align: left;"><span class="math inline">\(\Upsilon\)</span> <code>\Upsilon</code></td>
-<td style="text-align: left;"><span class="math inline">\(\Omega\)</span> <code>\Omega</code></td>
+<td style="text-align: left;"><span class="math inline">\Delta</span> <code>\Delta</code></td>
+<td style="text-align: left;"><span class="math inline">\Xi</span> <code>\Xi</code></td>
+<td style="text-align: left;"><span class="math inline">\Upsilon</span> <code>\Upsilon</code></td>
+<td style="text-align: left;"><span class="math inline">\Omega</span> <code>\Omega</code></td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><span class="math inline">\(\Theta\)</span> <code>\Theta</code></td>
-<td style="text-align: left;"><span class="math inline">\(\Pi\)</span> <code>\Pi</code></td>
-<td style="text-align: left;"><span class="math inline">\(\Phi\)</span> <code>\Phi</code></td>
+<td style="text-align: left;"><span class="math inline">\Theta</span> <code>\Theta</code></td>
+<td style="text-align: left;"><span class="math inline">\Pi</span> <code>\Pi</code></td>
+<td style="text-align: left;"><span class="math inline">\Phi</span> <code>\Phi</code></td>
 <td style="text-align: left;"></td>
 </tr>
 </tbody>
@@ -840,7 +862,7 @@ Not
 </section>
 <section id="fonksiyonlar" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="fonksiyonlar"><span class="header-section-number">4.4</span> Fonksiyonlar</h2>
-<p>LaTeX’de fonksiyonlar aşağıdaki komutlarla dizilirler.</p>
+<p><span class="math inline">\LaTeX</span>’de fonksiyonlar aşağıdaki komutlarla dizilirler.</p>
 <p><code>\arccos  \cos  \csc  \exp  \ker  \limsup  \min  \sinh \arcsin  \cosh  \deg  \gcd  \lg  \ln  \Pr  \sup \arctan  \cot  \det  \hom  \lim  \log  \sec  \tan \arg  \coth  \dim  \inf  \liminf  \max  \sin  \tanh</code></p>
 <p>Matematik kipinde fonksiyonlar diğer değişkenler gibi italik değil düz yazılırlar ve boşluklar otomatik ayarlanır.</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
@@ -889,7 +911,7 @@ Not
 <span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Limit için <code>\lim</code> komutu aşağıdaki şekilde verilir.</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\lim</span>_{&lt;değişken&gt; <span class="fu">\to</span> &lt;değişken&gt;}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Buradaki <code>\to</code> komutu <span class="math inline">\(\to\)</span> üretir ve <span class="math inline">\(\infty\)</span> için <code>\infty</code> komutu verilir.</p>
+<p>Buradaki <code>\to</code> komutu <span class="math inline">\to</span> üretir ve <span class="math inline">\infty</span> için <code>\infty</code> komutu verilir.</p>
 <div class="sourceCode" id="cb19"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[T1]{<span class="ex">fontenc</span>}</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[turkish]{<span class="ex">babel</span>}</span>
@@ -907,7 +929,7 @@ Not
 <section id="yığın-simgeleri" class="level2" data-number="4.5">
 <h2 data-number="4.5" class="anchored" data-anchor-id="yığın-simgeleri"><span class="header-section-number">4.5</span> Yığın Simgeleri</h2>
 <p>Matematikte bazen bir ifadenin altına ya da üstüne başka ifadeler yazmak gerekebilir. Bunlar yığın simgeleri olarak adlandırılırlar.</p>
-<p>LaTeX’de aşağıdaki</p>
+<p><span class="math inline">\LaTeX</span>’de aşağıdaki</p>
 <div class="sourceCode" id="cb20"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\overset</span>{&lt;birinci değişken&gt;}{&lt;ikinci değişken&gt;}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>komutu birinci değişkendeki sembolü, normal boyda yazılan ikincinin üzerine yazar. <code>\underset</code> komutu ise alta yazar.</p>
 <div class="sourceCode" id="cb21"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
@@ -1035,7 +1057,7 @@ Not
 <section id="yazı-biçem-ve-boyutları" class="level2" data-number="4.7">
 <h2 data-number="4.7" class="anchored" data-anchor-id="yazı-biçem-ve-boyutları"><span class="header-section-number">4.7</span> Yazı Biçem ve Boyutları</h2>
 <p>Matematiksel ifadeleri dizerken bazen yazının biçemini ya da boyutunu değiştirmek isteyebilirsiniz.</p>
-<p>LaTeX’de matematik kipindeki yazıların biçemleri aşağıdaki komutlar kullanılarak değiştirilir.</p>
+<p><span class="math inline">\LaTeX</span>’de matematik kipindeki yazıların biçemleri aşağıdaki komutlar kullanılarak değiştirilir.</p>
 <div id="tbl-matyazi" class="anchored">
 <table class="table">
 <caption>Tablo 4.4: Matematik Kipinde Yazı Biçemleri</caption>
@@ -1048,43 +1070,43 @@ Not
 <tbody>
 <tr class="odd">
 <td style="text-align: left;"><code>\mathnormal{ABC def 123}</code></td>
-<td style="text-align: left;"><span class="math inline">\(ABC def 123\)</span></td>
+<td style="text-align: left;"><span class="math inline">ABC def 123</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><code>\mathrm{ABC def 123}</code></td>
-<td style="text-align: left;"><span class="math inline">\(\mathrm{ABC def 123}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\mathrm{ABC def 123}</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><code>\mathit{ABC def 123}</code></td>
-<td style="text-align: left;"><span class="math inline">\(\mathit{ABC def 123}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\mathit{ABC def 123}</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><code>\mathbf{ABC def 123}</code></td>
-<td style="text-align: left;"><span class="math inline">\(\mathbf{ABC def 123}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\mathbf{ABC def 123}</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><code>\mathtt{ABC def 123}</code></td>
-<td style="text-align: left;"><span class="math inline">\(\mathtt{ABC def 123}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\mathtt{ABC def 123}</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><code>\mathsf{ABC def 123}</code></td>
-<td style="text-align: left;"><span class="math inline">\(\mathsf{ABC def 123}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\mathsf{ABC def 123}</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><code>\mathfrak{ABC def 123}</code></td>
-<td style="text-align: left;"><span class="math inline">\(\mathfrak{ABC def 123}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\mathfrak{ABC def 123}</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><code>\mathbb{ABC}</code></td>
-<td style="text-align: left;"><span class="math inline">\(\mathbb{ABC}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\mathbb{ABC}</span></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><code>\mathcal{ABC}</code></td>
-<td style="text-align: left;"><span class="math inline">\(\mathcal{ABC}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\mathcal{ABC}</span></td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"><code>\mathscr{ABC}</code></td>
-<td style="text-align: left;"><span class="math inline">\(\mathscr{ABC}\)</span></td>
+<td style="text-align: left;"><span class="math inline">\mathscr{ABC}</span></td>
 </tr>
 </tbody>
 </table>
@@ -1146,7 +1168,7 @@ Not
 </section>
 <section id="denklem-ortamları" class="level2" data-number="4.8">
 <h2 data-number="4.8" class="anchored" data-anchor-id="denklem-ortamları"><span class="header-section-number">4.8</span> Denklem Ortamları</h2>
-<p>Bir satıra sığmayacak kadar uzun bir formülü ya da birden çok satırdan oluşan bir denklemi veya denklem sistemlerini hizalayıp dizmek için LaTeX’de çeşitli ortamlar kullanılır.</p>
+<p>Bir satıra sığmayacak kadar uzun bir formülü ya da birden çok satırdan oluşan bir denklemi veya denklem sistemlerini hizalayıp dizmek için <span class="math inline">\LaTeX</span>’de çeşitli ortamlar kullanılır.</p>
 <p><code>multline</code> ortamı bir formülü hizalanmamış bir kaç satıra ayırır.</p>
 <div class="sourceCode" id="cb32"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[T1]{<span class="ex">fontenc</span>}</span>
@@ -1312,16 +1334,16 @@ Not
 <section id="teorem-ve-benzeri-ortamlar" class="level2" data-number="4.9">
 <h2 data-number="4.9" class="anchored" data-anchor-id="teorem-ve-benzeri-ortamlar"><span class="header-section-number">4.9</span> Teorem ve Benzeri Ortamlar</h2>
 <p>Gerçek bir matematik kitabı karıştırdıysanız “Teorem 2.1”, “Sonuç 2.1.1” gibi ifadelerle başlayan paragraflara rastlamış olmalısınız. Bunlar metnin geri kalanından ayrılmış ve yanında sıralı sayılarla etiketli paragraflardır. Bu, matematikte teoremler için yaygın olarak kullanılır, ancak her şey için kullanılabilir.</p>
-<p>LaTeX, herhangi bir teorem benzeri bildirimi kolayca tanımlamanıza izin veren bir komut sunar: <code>\newtheorem</code>.</p>
+<p><span class="math inline">\LaTeX</span>, herhangi bir teorem benzeri bildirimi kolayca tanımlamanıza izin veren bir komut sunar: <code>\newtheorem</code>.</p>
 <section id="temel-teoremler" class="level3" data-number="4.9.1">
 <h3 data-number="4.9.1" class="anchored" data-anchor-id="temel-teoremler"><span class="header-section-number">4.9.1</span> Temel Teoremler</h3>
 <p>Öncelikle sahanlığa</p>
 <div class="sourceCode" id="cb42"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsthm</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>komutuyla <code>amsthm</code> paketini ekleyiniz. En basit kullanım</p>
 <div class="sourceCode" id="cb43"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\newtheorem</span>{&lt;ad&gt;}{&lt;başlık&gt;}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>komutunun sahanlığa verilmesidir. İlk değişken olan <code>&lt;ad&gt;</code>, referans olarak kullanacağınız addır, ikinci değişken <code>&lt;başlık&gt;</code> ise LaTeX’in her kullandığınızda yazdıracağı çıktıdır. <code>&lt;ad&gt;</code> değişkeni aksanlı bir harf içermemelidir. Örneğin</p>
+<p>komutunun sahanlığa verilmesidir. İlk değişken olan <code>&lt;ad&gt;</code>, referans olarak kullanacağınız addır, ikinci değişken <code>&lt;başlık&gt;</code> ise <span class="math inline">\LaTeX</span>’in her kullandığınızda yazdıracağı çıktıdır. <code>&lt;ad&gt;</code> değişkeni aksanlı bir harf içermemelidir. Örneğin</p>
 <div class="sourceCode" id="cb44"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\newtheorem</span>{tanim}{Tanım}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>komutunu sahanlığa verdiğinizde <code>tanim</code> ortamını LaTeX’e tanıtmış olursunuz. Ayrıca kullanılan teoreme (bu örnekte Tanım) özel bir ad vermek ya da not düşmek isteyebilirsiniz. Bu, ortam komutundan sonra köşeli parantezler içinde belirtilebilir:</p>
+<p>komutunu sahanlığa verdiğinizde <code>tanim</code> ortamını <span class="math inline">\LaTeX</span>’e tanıtmış olursunuz. Ayrıca kullanılan teoreme (bu örnekte Tanım) özel bir ad vermek ya da not düşmek isteyebilirsiniz. Bu, ortam komutundan sonra köşeli parantezler içinde belirtilebilir:</p>
 <div class="sourceCode" id="cb45"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
 <span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[T1]{<span class="ex">fontenc</span>}</span>
 <span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[turkish]{<span class="ex">babel</span>}</span>
@@ -1417,7 +1439,7 @@ Not
 <div class="sourceCode" id="cb53"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\renewcommand</span>{<span class="ex">\proofname</span>}{İspat}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Bu komuttan sonra kullanılan tüm <code>proof</code> ortamlarında artık “Kanıt” yerine “İspat” yazar.</p>
 <p>Ayrıca kanıtı tek seferliğine elle adlandırmak isterseniz, kendi adınızı köşeli parantezler içine yazabilirsiniz:</p>
-<p>Kanıtın sonunu bildiren <span class="math inline">\(\square\)</span> işareti bazen son satırda yalnız kalırsa, <code>\qedhere</code> komutuyla onu doğru yere oturtabilirsiniz:</p>
+<p>Kanıtın sonunu bildiren <span class="math inline">\square</span> işareti bazen son satırda yalnız kalırsa, <code>\qedhere</code> komutuyla onu doğru yere oturtabilirsiniz:</p>
 <p>Özel bir QED sembolü kullanmak isterseniz <code>\qedsymbol</code> komutunu yeniden tanımlayabilirsiniz.</p>
 <p>Eğer sembolü gizlemek isterseniz <code>\renewcommand</code> komutunun son değişkenini boş bırakmanız yeterli olur.</p>
 <div class="sourceCode" id="cb54"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
@@ -1457,7 +1479,7 @@ Not
 <h3 data-number="4.9.4" class="anchored" data-anchor-id="teorem-stilleri"><span class="header-section-number">4.9.4</span> Teorem Stilleri</h3>
 <p>Teorem stilleri <code>\theoremstyle</code> komutuyla değiştirilir. Bu komut, <code>\newtheorem</code> komutu kullanarak tanımlanan ortamların çıktısını değiştirme olanağını verir.</p>
 <div class="sourceCode" id="cb55"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\theoremstyle</span>{&lt;stil adı&gt;}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Buradaki <code>&lt;stil adı&gt;</code> kullanmak istediğiniz stildir. Bu komuttan sonra tanımlanmış tüm teoremler bu stili kullanacaktır. LaTeX’de önceden tanımlanmış stiller aşağıdakilerdir:</p>
+<p>Buradaki <code>&lt;stil adı&gt;</code> kullanmak istediğiniz stildir. Bu komuttan sonra tanımlanmış tüm teoremler bu stili kullanacaktır. <span class="math inline">\LaTeX</span>’de önceden tanımlanmış stiller aşağıdakilerdir:</p>
 <div id="tbl-teoremstil" class="anchored">
 <table class="table">
 <caption>Tablo 4.5: Teorem Stilleri</caption>
@@ -1665,22 +1687,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./dizgi.html" class="pagination-link">
+      <a href="./03-dizgi.html" class="pagination-link">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dizgi</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./ozelsayfalar.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Özel Sayfalar</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./05-yuzergezer.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Yüzer Gezer Nesneler</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
-    <div class="nav-footer-left"><a href="https://creativecommons.org/licenses/by-sa/4.0/deed.tr">CC BY-SA 4.0</a></div>   
-  </div>
-</footer>
 
 
 
