@@ -1,2 +1,2 @@
 # latex-dersleri
-Artık aktif olmayan <https://texdizgi.com/> adresinde LaTeX'le ilgili yazmış olduğum yazıların derlenmesiyle oluşturduğum etkileşimli kitap.
+Artık aktif olmayan <https://texdizgi.com/> adresinde LaTeX'le ilgili yazmış olduğum yazıların derlenmesiyle oluşturduğum etkileşimli kitabın reposu. Kitaba <https://acarzfr.github.io/latex-dersleri/> adresinden ulaşabilirsiniz.
