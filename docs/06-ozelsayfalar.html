@@ -230,16 +230,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </script>
 
-<script>
-    runlatex.preincludes = {
-     "pre1": {
-        "pre0": "kaynakca.bib"
-       },
-     "pre2": {
-        "pre0": "kaynakca.bib"
-       }
-    }
-</script>
+
 
 
 <!--   GeoGebra  -->
@@ -595,6 +586,16 @@ graphing yerine geometry , 3d
 </section>
 <section id="kaynakçanın-yazdırılması" class="level4" data-number="6.1.2.2">
 <h4 data-number="6.1.2.2" class="anchored" data-anchor-id="kaynakçanın-yazdırılması"><span class="header-section-number">6.1.2.2</span> Kaynakçanın yazdırılması</h4>
+<script>
+    runlatex.preincludes = {
+     "pre1": {
+        "pre0": "kaynakca.bib"
+       },
+     "pre2": {
+        "pre0": "kaynakca.bib"
+       }
+    }
+</script>
 <p>Kaynakçayı yazdırmak için <span style="font-variant: small-caps;">Bib</span><span style="letter-spacing:-2px;">T</span><sub style="font-size: inherit; letter-spacing:-1px;">E</sub>X’i kullanacağız. <span style="font-variant: small-caps;">Bib</span><span style="letter-spacing:-2px;">T</span><sub style="font-size: inherit; letter-spacing:-1px;">E</sub>X’in <span class="math inline">\LaTeX</span>’le standart olarak geldiğini ifade etmiştik. Dolayısıyla bu programı kullanmak için ek bir şey yapmanız gerekmez.</p>
 <p>Oluşturulan <code>.bib</code> uzantılı dosya <code>\bibliography</code> komutuyla içeri aktarılır, <code>\bibliographystyle</code> komutuyla da kullanılacak biçim belirtilir.</p>
 <div class="sourceCode" id="cb11"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\bibliographystyle</span>{<span class="ex">&lt;biçim&gt;</span>}</span>
@@ -821,7 +822,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","loop":true,"descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":true,"openEffect":"zoom","selector":".lightbox","descPosition":"bottom","closeEffect":"zoom"});</script>
 
 
 

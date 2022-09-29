@@ -219,9 +219,9 @@ A\hrulefill B
 ```
 
 
-## Metni Hizalamak ve Sütunlara Bölmek
+## Ortamlar
 
-### Hizalama
+### Metin hizalama
 
 {{< latex >}}'de metni sola hizalamak için `flushleft`, sağa hizalamak için
 `flushright` ve ortalı hizalamak için `center` ortamları kullanılır.
@@ -248,7 +248,7 @@ A\hrulefill B
 
 
 
-### Sütunlara bölmek
+### Sütunlara ayırma
 
 {{< latex >}}'de belgenin tamamının iki sütun dizilmesi için `\documentclass`
 komutunun seçeneğine `twocolumn` yazılabileceğinden bahsettik. Bu, tüm belgenin iki sütun dizilmesini sağlar. Bazı
@@ -301,10 +301,12 @@ kalınlığı 1 pt ve çizgi rengi mavi olarak düzenlenir. Bu komutlar ya
 sahanlığa ya da ortamı kullanmadan önce gövdeye yazılmalıdır.
 
 
+:::{.callout-note}
+Şimdiye kadar renk kullanımından bahsetmedik ancak çizgi rengini
+değiştirmek için verilen komutun kullanılabilmesi için sahanlığa
+`\usepackage{xcolor}` komutuyla `xcolor` paketinin eklenmesi gerekir.
+:::
 
-> Şimdiye kadar renk kullanımından bahsetmedik ancak çizgi rengini
-> değiştirmek için verilen komutun kullanılabilmesi için sahanlığa
-> `\usepackage{color}` komutuyla `color` paketinin eklenmesi gerekir.
 
 Ortam isteğe bağlı bir değişken de alabilir. Bu, çengelli parantezlerden
 sonra köşeli parantezler içine yazılır. Köşeli parantezler içinde
@@ -312,12 +314,30 @@ yazılanlar bölünmeden ve çok sütunlu metnin üstünde dizilir.
 
 
 ```latex
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+\usepackage{multicol}
+\usepackage{xcolor}
+\usepackage{lipsum}% Örnek verirken anlamsız metinler oluşturmaya yarayan bir paket
+\begin{document}
+
 \begin{multicols}{2}
- [\section{Başlık}
- Burası sütunlara bölünmez.]
- Burası sütunlara bölünür.
+  Bilim, yalnızca bir bilgi edinme etkinliği değildir. Onun bir
+  eylem yönünün olduğu da unutulmamalıdır.
 \end{multicols}
+
+\setlength{\columnsep}{1cm}
+\setlength{\columnseprule}{1pt}
+\def\columnseprulecolor{\color{blue}}
+\begin{multicols}{2}
+  \lipsum[1-2] % İki paragraf anlamsız örnek metin oluşturma komutu
+\end{multicols}
+
+
+\end{document}
 ```
+
 
 Sütunu kesmek için `\columnbreak` komutu kullanılır. Komutun verildiği
 yerde sütun kesilir, ardından kesme noktasından önceki paragraflar tüm
@@ -331,9 +351,9 @@ Varsayılan `multicols` ortamında sütunların her biri aynı miktarda metin
 içerecek şekilde dengelenmiştir. Bu, ortamın yıldızlı sürümü
 (`multicols*`) kullanılarak değiştirilebilir.
 
-## Listeleme
+### Listeleme
 
-### Temel listeler
+#### Temel listeler
 
 {{< latex >}}'de listeleme için değişik ortamlar vardır. Bu ortamlar tek başına
 kullanılabileceği gibi birlikte de kullanılabilirler. Her ortamda
@@ -341,8 +361,12 @@ maddeler `\item` komutuyla belirtilir.
 
 Bir listeyi numaralı şekilde dizmek için `enumerate` ortamı kullanılır.
 
-
 ```latex
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+\begin{document}
+
 \begin{enumerate}
  \item madde 1
   \begin{enumerate}
@@ -354,62 +378,202 @@ Bir listeyi numaralı şekilde dizmek için `enumerate` ortamı kullanılır.
   \end{enumerate}
  \item madde 2
 \end{enumerate}
+
+\end{document}
 ```
+
 
 
 Numarasız, özel işaretli listeler için `itemize` ortamı kullanılır ve bu
 ortamda madde işareti değiştirilebilir.
 
-
-```latex
-\begin{itemize}
-\item madde 1
-\item madde 2
-\item[$\circ$] madde 3
-\item[+] madde 4
-\end{itemize}
-```
-
-
-
-
 Açıklamalı bir liste içinse `description` ortamı kullanılır. Bu ortamda
 köşeli parantez içine alınan anahtar kelimeler kalın dizilir.
 
-
 ```latex
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+\begin{document}
+
+\begin{itemize}
+  \item madde 1
+  \item madde 2
+  \item[$\circ$] madde 3
+  \item[+] madde 4
+\end{itemize}
+
 \begin{description}
   \item[Nokta] Boyutu olmayan
   \item[Çember] Bir noktaya eşit
   uzaklıktaki noktaların geometrik yeri
 \end{description}
+\end{document}
 ```
 
 
-### Listeleri özelleştirmek
+
+#### Listeleri özelleştirmek
 
 Listelerin özelleştirmek için
 [**enumerate**](http://ftp.ntua.gr/mirror/ctan/macros/latex/required/tools/enumerate.pdf)  paketi kullanılabilir. Paketi `\usepackage{enumerate}`
 komutuyla ekledikten sonra `enumerate` ortamını başlatan komutun peşine
 köşeli parantezler içinde madde işaretlerinin tipi belirtilebilir:
 
-
 ```latex
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+\usepackage{enumerate}
+\begin{document}
+
 \begin{enumerate}[I.]
  \item bir
  \item iki 
  \item üç
 \end{enumerate}
+
+\end{document}
 ```
 
 
 
+
 Bunun dışında çok daha fazla özelleştirmeye izin veren
-[**enumitem**](http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/enumitem/enumitem.pdf) paketi vardır. Bu paketi kullanarak yapılabilecek
-listelere de ilerde değineceğiz. Dileyen okur paket belgesini inceleyip
+[**enumitem**](http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/enumitem/enumitem.pdf) paketi vardır.  Dileyen okur paket belgesini inceleyip
 listelerini özelleştirebilir.
 
+### Özet 
 
+Makalenize (article) özet koymak isterseniz `abstract` ortamını kullanırsınız.
+
+```latex
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+\begin{document}
+
+\begin{abstract}
+  Bu çalışmada\dots
+\end{abstract}
+
+\end{document}
+```
+### Yazıldığı gibi basma
+
+Bir metin, nasıl yazıldıysa, yani boşluklar ve {{< latex  >}} komutları işleme konmadan olduğu
+gibi dizilmesi isteniyorsa verbatim ortamında yazılır.
+
+Satır içinde aynı şey yapmak istenirse `\verb` komutu `\verb|<metin>|` şeklinde kullanılır. 
+
+Eğer `verbatim` ortamı yıldızlı (`verbatim*`) şeklinde kullanılırsa boşluklar özel bir işaretle gösterilir. Aynı şeyi `\verb*` komutu da yapar.
+
+```latex
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+\begin{document}
+
+\begin{verbatim}
+  Nasılsa öyle! # " ~
+\end{verbatim}
+
+\verb|\$| komutuyla \$ olur.
+
+\begin{verbatim*}
+  Boşluklar özel bir işatretle
+  gösterilir.
+\end{verbatim*}
+
+\verb*|aynı şekilde.|
+
+
+\end{document}
+```
+
+### Başlık sayfası (kapak)
+
+Başlık sayfası için `titlepage` ortamı kullanılır.
+
+```latex
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+\begin{document}
+
+\begin{titlepage}
+  \begin{center}%ortalı
+
+  \vspace*{\baselineskip}%boşluk
+
+  {\Large Yazar adı}
+
+  \vspace*{2cm} %boşluk
+
+  \textbf{\LARGE İlk başlık satırı}\\[\baselineskip]
+  {\Huge Ana Başlık}\\[\baselineskip]
+  {\Large \textit{Alt başlık }}
+
+  \vfill %sonra gelenlerisayfa altına yasla
+
+  {\large Yayıncı}
+
+  \vspace*{3\baselineskip}%boşluk
+
+  \end{center}
+\end{titlepage}
+
+\end{document}
+```
+
+Başlık bu şekilde oluşturulduğunda bu sayfada numara basılmaz ve bu sayfa bir numaralı sayfa olur. Ayrıca, `\maketitle` komutuyla oluşturulan başlıktan farklı olarak sayfadaki her şeyi dilediğiniz gibi biçimlendirebilirsiniz.
+
+### Alıntı yapmak ve şiir dizmek
+
+{{< latex >}}’de kısa alıntılar için `quote`, çok paragraflı uzun alıntılar için `quotation`, şiir
+dizmek içinse `verse` ortamı kullanılır. `quotation` ortamında her paragrafın ilk satırı
+içerden başlar. `verse` ortamında şiir satırları `\\` komutuyla sonlandırılır ve kıtalar arası boş bir satır bırakılır.
+
+```latex
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+\begin{document}
+
+Marx, Kapital'e şöyle başlar:
+\begin{quote}
+  Kapitalist üretim tarzının egemen olduğu toplumların zenginliği,
+  `muazzam bir meta yığını' olarak görünür; bunun basit biçimi tek
+  bir metadır. Bu nedenle, incelememiz, metanın analiziyle başlıyor.
+\end{quote}
+
+Şimdi Cemal Süreya'nın \emph{Bu Bizimki} şiiriyle devam edelim:
+
+\begin{verse}
+  Yıkıcı bir aşk bu,\\
+  Yıkıyor milletin ortasına\\
+  Tutku yükünü.
+
+  Bölücü bir aşk,\\
+  \dots
+\end{verse}
+
+\end{document}
+```
+
+## Özel kelimeler
+
+{{< latex >}}’de bazı özel kelimelerin dizilişlerinin kelimeyi oluşturan harflerin yazılmasıyla elde edilemeyeceğini fark etmiş olmalısınız. Bu özel kelimeler için komutlar kullanılır.
+
+| Komut | Çıktı | Gerekli Paket |
+| :--- | :--- | :--- |
+| `\today` |  |  |
+| `\TeX` | {{< tex >}} |  |
+| \\ LaTeX | IATEX |  |
+| \\ LaTeXe | LTEX 2epsi |  |
+| \\ AmS | AMS | amsmath |
+| \\ BibTeX |  | dtk-logos |
+| \\ MiKTeX |  | dtk-logos |
 ## Yazıtipleri
 
 
@@ -658,7 +822,7 @@ komutuyla değiştirilebilir.
 Yukarıdaki komutu sahanlığa yazarsanız belgenizin ana yazıtipi boyutu 
 30  pt, satır aralığı ise  36  pt olur.
 
-## Renk Kullanmak
+## Renk Kullanma
 
 {{< latex >}}'de renkler
 [**color**](http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/required/graphics/color.pdf) ya da
@@ -692,7 +856,7 @@ aşağıdaki renkler de kullanılabilir duruma gelir.
 
 
 ![**dvipsnames** seçeneğiyle gelen
-renkler](images/renkler.png){width=100%}
+renkler](images/renkler.png){#fig-renkler width="100%"}
 
 Bunlar da yeterli gelmiyorsa seçeneklere bir de `svgnames` yazın ve
 [buradaki](https://www.latextemplates.com/svgnames-colors) yüzden fazla rengi kullanılabilir duruma getirin.
