@@ -1,5 +1,14 @@
 # Özel Sayfalar
-
+<script>
+    runlatex.preincludes = {
+     "pre1": {
+        "pre0": "kaynakca.bib"
+       },
+     "pre2": {
+        "pre0": "kaynakca.bib"
+       }
+    }
+</script>
 
  Bu bölümde bir kitaptaki özel  sayfalar olan kaynakça ve dizinden bahsedeceğiz.
  
@@ -308,16 +317,6 @@ türünü belirtir, sağda da kaynağın bilgilerini girersiniz. Zorunlu
 bilgiler en üstte yer alan kalın yazılmış olanlardır.
 
 #### Kaynakçanın yazdırılması
-<script>
-    runlatex.preincludes = {
-     "pre1": {
-        "pre0": "kaynakca.bib"
-       },
-     "pre2": {
-        "pre0": "kaynakca.bib"
-       }
-    }
-</script>
 
 Kaynakçayı yazdırmak için {{< bibtex >}}'i kullanacağız. {{< bibtex >}}'in {{< latex >}}'le
 standart olarak geldiğini ifade etmiştik. Dolayısıyla bu programı

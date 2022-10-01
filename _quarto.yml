@@ -6,6 +6,8 @@ book:
   author: "Zafer ACAR"
   date: 2022-03-06
   date-format: "DD/MM/YYYY"
+  lang: tr
+
   #page-footer: 
     #left: "[CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.tr)"
 
@@ -37,7 +39,7 @@ format:
     html-math-method: katex
     lang: tr
     include-in-header: preamble.html
-    
+   
 
     filters:
      - lightbox
