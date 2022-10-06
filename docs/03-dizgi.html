@@ -121,52 +121,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     "search-submit-button-title": "Gönder"
   }
 }</script>
-
- <!-- SAGE -->
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width">
- <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
-
- <script>
-     // Make the div with id 'mycell' a Sage cell
-     sagecell.makeSagecell({inputLocation:  'div.m_sage',
-                            linked: true,
-                            template: sagecell.templates.minimal,
-                            evalButtonText: "Çalıştır"});
-
-     // Make *any* div with class 'compute' a Sage cell
-     sagecell.makeSagecell({inputLocation: 'div.sage',
-                            linked: false,
-                            evalButtonText: "Çalıştır",
-                            hide: ["fullScreen", "permalink"],
-                  //        languages: ["sage", "r"],
-
-     });
-
-     // Make *any* div with class 'compute' a Sage cell
-     sagecell.makeSagecell({inputLocation: 'div.o_sage',
-                            linked: true,
-                            autoeval: true,
-                        //  evalButtonText: "Çalıştır",
-                            hide: ["fullScreen", "permalink","editor","evalButton"],
-                  //        languages: ["sage", "r"],
-
-     });
- </script>
-
-
-   <!--  KULLANIM
-
- <div class="sage"><script type="text/x-sage">
- 2**52
- </script>
- </div>
-
- -->
-
-
-
-<!--   LaTeX  -->
+<!--   TexLive.net  -->
     <meta charset="UTF-8">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.min.js"></script>
 
@@ -191,13 +146,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       runlatex.adddefaultpreamble=false;
       runlatex.adddefaultengine=false;
 
-      runlatex.overleafURI=null;
+      //runlatex.overleafURI=null; 
 
       runlatex.texts ={
+              "TeXLive.net":      "Derle",
         	  "Open in Overleaf": "Overleaf'ta açın",
-	          "TeXLive.net":      "Derle",
-	          "Delete Output":    "Çıktıyı Temizle",
-	          "Compiling PDF":    "PDF derleme",
+	          "Delete Output":    "Çıktıyı Sil",
+	          "Compiling PDF":    "PDF derleniyor",
 	          "Added Code":       "",
 	          "End Added Code":   "",
 	          "Top Caption":      ""
@@ -229,38 +184,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   window.addEventListener('load', fillForm, false);
 
 </script>
-
-
-
-
-<!--   GeoGebra  -->
-
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta charset="utf-8">
-
-<script src="https://www.geogebra.org/apps/deployggb.js"></script>
-
-<!-- Kullanım
-
-<div id="ggb-element">
-<script>
-    var params = {"appName": "graphing", "width": 800, "height": 600, "showToolBar": true, "showAlgebraInput": true, "showMenuBar": true };
-    var applet = new GGBApplet(params, true);
-    window.addEventListener("load", function() {
-        applet.inject('ggb-element');
-    });
-</script>
-</div>
-
-graphing yerine geometry , 3d
-
-"material_id":"RHYH3UQ8"
-
-"filename":"myFile.ggb"
-
--->
-
-
 
 
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
@@ -386,7 +309,7 @@ graphing yerine geometry , 3d
   <ul>
   <li><a href="#satır-ve-sayfa-kesme" id="toc-satır-ve-sayfa-kesme" class="nav-link active" data-scroll-target="#satır-ve-sayfa-kesme"> <span class="header-section-number">3.1</span> Satır ve Sayfa Kesme</a></li>
   <li><a href="#heceleme" id="toc-heceleme" class="nav-link" data-scroll-target="#heceleme"> <span class="header-section-number">3.2</span> Heceleme</a></li>
-  <li><a href="#paragraflar-ve-cümle-sonları" id="toc-paragraflar-ve-cümle-sonları" class="nav-link" data-scroll-target="#paragraflar-ve-cümle-sonları"> <span class="header-section-number">3.3</span> Paragraflar ve Cümle Sonları</a></li>
+  <li><a href="#cümle-sonları" id="toc-cümle-sonları" class="nav-link" data-scroll-target="#cümle-sonları"> <span class="header-section-number">3.3</span> Cümle Sonları</a></li>
   <li><a href="#aralıklar" id="toc-aralıklar" class="nav-link" data-scroll-target="#aralıklar"> <span class="header-section-number">3.4</span> Aralıklar</a>
   <ul class="collapse">
   <li><a href="#dikey-aralıklar" id="toc-dikey-aralıklar" class="nav-link" data-scroll-target="#dikey-aralıklar"> <span class="header-section-number">3.4.1</span> Dikey aralıklar</a></li>
@@ -400,7 +323,7 @@ graphing yerine geometry , 3d
   <li><a href="#özet" id="toc-özet" class="nav-link" data-scroll-target="#özet"> <span class="header-section-number">3.5.4</span> Özet</a></li>
   <li><a href="#yazıldığı-gibi-basma" id="toc-yazıldığı-gibi-basma" class="nav-link" data-scroll-target="#yazıldığı-gibi-basma"> <span class="header-section-number">3.5.5</span> Yazıldığı gibi basma</a></li>
   <li><a href="#başlık-sayfası-kapak" id="toc-başlık-sayfası-kapak" class="nav-link" data-scroll-target="#başlık-sayfası-kapak"> <span class="header-section-number">3.5.6</span> Başlık sayfası (kapak)</a></li>
-  <li><a href="#alıntı-yapmak-ve-şiir-dizmek" id="toc-alıntı-yapmak-ve-şiir-dizmek" class="nav-link" data-scroll-target="#alıntı-yapmak-ve-şiir-dizmek"> <span class="header-section-number">3.5.7</span> Alıntı yapmak ve şiir dizmek</a></li>
+  <li><a href="#alıntı-yapma-ve-şiir-dizme" id="toc-alıntı-yapma-ve-şiir-dizme" class="nav-link" data-scroll-target="#alıntı-yapma-ve-şiir-dizme"> <span class="header-section-number">3.5.7</span> Alıntı yapma ve şiir dizme</a></li>
   </ul></li>
   <li><a href="#özel-kelimeler" id="toc-özel-kelimeler" class="nav-link" data-scroll-target="#özel-kelimeler"> <span class="header-section-number">3.6</span> Özel kelimeler</a></li>
   <li><a href="#yazıtipleri" id="toc-yazıtipleri" class="nav-link" data-scroll-target="#yazıtipleri"> <span class="header-section-number">3.7</span> Yazıtipleri</a>
@@ -410,7 +333,7 @@ graphing yerine geometry , 3d
   <li><a href="#biçem" id="toc-biçem" class="nav-link" data-scroll-target="#biçem"> <span class="header-section-number">3.7.3</span> Biçem</a></li>
   <li><a href="#boyut" id="toc-boyut" class="nav-link" data-scroll-target="#boyut"> <span class="header-section-number">3.7.4</span> Boyut</a></li>
   </ul></li>
-  <li><a href="#renk-kullanma" id="toc-renk-kullanma" class="nav-link" data-scroll-target="#renk-kullanma"> <span class="header-section-number">3.8</span> Renk Kullanma</a>
+  <li><a href="#renkli-yazma" id="toc-renkli-yazma" class="nav-link" data-scroll-target="#renkli-yazma"> <span class="header-section-number">3.8</span> Renkli Yazma</a>
   <ul class="collapse">
   <li><a href="#yeni-renkler-oluşturmak" id="toc-yeni-renkler-oluşturmak" class="nav-link" data-scroll-target="#yeni-renkler-oluşturmak"> <span class="header-section-number">3.8.1</span> Yeni renkler oluşturmak</a></li>
   </ul></li>
@@ -464,10 +387,8 @@ graphing yerine geometry , 3d
 <div class="sourceCode" id="cb4"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\hyphenation</span>{He-ce-le-me FORTRAN}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>komutuyla “Heceleme” kelimesinin nereden bölüneceği, “FORTRAN”, “Fortran” ya da “fortran” kelimelerinin bölünmeyeceği <span class="math inline">\LaTeX</span>’e söylenmiş olur.</p>
 </section>
-<section id="paragraflar-ve-cümle-sonları" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="paragraflar-ve-cümle-sonları"><span class="header-section-number">3.3</span> Paragraflar ve Cümle Sonları</h2>
-<p>Boş bir satırın yeni bir paragraf açtığını daha önce belirtmiştik. Aynı şey, <code>\par</code> komutuyla da yapılabilir. Ancak bu komut yeni bir paragraf açmaktan ziyade farklı amaçlar için kullanılır (yeri geldiğinde değinilecektir). Nitekim kaynak dosyanızın okunabilirliği açısından paragrafları ayırmak için boş bir satır bırakmak daha kullanışlıdır.</p>
-<p><span class="math inline">\LaTeX</span>’de varsayılan olarak <code>\chapter</code> ve <code>\section</code> gibi bölümleme komutlarından sonra oluşturulan ilk paragraf girintisiz, sonrakiler girintili olur. Bu, paragraf başlarında <code>\indent</code> ya da <code>\noindent</code> komutlarıyla tek seferliğine değiştirilebilir. Birinci komut girinti oluşturur, ikincisi ise girintiyi kaldırır.</p>
+<section id="cümle-sonları" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="cümle-sonları"><span class="header-section-number">3.3</span> Cümle Sonları</h2>
 <p><span class="math inline">\LaTeX</span>, okumayı kolaylaştırmak için cümle sonlarında fazladan boşluklar bırakır. Bunu yaparken de her cümlenin nokta, soru işareti veya ünlem işaretiyle bittiğini varsayar. Kısaltmalarda büyük harflerden sonra nokta gel(ebil)diğinden, büyük harften sonra nokta koyulursa <span class="math inline">\LaTeX</span> bunu cümle sonu saymaz. Eğer bir büyük harften sonra nokta koyuyorsanız ve burası cümlenin sonuysa <span class="math inline">\LaTeX</span>’in burayı cümle sonu sayması için büyük harften sonraki noktanın önüne <code>\@</code> koymanız gerekir.</p>
 <p><span class="math inline">\LaTeX</span>’in noktadan sonra fazladan boşluk <em>koymamasını</em> isterseniz <code>\frenchspacing</code> komutunu kullanırsınız. Bu komutu kullandıysanız, artık noktadan önce <code>\@</code> koymanıza gerek yoktur. Daha sonra tekrar cümle sonlarında fazladan boşluk kullanmak istenirse de <code>\nonfrenchspacing</code> komutu kullanılır.</p>
 <p>Unvan kısaltmasından sonra unvanın ait olduğu kelimeyle birlikte kalması ve fazladan boşluk bırakılmaması için tilda (<code>~</code>) işareti kullanılabilir. Bu işaret hem genişlemeyen bir boşluk bırakır hem de satırın orada kesilmesini önler.</p>
@@ -777,8 +698,8 @@ Not
 <span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Başlık bu şekilde oluşturulduğunda bu sayfada numara basılmaz ve bu sayfa bir numaralı sayfa olur. Ayrıca, <code>\maketitle</code> komutuyla oluşturulan başlıktan farklı olarak sayfadaki her şeyi dilediğiniz gibi biçimlendirebilirsiniz.</p>
 </section>
-<section id="alıntı-yapmak-ve-şiir-dizmek" class="level3" data-number="3.5.7">
-<h3 data-number="3.5.7" class="anchored" data-anchor-id="alıntı-yapmak-ve-şiir-dizmek"><span class="header-section-number">3.5.7</span> Alıntı yapmak ve şiir dizmek</h3>
+<section id="alıntı-yapma-ve-şiir-dizme" class="level3" data-number="3.5.7">
+<h3 data-number="3.5.7" class="anchored" data-anchor-id="alıntı-yapma-ve-şiir-dizme"><span class="header-section-number">3.5.7</span> Alıntı yapma ve şiir dizme</h3>
 <p><span class="math inline">\LaTeX</span>’de kısa alıntılar için <code>quote</code>, çok paragraflı uzun alıntılar için <code>quotation</code>, şiir dizmek içinse <code>verse</code> ortamı kullanılır. <code>quotation</code> ortamında her paragrafın ilk satırı içerden başlar. <code>verse</code> ortamında şiir satırları <code>\\</code> komutuyla sonlandırılır ve kıtalar arası boş bir satır bırakılır.</p>
 <div class="sourceCode" id="cb20"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[T1]{<span class="ex">fontenc</span>}</span>
@@ -1007,8 +928,8 @@ Not
 <p>Yukarıdaki komutu sahanlığa yazarsanız belgenizin ana yazıtipi boyutu 30 pt, satır aralığı ise 36 pt olur.</p>
 </section>
 </section>
-<section id="renk-kullanma" class="level2" data-number="3.8">
-<h2 data-number="3.8" class="anchored" data-anchor-id="renk-kullanma"><span class="header-section-number">3.8</span> Renk Kullanma</h2>
+<section id="renkli-yazma" class="level2" data-number="3.8">
+<h2 data-number="3.8" class="anchored" data-anchor-id="renkli-yazma"><span class="header-section-number">3.8</span> Renkli Yazma</h2>
 <p><span class="math inline">\LaTeX</span>’de renkler <a href="http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/required/graphics/color.pdf"><strong>color</strong></a> ya da <a href="http://ftp.ntua.gr/mirror/ctan/macros/latex/contrib/xcolor/xcolor.pdf"><strong>xcolor</strong></a> paketleriyle kullanılır. İkinci paket daha güçlüdür.</p>
 <div class="sourceCode" id="cb35"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">xcolor</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>komutuyla paketi ekledikten sonra <code>\color</code> ya da <code>\textcolor</code> komutları aşağıdaki şekillerde kullanılır.</p>
@@ -1212,7 +1133,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"selector":".lightbox","openEffect":"zoom","closeEffect":"zoom","loop":true,"descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","descPosition":"bottom","closeEffect":"zoom","loop":true,"openEffect":"zoom"});</script>
 
 
 

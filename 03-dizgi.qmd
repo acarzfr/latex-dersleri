@@ -71,19 +71,7 @@ olur. Örneğin
 komutuyla "Heceleme" kelimesinin nereden bölüneceği, "FORTRAN", "Fortran" ya da
 "fortran" kelimelerinin bölünmeyeceği {{< latex >}}'e söylenmiş olur.
 
-## Paragraflar ve Cümle Sonları
-
-Boş bir satırın yeni bir paragraf açtığını daha önce belirtmiştik. Aynı şey, `\par` komutuyla da yapılabilir.
-Ancak bu komut yeni bir paragraf açmaktan ziyade farklı amaçlar için
-kullanılır (yeri geldiğinde değinilecektir). Nitekim kaynak dosyanızın
-okunabilirliği açısından paragrafları ayırmak için boş bir satır
-bırakmak daha kullanışlıdır.
-
-{{< latex >}}'de varsayılan olarak `\chapter` ve `\section` gibi bölümleme
-komutlarından sonra oluşturulan ilk paragraf girintisiz, sonrakiler
-girintili olur. Bu, paragraf başlarında `\indent` ya da `\noindent`
-komutlarıyla tek seferliğine değiştirilebilir. Birinci komut girinti
-oluşturur, ikincisi ise girintiyi kaldırır.
+## Cümle Sonları
 
 {{< latex >}}, okumayı kolaylaştırmak için cümle sonlarında fazladan boşluklar
 bırakır. Bunu yaparken de her cümlenin nokta, soru işareti veya ünlem
@@ -528,7 +516,7 @@ Başlık sayfası için `titlepage` ortamı kullanılır.
 
 Başlık bu şekilde oluşturulduğunda bu sayfada numara basılmaz ve bu sayfa bir numaralı sayfa olur. Ayrıca, `\maketitle` komutuyla oluşturulan başlıktan farklı olarak sayfadaki her şeyi dilediğiniz gibi biçimlendirebilirsiniz.
 
-### Alıntı yapmak ve şiir dizmek
+### Alıntı yapma ve şiir dizme
 
 {{< latex >}}’de kısa alıntılar için `quote`, çok paragraflı uzun alıntılar için `quotation`, şiir
 dizmek içinse `verse` ortamı kullanılır. `quotation` ortamında her paragrafın ilk satırı
@@ -822,7 +810,7 @@ komutuyla değiştirilebilir.
 Yukarıdaki komutu sahanlığa yazarsanız belgenizin ana yazıtipi boyutu 
 30  pt, satır aralığı ise  36  pt olur.
 
-## Renk Kullanma
+## Renkli Yazma
 
 {{< latex >}}'de renkler
 [**color**](http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/required/graphics/color.pdf) ya da
