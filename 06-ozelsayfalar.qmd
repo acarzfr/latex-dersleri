@@ -375,12 +375,13 @@ pdflatex kaynakdosya
 komutları çalıştırılarak yapılabilir.
 
 
-Aşağıda kaynak dosya örneği verilmiştir. Bu dosyayı derleyebilmeniz için içeriği yukarıda verilen `kaynakca.bib` dosyasının bu dosyayla aynı dizinde olması gerektiğini unutmayınız.
+Aşağıda kaynak dosya örneği verilmiştir. Bu dosyayı derleyebilmeniz için içeriği yukarıda verilen `kaynakca.bib` dosyasının bu dosyayla aynı dizinde olması gerektiğini unutmayınız.^[O yüzden etkileşim bu örnekte kapatılmıştır.]
 
 
 
 
 ```latex
+% !TeX noedit
 \documentclass[10pt,a4paper]{article}
 \usepackage[T1]{fontenc}
 \usepackage[turkish]{babel}
