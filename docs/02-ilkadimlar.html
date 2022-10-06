@@ -140,52 +140,7 @@ div.csl-indent {
     "search-submit-button-title": "Gönder"
   }
 }</script>
-
- <!-- SAGE -->
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width">
- <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
-
- <script>
-     // Make the div with id 'mycell' a Sage cell
-     sagecell.makeSagecell({inputLocation:  'div.m_sage',
-                            linked: true,
-                            template: sagecell.templates.minimal,
-                            evalButtonText: "Çalıştır"});
-
-     // Make *any* div with class 'compute' a Sage cell
-     sagecell.makeSagecell({inputLocation: 'div.sage',
-                            linked: false,
-                            evalButtonText: "Çalıştır",
-                            hide: ["fullScreen", "permalink"],
-                  //        languages: ["sage", "r"],
-
-     });
-
-     // Make *any* div with class 'compute' a Sage cell
-     sagecell.makeSagecell({inputLocation: 'div.o_sage',
-                            linked: true,
-                            autoeval: true,
-                        //  evalButtonText: "Çalıştır",
-                            hide: ["fullScreen", "permalink","editor","evalButton"],
-                  //        languages: ["sage", "r"],
-
-     });
- </script>
-
-
-   <!--  KULLANIM
-
- <div class="sage"><script type="text/x-sage">
- 2**52
- </script>
- </div>
-
- -->
-
-
-
-<!--   LaTeX  -->
+<!--   TexLive.net  -->
     <meta charset="UTF-8">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.min.js"></script>
 
@@ -210,13 +165,13 @@ div.csl-indent {
       runlatex.adddefaultpreamble=false;
       runlatex.adddefaultengine=false;
 
-      runlatex.overleafURI=null;
+      //runlatex.overleafURI=null; 
 
       runlatex.texts ={
+              "TeXLive.net":      "Derle",
         	  "Open in Overleaf": "Overleaf'ta açın",
-	          "TeXLive.net":      "Derle",
-	          "Delete Output":    "Çıktıyı Temizle",
-	          "Compiling PDF":    "PDF derleme",
+	          "Delete Output":    "Çıktıyı Sil",
+	          "Compiling PDF":    "PDF derleniyor",
 	          "Added Code":       "",
 	          "End Added Code":   "",
 	          "Top Caption":      ""
@@ -248,38 +203,6 @@ div.csl-indent {
   window.addEventListener('load', fillForm, false);
 
 </script>
-
-
-
-
-<!--   GeoGebra  -->
-
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta charset="utf-8">
-
-<script src="https://www.geogebra.org/apps/deployggb.js"></script>
-
-<!-- Kullanım
-
-<div id="ggb-element">
-<script>
-    var params = {"appName": "graphing", "width": 800, "height": 600, "showToolBar": true, "showAlgebraInput": true, "showMenuBar": true };
-    var applet = new GGBApplet(params, true);
-    window.addEventListener("load", function() {
-        applet.inject('ggb-element');
-    });
-</script>
-</div>
-
-graphing yerine geometry , 3d
-
-"material_id":"RHYH3UQ8"
-
-"filename":"myFile.ggb"
-
--->
-
-
 
 
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
@@ -855,7 +778,7 @@ Not
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
 <div id="ref-Oetiker" class="csl-entry" role="doc-biblioentry">
-Oetiker, Tobias, Hubert Partl, Irene Hyna, ve Elisabeth Schlegl. 2006. <em><span>İnce bir LaTeX2e Elkitabı veya, 116 dakikada LaTeX2e</span></em>.
+Oetiker, Tobias, Hubert Partl, Irene Hyna, ve Elisabeth Schlegl. 2006. <em><span>İnce bir LaTeX2e Elkitabı veya, 116 dakikada LaTeX2e</span></em>. <a href="http://ftp.ntua.gr/mirror/ctan/info/lshort/turkish/lshort-tr.pdf">http://ftp.ntua.gr/mirror/ctan/info/lshort/turkish/lshort-tr.pdf</a>.
 </div>
 </div>
 </section>
@@ -971,7 +894,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","closeEffect":"zoom","selector":".lightbox","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","loop":true,"selector":".lightbox","descPosition":"bottom","openEffect":"zoom"});</script>
 
 
 

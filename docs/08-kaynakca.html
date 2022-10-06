@@ -73,52 +73,7 @@ div.csl-indent {
     "search-submit-button-title": "Gönder"
   }
 }</script>
-
- <!-- SAGE -->
- <meta charset="utf-8">
- <meta name="viewport" content="width=device-width">
- <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script>
-
- <script>
-     // Make the div with id 'mycell' a Sage cell
-     sagecell.makeSagecell({inputLocation:  'div.m_sage',
-                            linked: true,
-                            template: sagecell.templates.minimal,
-                            evalButtonText: "Çalıştır"});
-
-     // Make *any* div with class 'compute' a Sage cell
-     sagecell.makeSagecell({inputLocation: 'div.sage',
-                            linked: false,
-                            evalButtonText: "Çalıştır",
-                            hide: ["fullScreen", "permalink"],
-                  //        languages: ["sage", "r"],
-
-     });
-
-     // Make *any* div with class 'compute' a Sage cell
-     sagecell.makeSagecell({inputLocation: 'div.o_sage',
-                            linked: true,
-                            autoeval: true,
-                        //  evalButtonText: "Çalıştır",
-                            hide: ["fullScreen", "permalink","editor","evalButton"],
-                  //        languages: ["sage", "r"],
-
-     });
- </script>
-
-
-   <!--  KULLANIM
-
- <div class="sage"><script type="text/x-sage">
- 2**52
- </script>
- </div>
-
- -->
-
-
-
-<!--   LaTeX  -->
+<!--   TexLive.net  -->
     <meta charset="UTF-8">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.min.js"></script>
 
@@ -143,13 +98,13 @@ div.csl-indent {
       runlatex.adddefaultpreamble=false;
       runlatex.adddefaultengine=false;
 
-      runlatex.overleafURI=null;
+      //runlatex.overleafURI=null; 
 
       runlatex.texts ={
+              "TeXLive.net":      "Derle",
         	  "Open in Overleaf": "Overleaf'ta açın",
-	          "TeXLive.net":      "Derle",
-	          "Delete Output":    "Çıktıyı Temizle",
-	          "Compiling PDF":    "PDF derleme",
+	          "Delete Output":    "Çıktıyı Sil",
+	          "Compiling PDF":    "PDF derleniyor",
 	          "Added Code":       "",
 	          "End Added Code":   "",
 	          "Top Caption":      ""
@@ -181,38 +136,6 @@ div.csl-indent {
   window.addEventListener('load', fillForm, false);
 
 </script>
-
-
-
-
-<!--   GeoGebra  -->
-
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta charset="utf-8">
-
-<script src="https://www.geogebra.org/apps/deployggb.js"></script>
-
-<!-- Kullanım
-
-<div id="ggb-element">
-<script>
-    var params = {"appName": "graphing", "width": 800, "height": 600, "showToolBar": true, "showAlgebraInput": true, "showMenuBar": true };
-    var applet = new GGBApplet(params, true);
-    window.addEventListener("load", function() {
-        applet.inject('ggb-element');
-    });
-</script>
-</div>
-
-graphing yerine geometry , 3d
-
-"material_id":"RHYH3UQ8"
-
-"filename":"myFile.ggb"
-
--->
-
-
 
 
   <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
@@ -370,9 +293,6 @@ Guide and Reference Manual</em>. Addison-wesley.
 <div id="ref-latex2e" class="csl-entry" role="doc-biblioentry">
 <em>LaTeX2e: An Unofficial Reference Manual</em>. 2018. <a href="http://puszcza.gnu.org.ua/software/latexrefman/">http://puszcza.gnu.org.ua/software/latexrefman/</a>.
 </div>
-<div id="ref-wiki" class="csl-entry" role="doc-biblioentry">
-<span>“LaTeX-Wikibooks, Open Books for an Open World.”</span> 2022. <a href="https://en.wikibooks.org/wiki/LaTeX">https://en.wikibooks.org/wiki/LaTeX</a>.
-</div>
 <div id="ref-mittelbach2004latex" class="csl-entry" role="doc-biblioentry">
 Mittelbach, Frank, Michel Goossens, Johannes Braams, David Carlisle, and
 Chris Rowley. 2004. <em>The LaTeX Companion</em>. Addison-Wesley
@@ -382,9 +302,6 @@ Professional.
 Oetiker, Tobias, Hubert Partl, Irene Hyna, and Elisabeth Schlegl. 2006.
 <em><span class="nocase">İnce bir LaTeX2e Elkitabı veya, 116 dakikada
 LaTeX2e</span></em>. <a href="http://ftp.ntua.gr/mirror/ctan/info/lshort/turkish/lshort-tr.pdf">http://ftp.ntua.gr/mirror/ctan/info/lshort/turkish/lshort-tr.pdf</a>.
-</div>
-<div id="ref-over" class="csl-entry" role="doc-biblioentry">
-<span>“Overleaf-Online LaTeX Editor.”</span> 2022. <a href="https://www.overleaf.com/">https://www.overleaf.com/</a>.
 </div>
 <div id="ref-Pakin2017" class="csl-entry" role="doc-biblioentry">
 Pakin, Scott. 2017. <em><span>The Comprehensive LaTeX Symbol List; The
@@ -412,12 +329,6 @@ LaTeX Series. Norfolk, UK: Dickimaw Books.
 <div id="ref-Tantau2019" class="csl-entry" role="doc-biblioentry">
 Tantau, Till. 2019. <em><span class="nocase">The TikZ and PGF Packages
 Manual for version 3.1</span></em>. <a href="https://sourceforge.net/projects/pgf">https://sourceforge.net/projects/pgf</a>.
-</div>
-<div id="ref-ctan" class="csl-entry" role="doc-biblioentry">
-<span>“The Comprehensive TeX Archive Network.”</span> 2022. <a href="http://mirror.ctan.org/">http://mirror.ctan.org/</a>.
-</div>
-<div id="ref-tug" class="csl-entry" role="doc-biblioentry">
-<span>“The TeX User Group.”</span> 2022. <a href="http://tug.org/">http://tug.org/</a>.
 </div>
 </div>
 

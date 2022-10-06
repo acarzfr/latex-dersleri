@@ -54,4 +54,5 @@ format:
 
 editor: visual
 
-google-analytics: "G-JKMYVGF9VL"
+website: 
+  google-analytics: "G-JKMYVGF9VL"

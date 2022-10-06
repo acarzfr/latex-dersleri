@@ -5,7 +5,7 @@ Bu kitap, artık aktif olmayan <https://texdizgi.com/> adresinde yazmış olduğ
 
 Kitabı doğal olarak {{< latex >}}'le yazıyordum. [RMarkdown](https://rmarkdown.rstudio.com/) ve [Quarto](https://quarto.org/) ile tanıştıktan sonra kitabı yalnızca PDF olarak değil, etkileşime izin vermesi ve daha bir çok avantajından  dolayı HTML olarak da dağıtmaya karar verdim. 
 
-Kitap etkileşimli hale [TeXLive.net](https://texlive.net/) sayesinde geldi. Okurun internet bağlantısı olduğunda etkileşimli HTML sürümünü kullanması önerilir. 
+Kitap etkileşimli hale [TeXLive.net](https://texlive.net/) sayesinde geldi. Etkileşimden faydalanmak istiyorsanız internet bağlantınız olduğunda HTML sürümünü kullanmanız önerilir. Bu sayede kendi denemelerinizi yapabilirsiniz.  
 
 ```latex
 \documentclass{article}
@@ -14,7 +14,7 @@ Kitap etkileşimli hale [TeXLive.net](https://texlive.net/) sayesinde geldi. Oku
 \end{document}
 ```
 
-Yukarıdaki "Derle" düğmesine bastığınızda {{< latex >}} çıktısı ile  "Çıktıyı Temizle" düğmesi görünecek.^[Bu düğmelerin PDF sürümde olmayacağını unutmayın.] Dilerseniz bu düğmeye basarak çıktıyı temizleyebilirsiniz. Ayrıca  içeriği değiştirerek kendi denemelerinizi yapabilirsiniz. 
+Yukarıdaki "Overleaf'ta açın" düğmesine bastığınızda örnek belge [Overleaf](https://www.overleaf.com/)'ta açılacak. Tabi bunun için bir hesabınız olması gerekir. "Derle" düğmesine bastığınızda ise {{< latex >}} çıktısı ile  "Çıktıyı Sil" düğmesi görünecek.^[Tüm bu düğmelerin PDF sürümde olmayacağını unutmayın.]
 
 Keyifli okumalar.
 
