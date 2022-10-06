@@ -549,19 +549,9 @@ Marx, Kapital'e şöyle başlar:
 \end{document}
 ```
 
-## Özel kelimeler
 
-{{< latex >}}’de bazı özel kelimelerin dizilişlerinin kelimeyi oluşturan harflerin yazılmasıyla elde edilemeyeceğini fark etmiş olmalısınız. Bu özel kelimeler için komutlar kullanılır.
 
-| Komut | Çıktı | Gerekli Paket |
-| :--- | :--- | :--- |
-| `\today` |  |  |
-| `\TeX` | {{< tex >}} |  |
-| \\ LaTeX | IATEX |  |
-| \\ LaTeXe | LTEX 2epsi |  |
-| \\ AmS | AMS | amsmath |
-| \\ BibTeX |  | dtk-logos |
-| \\ MiKTeX |  | dtk-logos |
+
 ## Yazıtipleri
 
 
@@ -576,10 +566,7 @@ Bu yazıda anlatacağımız şeylerden bazıları bir bakıma {{< latex >}}'in
 felsefesine aykırı olacak. Nitekim {{< latex >}}, `\documentclass` komutunda
 belirtilen ana yazıtipi boyutuna göre, dipnot ya da başlık gibi ana
 yazıtipi boyutundan farklı dizilen şeylerin boyutunu olabilecek en güzel
-ve doğru şekilde ayarlar. O yüzden bu konudaki klasik uyarıyı biz de
-yineleyelim:
-
-![](images/uyari.png){width=100%}
+ve doğru şekilde ayarlar. 
 
 ### Aile
 
