@@ -16,7 +16,7 @@ Kitap etkileşimli hale [TeXLive.net](https://texlive.net/) sayesinde geldi. Etk
 
 Yukarıdaki "Overleaf'ta açın" düğmesine bastığınızda örnek belge [Overleaf](https://www.overleaf.com/)'ta açılacak. Tabi bunun için bir hesabınız olması gerekir. "Derle" düğmesine bastığınızda ise {{< latex >}} çıktısı ile  "Çıktıyı Sil" düğmesi görünecek.^[Tüm bu düğmelerin PDF sürümde olmayacağını unutmayın.]
 
-Kitabın taslak aşamasında ve eksik birçok konu var. Ayrıca  hatalar olabileceğini de unutmayınız. Keyifli okumalar.
+Kitap taslak aşamasında ve eksik birçok konu var. Ayrıca  hatalar olabileceğini de unutmayın. Keyifli okumalar.
 
 
 

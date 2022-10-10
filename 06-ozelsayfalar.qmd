@@ -400,7 +400,6 @@ ve \LaTeX{} için Türkçe kaynak \cite{Oetiker06} \dots
 
 ## Dizin
 
-
 {{< latex >}}'de dizin oluşturabilmek için sahanlığa
 
 
