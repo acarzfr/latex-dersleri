@@ -360,7 +360,7 @@ komutunun verilmesi gerekir.
 
 :::{.callout-note}
 "Kaynakça" ya da "Kaynaklar" isimleri yerine farklı isimler
-kullanılabilir elbette. Ancak `thebibliography` ortamının oluşturulduğu yerlerde {{< latex >}} bu isimleri yazdıracağından tutarlı
+kullanılabilir elbette. Ancak Türkçe dil paketi ekli belgelerde `thebibliography` ortamının oluşturulduğu yerlerde {{< latex >}} bu isimleri yazdıracağından tutarlı
 olması açısından bu isimler önerilmiştir.
 :::
 

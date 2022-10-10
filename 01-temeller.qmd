@@ -89,7 +89,11 @@ paket adı, zorunlu olmayan kısmına ise paket seçenekleri yazılır:
 ```
 
 Bu komutla paketin kaynak dosyaya eklenmesi {{< tex >}} dağıtımıyla sisteminize
-kurulmuş olan paketin belgeye çağrılarak işe koşulması demektir.
+kurulmuş olan paketin belgeye çağrılarak işe koşulması demektir. 
+
+:::{.callout-warning}
+{{< tex >}} dağıtımını kurarken tam kurulum yapmadıysanız ve dosyaya eklediğiniz paket temel kurulumda olan bir paket değilse paketi eklemeniz gerekriğine dair bir uyarıyla karşılaşırsınız. 
+:::
 
 ### Ortamlar
 

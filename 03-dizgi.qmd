@@ -71,7 +71,7 @@ olur. Örneğin
 komutuyla "Heceleme" kelimesinin nereden bölüneceği, "FORTRAN", "Fortran" ya da
 "fortran" kelimelerinin bölünmeyeceği {{< latex >}}'e söylenmiş olur.
 
-## Cümle Sonları
+## Cümle Sonları ve Genişlemeyen Boşluklar
 
 {{< latex >}}, okumayı kolaylaştırmak için cümle sonlarında fazladan boşluklar
 bırakır. Bunu yaparken de her cümlenin nokta, soru işareti veya ünlem
@@ -296,9 +296,6 @@ değiştirmek için verilen komutun kullanılabilmesi için sahanlığa
 :::
 
 
-Ortam isteğe bağlı bir değişken de alabilir. Bu, çengelli parantezlerden
-sonra köşeli parantezler içine yazılır. Köşeli parantezler içinde
-yazılanlar bölünmeden ve çok sütunlu metnin üstünde dizilir.
 
 
 ```latex
@@ -307,7 +304,8 @@ yazılanlar bölünmeden ve çok sütunlu metnin üstünde dizilir.
 \usepackage[turkish]{babel}
 \usepackage{multicol}
 \usepackage{xcolor}
-\usepackage{lipsum}% Örnek verirken anlamsız metinler oluşturmaya yarayan bir paket
+\usepackage{lipsum}% Örnek verirken anlamsız metinler 
+%oluşturmaya yarayan bir paket
 \begin{document}
 
 \begin{multicols}{2}
@@ -484,7 +482,7 @@ Eğer `verbatim` ortamı yıldızlı (`verbatim*`) şeklinde kullanılırsa boş
 Başlık sayfası için `titlepage` ortamı kullanılır.
 
 ```latex
-\documentclass{article}
+\documentclass{book}
 \usepackage[T1]{fontenc}
 \usepackage[turkish]{babel}
 \begin{document}
@@ -504,7 +502,7 @@ Başlık sayfası için `titlepage` ortamı kullanılır.
 
   \vfill %sonra gelenlerisayfa altına yasla
 
-  {\large Yayıncı}
+  {\large Yayıncı, Yıl}
 
   \vspace*{3\baselineskip}%boşluk
 
@@ -609,35 +607,37 @@ komut ya da bildirimler kullanılır.
 duymadan kullanılabilecek yazıtipleri aşağıda gösterilmiştir.
 
 
+
 ![Roman
-Yazıtipleri](images/yazitipi2.png){width=50%}
+Yazıtipleri](images/yazitipi2.png){width=70% #fig-roman}
 
 
 
 ![Sans Serif
-Yazıtipleri](images/yazitipi3.png){width=50%}
+Yazıtipleri](images/yazitipi3.png){width=70% #fig-sans}
 
 
 
 ![Typewriter Yazıtipleri\
-](images/yazitipi4.png){width=50%}
+](images/yazitipi4.png){width=70% #fig-typ}
 
 
-![Elyazısı](images/yazitipi5.png){width=25%}
+![Elyazısı](images/yazitipi5.png){width=30% #fig-elyazisi}
+
 
 Varsayılan yazıtipleri `\rmdefault`, `\sfdefault` ve `\ttdefault`
 komutlarında saklı olup, `\renewcommand` komutuyla değiştirilebilirler.
 
 
-```{width=50%}
+```latex
 \renewcommand{\rmdefault}{<kısaltma>}
 ```
 
 
-Burada `<kısaltma>`, tablolarda belirtilen kısaltmalardır. Örneğin
+Burada `<kısaltma>`, şekillerde  belirtilen kısaltmalardır. Örneğin
 
 
-```{width=50%}
+```latex
 \renewcommand{\rmdefault}{put}
 ```
 
@@ -650,18 +650,22 @@ yazılması istenirse `\fontfamily` komutuyla `\selectfont` komutu
 birlikte aşağıdaki şekilde kullanılır.
 
 
-```{width=50%}
+
+```latex
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+\begin{document}
+
 {\fontfamily{pbk}\selectfont Bookman yazıtipi.} Ana yazıtipi.
+
+\end{document}
 ```
 
 
 Varsayılan yazıtipi paket ekleyerek de değiştirilebilir. Bu hem
 pratiktir hem de bazı paketler matematiksel ifadelerin yazıtipine de
-etki eder. Bu paketlerin bazıları tabloda gösterilmiştir.
-
-
-![Yazıtipi değiştiren
-paketler](images/yazitipi6.png){width=70%}
+etki eder. Bu paketlerin ne oldukları ve nasıl çıktı verdiklerini @gates'de bulabilirsiniz.
 
 Bunların dışında beğenebileceğiniz birçok yazıtipini [{{< latex >}}
 Yazıtipi
@@ -673,46 +677,41 @@ Metin içinde kelimeleri bazen italik bazen de kalın dizmek
 isteyebilirsiniz. Bu değişimler aşağıdaki tablodaki komut ya da
 bildirimlerle yapılır.
 
+| Komut | Bildirim | Çıktı Biçimi |
+|-------|----------|-------|
+|`\textnormal`       |     `\normalfont`     | Normal (varsayılan) |
+|`\emph`       |     `\em`     | Vurgulu |
+|`\textit`       |     `\itshape`     | İtalik |
+|`\textsc`       |     `\scshape`     | Baş harfler büyük |
+|`\textsl`       |     `\slshape`     | Eğik |
+|`\textup`       |     `\upshape`     | Dik (varsayılan) |
+|`\textbf`       |     `\bfseries`     | Kalın |
+|`\textmd`       |     `\mdseries`     | Orta kalın (varsayılan) |
 
-![Yazıtipi
-Biçemleri](images/yazitipi7.png){width=50%}
 
 
 ```latex
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+\begin{document}
+
 İzleyen kelime \textit{italik} 
-harflerle yazılmıştır.
-Metnin geri kalan kısmı
+harflerle yazılmıştır. Geri kalan kısmı
 normaldir.
-```
 
-```latex
 İzleyen ifade {\slshape {\bfseries eğik kalındır}}.
-```
 
-
-```latex
 İzleyen ifade \textit{\textbf{italik kalın}}, ama bu
 \textsc{\textit{büyük küçük harf değil}}.
-```
 
 
-
-Eğer vurgulu metin içinde bazı kelimeler tekrar vurgulanırsa bu
-kelimeler normale döner.
-
-```latex
 {\em Vurgulu metinde tekrar
 vurgu yapılırsa {\em normale}
 döner.}
+\end{document}
 ```
 
-
-
-
-{{< latex >}}'de vurgu yukarıdaki gibi yapılsa da altını çizerek vurgu yapmak
-isteyen olabilir. Kuyruklu harflerin altı çizildiğinde varsayılan satır
-aralığı değiştiğinden vurguyu bu şekilde yapmamanız daha doğrudur. Ancak
-illa altını çizmek isterseniz `\underline` komutunu kullanabilirsiniz.
 
 
 ### Boyut
