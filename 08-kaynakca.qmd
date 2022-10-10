@@ -1,6 +1,7 @@
 # Kaynakça {.unnumbered}
 
+
+
 ::: {#refs}
-nocite: |
-  @*
+
 :::

@@ -39,7 +39,7 @@ format:
     html-math-method: katex
     lang: tr
     include-in-header: preamble.html
-   
+    
 
     filters:
      - lightbox
@@ -53,6 +53,3 @@ format:
       #fontfamily: libertinus
 
 editor: visual
-
-website: 
-  google-analytics: "G-JKMYVGF9VL"
