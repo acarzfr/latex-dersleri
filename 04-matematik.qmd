@@ -1298,7 +1298,7 @@ köşeli parantezler içine yazabilirsiniz:
 
 
 Kanıtın sonunu bildiren $\square$ işareti bazen son satırda yalnız
-kalırsa, `\qedhere` komutuyla onu doğru yere oturtabilirsiniz:
+kalırsa, `\qedhere` komutuyla onu doğru yere oturtabilirsiniz.
 
 
 Özel bir QED sembolü kullanmak isterseniz `\qedsymbol` komutunu yeniden
@@ -1356,7 +1356,7 @@ değiştirme olanağını verir.
 
 Buradaki `<stil adı>` kullanmak istediğiniz stildir. Bu komuttan sonra
 tanımlanmış tüm teoremler bu stili kullanacaktır. {{< latex >}}'de önceden
-tanımlanmış stiller aşağıdakilerdir:
+tanımlanmış stiller @tbl-teoremstil'de gösterilmiştir.
 
 Table:  Teorem Stilleri {#tbl-teoremstil}
 
