@@ -167,7 +167,7 @@ Bu yöntemin önemli avantajları vardır:
     target="_blank"} ve
     [DergiPark](http://www.dergipark.org.tr/tr/){rel="noreferrer noopener"
     target="_blank"} gibi platformlardan kullandığınız kaynakların
-    {{< bibtex >}} kodunu çekebilirsiniz (bkz. Şekil \@ref(fig:fig-google)).
+    {{< bibtex >}} kodunu çekebilirsiniz (@fig-google).
 4.  Yukarıda da bahsettiğimiz gibi Mendeley ve Jabref gibi akademik atıf
     düzenleme programlarını kullanarak kaynakların {{< bibtex >}} kodunu
     oluşturabilir, düzenleyebilirsiniz.
@@ -424,8 +424,17 @@ girilir:
 
 Dizin maddesi girme örnekleri aşağıda gösterilmiştir.
 
+Table: Dizin maddesi girme örnekleri {#tbl-dizin}
 
-![](images/dizina.png){}
+|**Örnek**|**Çıktı**|
+|:--|:--|
+|`\index{madde}`| madde, 8|
+|`\index{altmadde!madde}`| \ \ \ altmadde, 8|
+|`\index{altmadde|see{madde}}`| altmadde,  *bkz.* madde|
+|`\index{madde@\textbf{madde}}`| **madde**, 8|
+|`\index{madde|textbf}`| madde, **8**|
+
+
 
 
 {{< latex >}}, kaynak dosyanızı derlediğinizde bu dizin maddelerini sayfa
@@ -561,6 +570,8 @@ eklenmesi istenen yere
 
 
 şeklinde verilir.
+
+
 
 ### Dizinin İçindekiler tablosuna yazılması
 

@@ -78,6 +78,25 @@ code span.st { color: #4070a0; } /* String */
 code span.va { color: #19177c; } /* Variable */
 code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -325,6 +344,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#kanıtlar" id="toc-kanıtlar" class="nav-link" data-scroll-target="#kanıtlar"> <span class="header-section-number">4.9.3</span> Kanıtlar</a></li>
   <li><a href="#teorem-stilleri" id="toc-teorem-stilleri" class="nav-link" data-scroll-target="#teorem-stilleri"> <span class="header-section-number">4.9.4</span> Teorem Stilleri</a></li>
   </ul></li>
+  <li><a href="#semboller" id="toc-semboller" class="nav-link" data-scroll-target="#semboller"> <span class="header-section-number">4.10</span> Semboller</a></li>
   </ul>
 </nav>
     </div>
@@ -777,7 +797,7 @@ Not
 <section id="fonksiyonlar" class="level2" data-number="4.4">
 <h2 data-number="4.4" class="anchored" data-anchor-id="fonksiyonlar"><span class="header-section-number">4.4</span> Fonksiyonlar</h2>
 <p><span class="math inline">\LaTeX</span>’de fonksiyonlar aşağıdaki komutlarla dizilirler.</p>
-<p><code>\arccos  \cos  \csc  \exp  \ker  \limsup  \min  \sinh \arcsin  \cosh  \deg  \gcd  \lg  \ln  \Pr  \sup \arctan  \cot  \det  \hom  \lim  \log  \sec  \tan \arg  \coth  \dim  \inf  \liminf  \max  \sin  \tanh</code></p>
+<p><code>\arccos</code>, <code>\cos</code>, <code>\csc</code>, <code>\exp</code>, <code>\ker</code>, <code>\limsup</code>, <code>\min</code>, <code>\sinh</code>, <code>\arcsin</code>, <code>\cosh</code>, <code>\deg</code>, <code>\gcd</code>, <code>\lg</code>, <code>\ln</code>, <code>\Pr</code>, <code>\sup</code>, <code>\arctan</code>, <code>\cot</code>, <code>\det</code>, <code>\hom</code>, <code>\lim</code>, <code>\log</code>, <code>\sec</code>, <code>\tan</code>, <code>\arg</code>, <code>\coth</code>, <code>\dim</code>, <code>\inf</code>, <code>\liminf</code>, <code>\max</code>, <code>\sin</code>, <code>\tanh</code>.</p>
 <p>Matematik kipinde fonksiyonlar diğer değişkenler gibi italik değil düz yazılırlar ve boşluklar otomatik ayarlanır.</p>
 <div class="sourceCode" id="cb14"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[T1]{<span class="ex">fontenc</span>}</span>
@@ -789,12 +809,12 @@ Not
 <span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span><span class="sc">\det</span><span class="ss"> A$</span>, <span class="ss">$</span><span class="sc">\min</span><span class="ss">_{x</span><span class="sc">\in</span><span class="ss"> A} f(x)$</span></span>
 <span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Bunların dışında bir fonksiyon tanımlamak için <code>\DeclareMathOperator</code> komutu kullanılır. <code>\DeclareMathOperator{\obeb}{obeb }</code> komutundan sonra artık kullanabileceğiniz bir “obeb” fonksiyonu olur.</p>
+<p>Bunların dışında bir fonksiyon tanımlamak için <code>\DeclareMathOperator</code> komutu kullanılır. <code>\DeclareMathOperator{\obeb}{obeb\,}</code> komutundan sonra artık kullanabileceğiniz bir “obeb” fonksiyonu olur.</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\documentclass</span>{<span class="ex">article</span>}</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[T1]{<span class="ex">fontenc</span>}</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[turkish]{<span class="ex">babel</span>}</span>
 <span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">amsmath,amssymb,amsfonts</span>}</span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\DeclareMathOperator</span>{<span class="fu">\obeb</span>}{obeb}</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="fu">\DeclareMathOperator</span>{<span class="fu">\obeb</span>}{obeb<span class="fu">\,</span>}</span>
 <span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="kw">\begin</span>{<span class="ex">document</span>}</span>
 <span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a><span class="ss">$</span><span class="sc">\obeb</span><span class="ss">(12,16)=4$</span></span>
@@ -1495,10 +1515,19 @@ Not
 <span id="cb59-26"><a href="#cb59-26" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb59-27"><a href="#cb59-27" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb59-28"><a href="#cb59-28" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-
 </section>
 </section>
+</section>
+<section id="semboller" class="level2" data-number="4.10">
+<h2 data-number="4.10" class="anchored" data-anchor-id="semboller"><span class="header-section-number">4.10</span> Semboller</h2>
+<p>Matematikte çok fazla sayıda sembol kullanılır. Tüm sembollere burada yer vermemiz haliyle mümkün değil. Temel semboller bölüm boyunca verilen örneklerde ve tablolarda gösterildi. Bunların dışında bir sembole ihtiyacınız olduğunda LaTeX editörlerinin yardımcı araçlarına (genelde hepsinde vardır) ya da <span class="citation" data-cites="Pakin">Pakin (<a href="08-kaynakca.html#ref-Pakin" role="doc-biblioref">2021</a>)</span>’e başvurabilirsiniz.</p>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-Pakin" class="csl-entry" role="doc-biblioentry">
+Pakin, Scott. 2021. <em>The Comprehensive LaTeX Symbol List</em>. <a href="https://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf">https://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

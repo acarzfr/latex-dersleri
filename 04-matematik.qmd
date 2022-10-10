@@ -6,7 +6,7 @@ konulardan biridir. Çok fazla matematiksel gösterimin varlığından dolayı
 da büyük bir konudur. Bu bölümde ileri bir
 matematik kitabını dizmek için gereken birçok şey anlatılacaktır ancak
 işin sınırları göz önüne alındığında başka kaynaklara da başvurmanız
-gerekebilir.
+gerekebilir. 
 
 ## Giriş
 
@@ -423,7 +423,7 @@ $\forall \epsilon>0$ için
 
 {{< latex >}}'de fonksiyonlar aşağıdaki komutlarla dizilirler.
 
-`\arccos  \cos  \csc  \exp  \ker  \limsup  \min  \sinh \arcsin  \cosh  \deg  \gcd  \lg  \ln  \Pr  \sup \arctan  \cot  \det  \hom  \lim  \log  \sec  \tan \arg  \coth  \dim  \inf  \liminf  \max  \sin  \tanh`
+`\arccos`,  `\cos`,  `\csc`,  `\exp`,  `\ker`,  `\limsup`,  `\min`,  `\sinh`, `\arcsin`,  `\cosh`,   `\deg`,   `\gcd`,  `\lg`,  `\ln`,  `\Pr`,  `\sup`, ` \arctan`,  `\cot`,  `\det`,  `\hom`,  `\lim`,  `\log`,  `\sec`,  `\tan`, `\arg`,  `\coth`,  `\dim`, `\inf`,  `\liminf`,  `\max`,  `\sin`,  `\tanh`.
 
 Matematik kipinde fonksiyonlar diğer değişkenler gibi italik değil düz
 yazılırlar ve boşluklar otomatik ayarlanır.
@@ -446,7 +446,7 @@ $\det A$, $\min_{x\in A} f(x)$
 
 
 Bunların dışında bir fonksiyon tanımlamak için `\DeclareMathOperator`
-komutu kullanılır. `\DeclareMathOperator{\obeb}{obeb }`
+komutu kullanılır. `\DeclareMathOperator{\obeb}{obeb\,}`
 komutundan sonra artık kullanabileceğiniz bir "obeb" fonksiyonu
 olur.
 
@@ -455,7 +455,7 @@ olur.
 \usepackage[T1]{fontenc}
 \usepackage[turkish]{babel}
 \usepackage{amsmath,amssymb,amsfonts}
-\DeclareMathOperator{\obeb}{obeb}
+\DeclareMathOperator{\obeb}{obeb\,}
 \begin{document}
 
 $\obeb(12,16)=4$
@@ -1463,7 +1463,9 @@ Not değişkeni her zaman isteğe bağlıdır, ancak başlık oluşturulurken
 \end{document}
 ```
 
+## Semboller
 
+Matematikte çok fazla sayıda sembol kullanılır. Tüm sembollere burada yer vermemiz haliyle mümkün değil. Temel semboller bölüm boyunca  verilen örneklerde ve tablolarda gösterildi. Bunların dışında bir sembole ihtiyacınız olduğunda LaTeX editörlerinin yardımcı araçlarına (genelde hepsinde vardır) ya da @Pakin'e başvurabilirsiniz. 
 
 
 

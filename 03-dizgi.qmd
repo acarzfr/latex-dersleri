@@ -604,25 +604,50 @@ komut ya da bildirimler kullanılır.
 
 
 {{< latex >}}'de varsayılan yazıtipi Computer Modern olup, ek bir pakete ihtiyaç
-duymadan kullanılabilecek yazıtipleri aşağıda gösterilmiştir.
+duymadan kullanılabilecek yazıtipleri aşağıdaki tablolarda gösterilmiştir.
 
 
+Table: Roman Yazıtipleri {#tbl-roman}
 
-![Roman
-Yazıtipleri](images/yazitipi2.png){width=70% #fig-roman}
+| Kısaltma | Yazıtipi |
+| :--- | :--- |
+| **cmr** | Computer Modern Roman (varsayılan) |
+| **lmr** | Latin Modern Roman |
+| **pbk** | Bookman |
+| **bch** | Charter |
+| **pnc** | New Century Schoolbook |
+| **ppl** | Palatino |
+| **ptm** | Times |
+| **put** | Utopia |
+| **ccr** | Computer Concrete |
+| **fi4** | Inconsolata |
 
 
+Table: Sans Serif  Yazıtipleri {#tbl-sans}
 
-![Sans Serif
-Yazıtipleri](images/yazitipi3.png){width=70% #fig-sans}
+| Kısaltma | Yazıtipi |
+| :--- | :--- |
+| **cmss** | Computer Modern Sans Serif (varsayılan) |
+| **lmss** | Latin Modern Sans Serif |
+| **pag** | Avant Garde |
+| **phv** | Helvetica |
+| **fvs** | Bitstream Vera Sans |
 
 
+Table: Typewriter Yazıtipleri {#tbl-typew}
 
-![Typewriter Yazıtipleri\
-](images/yazitipi4.png){width=70% #fig-typ}
+| Kısaltma | Yazıtipi |
+| :--- | :--- |
+| **cmtt** | Computer Modern Typewriter (varsayılan) |
+| **lmtt** | Latin Modern Typewriter |
+| **pcr** | Courier |
 
+Table: Elyazısı {#tbl-elyazisi}
 
-![Elyazısı](images/yazitipi5.png){width=30% #fig-elyazisi}
+| Kısaltma | Yazıtipi |
+| :--- | :--- |
+| **pzc** | Elyazısı |
+
 
 
 Varsayılan yazıtipleri `\rmdefault`, `\sfdefault` ve `\ttdefault`
@@ -716,17 +741,32 @@ döner.}
 
 ### Boyut
 
-Yazıtipi boyutunu değiştirmek için aşağıdaki bildirimler kullanılır.
-
-
-![Yazıtipi Boyutu Değiştiren
-Bildirimler](images/yazitipi8.png){width=50%}
-
+Yazıtipi boyutunu değiştirmek için küçükten büyüğe sırasıyla  
+`\tiny`,
+`\scriptsize`,
+`\footnotesize`,
+`\small`,
+`\normalsize`,
+`\large`,
+`\Large`,
+`\LARGE`,
+`\huge`,
+`\Huge` 
+bildirimleri kullanılır.
 
 ```latex
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+\begin{document}
+
 {\Large Büyük} ve
 {\scriptsize küçük} harfler.
+
+\end{document}
 ```
+
+
 
 
 Bu bildirimlerin aynı zamanda satır aralığını da değiştirdiğine dikkat
@@ -734,33 +774,42 @@ edilmelidir. Aşağıdaki iki örnekte, `\par` (paragraf) komutunun
 verdiğiniz yere bağlı olarak farklı sonuçlar ürettiği gösterilmiştir.
 Doğru kullanım ikincisidir.
 
-
 ```latex
-{\large 
-Sokrates: Platon
-yalan söyleyecek
-aşağıdaki cümlede.}\par
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+\usepackage{lipsum}
+\begin{document}
+
+{\large \lipsum[2]}\par
+
+{\large \lipsum[2]\par}
+
+\end{document}
 ```
 
 
- <!-- [Çıktı](https://github.com/acarzfr/latex-dersleri/blob/main/examples/ex4.pdf) --> 
 
 
-```latex
-{\large Platon: Sokrates
-doğruyu söyledi
-önceki cümlede.\par}
-```
-
-
- <!-- [Çıktı](https://github.com/acarzfr/latex-dersleri/blob/main/examples/ex5.pdf) --> 
+ 
 
 Bu bildirimlerin etkisi belge ana yazıtipi boyutuna bağımlıdır. Mutlak
-boyutlar aşağıdaki tabloda gösterilmiştir.
+boyutlar @tbl-yaziyipimutlak'de gösterilmiştir.
 
+Table: Yazıtipleri mutlak boyutları {#tbl-yaziyipimutlak}
 
-![Yazıtipleri Mutlak
-Boyutları](images/yazitipi9.png){width=70%}
+|  | 10 pt (varsayılan) | 11 pt seçeneği | 12 pt seçeneği |
+| :--- | ---: | ---: | ---: |
+| `\tiny` | 5pt | 6pt | 6pt |
+| `\scriptsize` | 7pt | 8pt | 8pt |
+| `\footnotesize` | 8pt | 9pt | 10 pt |
+| `\small` | 9pt | 10 pt | 11 pt |
+| `\normalsize` | 10 pt | 11 pt | 12 pt |
+| `\large` | 12 pt | 12 pt | 14 pt |
+| `\Large` | 14 pt | 14 pt | 17 pt |
+| `\LARGE` | 17 pt | 17 pt | 20 pt |
+| `\huge` | 20 pt | 20 pt | 25 pt |
+| `\Huge` | 25 pt | 25 pt | 25 pt |
 
 
 Bağımsız bir yazıtipi boyutu elde etmek için `\fontsize` ile
@@ -778,10 +827,18 @@ $1.2$ katı olmasıdır.
 
 
 ```latex
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+\begin{document}
+
 {\fontsize{30}{36}\selectfont
 Yazı tipi boyutu 30 punto,
 satır aralığı 36 punto.}
+
+\end{document}
 ```
+
 
 
 Ana yazıtipi boyutu `\normalsize` komutunda saklı olup, `\renewcommand`
@@ -814,10 +871,19 @@ aşağıdaki şekillerde kullanılır.
 
 
 ```latex
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+\usepackage{xcolor}
+\begin{document}
+
 \color{red}{Kırmızı}\\
 {\color{blue} Tamamı mavi}\\
 \textcolor{pink}{Pembe}
+
+\end{document}
 ```
+
 
 
 
@@ -836,9 +902,6 @@ Bunlar da yeterli gelmiyorsa seçeneklere bir de `svgnames` yazın ve
 [buradaki](https://www.latextemplates.com/svgnames-colors) yüzden fazla rengi kullanılabilir duruma getirin.
 
 
-```latex
-\documentclass[svgnames,dvipsnames]{article}
-```
 
 
 ### Yeni renkler oluşturmak
@@ -851,10 +914,18 @@ edilebilir. Aşağıda karışımın nasıl hazırlanabileceği gösterilmiştir
 
 
 ```latex
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+\usepackage{xcolor}
+\begin{document}
+
 \color{blue!80}{\%80 mavi \%20 beyaz}\\
 \color{red!40!blue}{\%40 kırmızı \%60 mavi} \\
 {\color{yellow!20!green!75!black} \%20x0.75=15 sarı
 \%(100-20)x0.75=60 yeşil \%100-75=25 siyah}
+
+\end{document}
 ```
 
 
@@ -863,7 +934,7 @@ edilebilir. Aşağıda karışımın nasıl hazırlanabileceği gösterilmiştir
 
 İkinci yol `\definecolor` komutuyla renk modelleri kullanmaktır.
 
-Table: (\#tab:renkmod) Renk Modelleri
+Table:  Renk Modelleri {#tbl-renkmodel}
 
 | **Model** | **Açıklama** |
 | :--- | :--- |
@@ -913,10 +984,6 @@ Yeni oluşturduğunuz rengi tek seferlik kullanacaksanız
 komutlarını kullanabilirsiniz.
 
 
-```latex
-{\color[RGB]{102,0,51} Bol}\\
-\textcolor[RGB]{0,76,153}{Çeşit bol}
-```
 
 
 Metnin arka planını renklendirmek için `\colorbox` komutu kullanılır.
@@ -934,13 +1001,26 @@ Benzer `\fcolorbox` komutu aynı şeyi çizgi çizerek yapar.
 Komutlar yukarıda gösterildiği şekilde kullanılabilir.
 
 
+
+
 ```latex
+\documentclass[dvipsnames]{article}
+\usepackage[T1]{fontenc}
+\usepackage[turkish]{babel}
+\usepackage{xcolor}
+\begin{document}
+
+{\color[RGB]{102,0,51} Bol}
+
+\textcolor[RGB]{0,76,153}{Çeşit bol}
+
 \colorbox{Cyan}{Metin}
 \colorbox[rgb]{0.4,0.4,0.5}{Metin}
 \fcolorbox{red}{yellow}{Metin}
 \fcolorbox[RGB]{0,0,0}{255,204,255}{Metin}
-```
 
+\end{document}
+```
 
 Sayfaları renklendirmek için ise `\pagecolor` komutu kullanılır. Komutun
 zorunlu değişkeninde renk belirtilir. Tekrar normale (beyaz) dönmek için

@@ -2,7 +2,7 @@
 
 ## Varsayılan Sayfa Düzenini Değiştirme
 
-{{< latex >}}'de varsayılan kağıt boyutunun `letterpaper` olduğunu Bölün \@ref(belgesinifi)'de ifade etmiştik. Ayrıca aynı yazıda başka bir kağıt boyutunun
+{{< latex >}}'de varsayılan kağıt boyutunun `letterpaper` olduğunu  ifade etmiştik. Ayrıca aynı yazıda başka bir kağıt boyutunun
 nasıl seçileceğine de yer vermiştik. Şimdi ise hem sayfamızın kenar
 boşluklarının nasıl ayarlanacağından hem de ön tanımlı olmayan, tamamen
 keyfi bir sayfa boyutunun nasıl belirleneceğinden bahsedelim.
@@ -20,7 +20,7 @@ komutuyla sahanlığa ekleyin. Ardından paket seçeneklerinde aşağıdaki
 tanımlamalarla sayfanın düzenini değiştirebilirsiniz:
 
 
-| Tanım| Değer |
+| **Tanım**| **Değer** |
 | :--- | :--- |
 |  `top` | üst boșluk |
 | `bottom` | alt boșluk |
@@ -45,9 +45,4 @@ yerine, örneğin `a4paper` yazarak sadece kenar boşluklarla ilgili
 tanımlamaları yapabilirsiniz.
 
 
-:::{.callout-note}
-{{< latex >}}'de milimetre (mm) ve santimetre (cm) dışında inç (in), punto
-(pt), em ve ex gibi ölçü birimleri de vardır. Bunlara ileride
- değinilecektir. Ayrıca yine ileride daha ayrıntılı sayfa düzeni
-oluşturmaktan da bahsedeceğiz. Bu aşamada bu kadarı yeterli olacaktır.
-:::
+

@@ -414,7 +414,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ol type="1">
 <li>Biçimlendirme otomatik yapılır. Eğer çalışmanızı yayımlayacak dergi ya da yayınevi kaynakçayı farklı bir formatta isterse her kaynağı tek tek elle biçimlendirmek zorunda kalmazsınız. Basit bir komut işinizi görür.</li>
 <li>Dosyayı bir kere oluşturur ve sonra başka çalışmalarda kullanabilirsiniz.</li>
-<li><a href="https://scholar.google.com.tr/" rel="noreferrer noopener" target="_blank">Google Akademik</a>, <a href="https://books.google.com.tr/" rel="noreferrer noopener" target="_blank">Google Kitaplar</a> ve <a href="http://www.dergipark.org.tr/tr/" rel="noreferrer noopener" target="_blank">DergiPark</a> gibi platformlardan kullandığınız kaynakların <span style="font-variant: small-caps;">Bib</span><span style="letter-spacing:-2px;">T</span><sub style="font-size: inherit; letter-spacing:-1px;">E</sub>X kodunu çekebilirsiniz (bkz. Şekil @ref(fig:fig-google)).</li>
+<li><a href="https://scholar.google.com.tr/" rel="noreferrer noopener" target="_blank">Google Akademik</a>, <a href="https://books.google.com.tr/" rel="noreferrer noopener" target="_blank">Google Kitaplar</a> ve <a href="http://www.dergipark.org.tr/tr/" rel="noreferrer noopener" target="_blank">DergiPark</a> gibi platformlardan kullandığınız kaynakların <span style="font-variant: small-caps;">Bib</span><span style="letter-spacing:-2px;">T</span><sub style="font-size: inherit; letter-spacing:-1px;">E</sub>X kodunu çekebilirsiniz (<a href="#fig-google">Şekil&nbsp;<span>6.1</span></a>).</li>
 <li>Yukarıda da bahsettiğimiz gibi Mendeley ve Jabref gibi akademik atıf düzenleme programlarını kullanarak kaynakların <span style="font-variant: small-caps;">Bib</span><span style="letter-spacing:-2px;">T</span><sub style="font-size: inherit; letter-spacing:-1px;">E</sub>X kodunu oluşturabilir, düzenleyebilirsiniz.</li>
 </ol>
 <div id="fig-google" class="quarto-layout-panel">
@@ -561,10 +561,38 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Dizinde gösterilmek istenen madde, <code>\index</code> komutunun değişkeni olarak girilir:</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\index</span>{&lt;madde&gt;}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Dizin maddesi girme örnekleri aşağıda gösterilmiştir.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="images/dizina.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5"><img src="images/dizina.png" class="img-fluid figure-img"></a></p>
-</figure>
+<div id="tbl-dizin" class="anchored">
+<table class="table">
+<caption>Tablo 6.1: Dizin maddesi girme örnekleri</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;"><strong>Örnek</strong></th>
+<th style="text-align: left;"><strong>Çıktı</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>\index{madde}</code></td>
+<td style="text-align: left;">madde, 8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>\index{altmadde!madde}</code></td>
+<td style="text-align: left;">&nbsp;&nbsp;&nbsp;altmadde, 8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>\index{altmadde|see{madde}}</code></td>
+<td style="text-align: left;">altmadde, <em>bkz.</em> madde</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>\index{madde@\textbf{madde}}</code></td>
+<td style="text-align: left;"><strong>madde</strong>, 8</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><code>\index{madde|textbf}</code></td>
+<td style="text-align: left;">madde, <strong>8</strong></td>
+</tr>
+</tbody>
+</table>
 </div>
 <p><span class="math inline">\LaTeX</span>, kaynak dosyanızı derlediğinizde bu dizin maddelerini sayfa numaralarıyla birlikte, kaynak dosyayla adı aynı fakat uzantısı <code>.idx</code> olan bir dosyaya kaydeder (bu dosyaya <em>ham dosya</em> denir). Bu dosyanın <code>makeindex</code> programından geçirilmesi gerekir. Bu editörde “Araçlar <span class="math inline">\rightarrow</span> Dizin” yoluyla yapılır. Aynı şey uçbirimde,</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="ex">makeindex</span> kaynakdosya</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -751,7 +779,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","selector":".lightbox","loop":true,"openEffect":"zoom","descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"loop":true,"openEffect":"zoom","selector":".lightbox","closeEffect":"zoom","descPosition":"bottom"});</script>
 
 
 

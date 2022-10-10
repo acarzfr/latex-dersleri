@@ -329,15 +329,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <section id="varsayılan-sayfa-düzenini-değiştirme" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="varsayılan-sayfa-düzenini-değiştirme"><span class="header-section-number">7.1</span> Varsayılan Sayfa Düzenini Değiştirme</h2>
-<p><span class="math inline">\LaTeX</span>’de varsayılan kağıt boyutunun <code>letterpaper</code> olduğunu Bölün @ref(belgesinifi)’de ifade etmiştik. Ayrıca aynı yazıda başka bir kağıt boyutunun nasıl seçileceğine de yer vermiştik. Şimdi ise hem sayfamızın kenar boşluklarının nasıl ayarlanacağından hem de ön tanımlı olmayan, tamamen keyfi bir sayfa boyutunun nasıl belirleneceğinden bahsedelim.</p>
+<p><span class="math inline">\LaTeX</span>’de varsayılan kağıt boyutunun <code>letterpaper</code> olduğunu ifade etmiştik. Ayrıca aynı yazıda başka bir kağıt boyutunun nasıl seçileceğine de yer vermiştik. Şimdi ise hem sayfamızın kenar boşluklarının nasıl ayarlanacağından hem de ön tanımlı olmayan, tamamen keyfi bir sayfa boyutunun nasıl belirleneceğinden bahsedelim.</p>
 <p>Bu tür sayfa düzenlemeleri için <span class="math inline">\LaTeX</span>’de <a href="http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/geometry/geometry.pdf"><strong>geometry</strong></a> paketi kullanılır. Öncelikle paketi</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>{<span class="ex">geometry</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>komutuyla sahanlığa ekleyin. Ardından paket seçeneklerinde aşağıdaki tanımlamalarla sayfanın düzenini değiştirebilirsiniz:</p>
 <table class="table">
 <thead>
 <tr class="header">
-<th style="text-align: left;">Tanım</th>
-<th style="text-align: left;">Değer</th>
+<th style="text-align: left;"><strong>Tanım</strong></th>
+<th style="text-align: left;"><strong>Değer</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -371,19 +371,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb2"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[paperwidth=175mm,paperheight=255mm,top=2cm,bottom=2cm,</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>left=2.5cm,right=2.5cm]{<span class="ex">geometry</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>komutunu verdiğinizde boyutu <span class="math inline">175\times 255</span> mm, üst ve alt boşluğu <span class="math inline">2</span> cm, sol ve sağ boşluğu <span class="math inline">2.5</span> cm olan bir sayfa düzeni oluşturursunuz. Dilerseniz <code>paperwidth</code> ve<code>paperheight</code> tanımlamalarını yerine, örneğin <code>a4paper</code> yazarak sadece kenar boşluklarla ilgili tanımlamaları yapabilirsiniz.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Not
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><span class="math inline">\LaTeX</span>’de milimetre (mm) ve santimetre (cm) dışında inç (in), punto (pt), em ve ex gibi ölçü birimleri de vardır. Bunlara ileride değinilecektir. Ayrıca yine ileride daha ayrıntılı sayfa düzeni oluşturmaktan da bahsedeceğiz. Bu aşamada bu kadarı yeterli olacaktır.</p>
-</div>
-</div>
 
 
 </section>
