@@ -400,10 +400,6 @@ ve \LaTeX{} için Türkçe kaynak \cite{Oetiker06} \dots
 
 ## Dizin
 
-Bilimsel bir yapıtta bulunması gereken *dizin* ya da diğer adıyla
-*indeks*, bir yapıtın kişi, konu, yer adı vb. bakımından içindekileri
-yer numarasıyla belirten ve yapıtın arkasında yer alan alfabetik
-listedir.
 
 {{< latex >}}'de dizin oluşturabilmek için sahanlığa
 
