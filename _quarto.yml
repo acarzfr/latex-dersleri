@@ -52,4 +52,6 @@ format:
     include-in-header: preamble.tex
       #fontfamily: libertinus
 
+google-analytics: "G-HDQ76YF4X3"
+
 editor: visual
