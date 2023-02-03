@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.38">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -53,7 +58,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -66,7 +71,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -319,32 +324,32 @@ div.csl-indent {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">İçindekiler</h2>
    
   <ul>
-  <li><a href="#giriş" id="toc-giriş" class="nav-link active" data-scroll-target="#giriş"> <span class="header-section-number">4.1</span> Giriş</a>
+  <li><a href="#giriş" id="toc-giriş" class="nav-link active" data-scroll-target="#giriş"><span class="toc-section-number">4.1</span>  Giriş</a>
   <ul class="collapse">
-  <li><a href="#genel" id="toc-genel" class="nav-link" data-scroll-target="#genel"> <span class="header-section-number">4.1.1</span> Genel</a></li>
-  <li><a href="#matematik-kipiyle-metin-kipi-arasındaki-farklar" id="toc-matematik-kipiyle-metin-kipi-arasındaki-farklar" class="nav-link" data-scroll-target="#matematik-kipiyle-metin-kipi-arasındaki-farklar"> <span class="header-section-number">4.1.2</span> Matematik kipiyle metin kipi arasındaki farklar</a></li>
-  <li><a href="#gruplandırma" id="toc-gruplandırma" class="nav-link" data-scroll-target="#gruplandırma"> <span class="header-section-number">4.1.3</span> Gruplandırma</a></li>
-  <li><a href="#boşluklar" id="toc-boşluklar" class="nav-link" data-scroll-target="#boşluklar"> <span class="header-section-number">4.1.4</span> Boşluklar</a></li>
+  <li><a href="#genel" id="toc-genel" class="nav-link" data-scroll-target="#genel"><span class="toc-section-number">4.1.1</span>  Genel</a></li>
+  <li><a href="#matematik-kipiyle-metin-kipi-arasındaki-farklar" id="toc-matematik-kipiyle-metin-kipi-arasındaki-farklar" class="nav-link" data-scroll-target="#matematik-kipiyle-metin-kipi-arasındaki-farklar"><span class="toc-section-number">4.1.2</span>  Matematik kipiyle metin kipi arasındaki farklar</a></li>
+  <li><a href="#gruplandırma" id="toc-gruplandırma" class="nav-link" data-scroll-target="#gruplandırma"><span class="toc-section-number">4.1.3</span>  Gruplandırma</a></li>
+  <li><a href="#boşluklar" id="toc-boşluklar" class="nav-link" data-scroll-target="#boşluklar"><span class="toc-section-number">4.1.4</span>  Boşluklar</a></li>
   </ul></li>
-  <li><a href="#parantezler-gruplandırıcılar-ve-oklar" id="toc-parantezler-gruplandırıcılar-ve-oklar" class="nav-link" data-scroll-target="#parantezler-gruplandırıcılar-ve-oklar"> <span class="header-section-number">4.2</span> Parantezler, Gruplandırıcılar ve Oklar</a></li>
-  <li><a href="#yunan-harfleri" id="toc-yunan-harfleri" class="nav-link" data-scroll-target="#yunan-harfleri"> <span class="header-section-number">4.3</span> Yunan Harfleri</a></li>
-  <li><a href="#fonksiyonlar" id="toc-fonksiyonlar" class="nav-link" data-scroll-target="#fonksiyonlar"> <span class="header-section-number">4.4</span> Fonksiyonlar</a></li>
-  <li><a href="#yığın-simgeleri" id="toc-yığın-simgeleri" class="nav-link" data-scroll-target="#yığın-simgeleri"> <span class="header-section-number">4.5</span> Yığın Simgeleri</a></li>
-  <li><a href="#matrisler" id="toc-matrisler" class="nav-link" data-scroll-target="#matrisler"> <span class="header-section-number">4.6</span> Matrisler</a></li>
-  <li><a href="#yazı-biçem-ve-boyutları" id="toc-yazı-biçem-ve-boyutları" class="nav-link" data-scroll-target="#yazı-biçem-ve-boyutları"> <span class="header-section-number">4.7</span> Yazı Biçem ve Boyutları</a></li>
-  <li><a href="#denklem-ortamları" id="toc-denklem-ortamları" class="nav-link" data-scroll-target="#denklem-ortamları"> <span class="header-section-number">4.8</span> Denklem Ortamları</a></li>
-  <li><a href="#teorem-ve-benzeri-ortamlar" id="toc-teorem-ve-benzeri-ortamlar" class="nav-link" data-scroll-target="#teorem-ve-benzeri-ortamlar"> <span class="header-section-number">4.9</span> Teorem ve Benzeri Ortamlar</a>
+  <li><a href="#parantezler-gruplandırıcılar-ve-oklar" id="toc-parantezler-gruplandırıcılar-ve-oklar" class="nav-link" data-scroll-target="#parantezler-gruplandırıcılar-ve-oklar"><span class="toc-section-number">4.2</span>  Parantezler, Gruplandırıcılar ve Oklar</a></li>
+  <li><a href="#yunan-harfleri" id="toc-yunan-harfleri" class="nav-link" data-scroll-target="#yunan-harfleri"><span class="toc-section-number">4.3</span>  Yunan Harfleri</a></li>
+  <li><a href="#fonksiyonlar" id="toc-fonksiyonlar" class="nav-link" data-scroll-target="#fonksiyonlar"><span class="toc-section-number">4.4</span>  Fonksiyonlar</a></li>
+  <li><a href="#yığın-simgeleri" id="toc-yığın-simgeleri" class="nav-link" data-scroll-target="#yığın-simgeleri"><span class="toc-section-number">4.5</span>  Yığın Simgeleri</a></li>
+  <li><a href="#matrisler" id="toc-matrisler" class="nav-link" data-scroll-target="#matrisler"><span class="toc-section-number">4.6</span>  Matrisler</a></li>
+  <li><a href="#yazı-biçem-ve-boyutları" id="toc-yazı-biçem-ve-boyutları" class="nav-link" data-scroll-target="#yazı-biçem-ve-boyutları"><span class="toc-section-number">4.7</span>  Yazı Biçem ve Boyutları</a></li>
+  <li><a href="#denklem-ortamları" id="toc-denklem-ortamları" class="nav-link" data-scroll-target="#denklem-ortamları"><span class="toc-section-number">4.8</span>  Denklem Ortamları</a></li>
+  <li><a href="#teorem-ve-benzeri-ortamlar" id="toc-teorem-ve-benzeri-ortamlar" class="nav-link" data-scroll-target="#teorem-ve-benzeri-ortamlar"><span class="toc-section-number">4.9</span>  Teorem ve Benzeri Ortamlar</a>
   <ul class="collapse">
-  <li><a href="#temel-teoremler" id="toc-temel-teoremler" class="nav-link" data-scroll-target="#temel-teoremler"> <span class="header-section-number">4.9.1</span> Temel Teoremler</a></li>
-  <li><a href="#sayaçlar" id="toc-sayaçlar" class="nav-link" data-scroll-target="#sayaçlar"> <span class="header-section-number">4.9.2</span> Sayaçlar</a></li>
-  <li><a href="#kanıtlar" id="toc-kanıtlar" class="nav-link" data-scroll-target="#kanıtlar"> <span class="header-section-number">4.9.3</span> Kanıtlar</a></li>
-  <li><a href="#teorem-stilleri" id="toc-teorem-stilleri" class="nav-link" data-scroll-target="#teorem-stilleri"> <span class="header-section-number">4.9.4</span> Teorem Stilleri</a></li>
+  <li><a href="#temel-teoremler" id="toc-temel-teoremler" class="nav-link" data-scroll-target="#temel-teoremler"><span class="toc-section-number">4.9.1</span>  Temel Teoremler</a></li>
+  <li><a href="#sayaçlar" id="toc-sayaçlar" class="nav-link" data-scroll-target="#sayaçlar"><span class="toc-section-number">4.9.2</span>  Sayaçlar</a></li>
+  <li><a href="#kanıtlar" id="toc-kanıtlar" class="nav-link" data-scroll-target="#kanıtlar"><span class="toc-section-number">4.9.3</span>  Kanıtlar</a></li>
+  <li><a href="#teorem-stilleri" id="toc-teorem-stilleri" class="nav-link" data-scroll-target="#teorem-stilleri"><span class="toc-section-number">4.9.4</span>  Teorem Stilleri</a></li>
   </ul></li>
-  <li><a href="#semboller" id="toc-semboller" class="nav-link" data-scroll-target="#semboller"> <span class="header-section-number">4.10</span> Semboller</a></li>
+  <li><a href="#semboller" id="toc-semboller" class="nav-link" data-scroll-target="#semboller"><span class="toc-section-number">4.10</span>  Semboller</a></li>
   </ul>
 </nav>
     </div>
@@ -361,6 +366,7 @@ div.csl-indent {
 <div class="quarto-title-meta">
 
     
+  
     
   </div>
   
@@ -537,7 +543,7 @@ Not
 <p>Kullanılabilecek tüm gruplandırıcı işaretler <a href="#tbl-grup">Tablo&nbsp;<span>4.1</span></a>’de gösterilmiştir.</p>
 <div id="tbl-grup" class="anchored">
 <table class="table">
-<caption>Tablo 4.1: Gruplandırıcılar</caption>
+<caption>Tablo&nbsp;4.1: Gruplandırıcılar</caption>
 <colgroup>
 <col style="width: 30%">
 <col style="width: 38%">
@@ -608,7 +614,7 @@ Not
 <p>Oklar için <a href="#tbl-oklar">Tablo&nbsp;<span>4.2</span></a>’deki komutlar kullanılır.</p>
 <div id="tbl-oklar" class="anchored">
 <table class="table">
-<caption>Tablo 4.2: Oklar</caption>
+<caption>Tablo&nbsp;4.2: Oklar</caption>
 <colgroup>
 <col style="width: 25%">
 <col style="width: 25%">
@@ -701,7 +707,7 @@ Not
 <p>Yunan harfleri matematikte yaygın olarak kullanılır. Bu harfler ters eğik çizgiden sonra harfin adı yazılarak elde edilir. Eğer ilk harf küçük ise küçük, büyükse de büyük harf elde edilir. Bazı büyük Yunanca harfler Latin harfleri gibi göründüğünden (örneğin, büyük harf Alpha ve Beta yalnızca sırasıyla “A” ve “B”dir) ayrıca tanımlanmamışlardır. Küçük harf epsilon, theta, kappa, phi, pi, rho ve sigma iki farklı sürümde sunulmaktadır. Alternatif sürümü, harf adının önüne “var” eklenerek oluşturulur.</p>
 <div id="tbl-yunan" class="anchored">
 <table class="table">
-<caption>Tablo 4.3: Yunan Harfleri</caption>
+<caption>Tablo&nbsp;4.3: Yunan Harfleri</caption>
 <colgroup>
 <col style="width: 25%">
 <col style="width: 25%">
@@ -994,7 +1000,7 @@ Not
 <p><span class="math inline">\LaTeX</span>’de matematik kipindeki yazıların biçemleri aşağıdaki komutlar kullanılarak değiştirilir.</p>
 <div id="tbl-matyazi" class="anchored">
 <table class="table">
-<caption>Tablo 4.4: Matematik Kipinde Yazı Biçemleri</caption>
+<caption>Tablo&nbsp;4.4: Matematik Kipinde Yazı Biçemleri</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;"><strong>Komut</strong></th>
@@ -1416,7 +1422,7 @@ Not
 <p>Buradaki <code>&lt;stil adı&gt;</code> kullanmak istediğiniz stildir. Bu komuttan sonra tanımlanmış tüm teoremler bu stili kullanacaktır. <span class="math inline">\LaTeX</span>’de önceden tanımlanmış stiller <a href="#tbl-teoremstil">Tablo&nbsp;<span>4.5</span></a>’de gösterilmiştir.</p>
 <div id="tbl-teoremstil" class="anchored">
 <table class="table">
-<caption>Tablo 4.5: Teorem Stilleri</caption>
+<caption>Tablo&nbsp;4.5: Teorem Stilleri</caption>
 <colgroup>
 <col style="width: 40%">
 <col style="width: 30%">
@@ -1572,7 +1578,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Kopyalandı!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Kopyalandı!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -1600,31 +1623,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>

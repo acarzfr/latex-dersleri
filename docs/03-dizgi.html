@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.38">
+<meta name="generator" content="quarto-1.2.335">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -11,10 +11,15 @@
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
-span.underline{text-decoration: underline;}
-div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
@@ -53,7 +58,7 @@ code span.al { color: #ff0000; font-weight: bold; } /* Alert */
 code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
 code span.at { color: #7d9029; } /* Attribute */
 code span.bn { color: #40a070; } /* BaseN */
-code span.bu { } /* BuiltIn */
+code span.bu { color: #008000; } /* BuiltIn */
 code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
 code span.ch { color: #4070a0; } /* Char */
 code span.cn { color: #880000; } /* Constant */
@@ -66,7 +71,7 @@ code span.er { color: #ff0000; font-weight: bold; } /* Error */
 code span.ex { } /* Extension */
 code span.fl { color: #40a070; } /* Float */
 code span.fu { color: #06287e; } /* Function */
-code span.im { } /* Import */
+code span.im { color: #008000; font-weight: bold; } /* Import */
 code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
 code span.kw { color: #007020; font-weight: bold; } /* Keyword */
 code span.op { color: #666666; } /* Operator */
@@ -322,38 +327,38 @@ div.csl-indent {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc">
+        <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">İçindekiler</h2>
    
   <ul>
-  <li><a href="#satır-ve-sayfa-kesme" id="toc-satır-ve-sayfa-kesme" class="nav-link active" data-scroll-target="#satır-ve-sayfa-kesme"> <span class="header-section-number">3.1</span> Satır ve Sayfa Kesme</a></li>
-  <li><a href="#heceleme" id="toc-heceleme" class="nav-link" data-scroll-target="#heceleme"> <span class="header-section-number">3.2</span> Heceleme</a></li>
-  <li><a href="#cümle-sonları-ve-genişlemeyen-boşluklar" id="toc-cümle-sonları-ve-genişlemeyen-boşluklar" class="nav-link" data-scroll-target="#cümle-sonları-ve-genişlemeyen-boşluklar"> <span class="header-section-number">3.3</span> Cümle Sonları ve Genişlemeyen Boşluklar</a></li>
-  <li><a href="#aralıklar" id="toc-aralıklar" class="nav-link" data-scroll-target="#aralıklar"> <span class="header-section-number">3.4</span> Aralıklar</a>
+  <li><a href="#satır-ve-sayfa-kesme" id="toc-satır-ve-sayfa-kesme" class="nav-link active" data-scroll-target="#satır-ve-sayfa-kesme"><span class="toc-section-number">3.1</span>  Satır ve Sayfa Kesme</a></li>
+  <li><a href="#heceleme" id="toc-heceleme" class="nav-link" data-scroll-target="#heceleme"><span class="toc-section-number">3.2</span>  Heceleme</a></li>
+  <li><a href="#cümle-sonları-ve-genişlemeyen-boşluklar" id="toc-cümle-sonları-ve-genişlemeyen-boşluklar" class="nav-link" data-scroll-target="#cümle-sonları-ve-genişlemeyen-boşluklar"><span class="toc-section-number">3.3</span>  Cümle Sonları ve Genişlemeyen Boşluklar</a></li>
+  <li><a href="#aralıklar" id="toc-aralıklar" class="nav-link" data-scroll-target="#aralıklar"><span class="toc-section-number">3.4</span>  Aralıklar</a>
   <ul class="collapse">
-  <li><a href="#dikey-aralıklar" id="toc-dikey-aralıklar" class="nav-link" data-scroll-target="#dikey-aralıklar"> <span class="header-section-number">3.4.1</span> Dikey aralıklar</a></li>
-  <li><a href="#yatay-aralıklar" id="toc-yatay-aralıklar" class="nav-link" data-scroll-target="#yatay-aralıklar"> <span class="header-section-number">3.4.2</span> Yatay aralıklar</a></li>
+  <li><a href="#dikey-aralıklar" id="toc-dikey-aralıklar" class="nav-link" data-scroll-target="#dikey-aralıklar"><span class="toc-section-number">3.4.1</span>  Dikey aralıklar</a></li>
+  <li><a href="#yatay-aralıklar" id="toc-yatay-aralıklar" class="nav-link" data-scroll-target="#yatay-aralıklar"><span class="toc-section-number">3.4.2</span>  Yatay aralıklar</a></li>
   </ul></li>
-  <li><a href="#ortamlar" id="toc-ortamlar" class="nav-link" data-scroll-target="#ortamlar"> <span class="header-section-number">3.5</span> Ortamlar</a>
+  <li><a href="#ortamlar" id="toc-ortamlar" class="nav-link" data-scroll-target="#ortamlar"><span class="toc-section-number">3.5</span>  Ortamlar</a>
   <ul class="collapse">
-  <li><a href="#metin-hizalama" id="toc-metin-hizalama" class="nav-link" data-scroll-target="#metin-hizalama"> <span class="header-section-number">3.5.1</span> Metin hizalama</a></li>
-  <li><a href="#sütunlara-ayırma" id="toc-sütunlara-ayırma" class="nav-link" data-scroll-target="#sütunlara-ayırma"> <span class="header-section-number">3.5.2</span> Sütunlara ayırma</a></li>
-  <li><a href="#listeleme" id="toc-listeleme" class="nav-link" data-scroll-target="#listeleme"> <span class="header-section-number">3.5.3</span> Listeleme</a></li>
-  <li><a href="#özet" id="toc-özet" class="nav-link" data-scroll-target="#özet"> <span class="header-section-number">3.5.4</span> Özet</a></li>
-  <li><a href="#yazıldığı-gibi-basma" id="toc-yazıldığı-gibi-basma" class="nav-link" data-scroll-target="#yazıldığı-gibi-basma"> <span class="header-section-number">3.5.5</span> Yazıldığı gibi basma</a></li>
-  <li><a href="#başlık-sayfası-kapak" id="toc-başlık-sayfası-kapak" class="nav-link" data-scroll-target="#başlık-sayfası-kapak"> <span class="header-section-number">3.5.6</span> Başlık sayfası (kapak)</a></li>
-  <li><a href="#alıntı-yapma-ve-şiir-dizme" id="toc-alıntı-yapma-ve-şiir-dizme" class="nav-link" data-scroll-target="#alıntı-yapma-ve-şiir-dizme"> <span class="header-section-number">3.5.7</span> Alıntı yapma ve şiir dizme</a></li>
+  <li><a href="#metin-hizalama" id="toc-metin-hizalama" class="nav-link" data-scroll-target="#metin-hizalama"><span class="toc-section-number">3.5.1</span>  Metin hizalama</a></li>
+  <li><a href="#sütunlara-ayırma" id="toc-sütunlara-ayırma" class="nav-link" data-scroll-target="#sütunlara-ayırma"><span class="toc-section-number">3.5.2</span>  Sütunlara ayırma</a></li>
+  <li><a href="#listeleme" id="toc-listeleme" class="nav-link" data-scroll-target="#listeleme"><span class="toc-section-number">3.5.3</span>  Listeleme</a></li>
+  <li><a href="#özet" id="toc-özet" class="nav-link" data-scroll-target="#özet"><span class="toc-section-number">3.5.4</span>  Özet</a></li>
+  <li><a href="#yazıldığı-gibi-basma" id="toc-yazıldığı-gibi-basma" class="nav-link" data-scroll-target="#yazıldığı-gibi-basma"><span class="toc-section-number">3.5.5</span>  Yazıldığı gibi basma</a></li>
+  <li><a href="#başlık-sayfası-kapak" id="toc-başlık-sayfası-kapak" class="nav-link" data-scroll-target="#başlık-sayfası-kapak"><span class="toc-section-number">3.5.6</span>  Başlık sayfası (kapak)</a></li>
+  <li><a href="#alıntı-yapma-ve-şiir-dizme" id="toc-alıntı-yapma-ve-şiir-dizme" class="nav-link" data-scroll-target="#alıntı-yapma-ve-şiir-dizme"><span class="toc-section-number">3.5.7</span>  Alıntı yapma ve şiir dizme</a></li>
   </ul></li>
-  <li><a href="#yazıtipleri" id="toc-yazıtipleri" class="nav-link" data-scroll-target="#yazıtipleri"> <span class="header-section-number">3.6</span> Yazıtipleri</a>
+  <li><a href="#yazıtipleri" id="toc-yazıtipleri" class="nav-link" data-scroll-target="#yazıtipleri"><span class="toc-section-number">3.6</span>  Yazıtipleri</a>
   <ul class="collapse">
-  <li><a href="#giriş" id="toc-giriş" class="nav-link" data-scroll-target="#giriş"> <span class="header-section-number">3.6.1</span> Giriş</a></li>
-  <li><a href="#aile" id="toc-aile" class="nav-link" data-scroll-target="#aile"> <span class="header-section-number">3.6.2</span> Aile</a></li>
-  <li><a href="#biçem" id="toc-biçem" class="nav-link" data-scroll-target="#biçem"> <span class="header-section-number">3.6.3</span> Biçem</a></li>
-  <li><a href="#boyut" id="toc-boyut" class="nav-link" data-scroll-target="#boyut"> <span class="header-section-number">3.6.4</span> Boyut</a></li>
+  <li><a href="#giriş" id="toc-giriş" class="nav-link" data-scroll-target="#giriş"><span class="toc-section-number">3.6.1</span>  Giriş</a></li>
+  <li><a href="#aile" id="toc-aile" class="nav-link" data-scroll-target="#aile"><span class="toc-section-number">3.6.2</span>  Aile</a></li>
+  <li><a href="#biçem" id="toc-biçem" class="nav-link" data-scroll-target="#biçem"><span class="toc-section-number">3.6.3</span>  Biçem</a></li>
+  <li><a href="#boyut" id="toc-boyut" class="nav-link" data-scroll-target="#boyut"><span class="toc-section-number">3.6.4</span>  Boyut</a></li>
   </ul></li>
-  <li><a href="#renkli-yazma" id="toc-renkli-yazma" class="nav-link" data-scroll-target="#renkli-yazma"> <span class="header-section-number">3.7</span> Renkli Yazma</a>
+  <li><a href="#renkli-yazma" id="toc-renkli-yazma" class="nav-link" data-scroll-target="#renkli-yazma"><span class="toc-section-number">3.7</span>  Renkli Yazma</a>
   <ul class="collapse">
-  <li><a href="#yeni-renkler-oluşturmak" id="toc-yeni-renkler-oluşturmak" class="nav-link" data-scroll-target="#yeni-renkler-oluşturmak"> <span class="header-section-number">3.7.1</span> Yeni renkler oluşturmak</a></li>
+  <li><a href="#yeni-renkler-oluşturmak" id="toc-yeni-renkler-oluşturmak" class="nav-link" data-scroll-target="#yeni-renkler-oluşturmak"><span class="toc-section-number">3.7.1</span>  Yeni renkler oluşturmak</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -371,6 +376,7 @@ div.csl-indent {
 <div class="quarto-title-meta">
 
     
+  
     
   </div>
   
@@ -417,7 +423,7 @@ div.csl-indent {
 <p>Aralık bırakırken kullanabileceğimiz ölçü birimleri <a href="#tbl-olcu">Tablo&nbsp;<span>3.1</span></a>’de gösterilmiştir.</p>
 <div id="tbl-olcu" class="anchored">
 <table class="table">
-<caption>Tablo 3.1: <span class="math inline">\LaTeX</span>’de Ölçü Birimleri</caption>
+<caption>Tablo&nbsp;3.1: <span class="math inline">\LaTeX</span>’de Ölçü Birimleri</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Birim</th>
@@ -791,7 +797,7 @@ Not
 <p><span class="math inline">\LaTeX</span>’de varsayılan yazıtipi Computer Modern olup, ek bir pakete ihtiyaç duymadan kullanılabilecek yazıtipleri aşağıdaki tablolarda gösterilmiştir.</p>
 <div id="tbl-roman" class="anchored">
 <table class="table">
-<caption>Tablo 3.2: Roman Yazıtipleri</caption>
+<caption>Tablo&nbsp;3.2: Roman Yazıtipleri</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Kısaltma</th>
@@ -844,7 +850,7 @@ Not
 </div>
 <div id="tbl-sans" class="anchored">
 <table class="table">
-<caption>Tablo 3.3: Sans Serif Yazıtipleri</caption>
+<caption>Tablo&nbsp;3.3: Sans Serif Yazıtipleri</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Kısaltma</th>
@@ -877,7 +883,7 @@ Not
 </div>
 <div id="tbl-typew" class="anchored">
 <table class="table">
-<caption>Tablo 3.4: Typewriter Yazıtipleri</caption>
+<caption>Tablo&nbsp;3.4: Typewriter Yazıtipleri</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Kısaltma</th>
@@ -902,7 +908,7 @@ Not
 </div>
 <div id="tbl-elyazisi" class="anchored">
 <table class="table">
-<caption>Tablo 3.5: Elyazısı</caption>
+<caption>Tablo&nbsp;3.5: Elyazısı</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Kısaltma</th>
@@ -1036,7 +1042,7 @@ Not
 <p>Bu bildirimlerin etkisi belge ana yazıtipi boyutuna bağımlıdır. Mutlak boyutlar <a href="#tbl-yaziyipimutlak">Tablo&nbsp;<span>3.6</span></a>’de gösterilmiştir.</p>
 <div id="tbl-yaziyipimutlak" class="anchored">
 <table class="table">
-<caption>Tablo 3.6: Yazıtipleri mutlak boyutları</caption>
+<caption>Tablo&nbsp;3.6: Yazıtipleri mutlak boyutları</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;"></th>
@@ -1148,7 +1154,7 @@ Not
 <div id="fig-renkler" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure">
 <p><a href="images/renkler.png" class="lightbox" title="dvipsnames seçeneğiyle gelen renkler" data-gallery="quarto-lightbox-gallery-1"><img src="images/renkler.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
-<p></p><figcaption class="figure-caption">Şekil 3.1: <strong>dvipsnames</strong> seçeneğiyle gelen renkler</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Şekil&nbsp;3.1: <strong>dvipsnames</strong> seçeneğiyle gelen renkler</figcaption><p></p>
 </figure>
 </div>
 <p>Bunlar da yeterli gelmiyorsa seçeneklere bir de <code>svgnames</code> yazın ve <a href="https://www.latextemplates.com/svgnames-colors">buradaki</a> yüzden fazla rengi kullanılabilir duruma getirin.</p>
@@ -1172,7 +1178,7 @@ Not
 <p>İkinci yol <code>\definecolor</code> komutuyla renk modelleri kullanmaktır.</p>
 <div id="tbl-renkmodel" class="anchored">
 <table class="table">
-<caption>Tablo 3.7: Renk Modelleri</caption>
+<caption>Tablo&nbsp;3.7: Renk Modelleri</caption>
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -1295,7 +1301,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     button.classList.add('code-copy-button-checked');
     var currentTitle = button.getAttribute("title");
     button.setAttribute("title", "Kopyalandı!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Kopyalandı!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
     setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
       button.setAttribute("title", currentTitle);
       button.classList.remove('code-copy-button-checked');
     }, 1000);
@@ -1323,31 +1346,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   for (var i=0; i<noterefs.length; i++) {
     const ref = noterefs[i];
     tippyHover(ref, function() {
-      let href = ref.getAttribute('href');
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
     });
   }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
   var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
   for (var i=0; i<bibliorefs.length; i++) {
     const ref = bibliorefs[i];
-    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
-    tippyHover(ref, function() {
-      var popup = window.document.createElement('div');
-      cites.forEach(function(cite) {
-        var citeDiv = window.document.createElement('div');
-        citeDiv.classList.add('hanging-indent');
-        citeDiv.classList.add('csl-entry');
-        var biblioDiv = window.document.getElementById('ref-' + cite);
-        if (biblioDiv) {
-          citeDiv.innerHTML = biblioDiv.innerHTML;
-        }
-        popup.appendChild(citeDiv);
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
       });
-      return popup.innerHTML;
-    });
+    }
   }
 });
 </script>
@@ -1364,7 +1406,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"loop":true,"closeEffect":"zoom","selector":".lightbox","openEffect":"zoom","descPosition":"bottom"});</script>
+<script>var lightboxQuarto = GLightbox({"openEffect":"zoom","descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","loop":true});</script>
 
 
 
