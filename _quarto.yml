@@ -6,6 +6,7 @@ book:
   author: "Zafer ACAR"
   date: 2022-03-06
   date-format: "DD/MM/YYYY"
+  language: tr
 
 
   #page-footer: 
