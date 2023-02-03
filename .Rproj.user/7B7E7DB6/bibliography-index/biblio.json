@@ -1,0 +1,344 @@
+{
+    "sources": [
+        {
+            "URL": "https://sourceforge.net/projects/pgf",
+            "author": [
+                {
+                    "family": "Tantau",
+                    "given": "Till"
+                }
+            ],
+            "id": "Tantau2019",
+            "issued": {
+                "date-parts": [
+                    [
+                        2019
+                    ]
+                ]
+            },
+            "title": "The TikZ and PGF Packages Manual for version 3.1",
+            "type": "book"
+        },
+        {
+            "URL": "http://ftp.cc.uoc.gr/mirrors/CTAN/macros/latex/contrib/listings/listings.pdf",
+            "author": [
+                {
+                    "family": "Hoffmann",
+                    "given": "Jobst"
+                }
+            ],
+            "id": "Hoffmann2018",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "The Listings Package",
+            "type": "book"
+        },
+        {
+            "URL": "https://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf",
+            "author": [
+                {
+                    "family": "Pakin",
+                    "given": "Scott"
+                }
+            ],
+            "id": "Pakin",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021
+                    ]
+                ]
+            },
+            "title": "The Comprehensive LaTeX Symbol List",
+            "type": "book"
+        },
+        {
+            "URL": "http://ftp.cc.uoc.gr/mirrors/CTAN/info/epslatex/english/epslatex.pdf",
+            "author": [
+                {
+                    "family": "Reckdahl",
+                    "given": "Keith"
+                }
+            ],
+            "id": "Reckdahl2006",
+            "issued": {
+                "date-parts": [
+                    [
+                        2006
+                    ]
+                ]
+            },
+            "title": "Using Imported Graphics in LaTeX and pdfLaTeX",
+            "type": "book"
+        },
+        {
+            "URL": "http://ftp.cc.uoc.gr/mirrors/CTAN/info/symbols/comprehensive/symbols-a4.pdf",
+            "author": [
+                {
+                    "family": "Pakin",
+                    "given": "Scott"
+                }
+            ],
+            "id": "Pakin2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "title": "The Comprehensive LaTeX Symbol List; The Comprehensive LaTeX Symbol List",
+            "type": "book"
+        },
+        {
+            "URL": "http://ftp.ntua.gr/mirror/ctan/info/lshort/turkish/lshort-tr.pdf",
+            "author": [
+                {
+                    "family": "Oetiker",
+                    "given": "Tobias"
+                },
+                {
+                    "family": "Partl",
+                    "given": "Hubert"
+                },
+                {
+                    "family": "Hyna",
+                    "given": "Irene"
+                },
+                {
+                    "family": "Schlegl",
+                    "given": "Elisabeth"
+                }
+            ],
+            "id": "Oetiker",
+            "issued": {
+                "date-parts": [
+                    [
+                        2006
+                    ]
+                ]
+            },
+            "note": "Türkçesi: Bekir Karaoğlu",
+            "title": "İnce bir LaTeX2e Elkitabı veya, 116 dakikada LaTeX2e",
+            "type": "book"
+        },
+        {
+            "URL": "http://ftp.ntua.gr/mirror/ctan/info/turkishintro/LATEX_Turkish_Volume_1.pdf",
+            "author": [
+                {
+                    "family": "Rakhimov",
+                    "given": "Abdugafur"
+                },
+                {
+                    "family": "Kesemen",
+                    "given": "Orhan"
+                }
+            ],
+            "id": "adim",
+            "issued": {
+                "date-parts": [
+                    [
+                        1990
+                    ]
+                ]
+            },
+            "title": "Adım Adım LaTeX",
+            "type": "book",
+            "volume": "1"
+        },
+        {
+            "URL": "http://puszcza.gnu.org.ua/software/latexrefman/",
+            "id": "latex2e",
+            "issued": {
+                "date-parts": [
+                    [
+                        2018
+                    ]
+                ]
+            },
+            "title": "LaTeX2e: An unofficial reference manual",
+            "title-short": "LaTeX2e",
+            "type": "book"
+        },
+        {
+            "URL": "http://www.lorenzopantieri.net/LaTeX_files/LaTeXpedia.pdf",
+            "author": [
+                {
+                    "family": "Pantieri",
+                    "given": "Lorenzo"
+                }
+            ],
+            "id": "Pantieri2017",
+            "issued": {
+                "date-parts": [
+                    [
+                        2017
+                    ]
+                ]
+            },
+            "title": "LaTeXpedia",
+            "type": "book"
+        },
+        {
+            "URL": "https://icl.utk.edu/~mgates3/docs/latex-fonts.pdf",
+            "author": [
+                {
+                    "family": "Gates",
+                    "given": "Mark"
+                }
+            ],
+            "id": "gates",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "title": "LaTeX font packages",
+            "type": "book"
+        },
+        {
+            "ISBN": "978-1-909440-00-5",
+            "author": [
+                {
+                    "family": "Talbot",
+                    "given": "Nicola L. C."
+                }
+            ],
+            "collection-title": "Dickimaw LaTeX Series",
+            "id": "talbot2012",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012
+                    ]
+                ]
+            },
+            "publisher": "Dickimaw Books",
+            "publisher-place": "Norfolk, UK",
+            "title": "LaTeX for Complete Novices",
+            "type": "book",
+            "volume": "1"
+        },
+        {
+            "ISBN": "978-1-909440-02-9",
+            "author": [
+                {
+                    "family": "Talbot",
+                    "given": "Nicola L. C."
+                }
+            ],
+            "collection-title": "Dickimaw LaTeX Series",
+            "id": "talbot2013",
+            "issued": {
+                "date-parts": [
+                    [
+                        2013
+                    ]
+                ]
+            },
+            "publisher": "Dickimaw Books",
+            "publisher-place": "Norfolk, UK",
+            "title": "Using LaTeX to Write a PhD Thesis",
+            "type": "book",
+            "volume": "2"
+        },
+        {
+            "author": [
+                {
+                    "family": "Lamport",
+                    "given": "Leslie"
+                }
+            ],
+            "id": "lamport1994latex",
+            "issued": {
+                "date-parts": [
+                    [
+                        1994
+                    ]
+                ]
+            },
+            "publisher": "Addison-wesley",
+            "title": "LaTeX: a document preparation system: user’s guide and reference manual",
+            "title-short": "LaTeX",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Mittelbach",
+                    "given": "Frank"
+                },
+                {
+                    "family": "Goossens",
+                    "given": "Michel"
+                },
+                {
+                    "family": "Braams",
+                    "given": "Johannes"
+                },
+                {
+                    "family": "Carlisle",
+                    "given": "David"
+                },
+                {
+                    "family": "Rowley",
+                    "given": "Chris"
+                }
+            ],
+            "id": "mittelbach2004latex",
+            "issued": {
+                "date-parts": [
+                    [
+                        2004
+                    ]
+                ]
+            },
+            "publisher": "Addison-Wesley Professional",
+            "title": "The LaTeX companion",
+            "type": "book"
+        },
+        {
+            "author": [
+                {
+                    "family": "Goossens",
+                    "given": "Michel"
+                },
+                {
+                    "family": "Rahtz",
+                    "given": "Sebastian PQ"
+                },
+                {
+                    "family": "Rahtz",
+                    "given": "Sebastian"
+                },
+                {
+                    "family": "Mittelbach",
+                    "given": "Frank"
+                }
+            ],
+            "id": "goossens1997latex",
+            "issued": {
+                "date-parts": [
+                    [
+                        1997
+                    ]
+                ]
+            },
+            "publisher": "Addison-Wesley Professional",
+            "title": "The LaTeX graphics companion: illustrating documents with TeX and PostScript",
+            "title-short": "The LaTeX graphics companion",
+            "type": "book",
+            "volume": "1"
+        }
+    ],
+    "project_biblios": [
+        "references.bib"
+    ]
+}
