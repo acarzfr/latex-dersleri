@@ -3,7 +3,7 @@
     "path": "~/Belgeler/GitHub/latex-dersleri/_quarto.yml",
     "project_path": "_quarto.yml",
     "type": "yaml",
-    "hash": "3026346751",
+    "hash": "1173207947",
     "contents": "",
     "dirty": false,
     "created": 1675437172231.0,
@@ -12,15 +12,15 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "8,3",
+        "cursorPosition": "8,14",
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1675437180,
+    "lastKnownWriteTime": 1675466084,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1675437180115,
+    "last_content_update": 1675466084,
     "read_only": false,
     "read_only_alternatives": []
 }

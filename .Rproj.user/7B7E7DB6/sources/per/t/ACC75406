@@ -16,16 +16,18 @@
         "Source": "Source",
         "docOutlineVisible": "1",
         "rmdVisualCollapsedChunks": "",
-        "cursorPosition": "0,0",
+        "cursorPosition": "2,213",
         "scrollLine": "0",
-        "rmdVisualModeLocation": "2:0"
+        "rmdVisualModeLocation": "2:0",
+        "content_preview_inline": "true",
+        "chunk_output_type": "inline"
     },
     "folds": "",
-    "lastKnownWriteTime": 1675445431,
+    "lastKnownWriteTime": 1675505365,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1675445431,
+    "last_content_update": 1675505365,
     "read_only": false,
     "read_only_alternatives": []
 }
