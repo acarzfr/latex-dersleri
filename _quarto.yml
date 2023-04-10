@@ -46,6 +46,7 @@ format:
     filters:
      - lightbox
      - latex-environment
+     - shinylive
     environments: [center]
     lightbox: auto
      

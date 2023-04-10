@@ -18,3 +18,5 @@ Yukarıdaki "Overleaf'ta açın" düğmesine bastığınızda örnek belge [Over
 [^index-1]: Tüm bu düğmelerin PDF sürümde olmayacağını unutmayın.
 
 Kitap taslak aşamasında ve eksik birçok konu var. Ayrıca hatalar olabileceğini de unutmayın. Keyifli okumalar.
+
+
