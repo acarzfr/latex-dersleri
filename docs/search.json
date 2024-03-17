@@ -4,7 +4,10 @@
     "href": "index.html",
     "title": "\\LaTeX Dersleri",
     "section": "",
-    "text": "Sunuş\nBu kitap, artık aktif olmayan https://texdizgi.com/ adresinde yazmış olduğum yazıların derlenmesiyle ortaya çıktı. Aslında oradaki yazılar da \\LaTeX’le ilgili yazmaya başladığım ve bir türlü sonunun getiremediğim kitabın tamamlanmış bölümlerinin ürünüydü.\nKitabı doğal olarak \\LaTeX’le yazıyordum. RMarkdown ve Quarto ile tanıştıktan sonra kitabı yalnızca PDF olarak değil, etkileşime izin vermesi ve daha bir çok avantajından dolayı HTML olarak da dağıtmaya karar verdim.\nKitap etkileşimli hale TeXLive.net sayesinde geldi. Etkileşimden faydalanmak istiyorsanız internet bağlantınız olduğunda HTML sürümünü kullanmanız önerilir. Bu sayede kendi denemelerinizi yapabilirsiniz.\n\\documentclass{article}\n\\begin{document}\n  Merhaba \\LaTeX!\n\\end{document}\nYukarıdaki “Overleaf’ta açın” düğmesine bastığınızda örnek belge Overleaf’ta açılacak. Tabi bunun için bir hesabınız olması gerekir. “Derle” düğmesine bastığınızda ise \\LaTeX çıktısı ile “Çıktıyı Sil” düğmesi görünecek.1\nKitap taslak aşamasında ve eksik birçok konu var. Ayrıca hatalar olabileceğini de unutmayın. Keyifli okumalar.\n\n\n\n\n\n\nTüm bu düğmelerin PDF sürümde olmayacağını unutmayın.↩︎"
+    "text": "Sunuş\nBu kitap, artık aktif olmayan https://texdizgi.com/ adresinde yazmış olduğum yazıların derlenmesiyle ortaya çıktı. Aslında oradaki yazılar da \\LaTeX’le ilgili yazmaya başladığım ve bir türlü sonunun getiremediğim kitabın tamamlanmış bölümlerinin ürünüydü.\nKitabı doğal olarak \\LaTeX’le yazıyordum. RMarkdown ve Quarto ile tanıştıktan sonra kitabı yalnızca PDF olarak değil, etkileşime izin vermesi ve daha bir çok avantajından dolayı HTML olarak da dağıtmaya karar verdim.\nKitap etkileşimli hale TeXLive.net sayesinde geldi. Etkileşimden faydalanmak istiyorsanız internet bağlantınız olduğunda HTML sürümünü kullanmanız önerilir. Bu sayede kendi denemelerinizi yapabilirsiniz.\nYukarıdaki “Overleaf’ta açın” düğmesine bastığınızda örnek belge Overleaf’ta açılacak. Tabi bunun için bir hesabınız olması gerekir. “Derle” düğmesine bastığınızda ise \\LaTeX çıktısı ile “Çıktıyı Sil” düğmesi görünecek.1\nKitap taslak aşamasında ve eksik birçok konu var. Ayrıca hatalar olabileceğini de unutmayın. Keyifli okumalar.",
+    "crumbs": [
+      "Sunuş"
+    ]
   },
   {
     "objectID": "01-temeller.html#tex",
@@ -250,5 +253,15 @@
     "title": "Kaynakça",
     "section": "",
     "text": "Gates, Mark. 2012. LaTeX Font Packages. https://icl.utk.edu/~mgates3/docs/latex-fonts.pdf.\n\n\nOetiker, Tobias, Hubert Partl, Irene Hyna, and Elisabeth Schlegl. 2006.\nİnce bir LaTeX2e Elkitabı veya, 116 dakikada\nLaTeX2e. http://ftp.ntua.gr/mirror/ctan/info/lshort/turkish/lshort-tr.pdf.\n\n\nPakin, Scott. 2021. The Comprehensive LaTeX Symbol List. https://tug.ctan.org/info/symbols/comprehensive/symbols-a4.pdf."
+  },
+  {
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "\\LaTeX Dersleri",
+    "section": "",
+    "text": "Tüm bu düğmelerin PDF sürümde olmayacağını unutmayın.↩︎",
+    "crumbs": [
+      "Sunuş"
+    ]
   }
 ]
