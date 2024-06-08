@@ -1,8 +1,0 @@
-/* golos-text-regular */
-@font-face {
-	font-family: Golos Text;
-	font-style: normal;
-	font-weight: 400;
-	src: local("Golos Text Regular"), local("GolosText-Regular"), url(golos-text-regular.woff2) format("woff2");
-}
-

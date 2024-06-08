@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.5.28">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>\LaTeX Dersleri - 2&nbsp; İlk Adımlar</title>
+<title>{{&lt; latex &gt;}} Dersleri – 2&nbsp; İlk Adımlar</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -17,11 +17,12 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -46,48 +47,20 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+/* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
-.hanging div.csl-entry {
+.hanging-indent div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -101,8 +74,7 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}
-</style>
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -132,7 +104,13 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Sonuç yok",
     "search-matching-documents-text": "Eşleşen belgeler",
@@ -141,8 +119,10 @@ div.csl-indent {
     "search-more-match-text": "Bu belgede daha fazla eşleşme",
     "search-more-matches-text": "Bu belgede daha fazla eşleşme",
     "search-clear-button-title": "Temizle",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Kapat",
-    "search-submit-button-title": "Gönder"
+    "search-submit-button-title": "Gönder",
+    "search-label": "Aramak"
   }
 }</script>
 <!--   TexLive.net  -->
@@ -227,17 +207,49 @@ div.csl-indent {
   </script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 </head>
 
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">İlk Adımlar</span></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Kenar çubuğunu değiştir" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./02-ilkadimlar.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">İlk Adımlar</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Kenar çubuğunu değiştir" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -245,98 +257,110 @@ div.csl-indent {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./"><span class="math inline">\LaTeX</span> Dersleri</a> 
         <div class="sidebar-tools-main tools-wide">
-    <a href="https://github.com/acarzfr/latex-dersleri/" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
-    <a href="./{{--latex--}}-Dersleri.pdf" title="Download PDF" class="sidebar-tool px-1"><i class="bi bi-file-pdf"></i></a>
-    <a href="" title="Share" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-share"></i></a>
-    <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
-        <li>
-          <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
-            <i class="bi bi-bi-twitter pe-1"></i>
-          Twitter
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item sidebar-tools-main-item" href="https://www.linkedin.com/sharing/share-offsite/?url=|url|">
-            <i class="bi bi-bi-linkedin pe-1"></i>
-          LinkedIn
-          </a>
-        </li>
-    </ul>
+    <a href="https://github.com/acarzfr/latex-dersleri/" title="Kaynak Kodu" class="quarto-navigation-tool px-1" aria-label="Kaynak Kodu"><i class="bi bi-github"></i></a>
+    <a href="./{{--latex--}}-Dersleri.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+    <div class="dropdown">
+      <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Share"><i class="bi bi-share"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
+              <i class="bi bi-bi-twitter pe-1"></i>
+            Twitter
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://www.linkedin.com/sharing/share-offsite/?url=|url|">
+              <i class="bi bi-bi-linkedin pe-1"></i>
+            LinkedIn
+            </a>
+          </li>
+      </ul>
+    </div>
 </div>
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Aramak"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Sunuş</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sunuş</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01-temeller.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Temeller</span></a>
+  <a href="./01-temeller.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Temeller</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02-ilkadimlar.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">İlk Adımlar</span></a>
+  <a href="./02-ilkadimlar.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">İlk Adımlar</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03-dizgi.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dizgi</span></a>
+  <a href="./03-dizgi.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dizgi</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04-matematik.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Matematiksel İfadeler</span></a>
+  <a href="./04-matematik.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Matematiksel İfadeler</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./05-yuzergezer.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Yüzer Gezer Nesneler</span></a>
+  <a href="./05-yuzergezer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Yüzer Gezer Nesneler</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./06-ozelsayfalar.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Özel Sayfalar</span></a>
+  <a href="./06-ozelsayfalar.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Özel Sayfalar</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./07-ozellestirmeler.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Özelleştirmeler</span></a>
+  <a href="./07-ozellestirmeler.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Özelleştirmeler</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./08-kaynakca.html" class="sidebar-item-text sidebar-link">Kaynakça</a>
+  <a href="./08-kaynakca.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Kaynakça</span></a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">İçindekiler</h2>
    
   <ul>
-  <li><a href="#tipik-bir-belge-yazımı" id="toc-tipik-bir-belge-yazımı" class="nav-link active" data-scroll-target="#tipik-bir-belge-yazımı"><span class="toc-section-number">2.1</span>  Tipik Bir Belge Yazımı</a></li>
-  <li><a href="#ch-belgesinifi" id="toc-ch-belgesinifi" class="nav-link" data-scroll-target="#ch-belgesinifi"><span class="toc-section-number">2.2</span>  Belge Sınıfları ve Seçenekleri</a></li>
-  <li><a href="#türkçe-dil-ayarları-ve-çoklu-dil-kullanımı" id="toc-türkçe-dil-ayarları-ve-çoklu-dil-kullanımı" class="nav-link" data-scroll-target="#türkçe-dil-ayarları-ve-çoklu-dil-kullanımı"><span class="toc-section-number">2.3</span>  Türkçe Dil Ayarları ve Çoklu Dil Kullanımı</a></li>
-  <li><a href="#belgeye-başlık-oluşturma" id="toc-belgeye-başlık-oluşturma" class="nav-link" data-scroll-target="#belgeye-başlık-oluşturma"><span class="toc-section-number">2.4</span>  Belgeye Başlık Oluşturma</a></li>
-  <li><a href="#bölümleme-ve-içindekiler-tablosu" id="toc-bölümleme-ve-içindekiler-tablosu" class="nav-link" data-scroll-target="#bölümleme-ve-içindekiler-tablosu"><span class="toc-section-number">2.5</span>  Bölümleme ve İçindekiler Tablosu</a></li>
-  <li><a href="#büyük-projeler" id="toc-büyük-projeler" class="nav-link" data-scroll-target="#büyük-projeler"><span class="toc-section-number">2.6</span>  Büyük Projeler</a></li>
+  <li><a href="#tipik-bir-belge-yazımı" id="toc-tipik-bir-belge-yazımı" class="nav-link active" data-scroll-target="#tipik-bir-belge-yazımı"><span class="header-section-number">2.1</span> Tipik Bir Belge Yazımı</a></li>
+  <li><a href="#ch-belgesinifi" id="toc-ch-belgesinifi" class="nav-link" data-scroll-target="#ch-belgesinifi"><span class="header-section-number">2.2</span> Belge Sınıfları ve Seçenekleri</a></li>
+  <li><a href="#türkçe-dil-ayarları-ve-çoklu-dil-kullanımı" id="toc-türkçe-dil-ayarları-ve-çoklu-dil-kullanımı" class="nav-link" data-scroll-target="#türkçe-dil-ayarları-ve-çoklu-dil-kullanımı"><span class="header-section-number">2.3</span> Türkçe Dil Ayarları ve Çoklu Dil Kullanımı</a></li>
+  <li><a href="#belgeye-başlık-oluşturma" id="toc-belgeye-başlık-oluşturma" class="nav-link" data-scroll-target="#belgeye-başlık-oluşturma"><span class="header-section-number">2.4</span> Belgeye Başlık Oluşturma</a></li>
+  <li><a href="#bölümleme-ve-içindekiler-tablosu" id="toc-bölümleme-ve-içindekiler-tablosu" class="nav-link" data-scroll-target="#bölümleme-ve-içindekiler-tablosu"><span class="header-section-number">2.5</span> Bölümleme ve İçindekiler Tablosu</a></li>
+  <li><a href="#büyük-projeler" id="toc-büyük-projeler" class="nav-link" data-scroll-target="#büyük-projeler"><span class="header-section-number">2.6</span> Büyük Projeler</a></li>
   </ul>
 </nav>
     </div>
@@ -345,7 +369,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">İlk Adımlar</span></h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">İlk Adımlar</span></h1>
 </div>
 
 
@@ -358,7 +382,9 @@ div.csl-indent {
   </div>
   
 
+
 </header>
+
 
 <section id="tipik-bir-belge-yazımı" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="tipik-bir-belge-yazımı"><span class="header-section-number">2.1</span> Tipik Bir Belge Yazımı</h2>
@@ -375,14 +401,18 @@ div.csl-indent {
 <p>Eğer metin editörü kullanıyorsanız derlemeyi uçbirimde (terminal, konsol,…) yapmanız gerekir. Derleme için uçbirim kaynak dosyanın olduğu dizinde açılıp</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pdflatex</span> belge1</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>komutu verilmelidir.</p>
-<p>Derleme işleminden sonra kaynak dosyanızın olduğu dizinde <code>belge1.tex</code> ve <code>belge1.pdf</code> dosyalarının yanında yine <code>belge1</code> ile başlayan farklı uzantılara sahip dosyalar olacaktır. Bu dosyaların ne olduklarına ilerleyen yazılarda değinilecektir ancak dileyen okur <span class="citation" data-cites="Oetiker">Oetiker vd. (<a href="08-kaynakca.html#ref-Oetiker" role="doc-biblioref">2006</a>)</span>’e bakabilir.</p>
+<p>Derleme işleminden sonra kaynak dosyanızın olduğu dizinde <code>belge1.tex</code> ve <code>belge1.pdf</code> dosyalarının yanında yine <code>belge1</code> ile başlayan farklı uzantılara sahip dosyalar olacaktır. Bu dosyaların ne olduklarına ilerleyen yazılarda değinilecektir ancak dileyen okur <span class="citation" data-cites="Oetiker">Oetiker vd. (<a href="#ref-Oetiker" role="doc-biblioref">2006</a>)</span>’e bakabilir.</p>
 </section>
 <section id="ch-belgesinifi" class="level2" data-number="2.2">
 <h2 data-number="2.2" class="anchored" data-anchor-id="ch-belgesinifi"><span class="header-section-number">2.2</span> Belge Sınıfları ve Seçenekleri</h2>
-<p>Başka sınıflar olmakla birlikte <span class="math inline">\LaTeX</span>’de varsayılan olarak kullanılan beş belge sınıfı vardır (<a href="#tbl-belgesin">Tablo&nbsp;<span>2.1</span></a>).</p>
-<div id="tbl-belgesin" class="anchored">
+<p>Başka sınıflar olmakla birlikte <span class="math inline">\LaTeX</span>’de varsayılan olarak kullanılan beş belge sınıfı vardır (<a href="#tbl-belgesin" class="quarto-xref">Tablo&nbsp;<span class="quarto-unresolved-ref">tbl-belgesin</span></a>).</p>
+<div id="tbl-belgesin" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-belgesin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tablo&nbsp;2.1: <span class="math inline">\LaTeX</span>’de Belge Sınıfları
+</figcaption>
+<div aria-describedby="tbl-belgesin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
-<caption>Tablo&nbsp;2.1: <span class="math inline">\LaTeX</span>’de Belge Sınıfları</caption>
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -417,10 +447,16 @@ div.csl-indent {
 </tbody>
 </table>
 </div>
-<p>Bu beş sınıftan <code>article</code>, <code>report</code> ve <code>book</code> için kullanılabilecek seçenekler <a href="#tbl-belgesec">Tablo&nbsp;<span>2.2</span></a>’de gösterilmiştir.</p>
-<div id="tbl-belgesec" class="anchored">
+</figure>
+</div>
+<p>Bu beş sınıftan <code>article</code>, <code>report</code> ve <code>book</code> için kullanılabilecek seçenekler <a href="#tbl-belgesec" class="quarto-xref">Tablo&nbsp;<span class="quarto-unresolved-ref">tbl-belgesec</span></a>’de gösterilmiştir.</p>
+<div id="tbl-belgesec" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-belgesec-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tablo&nbsp;2.2: <span class="math inline">\LaTeX</span>’de Belge Seçenekleri
+</figcaption>
+<div aria-describedby="tbl-belgesec-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
-<caption>Tablo&nbsp;2.2: <span class="math inline">\LaTeX</span>’de Belge Seçenekleri</caption>
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -475,10 +511,16 @@ div.csl-indent {
 </tbody>
 </table>
 </div>
-<p>Bu seçeneklerin her birinin kullanılabilirliği belge sınıfına göre farklılık gösterir. <a href="#tbl-seckul">Tablo&nbsp;<span>2.3</span></a>’de hangi seçeneğin hangi sınıf için varsayılan olduğu ve kullanılabilir olup olmadığı gösterilmiştir.</p>
-<div id="tbl-seckul" class="anchored">
+</figure>
+</div>
+<p>Bu seçeneklerin her birinin kullanılabilirliği belge sınıfına göre farklılık gösterir. <a href="#tbl-seckul" class="quarto-xref">Tablo&nbsp;<span class="quarto-unresolved-ref">tbl-seckul</span></a>’de hangi seçeneğin hangi sınıf için varsayılan olduğu ve kullanılabilir olup olmadığı gösterilmiştir.</p>
+<div id="tbl-seckul" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-seckul-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tablo&nbsp;2.3: Seçeneklerin belge sınıflarına göre kullanılabilirliği (1: varsayılan 1/2: kullanılabilir 0: kullanılamaz)
+</figcaption>
+<div aria-describedby="tbl-seckul-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
-<caption>Tablo&nbsp;2.3: Seçeneklerin belge sınıflarına göre kullanılabilirliği (1: varsayılan 1/2: kullanılabilir 0: kullanılamaz)</caption>
 <colgroup>
 <col style="width: 25%">
 <col style="width: 25%">
@@ -545,6 +587,8 @@ div.csl-indent {
 </tbody>
 </table>
 </div>
+</figure>
+</div>
 <p>Örneğin belgeye <code>\documentclass[a4paper,12pt]{article}</code> komutuyla başlarsak <span class="math inline">\LaTeX</span>’e kağıt boyutu A4, ana yazı büyüklüğü 12 punto olan bir makale yazacağımızı bildirmiş oluruz. Başka bir örnek <code>\documentclass[a5paper,11pt,twocolumn]{book}</code> olsun. Bu örnekte kağıt boyutu A5, ana yazı büyüklüğü 11 punto olan bir kitap yazacağımızı ve kitabın iki sütun olarak dizilmesini söyledik.</p>
 </section>
 <section id="türkçe-dil-ayarları-ve-çoklu-dil-kullanımı" class="level2" data-number="2.3">
@@ -554,12 +598,12 @@ div.csl-indent {
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="bu">\usepackage</span>[turkish]{<span class="ex">babel</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>komutlarının verilmesi gerekir.</p>
 <p><code>T1</code> seçenekli <strong>fontenc</strong> paketi yazıtipi kodlamasıyla ilgili bir paket olup, hecelemenin doğru şekilde yapılmasını sağlar. Bir çok Avrupa dilinde de <code>T1</code> seçeneğiyle kullanılır. <code>turkish</code> seçenekli <strong>babel</strong> paketi de Chapter, Table, Contents,… gibi isimlerin Türkçeleşmesi (Bölüm, Tablo, İçindekiler,…) içindir.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Not
 </div>
 </div>
@@ -605,9 +649,13 @@ Not
 <section id="bölümleme-ve-içindekiler-tablosu" class="level2" data-number="2.5">
 <h2 data-number="2.5" class="anchored" data-anchor-id="bölümleme-ve-içindekiler-tablosu"><span class="header-section-number">2.5</span> Bölümleme ve İçindekiler Tablosu</h2>
 <p><span class="math inline">\LaTeX</span>’de belgenizi bölümlere ayırmak için 7 seviye bulunmaktadır.</p>
-<div id="tbl-bolumseviyeleri" class="anchored">
+<div id="tbl-bolumseviyeleri" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-bolumseviyeleri-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tablo&nbsp;2.4: <span class="math inline">\LaTeX</span>’de Bölüm Seviyeleri
+</figcaption>
+<div aria-describedby="tbl-bolumseviyeleri-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
-<caption>Tablo&nbsp;2.4: <span class="math inline">\LaTeX</span>’de Bölüm Seviyeleri</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;"><strong>Komut</strong></th>
@@ -654,6 +702,8 @@ Not
 </tbody>
 </table>
 </div>
+</figure>
+</div>
 <p>Türkçe dil paketi ekli belgelerde <code>\part</code> komutu “Kısım”, <code>\chapter</code> komutu “Bölüm” olarak yazılır. Kısımlar I, II, III,… şeklinde bölümler ise 1, 2, 3,… şeklinde numaralandırılır. <code>\section</code> komutu <code>book</code> ve <code>report</code> sınıflarında <code>\chapter</code> komutunu takip ederek 1.1, 1.2,… diğer sınıflarda 1, 2, 3,… şeklinde numaralandırılır. <code>\subsection</code> komutu da <code>\section</code> komutunu takip ederek numaralandırılır.</p>
 <p>Türkçe dil paketi ekli belgelerde <code>\part</code> komutu “Kısım”, <code>\chapter</code> komutu “Bölüm” olarak yazılır. Kısımlar I, II, III,… şeklinde bölümler ise 1, 2, 3,… şeklinde numaralandırılır. <code>\section</code> komutu <code>book</code> ve <code>report</code> sınıflarında <code>\chapter</code> komutunu takip ederek 1.1, 1.2,… diğer sınıflarda 1, 2, 3,… şeklinde numaralandırılır. <code>\subsection</code> komutu da <code>\section</code> komutunu takip ederek numaralandırılır.</p>
 <p>İçindekiler tablosu için <span class="math inline">\LaTeX</span>’e <code>\tableofcontents</code> komutu verilir. Bu komutun yazıldığı yerde İçindekiler tablosu oluşturulur. İçindekiler tablosunun doğru dizilmesi için kaynak dosyanızı en az iki kere derlemeniz gerekir.</p>
@@ -682,12 +732,12 @@ Not
 <p><code>article</code> sınıfında ise</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\addcontentsline</span>{toc}{section}{Kaynaklar}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>komutunun verilmesi gerekir.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Not
 </div>
 </div>
@@ -769,10 +819,14 @@ Not
 <p>Böyle bir liste oluşturulduktan sonra bu listede olmayan bir dosya artık <code>\include</code> komutuyla kaynak dosyaya eklenemez.</p>
 <p><code>\input</code> komutu sahanlıkta da kullanılabilir. Örneğin, sahanlığınızı tek bir dosyaya yazıp, bu dosyayı bu komutla sahanlığa ekleyebilirsiniz.</p>
 <p>Daha düzenli çalışmak adına kaynak dosyanızın olduğu dizini de düzenleyebilirsiniz.</p>
-<div id="fig-dizin" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><a href="images/dizin.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Kaynak dosyanın olduğu dizinin düzenlenmesi"><img src="images/dizin.png" class="img-fluid figure-img" style="width:60.0%"></a></p>
-<p></p><figcaption class="figure-caption">Şekil&nbsp;2.1: Kaynak dosyanın olduğu dizinin düzenlenmesi</figcaption><p></p>
+<div id="fig-dizin" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dizin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/dizin.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Şekil&nbsp;2.1: Kaynak dosyanın olduğu dizinin düzenlenmesi"><img src="images/dizin.png" class="img-fluid figure-img" style="width:60.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dizin-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Şekil&nbsp;2.1: Kaynak dosyanın olduğu dizinin düzenlenmesi
+</figcaption>
 </figure>
 </div>
 <p>Bu şekilde bir düzenleme yaptığınızda <code>\input</code> ya da <code>\include</code> komutlarıyla dosya eklemek istediğinizde dosyanın bulunduğu dizini de göstermeniz gerekir.</p>
@@ -782,8 +836,8 @@ Not
 <p>Dikkat edilirse “Örnek Kitap” dışında, “Bolumler” alt dizini ve tüm dosya adları Türkçe karakter ya da boşluk içermez.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
-<div id="ref-Oetiker" class="csl-entry" role="doc-biblioentry">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-Oetiker" class="csl-entry" role="listitem">
 Oetiker, Tobias, Hubert Partl, Irene Hyna, ve Elisabeth Schlegl. 2006. <em><span>İnce bir LaTeX2e Elkitabı veya, 116 dakikada LaTeX2e</span></em>. <a href="http://ftp.ntua.gr/mirror/ctan/info/lshort/turkish/lshort-tr.pdf">http://ftp.ntua.gr/mirror/ctan/info/lshort/turkish/lshort-tr.pdf</a>.
 </div>
 </div>
@@ -817,12 +871,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
     }
-  });
-  clipboard.on('success', function(e) {
+    return false;
+  }
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -854,11 +911,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -868,8 +964,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -881,9 +986,245 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -925,18 +1266,43 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./01-temeller.html" class="pagination-link">
+      <a href="./01-temeller.html" class="pagination-link" aria-label="Temeller">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Temeller</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./03-dizgi.html" class="pagination-link">
+      <a href="./03-dizgi.html" class="pagination-link" aria-label="Dizgi">
         <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dizgi</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","loop":true});</script>
+<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","selector":".lightbox","closeEffect":"zoom","openEffect":"zoom","loop":false});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
+
 
 
 

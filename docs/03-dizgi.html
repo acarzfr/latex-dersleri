@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.335">
+<meta name="generator" content="quarto-1.5.28">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>\LaTeX Dersleri - 3&nbsp; Dizgi</title>
+<title>{{&lt; latex &gt;}} Dersleri – 3&nbsp; Dizgi</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -17,11 +17,12 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -46,48 +47,20 @@ pre.numberSource code > span > a:first-child::before
     -khtml-user-select: none; -moz-user-select: none;
     -ms-user-select: none; user-select: none;
     padding: 0 4px; width: 4em;
-    color: #aaaaaa;
   }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
 div.sourceCode
   {   }
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+/* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
-.hanging div.csl-entry {
+.hanging-indent div.csl-entry {
   margin-left:2em;
   text-indent:-2em;
 }
@@ -101,8 +74,7 @@ div.csl-right-inline {
 }
 div.csl-indent {
   margin-left: 2em;
-}
-</style>
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -132,7 +104,13 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "start",
   "type": "textbox",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "Sonuç yok",
     "search-matching-documents-text": "Eşleşen belgeler",
@@ -141,8 +119,10 @@ div.csl-indent {
     "search-more-match-text": "Bu belgede daha fazla eşleşme",
     "search-more-matches-text": "Bu belgede daha fazla eşleşme",
     "search-clear-button-title": "Temizle",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Kapat",
-    "search-submit-button-title": "Gönder"
+    "search-submit-button-title": "Gönder",
+    "search-label": "Aramak"
   }
 }</script>
 <!--   TexLive.net  -->
@@ -227,17 +207,49 @@ div.csl-indent {
   </script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 </head>
 
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-    <div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dizgi</span></h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Kenar çubuğunu değiştir" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./03-dizgi.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dizgi</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Kenar çubuğunu değiştir" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav>
@@ -245,120 +257,132 @@ div.csl-indent {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./"><span class="math inline">\LaTeX</span> Dersleri</a> 
         <div class="sidebar-tools-main tools-wide">
-    <a href="https://github.com/acarzfr/latex-dersleri/" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
-    <a href="./{{--latex--}}-Dersleri.pdf" title="Download PDF" class="sidebar-tool px-1"><i class="bi bi-file-pdf"></i></a>
-    <a href="" title="Share" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-share"></i></a>
-    <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
-        <li>
-          <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
-            <i class="bi bi-bi-twitter pe-1"></i>
-          Twitter
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item sidebar-tools-main-item" href="https://www.linkedin.com/sharing/share-offsite/?url=|url|">
-            <i class="bi bi-bi-linkedin pe-1"></i>
-          LinkedIn
-          </a>
-        </li>
-    </ul>
+    <a href="https://github.com/acarzfr/latex-dersleri/" title="Kaynak Kodu" class="quarto-navigation-tool px-1" aria-label="Kaynak Kodu"><i class="bi bi-github"></i></a>
+    <a href="./{{--latex--}}-Dersleri.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+    <div class="dropdown">
+      <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Share"><i class="bi bi-share"></i></a>
+      <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
+              <i class="bi bi-bi-twitter pe-1"></i>
+            Twitter
+            </a>
+          </li>
+          <li>
+            <a class="dropdown-item sidebar-tools-main-item" href="https://www.linkedin.com/sharing/share-offsite/?url=|url|">
+              <i class="bi bi-bi-linkedin pe-1"></i>
+            LinkedIn
+            </a>
+          </li>
+      </ul>
+    </div>
 </div>
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Aramak"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">Sunuş</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Sunuş</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./01-temeller.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Temeller</span></a>
+  <a href="./01-temeller.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Temeller</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./02-ilkadimlar.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">İlk Adımlar</span></a>
+  <a href="./02-ilkadimlar.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">İlk Adımlar</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./03-dizgi.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dizgi</span></a>
+  <a href="./03-dizgi.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dizgi</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./04-matematik.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Matematiksel İfadeler</span></a>
+  <a href="./04-matematik.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Matematiksel İfadeler</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./05-yuzergezer.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Yüzer Gezer Nesneler</span></a>
+  <a href="./05-yuzergezer.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Yüzer Gezer Nesneler</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./06-ozelsayfalar.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Özel Sayfalar</span></a>
+  <a href="./06-ozelsayfalar.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Özel Sayfalar</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./07-ozellestirmeler.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Özelleştirmeler</span></a>
+  <a href="./07-ozellestirmeler.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Özelleştirmeler</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./08-kaynakca.html" class="sidebar-item-text sidebar-link">Kaynakça</a>
+  <a href="./08-kaynakca.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Kaynakça</span></a>
   </div>
 </li>
     </ul>
     </div>
 </nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">İçindekiler</h2>
    
   <ul>
-  <li><a href="#satır-ve-sayfa-kesme" id="toc-satır-ve-sayfa-kesme" class="nav-link active" data-scroll-target="#satır-ve-sayfa-kesme"><span class="toc-section-number">3.1</span>  Satır ve Sayfa Kesme</a></li>
-  <li><a href="#heceleme" id="toc-heceleme" class="nav-link" data-scroll-target="#heceleme"><span class="toc-section-number">3.2</span>  Heceleme</a></li>
-  <li><a href="#cümle-sonları-ve-genişlemeyen-boşluklar" id="toc-cümle-sonları-ve-genişlemeyen-boşluklar" class="nav-link" data-scroll-target="#cümle-sonları-ve-genişlemeyen-boşluklar"><span class="toc-section-number">3.3</span>  Cümle Sonları ve Genişlemeyen Boşluklar</a></li>
-  <li><a href="#aralıklar" id="toc-aralıklar" class="nav-link" data-scroll-target="#aralıklar"><span class="toc-section-number">3.4</span>  Aralıklar</a>
+  <li><a href="#satır-ve-sayfa-kesme" id="toc-satır-ve-sayfa-kesme" class="nav-link active" data-scroll-target="#satır-ve-sayfa-kesme"><span class="header-section-number">3.1</span> Satır ve Sayfa Kesme</a></li>
+  <li><a href="#heceleme" id="toc-heceleme" class="nav-link" data-scroll-target="#heceleme"><span class="header-section-number">3.2</span> Heceleme</a></li>
+  <li><a href="#cümle-sonları-ve-genişlemeyen-boşluklar" id="toc-cümle-sonları-ve-genişlemeyen-boşluklar" class="nav-link" data-scroll-target="#cümle-sonları-ve-genişlemeyen-boşluklar"><span class="header-section-number">3.3</span> Cümle Sonları ve Genişlemeyen Boşluklar</a></li>
+  <li><a href="#aralıklar" id="toc-aralıklar" class="nav-link" data-scroll-target="#aralıklar"><span class="header-section-number">3.4</span> Aralıklar</a>
   <ul class="collapse">
-  <li><a href="#dikey-aralıklar" id="toc-dikey-aralıklar" class="nav-link" data-scroll-target="#dikey-aralıklar"><span class="toc-section-number">3.4.1</span>  Dikey aralıklar</a></li>
-  <li><a href="#yatay-aralıklar" id="toc-yatay-aralıklar" class="nav-link" data-scroll-target="#yatay-aralıklar"><span class="toc-section-number">3.4.2</span>  Yatay aralıklar</a></li>
+  <li><a href="#dikey-aralıklar" id="toc-dikey-aralıklar" class="nav-link" data-scroll-target="#dikey-aralıklar"><span class="header-section-number">3.4.1</span> Dikey aralıklar</a></li>
+  <li><a href="#yatay-aralıklar" id="toc-yatay-aralıklar" class="nav-link" data-scroll-target="#yatay-aralıklar"><span class="header-section-number">3.4.2</span> Yatay aralıklar</a></li>
   </ul></li>
-  <li><a href="#ortamlar" id="toc-ortamlar" class="nav-link" data-scroll-target="#ortamlar"><span class="toc-section-number">3.5</span>  Ortamlar</a>
+  <li><a href="#ortamlar" id="toc-ortamlar" class="nav-link" data-scroll-target="#ortamlar"><span class="header-section-number">3.5</span> Ortamlar</a>
   <ul class="collapse">
-  <li><a href="#metin-hizalama" id="toc-metin-hizalama" class="nav-link" data-scroll-target="#metin-hizalama"><span class="toc-section-number">3.5.1</span>  Metin hizalama</a></li>
-  <li><a href="#sütunlara-ayırma" id="toc-sütunlara-ayırma" class="nav-link" data-scroll-target="#sütunlara-ayırma"><span class="toc-section-number">3.5.2</span>  Sütunlara ayırma</a></li>
-  <li><a href="#listeleme" id="toc-listeleme" class="nav-link" data-scroll-target="#listeleme"><span class="toc-section-number">3.5.3</span>  Listeleme</a></li>
-  <li><a href="#özet" id="toc-özet" class="nav-link" data-scroll-target="#özet"><span class="toc-section-number">3.5.4</span>  Özet</a></li>
-  <li><a href="#yazıldığı-gibi-basma" id="toc-yazıldığı-gibi-basma" class="nav-link" data-scroll-target="#yazıldığı-gibi-basma"><span class="toc-section-number">3.5.5</span>  Yazıldığı gibi basma</a></li>
-  <li><a href="#başlık-sayfası-kapak" id="toc-başlık-sayfası-kapak" class="nav-link" data-scroll-target="#başlık-sayfası-kapak"><span class="toc-section-number">3.5.6</span>  Başlık sayfası (kapak)</a></li>
-  <li><a href="#alıntı-yapma-ve-şiir-dizme" id="toc-alıntı-yapma-ve-şiir-dizme" class="nav-link" data-scroll-target="#alıntı-yapma-ve-şiir-dizme"><span class="toc-section-number">3.5.7</span>  Alıntı yapma ve şiir dizme</a></li>
+  <li><a href="#metin-hizalama" id="toc-metin-hizalama" class="nav-link" data-scroll-target="#metin-hizalama"><span class="header-section-number">3.5.1</span> Metin hizalama</a></li>
+  <li><a href="#sütunlara-ayırma" id="toc-sütunlara-ayırma" class="nav-link" data-scroll-target="#sütunlara-ayırma"><span class="header-section-number">3.5.2</span> Sütunlara ayırma</a></li>
+  <li><a href="#listeleme" id="toc-listeleme" class="nav-link" data-scroll-target="#listeleme"><span class="header-section-number">3.5.3</span> Listeleme</a></li>
+  <li><a href="#özet" id="toc-özet" class="nav-link" data-scroll-target="#özet"><span class="header-section-number">3.5.4</span> Özet</a></li>
+  <li><a href="#yazıldığı-gibi-basma" id="toc-yazıldığı-gibi-basma" class="nav-link" data-scroll-target="#yazıldığı-gibi-basma"><span class="header-section-number">3.5.5</span> Yazıldığı gibi basma</a></li>
+  <li><a href="#başlık-sayfası-kapak" id="toc-başlık-sayfası-kapak" class="nav-link" data-scroll-target="#başlık-sayfası-kapak"><span class="header-section-number">3.5.6</span> Başlık sayfası (kapak)</a></li>
+  <li><a href="#alıntı-yapma-ve-şiir-dizme" id="toc-alıntı-yapma-ve-şiir-dizme" class="nav-link" data-scroll-target="#alıntı-yapma-ve-şiir-dizme"><span class="header-section-number">3.5.7</span> Alıntı yapma ve şiir dizme</a></li>
   </ul></li>
-  <li><a href="#yazıtipleri" id="toc-yazıtipleri" class="nav-link" data-scroll-target="#yazıtipleri"><span class="toc-section-number">3.6</span>  Yazıtipleri</a>
+  <li><a href="#yazıtipleri" id="toc-yazıtipleri" class="nav-link" data-scroll-target="#yazıtipleri"><span class="header-section-number">3.6</span> Yazıtipleri</a>
   <ul class="collapse">
-  <li><a href="#giriş" id="toc-giriş" class="nav-link" data-scroll-target="#giriş"><span class="toc-section-number">3.6.1</span>  Giriş</a></li>
-  <li><a href="#aile" id="toc-aile" class="nav-link" data-scroll-target="#aile"><span class="toc-section-number">3.6.2</span>  Aile</a></li>
-  <li><a href="#biçem" id="toc-biçem" class="nav-link" data-scroll-target="#biçem"><span class="toc-section-number">3.6.3</span>  Biçem</a></li>
-  <li><a href="#boyut" id="toc-boyut" class="nav-link" data-scroll-target="#boyut"><span class="toc-section-number">3.6.4</span>  Boyut</a></li>
+  <li><a href="#giriş" id="toc-giriş" class="nav-link" data-scroll-target="#giriş"><span class="header-section-number">3.6.1</span> Giriş</a></li>
+  <li><a href="#aile" id="toc-aile" class="nav-link" data-scroll-target="#aile"><span class="header-section-number">3.6.2</span> Aile</a></li>
+  <li><a href="#biçem" id="toc-biçem" class="nav-link" data-scroll-target="#biçem"><span class="header-section-number">3.6.3</span> Biçem</a></li>
+  <li><a href="#boyut" id="toc-boyut" class="nav-link" data-scroll-target="#boyut"><span class="header-section-number">3.6.4</span> Boyut</a></li>
   </ul></li>
-  <li><a href="#renkli-yazma" id="toc-renkli-yazma" class="nav-link" data-scroll-target="#renkli-yazma"><span class="toc-section-number">3.7</span>  Renkli Yazma</a>
+  <li><a href="#renkli-yazma" id="toc-renkli-yazma" class="nav-link" data-scroll-target="#renkli-yazma"><span class="header-section-number">3.7</span> Renkli Yazma</a>
   <ul class="collapse">
-  <li><a href="#yeni-renkler-oluşturmak" id="toc-yeni-renkler-oluşturmak" class="nav-link" data-scroll-target="#yeni-renkler-oluşturmak"><span class="toc-section-number">3.7.1</span>  Yeni renkler oluşturmak</a></li>
+  <li><a href="#yeni-renkler-oluşturmak" id="toc-yeni-renkler-oluşturmak" class="nav-link" data-scroll-target="#yeni-renkler-oluşturmak"><span class="header-section-number">3.7.1</span> Yeni renkler oluşturmak</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -368,7 +392,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dizgi</span></h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Dizgi</span></h1>
 </div>
 
 
@@ -381,7 +405,9 @@ div.csl-indent {
   </div>
   
 
+
 </header>
+
 
 <section id="satır-ve-sayfa-kesme" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="satır-ve-sayfa-kesme"><span class="header-section-number">3.1</span> Satır ve Sayfa Kesme</h2>
@@ -420,10 +446,14 @@ div.csl-indent {
 <section id="aralıklar" class="level2" data-number="3.4">
 <h2 data-number="3.4" class="anchored" data-anchor-id="aralıklar"><span class="header-section-number">3.4</span> Aralıklar</h2>
 <p><span class="math inline">\LaTeX</span>’de hem dikey hem de yatay aralıklar otomatik olarak ayarlanır. Fazladan aralıklar bırakmak için komutlar kullanılır.</p>
-<p>Aralık bırakırken kullanabileceğimiz ölçü birimleri <a href="#tbl-olcu">Tablo&nbsp;<span>3.1</span></a>’de gösterilmiştir.</p>
-<div id="tbl-olcu" class="anchored">
+<p>Aralık bırakırken kullanabileceğimiz ölçü birimleri <a href="#tbl-olcu" class="quarto-xref">Tablo&nbsp;<span class="quarto-unresolved-ref">tbl-olcu</span></a>’de gösterilmiştir.</p>
+<div id="tbl-olcu" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-olcu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tablo&nbsp;3.1: <span class="math inline">\LaTeX</span>’de Ölçü Birimleri
+</figcaption>
+<div aria-describedby="tbl-olcu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
-<caption>Tablo&nbsp;3.1: <span class="math inline">\LaTeX</span>’de Ölçü Birimleri</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Birim</th>
@@ -457,6 +487,8 @@ div.csl-indent {
 </tr>
 </tbody>
 </table>
+</div>
+</figure>
 </div>
 <section id="dikey-aralıklar" class="level3" data-number="3.4.1">
 <h3 data-number="3.4.1" class="anchored" data-anchor-id="dikey-aralıklar"><span class="header-section-number">3.4.1</span> Dikey aralıklar</h3>
@@ -546,12 +578,12 @@ div.csl-indent {
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="fu">\setlength</span>{<span class="fu">\columnseprule</span>}{1pt}</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="fu">\def\columnseprulecolor</span>{<span class="fu">\color</span>{blue}}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Yukarıdaki birinci komutla sütunlar arasındaki boşluk 1 cm, çizgi kalınlığı 1 pt ve çizgi rengi mavi olarak düzenlenir. Bu komutlar ya sahanlığa ya da ortamı kullanmadan önce gövdeye yazılmalıdır.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Not
 </div>
 </div>
@@ -795,9 +827,13 @@ Not
 </tbody>
 </table>
 <p><span class="math inline">\LaTeX</span>’de varsayılan yazıtipi Computer Modern olup, ek bir pakete ihtiyaç duymadan kullanılabilecek yazıtipleri aşağıdaki tablolarda gösterilmiştir.</p>
-<div id="tbl-roman" class="anchored">
+<div id="tbl-roman" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-roman-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tablo&nbsp;3.2: Roman Yazıtipleri
+</figcaption>
+<div aria-describedby="tbl-roman-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
-<caption>Tablo&nbsp;3.2: Roman Yazıtipleri</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Kısaltma</th>
@@ -848,9 +884,15 @@ Not
 </tbody>
 </table>
 </div>
-<div id="tbl-sans" class="anchored">
+</figure>
+</div>
+<div id="tbl-sans" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-sans-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tablo&nbsp;3.3: Sans Serif Yazıtipleri
+</figcaption>
+<div aria-describedby="tbl-sans-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
-<caption>Tablo&nbsp;3.3: Sans Serif Yazıtipleri</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Kısaltma</th>
@@ -881,9 +923,15 @@ Not
 </tbody>
 </table>
 </div>
-<div id="tbl-typew" class="anchored">
+</figure>
+</div>
+<div id="tbl-typew" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-typew-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tablo&nbsp;3.4: Typewriter Yazıtipleri
+</figcaption>
+<div aria-describedby="tbl-typew-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
-<caption>Tablo&nbsp;3.4: Typewriter Yazıtipleri</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Kısaltma</th>
@@ -906,9 +954,15 @@ Not
 </tbody>
 </table>
 </div>
-<div id="tbl-elyazisi" class="anchored">
+</figure>
+</div>
+<div id="tbl-elyazisi" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-elyazisi-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tablo&nbsp;3.5: Elyazısı
+</figcaption>
+<div aria-describedby="tbl-elyazisi-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
-<caption>Tablo&nbsp;3.5: Elyazısı</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Kısaltma</th>
@@ -922,6 +976,8 @@ Not
 </tr>
 </tbody>
 </table>
+</div>
+</figure>
 </div>
 <p>Varsayılan yazıtipleri <code>\rmdefault</code>, <code>\sfdefault</code> ve <code>\ttdefault</code> komutlarında saklı olup, <code>\renewcommand</code> komutuyla değiştirilebilirler.</p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\renewcommand</span>{<span class="ex">\rmdefault</span>}{&lt;kısaltma&gt;}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -937,7 +993,7 @@ Not
 <span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>{<span class="fu">\fontfamily</span>{pbk}<span class="fu">\selectfont</span> Bookman yazıtipi.} Ana yazıtipi.</span>
 <span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Varsayılan yazıtipi paket ekleyerek de değiştirilebilir. Bu hem pratiktir hem de bazı paketler matematiksel ifadelerin yazıtipine de etki eder. Bu paketlerin ne oldukları ve nasıl çıktı verdiklerini <span class="citation" data-cites="gates">Gates (<a href="08-kaynakca.html#ref-gates" role="doc-biblioref">2012</a>)</span>’de bulabilirsiniz.</p>
+<p>Varsayılan yazıtipi paket ekleyerek de değiştirilebilir. Bu hem pratiktir hem de bazı paketler matematiksel ifadelerin yazıtipine de etki eder. Bu paketlerin ne oldukları ve nasıl çıktı verdiklerini <span class="citation" data-cites="gates">Gates (<a href="#ref-gates" role="doc-biblioref">2012</a>)</span>’de bulabilirsiniz.</p>
 <p>Bunların dışında beğenebileceğiniz birçok yazıtipini <a href="https://tug.org/FontCatalogue/"><span class="math inline">\LaTeX</span> Yazıtipi Kataloğu</a>’nda bulabilirsiniz.</p>
 </section>
 <section id="biçem" class="level3" data-number="3.6.3">
@@ -1039,10 +1095,14 @@ Not
 <span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>{<span class="fu">\large</span> <span class="fu">\lipsum</span>[2]<span class="fu">\par</span>}</span>
 <span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Bu bildirimlerin etkisi belge ana yazıtipi boyutuna bağımlıdır. Mutlak boyutlar <a href="#tbl-yaziyipimutlak">Tablo&nbsp;<span>3.6</span></a>’de gösterilmiştir.</p>
-<div id="tbl-yaziyipimutlak" class="anchored">
+<p>Bu bildirimlerin etkisi belge ana yazıtipi boyutuna bağımlıdır. Mutlak boyutlar <a href="#tbl-yaziyipimutlak" class="quarto-xref">Tablo&nbsp;<span class="quarto-unresolved-ref">tbl-yaziyipimutlak</span></a>’de gösterilmiştir.</p>
+<div id="tbl-yaziyipimutlak" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-yaziyipimutlak-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tablo&nbsp;3.6: Yazıtipleri mutlak boyutları
+</figcaption>
+<div aria-describedby="tbl-yaziyipimutlak-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
-<caption>Tablo&nbsp;3.6: Yazıtipleri mutlak boyutları</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;"></th>
@@ -1115,6 +1175,8 @@ Not
 </tbody>
 </table>
 </div>
+</figure>
+</div>
 <p>Bağımsız bir yazıtipi boyutu elde etmek için <code>\fontsize</code> ile <code>\selectfont</code> komutları birlikte kullanılır.</p>
 <div class="sourceCode" id="cb28"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>{<span class="fu">\fontsize</span>{&lt;boyut&gt;}{&lt;aralık&gt;}<span class="fu">\selectfont</span> &lt;metin&gt;}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Buradaki <code>&lt;boyut&gt;</code> yazıtipi boyutu, <code>&lt;aralık&gt;</code> ise satır aralığıdır. İkisinin de ölçü birimi punto (pt) olup, temel kural, aralığın boyutun <span class="math inline">1.2</span> katı olmasıdır.</p>
@@ -1151,10 +1213,14 @@ Not
 <span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Kullanılabilecek renk adları black, white, gray, darkgray, lightgray, brown, red, green, blue, cyan, magenta, lime, olive, orange, pink, purple, teal, violet ve yellow’dur.</p>
 <p>Eğer <code>\documentclass</code> komutunun seçeneğine <code>divpsnames</code> yazılırsa aşağıdaki renkler de kullanılabilir duruma gelir.</p>
-<div id="fig-renkler" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><a href="images/renkler.png" class="lightbox" title="dvipsnames seçeneğiyle gelen renkler" data-gallery="quarto-lightbox-gallery-1"><img src="images/renkler.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
-<p></p><figcaption class="figure-caption">Şekil&nbsp;3.1: <strong>dvipsnames</strong> seçeneğiyle gelen renkler</figcaption><p></p>
+<div id="fig-renkler" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-renkler-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="images/renkler.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Şekil&nbsp;3.1: dvipsnames seçeneğiyle gelen renkler"><img src="images/renkler.png" class="img-fluid figure-img" style="width:100.0%"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-renkler-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Şekil&nbsp;3.1: <strong>dvipsnames</strong> seçeneğiyle gelen renkler
+</figcaption>
 </figure>
 </div>
 <p>Bunlar da yeterli gelmiyorsa seçeneklere bir de <code>svgnames</code> yazın ve <a href="https://www.latextemplates.com/svgnames-colors">buradaki</a> yüzden fazla rengi kullanılabilir duruma getirin.</p>
@@ -1176,9 +1242,13 @@ Not
 <span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p><!-- [Çıktı](https://github.com/acarzfr/latex-dersleri/blob/main/examples/ex6.pdf) --></p>
 <p>İkinci yol <code>\definecolor</code> komutuyla renk modelleri kullanmaktır.</p>
-<div id="tbl-renkmodel" class="anchored">
+<div id="tbl-renkmodel" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-renkmodel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tablo&nbsp;3.7: Renk Modelleri
+</figcaption>
+<div aria-describedby="tbl-renkmodel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
-<caption>Tablo&nbsp;3.7: Renk Modelleri</caption>
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -1212,6 +1282,8 @@ Not
 </tr>
 </tbody>
 </table>
+</div>
+</figure>
 </div>
 <p>Komut</p>
 <div class="sourceCode" id="cb34"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\definecolor</span>{&lt;isim&gt;}{&lt;renk modeli&gt;}{&lt;kod&gt;}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1251,8 +1323,8 @@ Not
 <p>Sayfaları renklendirmek için ise <code>\pagecolor</code> komutu kullanılır. Komutun zorunlu değişkeninde renk belirtilir. Tekrar normale (beyaz) dönmek için <code>\nopagecolor</code> komutu kullanılır. Eğer bu işe yaramazsa <code>\pagecolor{white}</code> komutunu kullanabilirsiniz.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
-<div id="ref-gates" class="csl-entry" role="doc-biblioentry">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-gates" class="csl-entry" role="listitem">
 Gates, Mark. 2012. <em>LaTeX font packages</em>. <a href="https://icl.utk.edu/~mgates3/docs/latex-fonts.pdf">https://icl.utk.edu/~mgates3/docs/latex-fonts.pdf</a>.
 </div>
 </div>
@@ -1287,12 +1359,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
     }
-  });
-  clipboard.on('success', function(e) {
+    return false;
+  }
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1324,11 +1399,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1338,8 +1452,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1351,9 +1474,245 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
@@ -1395,18 +1754,43 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./02-ilkadimlar.html" class="pagination-link">
+      <a href="./02-ilkadimlar.html" class="pagination-link" aria-label="İlk Adımlar">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">İlk Adımlar</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./04-matematik.html" class="pagination-link">
+      <a href="./04-matematik.html" class="pagination-link" aria-label="Matematiksel İfadeler">
         <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Matematiksel İfadeler</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-<script>var lightboxQuarto = GLightbox({"descPosition":"bottom","openEffect":"zoom","closeEffect":"zoom","loop":true,"selector":".lightbox"});</script>
+<script>var lightboxQuarto = GLightbox({"selector":".lightbox","closeEffect":"zoom","loop":false,"openEffect":"zoom","descPosition":"bottom"});
+window.onload = () => {
+  lightboxQuarto.on('slide_before_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    const href = trigger.getAttribute('href');
+    if (href !== null) {
+      const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+      if (imgEl !== null) {
+        const srcAttr = imgEl.getAttribute("src");
+        if (srcAttr && srcAttr.startsWith("data:")) {
+          slideConfig.href = srcAttr;
+        }
+      }
+    } 
+  });
+
+  lightboxQuarto.on('slide_after_load', (data) => {
+    const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+    if (window.Quarto?.typesetMath) {
+      window.Quarto.typesetMath(slideNode);
+    }
+  });
+
+};
+          </script>
+
 
 
 

@@ -1,8 +1,38 @@
 # Yüzer Gezer Nesneler
 
 ## Tablolar
- Yazılıyor...
+LaTeX tablo oluşturmak ve özelleştirmek için bir dizi araç sunar. Biz `tabular` ve `tabularx` ortamını kullanacağız.
 
+### Temel tablolar
+ Bir temel tablo oluşturmak için `tabular` ortamını belirtmeniz yeterlidir.
+
+``` latex
+\documentclass{article}
+\begin{document}
+  \begin{tabular}{c|c}
+    Sütun 1 & Sütun 2\\ \hline
+    A & 1\\ 
+    B & 2\\ 
+    C & 3\\ 
+    D & 4\\ 
+  \end{tabular}
+\end{document}
+```
+
+Yukarıdaki örnekte süslü parantezler içindeki `{c|c}`, metnin sütundaki konumunu ifade eder. Aşağıdaki tabloda konumsal argümanlar açıklamalarıyla birlikte özetlenmektedir.
+
+| Argüman | Açıklama |
+| :---: | :--- |
+| `c` | Metni ortada konumlandır |
+| `l` | Metni sola yaslanmış olarak konumlandır |
+| `r` | Metni sağa yaslanmış olarak konumlandır |
+| `p{<genişlik>}` | Metni hücrenin üst kısmına hizalar |
+| `m{<genişlik>}` | Metni hücrenin ortasına hizalar |
+| `b{<genişlik>}` | Metni hücrenin alt kısmına hizalar |
+
+Hem `m{<genişlik>}` hem de `b{<genişlik>}`, **array** paketinin sahanlıkta belirtilmesini gerektirir.
+
+Yukarıdaki örneği kullanarak, kullanılan önemli noktaları inceleyelim ve bu bölümde göreceğiniz birkaç seçeneği daha açıklayalım:
 
 ## Şekiller
 
