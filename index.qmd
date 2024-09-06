@@ -1,6 +1,6 @@
 # Sunuş {.unnumbered}
 
-Bu kitap, artık aktif olmayan <https://texdizgi.com/> adresinde yazmış olduğum yazıların derlenmesiyle ortaya çıktı. Aslında oradaki yazılar da {{< latex >}}'le ilgili yazmaya başladığım ve bir türlü sonunun getiremediğim kitabın tamamlanmış bölümlerinin ürünüydü.
+Bu kitap, artık aktif olmayan <https://texdizgi.com/> adresinde yazmış olduğum yazıların derlenmesiyle ortaya çıktı. Aslında oradaki yazılar da {{< latex >}}'le ilgili yazmaya başladığım ve bir türlü sonunu getiremediğim kitabın tamamlanmış bölümlerinin ürünüydü.
 
 Kitabı doğal olarak {{< latex >}}'le yazıyordum. [RMarkdown](https://rmarkdown.rstudio.com/) ve [Quarto](https://quarto.org/) ile tanıştıktan sonra kitabı yalnızca PDF olarak değil, etkileşime izin vermesi ve daha bir çok avantajından dolayı HTML olarak da dağıtmaya karar verdim.
 
