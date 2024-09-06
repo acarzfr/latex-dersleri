@@ -1,16 +1,7 @@
 # Özel Sayfalar
-<script>
-    runlatex.preincludes = {
-     "pre1": {
-        "pre0": "kaynakca.bib"
-       },
-     "pre2": {
-        "pre0": "kaynakca.bib"
-       }
-    }
-</script>
 
- Bu bölümde bir kitaptaki özel  sayfalar olan kaynakça ve dizinden bahsedeceğiz.
+
+Bu bölümde bir kitaptaki özel  sayfalar olan kaynakça ve dizinden bahsedeceğiz.
  
 ## Kaynakça
 
@@ -173,10 +164,9 @@ Bu yöntemin önemli avantajları vardır:
     oluşturabilir, düzenleyebilirsiniz.
 
 ::: {#fig-google layout-ncol=3}
-
 ![Alıntı yap](images/galinti1.png){#fig-g1}
 
-![{{< bibtex >}}](images/galinti2.png){#fig-g2}
+![BibTeX](images/galinti2.png){#fig-g2}
 
 ![Kodu kopyala](images/galinti3.png){#fig-g3}
 
@@ -606,4 +596,3 @@ sınıflarında
 
 şeklinde, `article` sınıfında ise komutlardaki `chapter` yazan yere
 `section` yazarak verilmelidir.
-

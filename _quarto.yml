@@ -40,15 +40,15 @@ format:
     html-math-method: katex
     lang: tr
     include-in-header: preamble.html
+    lightbox: true
     
     
 
     filters:
-     - lightbox
      - latex-environment
      - shinylive
     environments: [center]
-    lightbox: auto
+   
      
   pdf:
     documentclass: scrreprt
