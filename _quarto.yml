@@ -7,6 +7,7 @@ book:
   date: 2022-03-06
   date-format: "DD/MM/YYYY"
   language: tr
+  
 
 
   #page-footer: 
@@ -34,13 +35,23 @@ bibliography: references.bib
 
 format:
   html:
-    theme: sandstone
+    theme: cosmo
      # light: sandstone
      # dark: solar
     html-math-method: katex
     lang: tr
+    language:
+      tr:
+        crossref-nte-title: "Not"
+        crossref-nte-prefix: "Not"
+        crossref-wrn-title: "Uyarı"
+        crossref-wrn-prefix: "Uyarı"
+ 
+        
     include-in-header: preamble.html
     lightbox: true
+    mainfont: "Atkinson Hyperlegible"
+    toc-expand: true
     
     
 
@@ -54,7 +65,14 @@ format:
     documentclass: scrreprt
     include-in-header: preamble.tex
       #fontfamily: libertinus
+    lang: tr
+   
+    
+    
 
-google-analytics: "G-HDQ76YF4X3"
+    
+    
 
-editor: visual
+
+
+editor: source

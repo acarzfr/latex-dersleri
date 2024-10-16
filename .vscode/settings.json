@@ -2,5 +2,6 @@
     "cSpell.words": [
         "documentclass",
         "scrreprt"
-    ]
+    ],
+    "r.lsp.promptToInstall": false
 }

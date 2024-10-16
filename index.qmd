@@ -1,8 +1,8 @@
-# Sunuş {.unnumbered}
+# Hoşgeldiniz {.unnumbered}
 
-Bu kitap, artık aktif olmayan <https://texdizgi.com/> adresinde yazmış olduğum yazıların derlenmesiyle ortaya çıktı. Aslında oradaki yazılar da {{< latex >}}'le ilgili yazmaya başladığım ve bir türlü sonunu getiremediğim kitabın tamamlanmış bölümlerinin ürünüydü.
+Bu internet sitesi “{{< latex >}} Dersleri” kitabına aittir. Bu kitap, artık aktif olmayan <https://texdizgi.com/> adresinde yazmış olduğum yazıların derlenmesiyle ortaya çıktı. Aslında oradaki yazılar da {{< latex >}}'le ilgili yazmaya başladığım ve bir türlü sonunu getiremediğim kitabın tamamlanmış bölümlerinin ürünüydü.
 
-Kitabı doğal olarak {{< latex >}}'le yazıyordum. [RMarkdown](https://rmarkdown.rstudio.com/) ve [Quarto](https://quarto.org/) ile tanıştıktan sonra kitabı yalnızca PDF olarak değil, etkileşime izin vermesi ve daha bir çok avantajından dolayı HTML olarak da dağıtmaya karar verdim.
+Kitabı doğal olarak {{< latex >}}'le yazıyordum. [Quarto](https://quarto.org/) ile tanıştıktan sonra kitabı yalnızca PDF olarak değil, etkileşime izin vermesi ve daha bir çok avantajından dolayı HTML olarak da dağıtmaya karar verdim.
 
 Kitap etkileşimli hale [TeXLive.net](https://texlive.net/) sayesinde geldi. Etkileşimden faydalanmak istiyorsanız internet bağlantınız olduğunda HTML sürümünü kullanmanız önerilir. Bu sayede kendi denemelerinizi yapabilirsiniz.
 
@@ -13,8 +13,12 @@ Kitap etkileşimli hale [TeXLive.net](https://texlive.net/) sayesinde geldi. Etk
 \end{document}
 ```
 
+
+
 Yukarıdaki "Overleaf'ta açın" düğmesine bastığınızda örnek belge [Overleaf](https://www.overleaf.com/)'ta açılacak. Tabi bunun için bir hesabınız olması gerekir. "Derle" düğmesine bastığınızda ise {{< latex >}} çıktısı ile "Çıktıyı Sil" düğmesi görünecek.[^index-1]
 
 [^index-1]: Tüm bu düğmelerin PDF sürümde olmayacağını unutmayın.
 
 Kitap taslak aşamasında ve eksik birçok konu var. Ayrıca hatalar olabileceğini de unutmayın. Keyifli okumalar.
+
+

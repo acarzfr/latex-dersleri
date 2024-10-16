@@ -1,5 +1,9 @@
 # Temeller
 
+
+Bu bölümde {{< latex >}}'le ilgili temel bilgilerden bahsedilmektedir.
+
+
 ## {{< tex >}}
 
 {{< tex >}}, birçok matematiksel ve teknik ifade içeren belgeleri yüksek kaliteli çıktı ile üretmek için  Stanford Üniversitesi'nden Profesör [Donald E.Knuth](https://www-cs-faculty.stanford.edu/~knuth/) tarafından, başlangıçta "[Bilgisayar Programlama Sanatı](https://www-cs-faculty.stanford.edu/~knuth/taocp.html)" adlı kitap serisinin hazırlanması için tasarlanmış bir dizgi programıdır. Teknik kitaplar ve makaleler üreten birçok yazar ve yayıncı tarafından benimsenmiştir. {{< tex >}}, Knuth tarafından ücretsiz olarak kullanıma sunulmuştur. 
@@ -22,7 +26,7 @@ Bir metnin genel görünümü ve okunabilirliği, metnin nasıl hizalandığınd
 
 Sonuç, {{< latex >}}'in diğer programların her ikisinden de üstün olduğunu açıkça gösterir: iki kat daha az tireleme kullanır ve yine de sözcük aralığındaki varyasyon, Word veya InDesign'dan belirgin şekilde daha azdır. {{< latex >}}'te çok büyük sözcük aralığı içeren satırlar oluşmaz.
 
-## Neden {{< latex >}}
+## Neden {{< latex >}}?
 
 {{< latex >}}'i kullanmaya karar vermeniz için birkaç neden:
 

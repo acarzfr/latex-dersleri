@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.28">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>{{&lt; latex &gt;}} Dersleri – 4&nbsp; Matematiksel İfadeler</title>
+<title>4&nbsp; Matematiksel İfadeler – {{&lt; latex &gt;}} Dersleri</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -122,10 +122,15 @@ div.csl-indent {
     "search-label": "Aramak"
   }
 }</script>
+<style>
+  @import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap';
+</style>
+
+
 <!--   TexLive.net  -->
     <meta charset="UTF-8">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.min.js"></script>
-
+<!-- 
     <style type="text/css" media="screen">
       .ace_editor {
 	  border: 1px solid lightgray;
@@ -137,7 +142,7 @@ div.csl-indent {
       }
       a { text-decoration:none; color:#93c54b}
       a:hover	   {text-decoration:underline}
-    </style>
+    </style> -->
 
     <script src="https://davidcarlisle.github.io/latexcgi/runlatex.js"></script>
 
@@ -187,7 +192,7 @@ div.csl-indent {
 </script>
 
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
  var macros = [];
@@ -202,7 +207,7 @@ div.csl-indent {
    });
 }}});
   </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -239,13 +244,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Kenar çubuğunu değiştir" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Kenar çubuğunu değiştir" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./04-matematik.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Matematiksel İfadeler</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Kenar çubuğunu değiştir" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Kenar çubuğunu değiştir" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Aramak" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -262,17 +267,17 @@ window.Quarto = {
     <a href="https://github.com/acarzfr/latex-dersleri/" title="Kaynak Kodu" class="quarto-navigation-tool px-1" aria-label="Kaynak Kodu"><i class="bi bi-github"></i></a>
     <a href="./{{--latex--}}-Dersleri.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
     <div class="dropdown">
-      <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Share"><i class="bi bi-share"></i></a>
+      <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
-              <i class="bi bi-bi-twitter pe-1"></i>
+              <i class="bi bi-twitter pe-1"></i>
             Twitter
             </a>
           </li>
           <li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://www.linkedin.com/sharing/share-offsite/?url=|url|">
-              <i class="bi bi-bi-linkedin pe-1"></i>
+              <i class="bi bi-linkedin pe-1"></i>
             LinkedIn
             </a>
           </li>
@@ -291,7 +296,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Sunuş</span></a>
+ <span class="menu-text">Hoşgeldiniz</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -348,7 +353,7 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
     <h2 id="toc-title">İçindekiler</h2>
    
   <ul>
@@ -488,7 +493,7 @@ Not
 <section id="boşluklar" class="level3" data-number="4.1.4">
 <h3 data-number="4.1.4" class="anchored" data-anchor-id="boşluklar"><span class="header-section-number">4.1.4</span> Boşluklar</h3>
 <p>Bazen <span class="math inline">\LaTeX</span> formülleri dizerken olması gerektiği gibi boşluk bırakma konusunda yetersiz kalabilir. Bu durumda boşluklar elle oluşturulur. Boşluklar için kullanılabilecek komutlar tablodaki gibidir.</p>
-<table class="table">
+<table class="caption-top table">
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Negatif</td>
@@ -567,13 +572,13 @@ Not
 <span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Kullanılabilecek tüm gruplandırıcı işaretler <a href="#tbl-grup" class="quarto-xref">Tablo&nbsp;<span>4.1</span></a>’de gösterilmiştir.</p>
-<div id="tbl-grup" class="quarto-float anchored">
+<div id="tbl-grup" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-grup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tablo&nbsp;4.1: Gruplandırıcılar
 </figcaption>
 <div aria-describedby="tbl-grup-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 30%">
 <col style="width: 38%">
@@ -644,13 +649,13 @@ Tablo&nbsp;4.1: Gruplandırıcılar
 <span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a><span class="kw">\end</span>{<span class="ex">document</span>}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Oklar için <a href="#tbl-oklar" class="quarto-xref">Tablo&nbsp;<span>4.2</span></a>’deki komutlar kullanılır.</p>
-<div id="tbl-oklar" class="quarto-float anchored">
+<div id="tbl-oklar" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-oklar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tablo&nbsp;4.2: Oklar
 </figcaption>
 <div aria-describedby="tbl-oklar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
 <col style="width: 25%">
@@ -743,13 +748,13 @@ Tablo&nbsp;4.2: Oklar
 <section id="yunan-harfleri" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="yunan-harfleri"><span class="header-section-number">4.3</span> Yunan Harfleri</h2>
 <p>Yunan harfleri matematikte yaygın olarak kullanılır. Bu harfler ters eğik çizgiden sonra harfin adı yazılarak elde edilir. Eğer ilk harf küçük ise küçük, büyükse de büyük harf elde edilir. Bazı büyük Yunanca harfler Latin harfleri gibi göründüğünden (örneğin, büyük harf Alpha ve Beta yalnızca sırasıyla “A” ve “B”dir) ayrıca tanımlanmamışlardır. Küçük harf epsilon, theta, kappa, phi, pi, rho ve sigma iki farklı sürümde sunulmaktadır. Alternatif sürümü, harf adının önüne “var” eklenerek oluşturulur.</p>
-<div id="tbl-yunan" class="quarto-float anchored">
+<div id="tbl-yunan" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-yunan-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tablo&nbsp;4.3: Yunan Harfleri
 </figcaption>
 <div aria-describedby="tbl-yunan-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
 <col style="width: 25%">
@@ -1042,13 +1047,13 @@ Tablo&nbsp;4.3: Yunan Harfleri
 <h2 data-number="4.7" class="anchored" data-anchor-id="yazı-biçem-ve-boyutları"><span class="header-section-number">4.7</span> Yazı Biçem ve Boyutları</h2>
 <p>Matematiksel ifadeleri dizerken bazen yazının biçemini ya da boyutunu değiştirmek isteyebilirsiniz.</p>
 <p><span class="math inline">\LaTeX</span>’de matematik kipindeki yazıların biçemleri aşağıdaki komutlar kullanılarak değiştirilir.</p>
-<div id="tbl-matyazi" class="quarto-float anchored">
+<div id="tbl-matyazi" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-matyazi-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tablo&nbsp;4.4: Matematik Kipinde Yazı Biçemleri
 </figcaption>
 <div aria-describedby="tbl-matyazi-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th style="text-align: left;"><strong>Komut</strong></th>
@@ -1470,13 +1475,13 @@ Tablo&nbsp;4.4: Matematik Kipinde Yazı Biçemleri
 <p>Teorem stilleri <code>\theoremstyle</code> komutuyla değiştirilir. Bu komut, <code>\newtheorem</code> komutu kullanarak tanımlanan ortamların çıktısını değiştirme olanağını verir.</p>
 <div class="sourceCode" id="cb55"><pre class="sourceCode latex code-with-copy"><code class="sourceCode latex"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="fu">\theoremstyle</span>{&lt;stil adı&gt;}</span></code><button title="Panoya Kopyala" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>Buradaki <code>&lt;stil adı&gt;</code> kullanmak istediğiniz stildir. Bu komuttan sonra tanımlanmış tüm teoremler bu stili kullanacaktır. <span class="math inline">\LaTeX</span>’de önceden tanımlanmış stiller <a href="#tbl-teoremstil" class="quarto-xref">Tablo&nbsp;<span>4.5</span></a>’de gösterilmiştir.</p>
-<div id="tbl-teoremstil" class="quarto-float anchored">
+<div id="tbl-teoremstil" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-teoremstil-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tablo&nbsp;4.5: Teorem Stilleri
 </figcaption>
 <div aria-describedby="tbl-teoremstil-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table">
+<table class="caption-top table">
 <colgroup>
 <col style="width: 40%">
 <col style="width: 30%">

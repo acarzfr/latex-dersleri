@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="tr" xml:lang="tr"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.28">
+<meta name="generator" content="quarto-1.5.57">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>{{&lt; latex &gt;}} Dersleri – 1&nbsp; Temeller</title>
+<title>1&nbsp; Temeller – {{&lt; latex &gt;}} Dersleri</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -33,7 +33,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -102,10 +102,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Aramak"
   }
 }</script>
+<style>
+  @import 'https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible&display=swap';
+</style>
+
+
 <!--   TexLive.net  -->
     <meta charset="UTF-8">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.12/ace.min.js"></script>
-
+<!-- 
     <style type="text/css" media="screen">
       .ace_editor {
 	  border: 1px solid lightgray;
@@ -117,7 +122,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       }
       a { text-decoration:none; color:#93c54b}
       a:hover	   {text-decoration:underline}
-    </style>
+    </style> -->
 
     <script src="https://davidcarlisle.github.io/latexcgi/runlatex.js"></script>
 
@@ -167,7 +172,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </script>
 
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
   <script>document.addEventListener("DOMContentLoaded", function () {
  var mathElements = document.getElementsByClassName("math");
  var macros = [];
@@ -182,7 +187,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    });
 }}});
   </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
 
 <script type="text/javascript">
 const typesetMath = (el) => {
@@ -219,13 +224,13 @@ window.Quarto = {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Kenar çubuğunu değiştir" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Kenar çubuğunu değiştir" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./01-temeller.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Temeller</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Kenar çubuğunu değiştir" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Kenar çubuğunu değiştir" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Aramak" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -242,17 +247,17 @@ window.Quarto = {
     <a href="https://github.com/acarzfr/latex-dersleri/" title="Kaynak Kodu" class="quarto-navigation-tool px-1" aria-label="Kaynak Kodu"><i class="bi bi-github"></i></a>
     <a href="./{{--latex--}}-Dersleri.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
     <div class="dropdown">
-      <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Share"><i class="bi bi-share"></i></a>
+      <a href="" title="Share" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Share"><i class="bi bi-share"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
           <li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=|url|">
-              <i class="bi bi-bi-twitter pe-1"></i>
+              <i class="bi bi-twitter pe-1"></i>
             Twitter
             </a>
           </li>
           <li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://www.linkedin.com/sharing/share-offsite/?url=|url|">
-              <i class="bi bi-bi-linkedin pe-1"></i>
+              <i class="bi bi-linkedin pe-1"></i>
             LinkedIn
             </a>
           </li>
@@ -271,7 +276,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Sunuş</span></a>
+ <span class="menu-text">Hoşgeldiniz</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -328,14 +333,14 @@ window.Quarto = {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
     <h2 id="toc-title">İçindekiler</h2>
    
   <ul>
   <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"><span class="header-section-number">1.1</span> <span class="math inline">\TeX</span></a></li>
   <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1"><span class="header-section-number">1.2</span> <span class="math inline">\LaTeX</span></a></li>
   <li><a href="#temel-farklılıklar" id="toc-temel-farklılıklar" class="nav-link" data-scroll-target="#temel-farklılıklar"><span class="header-section-number">1.3</span> Temel Farklılıklar</a></li>
-  <li><a href="#neden" id="toc-neden" class="nav-link" data-scroll-target="#neden"><span class="header-section-number">1.4</span> Neden <span class="math inline">\LaTeX</span></a></li>
+  <li><a href="#neden" id="toc-neden" class="nav-link" data-scroll-target="#neden"><span class="header-section-number">1.4</span> Neden <span class="math inline">\LaTeX</span>?</a></li>
   <li><a href="#önemli-yapılar" id="toc-önemli-yapılar" class="nav-link" data-scroll-target="#önemli-yapılar"><span class="header-section-number">1.5</span> Önemli Yapılar</a>
   <ul class="collapse">
   <li><a href="#komutlar" id="toc-komutlar" class="nav-link" data-scroll-target="#komutlar"><span class="header-section-number">1.5.1</span> Komutlar</a></li>
@@ -379,6 +384,7 @@ window.Quarto = {
 </header>
 
 
+<p>Bu bölümde <span class="math inline">\LaTeX</span>’le ilgili temel bilgilerden bahsedilmektedir.</p>
 <section id="section" class="level2" data-number="1.1">
 <h2 data-number="1.1" class="anchored" data-anchor-id="section"><span class="header-section-number">1.1</span> <span class="math inline">\TeX</span></h2>
 <p><span class="math inline">\TeX</span>, birçok matematiksel ve teknik ifade içeren belgeleri yüksek kaliteli çıktı ile üretmek için Stanford Üniversitesi’nden Profesör <a href="https://www-cs-faculty.stanford.edu/~knuth/">Donald E.Knuth</a> tarafından, başlangıçta “<a href="https://www-cs-faculty.stanford.edu/~knuth/taocp.html">Bilgisayar Programlama Sanatı</a>” adlı kitap serisinin hazırlanması için tasarlanmış bir dizgi programıdır. Teknik kitaplar ve makaleler üreten birçok yazar ve yayıncı tarafından benimsenmiştir. <span class="math inline">\TeX</span>, Knuth tarafından ücretsiz olarak kullanıma sunulmuştur.</p>
@@ -396,7 +402,7 @@ window.Quarto = {
 <p>Sonuç, <span class="math inline">\LaTeX</span>’in diğer programların her ikisinden de üstün olduğunu açıkça gösterir: iki kat daha az tireleme kullanır ve yine de sözcük aralığındaki varyasyon, Word veya InDesign’dan belirgin şekilde daha azdır. <span class="math inline">\LaTeX</span>’te çok büyük sözcük aralığı içeren satırlar oluşmaz.</p>
 </section>
 <section id="neden" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="neden"><span class="header-section-number">1.4</span> Neden <span class="math inline">\LaTeX</span></h2>
+<h2 data-number="1.4" class="anchored" data-anchor-id="neden"><span class="header-section-number">1.4</span> Neden <span class="math inline">\LaTeX</span>?</h2>
 <p><span class="math inline">\LaTeX</span>’i kullanmaya karar vermeniz için birkaç neden:</p>
 <ul>
 <li><p>Ücretsizdir ve tüm işletim sistemlerinde düşük donanım gereksinimleriyle çalışır.</p></li>
@@ -978,8 +984,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Sunuş">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Sunuş</span>
+      <a href="./index.html" class="pagination-link" aria-label="Hoşgeldiniz">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Hoşgeldiniz</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
